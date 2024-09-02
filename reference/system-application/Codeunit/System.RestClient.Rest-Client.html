@@ -1,0 +1,2024 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#RestClient#Rest_Client">
+  <h1>Codeunit &quot;Rest Client&quot;</h1>
+
+
+<div class="font-style-italic">ID 2350</div>
+<div class="font-style-italic">Namespace: System.RestClient</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Provides functionality to easily work with the HttpClient object.</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes the Rest Client with the default Http Client Handler and anonymous Http authentication.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Initialize()</code></pre>
+
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes the Reest Client with the given Http Client Handler</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Initialize(HttpClientHandler: Interface &quot;Http Client Handler&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								HttpClientHandler
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.RestClient.Http-Client-Handler.html">System.RestClient.&quot;Http Client Handler&quot;</a>                 </td>
+   							<td>
+								<p>The Http Client Handler to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>The anynomous Http Authentication will be used.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes the Rest Client with the given Http Authentication.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Initialize(HttpAuthentication: Interface &quot;Http Authentication&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								HttpAuthentication
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.RestClient.Http-Authentication.html">System.RestClient.&quot;Http Authentication&quot;</a>                 </td>
+   							<td>
+								<p>The authentication to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>The default Http Client Handler will be used.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes the Rest Client with the given Http Client Handler and Http Authentication.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Initialize(HttpClientHandler: Interface &quot;Http Client Handler&quot;, HttpAuthentication: Interface &quot;Http Authentication&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								HttpClientHandler
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.RestClient.Http-Client-Handler.html">System.RestClient.&quot;Http Client Handler&quot;</a>                 </td>
+   							<td>
+								<p>The Http Client Handler to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HttpAuthentication
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.RestClient.Http-Authentication.html">System.RestClient.&quot;Http Authentication&quot;</a>                 </td>
+   							<td>
+								<p>The authentication to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">SetDefaultRequestHeader</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets a new value for an existing default header of the Http Client object, or addds the header if it does not already exist.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetDefaultRequestHeader(Name: Text, Value: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Name
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the request header.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The header of request header.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Default request headers will be added to every request that is sent with this Rest Client instance
+The Rest Client will be initialized if it was not initialized before.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetDefaultRequestHeader</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets a new value for an existing default header of the Http Client object, or addds the header if it does not already exist.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetDefaultRequestHeader(Name: Text, Value: SecretText)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Name
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the request header.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Value
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>The header of request header.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Default request headers will be added to every request that is sent with this Rest Client instance
+The Rest Client will be initialized if it was not initialized before.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetBaseAddress</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the base address of the Rest Client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetBaseAddress(Url: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Url
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The base address to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>The base address will be used for every request that is sent with this Rest Client instance.
+Calls to the Get, Post, Patch, Put and Delete methods must  use a relative path which will be appended to the base address.
+The Rest Client will be initialized if it was not initialized before.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetBaseAddress</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the base address of the Rest Client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBaseAddress(): Text</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>The base address of the Rest Client.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">SetTimeOut</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the timeout of the Rest Client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetTimeOut(Timeout: Duration)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Timeout
+   							</td>
+   							<td class="font-style-italic">
+Duration                 </td>
+   							<td>
+								<p>The timeout to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>The timeout will be used for every request that is sent with this Rest Client instance.
+The Rest Client will be initialized if it was not initialized before.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetTimeOut</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the timeout of the Rest Client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetTimeOut(): Duration</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Duration               </td>
+   						<td>
+							<p>The timeout of the Rest Client.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AddCertificate</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a certificate to the Rest Client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddCertificate(Certificate: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Base64 encoded certificate</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>The certificate will be used for every request that is sent with this Rest Client instance.
+The Rest Client will be initialized if it was not initialized before.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddCertificate</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a certificate to the Rest Client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddCertificate(Certificate: Text, Password: SecretText)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Base64 encoded certificate</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>The password of the certificate</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>The certificate will be used for every request that is sent with this Rest Client instance.
+The Rest Client will be initialized if it was not initialized before.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetUserAgentHeader</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the user agent header of the Rest Client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetUserAgentHeader(Value: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The user agent header to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Use this function to overwrite the default User-Agent header.
+The default user agent header is &quot;Dynamics 365 Business Central - |[Publisher]| [App Name]/[App Version]&quot;.
+The Rest Client will be initialized if it was not initialized before.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetAuthorizationHeader</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the authorization header of the Rest Client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetAuthorizationHeader(Value: SecretText)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Value
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>The authorization header to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Use this function to set the authorization header.
+The Rest Client will be initialized if it was not initialized before.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Get</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a GET request to the specified Uri and returns the response message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Get(RequestUri: Text): Codeunit &quot;Http Response Message&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>               </td>
+   						<td>
+							<p>The response message object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Post</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a POST request to the specified Uri and returns the response message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Post(RequestUri: Text, Content: Codeunit &quot;Http Content&quot;): Codeunit &quot;Http Response Message&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Content.html">System.RestClient.&quot;Http Content&quot;</a>                 </td>
+   							<td>
+								<p>The content to send.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>               </td>
+   						<td>
+							<p>The response message object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+If a response was received, then the response message object contains information about the status.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Patch</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a PATCH request to the specified Uri and returns the response message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Patch(RequestUri: Text, Content: Codeunit &quot;Http Content&quot;): Codeunit &quot;Http Response Message&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Content.html">System.RestClient.&quot;Http Content&quot;</a>                 </td>
+   							<td>
+								<p>The content to send.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>               </td>
+   						<td>
+							<p>The response message object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+If a response was received, then the response message object contains information about the status.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Put</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a PUT request to the specified Uri and returns the response message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Put(RequestUri: Text, Content: Codeunit &quot;Http Content&quot;): Codeunit &quot;Http Response Message&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Content.html">System.RestClient.&quot;Http Content&quot;</a>                 </td>
+   							<td>
+								<p>The content to send.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>               </td>
+   						<td>
+							<p>The response message object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+If a response was received, then the response message object contains information about the status.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Delete</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a DELETE request to the specified Uri and returns the response message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Delete(RequestUri: Text): Codeunit &quot;Http Response Message&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>               </td>
+   						<td>
+							<p>The response message object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+If a response was received, then the response message object contains information about the status.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a GET request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetAsJson(RequestUri: Text): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PostAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a POST request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PostAsJson(RequestUri: Text, Content: JsonObject): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonObject                 </td>
+   							<td>
+								<p>The content to send as a JsonObject.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PostAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a POST request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PostAsJson(RequestUri: Text, Content: JsonArray): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonArray                 </td>
+   							<td>
+								<p>The content to send as a JsonArray.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PostAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a POST request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PostAsJson(RequestUri: Text, Content: JsonToken): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonToken                 </td>
+   							<td>
+								<p>The content to send as a JsonToken.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PatchAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a PATCH request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PatchAsJson(RequestUri: Text, Content: JsonObject): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonObject                 </td>
+   							<td>
+								<p>The content to send as a JsonObject.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PatchAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a PATCH request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PatchAsJson(RequestUri: Text, Content: JsonArray): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonArray                 </td>
+   							<td>
+								<p>The content to send as a JsonArray.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PatchAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a PATCH request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PatchAsJson(RequestUri: Text, Content: JsonToken): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonToken                 </td>
+   							<td>
+								<p>The content to send as a JsonToken.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PutAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a PUT request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutAsJson(RequestUri: Text, Content: JsonObject): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonObject                 </td>
+   							<td>
+								<p>The content to send as a JsonObject.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PutAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a PUT request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutAsJson(RequestUri: Text, Content: JsonArray): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonArray                 </td>
+   							<td>
+								<p>The content to send as a JsonArray.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">PutAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a PUT request to the specified Uri and returns the response content as JsonToken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutAsJson(RequestUri: Text, Content: JsonToken): JsonToken</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+JsonToken                 </td>
+   							<td>
+								<p>The content to send as a JsonToken.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+JsonToken               </td>
+   						<td>
+							<p>The response content as JsonToken</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+The function also fails in case the response does not contain a success status code or a valid JSON content.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Send</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a request with the specific Http method and an empty content to the specified Uri and returns the response message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Send(Method: Enum &quot;Http Method&quot;, RequestUri: Text): Codeunit &quot;Http Response Message&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Method
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.RestClient.Http-Method.html">System.RestClient.&quot;Http Method&quot;</a>                 </td>
+   							<td>
+								<p>The HTTP method to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>               </td>
+   						<td>
+							<p>The response message object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+If a response was received, then the response message object contains information about the status.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Send</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends a request with the specific Http method and the given content to the specified Uri and returns the response message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Send(Method: Enum &quot;Http Method&quot;, RequestUri: Text, Content: Codeunit &quot;Http Content&quot;): Codeunit &quot;Http Response Message&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Method
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.RestClient.Http-Method.html">System.RestClient.&quot;Http Method&quot;</a>                 </td>
+   							<td>
+								<p>The HTTP method to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RequestUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Uri the request is sent to.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Content
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Content.html">System.RestClient.&quot;Http Content&quot;</a>                 </td>
+   							<td>
+								<p>The content to send.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>               </td>
+   						<td>
+							<p>The response message object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.
+If a response was received, then the response message object contains information about the status.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Send</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sends the given request message and returns the response message.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Send(var HttpRequestMessage: Codeunit &quot;Http Request Message&quot;): Codeunit &quot;Http Response Message&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								HttpRequestMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Request-Message.html">System.RestClient.&quot;Http Request Message&quot;</a>                 </td>
+   							<td>
+								<p>The request message to send.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>               </td>
+   						<td>
+							<p>The response message object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The function fails with an error message if the request could not be sent or a response was not received.</p>
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

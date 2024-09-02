@@ -1,0 +1,3146 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Integration#Sharepoint#SharePoint_Client">
+  <h1>Codeunit &quot;SharePoint Client&quot;</h1>
+
+
+<div class="font-style-italic">ID 9100</div>
+<div class="font-style-italic">Namespace: System.Integration.Sharepoint</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Provides functionality for interacting with SharePoint REST API</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes SharePoint client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Initialize(BaseUrl: Text, Authorization: Interface &quot;SharePoint Authorization&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BaseUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>SharePoint URL to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Authorization
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.Integration.Sharepoint.SharePoint-Authorization.html">System.Integration.Sharepoint.&quot;SharePoint Authorization&quot;</a>                 </td>
+   							<td>
+								<p>The authorization to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes SharePoint client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Initialize(BaseUrl: Text, Namespace: Text, Authorization: Interface &quot;SharePoint Authorization&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BaseUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>SharePoint URL to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Namespace
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Namespace to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Authorization
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.Integration.Sharepoint.SharePoint-Authorization.html">System.Integration.Sharepoint.&quot;SharePoint Authorization&quot;</a>                 </td>
+   							<td>
+								<p>The authorization to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetDiagnostics</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Returns detailed information on last API call.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetDiagnostics(): Interface &quot;HTTP Diagnostics&quot;</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="../Interface/System.Integration.Sharepoint.HTTP-Diagnostics.html">System.Integration.Sharepoint.&quot;HTTP Diagnostics&quot;</a>               </td>
+   						<td>
+							<p>Codeunit holding http resonse status, reason phrase, headers and possible error information for tha last API call</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetLists</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets all lists on the given site.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetLists(var SharePointList: Record &quot;SharePoint List&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								SharePointList
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetListItems</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets all list items for the given list.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetListItems(ListTitle: Text, var SharePointListItem: Record &quot;SharePoint List Item&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the list/</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItem
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetListItems</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets all list items for the given list.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetListItems(ListId: Guid, var SharePointListItem: Record &quot;SharePoint List Item&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The GUID of the list/</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItem
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetListItemAttachments</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets all attachments for the given list item.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetListItemAttachments(ListTitle: Text, ListItemId: Integer, var SharePointListItemAtch: Record &quot;SharePoint List Item Atch&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the list</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Unique id of the item within the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItemAtch
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item Atch&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetListItemAttachments</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets all attachments for the given list item.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetListItemAttachments(ListId: Guid, ListItemId: Integer, var SharePointListItemAtch: Record &quot;SharePoint List Item Atch&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The GUID of the list</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Unique id of the item within the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItemAtch
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item Atch&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadListItemAttachmentContent</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads the specified attachment file to the client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadListItemAttachmentContent(ListTitle: Text, ListItemId: Integer, FileName: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the list</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Unique id of the item within the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Name to be given to the file on the client side. Does not need to match the server side name.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadListItemAttachmentContent</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads the specified attachment file to the client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadListItemAttachmentContent(ListId: Guid, ListItemId: Integer, FileName: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The GUID of the list</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Unique id of the item within the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Name to be given to the file on the client side. Does not need to match the server side name.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadListItemAttachmentContent</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads the specified attachment file to the client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadListItemAttachmentContent(OdataId: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								OdataId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The odata.id parameter of the attachment entity.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>The server side file name will be used.</p>
+
+   </div>
+   <h3 class="memberNameHolder">CreateListItemAttachment</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates the list item attachment for given item.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateListItemAttachment(ListTitle: Text, ListItemId: Integer, var SharePointListItemAtch: Record &quot;SharePoint List Item Atch&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Unique id of the item within the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItemAtch
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item Atch&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Requires UI interaction to pick a file.</p>
+
+   </div>
+   <h3 class="memberNameHolder">CreateListItemAttachment</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates the list item attachment for given item.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateListItemAttachment(ListID: Guid, ListItemId: Integer, var SharePointListItemAtch: Record &quot;SharePoint List Item Atch&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListID
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The GUID of the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Unique id of the item within the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItemAtch
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item Atch&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Requires UI interaction to pick a file.</p>
+
+   </div>
+   <h3 class="memberNameHolder">CreateListItemAttachment</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a list item attachment for specific list item.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateListItemAttachment(ListTitle: Text, ListItemId: Integer, FileName: Text, var FileInStream: InStream, var SharePointListItemAtch: Record &quot;SharePoint List Item Atch&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Unique id of the item within the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>File name to use on SharePoint.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>File stream to upload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItemAtch
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item Atch&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+   <h3 class="memberNameHolder">CreateListItemAttachment</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a list item attachment for specific list item.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateListItemAttachment(ListID: Guid, ListItemId: Integer, FileName: Text, var FileInStream: InStream, var SharePointListItemAtch: Record &quot;SharePoint List Item Atch&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListID
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The GUID of the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Unique id of the item within the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>File name to use on SharePoint.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>File stream to upload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItemAtch
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item Atch&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+   <h3 class="memberNameHolder">CreateList</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a new list.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateList(ListTitle: Text, ListDescription: Text, var SharePointList: Record &quot;SharePoint List&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Title for the new list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListDescription
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Description for the new list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointList
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateListItem</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a new list item in specific list.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateListItem(ListTitle: Text, ListItemEntityTypeFullName: Text, ListItemTitle: Text, var SharePointListItem: Record &quot;SharePoint List Item&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemEntityTypeFullName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Entity Type for the list. Parameter can be found on a list object (ListItemEntityType).</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the new list item.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItem
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateListItem</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a new list item in specific list.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateListItem(ListId: Guid, ListItemEntityTypeFullName: Text, ListItemTitle: Text, var SharePointListItem: Record &quot;SharePoint List Item&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The GUID of the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemEntityTypeFullName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Entity Type for the list. Parameter can be found on a list object (ListItemEntityType).</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the new list item.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointListItem
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint List Item&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetSubFoldersByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Lists all subfolders in the given folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetSubFoldersByServerRelativeUrl(ServerRelativeUrl: Text, var SharePointFolder: Record &quot;SharePoint Folder&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the parent folder.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFolder
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint Folder&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Only top level subfolders are included.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetFolderFilesByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Lists all files in the given folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetFolderFilesByServerRelativeUrl(ServerRelativeUrl: Text, var SharePointFile: Record &quot;SharePoint File&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the parent folder.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFile
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint File&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetFolderFilesByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Lists all files in the given folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetFolderFilesByServerRelativeUrl(ServerRelativeUrl: Text, var SharePointFile: Record &quot;SharePoint File&quot; temporary, ListAllFields: Boolean): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the parent folder.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFile
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint File&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListAllFields
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Include metadata in results.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetFileByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets file data by server relative url</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetFileByServerRelativeUrl(ServerRelativeUrl: Text, var SharePointFile: Record &quot;SharePoint File&quot; temporary, ListAllFields: Boolean): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the file.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFile
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint File&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListAllFields
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Include metadata in results.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadFileContent</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads a file to an InStream.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadFileContent(OdataId: Text, var FileInStream: InStream): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								OdataId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The odata.id parameter of the file entity.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>The InStream that will be populated with the file content.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadFileContent</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads a file to the client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadFileContent(OdataId: Text, FileName: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								OdataId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The odata.id parameter of the file entity.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Name to be given to the file on the client side. Does not need to match the server side name.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadFileContent</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads a file to a TempBlob.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadFileContent(OdataId: Text, var TempBlob: Codeunit &quot;Temp Blob&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								OdataId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The odata.id parameter of the file entity.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TempBlob
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Utilities.Temp-Blob.html">System.Utilities.&quot;Temp Blob&quot;</a>                 </td>
+   							<td>
+								<p>The TempBlob that will be populated with the file content.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadFileContentByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads a file to an InStream.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadFileContentByServerRelativeUrl(ServerRelativeUrl: Text, var FileInStream: InStream): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the file to Download.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>The InStream that will be populated with the file content.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadFileContentByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads a file to the client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadFileContentByServerRelativeUrl(ServerRelativeUrl: Text, FileName: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the file to Download.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Name to be given to the file on the client side. Does not need to match the server side name.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DownloadFileContentByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Downloads a file to a TempBlob.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DownloadFileContentByServerRelativeUrl(ServerRelativeUrl: Text, var TempBlob: Codeunit &quot;Temp Blob&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the file to Download.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TempBlob
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Utilities.Temp-Blob.html">System.Utilities.&quot;Temp Blob&quot;</a>                 </td>
+   							<td>
+								<p>The TempBlob that will be populated with the file content.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DeleteFile</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Deletes a file.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DeleteFile(OdataId: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								OdataId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The odata.id parameter of the file entity.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DeleteFileByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Deletes a file.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DeleteFileByServerRelativeUrl(ServerRelativeUrl: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the file to delete.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetDocumentLibraryRootFolder</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets root folder for the list entity (Document Library).</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetDocumentLibraryRootFolder(OdataID: Text, var SharePointFolder: Record &quot;SharePoint Folder&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								OdataID
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFolder
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint Folder&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>See &quot;Is Catalog&quot; parameter of the list.</p>
+
+   </div>
+   <h3 class="memberNameHolder">CreateFolder</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a new folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateFolder(ServerRelativeUrl: Text, var SharePointFolder: Record &quot;SharePoint Folder&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the new folder.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFolder
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint Folder&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Create subfolders by manipulating URL.</p>
+
+   </div>
+   <h3 class="memberNameHolder">DeleteFolder</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Deletes a folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DeleteFolder(OdataId: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								OdataId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The odata.id parameter of the folder entity.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DeleteFolderByServerRelativeUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Deletes a folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DeleteFolderByServerRelativeUrl(ServerRelativeUrl: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the folder to delete.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AddFileToFolder</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a file to specific folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddFileToFolder(ServerRelativeUrl: Text, var SharePointFile: Record &quot;SharePoint File&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the parent folder.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFile
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint File&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Requires UI interaction to pick a file.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddFileToFolder</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a file to specific folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddFileToFolder(ServerRelativeUrl: Text, var SharePointFile: Record &quot;SharePoint File&quot; temporary, ListAllFields: Boolean): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the parent folder.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFile
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint File&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListAllFields
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Include metadata in results.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Requires UI interaction to pick a file.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddFileToFolder</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a file to specific folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddFileToFolder(ServerRelativeUrl: Text, FileName: Text, var FileInStream: InStream, var SharePointFile: Record &quot;SharePoint File&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the parent folder.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>File name to use on SharePoint.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>File stream to upload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFile
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint File&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddFileToFolder</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a file to specific folder.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddFileToFolder(ServerRelativeUrl: Text, FileName: Text, var FileInStream: InStream, var SharePointFile: Record &quot;SharePoint File&quot; temporary, ListAllFields: Boolean): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ServerRelativeUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>URL of the parent folder.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>File name to use on SharePoint.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FileInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>File stream to upload.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SharePointFile
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;SharePoint File&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record). Always one element.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListAllFields
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Include metadata in results.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+   <h3 class="memberNameHolder">UpdateListItemMetaDataField</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Updates metadata field for list item.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure UpdateListItemMetaDataField(ListTitle: Text, ItemId: Integer, ListItemEntityTypeFullName: Text, FieldName: Text, FieldValue: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListTitle
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The title of the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The title of the list.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemEntityTypeFullName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Entity Type for the list. Parameter can be found on a list object (ListItemEntityType).</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FieldName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the metadata field.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FieldValue
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">UpdateListItemMetaDataField</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Updates metadata field for list item.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure UpdateListItemMetaDataField(ListId: Guid, ItemId: Integer, ListItemEntityTypeFullName: Text, FieldName: Text, FieldValue: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ListId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ItemId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ListItemEntityTypeFullName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Entity Type for the list. Parameter can be found on a list object (ListItemEntityType).</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FieldName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the metadata field.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FieldValue
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

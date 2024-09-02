@@ -1,0 +1,738 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Integration#Graph#Graph_Client">
+  <h1>Codeunit &quot;Graph Client&quot;</h1>
+
+
+<div class="font-style-italic">ID 9350</div>
+<div class="font-style-italic">Namespace: System.Integration.Graph</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Exposes functionality to query Microsoft Graph Api</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes Microsoft Graph client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Initialize(GraphAPIVersion: Enum &quot;Graph API Version&quot;, GraphAuthorizationInstance: Interface &quot;Graph Authorization&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								GraphAPIVersion
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Integration.Graph.Graph-API-Version.html">System.Integration.Graph.&quot;Graph API Version&quot;</a>                 </td>
+   							<td>
+								<p>API Version to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								GraphAuthorizationInstance
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.Integration.Graph.Authorization.Graph-Authorization.html">System.Integration.Graph.Authorization.&quot;Graph Authorization&quot;</a>                 </td>
+   							<td>
+								<p>The authorization to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Should be called before any GET,PATCH,POST,DELTE request</p>
+
+   </div>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes Microsoft Graph client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Initialize(GraphAPIVersion: Enum &quot;Graph API Version&quot;, GraphAuthorizationInstance: Interface &quot;Graph Authorization&quot;, HttpClientHandlerInstance: Interface &quot;Http Client Handler&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								GraphAPIVersion
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Integration.Graph.Graph-API-Version.html">System.Integration.Graph.&quot;Graph API Version&quot;</a>                 </td>
+   							<td>
+								<p>API Version to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								GraphAuthorizationInstance
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.Integration.Graph.Authorization.Graph-Authorization.html">System.Integration.Graph.Authorization.&quot;Graph Authorization&quot;</a>                 </td>
+   							<td>
+								<p>The authorization to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HttpClientHandlerInstance
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.RestClient.Http-Client-Handler.html">System.RestClient.&quot;Http Client Handler&quot;</a>                 </td>
+   							<td>
+								<p>The authorization to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Should be called before any GET,PATCH,POST,DELTE request</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetBaseUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The base URL to use when constructing the final request URI.
+If not set, the base URL is <a href="https://graph.microsoft.com">https://graph.microsoft.com</a> .</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetBaseUrl(BaseUrl: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BaseUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A valid URL string</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>It's optional to set the BaseUrl.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Get</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Get any request to the microsoft graph API</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Get(RelativeUriToResource: Text, var HttpResponseMessage: Codeunit &quot;Http Response Message&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RelativeUriToResource
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A relativ uri including the resource segments</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HttpResponseMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>                 </td>
+   							<td>
+								<p>The response message object.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Get</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Get any request to the microsoft graph API</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Get(RelativeUriToResource: Text, GraphOptionalParameters: Codeunit &quot;Graph Optional Parameters&quot;, var HttpResponseMessage: Codeunit &quot;Http Response Message&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RelativeUriToResource
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A relativ uri including the resource segment</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								GraphOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Integration.Graph.Graph-Optional-Parameters.html">System.Integration.Graph.&quot;Graph Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>A wrapper for optional header and query parameters</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HttpResponseMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>                 </td>
+   							<td>
+								<p>The response message object.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Post</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Post any request to the microsoft graph API</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Post(RelativeUriToResource: Text, GraphOptionalParameters: Codeunit &quot;Graph Optional Parameters&quot;, RequestHttpContent: Codeunit &quot;Http Content&quot;, var HttpResponseMessage: Codeunit &quot;Http Response Message&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RelativeUriToResource
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A relativ uri including the resource segment</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								GraphOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Integration.Graph.Graph-Optional-Parameters.html">System.Integration.Graph.&quot;Graph Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>A wrapper for optional header and query parameters</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RequestHttpContent
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Content.html">System.RestClient.&quot;Http Content&quot;</a>                 </td>
+   							<td>
+								<p>The HttpContent object for the request.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HttpResponseMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>                 </td>
+   							<td>
+								<p>The response message object.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Patch</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Patch any request to the microsoft graph API</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Patch(RelativeUriToResource: Text, GraphOptionalParameters: Codeunit &quot;Graph Optional Parameters&quot;, RequestHttpContent: Codeunit &quot;Http Content&quot;, var HttpResponseMessage: Codeunit &quot;Http Response Message&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RelativeUriToResource
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A relativ uri including the resource segment</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								GraphOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Integration.Graph.Graph-Optional-Parameters.html">System.Integration.Graph.&quot;Graph Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>A wrapper for optional header and query parameters</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RequestHttpContent
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Content.html">System.RestClient.&quot;Http Content&quot;</a>                 </td>
+   							<td>
+								<p>The HttpContent object for the request.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HttpResponseMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>                 </td>
+   							<td>
+								<p>The response message object.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+   <h3 class="memberNameHolder">Delete</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Send a DELETE request to the microsoft graph API</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Delete(RelativeUriToResource: Text, GraphOptionalParameters: Codeunit &quot;Graph Optional Parameters&quot;, var HttpResponseMessage: Codeunit &quot;Http Response Message&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RelativeUriToResource
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A relativ uri to the resource - e.g. /users/{id|userPrincipalName}.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								GraphOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Integration.Graph.Graph-Optional-Parameters.html">System.Integration.Graph.&quot;Graph Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>A wrapper for optional header and query parameters</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HttpResponseMessage
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.RestClient.Http-Response-Message.html">System.RestClient.&quot;Http Response Message&quot;</a>                 </td>
+   							<td>
+								<p>The response message object.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the operation was successful; otherwise - false.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Does not require UI interaction.</p>
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

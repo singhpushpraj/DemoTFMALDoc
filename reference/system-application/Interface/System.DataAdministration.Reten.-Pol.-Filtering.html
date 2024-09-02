@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Interface::System#DataAdministration#Reten#_Pol#_Filtering">
+  <h1>Interface &quot;Reten. Pol. Filtering&quot;</h1>
+
+
+
+<div class="font-style-italic">Namespace: System.DataAdministration</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>The Reten. Pol. Filtering interface is used to set filters on the table for which a retention policy is applied.</p>
+
+  		</div>
+  	</div>
+
+
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">ApplyRetentionPolicyAllRecordFilters</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>This method is called when the retention policy applies to all records of the table. The FilterRecordRef must contain filters whe returned.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ApplyRetentionPolicyAllRecordFilters(RetentionPolicySetup: Record &quot;Retention Policy Setup&quot;, var FilterRecordRef: RecordRef, var RetenPolFilteringParam: Record &quot;Reten. Pol. Filtering Param&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RetentionPolicySetup
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Retention Policy Setup&quot;                 </td>
+   							<td>
+								<p>The retention policy for which filters are applied.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FilterRecordRef
+   							</td>
+   							<td class="font-style-italic">
+RecordRef                 </td>
+   							<td>
+								<p>A RecordRef of the table on which the filters are applied.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RetenPolFilteringParam
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Reten. Pol. Filtering Param&quot; temporary                 </td>
+   							<td>
+								<p>The parameter table for this run of apply retention policy.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>Returns true when there are expired records in the filters</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ApplyRetentionPolicySubSetFilters</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>This method is called when the retention policy defines subsets of records. The records in FilterRecordRef must be marked to indicate they are part of the union of all subsets.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ApplyRetentionPolicySubSetFilters(RetentionPolicySetup: Record &quot;Retention Policy Setup&quot;, var FilterRecordRef: RecordRef, var RetenPolFilteringParam: Record &quot;Reten. Pol. Filtering Param&quot; temporary): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RetentionPolicySetup
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Retention Policy Setup&quot;                 </td>
+   							<td>
+								<p>The retention policy for which filters are applied.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FilterRecordRef
+   							</td>
+   							<td class="font-style-italic">
+RecordRef                 </td>
+   							<td>
+								<p>A RecordRef of the table on which the filters are applied.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RetenPolFilteringParam
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;Reten. Pol. Filtering Param&quot; temporary                 </td>
+   							<td>
+								<p>The parameter table for this run of apply retention policy.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>Returns true when there are expired records in the filters</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">HasReadPermission</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>This method is used to determine whether the implementation has read permission to the table specified in TableId.
+The permissions depend on both the user and the implementation codeunit.
+If the combination of user and implementation codeunit do not have read permission to the table, the retention policy will not be applied.
+A notification will be shown on the Retention Policy Setup card.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure HasReadPermission(TableId: Integer): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								TableId
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The ID of the table for a retention policy is defined</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>Returns true if the records in the table can be read.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>procedure HasReadPermission(TableId: Integer): Boolean
+var
+RecRef: RecordRef;
+begin
+RecRef.Open(TableId);
+exit(RecRef.ReadPermission())
+end;</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">Count</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>This method is to count the records in the table specified in the RecRef.
+The method is only called when the base code does not have read permission to the table.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Count(RecordRef: RecordRef): Integer</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RecordRef
+   							</td>
+   							<td class="font-style-italic">
+RecordRef                 </td>
+   							<td>
+								<p>A record reference.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Integer               </td>
+   						<td>
+							<p>The number of records.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>procedure Count(RecRef:RecordRef): Integer
+begin
+exit(RecRef.Count())
+end;</p>
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al">Interface</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

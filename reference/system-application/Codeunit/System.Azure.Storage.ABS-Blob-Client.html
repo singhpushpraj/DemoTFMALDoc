@@ -1,0 +1,5807 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Azure#Storage#ABS_Blob_Client">
+  <h1>Codeunit &quot;ABS Blob Client&quot;</h1>
+
+
+<div class="font-style-italic">ID 9053</div>
+<div class="font-style-italic">Namespace: System.Azure.Storage</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Provides functionality for using operations on blobs in Azure Blob storage.</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes the Azure Blob storage client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+procedure Initialize(StorageAccount: Text, Container: Text, Authorization: Interface &quot;Storage Service Authorization&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								StorageAccount
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of Storage Account to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Container
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the container to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Authorization
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.Azure.Storage.Storage-Service-Authorization.html">System.Azure.Storage.&quot;Storage Service Authorization&quot;</a>                 </td>
+   							<td>
+								<p>The authorization to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">Initialize</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes the Azure BLOB Storage BLOB client.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+procedure Initialize(StorageAccount: Text, Container: Text, Authorization: Interface &quot;Storage Service Authorization&quot;, APIVersion: Enum &quot;Storage Service API Version&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								StorageAccount
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of Storage Account to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Container
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the container to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Authorization
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Interface/System.Azure.Storage.Storage-Service-Authorization.html">System.Azure.Storage.&quot;Storage Service Authorization&quot;</a>                 </td>
+   							<td>
+								<p>The authorization to use.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								APIVersion
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Azure.Storage.Storage-Service-API-Version.html">System.Azure.Storage.&quot;Storage Service API Version&quot;</a>                 </td>
+   							<td>
+								<p>The used API version to use.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">SetBaseUrl</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The base URL to use when constructing the final URI.
+If not set, the base URL is https://%1.blob.core.windows.net where %1 is the storage account name.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetBaseUrl(BaseUrl: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BaseUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A valid URL string</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Use %1 as a placeholder for the storage account name.</p>
+
+   </div>
+   <h3 class="memberNameHolder">ListBlobs</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Lists the blobs in a specific container.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210588">https://go.microsoft.com/fwlink/?linkid=2210588</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ListBlobs(var ABSContainerContent: Record &quot;ABS Container Content&quot; temporary): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ABSContainerContent
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;ABS Container Content&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ListBlobs</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Lists the blobs in a specific container.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210588">https://go.microsoft.com/fwlink/?linkid=2210588</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ListBlobs(var ABSContainerContent: Record &quot;ABS Container Content&quot; temporary, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ABSContainerContent
+   							</td>
+   							<td class="font-style-italic">
+Record &quot;ABS Container Content&quot; temporary                 </td>
+   							<td>
+								<p>Collection of the result (temporary record).</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ListBlobs</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ListBlobs(var BlobList: Dictionary of [Text, XmlNode]): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobList
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Text, XmlNode]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ListBlobs</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ListBlobs(var BlobList: Dictionary of [Text, XmlNode], ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobList
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Text, XmlNode]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobUI</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads a file as a BlockBlob (with File Selection Dialog).
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobUI(): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobUI</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads a file as a BlockBlob (with File Selection Dialog).
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobUI(ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads the content of an InStream as a BlockBlob
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobStream(BlobName: Text, var SourceInStream: InStream): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>The Content of the Blob as InStream.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads the content of an InStream as a BlockBlob
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobStream(BlobName: Text, var SourceInStream: InStream, ContentType: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>The Content of the Blob as InStream.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads the content of an InStream as a BlockBlob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobStream(BlobName: Text, var SourceInStream: InStream, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>The Content of the Blob as InStream.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads the content of an InStream as a BlockBlob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobStream(BlobName: Text, var SourceInStream: InStream, ContentType: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>The Content of the Blob as InStream.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads text as a BlockBlob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobText(BlobName: Text, SourceText: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Content of the Blob as Text.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads text as a BlockBlob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobText(BlobName: Text, SourceText: Text, ContentType: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Content of the Blob as Text.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads text as a BlockBlob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobText(BlobName: Text, SourceText: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Content of the Blob as Text.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobBlockBlobText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Uploads text as a BlockBlob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobBlockBlobText(BlobName: Text, SourceText: Text, ContentType: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Content of the Blob as Text.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobPageBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a PageBlob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobPageBlob(BlobName: Text, ContentType: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobPageBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a PageBlob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobPageBlob(BlobName: Text, ContentType: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobAppendBlobStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Put Blob operation creates a new append blob
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a>
+Uses 'application/octet-stream' as Content-Type</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobAppendBlobStream(BlobName: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobAppendBlobStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Put Blob operation creates a new append blob
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a>
+Uses 'application/octet-stream' as Content-Type</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobAppendBlobStream(BlobName: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobAppendBlobText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Put Blob operation creates a new append blob
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a>
+Uses 'text/plain; charset=UTF-8' as Content-Type</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobAppendBlobText(BlobName: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlobAppendBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Put Blob operation creates a new append blob
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210387">https://go.microsoft.com/fwlink/?linkid=2210387</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlobAppendBlob(BlobName: Text, ContentType: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AppendBlockText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Append Block operation commits a new block of data to the end of an existing append blob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211404">https://go.microsoft.com/fwlink/?linkid=2211404</a>
+Uses 'text/plain; charset=UTF-8' as Content-Type</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AppendBlockText(BlobName: Text, ContentAsText: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentAsText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Text-variable containing the content that should be added to the Blob</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AppendBlockText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Append Block operation commits a new block of data to the end of an existing append blob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211404">https://go.microsoft.com/fwlink/?linkid=2211404</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AppendBlockText(BlobName: Text, ContentAsText: Text, ContentType: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentAsText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Text-variable containing the content that should be added to the Blob</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AppendBlockText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Append Block operation commits a new block of data to the end of an existing append blob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211404">https://go.microsoft.com/fwlink/?linkid=2211404</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AppendBlockText(BlobName: Text, ContentAsText: Text, ContentType: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentAsText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Text-variable containing the content that should be added to the Blob</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AppendBlockStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Append Block operation commits a new block of data to the end of an existing append blob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211404">https://go.microsoft.com/fwlink/?linkid=2211404</a>
+Uses 'application/octet-stream' as Content-Type</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AppendBlockStream(BlobName: Text, ContentAsInStream: InStream): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentAsInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>InStream containing the content that should be added to the Blob</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AppendBlockStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Append Block operation commits a new block of data to the end of an existing append blob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211404">https://go.microsoft.com/fwlink/?linkid=2211404</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AppendBlockStream(BlobName: Text, ContentAsInStream: InStream, ContentType: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentAsInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>InStream containing the content that should be added to the Blob</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AppendBlock</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Append Block operation commits a new block of data to the end of an existing append blob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211404">https://go.microsoft.com/fwlink/?linkid=2211404</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AppendBlock(BlobName: Text, ContentType: Text, SourceContentVariant: Variant, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ContentType
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceContentVariant
+   							</td>
+   							<td class="font-style-italic">
+Variant                 </td>
+   							<td>
+								<p>Variant containing the content that should be added to the Blob</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AppendBlockFromURL</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Append Block From URL operation commits a new block of data to the end of an existing append blob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211405">https://go.microsoft.com/fwlink/?linkid=2211405</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AppendBlockFromURL(BlobName: Text, SourceUri: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Specifies the name of the source blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AppendBlockFromURL</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Append Block From URL operation commits a new block of data to the end of an existing append blob.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211405">https://go.microsoft.com/fwlink/?linkid=2211405</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AppendBlockFromURL(BlobName: Text, SourceUri: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Specifies the name of the source blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobAsFile</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Receives a Blob as a File from a Container.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210388">https://go.microsoft.com/fwlink/?linkid=2210388</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobAsFile(BlobName: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobAsFile</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Receives a Blob as a File from a Container.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210388">https://go.microsoft.com/fwlink/?linkid=2210388</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobAsFile(BlobName: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobAsStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Receives a Blob as a InStream from a Container.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210388">https://go.microsoft.com/fwlink/?linkid=2210388</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobAsStream(BlobName: Text, var TargetInStream: InStream): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TargetInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>The result InStream containg the content of the Blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobAsStream</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Receives a Blob as a InStream from a Container.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210388">https://go.microsoft.com/fwlink/?linkid=2210388</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobAsStream(BlobName: Text, var TargetInStream: InStream, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TargetInStream
+   							</td>
+   							<td class="font-style-italic">
+InStream                 </td>
+   							<td>
+								<p>The result InStream containg the content of the Blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobAsText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Receives a Blob as Text from a Container.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210388">https://go.microsoft.com/fwlink/?linkid=2210388</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobAsText(BlobName: Text, var TargetText: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TargetText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The result Text containg the content of the Blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobAsText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Receives a Blob as Text from a Container.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210388">https://go.microsoft.com/fwlink/?linkid=2210388</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobAsText(BlobName: Text, var TargetText: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TargetText
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The result Text containg the content of the Blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">SetBlobExpiryRelativeToCreation</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Set Blob Expiry operation sets an expiry time on an existing blob. This operation is only allowed on Hierarchical Namespace enabled accounts
+Sets the expiry time relative to the file creation time, x-ms-expiry-time must be specified as the number of milliseconds to elapse from creation time.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210389">https://go.microsoft.com/fwlink/?linkid=2210389</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetBlobExpiryRelativeToCreation(BlobName: Text, ExpiryTime: Integer): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ExpiryTime
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Number if miliseconds (Integer) until the expiration.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">SetBlobExpiryRelativeToNow</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Set Blob Expiry operation sets an expiry time on an existing blob. This operation is only allowed on Hierarchical Namespace enabled accounts
+Sets the expiry relative to the current time, x-ms-expiry-time must be specified as the number of milliseconds to elapse from now.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210389">https://go.microsoft.com/fwlink/?linkid=2210389</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetBlobExpiryRelativeToNow(BlobName: Text, ExpiryTime: Integer): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ExpiryTime
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Number if miliseconds (Integer) until the expiration.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">SetBlobExpiryAbsolute</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Set Blob Expiry operation sets an expiry time on an existing blob. This operation is only allowed on Hierarchical Namespace enabled accounts
+Sets the expiry to an absolute DateTime
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210389">https://go.microsoft.com/fwlink/?linkid=2210389</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetBlobExpiryAbsolute(BlobName: Text, ExpiryTime: DateTime): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ExpiryTime
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>Absolute DateTime for the expiration.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">SetBlobExpiryNever</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Set Blob Expiry operation sets an expiry time on an existing blob. This operation is only allowed on Hierarchical Namespace enabled accounts
+Sets the file to never expire or removes the current expiry time, x-ms-expiry-time must not to be specified.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210389">https://go.microsoft.com/fwlink/?linkid=2210389</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetBlobExpiryNever(BlobName: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">SetBlobTags</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetBlobTags(BlobName: Text, Tags: Dictionary of [Text, Text]): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Tags
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Text, Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">FindBlobsByTags</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure FindBlobsByTags(SearchTags: Dictionary of [Text, Text], var FoundBlobs: XmlDocument): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								SearchTags
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Text, Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FoundBlobs
+   							</td>
+   							<td class="font-style-italic">
+XmlDocument                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobTags</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Get Blob Tags operation gets user-defined tags for the specified blob as XmlDocument.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211502">https://go.microsoft.com/fwlink/?linkid=2211502</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobTags(BlobName: Text, var Tags: XmlDocument): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Tags
+   							</td>
+   							<td class="font-style-italic">
+XmlDocument                 </td>
+   							<td>
+								<p>The result XmlDocument with blob tags.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobTags</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Get Blob Tags operation gets user-defined tags for the specified blob as XmlDocument.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211502">https://go.microsoft.com/fwlink/?linkid=2211502</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobTags(BlobName: Text, var Tags: XmlDocument, OptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Tags
+   							</td>
+   							<td class="font-style-italic">
+XmlDocument                 </td>
+   							<td>
+								<p>The result XmlDocument with blob tags.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobTags</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobTags(BlobName: Text, var Tags: Dictionary of [Text, Text]): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Tags
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Text, Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobTags</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobTags(BlobName: Text, var Tags: Dictionary of [Text, Text], OptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Tags
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Text, Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobProperties</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Get Blob Properties operation returns all user-defined metadata, standard HTTP properties, and system properties for the blob. It doesn't return the content of the blob.
+see: <a href="https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob-properties?tabs=azure-ad">https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob-properties?tabs=azure-ad</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobProperties(BlobName: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object. The Blob properties are in the response headers.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetBlobProperties</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Get Blob Properties operation returns all user-defined metadata, standard HTTP properties, and system properties for the blob. It doesn't return the content of the blob.
+see: <a href="https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob-properties?tabs=azure-ad">https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob-properties?tabs=azure-ad</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetBlobProperties(BlobName: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object. The Blob properties are in the response headers.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">BlobExists</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Blob Exists operation returns true if a blob exists, or false if the blob does not exist.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure BlobExists(BlobName: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the blob exists, false if not.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">BlobExists</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Blob Exists operation returns true if a blob exists, or false if the blob does not exist.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure BlobExists(BlobName: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the blob exists, false if not.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DeleteBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Delete Blob operation marks the specified blob or snapshot for deletion. The blob is later deleted during garbage collection.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211408">https://go.microsoft.com/fwlink/?linkid=2211408</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DeleteBlob(BlobName: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">DeleteBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Delete Blob operation marks the specified blob or snapshot for deletion. The blob is later deleted during garbage collection.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211408">https://go.microsoft.com/fwlink/?linkid=2211408</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure DeleteBlob(BlobName: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">UndeleteBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Undelete Blob operation restores the contents and metadata of a soft deleted blob and any associated soft deleted snapshots (version 2017-07-29 or later)
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210390">https://go.microsoft.com/fwlink/?linkid=2210390</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure UndeleteBlob(BlobName: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">UndeleteBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Undelete Blob operation restores the contents and metadata of a soft deleted blob and any associated soft deleted snapshots (version 2017-07-29 or later)
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210390">https://go.microsoft.com/fwlink/?linkid=2210390</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure UndeleteBlob(BlobName: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">CopyBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Copy Blob operation copies a blob to a destination within the storage account.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210589">https://go.microsoft.com/fwlink/?linkid=2210589</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CopyBlob(BlobName: Text, SourceName: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Specifies the name of the source blob or file.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">CopyBlob</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Copy Blob operation copies a blob to a destination within the storage account.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210589">https://go.microsoft.com/fwlink/?linkid=2210589</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CopyBlob(BlobName: Text, SourceName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Specifies the name of the source blob or file.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Required if the destination blob has an active lease. The lease ID specified must match the lease ID of the destination blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlockList</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlockList(CommitedBlocks: Dictionary of [Text, Integer], UncommitedBlocks: Dictionary of [Text, Integer]): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CommitedBlocks
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Text, Integer]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								UncommitedBlocks
+   							</td>
+   							<td class="font-style-italic">
+Dictionary of [Text, Integer]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlockFromURL</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Put Block From URL operation creates a new block to be committed as part of a blob where the contents are read from a URL.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211409">https://go.microsoft.com/fwlink/?linkid=2211409</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlockFromURL(BlobName: Text, SourceUri: Text, BlockId: Text): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Specifies the name of the source block blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								BlockId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Specifies the BlockId that should be put.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">PutBlockFromURL</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>The Put Block From URL operation creates a new block to be committed as part of a blob where the contents are read from a URL.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2211409">https://go.microsoft.com/fwlink/?linkid=2211409</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure PutBlockFromURL(BlobName: Text, SourceUri: Text, BlockId: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SourceUri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Specifies the name of the source block blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								BlockId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Specifies the BlockId that should be put.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AcquireLease(BlobName: Text, var LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Guid containing the response value from x-ms-lease-id HttpHeader</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AcquireLease(BlobName: Text, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;, var LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Guid containing the response value from x-ms-lease-id HttpHeader</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AcquireLease(BlobName: Text, DurationSeconds: Integer, var LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DurationSeconds
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Guid containing the response value from x-ms-lease-id HttpHeader</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AcquireLease(BlobName: Text, DurationSeconds: Integer, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;, var LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DurationSeconds
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Guid containing the response value from x-ms-lease-id HttpHeader</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AcquireLease(BlobName: Text, ProposedLeaseId: Guid, var LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ProposedLeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Proposed lease ID, in a GUID string format</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Guid containing the response value from x-ms-lease-id HttpHeader</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AcquireLease(BlobName: Text, ProposedLeaseId: Guid, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;, var LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ProposedLeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Proposed lease ID, in a GUID string format</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Guid containing the response value from x-ms-lease-id HttpHeader</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AcquireLease(BlobName: Text, DurationSeconds: Integer, ProposedLeaseId: Guid, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;, var LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DurationSeconds
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ProposedLeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Proposed lease ID, in a GUID string format</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>Guid containing the response value from x-ms-lease-id HttpHeader</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ReleaseLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Releases a lease on a Blob if it is no longer needed so that another client may immediately acquire a lease against the blob
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ReleaseLease(BlobName: Text, LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be released</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ReleaseLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Releases a lease on a Blob if it is no longer needed so that another client may immediately acquire a lease against the blob
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ReleaseLease(BlobName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be released</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">RenewLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Renews a lease on a Blob to keep it locked again for the same amount of time as before
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure RenewLease(BlobName: Text, LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be renewed</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">RenewLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Renews a lease on a Blob to keep it locked again for the same amount of time as before
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure RenewLease(BlobName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be renewed</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">BreakLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Breaks a lease on a blob but ensures that another client cannot acquire a new lease until the current lease period has expired
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure BreakLease(BlobName: Text, LeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be broken</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">BreakLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Breaks a lease on a blob but ensures that another client cannot acquire a new lease until the current lease period has expired
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure BreakLease(BlobName: Text, LeaseId: Guid, LeaseBreakPeriod: Integer): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be broken</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseBreakPeriod
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">BreakLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Breaks a lease on a blob but ensures that another client cannot acquire a new lease until the current lease period has expired
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure BreakLease(BlobName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be broken</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">BreakLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Breaks a lease on a blob but ensures that another client cannot acquire a new lease until the current lease period has expired
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure BreakLease(BlobName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;, LeaseBreakPeriod: Integer): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be broken</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseBreakPeriod
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ChangeLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Changes the lease ID of an active lease
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ChangeLease(BlobName: Text, var LeaseId: Guid, ProposedLeaseId: Guid): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be changed. Will contain the updated Guid after successful operation.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ProposedLeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid that should be used in future</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">ChangeLease</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Changes the lease ID of an active lease
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210391">https://go.microsoft.com/fwlink/?linkid=2210391</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure ChangeLease(BlobName: Text, LeaseId: Guid, ProposedLeaseId: Guid, ABSOptionalParameters: Codeunit &quot;ABS Optional Parameters&quot;): Codeunit &quot;ABS Operation Response&quot;</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								BlobName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The name of the blob.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid for the lease that should be changed</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ProposedLeaseId
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The Guid that should be used in future</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ABSOptionalParameters
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Azure.Storage.ABS-Optional-Parameters.html">System.Azure.Storage.&quot;ABS Optional Parameters&quot;</a>                 </td>
+   							<td>
+								<p>Optional parameters to pass.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+<a class="xref" href="System.Azure.Storage.ABS-Operation-Response.html">System.Azure.Storage.&quot;ABS Operation Response&quot;</a>               </td>
+   						<td>
+							<p>An operation response object</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
