@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Globalization."Windows Languages"
+alId: ID 535
+namespace: System.Globalization
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Globalization
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Caption
+  value: Available Languages
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-change-basic-settings#language
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Page Data Personalization" = r,
+                      tabledata "Windows Language" = r
+  promoted: false
+commentId: O:Page::System#Globalization#Windows Languages
+summary: Page for displaying available windows languages.
+name: '"Windows Languages"'
+uid: O:Page::System#Globalization#Windows_Languages

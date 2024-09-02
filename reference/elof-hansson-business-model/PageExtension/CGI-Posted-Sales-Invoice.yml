@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Posted Sales Invoice"'
+alId: ID 60303
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Posted Sales Invoice
+summary: Page Extenion CGI Posted Sales Invoice (ID 60303) extends page posted sales invoice
+name: '"CGI Posted Sales Invoice"'
+uid: O:PageExtension::CGI_Posted_Sales_Invoice

@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Import Country Comments"'
+alId: ID 70306
+baseKind: XmlPort
+kind: XmlPort
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Import Country Comments
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+- name: Caption
+  value: Import Country Comments
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+commentId: O:XmlPort::CGI Import Country Comments
+summary: >-
+  Import Country Commments from csv file
+
+  it checks based on 'Table Name'= Country' and "Country Code" and updates to
+
+  table TFM Comment Line
+name: '"CGI Import Country Comments"'
+uid: O:XmlPort::CGI_Import_Country_Comments

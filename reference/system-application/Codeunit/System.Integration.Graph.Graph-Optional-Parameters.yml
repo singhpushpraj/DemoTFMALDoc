@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Graph."Graph Optional Parameters"
+alId: ID 9353
+namespace: System.Integration.Graph
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Graph
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetIfMatch(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'IF-Match' HttpHeader for a request.
+  name: SetIfMatch
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetIfMatch(Text)
+- syntax:
+    content: 'procedure SetMicrosftGraphConflictBehavior(GraphConflictBehavior: Enum "Graph ConflictBehavior")'
+    parameters:
+    - id: GraphConflictBehavior
+      description: Enum "Graph ConflictBehavior" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Integration#Graph#Graph_ConflictBehavior
+        name: System.Integration.Graph."Graph ConflictBehavior"
+        isExternal: false
+  summary: Sets the value for '@microsoft.graph.conflictBehavior' HttpHeader for a request.
+  name: SetMicrosftGraphConflictBehavior
+  uid: M:Codeunit::System#Integration#Graph#Graph_Optional_Parameters.SetMicrosftGraphConflictBehavior(Enum::System#Integration#Graph#Graph_ConflictBehavior)
+commentId: O:Codeunit::System#Integration#Graph#Graph Optional Parameters
+summary: Holder for the optional Microsoft Graph HTTP headers and URL parameters.
+name: '"Graph Optional Parameters"'
+uid: O:Codeunit::System#Integration#Graph#Graph_Optional_Parameters

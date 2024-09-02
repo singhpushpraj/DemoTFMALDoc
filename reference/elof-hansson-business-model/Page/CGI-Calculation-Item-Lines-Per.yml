@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Item Lines Per"'
+alId: ID 60318
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Calculation_Line
+  name: '"CGI Calculation Line"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#all'
+  promoted: false
+- name: Caption
+  value: Costs
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: PopulateAllFields
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: "60301"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Calculation_Line
+    name: '"CGI Calculation Line"'
+    isExternal: false
+commentId: O:Page::CGI Calculation Item Lines Per
+name: '"CGI Calculation Item Lines Per"'
+uid: O:Page::CGI_Calculation_Item_Lines_Per

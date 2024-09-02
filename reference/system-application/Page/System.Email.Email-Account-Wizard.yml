@@ -1,0 +1,61 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Account Wizard"
+alId: ID 8886
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  name: System.Email."Email Connector"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Caption
+  value: Set Up Email
+  promoted: false
+- name: SourceTable
+  value: "8905"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "True"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata Media = r,
+                      tabledata "Media Resources" = r,
+                      tabledata "Email Rate Limit" = imd
+  promoted: false
+commentId: O:Page::System#Email#Email Account Wizard
+summary: Step by step guide for adding a new email account in Business Central
+name: '"Email Account Wizard"'
+uid: O:Page::System#Email#Email_Account_Wizard

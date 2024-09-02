@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Media."Video Category"
+alId: ID 3710
+namespace: System.Media
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Media
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: A default category, specifying that the video is not categorized.
+  name: Uncategorized
+  uid: E:Enum::System#Media#Video_Category.Uncategorized
+commentId: O:Enum::System#Media#Video Category
+summary: This enum is the category under which videos can be classified.
+remarks: Extensions can extend this enum to add custom categories.
+name: '"Video Category"'
+uid: O:Enum::System#Media#Video_Category

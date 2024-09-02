@@ -1,0 +1,52 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Table Information Cache Part"
+alId: ID 8701
+namespace: System.DataAdministration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+sourceTableType:
+  name: System.DataAdministration."Table Information Cache"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Table Information
+  promoted: false
+- name: AdditionalSearchTerms
+  value: Database,Size,Storage
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: SourceTable
+  value: "8700"
+  promoted: true
+- name: SourceTableView
+  value: sorting("Data Size (KB)") order(descending)
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "Table Information Cache" = r
+  promoted: false
+commentId: O:Page::System#DataAdministration#Table Information Cache Part
+summary: The Table Information Cache Part page shows information about database tables.
+name: '"Table Information Cache Part"'
+uid: O:Page::System#DataAdministration#Table_Information_Cache_Part

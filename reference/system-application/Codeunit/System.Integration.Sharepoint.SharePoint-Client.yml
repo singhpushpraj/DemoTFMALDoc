@@ -1,0 +1,981 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."SharePoint Client"
+alId: ID 9100
+namespace: System.Integration.Sharepoint
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Initialize(BaseUrl: Text, Authorization: Interface "SharePoint Authorization")'
+    parameters:
+    - id: BaseUrl
+      description: SharePoint URL to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Authorization
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#Integration#Sharepoint#SharePoint_Authorization
+        name: System.Integration.Sharepoint."SharePoint Authorization"
+        isExternal: false
+  summary: Initializes SharePoint client.
+  name: Initialize
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.Initialize(Text,Interface::System#Integration#Sharepoint#SharePoint_Authorization)
+- syntax:
+    content: 'procedure Initialize(BaseUrl: Text, Namespace: Text, Authorization: Interface "SharePoint Authorization")'
+    parameters:
+    - id: BaseUrl
+      description: SharePoint URL to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Namespace
+      description: Namespace to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Authorization
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#Integration#Sharepoint#SharePoint_Authorization
+        name: System.Integration.Sharepoint."SharePoint Authorization"
+        isExternal: false
+  summary: Initializes SharePoint client.
+  name: Initialize
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.Initialize(Text,Text,Interface::System#Integration#Sharepoint#SharePoint_Authorization)
+- syntax:
+    content: 'procedure GetDiagnostics(): Interface "HTTP Diagnostics"'
+    return:
+      description: Codeunit holding http resonse status, reason phrase, headers and possible error information for tha last API call
+      returnType:
+        internalReference: O:Interface::System#Integration#Sharepoint#HTTP_Diagnostics
+        name: System.Integration.Sharepoint."HTTP Diagnostics"
+        isExternal: false
+  summary: Returns detailed information on last API call.
+  name: GetDiagnostics
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetDiagnostics:Interface::System#Integration#Sharepoint#HTTP_Diagnostics
+- syntax:
+    content: 'procedure GetLists(var SharePointList: Record "SharePoint List" temporary): Boolean'
+    parameters:
+    - id: SharePointList
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint List" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets all lists on the given site.
+  name: GetLists
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetLists(SharePoint_List@):Boolean
+- syntax:
+    content: 'procedure GetListItems(ListTitle: Text, var SharePointListItem: Record "SharePoint List Item" temporary): Boolean'
+    parameters:
+    - id: ListTitle
+      description: The title of the list/
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointListItem
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint List Item" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets all list items for the given list.
+  name: GetListItems
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetListItems(Text,SharePoint_List_Item@):Boolean
+- syntax:
+    content: 'procedure GetListItems(ListId: Guid, var SharePointListItem: Record "SharePoint List Item" temporary): Boolean'
+    parameters:
+    - id: ListId
+      description: The GUID of the list/
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: SharePointListItem
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint List Item" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets all list items for the given list.
+  name: GetListItems
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetListItems(Guid,SharePoint_List_Item@):Boolean
+- syntax:
+    content: 'procedure GetListItemAttachments(ListTitle: Text, ListItemId: Integer, var SharePointListItemAtch: Record "SharePoint List Item Atch" temporary): Boolean'
+    parameters:
+    - id: ListTitle
+      description: The title of the list
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ListItemId
+      description: Unique id of the item within the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SharePointListItemAtch
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint List Item Atch" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets all attachments for the given list item.
+  name: GetListItemAttachments
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetListItemAttachments(Text,Integer,SharePoint_List_Item_Atch@):Boolean
+- syntax:
+    content: 'procedure GetListItemAttachments(ListId: Guid, ListItemId: Integer, var SharePointListItemAtch: Record "SharePoint List Item Atch" temporary): Boolean'
+    parameters:
+    - id: ListId
+      description: The GUID of the list
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ListItemId
+      description: Unique id of the item within the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SharePointListItemAtch
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint List Item Atch" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets all attachments for the given list item.
+  name: GetListItemAttachments
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetListItemAttachments(Guid,Integer,SharePoint_List_Item_Atch@):Boolean
+- syntax:
+    content: 'procedure DownloadListItemAttachmentContent(ListTitle: Text, ListItemId: Integer, FileName: Text): Boolean'
+    parameters:
+    - id: ListTitle
+      description: The title of the list
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ListItemId
+      description: Unique id of the item within the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FileName
+      description: Name to be given to the file on the client side. Does not need to match the server side name.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads the specified attachment file to the client.
+  name: DownloadListItemAttachmentContent
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadListItemAttachmentContent(Text,Integer,Text):Boolean
+- syntax:
+    content: 'procedure DownloadListItemAttachmentContent(ListId: Guid, ListItemId: Integer, FileName: Text): Boolean'
+    parameters:
+    - id: ListId
+      description: The GUID of the list
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ListItemId
+      description: Unique id of the item within the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FileName
+      description: Name to be given to the file on the client side. Does not need to match the server side name.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads the specified attachment file to the client.
+  name: DownloadListItemAttachmentContent
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadListItemAttachmentContent(Guid,Integer,Text):Boolean
+- syntax:
+    content: 'procedure DownloadListItemAttachmentContent(OdataId: Text): Boolean'
+    parameters:
+    - id: OdataId
+      description: The odata.id parameter of the attachment entity.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads the specified attachment file to the client.
+  remarks: The server side file name will be used.
+  name: DownloadListItemAttachmentContent
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadListItemAttachmentContent(Text):Boolean
+- syntax:
+    content: 'procedure CreateListItemAttachment(ListTitle: Text, ListItemId: Integer, var SharePointListItemAtch: Record "SharePoint List Item Atch" temporary): Boolean'
+    parameters:
+    - id: ListTitle
+      description: The title of the list.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ListItemId
+      description: Unique id of the item within the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SharePointListItemAtch
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint List Item Atch" temporary
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates the list item attachment for given item.
+  remarks: Requires UI interaction to pick a file.
+  name: CreateListItemAttachment
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.CreateListItemAttachment(Text,Integer,SharePoint_List_Item_Atch@):Boolean
+- syntax:
+    content: 'procedure CreateListItemAttachment(ListID: Guid, ListItemId: Integer, var SharePointListItemAtch: Record "SharePoint List Item Atch" temporary): Boolean'
+    parameters:
+    - id: ListID
+      description: The GUID of the list.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ListItemId
+      description: Unique id of the item within the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SharePointListItemAtch
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint List Item Atch" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates the list item attachment for given item.
+  remarks: Requires UI interaction to pick a file.
+  name: CreateListItemAttachment
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.CreateListItemAttachment(Guid,Integer,SharePoint_List_Item_Atch@):Boolean
+- syntax:
+    content: 'procedure CreateListItemAttachment(ListTitle: Text, ListItemId: Integer, FileName: Text, var FileInStream: InStream, var SharePointListItemAtch: Record "SharePoint List Item Atch" temporary): Boolean'
+    parameters:
+    - id: ListTitle
+      description: The title of the list.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ListItemId
+      description: Unique id of the item within the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FileName
+      description: File name to use on SharePoint.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileInStream
+      description: File stream to upload.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: SharePointListItemAtch
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint List Item Atch" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a list item attachment for specific list item.
+  remarks: Does not require UI interaction.
+  name: CreateListItemAttachment
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.CreateListItemAttachment(Text,Integer,Text,InStream@,SharePoint_List_Item_Atch@):Boolean
+- syntax:
+    content: 'procedure CreateListItemAttachment(ListID: Guid, ListItemId: Integer, FileName: Text, var FileInStream: InStream, var SharePointListItemAtch: Record "SharePoint List Item Atch" temporary): Boolean'
+    parameters:
+    - id: ListID
+      description: The GUID of the list.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ListItemId
+      description: Unique id of the item within the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FileName
+      description: File name to use on SharePoint.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileInStream
+      description: File stream to upload.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: SharePointListItemAtch
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint List Item Atch" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a list item attachment for specific list item.
+  remarks: Does not require UI interaction.
+  name: CreateListItemAttachment
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.CreateListItemAttachment(Guid,Integer,Text,InStream@,SharePoint_List_Item_Atch@):Boolean
+- syntax:
+    content: 'procedure CreateList(ListTitle: Text, ListDescription: Text, var SharePointList: Record "SharePoint List" temporary): Boolean'
+    parameters:
+    - id: ListTitle
+      description: Title for the new list.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ListDescription
+      description: Description for the new list.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointList
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint List" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a new list.
+  name: CreateList
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.CreateList(Text,Text,SharePoint_List@):Boolean
+- syntax:
+    content: 'procedure CreateListItem(ListTitle: Text, ListItemEntityTypeFullName: Text, ListItemTitle: Text, var SharePointListItem: Record "SharePoint List Item" temporary): Boolean'
+    parameters:
+    - id: ListTitle
+      description: The title of the list.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ListItemEntityTypeFullName
+      description: The Entity Type for the list. Parameter can be found on a list object (ListItemEntityType).
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ListItemTitle
+      description: The title of the new list item.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointListItem
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint List Item" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a new list item in specific list.
+  name: CreateListItem
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.CreateListItem(Text,Text,Text,SharePoint_List_Item@):Boolean
+- syntax:
+    content: 'procedure CreateListItem(ListId: Guid, ListItemEntityTypeFullName: Text, ListItemTitle: Text, var SharePointListItem: Record "SharePoint List Item" temporary): Boolean'
+    parameters:
+    - id: ListId
+      description: The GUID of the list.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ListItemEntityTypeFullName
+      description: The Entity Type for the list. Parameter can be found on a list object (ListItemEntityType).
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ListItemTitle
+      description: The title of the new list item.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointListItem
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint List Item" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a new list item in specific list.
+  name: CreateListItem
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.CreateListItem(Guid,Text,Text,SharePoint_List_Item@):Boolean
+- syntax:
+    content: 'procedure GetSubFoldersByServerRelativeUrl(ServerRelativeUrl: Text, var SharePointFolder: Record "SharePoint Folder" temporary): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the parent folder.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointFolder
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint Folder" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Lists all subfolders in the given folder.
+  remarks: Only top level subfolders are included.
+  name: GetSubFoldersByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetSubFoldersByServerRelativeUrl(Text,SharePoint_Folder@):Boolean
+- syntax:
+    content: 'procedure GetFolderFilesByServerRelativeUrl(ServerRelativeUrl: Text, var SharePointFile: Record "SharePoint File" temporary): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the parent folder.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointFile
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint File" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Lists all files in the given folder.
+  name: GetFolderFilesByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetFolderFilesByServerRelativeUrl(Text,SharePoint_File@):Boolean
+- syntax:
+    content: 'procedure GetFolderFilesByServerRelativeUrl(ServerRelativeUrl: Text, var SharePointFile: Record "SharePoint File" temporary, ListAllFields: Boolean): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the parent folder.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointFile
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint File" temporary
+        isExternal: true
+    - id: ListAllFields
+      description: Include metadata in results.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Lists all files in the given folder.
+  name: GetFolderFilesByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetFolderFilesByServerRelativeUrl(Text,SharePoint_File@,Boolean):Boolean
+- syntax:
+    content: 'procedure GetFileByServerRelativeUrl(ServerRelativeUrl: Text, var SharePointFile: Record "SharePoint File" temporary, ListAllFields: Boolean): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointFile
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "SharePoint File" temporary
+        isExternal: true
+    - id: ListAllFields
+      description: Include metadata in results.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets file data by server relative url
+  name: GetFileByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetFileByServerRelativeUrl(Text,SharePoint_File@,Boolean):Boolean
+- syntax:
+    content: 'procedure DownloadFileContent(OdataId: Text, var FileInStream: InStream): Boolean'
+    parameters:
+    - id: OdataId
+      description: The odata.id parameter of the file entity.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileInStream
+      description: The InStream that will be populated with the file content.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads a file to an InStream.
+  name: DownloadFileContent
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadFileContent(Text,InStream@):Boolean
+- syntax:
+    content: 'procedure DownloadFileContent(OdataId: Text, FileName: Text): Boolean'
+    parameters:
+    - id: OdataId
+      description: The odata.id parameter of the file entity.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileName
+      description: Name to be given to the file on the client side. Does not need to match the server side name.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads a file to the client.
+  name: DownloadFileContent
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadFileContent(Text,Text):Boolean
+- syntax:
+    content: 'procedure DownloadFileContent(OdataId: Text, var TempBlob: Codeunit "Temp Blob"): Boolean'
+    parameters:
+    - id: OdataId
+      description: The odata.id parameter of the file entity.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TempBlob
+      description: The TempBlob that will be populated with the file content.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads a file to a TempBlob.
+  name: DownloadFileContent
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadFileContent(Text,Codeunit::System#Utilities#Temp_Blob@):Boolean
+- syntax:
+    content: 'procedure DownloadFileContentByServerRelativeUrl(ServerRelativeUrl: Text, var FileInStream: InStream): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the file to Download.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileInStream
+      description: The InStream that will be populated with the file content.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads a file to an InStream.
+  name: DownloadFileContentByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadFileContentByServerRelativeUrl(Text,InStream@):Boolean
+- syntax:
+    content: 'procedure DownloadFileContentByServerRelativeUrl(ServerRelativeUrl: Text, FileName: Text): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the file to Download.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileName
+      description: Name to be given to the file on the client side. Does not need to match the server side name.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads a file to the client.
+  name: DownloadFileContentByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadFileContentByServerRelativeUrl(Text,Text):Boolean
+- syntax:
+    content: 'procedure DownloadFileContentByServerRelativeUrl(ServerRelativeUrl: Text, var TempBlob: Codeunit "Temp Blob"): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the file to Download.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TempBlob
+      description: The TempBlob that will be populated with the file content.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads a file to a TempBlob.
+  name: DownloadFileContentByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DownloadFileContentByServerRelativeUrl(Text,Codeunit::System#Utilities#Temp_Blob@):Boolean
+- syntax:
+    content: 'procedure DeleteFile(OdataId: Text): Boolean'
+    parameters:
+    - id: OdataId
+      description: The odata.id parameter of the file entity.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes a file.
+  name: DeleteFile
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DeleteFile(Text):Boolean
+- syntax:
+    content: 'procedure DeleteFileByServerRelativeUrl(ServerRelativeUrl: Text): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the file to delete.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes a file.
+  name: DeleteFileByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DeleteFileByServerRelativeUrl(Text):Boolean
+- syntax:
+    content: 'procedure GetDocumentLibraryRootFolder(OdataID: Text, var SharePointFolder: Record "SharePoint Folder" temporary): Boolean'
+    parameters:
+    - id: OdataID
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointFolder
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint Folder" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets root folder for the list entity (Document Library).
+  remarks: See "Is Catalog" parameter of the list.
+  name: GetDocumentLibraryRootFolder
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.GetDocumentLibraryRootFolder(Text,SharePoint_Folder@):Boolean
+- syntax:
+    content: 'procedure CreateFolder(ServerRelativeUrl: Text, var SharePointFolder: Record "SharePoint Folder" temporary): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the new folder.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointFolder
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint Folder" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a new folder.
+  remarks: Create subfolders by manipulating URL.
+  name: CreateFolder
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.CreateFolder(Text,SharePoint_Folder@):Boolean
+- syntax:
+    content: 'procedure DeleteFolder(OdataId: Text): Boolean'
+    parameters:
+    - id: OdataId
+      description: The odata.id parameter of the folder entity.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes a folder.
+  name: DeleteFolder
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DeleteFolder(Text):Boolean
+- syntax:
+    content: 'procedure DeleteFolderByServerRelativeUrl(ServerRelativeUrl: Text): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the folder to delete.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes a folder.
+  name: DeleteFolderByServerRelativeUrl
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.DeleteFolderByServerRelativeUrl(Text):Boolean
+- syntax:
+    content: 'procedure AddFileToFolder(ServerRelativeUrl: Text, var SharePointFile: Record "SharePoint File" temporary): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the parent folder.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointFile
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint File" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a file to specific folder.
+  remarks: Requires UI interaction to pick a file.
+  name: AddFileToFolder
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.AddFileToFolder(Text,SharePoint_File@):Boolean
+- syntax:
+    content: 'procedure AddFileToFolder(ServerRelativeUrl: Text, var SharePointFile: Record "SharePoint File" temporary, ListAllFields: Boolean): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the parent folder.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SharePointFile
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint File" temporary
+        isExternal: true
+    - id: ListAllFields
+      description: Include metadata in results.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a file to specific folder.
+  remarks: Requires UI interaction to pick a file.
+  name: AddFileToFolder
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.AddFileToFolder(Text,SharePoint_File@,Boolean):Boolean
+- syntax:
+    content: 'procedure AddFileToFolder(ServerRelativeUrl: Text, FileName: Text, var FileInStream: InStream, var SharePointFile: Record "SharePoint File" temporary): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the parent folder.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileName
+      description: File name to use on SharePoint.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileInStream
+      description: File stream to upload.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: SharePointFile
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint File" temporary
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a file to specific folder.
+  remarks: Does not require UI interaction.
+  name: AddFileToFolder
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.AddFileToFolder(Text,Text,InStream@,SharePoint_File@):Boolean
+- syntax:
+    content: 'procedure AddFileToFolder(ServerRelativeUrl: Text, FileName: Text, var FileInStream: InStream, var SharePointFile: Record "SharePoint File" temporary, ListAllFields: Boolean): Boolean'
+    parameters:
+    - id: ServerRelativeUrl
+      description: URL of the parent folder.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileName
+      description: File name to use on SharePoint.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileInStream
+      description: File stream to upload.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: SharePointFile
+      description: Collection of the result (temporary record). Always one element.
+      parameterType:
+        name: Record "SharePoint File" temporary
+        isExternal: true
+    - id: ListAllFields
+      description: Include metadata in results.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a file to specific folder.
+  remarks: Does not require UI interaction.
+  name: AddFileToFolder
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.AddFileToFolder(Text,Text,InStream@,SharePoint_File@,Boolean):Boolean
+- syntax:
+    content: 'procedure UpdateListItemMetaDataField(ListTitle: Text, ItemId: Integer, ListItemEntityTypeFullName: Text, FieldName: Text, FieldValue: Text): Boolean'
+    parameters:
+    - id: ListTitle
+      description: The title of the list.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ItemId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ListItemEntityTypeFullName
+      description: The Entity Type for the list. Parameter can be found on a list object (ListItemEntityType).
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FieldName
+      description: The name of the metadata field.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FieldValue
+      description: Value.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Updates metadata field for list item.
+  name: UpdateListItemMetaDataField
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.UpdateListItemMetaDataField(Text,Integer,Text,Text,Text):Boolean
+- syntax:
+    content: 'procedure UpdateListItemMetaDataField(ListId: Guid, ItemId: Integer, ListItemEntityTypeFullName: Text, FieldName: Text, FieldValue: Text): Boolean'
+    parameters:
+    - id: ListId
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ItemId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ListItemEntityTypeFullName
+      description: The Entity Type for the list. Parameter can be found on a list object (ListItemEntityType).
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FieldName
+      description: The name of the metadata field.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FieldValue
+      description: Value.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Updates metadata field for list item.
+  name: UpdateListItemMetaDataField
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Client.UpdateListItemMetaDataField(Guid,Integer,Text,Text,Text):Boolean
+commentId: O:Codeunit::System#Integration#Sharepoint#SharePoint Client
+summary: Provides functionality for interacting with SharePoint REST API
+name: '"SharePoint Client"'
+uid: O:Codeunit::System#Integration#Sharepoint#SharePoint_Client

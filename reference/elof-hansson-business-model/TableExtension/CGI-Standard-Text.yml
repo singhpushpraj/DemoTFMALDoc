@@ -1,0 +1,20 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Standard Text"'
+alId: ID 60333
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Copy Allowed"'
+  uid: F:TableExtension::CGI_Standard_Text.Copy_Allowed
+commentId: O:TableExtension::CGI Standard Text
+summary: TableExtension CGI Standard Text (ID 60333) extends record standard text
+name: '"CGI Standard Text"'
+uid: O:TableExtension::CGI_Standard_Text

@@ -1,0 +1,90 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities.Matches
+alId: ID 3965
+namespace: System.Utilities
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure ReadValue(): Text'
+    return:
+      description: The value of the match.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Reads the value of the match
+  name: ReadValue
+  uid: M:Table::System#Utilities#Matches.ReadValue:Text
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: MatchIndex
+  uid: F:Table::System#Utilities#Matches.MatchIndex
+- type:
+    name: Integer
+    isExternal: true
+  name: Index
+  uid: F:Table::System#Utilities#Matches.Index
+- type:
+    name: Integer
+    isExternal: true
+  name: Length
+  uid: F:Table::System#Utilities#Matches.Length
+- type:
+    name: Boolean
+    isExternal: true
+  name: Success
+  uid: F:Table::System#Utilities#Matches.Success
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Utilities#Matches.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Utilities#Matches.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Utilities#Matches.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Utilities#Matches.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Utilities#Matches.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Utilities#Matches.SystemRowVersion
+commentId: O:Table::System#Utilities#Matches
+summary: Provides a representation of Regex Matches that models Match objects in .Net
+name: Matches
+uid: O:Table::System#Utilities#Matches

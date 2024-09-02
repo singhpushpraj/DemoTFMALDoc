@@ -1,0 +1,398 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS Optional Parameters"
+alId: ID 8956
+namespace: System.Azure.Storage.Files
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Range(BytesStartValue: Integer, BytesEndValue: Integer)'
+    parameters:
+    - id: BytesStartValue
+      description: Integer value specifying the Bytes start range value
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: BytesEndValue
+      description: Integer value specifying the Bytes end range value
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the value for 'x-ms-range' HttpHeader for a request.
+  name: Range
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.Range(Integer,Integer)
+- syntax:
+    content: 'procedure Write(Value: Enum "AFS Write")'
+    parameters:
+    - id: Value
+      description: Enum "AFS Write" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Files#AFS_Write
+        name: System.Azure.Storage.Files."AFS Write"
+        isExternal: false
+  summary: Sets the value for 'x-ms-write' HttpHeader for a request.
+  name: Write
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.Write(Enum::System#Azure#Storage#Files#AFS_Write)
+- syntax:
+    content: 'procedure LeaseId(Value: Guid)'
+    parameters:
+    - id: Value
+      description: Guid value specifying the LeaseID
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Sets the value for 'x-ms-lease-id' HttpHeader for a request.
+  name: LeaseId
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.LeaseId(Guid)
+- syntax:
+    content: 'procedure LeaseDuration(Value: Integer)'
+    parameters:
+    - id: Value
+      description: Integer value specifying the LeaseDuration in seconds
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the value for 'x-ms-lease-duration' HttpHeader for a request.
+  name: LeaseDuration
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.LeaseDuration(Integer)
+- syntax:
+    content: 'procedure ProposedLeaseId(Value: Guid)'
+    parameters:
+    - id: Value
+      description: Guid value specifying the ProposedLeaseId in seconds
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Sets the value for 'x-ms-proposed-lease-id' HttpHeader for a request.
+  name: ProposedLeaseId
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.ProposedLeaseId(Guid)
+- syntax:
+    content: 'procedure ClientRequestId(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-client-request-id' HttpHeader for a request.
+  name: ClientRequestId
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.ClientRequestId(Text)
+- syntax:
+    content: 'procedure FileLastWriteTime(Value: Enum "AFS File Last Write Time")'
+    parameters:
+    - id: Value
+      description: Enum "AFS File Last Write Time" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Files#AFS_File_Last_Write_Time
+        name: System.Azure.Storage.Files."AFS File Last Write Time"
+        isExternal: false
+  summary: Sets the value for 'x-ms-file-last-write-time' HttpHeader for a request.
+  name: FileLastWriteTime
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileLastWriteTime(Enum::System#Azure#Storage#Files#AFS_File_Last_Write_Time)
+- syntax:
+    content: 'procedure FileRequestIntent(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-request-intent' HttpHeader for a request, 'backup' is an acceptable value.
+  name: FileRequestIntent
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileRequestIntent(Text)
+- syntax:
+    content: 'procedure FilePermission(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-permission' HttpHeader for a request.
+  name: FilePermission
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FilePermission(Text)
+- syntax:
+    content: 'procedure FilePermissionKey(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-permission-key' HttpHeader for a request.
+  name: FilePermissionKey
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FilePermissionKey(Text)
+- syntax:
+    content: 'procedure FileAttributes(Value: List of [Enum "AFS File Attribute"])'
+    parameters:
+    - id: Value
+      parameterType:
+        name: List of [Enum System.Azure.Storage.Files."AFS File Attribute"]
+        isExternal: true
+  name: FileAttributes
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileAttributes(List_of_[AFS_File_Attribute])
+- syntax:
+    content: 'procedure FileCreationTime(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: Datetime of the file creation
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-creation-time' HttpHeader for a request.
+  name: FileCreationTime
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileCreationTime(DateTime)
+- syntax:
+    content: 'procedure FileLastWriteTime(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: Datetime of the file last write time
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-last-write-time' HttpHeader for a request.
+  name: FileLastWriteTime
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileLastWriteTime(DateTime)
+- syntax:
+    content: 'procedure FileChangeTime(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: Datetime of the file last change time
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-change-time' HttpHeader for a request.
+  name: FileChangeTime
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileChangeTime(DateTime)
+- syntax:
+    content: 'procedure Meta("Key": Text, Value: Text)'
+    parameters:
+    - id: Key
+      description: Text value specifying the metadata name key
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-meta-name' HttpHeader for a request. name should adhere to C# identifiers naming convention.
+  name: Meta
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.Meta(Text,Text)
+- syntax:
+    content: 'procedure FilePermissionCopyMode(Value: Enum "AFS File Permission Copy Mode")'
+    parameters:
+    - id: Value
+      description: Enum "AFS File Permission Copy Mode" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Files#AFS_File_Permission_Copy_Mode
+        name: System.Azure.Storage.Files."AFS File Permission Copy Mode"
+        isExternal: false
+  summary: Sets the value for 'x-ms-file-permission-copy-mode' HttpHeader for a request.
+  name: FilePermissionCopyMode
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FilePermissionCopyMode(Enum::System#Azure#Storage#Files#AFS_File_Permission_Copy_Mode)
+- syntax:
+    content: 'procedure CopySource(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-copy-source' HttpHeader for a request.
+  name: CopySource
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.CopySource(Text)
+- syntax:
+    content: 'procedure AllowTrailingDot(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-allow-trailing-dot' HttpHeader for a request.
+  name: AllowTrailingDot
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.AllowTrailingDot(Boolean)
+- syntax:
+    content: 'procedure FileRenameReplaceIfExists(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-rename-replace-if-exists' HttpHeader for a request.
+  name: FileRenameReplaceIfExists
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileRenameReplaceIfExists(Boolean)
+- syntax:
+    content: 'procedure FileRenameIgnoreReadOnly(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-rename-ignore-readonly' HttpHeader for a request.
+  name: FileRenameIgnoreReadOnly
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileRenameIgnoreReadOnly(Boolean)
+- syntax:
+    content: 'procedure SourceLeaseId(Value: Guid)'
+    parameters:
+    - id: Value
+      description: Guid value specifying the SourceLeaseID
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Sets the value for 'x-ms-source-lease-id' HttpHeader for a request.
+  name: SourceLeaseId
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.SourceLeaseId(Guid)
+- syntax:
+    content: 'procedure DestinationLeaseId(Value: Guid)'
+    parameters:
+    - id: Value
+      description: Guid value specifying the DestinationLeaseID
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Sets the value for 'x-ms-destination-lease-id' HttpHeader for a request.
+  name: DestinationLeaseId
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.DestinationLeaseId(Guid)
+- syntax:
+    content: 'procedure FileCopyIgnoreReadOnly(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-copy-ignore-readonly' HttpHeader for a request.
+  name: FileCopyIgnoreReadOnly
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileCopyIgnoreReadOnly(Boolean)
+- syntax:
+    content: 'procedure FileCopySetArchive(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-copy-set-archive' HttpHeader for a request.
+  name: FileCopySetArchive
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileCopySetArchive(Boolean)
+- syntax:
+    content: 'procedure FileExtendedInfo(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-file-extended-info' HttpHeader for a request.
+  name: FileExtendedInfo
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.FileExtendedInfo(Boolean)
+- syntax:
+    content: 'procedure RangeGetContentMD5(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-range-get-content-md5' HttpHeader for a request.
+  name: RangeGetContentMD5
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.RangeGetContentMD5(Boolean)
+- syntax:
+    content: 'procedure Recursive(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-recursive' HttpHeader for a request.
+  name: Recursive
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.Recursive(Boolean)
+- syntax:
+    content: 'procedure Timeout(Value: Integer)'
+    parameters:
+    - id: Value
+      description: 'Timeout in seconds. Most operations have a max. limit of 30 seconds. For more Information see: https://go.microsoft.com/fwlink/?linkid=2210591'
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the optional timeout value for the request.
+  name: Timeout
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.Timeout(Integer)
+- syntax:
+    content: 'procedure Prefix(Value: Text)'
+    parameters:
+    - id: Value
+      description: Prefix to search for
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Filters the results to return only blobs whose names begin with the specified prefix.
+  name: Prefix
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.Prefix(Text)
+- syntax:
+    content: 'procedure ShareSnapshot(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: Datetime of the snapshot to query
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Specifies the share snapshot to query for the list of files and directories.
+  name: ShareSnapshot
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.ShareSnapshot(DateTime)
+- syntax:
+    content: 'procedure Marker(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text marker that was returned in previous operation
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: A string value that identifies the portion of the list to be returned with the next list operation.
+  name: Marker
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.Marker(Text)
+- syntax:
+    content: 'procedure MaxResults(Value: Integer)'
+    parameters:
+    - id: Value
+      description: Max. number of results to return. Must be positive, must not be greater than 5000
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Specifies the maximum number of files or directories to return
+  name: MaxResults
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.MaxResults(Integer)
+- syntax:
+    content: 'procedure Include(Value: List of [Enum "AFS Property"])'
+    parameters:
+    - id: Value
+      parameterType:
+        name: List of [Enum System.Azure.Storage.Files."AFS Property"]
+        isExternal: true
+  name: Include
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters.Include(List_of_[AFS_Property])
+commentId: O:Codeunit::System#Azure#Storage#Files#AFS Optional Parameters
+summary: Holds procedures to format headers and parameters to be used in requests.
+name: '"AFS Optional Parameters"'
+uid: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters

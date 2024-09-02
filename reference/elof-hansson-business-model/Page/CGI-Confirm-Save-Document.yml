@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Confirm Save Document"'
+alId: ID 60352
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Save document?
+  promoted: false
+- name: PageType
+  value: StandardDialog
+  promoted: true
+methods:
+- syntax:
+    content: 'procedure ReturnVar(): Text[250]'
+    return:
+      returnType:
+        name: Text[250]
+        isExternal: true
+  name: ReturnVar
+  uid: M:Page::CGI_Confirm_Save_Document.ReturnVar:Text[250]
+commentId: O:Page::CGI Confirm Save Document
+name: '"CGI Confirm Save Document"'
+uid: O:Page::CGI_Confirm_Save_Document

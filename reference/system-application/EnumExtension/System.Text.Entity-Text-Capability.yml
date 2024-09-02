@@ -1,0 +1,17 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Entity Text Capability"
+alId: ID 2015
+namespace: System.Text
+baseKind: Enum
+kind: EnumExtension
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Enum Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+enumValues:
+- name: '"Entity Text"'
+  uid: E:EnumExtension::System#Text#Entity_Text_Capability.Entity_Text
+commentId: O:EnumExtension::System#Text#Entity Text Capability
+name: '"Entity Text Capability"'
+uid: O:EnumExtension::System#Text#Entity_Text_Capability

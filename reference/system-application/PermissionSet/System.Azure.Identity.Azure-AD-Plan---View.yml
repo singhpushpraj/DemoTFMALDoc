@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD Plan - View"
+alId: ID 9018
+namespace: System.Azure.Identity
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Azure AD Plan - Read"'
+  promoted: false
+commentId: O:PermissionSet::System#Azure#Identity#Azure AD Plan - View
+name: '"Azure AD Plan - View"'
+uid: O:PermissionSet::System#Azure#Identity#Azure_AD_Plan_-_View

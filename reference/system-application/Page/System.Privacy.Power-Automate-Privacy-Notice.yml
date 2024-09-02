@@ -1,0 +1,33 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Power Automate Privacy Notice"
+alId: ID 1568
+namespace: System.Privacy
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Set Up Power Automate
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+commentId: O:Page::System#Privacy#Power Automate Privacy Notice
+name: '"Power Automate Privacy Notice"'
+uid: O:Page::System#Privacy#Power_Automate_Privacy_Notice

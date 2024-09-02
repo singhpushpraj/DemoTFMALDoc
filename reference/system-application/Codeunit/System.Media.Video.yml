@@ -1,0 +1,175 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Media.Video
+alId: ID 3710
+namespace: System.Media
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Media
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Play(Url: Text)'
+    parameters:
+    - id: Url
+      description: The link to the video.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Use a link to display a video in a new page.
+  name: Play
+  uid: M:Codeunit::System#Media#Video.Play(Text)
+- syntax:
+    content: 'procedure Register(AppID: Guid, Title: Text[250], VideoUrl: Text[2048])'
+    parameters:
+    - id: AppID
+      description: The ID of the extension that registers this video.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Title
+      description: The title of the video.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: VideoUrl
+      description: The link to the video.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: to a video to the Product Videos page.
+  name: Register
+  uid: M:Codeunit::System#Media#Video.Register(Guid,Text[250],Text[2048])
+- syntax:
+    content: 'procedure Register(AppID: Guid, Title: Text[250], VideoUrl: Text[2048], Category: Enum "Video Category")'
+    parameters:
+    - id: AppID
+      description: The ID of the extension that registers this video.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Title
+      description: The title of the video.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: VideoUrl
+      description: The link to the video.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: Category
+      description: The video category.
+      parameterType:
+        internalReference: O:Enum::System#Media#Video_Category
+        name: System.Media."Video Category"
+        isExternal: false
+  summary: to a video to the Product Videos page.
+  name: Register
+  uid: M:Codeunit::System#Media#Video.Register(Guid,Text[250],Text[2048],Enum::System#Media#Video_Category)
+- syntax:
+    content: 'procedure Register(AppID: Guid, Title: Text[250], VideoUrl: Text[2048], TableNum: Integer, SystemId: Guid)'
+    parameters:
+    - id: AppID
+      description: The ID of the extension that registers this video.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Title
+      description: The title of the video.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: VideoUrl
+      description: The link to the video.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: TableNum
+      description: The table number of the record that is the source of this video.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: >-
+        id of the record related to this video. This is
+
+        used to raise the OnVideoPlayed event with that record once the video is
+
+        played.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: to a video to the Product Videos page.
+  name: Register
+  uid: M:Codeunit::System#Media#Video.Register(Guid,Text[250],Text[2048],Integer,Guid)
+- syntax:
+    content: 'procedure Register(AppID: Guid, Title: Text[250], VideoUrl: Text[2048], Category: Enum "Video Category", TableNum: Integer, SystemId: Guid)'
+    parameters:
+    - id: AppID
+      description: The ID of the extension that registers this video.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Title
+      description: The title of the video.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: VideoUrl
+      description: The link to the video.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: Category
+      description: The video category.
+      parameterType:
+        internalReference: O:Enum::System#Media#Video_Category
+        name: System.Media."Video Category"
+        isExternal: false
+    - id: TableNum
+      description: The table number of the record that is the source of this video.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: >-
+        id of the record related to this video. This is
+
+        used to raise the OnVideoPlayed event with that record once the video is
+
+        played.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: to a video to the Product Videos page.
+  name: Register
+  uid: M:Codeunit::System#Media#Video.Register(Guid,Text[250],Text[2048],Enum::System#Media#Video_Category,Integer,Guid)
+- syntax:
+    content: 'procedure Show(Category: Enum "Video Category")'
+    parameters:
+    - id: Category
+      description: The category to filter the videos by.
+      parameterType:
+        internalReference: O:Enum::System#Media#Video_Category
+        name: System.Media."Video Category"
+        isExternal: false
+  summary: Show all videos that belong to a given category.
+  name: Show
+  uid: M:Codeunit::System#Media#Video.Show(Enum::System#Media#Video_Category)
+commentId: O:Codeunit::System#Media#Video
+summary: Lists and enables playing of available videos.
+name: Video
+uid: O:Codeunit::System#Media#Video

@@ -1,0 +1,86 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Filter Tokens"
+alId: ID 41
+namespace: System.Text
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure MakeDateFilter(var DateFilterText: Text)'
+    parameters:
+    - id: DateFilterText
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Turns text that represents date formats into a valid date filter expression with respect to filter tokens and date formulas.
+
+    Call this function from onValidate trigger of page field that should behave similar to system filters.
+
+    <param name="DateFilterText">The text from which the date filter should be extracted passed as VAR. For example: "YESTERDAY", or " 01-01-2012 ".</param>
+  name: MakeDateFilter
+  uid: M:Codeunit::System#Text#Filter_Tokens.MakeDateFilter(Text@)
+- syntax:
+    content: 'procedure MakeTimeFilter(var TimeFilterText: Text)'
+    parameters:
+    - id: TimeFilterText
+      description: 'The text from which the time filter should be extracted, passed as VAR. For example: "NOW".'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Turns text that represents a time into a valid time filter with respect to filter tokens.
+
+    Call this function from onValidate trigger of page field that should behave similar to system filters.
+  name: MakeTimeFilter
+  uid: M:Codeunit::System#Text#Filter_Tokens.MakeTimeFilter(Text@)
+- syntax:
+    content: 'procedure MakeTextFilter(var TextFilter: Text)'
+    parameters:
+    - id: TextFilter
+      description: 'The expression from which the text filter should be extracted, passed as VAR. For example: "ME".'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Turns text into a valid text filter with respect to filter tokens.
+
+    Call this function from onValidate trigger of page field that should behave similar to system filters.
+  name: MakeTextFilter
+  uid: M:Codeunit::System#Text#Filter_Tokens.MakeTextFilter(Text@)
+- syntax:
+    content: 'procedure MakeDateTimeFilter(var DateTimeFilterText: Text)'
+    parameters:
+    - id: DateTimeFilterText
+      description: 'The text from which the date and time should be extracted, passed as VAR. For example: "NOW" or "01-01-2012 11:11:11..NOW".'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Turns text that represents a DateTime into a valid date and time filter with respect to filter tokens.
+
+    Call this function from onValidate trigger of page field that should behave similar to system filters.
+  name: MakeDateTimeFilter
+  uid: M:Codeunit::System#Text#Filter_Tokens.MakeDateTimeFilter(Text@)
+commentId: O:Codeunit::System#Text#Filter Tokens
+summary: Exposes functionality that allow users to specify pre-defined filter tokens that get converted to the correct values for various data types when filtering records.
+name: '"Filter Tokens"'
+uid: O:Codeunit::System#Text#Filter_Tokens

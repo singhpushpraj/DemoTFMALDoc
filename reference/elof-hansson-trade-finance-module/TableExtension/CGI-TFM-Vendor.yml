@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Vendor"'
+alId: ID 70300
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  name: Microsoft.Purchases.Vendor.Vendor
+  isExternal: true
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Bank Vendor"'
+  uid: F:TableExtension::CGI_TFM_Vendor.CGI_Bank_Vendor
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI TFM SWIFT"'
+  uid: F:TableExtension::CGI_TFM_Vendor.CGI_TFM_SWIFT[20]
+commentId: O:TableExtension::CGI TFM Vendor
+summary: >-
+  tableextnesion 70300 CGI TFM Vendor extends table Vendor
+
+  Contains TFM related fields
+name: '"CGI TFM Vendor"'
+uid: O:TableExtension::CGI_TFM_Vendor

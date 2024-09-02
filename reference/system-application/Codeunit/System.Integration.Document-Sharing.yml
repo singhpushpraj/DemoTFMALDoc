@@ -1,0 +1,149 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Document Sharing"
+alId: ID 9560
+namespace: System.Integration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: TableNo
+  value: Document Sharing
+  promoted: false
+  xrefType:
+    internalReference: O:Table::System#Integration#Document_Sharing
+    name: System.Integration."Document Sharing"
+    isExternal: false
+methods:
+- syntax:
+    content: 'procedure Share(var DocumentSharingRec: Record "Document Sharing" temporary)'
+    parameters:
+    - id: DocumentSharingRec
+      description: The record to invoke the share with.
+      parameterType:
+        name: Record "Document Sharing" temporary
+        isExternal: true
+  summary: Triggers the document sharing flow.
+  examples:
+  - >2+
+
+     TempDocumentSharing.Name := 'My Shared Document.pdf';
+     TempDocumentSharing.Extension := '.pdf';
+     TempDocumentSharing.Data := "Document Blob";
+     TempDocumentSharing.Insert();
+     DocumentSharing.Share(TempDocumentSharing);
+  name: Share
+  uid: M:Codeunit::System#Integration#Document_Sharing.Share(Document_Sharing@)
+- syntax:
+    content: 'procedure Share(FileName: Text, FileExtension: Text, InStream: InStream, DocumentSharingIntent: Enum "Document Sharing Intent")'
+    parameters:
+    - id: FileName
+      description: Specifies the file name of the document (without file extension). It should only include valid filename characters.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileExtension
+      description: Specifies the file extension (e.g. '.pdf').
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InStream
+      description: Specifies the data to be shared (e.g. a report pdf).
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: DocumentSharingIntent
+      description: Specifies the sharing intent of the document.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Document_Sharing_Intent
+        name: System.Integration."Document Sharing Intent"
+        isExternal: false
+  summary: Triggers the document sharing flow.
+  name: Share
+  uid: M:Codeunit::System#Integration#Document_Sharing.Share(Text,Text,InStream,Enum::System#Integration#Document_Sharing_Intent)
+- syntax:
+    content: 'procedure Share(FileName: Text, FileExtension: Text, InStream: InStream, DocumentSharingIntent: Enum "Document Sharing Intent", DocumentSharingSource: Enum "Document Sharing Source")'
+    parameters:
+    - id: FileName
+      description: Specifies the file name of the document (without file extension). It should only include valid filename characters.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileExtension
+      description: Specifies the file extension (e.g. '.pdf').
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InStream
+      description: Specifies the data to be shared (e.g. a report pdf).
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: DocumentSharingIntent
+      description: Specifies the sharing intent of the document.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Document_Sharing_Intent
+        name: System.Integration."Document Sharing Intent"
+        isExternal: false
+    - id: DocumentSharingSource
+      description: Specifies the sharing source of the document.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Document_Sharing_Source
+        name: System.Integration."Document Sharing Source"
+        isExternal: false
+  summary: Triggers the document sharing flow.
+  name: Share
+  uid: M:Codeunit::System#Integration#Document_Sharing.Share(Text,Text,InStream,Enum::System#Integration#Document_Sharing_Intent,Enum::System#Integration#Document_Sharing_Source)
+- syntax:
+    content: 'procedure ShareEnabled(): Boolean'
+    return:
+      description: Returns true if sharing is enabled, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if document sharing is enabled.
+  name: ShareEnabled
+  uid: M:Codeunit::System#Integration#Document_Sharing.ShareEnabled:Boolean
+- syntax:
+    content: 'procedure ShareEnabled(DocumentSharingSource: Enum "Document Sharing Source"): Boolean'
+    parameters:
+    - id: DocumentSharingSource
+      description: Specifies the sharing source of the document.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Document_Sharing_Source
+        name: System.Integration."Document Sharing Source"
+        isExternal: false
+    return:
+      description: Returns true if sharing is enabled, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if document sharing is enabled.
+  name: ShareEnabled
+  uid: M:Codeunit::System#Integration#Document_Sharing.ShareEnabled(Enum::System#Integration#Document_Sharing_Source):Boolean
+- syntax:
+    content: 'procedure EditEnabledForFile(FileName: Text): Boolean'
+    parameters:
+    - id: FileName
+      description: File name of document. Ex 'Document.docx'
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if Document can be edited online.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if Document can be edited online.
+  name: EditEnabledForFile
+  uid: M:Codeunit::System#Integration#Document_Sharing.EditEnabledForFile(Text):Boolean
+commentId: O:Codeunit::System#Integration#Document Sharing
+summary: Codeunit to invoke document sharing flow.
+name: '"Document Sharing"'
+uid: O:Codeunit::System#Integration#Document_Sharing

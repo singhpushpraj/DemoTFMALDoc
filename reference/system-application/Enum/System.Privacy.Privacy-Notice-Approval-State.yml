@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Privacy Notice Approval State"
+alId: ID 1563
+namespace: System.Privacy
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: No decision has been made for the Privacy Notice.
+  name: '"Not set"'
+  uid: E:Enum::System#Privacy#Privacy_Notice_Approval_State.Not_set
+- summary: The Privacy Notice has been agreed to.
+  name: Agreed
+  uid: E:Enum::System#Privacy#Privacy_Notice_Approval_State.Agreed
+- summary: The Privacy Notice was disagreed.
+  name: Disagreed
+  uid: E:Enum::System#Privacy#Privacy_Notice_Approval_State.Disagreed
+commentId: O:Enum::System#Privacy#Privacy Notice Approval State
+summary: Specifies the state of the Privacy Notice Approval.
+name: '"Privacy Notice Approval State"'
+uid: O:Enum::System#Privacy#Privacy_Notice_Approval_State

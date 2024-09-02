@@ -1,0 +1,99 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Sampling Performance Profiler"
+alId: ID 1924
+namespace: System.Tooling
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+methods:
+- syntax:
+    content: procedure Start()
+  summary: Starts performance profiling.
+  name: Start
+  uid: M:Codeunit::System#Tooling#Sampling_Performance_Profiler.Start
+- syntax:
+    content: 'procedure Start(SamplingInterval: Enum "Sampling Interval")'
+    parameters:
+    - id: SamplingInterval
+      parameterType:
+        internalReference: O:Enum::System#Tooling#Sampling_Interval
+        name: System.Tooling."Sampling Interval"
+        isExternal: false
+  summary: Starts performance profiling.
+  name: Start
+  uid: M:Codeunit::System#Tooling#Sampling_Performance_Profiler.Start(Enum::System#Tooling#Sampling_Interval)
+- syntax:
+    content: procedure Stop()
+  summary: Stops performance profiling.
+  name: Stop
+  uid: M:Codeunit::System#Tooling#Sampling_Performance_Profiler.Stop
+- syntax:
+    content: 'procedure IsRecordingInProgress(): Boolean'
+    return:
+      description: True if the recording is in progress, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the performance profiler recording is in progress.
+  name: IsRecordingInProgress
+  uid: M:Codeunit::System#Tooling#Sampling_Performance_Profiler.IsRecordingInProgress:Boolean
+- syntax:
+    content: 'procedure GetData(): InStream'
+    return:
+      description: The recorded performance profiling data in JSON format.
+      returnType:
+        name: InStream
+        isExternal: true
+  summary: Gets the performance profiling data after the recording (via Start and Stop methods) is finished
+  name: GetData
+  uid: M:Codeunit::System#Tooling#Sampling_Performance_Profiler.GetData:InStream
+- syntax:
+    content: 'procedure SetData(ProfilingResultsInStream: InStream)'
+    parameters:
+    - id: ProfilingResultsInStream
+      description: The stream containing performance profiling data.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Sets the performance profiling data from stream.
+  name: SetData
+  uid: M:Codeunit::System#Tooling#Sampling_Performance_Profiler.SetData(InStream)
+- syntax:
+    content: 'procedure GetProfilingNodes(var ProfilingNode: Record "Profiling Node" temporary)'
+    parameters:
+    - id: ProfilingNode
+      description: The results of performance profiling.
+      parameterType:
+        name: Record "Profiling Node" temporary
+        isExternal: true
+  summary: Gets the results of performance profiling.
+  remarks: '"Indentation" and "Full Time" fields will not be populated.'
+  name: GetProfilingNodes
+  uid: M:Codeunit::System#Tooling#Sampling_Performance_Profiler.GetProfilingNodes(Profiling_Node@)
+- syntax:
+    content: 'procedure GetProfilingCallTree(var ProfilingNode: Record "Profiling Node" temporary)'
+    parameters:
+    - id: ProfilingNode
+      description: The call tree from performance profiling.
+      parameterType:
+        name: Record "Profiling Node" temporary
+        isExternal: true
+  summary: Gets the results of performance profiling into a call tree structure.
+  remarks: CPU nodes with multiple parents will be copied for each parent.
+  name: GetProfilingCallTree
+  uid: M:Codeunit::System#Tooling#Sampling_Performance_Profiler.GetProfilingCallTree(Profiling_Node@)
+commentId: O:Codeunit::System#Tooling#Sampling Performance Profiler
+summary: The interface for running performance profiling using sampling.
+name: '"Sampling Performance Profiler"'
+uid: O:Codeunit::System#Tooling#Sampling_Performance_Profiler

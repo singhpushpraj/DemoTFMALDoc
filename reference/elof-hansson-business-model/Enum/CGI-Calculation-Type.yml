@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Type"'
+alId: ID 60361
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Trading
+  uid: E:Enum::CGI_Calculation_Type.Trading
+- name: Purchase
+  uid: E:Enum::CGI_Calculation_Type.Purchase
+- name: Sales
+  uid: E:Enum::CGI_Calculation_Type.Sales
+commentId: O:Enum::CGI Calculation Type
+name: '"CGI Calculation Type"'
+uid: O:Enum::CGI_Calculation_Type

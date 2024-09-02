@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Table Information Cache"
+alId: ID 8701
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: procedure RefreshTableInformationCache()
+  summary: Refreshes the data in the Table Information Cache and Company Size Cache tables for all companies.
+  name: RefreshTableInformationCache
+  uid: M:Codeunit::System#DataAdministration#Table_Information_Cache.RefreshTableInformationCache
+commentId: O:Codeunit::System#DataAdministration#Table Information Cache
+summary: Exposes functionality to manage the Table Information Cache table and the Company Size Cache table.
+name: '"Table Information Cache"'
+uid: O:Codeunit::System#DataAdministration#Table_Information_Cache

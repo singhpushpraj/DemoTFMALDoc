@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Globalization."Translation - Edit"
+alId: ID 3712
+namespace: System.Globalization
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Globalization
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Translation - Read","Language - View"'
+  promoted: false
+commentId: O:PermissionSet::System#Globalization#Translation - Edit
+summary: This permission set allows the editing of translations from the Translations page. The table is internal but the page is editable.
+name: '"Translation - Edit"'
+uid: O:PermissionSet::System#Globalization#Translation_-_Edit

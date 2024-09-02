@@ -1,0 +1,110 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Persistent Blob"
+alId: ID 4101
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Create(): BigInteger'
+    return:
+      description: The key of the new BLOB.
+      returnType:
+        name: BigInteger
+        isExternal: true
+  summary: Create a new empty PersistentBlob.
+  name: Create
+  uid: M:Codeunit::System#Utilities#Persistent_Blob.Create:BigInteger
+- syntax:
+    content: 'procedure Exists("Key": BigInteger): Boolean'
+    parameters:
+    - id: Key
+      description: The key of the BLOB.
+      parameterType:
+        name: BigInteger
+        isExternal: true
+    return:
+      description: True if the BLOB with the given key exists.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Check whether a BLOB with the Key exists.
+  name: Exists
+  uid: M:Codeunit::System#Utilities#Persistent_Blob.Exists(BigInteger):Boolean
+- syntax:
+    content: 'procedure Delete("Key": BigInteger): Boolean'
+    parameters:
+    - id: Key
+      description: The key of the BLOB.
+      parameterType:
+        name: BigInteger
+        isExternal: true
+    return:
+      description: True if the BLOB with the given key was deleted.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Delete the BLOB with the Key.
+  name: Delete
+  uid: M:Codeunit::System#Utilities#Persistent_Blob.Delete(BigInteger):Boolean
+- syntax:
+    content: 'procedure CopyFromInStream("Key": BigInteger, SourceInStream: InStream): Boolean'
+    parameters:
+    - id: Key
+      description: The key of the BLOB.
+      parameterType:
+        name: BigInteger
+        isExternal: true
+    - id: SourceInStream
+      description: The InStream from which content will be copied to the PersistentBlob.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the BLOB with the given key was updated with the contents of the source.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Save the content of the stream to the PersistentBlob.
+  name: CopyFromInStream
+  uid: M:Codeunit::System#Utilities#Persistent_Blob.CopyFromInStream(BigInteger,InStream):Boolean
+- syntax:
+    content: 'procedure CopyToOutStream("Key": BigInteger, DestinationOutStream: OutStream): Boolean'
+    parameters:
+    - id: Key
+      description: The key of the BLOB.
+      parameterType:
+        name: BigInteger
+        isExternal: true
+    - id: DestinationOutStream
+      description: The OutStream to which the contents of the PersistentBlob will be copied.
+      parameterType:
+        name: OutStream
+        isExternal: true
+    return:
+      description: True if the BLOB with the given Key was copied to the Destination.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Write the content of the PersistentBlob to the Destination OutStream.
+  name: CopyToOutStream
+  uid: M:Codeunit::System#Utilities#Persistent_Blob.CopyToOutStream(BigInteger,OutStream):Boolean
+commentId: O:Codeunit::System#Utilities#Persistent Blob
+summary: The interface for storing BLOB data between sessions.
+name: '"Persistent Blob"'
+uid: O:Codeunit::System#Utilities#Persistent_Blob

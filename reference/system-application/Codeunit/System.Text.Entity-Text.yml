@@ -1,0 +1,194 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Entity Text"
+alId: ID 2010
+namespace: System.Text
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsEnabled(Silent: Boolean): Boolean'
+    parameters:
+    - id: Silent
+      description: If this should be evaluated silently.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the functionality is enabled.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets if Entity Text functionality is enabled.
+  name: IsEnabled
+  uid: M:Codeunit::System#Text#Entity_Text.IsEnabled(Boolean):Boolean
+- syntax:
+    content: 'procedure IsEnabled(): Boolean'
+    return:
+      description: True if the functionality is enabled.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets if Entity Text functionality is enabled.
+  name: IsEnabled
+  uid: M:Codeunit::System#Text#Entity_Text.IsEnabled:Boolean
+- syntax:
+    content: 'procedure CanSuggest(): Boolean'
+    return:
+      description: True if the functionality is enabled.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets if the Entity Text Suggest functionality is enabled
+  name: CanSuggest
+  uid: M:Codeunit::System#Text#Entity_Text.CanSuggest:Boolean
+- syntax:
+    content: 'procedure GetText(TableId: Integer, SystemId: Guid, EntityTextScenario: __MissingTypeSymbol__): Text'
+    parameters:
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EntityTextScenario
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: GetText
+  uid: M:Codeunit::System#Text#Entity_Text.GetText(Integer,Guid,__MissingSymbol__):Text
+- syntax:
+    content: 'procedure GetText(EntityText: __MissingTypeSymbol__): Text'
+    parameters:
+    - id: EntityText
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: GetText
+  uid: M:Codeunit::System#Text#Entity_Text.GetText(__MissingSymbol__@):Text
+- syntax:
+    content: 'procedure GenerateText(Facts: Dictionary of [Text, Text], Tone: Enum "Entity Text Tone", TextFormat: Enum "Entity Text Format", TextEmphasis: Enum "Entity Text Emphasis"): Text'
+    parameters:
+    - id: Facts
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: Tone
+      parameterType:
+        internalReference: O:Enum::System#Text#Entity_Text_Tone
+        name: System.Text."Entity Text Tone"
+        isExternal: false
+    - id: TextFormat
+      parameterType:
+        internalReference: O:Enum::System#Text#Entity_Text_Format
+        name: System.Text."Entity Text Format"
+        isExternal: false
+    - id: TextEmphasis
+      parameterType:
+        internalReference: O:Enum::System#Text#Entity_Text_Emphasis
+        name: System.Text."Entity Text Emphasis"
+        isExternal: false
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: GenerateText
+  uid: M:Codeunit::System#Text#Entity_Text.GenerateText(Dictionary_of_[Text,Text],Enum::System#Text#Entity_Text_Tone,Enum::System#Text#Entity_Text_Format,Enum::System#Text#Entity_Text_Emphasis):Text
+- syntax:
+    content: 'procedure UpdateText(EntityText: __MissingTypeSymbol__, EntityTextContent: Text)'
+    parameters:
+    - id: EntityText
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: EntityTextContent
+      parameterType:
+        name: Text
+        isExternal: true
+  name: UpdateText
+  uid: M:Codeunit::System#Text#Entity_Text.UpdateText(__MissingSymbol__@,Text)
+- syntax:
+    content: 'procedure SetEntityTextAuthorization(Endpoint: Text, Deployment: Text, ApiKey: SecretText)'
+    parameters:
+    - id: Endpoint
+      description: The endpoint to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Deployment
+      description: The deployment to use for the endpoint.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ApiKey
+      description: The API key to use for the endpoint.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Sets AI authorization for the current Entity Text scope.
+  remarks: >-
+    Endpoint would look like: https://resource-name.openai.azure.com/
+
+    Deployment would look like: gpt-35-turbo-16k
+  name: SetEntityTextAuthorization
+  uid: M:Codeunit::System#Text#Entity_Text.SetEntityTextAuthorization(Text,Text,SecretText)
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnRequestEntityContext(SourceTableId: Integer, SourceSystemId: Guid, SourceScenario: __MissingTypeSymbol__, var Facts: Dictionary of [Text, Text], var TextTone: Enum "Entity Text Tone", var TextFormat: Enum "Entity Text Format", var Handled: Boolean)'
+    parameters:
+    - id: SourceTableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SourceSystemId
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: SourceScenario
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: Facts
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: TextTone
+      parameterType:
+        internalReference: O:Enum::System#Text#Entity_Text_Tone
+        name: System.Text."Entity Text Tone"
+        isExternal: false
+    - id: TextFormat
+      parameterType:
+        internalReference: O:Enum::System#Text#Entity_Text_Format
+        name: System.Text."Entity Text Format"
+        isExternal: false
+    - id: Handled
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: OnRequestEntityContext
+  uid: M:Codeunit::System#Text#Entity_Text.OnRequestEntityContext(Integer,Guid,__MissingSymbol__,Dictionary_of_[Text,Text]@,Enum::System#Text#Entity_Text_Tone@,Enum::System#Text#Entity_Text_Format@,Boolean@)
+commentId: O:Codeunit::System#Text#Entity Text
+summary: Exposes the public functionality for handling entity text.
+name: '"Entity Text"'
+uid: O:Codeunit::System#Text#Entity_Text

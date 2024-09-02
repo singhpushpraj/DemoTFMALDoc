@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD User Update Wizard"
+alId: ID 9515
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity."Azure AD User Update Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Update users from Microsoft 365
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: SourceTable
+  value: "9010"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+commentId: O:Page::System#Azure#Identity#Azure AD User Update Wizard
+summary: Administrators can use this page to synchronize information about users from Microsoft 365 to Business Central.
+name: '"Azure AD User Update Wizard"'
+uid: O:Page::System#Azure#Identity#Azure_AD_User_Update_Wizard

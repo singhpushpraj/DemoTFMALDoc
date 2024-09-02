@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Document Layout - LCBG"'
+alId: ID 70320
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  name: Microsoft.Foundation.Reporting."Custom Report Selection"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: EH TFM Document Layouts
+  promoted: false
+- name: DataCaptionFields
+  value: "2"
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "9657"
+  promoted: true
+  xrefType:
+    name: Microsoft.Foundation.Reporting."Custom Report Selection"
+    isExternal: true
+- name: ApplicationArea
+  value: '#all'
+  promoted: false
+- name: UsageCategory
+  value: Lists
+  promoted: false
+commentId: O:Page::CGI TFM Document Layout - LCBG
+summary: >-
+  page 70320 CGI TFM Document Layout - LCBG
+
+  Provides user to select different layouts for sending an email
+name: '"CGI TFM Document Layout - LCBG"'
+uid: O:Page::CGI_TFM_Document_Layout_-_LCBG

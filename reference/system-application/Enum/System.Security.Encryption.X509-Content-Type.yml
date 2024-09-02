@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."X509 Content Type"
+alId: ID 1286
+namespace: System.Security.Encryption
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies unknown X.509 certificate.
+  name: Unknown
+  uid: E:Enum::System#Security#Encryption#X509_Content_Type.Unknown
+- summary: Specifies a single X.509 certificate.
+  name: Cert
+  uid: E:Enum::System#Security#Encryption#X509_Content_Type.Cert
+- summary: Specifies a single serialized X.509 certificate.
+  name: PFXSerializedCert
+  uid: E:Enum::System#Security#Encryption#X509_Content_Type.PFXSerializedCert
+- summary: 'Specifies a PKCS #12-formatted certificate. The Pkcs12 value is identical to the Pfx value.'
+  name: Pkcs12
+  uid: E:Enum::System#Security#Encryption#X509_Content_Type.Pkcs12
+- summary: Specifies a serialized store.
+  name: SerializedStore
+  uid: E:Enum::System#Security#Encryption#X509_Content_Type.SerializedStore
+- summary: 'Specifies a PKCS #7-formatted certificate.'
+  name: Pkcs7
+  uid: E:Enum::System#Security#Encryption#X509_Content_Type.Pkcs7
+- summary: Specifies an Authenticode X.509 certificate.
+  name: Authenticode
+  uid: E:Enum::System#Security#Encryption#X509_Content_Type.Authenticode
+commentId: O:Enum::System#Security#Encryption#X509 Content Type
+summary: Specifies the format of an X.509 certificate.
+name: '"X509 Content Type"'
+uid: O:Enum::System#Security#Encryption#X509_Content_Type

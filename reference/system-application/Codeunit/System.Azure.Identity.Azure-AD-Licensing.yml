@@ -1,0 +1,231 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD Licensing"
+alId: ID 458
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure ResetSubscribedSKU(): Boolean'
+    return:
+      description: True if the enumerator was successfully reset and otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the enumerator for the subscribed SKUs to its initial position, which is before the first subscribed SKU in the collection.
+  name: ResetSubscribedSKU
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.ResetSubscribedSKU:Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure NextSubscribedSKU(): Boolean'
+    return:
+      description: True if the enumerator was successfully advanced to the next SKU; false if the enumerator has passed the end of the collection.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Advances the enumerator to the next subscribed SKU in the collection. If only known service plans should be included, it advances to the next SKU known in Business Central.
+  name: NextSubscribedSKU
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.NextSubscribedSKU:Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SubscribedSKUCapabilityStatus(): Text'
+    return:
+      description: The capability status of the subscribed SKU, or an empty string if the subscribed SKUs enumerator was not initialized.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the capability status of the subscribed SKU that the enumerator is currently pointing to in the collection.
+  name: SubscribedSKUCapabilityStatus
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SubscribedSKUCapabilityStatus:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SubscribedSKUConsumedUnits(): Integer'
+    return:
+      description: The number of licenses that are assigned to the subscribed SKU, or 0 if the subscribed SKUs enumerator was not initialized.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the number of licenses assigned to the subscribed SKU that the enumerator is currently pointing to in the collection.
+  name: SubscribedSKUConsumedUnits
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SubscribedSKUConsumedUnits:Integer
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SubscribedSKUObjectId(): Text'
+    return:
+      description: The object ID of the current SKU. If the subscribed SKUs enumerator was not initialized, it will return an empty string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the object ID of the subscribed SKU that the enumerator is currently pointing to in the collection.
+  name: SubscribedSKUObjectId
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SubscribedSKUObjectId:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SubscribedSKUPrepaidUnitsInEnabledState(): Integer'
+    return:
+      description: The number of prepaid licenses that are enabled for the subscribed SKU. If the subscribed SKUs enumerator was not initialized it will return 0.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the number of prepaid licenses that are enabled for the subscribed SKU that the enumerator is currently pointing to in the collection.
+  name: SubscribedSKUPrepaidUnitsInEnabledState
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SubscribedSKUPrepaidUnitsInEnabledState:Integer
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SubscribedSKUPrepaidUnitsInSuspendedState(): Integer'
+    return:
+      description: The number of prepaid licenses that are suspended for the subscribed SKU. If the subscribed SKUs enumerator was not initialized it will return 0.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the number of prepaid licenses that are suspended for the subscribed SKU that the enumerator is currently pointing to in the collection.
+  name: SubscribedSKUPrepaidUnitsInSuspendedState
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SubscribedSKUPrepaidUnitsInSuspendedState:Integer
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SubscribedSKUPrepaidUnitsInWarningState(): Integer'
+    return:
+      description: The number of prepaid licenses that are in warning status for the subscribed SKU. If the subscribed SKUs enumerator was not initialized it will return 0.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the number of prepaid licenses that are in warning status for the subscribed SKU that the enumerator is currently pointing to in the collection.
+  name: SubscribedSKUPrepaidUnitsInWarningState
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SubscribedSKUPrepaidUnitsInWarningState:Integer
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SubscribedSKUId(): Text'
+    return:
+      description: The unique identifier (GUID) of the subscribed SKU; empty string if the subscribed SKUs enumerator was not initialized.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the unique identifier (GUID) for the subscribed SKU that the enumerator is currently pointing to in the collection.
+  name: SubscribedSKUId
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SubscribedSKUId:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SubscribedSKUPartNumber(): Text'
+    return:
+      description: The part number of the subscribed SKU or an empty string if the subscribed SKUs enumerator was not initialized.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the part number of the subscribed SKU that the enumerator is currently pointing to in the collection. For example, "AAD_PREMIUM" OR "RMSBASIC."
+  name: SubscribedSKUPartNumber
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SubscribedSKUPartNumber:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: procedure ResetServicePlans()
+  summary: Sets the enumerator for service plans to its initial position, which is before the first service plan in the collection.
+  name: ResetServicePlans
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.ResetServicePlans
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure NextServicePlan(): Boolean'
+    return:
+      description: True if the enumerator was successfully advanced to the next service plan; false if the enumerator has passed the end of the collection or it was not initialized.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Advances the enumerator to the next service plan in the collection.
+  name: NextServicePlan
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.NextServicePlan:Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure ServicePlanCapabilityStatus(): Text'
+    return:
+      description: The capability status of the service plan, or an empty string if the service plan enumerator was not initialized.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the service plan capability status.
+  name: ServicePlanCapabilityStatus
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.ServicePlanCapabilityStatus:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure ServicePlanId(): Text'
+    return:
+      description: The ID of the service plan, or an empty string if the service plan enumerator was not initialized.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the service plan ID.
+  name: ServicePlanId
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.ServicePlanId:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure ServicePlanName(): Text'
+    return:
+      description: The name of the service plan, or an empty string if the service plan enumerator was not initialized.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the service plan name.
+  name: ServicePlanName
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.ServicePlanName:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IncludeUnknownPlans(): Boolean'
+    return:
+      description: True if the unknown service plans should be included. Otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether to include unknown plans when moving to the next subscribed SKU in the subscribed SKUs collection.
+  name: IncludeUnknownPlans
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.IncludeUnknownPlans:Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SetIncludeUnknownPlans(NewIncludeUnknownPlans: Boolean)'
+    parameters:
+    - id: NewIncludeUnknownPlans
+      description: The value to be set to the flag.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets whether to include unknown plans when moving to the next subscribed SKU in subscribed SKUs collection.
+  name: SetIncludeUnknownPlans
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Licensing.SetIncludeUnknownPlans(Boolean)
+commentId: O:Codeunit::System#Azure#Identity#Azure AD Licensing
+summary: >-
+  Access information about the subscribed SKUs and the corresponding service plans.
+
+  You can retrieve information such as the SKU Object ID, SKU ID, number of licenses assigned, the license state (enabled, suspended, or warning), and the SKU part number.
+
+  For the corresponding service plans, you can retrieve the ID, the capability status, or the name.
+name: '"Azure AD Licensing"'
+uid: O:Codeunit::System#Azure#Identity#Azure_AD_Licensing

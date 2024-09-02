@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."System Upgrade Privacy Notices"
+alId: ID 1567
+namespace: System.Privacy
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Subtype
+  value: Upgrade
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Privacy#System Upgrade Privacy Notices
+name: '"System Upgrade Privacy Notices"'
+uid: O:Codeunit::System#Privacy#System_Upgrade_Privacy_Notices

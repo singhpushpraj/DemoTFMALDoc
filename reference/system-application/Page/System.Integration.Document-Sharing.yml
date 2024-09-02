@@ -1,0 +1,51 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Document Sharing"
+alId: ID 9560
+namespace: System.Integration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Integration#Document_Sharing
+  name: System.Integration."Document Sharing"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: Card
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Documents
+  promoted: false
+- name: SourceTable
+  value: "9560"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Integration#Document_Sharing
+    name: System.Integration."Document Sharing"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+commentId: O:Page::System#Integration#Document Sharing
+summary: Page which will host the document service share ux
+name: '"Document Sharing"'
+uid: O:Page::System#Integration#Document_Sharing

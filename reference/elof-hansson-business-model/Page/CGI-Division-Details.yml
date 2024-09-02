@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Division Details"'
+alId: ID 60346
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Division_Details
+  name: '"CGI Division Details"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Division Details
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "60316"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Division_Details
+    name: '"CGI Division Details"'
+    isExternal: false
+- name: UsageCategory
+  value: Tasks
+  promoted: false
+commentId: O:Page::CGI Division Details
+name: '"CGI Division Details"'
+uid: O:Page::CGI_Division_Details

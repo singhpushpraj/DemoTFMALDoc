@@ -1,0 +1,22 @@
+﻿{
+  "Modules": [
+    {
+      "AppId": "c71b5edc-c899-4f24-9851-b67a0c1afe60",
+      "Name": "Elof Hansson Trade Finance Module",
+      "Publisher": "CGI Sverige AB",
+      "Version": "1.0.0.0"
+    },
+    {
+      "AppId": "9c57a890-6b9a-476f-a1a1-26377b09ab4a",
+      "Name": "Elof Hansson Business Model",
+      "Publisher": "CGI Sverige AB",
+      "Version": "1.0.0.6"
+    },
+    {
+      "AppId": "63ca2fa4-4f03-4f2b-a480-172fef340d3f",
+      "Name": "System Application",
+      "Publisher": "Microsoft",
+      "Version": "24.0.16410.19107"
+    }
+  ]
+}

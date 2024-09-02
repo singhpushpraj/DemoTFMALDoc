@@ -1,0 +1,194 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Temp Blob List"
+alId: ID 4102
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Exists(Index: Integer): Boolean'
+    parameters:
+    - id: Index
+      description: The index of the TempBlob in the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if an element at the given index exists.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Check if an element with the given index exists.
+  name: Exists
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.Exists(Integer):Boolean
+- syntax:
+    content: 'procedure Count(): Integer'
+    return:
+      description: The number of elements in the list.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Returns the number of elements in the list.
+  name: Count
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.Count:Integer
+- syntax:
+    content: 'procedure Get(Index: Integer, var TempBlob: Codeunit "Temp Blob")'
+    parameters:
+    - id: Index
+      description: The index of the TempBlob in the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempBlob
+      description: The TempBlob to return.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+  summary: Get an element from the list at any given position.
+  name: Get
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.Get(Integer,Codeunit::System#Utilities#Temp_Blob@)
+- syntax:
+    content: 'procedure Set(Index: Integer, TempBlob: Codeunit "Temp Blob"): Boolean'
+    parameters:
+    - id: Index
+      description: The index of the TempBlob in the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempBlob
+      description: The TempBlob to set.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    return:
+      description: True if successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Set an element at the given index from the parameter TempBlob.
+  name: Set
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.Set(Integer,Codeunit::System#Utilities#Temp_Blob):Boolean
+- syntax:
+    content: 'procedure RemoveAt(Index: Integer): Boolean'
+    parameters:
+    - id: Index
+      description: The index of the TempBlob in the list.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Remove the element at a specified location from a non-empty list.
+  name: RemoveAt
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.RemoveAt(Integer):Boolean
+- syntax:
+    content: 'procedure RemoveRange(Index: Integer, ElementCount: Integer): Boolean'
+    parameters:
+    - id: Index
+      description: The index of the first element to be deleted.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ElementCount
+      description: The number of elements to be deleted.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Remove a number of elements starting from a specified location from a non-empty list.
+  name: RemoveRange
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.RemoveRange(Integer,Integer):Boolean
+- syntax:
+    content: 'procedure IsEmpty(): Boolean'
+    return:
+      description: True if the list is empty.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Return true if the list is empty, otherwise return false.
+  name: IsEmpty
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.IsEmpty:Boolean
+- syntax:
+    content: 'procedure Add(TempBlob: Codeunit "Temp Blob"): Boolean'
+    parameters:
+    - id: TempBlob
+      description: The TempBlob to add.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    return:
+      description: True if successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a TempBlob to the end of the list.
+  name: Add
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.Add(Codeunit::System#Utilities#Temp_Blob):Boolean
+- syntax:
+    content: 'procedure AddRange(TempBlobList: Codeunit "Temp Blob List"): Boolean'
+    parameters:
+    - id: TempBlobList
+      description: The TempBlob list to add.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob_List
+        name: System.Utilities."Temp Blob List"
+        isExternal: false
+    return:
+      description: True if successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds the elements of the specified TempBlobList to the end of the current TempBlobList object.
+  name: AddRange
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.AddRange(Codeunit::System#Utilities#Temp_Blob_List):Boolean
+- syntax:
+    content: 'procedure GetRange(Index: Integer, ElemCount: Integer, var TempBlobListOut: Codeunit "Temp Blob List")'
+    parameters:
+    - id: Index
+      description: The index of the first object.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ElemCount
+      description: The number of objects to be returned.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempBlobListOut
+      description: The TempBlobList to be returned passed as a VAR.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob_List
+        name: System.Utilities."Temp Blob List"
+        isExternal: false
+  summary: Get a copy of a range of elements in the list starting from index,
+  name: GetRange
+  uid: M:Codeunit::System#Utilities#Temp_Blob_List.GetRange(Integer,Integer,Codeunit::System#Utilities#Temp_Blob_List@)
+commentId: O:Codeunit::System#Utilities#Temp Blob List
+summary: The interface for storing sequences of variables, each of which stores BLOB data.
+name: '"Temp Blob List"'
+uid: O:Codeunit::System#Utilities#Temp_Blob_List

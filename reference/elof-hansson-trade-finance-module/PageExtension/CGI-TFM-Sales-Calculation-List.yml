@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Sales Calculation List"'
+alId: ID 70306
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  internalReference: O:Page::CGI_SalesCalc#_WarehouseList
+  name: '"CGI SalesCalc. WarehouseList"'
+  isExternal: false
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI TFM Sales Calculation List
+summary: >-
+  pageextension 70306 CGI TFM Sales Calculation List extends CGI SalesCalc. WarehouseList
+
+  contains TFM related fields to Sales Calulations
+name: '"CGI TFM Sales Calculation List"'
+uid: O:PageExtension::CGI_TFM_Sales_Calculation_List

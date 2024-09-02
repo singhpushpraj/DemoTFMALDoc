@@ -1,0 +1,42 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA Workflow Setup"'
+alId: ID 60307
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure BuildCalculationEarningsConditionsText(Status: Enum "CGI Calc. Approval Status"): Text'
+    parameters:
+    - id: Status
+      parameterType:
+        internalReference: O:Enum::CGI_Calc#_Approval_Status
+        name: '"CGI Calc. Approval Status"'
+        isExternal: false
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: BuildCalculationEarningsConditionsText
+  uid: M:Codeunit::CGI_CA_Workflow_Setup.BuildCalculationEarningsConditionsText(Enum::CGI_Calc#_Approval_Status):Text
+- syntax:
+    content: 'procedure BuildCalculationCreditConditionsText(Status: Enum "CGI Calc. Approval Status"): Text'
+    parameters:
+    - id: Status
+      parameterType:
+        internalReference: O:Enum::CGI_Calc#_Approval_Status
+        name: '"CGI Calc. Approval Status"'
+        isExternal: false
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: BuildCalculationCreditConditionsText
+  uid: M:Codeunit::CGI_CA_Workflow_Setup.BuildCalculationCreditConditionsText(Enum::CGI_Calc#_Approval_Status):Text
+commentId: O:Codeunit::CGI CA Workflow Setup
+name: '"CGI CA Workflow Setup"'
+uid: O:Codeunit::CGI_CA_Workflow_Setup

@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection."Record Reference"
+alId: ID 3917
+namespace: System.Reflection
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Initialize(RecordRef: RecordRef, var RecordReference: Interface "Record Reference")'
+    parameters:
+    - id: RecordRef
+      description: The RecordRef parameter points to the table for which the read/write operations are to be handled by the interface.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RecordReference
+      description: The interface providing read/write operations.
+      parameterType:
+        internalReference: O:Interface::System#Reflection#Record_Reference
+        name: System.Reflection."Record Reference"
+        isExternal: false
+  summary: Initializes the Record Reference interface. The method raises the OnInitialize event. If no subscriber initializes the interface, a default implementation is assigned.
+  name: Initialize
+  uid: M:Codeunit::System#Reflection#Record_Reference.Initialize(RecordRef,Interface::System#Reflection#Record_Reference@)
+commentId: O:Codeunit::System#Reflection#Record Reference
+summary: >-
+  The Record Reference interface provides a method for delegating read/write operations for tables that require indirect permissions.
+
+  Use the Record Reference codeunit to intialize the interface with an implementation that has the required permissions.
+name: '"Record Reference"'
+uid: O:Codeunit::System#Reflection#Record_Reference

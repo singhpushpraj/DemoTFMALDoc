@@ -1,0 +1,18 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection."Field Selection - Read"
+alId: ID 9806
+namespace: System.Reflection
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+commentId: O:PermissionSet::System#Reflection#Field Selection - Read
+name: '"Field Selection - Read"'
+uid: O:PermissionSet::System#Reflection#Field_Selection_-_Read

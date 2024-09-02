@@ -1,0 +1,76 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CAP Page Functions"'
+alId: ID 60305
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure CreateOrdersFromCalc(CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: CreateOrdersFromCalc.
+  name: CreateOrdersFromCalc
+  uid: M:Codeunit::CGI_CAP_Page_Functions.CreateOrdersFromCalc(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure Calculate(CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      description: Record "CGI Calculation Header".
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: Calculate.
+  name: Calculate
+  uid: M:Codeunit::CGI_CAP_Page_Functions.Calculate(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure CheckVATPostingGroup(CGICalculationHeaderP: Record "CGI Calculation Header"): Boolean'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      description: Return value of type Boolean.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: CheckVatPostingGroup.
+  name: CheckVATPostingGroup
+  uid: M:Codeunit::CGI_CAP_Page_Functions.CheckVATPostingGroup(CGI_Calculation_Header):Boolean
+- syntax:
+    content: 'procedure ShowCalculationCard(CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      description: Record "CGI Calculation Header".
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: ShowCalculationCard.
+  name: ShowCalculationCard
+  uid: M:Codeunit::CGI_CAP_Page_Functions.ShowCalculationCard(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure ShowPurchaseOrders(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      description: Code[20]
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: >-
+    ShowPurchaseOrders
+
+    This functions is called on page "CGI Purchase Calculation Card"
+  name: ShowPurchaseOrders
+  uid: M:Codeunit::CGI_CAP_Page_Functions.ShowPurchaseOrders(Code[20])
+commentId: O:Codeunit::CGI CAP Page Functions
+summary: Codeunit CGI CAP Page Functions (ID 60305)
+name: '"CGI CAP Page Functions"'
+uid: O:Codeunit::CGI_CAP_Page_Functions

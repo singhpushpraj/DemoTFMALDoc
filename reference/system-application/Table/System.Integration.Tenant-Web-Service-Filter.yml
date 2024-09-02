@@ -1,0 +1,82 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Tenant Web Service Filter"
+alId: ID 6712
+namespace: System.Integration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Tenant Web Service Filter
+  promoted: false
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Access
+  value: Public
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Entry ID"'
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.Entry_ID
+- type:
+    name: Blob
+    isExternal: true
+  name: Filter
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.Filter
+- type:
+    name: RecordId
+    isExternal: true
+  name: TenantWebServiceID
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.TenantWebServiceID
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Data Item"'
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.Data_Item
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Tenant_Web_Service_Filter.SystemRowVersion
+commentId: O:Table::System#Integration#Tenant Web Service Filter
+summary: Contains tenant web service filter entities.
+name: '"Tenant Web Service Filter"'
+uid: O:Table::System#Integration#Tenant_Web_Service_Filter

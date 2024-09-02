@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Relation Type"
+alId: ID 8908
+namespace: System.Email
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Primary source of an email. There should only be one primary source for an email.
+  name: '"Primary Source"'
+  uid: E:Enum::System#Email#Email_Relation_Type.Primary_Source
+- summary: Related entity of an email. An email can have many record relations of this type.
+  name: '"Related Entity"'
+  uid: E:Enum::System#Email#Email_Relation_Type.Related_Entity
+commentId: O:Enum::System#Email#Email Relation Type
+summary: Represent the type of relation between an email and a source record.
+name: '"Email Relation Type"'
+uid: O:Enum::System#Email#Email_Relation_Type

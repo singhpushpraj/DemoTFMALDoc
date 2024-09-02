@@ -1,0 +1,16 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Comment Line Table Name"'
+alId: ID 60300
+baseKind: Enum
+kind: EnumExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+enumValues:
+- name: Calculation
+  uid: E:EnumExtension::CGI_Comment_Line_Table_Name.Calculation
+commentId: O:EnumExtension::CGI Comment Line Table Name
+name: '"CGI Comment Line Table Name"'
+uid: O:EnumExtension::CGI_Comment_Line_Table_Name

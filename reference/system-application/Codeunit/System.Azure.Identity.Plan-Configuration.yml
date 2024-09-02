@@ -1,0 +1,42 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plan Configuration"
+alId: ID 9825
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsCustomized(PlanId: Guid): Boolean'
+    parameters:
+    - id: PlanId
+      description: The ID of the plan for which to check.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the plan configuration was customized; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if a plan configuration was customized.
+  name: IsCustomized
+  uid: M:Codeunit::System#Azure#Identity#Plan_Configuration.IsCustomized(Guid):Boolean
+commentId: O:Codeunit::System#Azure#Identity#Plan Configuration
+summary: Provides functionality to operation with plan configurations and customized permission sets related to a plan.
+name: '"Plan Configuration"'
+uid: O:Codeunit::System#Azure#Identity#Plan_Configuration

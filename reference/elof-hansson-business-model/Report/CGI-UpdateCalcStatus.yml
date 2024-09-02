@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI UpdateCalcStatus"'
+alId: ID 60305
+baseKind: Report
+kind: Report
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Report](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-report-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Update Calculation Status
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: ReportsAndAnalysis
+  promoted: false
+- name: UseRequestPage
+  value: "False"
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Update Calculation Status
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: ReportsAndAnalysis
+  promoted: false
+- name: UseRequestPage
+  value: "False"
+  promoted: false
+commentId: O:Report::CGI UpdateCalcStatus
+summary: Report CGI UpdateCalcStatus (ID 60305).
+name: '"CGI UpdateCalcStatus"'
+uid: O:Report::CGI_UpdateCalcStatus

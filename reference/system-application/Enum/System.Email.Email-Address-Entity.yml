@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Address Entity"
+alId: ID 8945
+namespace: System.Email
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: User
+  uid: E:Enum::System#Email#Email_Address_Entity.User
+commentId: O:Enum::System#Email#Email Address Entity
+summary: System entity of record with email address.
+name: '"Email Address Entity"'
+uid: O:Enum::System#Email#Email_Address_Entity

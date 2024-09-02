@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Status"
+alId: ID 8888
+namespace: System.Email
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: An uninitialized email.
+  name: '" "'
+  uid: E:Enum::System#Email#Email_Status._
+- summary: An email waiting to be queued up for sending.
+  name: Draft
+  uid: E:Enum::System#Email#Email_Status.Draft
+- summary: An email queued up and waiting to be processed.
+  name: Queued
+  uid: E:Enum::System#Email#Email_Status.Queued
+- summary: An email that is currently being processed and sent.
+  name: Processing
+  uid: E:Enum::System#Email#Email_Status.Processing
+- summary: An email that had an error occur during processing.
+  name: Failed
+  uid: E:Enum::System#Email#Email_Status.Failed
+commentId: O:Enum::System#Email#Email Status
+summary: Specifies the status of an email when it is in the outbox.
+name: '"Email Status"'
+uid: O:Enum::System#Email#Email_Status

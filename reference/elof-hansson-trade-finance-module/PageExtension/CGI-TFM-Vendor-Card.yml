@@ -1,0 +1,20 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Vendor Card"'
+alId: ID 70300
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  name: Microsoft.Purchases.Vendor."Vendor Card"
+  isExternal: true
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI TFM Vendor Card
+summary: >-
+  pageextension 70300 CGI TFM Vendor Card extends Vendor Card
+
+  contains TFM related fields
+name: '"CGI TFM Vendor Card"'
+uid: O:PageExtension::CGI_TFM_Vendor_Card

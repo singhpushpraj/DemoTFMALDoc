@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Permission Set Subform"
+alId: ID 9864
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+sourceTableType:
+  name: System.Security.AccessControl."Permission Set Relation Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "9861"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: SourceTableView
+  value: >-
+    sorting(Type, "Related Role ID")
+                          order(ascending)
+  promoted: false
+- name: Caption
+  value: Permission Sets
+  promoted: false
+- name: InsertAllowed
+  value: "True"
+  promoted: false
+- name: ModifyAllowed
+  value: "True"
+  promoted: false
+- name: DeleteAllowed
+  value: "True"
+  promoted: false
+commentId: O:Page::System#Security#AccessControl#Permission Set Subform
+summary: ListPart for viewing and including/excluding permission sets.
+name: '"Permission Set Subform"'
+uid: O:Page::System#Security#AccessControl#Permission_Set_Subform

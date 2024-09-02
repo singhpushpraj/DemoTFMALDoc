@@ -1,0 +1,52 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text.Encoding
+alId: ID 1486
+namespace: System.Text
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Convert(SourceCodepage: Integer, DestinationCodepage: Integer, Text: Text): Text'
+    parameters:
+    - id: SourceCodepage
+      description: Encoding code page identifier of the source text. Valid values are between 0 and 65535.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DestinationCodepage
+      description: Encoding code page identifier for the result text. Valid values are between 0 and 65535.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Text
+      description: The text to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The text in the destination encoding.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts a text from one encoding to another.
+  name: Convert
+  uid: M:Codeunit::System#Text#Encoding.Convert(Integer,Integer,Text):Text
+commentId: O:Codeunit::System#Text#Encoding
+summary: Codeunig that exposes encoding functionality.
+name: Encoding
+uid: O:Codeunit::System#Text#Encoding

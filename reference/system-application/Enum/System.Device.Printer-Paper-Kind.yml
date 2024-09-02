@@ -1,0 +1,224 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Printer Paper Kind"
+alId: ID 2616
+namespace: System.Device
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: A2 paper (420 mm by 594 mm).
+  name: A2
+  uid: E:Enum::System#Device#Printer_Paper_Kind.A2
+- summary: A3 paper (297 mm by 420 mm).
+  name: A3
+  uid: E:Enum::System#Device#Printer_Paper_Kind.A3
+- summary: A4 paper (210 mm by 297 mm).
+  name: A4
+  uid: E:Enum::System#Device#Printer_Paper_Kind.A4
+- summary: A5 paper (148 mm by 210 mm).
+  name: A5
+  uid: E:Enum::System#Device#Printer_Paper_Kind.A5
+- summary: A6 paper (105 mm by 148 mm).
+  name: A6
+  uid: E:Enum::System#Device#Printer_Paper_Kind.A6
+- summary: B4 paper (250 mm by 353 mm).
+  name: B4
+  uid: E:Enum::System#Device#Printer_Paper_Kind.B4
+- summary: B4 envelope (250 mm by 353 mm).
+  name: B4Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.B4Envelope
+- summary: B5 paper (176 mm by 250 mm).
+  name: B5
+  uid: E:Enum::System#Device#Printer_Paper_Kind.B5
+- summary: B5 envelope (176 mm by 250 mm).
+  name: B5Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.B5Envelope
+- summary: B6 envelope (176 mm by 125 mm).
+  name: B6Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.B6Envelope
+- summary: JIS B6 paper (128 mm by 182 mm).
+  name: B6Jis
+  uid: E:Enum::System#Device#Printer_Paper_Kind.B6Jis
+- summary: C3 envelope (324 mm by 458 mm).
+  name: C3Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.C3Envelope
+- summary: C4 envelope (229 mm by 324 mm).
+  name: C4Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.C4Envelope
+- summary: C5 envelope (162 mm by 229 mm).
+  name: C5Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.C5Envelope
+- summary: C65 envelope (114 mm by 229 mm).
+  name: C65Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.C65Envelope
+- summary: C6 envelope (114 mm by 162 mm).
+  name: C6Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.C6Envelope
+- summary: C paper (17 in. by 22 in.).
+  name: CSheet
+  uid: E:Enum::System#Device#Printer_Paper_Kind.CSheet
+- summary: DL envelope (110 mm by 220 mm).
+  name: DLEnvelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.DLEnvelope
+- summary: D paper (22 in. by 34 in.).
+  name: DSheet
+  uid: E:Enum::System#Device#Printer_Paper_Kind.DSheet
+- summary: E paper (34 in. by 44 in.).
+  name: ESheet
+  uid: E:Enum::System#Device#Printer_Paper_Kind.ESheet
+- summary: Executive paper (7.25 in. by 10.5 in.).
+  name: Executive
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Executive
+- summary: Folio paper (8.5 in. by 13 in.).
+  name: Folio
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Folio
+- summary: German legal fanfold (8.5 in. by 13 in.).
+  name: GermanLegalFanfold
+  uid: E:Enum::System#Device#Printer_Paper_Kind.GermanLegalFanfold
+- summary: German standard fanfold (8.5 in. by 12 in.).
+  name: GermanStandardFanfold
+  uid: E:Enum::System#Device#Printer_Paper_Kind.GermanStandardFanfold
+- summary: Invitation envelope (220 mm by 220 mm).
+  name: InviteEnvelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.InviteEnvelope
+- summary: ISO B4 (250 mm by 353 mm).
+  name: IsoB4
+  uid: E:Enum::System#Device#Printer_Paper_Kind.IsoB4
+- summary: Italy envelope (110 mm by 230 mm).
+  name: ItalyEnvelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.ItalyEnvelope
+- summary: Japanese double postcard (200 mm by 148 mm).
+  name: JapaneseDoublePostcard
+  uid: E:Enum::System#Device#Printer_Paper_Kind.JapaneseDoublePostcard
+- summary: 'Japanese Chou #3 envelope.'
+  name: JapaneseEnvelopeChouNumber3
+  uid: E:Enum::System#Device#Printer_Paper_Kind.JapaneseEnvelopeChouNumber3
+- summary: 'Japanese Chou #4 envelope.'
+  name: JapaneseEnvelopeChouNumber4
+  uid: E:Enum::System#Device#Printer_Paper_Kind.JapaneseEnvelopeChouNumber4
+- summary: 'Japanese Kaku #2 envelope.'
+  name: JapaneseEnvelopeKakuNumber2
+  uid: E:Enum::System#Device#Printer_Paper_Kind.JapaneseEnvelopeKakuNumber2
+- summary: 'Japanese Kaku #3 envelope.'
+  name: JapaneseEnvelopeKakuNumber3
+  uid: E:Enum::System#Device#Printer_Paper_Kind.JapaneseEnvelopeKakuNumber3
+- summary: 'Japanese You #4 envelope.'
+  name: JapaneseEnvelopeYouNumber4
+  uid: E:Enum::System#Device#Printer_Paper_Kind.JapaneseEnvelopeYouNumber4
+- summary: Japanese postcard (100 mm by 148 mm).
+  name: JapanesePostcard
+  uid: E:Enum::System#Device#Printer_Paper_Kind.JapanesePostcard
+- summary: Ledger paper (17 in. by 11 in.).
+  name: Ledger
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Ledger
+- summary: Legal paper (8.5 in. by 14 in.).
+  name: Legal
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Legal
+- summary: Letter paper (8.5 in. by 11 in.).
+  name: Letter
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Letter
+- summary: Monarch envelope (3.875 in. by 7.5 in.).
+  name: MonarchEnvelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.MonarchEnvelope
+- summary: Note paper (8.5 in. by 11 in.).
+  name: Note
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Note
+- summary: '#10 envelope (4.125 in. by 9.5 in.).'
+  name: Number10Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Number10Envelope
+- summary: '#11 envelope (4.5 in. by 10.375 in.).'
+  name: Number11Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Number11Envelope
+- summary: '#12 envelope (4.75 in. by 11 in.).'
+  name: Number12Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Number12Envelope
+- summary: '#14 envelope (5 in. by 11.5 in.).'
+  name: Number14Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Number14Envelope
+- summary: '#9 envelope (3.875 in. by 8.875 in.).'
+  name: Number9Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Number9Envelope
+- summary: 6 3/4 envelope (3.625 in. by 6.5 in.).
+  name: PersonalEnvelope
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PersonalEnvelope
+- summary: 16K paper (146 mm by 215 mm).
+  name: Prc16K
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Prc16K
+- summary: 32K paper (97 mm by 151 mm).
+  name: Prc32K
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Prc32K
+- summary: '#1 envelope (102 mm by 165 mm).'
+  name: PrcEnvelopeNumber1
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber1
+- summary: '#10 envelope (324 mm by 458 mm).'
+  name: PrcEnvelopeNumber10
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber10
+- summary: '#2 envelope (102 mm by 176 mm).'
+  name: PrcEnvelopeNumber2
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber2
+- summary: '#3 envelope (125 mm by 176 mm).'
+  name: PrcEnvelopeNumber3
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber3
+- summary: '#4 envelope (110 mm by 208 mm).'
+  name: PrcEnvelopeNumber4
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber4
+- summary: '#5 envelope (110 mm by 220 mm).'
+  name: PrcEnvelopeNumber5
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber5
+- summary: '#6 envelope (120 mm by 230 mm).'
+  name: PrcEnvelopeNumber6
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber6
+- summary: '#7 envelope (160 mm by 230 mm).'
+  name: PrcEnvelopeNumber7
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber7
+- summary: '#8 envelope (120 mm by 309 mm).'
+  name: PrcEnvelopeNumber8
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber8
+- summary: '#9 envelope (229 mm by 324 mm).'
+  name: PrcEnvelopeNumber9
+  uid: E:Enum::System#Device#Printer_Paper_Kind.PrcEnvelopeNumber9
+- summary: Quarto paper (215 mm by 275 mm).
+  name: Quarto
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Quarto
+- summary: Standard paper (10 in. by 11 in.).
+  name: Standard10x11
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Standard10x11
+- summary: Standard paper (10 in. by 14 in.).
+  name: Standard10x14
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Standard10x14
+- summary: Standard paper (11 in. by 17 in.).
+  name: Standard11x17
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Standard11x17
+- summary: Standard paper (12 in. by 11 in.).
+  name: Standard12x11
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Standard12x11
+- summary: Standard paper (15 in. by 11 in.).
+  name: Standard15x11
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Standard15x11
+- summary: Standard paper (9 in. by 11 in.).
+  name: Standard9x11
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Standard9x11
+- summary: Statement paper (5.5 in. by 8.5 in.).
+  name: Statement
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Statement
+- summary: Tabloid paper (11 in. by 17 in.).
+  name: Tabloid
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Tabloid
+- summary: US standard fanfold (14.875 in. by 11 in.).
+  name: USStandardFanfold
+  uid: E:Enum::System#Device#Printer_Paper_Kind.USStandardFanfold
+- summary: Custom. The paper size is defined by the user.
+  name: Custom
+  uid: E:Enum::System#Device#Printer_Paper_Kind.Custom
+commentId: O:Enum::System#Device#Printer Paper Kind
+summary: Specifies the standard paper sizes
+name: '"Printer Paper Kind"'
+uid: O:Enum::System#Device#Printer_Paper_Kind

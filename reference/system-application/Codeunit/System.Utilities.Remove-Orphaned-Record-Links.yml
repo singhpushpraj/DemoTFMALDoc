@@ -1,0 +1,19 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Remove Orphaned Record Links"
+alId: ID 459
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+commentId: O:Codeunit::System#Utilities#Remove Orphaned Record Links
+summary: This codeunit is created so that record links that have obsolete record ids can be deleted in a scheduled task.
+name: '"Remove Orphaned Record Links"'
+uid: O:Codeunit::System#Utilities#Remove_Orphaned_Record_Links

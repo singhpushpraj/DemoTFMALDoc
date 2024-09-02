@@ -1,0 +1,52 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Scenario Setup"
+alId: ID 8893
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  name: System.Email."Email Account Scenario"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Email Scenario Assignment
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "8907"
+  promoted: true
+- name: InstructionalText
+  value: Assign email scenarios
+  promoted: false
+commentId: O:Page::System#Email#Email Scenario Setup
+summary: Page is used to display email scenarios usage by email accounts.
+name: '"Email Scenario Setup"'
+uid: O:Page::System#Email#Email_Scenario_Setup

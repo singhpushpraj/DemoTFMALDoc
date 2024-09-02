@@ -1,0 +1,42 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection."Record Lookup"
+alId: ID 9555
+namespace: System.Reflection
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Reflection#Record_Selection_Buffer
+  name: System.Reflection."Record Selection Buffer"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "9555"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Reflection#Record_Selection_Buffer
+    name: System.Reflection."Record Selection Buffer"
+    isExternal: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Reflection#Record Lookup
+summary: Look up page for records.
+name: '"Record Lookup"'
+uid: O:Page::System#Reflection#Record_Lookup

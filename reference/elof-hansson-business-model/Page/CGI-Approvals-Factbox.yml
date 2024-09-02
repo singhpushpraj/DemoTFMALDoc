@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Approvals Factbox"'
+alId: ID 60333
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Calculation_Header
+  name: '"CGI Calculation Header"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: CardPart
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+- name: SourceTable
+  value: "60300"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Calculation_Header
+    name: '"CGI Calculation Header"'
+    isExternal: false
+- name: Caption
+  value: Approvals Factbox
+  promoted: false
+commentId: O:Page::CGI Approvals Factbox
+name: '"CGI Approvals Factbox"'
+uid: O:Page::CGI_Approvals_Factbox

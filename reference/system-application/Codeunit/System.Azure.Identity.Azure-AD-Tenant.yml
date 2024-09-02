@@ -1,0 +1,82 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD Tenant"
+alId: ID 433
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetAadTenantId(): Text'
+    return:
+      description: If it cannot be found, an empty string is returned.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the Microsoft Entra tenant ID.
+  name: GetAadTenantId
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Tenant.GetAadTenantId:Text
+- syntax:
+    content: 'procedure GetAadTenantDomainName(): Text'
+    return:
+      description: The Microsoft Entra tenant Domain Name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Gets the Microsoft Entra tenant domain name.
+
+    If the Microsoft Graph API cannot be reached, the error is displayed.
+  name: GetAadTenantDomainName
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Tenant.GetAadTenantDomainName:Text
+- syntax:
+    content: 'procedure GetCountryLetterCode(): Code[2]'
+    return:
+      description: Country or region abbreviation for the organization in ISO 3166-2 format.
+      returnType:
+        name: Code[2]
+        isExternal: true
+  summary: >-
+    Gets the current Microsoft Entra tenant registered country letter code.
+
+    Visit Microsoft Admin Cententer to view or edit Organizational Information.
+
+    If the Microsoft Graph API cannot be reached, the error is displayed.
+  name: GetCountryLetterCode
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Tenant.GetCountryLetterCode:Code[2]
+- syntax:
+    content: 'procedure GetPreferredLanguage(): Code[2]'
+    return:
+      description: The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
+      returnType:
+        name: Code[2]
+        isExternal: true
+  summary: >-
+    Gets the current Microsoft Entra tenant registered preferred language.
+
+    Visit Microsoft Admin Cententer to view or edit Organizational Information.
+
+    If the Microsoft Graph API cannot be reached, the error is displayed.
+  name: GetPreferredLanguage
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Tenant.GetPreferredLanguage:Code[2]
+commentId: O:Codeunit::System#Azure#Identity#Azure AD Tenant
+summary: Exposes functionality to fetch attributes concerning the current tenant.
+name: '"Azure AD Tenant"'
+uid: O:Codeunit::System#Azure#Identity#Azure_AD_Tenant

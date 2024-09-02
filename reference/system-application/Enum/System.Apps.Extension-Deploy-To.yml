@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Deploy To"
+alId: ID 2504
+namespace: System.Apps
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: AssignmentCompatibility
+  value: "True"
+  promoted: false
+enumValues:
+- summary: Current version.
+  name: '"Current version"'
+  uid: E:Enum::System#Apps#Extension_Deploy_To.Current_version
+- summary: Next minor version
+  name: '"Next minor version"'
+  uid: E:Enum::System#Apps#Extension_Deploy_To.Next_minor_version
+- summary: Next major version
+  name: '"Next major version"'
+  uid: E:Enum::System#Apps#Extension_Deploy_To.Next_major_version
+commentId: O:Enum::System#Apps#Extension Deploy To
+summary: Specifies the version in which the extension is deployed.
+name: '"Extension Deploy To"'
+uid: O:Enum::System#Apps#Extension_Deploy_To

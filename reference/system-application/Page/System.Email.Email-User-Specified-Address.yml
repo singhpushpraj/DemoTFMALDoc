@@ -1,0 +1,44 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email User-Specified Address"
+alId: ID 8884
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Enter Email Address
+  promoted: false
+- name: PageType
+  value: StandardDialog
+  promoted: true
+methods:
+- syntax:
+    content: 'procedure GetEmailAddress(): Text'
+    return:
+      description: Email address(es)
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the email address(es) that has been entered.
+  name: GetEmailAddress
+  uid: M:Page::System#Email#Email_User-Specified_Address.GetEmailAddress:Text
+- syntax:
+    content: 'procedure SetEmailAddress(Address: Text)'
+    parameters:
+    - id: Address
+      description: The value to be prefilled
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the inital value to be displayed.
+  name: SetEmailAddress
+  uid: M:Page::System#Email#Email_User-Specified_Address.SetEmailAddress(Text)
+commentId: O:Page::System#Email#Email User-Specified Address
+summary: A page to enter an email address.
+name: '"Email User-Specified Address"'
+uid: O:Page::System#Email#Email_User-Specified_Address

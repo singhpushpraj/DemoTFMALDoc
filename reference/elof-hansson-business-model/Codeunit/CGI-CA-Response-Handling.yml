@@ -1,0 +1,126 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA Response Handling"'
+alId: ID 60310
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure ReleaseCAEarningsDocumentCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: ReleaseCAEarningsDocumentCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.ReleaseCAEarningsDocumentCode:Code[128]
+- syntax:
+    content: 'procedure OpenCAEarningsDocumentCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: OpenCAEarningsDocumentCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.OpenCAEarningsDocumentCode:Code[128]
+- syntax:
+    content: 'procedure SendEarningsApprovalRequestForApprovalCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: SendEarningsApprovalRequestForApprovalCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.SendEarningsApprovalRequestForApprovalCode:Code[128]
+- syntax:
+    content: 'procedure SetCAEarningsStatusToPendingApprovalCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: SetCAEarningsStatusToPendingApprovalCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.SetCAEarningsStatusToPendingApprovalCode:Code[128]
+- syntax:
+    content: 'procedure ApproveAllCAEarningsApprovalRequestsCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: ApproveAllCAEarningsApprovalRequestsCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.ApproveAllCAEarningsApprovalRequestsCode:Code[128]
+- syntax:
+    content: 'procedure RejectAllCAEarningsApprovalRequestsCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RejectAllCAEarningsApprovalRequestsCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.RejectAllCAEarningsApprovalRequestsCode:Code[128]
+- syntax:
+    content: 'procedure CancelAllCAEarningsApprovalRequestsCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: CancelAllCAEarningsApprovalRequestsCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.CancelAllCAEarningsApprovalRequestsCode:Code[128]
+- syntax:
+    content: 'procedure ReleaseCACreditDocumentCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: ReleaseCACreditDocumentCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.ReleaseCACreditDocumentCode:Code[128]
+- syntax:
+    content: 'procedure OpenCACreditDocumentCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: OpenCACreditDocumentCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.OpenCACreditDocumentCode:Code[128]
+- syntax:
+    content: 'procedure SendCreditApprovalRequestForApprovalCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: SendCreditApprovalRequestForApprovalCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.SendCreditApprovalRequestForApprovalCode:Code[128]
+- syntax:
+    content: 'procedure SetCACreditStatusToPendingApprovalCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: SetCACreditStatusToPendingApprovalCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.SetCACreditStatusToPendingApprovalCode:Code[128]
+- syntax:
+    content: 'procedure ApproveAllCACreditApprovalRequestsCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: ApproveAllCACreditApprovalRequestsCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.ApproveAllCACreditApprovalRequestsCode:Code[128]
+- syntax:
+    content: 'procedure RejectAllCACreditApprovalRequestsCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RejectAllCACreditApprovalRequestsCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.RejectAllCACreditApprovalRequestsCode:Code[128]
+- syntax:
+    content: 'procedure CancelAllCACreditApprovalRequestsCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: CancelAllCACreditApprovalRequestsCode
+  uid: M:Codeunit::CGI_CA_Response_Handling.CancelAllCACreditApprovalRequestsCode:Code[128]
+commentId: O:Codeunit::CGI CA Response Handling
+name: '"CGI CA Response Handling"'
+uid: O:Codeunit::CGI_CA_Response_Handling

@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Feature Status"
+alId: ID 2610
+namespace: System.Environment.Configuration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Disabled
+  uid: E:Enum::System#Environment#Configuration#Feature_Status.Disabled
+- name: Enabled
+  uid: E:Enum::System#Environment#Configuration#Feature_Status.Enabled
+- name: Pending
+  uid: E:Enum::System#Environment#Configuration#Feature_Status.Pending
+- name: Scheduled
+  uid: E:Enum::System#Environment#Configuration#Feature_Status.Scheduled
+- name: Updating
+  uid: E:Enum::System#Environment#Configuration#Feature_Status.Updating
+- name: Incomplete
+  uid: E:Enum::System#Environment#Configuration#Feature_Status.Incomplete
+- name: Complete
+  uid: E:Enum::System#Environment#Configuration#Feature_Status.Complete
+commentId: O:Enum::System#Environment#Configuration#Feature Status
+summary: Enum defines the feature statuses.
+name: '"Feature Status"'
+uid: O:Enum::System#Environment#Configuration#Feature_Status

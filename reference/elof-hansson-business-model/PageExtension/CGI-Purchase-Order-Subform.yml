@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Purchase Order Subform"'
+alId: ID 60336
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Purchase Order Subform
+summary: Pageextension CGI Purchase Subform (ID 60336) extends page Purchase Subform
+name: '"CGI Purchase Order Subform"'
+uid: O:PageExtension::CGI_Purchase_Order_Subform

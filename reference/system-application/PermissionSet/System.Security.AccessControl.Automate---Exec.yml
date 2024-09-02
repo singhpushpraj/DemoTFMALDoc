@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Automate - Exec"
+alId: ID 9630
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Automate - Exec
+  promoted: false
+commentId: O:PermissionSet::System#Security#AccessControl#Automate - Exec
+name: '"Automate - Exec"'
+uid: O:PermissionSet::System#Security#AccessControl#Automate_-_Exec

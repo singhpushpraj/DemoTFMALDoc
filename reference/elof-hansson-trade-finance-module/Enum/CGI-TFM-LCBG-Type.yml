@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG Type"'
+alId: ID 70300
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '"Letter of Credit"'
+  uid: E:Enum::CGI_TFM_LCBG_Type.Letter_of_Credit
+- name: '"Bank Guarantee"'
+  uid: E:Enum::CGI_TFM_LCBG_Type.Bank_Guarantee
+commentId: O:Enum::CGI TFM LCBG Type
+summary: Contains CGI TFM LCBG Type options , help to define Letter of Credit and Bank Guarantee
+name: '"CGI TFM LCBG Type"'
+uid: O:Enum::CGI_TFM_LCBG_Type

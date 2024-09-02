@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Templates Related List"
+alId: ID 9985
+namespace: System.Integration.Word
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+sourceTableType:
+  name: System.Integration.Word."Word Templates Related Table"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Related Entities
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "9990"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "Word Templates Related Table" = rimd
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "22.0"
+  promoted: false
+- name: ObsoleteReason
+  value: No longer used. Use page 9987 Word Templates Related Part instead.
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Integration#Word#Word Templates Related List
+summary: A list page to view and edit related entities for Word templates.
+name: '"Word Templates Related List"'
+obsoletion:
+  state: pending
+  reason: No longer used. Use page 9987 Word Templates Related Part instead.
+  version: "22.0"
+uid: O:Page::System#Integration#Word#Word_Templates_Related_List

@@ -1,0 +1,51 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation ItemLines Purc"'
+alId: ID 60319
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Calculation_Line
+  name: '"CGI Calculation Line"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: AutoSplitKey
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Lines
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: PopulateAllFields
+  value: "True"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: "60301"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Calculation_Line
+    name: '"CGI Calculation Line"'
+    isExternal: false
+methods:
+- syntax:
+    content: procedure CopyVendorLines()
+  name: CopyVendorLines
+  uid: M:Page::CGI_Calculation_ItemLines_Purc.CopyVendorLines
+commentId: O:Page::CGI Calculation ItemLines Purc
+name: '"CGI Calculation ItemLines Purc"'
+uid: O:Page::CGI_Calculation_ItemLines_Purc

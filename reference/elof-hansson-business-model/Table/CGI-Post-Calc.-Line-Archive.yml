@@ -1,0 +1,102 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Post Calc. Line Archive"'
+alId: ID 60365
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Post Calculation Line Archive
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Calculation No."'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Calculation_No#[20]
+- type:
+    internalReference: O:Enum::CGI_Post_Calculation_Type
+    name: '"CGI Post Calculation Type"'
+    isExternal: false
+  name: '"Post Calculation Type"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Post_Calculation_Type
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Amount (Precalc.)"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Amount_(Precalc#)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Amount (Postcalc.)"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Amount_(Postcalc#)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Diff Amount"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Diff % precalc volume"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Diff_%_precalc_volume
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Changed volume amount"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Changed_volume_amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Precalc with actual volume"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Precalc_with_actual_volume
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Diff % with actual volume"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Diff_%_with_actual_volume
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Totaling Line"'
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.Totaling_Line
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Post_Calc#_Line_Archive.SystemRowVersion
+commentId: O:Table::CGI Post Calc# Line Archive
+name: '"CGI Post Calc. Line Archive"'
+uid: O:Table::CGI_Post_Calc#_Line_Archive

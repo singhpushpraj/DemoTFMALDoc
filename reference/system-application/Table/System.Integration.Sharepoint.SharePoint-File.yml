@@ -1,0 +1,120 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."SharePoint File"
+alId: ID 9100
+namespace: System.Integration.Sharepoint
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Caption
+  value: SharePoint File
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Unique Id"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.Unique_Id
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.Name[250]
+- type:
+    name: DateTime
+    isExternal: true
+  name: Created
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.Created
+- type:
+    name: Integer
+    isExternal: true
+  name: Length
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.Length
+- type:
+    name: Boolean
+    isExternal: true
+  name: Exists
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.Exists
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Server Relative Url"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.Server_Relative_Url[2048]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Title
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.Title[250]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataId
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.OdataId[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataType
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.OdataType[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataEditLink
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.OdataEditLink[2048]
+- type:
+    name: Integer
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.Id
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_File.SystemRowVersion
+commentId: O:Table::System#Integration#Sharepoint#SharePoint File
+summary: Holds information about file entity.
+name: '"SharePoint File"'
+uid: O:Table::System#Integration#Sharepoint#SharePoint_File

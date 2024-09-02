@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Doc. Sharing Conflict Behavior"
+alId: ID 9562
+namespace: System.Integration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Fail the operation.
+  name: Fail
+  uid: E:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior.Fail
+- summary: Replace the existing document.
+  name: Replace
+  uid: E:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior.Replace
+- summary: Rename the new document.
+  name: Rename
+  uid: E:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior.Rename
+- summary: Reuse the existing document.
+  name: Reuse
+  uid: E:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior.Reuse
+- summary: Show a dialog to the user to ask what to do.
+  name: Ask
+  uid: E:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior.Ask
+commentId: O:Enum::System#Integration#Doc# Sharing Conflict Behavior
+summary: The behavior to use when a document sharing conflict occurs.
+name: '"Doc. Sharing Conflict Behavior"'
+uid: O:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior

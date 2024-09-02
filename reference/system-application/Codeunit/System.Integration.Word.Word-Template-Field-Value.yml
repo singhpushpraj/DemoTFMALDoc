@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Template Field Value"
+alId: ID 9983
+namespace: System.Integration.Word
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetRecord(): RecordRef'
+    return:
+      description: RecordRef to the current record.
+      returnType:
+        name: RecordRef
+        isExternal: true
+  summary: Get the record that we are currently merging into the word document.
+  name: GetRecord
+  uid: M:Codeunit::System#Integration#Word#Word_Template_Field_Value.GetRecord:RecordRef
+- syntax:
+    content: 'procedure AddFieldValue(CustomFieldName: Text, CustomFieldValue: Text[2048])'
+    parameters:
+    - id: CustomFieldName
+      description: Name of the custom field, which was already specified in the Word Template Custom Fields codeunit.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CustomFieldValue
+      description: Value of this field for the current record.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: Set the value of a specific field. The field must already have been added in the Word Template Custom Fields codeunit.
+  name: AddFieldValue
+  uid: M:Codeunit::System#Integration#Word#Word_Template_Field_Value.AddFieldValue(Text,Text[2048])
+commentId: O:Codeunit::System#Integration#Word#Word Template Field Value
+summary: Provides an interface to define custom field values for Word Templates
+name: '"Word Template Field Value"'
+uid: O:Codeunit::System#Integration#Word#Word_Template_Field_Value

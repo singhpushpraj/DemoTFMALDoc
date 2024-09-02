@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.RestClient."Http Method"
+alId: ID 2350
+namespace: System.RestClient
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.RestClient
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Specifies that the Http method is GET.
+  name: GET
+  uid: E:Enum::System#RestClient#Http_Method.GET
+- summary: Specifies that the Http method is POST.
+  name: POST
+  uid: E:Enum::System#RestClient#Http_Method.POST
+- summary: Specifies that the Http method is PATCH.
+  name: PATCH
+  uid: E:Enum::System#RestClient#Http_Method.PATCH
+- summary: Specifies that the Http method is PUT.
+  name: PUT
+  uid: E:Enum::System#RestClient#Http_Method.PUT
+- summary: Specifies that the Http method is DELETE.
+  name: DELETE
+  uid: E:Enum::System#RestClient#Http_Method.DELETE
+- summary: Specifies that the Http method is HEAD.
+  name: HEAD
+  uid: E:Enum::System#RestClient#Http_Method.HEAD
+- summary: Specifies that the Http method is OPTIONS.
+  name: OPTIONS
+  uid: E:Enum::System#RestClient#Http_Method.OPTIONS
+commentId: O:Enum::System#RestClient#Http Method
+summary: This enum contains the REST Http Methods.
+name: '"Http Method"'
+uid: O:Enum::System#RestClient#Http_Method

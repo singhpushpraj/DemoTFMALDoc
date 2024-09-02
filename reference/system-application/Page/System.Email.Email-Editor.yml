@@ -1,0 +1,59 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Editor"
+alId: ID 13
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Email#Email_Outbox
+  name: System.Email."Email Outbox"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: Document
+  promoted: true
+- name: SourceTable
+  value: "8888"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Email#Email_Outbox
+    name: System.Email."Email Outbox"
+    isExternal: false
+- name: Caption
+  value: Compose an Email
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Email Outbox" = rm,
+                      tabledata "Email Message Attachment" = rid
+  promoted: false
+- name: UsageCategory
+  value: Tasks
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: DataCaptionExpression
+  value: "''"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+commentId: O:Page::System#Email#Email Editor
+summary: A page to create, edit and send e-mails.
+name: '"Email Editor"'
+uid: O:Page::System#Email#Email_Editor

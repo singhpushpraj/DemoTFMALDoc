@@ -1,0 +1,271 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Data Classification Mgt."
+alId: ID 1750
+namespace: System.Privacy
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: procedure PopulateDataSensitivityTable()
+  summary: >-
+    Creates an entry in the Data Sensitivity table for every field in the database that is classified as Customer Content,
+
+    End User Identifiable Information (EUII), or End User Pseudonymous Identifiers (EUPI).
+  name: PopulateDataSensitivityTable
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.PopulateDataSensitivityTable
+- syntax:
+    content: 'procedure SetDefaultDataSensitivity(var DataPrivacyEntities: Record "Data Privacy Entities")'
+    parameters:
+    - id: DataPrivacyEntities
+      description: The variable that is used to update the Data Sensitivity table.
+      parameterType:
+        name: Record "Data Privacy Entities"
+        isExternal: true
+  summary: >-
+    Updates the Data Sensitivity table with the default data sensitivities for all the fields of all the tables
+
+    in the DataPrivacyEntities record.
+  name: SetDefaultDataSensitivity
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.SetDefaultDataSensitivity(Data_Privacy_Entities@)
+- syntax:
+    content: 'procedure SetSensitivities(DataSensitivity: __MissingTypeSymbol__, Sensitivity: Option)'
+    parameters:
+    - id: DataSensitivity
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: Sensitivity
+      parameterType:
+        name: Option
+        isExternal: true
+  name: SetSensitivities
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.SetSensitivities(__MissingSymbol__@,Option)
+- syntax:
+    content: procedure SyncAllFields()
+  summary: >-
+    Synchronizes the Data Sensitivity table with the Field table. It inserts new values in the Data Sensitivity table for the
+
+    fields that the Field table contains and the Data Sensitivity table does not and it deletes the unclassified fields from
+
+    the Data Sensitivity table that the Field table does not contain.
+  name: SyncAllFields
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.SyncAllFields
+- syntax:
+    content: 'procedure GetDataSensitivityOptionString(): Text'
+    return:
+      description: >2+
+
+        A Text value representing the values that the "Data Sensitivity" field of the Data Sensitivity table can contain.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the values that the "Data Sensitivity" field of the Data Sensitivity table can contain.
+  name: GetDataSensitivityOptionString
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.GetDataSensitivityOptionString:Text
+- syntax:
+    content: 'procedure SetTableFieldsToNormal(TableNumber: Integer)'
+    parameters:
+    - id: TableNumber
+      description: The ID of the table in which the field sensitivities will be set to normal.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the data sensitivity to normal for all fields in the table with the ID TableNumber.
+  name: SetTableFieldsToNormal
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.SetTableFieldsToNormal(Integer)
+- syntax:
+    content: 'procedure SetFieldToPersonal(TableNo: Integer, FieldNo: Integer)'
+    parameters:
+    - id: TableNo
+      description: The table ID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      description: The field ID
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the data sensitivity to personal for the field with the ID FieldNo from the table with the ID TableNo.
+  name: SetFieldToPersonal
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.SetFieldToPersonal(Integer,Integer)
+- syntax:
+    content: 'procedure SetFieldToSensitive(TableNo: Integer, FieldNo: Integer)'
+    parameters:
+    - id: TableNo
+      description: The table ID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      description: The field ID
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the data sensitivity to sensitive for the field with the ID FieldNo from the table with the ID TableNo.
+  name: SetFieldToSensitive
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.SetFieldToSensitive(Integer,Integer)
+- syntax:
+    content: 'procedure SetFieldToCompanyConfidential(TableNo: Integer, FieldNo: Integer)'
+    parameters:
+    - id: TableNo
+      description: The table ID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      description: The field ID
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: >-
+    Sets the data sensitivity to company confidential for the field with the ID FieldNo from the table
+
+    with the ID TableNo.
+  name: SetFieldToCompanyConfidential
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.SetFieldToCompanyConfidential(Integer,Integer)
+- syntax:
+    content: 'procedure SetFieldToNormal(TableNo: Integer, FieldNo: Integer)'
+    parameters:
+    - id: TableNo
+      description: The table ID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      description: The field ID
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the data sensitivity to normal for the field with the ID FieldNo from the table with the ID TableNo.
+  name: SetFieldToNormal
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.SetFieldToNormal(Integer,Integer)
+- syntax:
+    content: 'procedure DataPrivacyEntitiesExist(): Boolean'
+    return:
+      description: True if there are any entries and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether any of the data privacy entity tables (Customer, Vendor, Employee, and so on) contain entries.
+  name: DataPrivacyEntitiesExist
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.DataPrivacyEntitiesExist:Boolean
+- syntax:
+    content: 'procedure AreAllFieldsClassified(): Boolean'
+    return:
+      description: True if there are any unclassified entries and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the Data Sensitivity table contains any unclassified entries.
+  name: AreAllFieldsClassified
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.AreAllFieldsClassified:Boolean
+- syntax:
+    content: 'procedure IsDataSensitivityEmptyForCurrentCompany(): Boolean'
+    return:
+      description: True if there are any entries and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the Data Sensitivity table contains any entries for the current company.
+  name: IsDataSensitivityEmptyForCurrentCompany
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.IsDataSensitivityEmptyForCurrentCompany:Boolean
+- syntax:
+    content: 'procedure InsertDataSensitivityForField(TableNo: Integer, FieldNo: Integer, DataSensitivityOption: Option)'
+    parameters:
+    - id: TableNo
+      description: The table ID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      description: The field ID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DataSensitivityOption
+      description: The data sensitivity option
+      parameterType:
+        name: Option
+        isExternal: true
+  summary: >-
+    Inserts a new entry in the Data Sensitivity table for the specified table ID, field ID and with the given
+
+    data sensitivity option (some of the values that the option can have are normal, sensitive and personal).
+  name: InsertDataSensitivityForField
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.InsertDataSensitivityForField(Integer,Integer,Option)
+- syntax:
+    content: 'procedure InsertDataPrivacyEntity(var DataPrivacyEntities: Record "Data Privacy Entities", TableNo: Integer, PageNo: Integer, KeyFieldNo: Integer, EntityFilter: Text, PrivacyBlockedFieldNo: Integer)'
+    parameters:
+    - id: DataPrivacyEntities
+      description: The record that the entry gets inserted into.
+      parameterType:
+        name: Record "Data Privacy Entities"
+        isExternal: true
+    - id: TableNo
+      description: The entity's table ID.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: PageNo
+      description: The entity's page ID.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: KeyFieldNo
+      description: The entity's primary key ID.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: EntityFilter
+      description: The entity's ID.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PrivacyBlockedFieldNo
+      description: If the entity has a Privacy Blocked field, then the field's ID; otherwise 0.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Inserts a new Data Privacy Entity entry in a record.
+  name: InsertDataPrivacyEntity
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.InsertDataPrivacyEntity(Data_Privacy_Entities@,Integer,Integer,Integer,Text,Integer)
+- syntax:
+    content: 'procedure GetLastSyncStatusDate(): DateTime'
+    return:
+      description: The last date when the Data Sensitivity and Field tables where synchronized.
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Gets the last date when the Data Sensitivity and Field tables where synchronized.
+  name: GetLastSyncStatusDate
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.GetLastSyncStatusDate:DateTime
+- syntax:
+    content: 'procedure RaiseOnGetDataPrivacyEntities(var DataPrivacyEntities: Record "Data Privacy Entities")'
+    parameters:
+    - id: DataPrivacyEntities
+      description: >2+
+
+        The record that in the end will contain all the Data Privacy Entities that the subscribers have inserted.
+      parameterType:
+        name: Record "Data Privacy Entities"
+        isExternal: true
+  summary: >-
+    Raises an event that allows subscribers to insert Data Privacy Entities in the DataPrivacyEntities record.
+
+    Throws an error when it is not called with a temporary record.
+  name: RaiseOnGetDataPrivacyEntities
+  uid: M:Codeunit::System#Privacy#Data_Classification_Mgt#.RaiseOnGetDataPrivacyEntities(Data_Privacy_Entities@)
+commentId: O:Codeunit::System#Privacy#Data Classification Mgt#
+summary: Exposes functionality to handle data classification tasks.
+name: '"Data Classification Mgt."'
+uid: O:Codeunit::System#Privacy#Data_Classification_Mgt#

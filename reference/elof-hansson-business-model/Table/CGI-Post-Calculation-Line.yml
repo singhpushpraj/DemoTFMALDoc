@@ -1,0 +1,102 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Post Calculation Line"'
+alId: ID 60364
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: CGI Post Calculation Line
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Calculation No."'
+  uid: F:Table::CGI_Post_Calculation_Line.Calculation_No#[20]
+- type:
+    internalReference: O:Enum::CGI_Post_Calculation_Type
+    name: '"CGI Post Calculation Type"'
+    isExternal: false
+  name: '"Post Calculation Type"'
+  uid: F:Table::CGI_Post_Calculation_Line.Post_Calculation_Type
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Amount (Precalc.)"'
+  uid: F:Table::CGI_Post_Calculation_Line.Amount_(Precalc#)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Amount (Postcalc.)"'
+  uid: F:Table::CGI_Post_Calculation_Line.Amount_(Postcalc#)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Diff Amount"'
+  uid: F:Table::CGI_Post_Calculation_Line.Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Diff % precalc volume"'
+  uid: F:Table::CGI_Post_Calculation_Line.Diff_%_precalc_volume
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Changed volume amount"'
+  uid: F:Table::CGI_Post_Calculation_Line.Changed_volume_amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Precalc with actual volume"'
+  uid: F:Table::CGI_Post_Calculation_Line.Precalc_with_actual_volume
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Diff % with actual volume"'
+  uid: F:Table::CGI_Post_Calculation_Line.Diff_%_with_actual_volume
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Totaling Line"'
+  uid: F:Table::CGI_Post_Calculation_Line.Totaling_Line
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Post_Calculation_Line.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Post_Calculation_Line.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Post_Calculation_Line.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Post_Calculation_Line.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Post_Calculation_Line.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Post_Calculation_Line.SystemRowVersion
+commentId: O:Table::CGI Post Calculation Line
+name: '"CGI Post Calculation Line"'
+uid: O:Table::CGI_Post_Calculation_Line

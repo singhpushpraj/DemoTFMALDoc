@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Calculation Setup "'
+alId: ID 70301
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  internalReference: O:Page::CGI_Calculation_Setup
+  name: '"CGI Calculation Setup"'
+  isExternal: false
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: 'O:PageExtension::CGI TFM Calculation Setup '
+summary: >-
+  pageextension 70301 CGI TFM Calculation Setup extends CGI Calculation Setup
+
+  contains TFM related fields
+name: '"CGI TFM Calculation Setup "'
+uid: O:PageExtension::CGI_TFM_Calculation_Setup_

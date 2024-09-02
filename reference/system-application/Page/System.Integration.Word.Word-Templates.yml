@@ -1,0 +1,50 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Templates"
+alId: ID 9989
+namespace: System.Integration.Word
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Integration#Word#Word_Template
+  name: System.Integration.Word."Word Template"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: SourceTable
+  value: "9988"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Integration#Word#Word_Template
+    name: System.Integration.Word."Word Template"
+    isExternal: false
+- name: PromotedActionCategories
+  value: New,Process
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Word Template" = rmd,
+                      tabledata "Word Templates Related Table" = r
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+commentId: O:Page::System#Integration#Word#Word Templates
+summary: Presents a list of available Word templates.
+name: '"Word Templates"'
+uid: O:Page::System#Integration#Word#Word_Templates

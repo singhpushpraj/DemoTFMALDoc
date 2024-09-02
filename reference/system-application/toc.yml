@@ -1,0 +1,1755 @@
+﻿items:
+- name: Overview
+  uid: N:Module::System_Application
+- name: Reference
+  items:
+  - name: System
+    items:
+    - name: AI
+      items:
+      - name: Codeunits
+        items:
+        - name: AOAI Chat Completion Params
+          uid: O:Codeunit::System#AI#AOAI_Chat_Completion_Params
+        - name: AOAI Chat Messages
+          uid: O:Codeunit::System#AI#AOAI_Chat_Messages
+        - name: AOAI Deployments
+          uid: O:Codeunit::System#AI#AOAI_Deployments
+        - name: AOAI Operation Response
+          uid: O:Codeunit::System#AI#AOAI_Operation_Response
+        - name: AOAI Text Completion Params
+          uid: O:Codeunit::System#AI#AOAI_Text_Completion_Params
+        - name: AOAI Token
+          uid: O:Codeunit::System#AI#AOAI_Token
+        - name: Azure OpenAI
+          uid: O:Codeunit::System#AI#Azure_OpenAI
+        - name: Copilot Capability
+          uid: O:Codeunit::System#AI#Copilot_Capability
+        - name: Copilot Capability Install
+          uid: O:Codeunit::System#AI#Copilot_Capability_Install
+        - name: Copilot Capability Upgrade
+          uid: O:Codeunit::System#AI#Copilot_Capability_Upgrade
+      - name: Pages
+        items:
+        - name: Copilot AI Capabilities
+          uid: O:Page::System#AI#Copilot_AI_Capabilities
+        - name: Copilot Capabilities GA
+          uid: O:Page::System#AI#Copilot_Capabilities_GA
+        - name: Copilot Capabilities Preview
+          uid: O:Page::System#AI#Copilot_Capabilities_Preview
+        - name: Copilot Deactivate Capability
+          uid: O:Page::System#AI#Copilot_Deactivate_Capability
+        - name: Copilot Not Available
+          uid: O:Page::System#AI#Copilot_Not_Available
+      - name: Enums
+        items:
+        - name: AOAI Chat Roles
+          uid: O:Enum::System#AI#AOAI_Chat_Roles
+        - name: AOAI Model Type
+          uid: O:Enum::System#AI#AOAI_Model_Type
+        - name: Copilot Availability
+          uid: O:Enum::System#AI#Copilot_Availability
+        - name: Copilot Status
+          uid: O:Enum::System#AI#Copilot_Status
+    - name: Apps
+      items:
+      - name: AppSource
+        items:
+        - name: Pages
+          items:
+          - name: AppSource Product Details
+            uid: O:Page::System#Apps#AppSource#AppSource_Product_Details
+          - name: AppSource Product List
+            uid: O:Page::System#Apps#AppSource#AppSource_Product_List
+      - name: Tables
+        items:
+        - name: Extension Deployment Status
+          uid: O:Table::System#Apps#Extension_Deployment_Status
+        - name: Extension Pending Setup
+          uid: O:Table::System#Apps#Extension_Pending_Setup
+      - name: Codeunits
+        items:
+        - name: Data Out Of Geo. App
+          uid: O:Codeunit::System#Apps#Data_Out_Of_Geo#_App
+        - name: Extension Management
+          uid: O:Codeunit::System#Apps#Extension_Management
+      - name: Pages
+        items:
+        - name: Delete Orphaned Extension Data
+          uid: O:Page::System#Apps#Delete_Orphaned_Extension_Data
+        - name: Extension Deployment Status
+          uid: O:Page::System#Apps#Extension_Deployment_Status
+        - name: Extension Details
+          uid: O:Page::System#Apps#Extension_Details
+        - name: Extension Details Part
+          uid: O:Page::System#Apps#Extension_Details_Part
+        - name: Extension Installation
+          uid: O:Page::System#Apps#Extension_Installation
+        - name: Extension Logo Part
+          uid: O:Page::System#Apps#Extension_Logo_Part
+        - name: Extension Management
+          uid: O:Page::System#Apps#Extension_Management
+        - name: Extension Marketplace
+          uid: O:Page::System#Apps#Extension_Marketplace
+        - name: Extension Settings
+          uid: O:Page::System#Apps#Extension_Settings
+        - name: Extension Setup Launcher
+          uid: O:Page::System#Apps#Extension_Setup_Launcher
+        - name: Extn Deployment Status Detail
+          uid: O:Page::System#Apps#Extn_Deployment_Status_Detail
+        - name: Extn. Installation Progress
+          uid: O:Page::System#Apps#Extn#_Installation_Progress
+        - name: Extn. Orphaned App Details
+          uid: O:Page::System#Apps#Extn#_Orphaned_App_Details
+        - name: Marketplace Extn Deployment
+          uid: O:Page::System#Apps#Marketplace_Extn_Deployment
+        - name: Upload And Deploy Extension
+          uid: O:Page::System#Apps#Upload_And_Deploy_Extension
+      - name: ControlAddIns
+        items:
+        - name: WaitSpinner
+          uid: O:ControlAddIn::System#Apps#WaitSpinner
+      - name: Enums
+        items:
+        - name: Extension Deploy To
+          uid: O:Enum::System#Apps#Extension_Deploy_To
+        - name: Extension Sync Mode
+          uid: O:Enum::System#Apps#Extension_Sync_Mode
+      - name: PermissionSets
+        items:
+        - name: D365 EXTENSION MGT
+          uid: O:PermissionSet::System#Apps#D365_EXTENSION_MGT
+        - name: Exten. Mgt. - Admin
+          uid: O:PermissionSet::System#Apps#Exten#_Mgt#_-_Admin
+        - name: Extension Management - Read
+          uid: O:PermissionSet::System#Apps#Extension_Management_-_Read
+        - name: Extension Management - View
+          uid: O:PermissionSet::System#Apps#Extension_Management_-_View
+    - name: Automation
+      items:
+      - name: ControlAddIns
+        items:
+        - name: FlowIntegration
+          uid: O:ControlAddIn::System#Automation#FlowIntegration
+    - name: Azure
+      items:
+      - name: Functions
+        items:
+        - name: Codeunits
+          items:
+          - name: Azure Functions
+            uid: O:Codeunit::System#Azure#Functions#Azure_Functions
+          - name: Azure Functions Authentication
+            uid: O:Codeunit::System#Azure#Functions#Azure_Functions_Authentication
+          - name: Azure Functions Response
+            uid: O:Codeunit::System#Azure#Functions#Azure_Functions_Response
+        - name: Interfaces
+          items:
+          - name: Azure Functions Authentication
+            uid: O:Interface::System#Azure#Functions#Azure_Functions_Authentication
+      - name: Identity
+        items:
+        - name: Tables
+          items:
+          - name: Permission Set In Plan Buffer
+            uid: O:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer
+        - name: Codeunits
+          items:
+          - name: Azure AD Graph
+            uid: O:Codeunit::System#Azure#Identity#Azure_AD_Graph
+          - name: Azure AD Graph User
+            uid: O:Codeunit::System#Azure#Identity#Azure_AD_Graph_User
+          - name: Azure AD Licensing
+            uid: O:Codeunit::System#Azure#Identity#Azure_AD_Licensing
+          - name: Azure AD Plan
+            uid: O:Codeunit::System#Azure#Identity#Azure_AD_Plan
+          - name: Azure AD Tenant
+            uid: O:Codeunit::System#Azure#Identity#Azure_AD_Tenant
+          - name: Azure AD User Management
+            uid: O:Codeunit::System#Azure#Identity#Azure_AD_User_Management
+          - name: Default Permission Set In Plan
+            uid: O:Codeunit::System#Azure#Identity#Default_Permission_Set_In_Plan
+          - name: Microsoft 365 License
+            uid: O:Codeunit::System#Azure#Identity#Microsoft_365_License
+          - name: Plan Configuration
+            uid: O:Codeunit::System#Azure#Identity#Plan_Configuration
+          - name: Plan Ids
+            uid: O:Codeunit::System#Azure#Identity#Plan_Ids
+          - name: Plan Installer
+            uid: O:Codeunit::System#Azure#Identity#Plan_Installer
+          - name: Plan Upgrade
+            uid: O:Codeunit::System#Azure#Identity#Plan_Upgrade
+          - name: Plan Upgrade Tag
+            uid: O:Codeunit::System#Azure#Identity#Plan_Upgrade_Tag
+        - name: Pages
+          items:
+          - name: Azure AD User Update Wizard
+            uid: O:Page::System#Azure#Identity#Azure_AD_User_Update_Wizard
+          - name: Azure AD User Updates Part
+            uid: O:Page::System#Azure#Identity#Azure_AD_User_Updates_Part
+          - name: Custom Permission Set In Plan
+            uid: O:Page::System#Azure#Identity#Custom_Permission_Set_In_Plan
+          - name: Default Permission Set In Plan
+            uid: O:Page::System#Azure#Identity#Default_Permission_Set_In_Plan
+          - name: Plan Configuration Card
+            uid: O:Page::System#Azure#Identity#Plan_Configuration_Card
+          - name: Plan Configuration List
+            uid: O:Page::System#Azure#Identity#Plan_Configuration_List
+          - name: Plan Configurations Part
+            uid: O:Page::System#Azure#Identity#Plan_Configurations_Part
+          - name: Plans
+            uid: O:Page::System#Azure#Identity#Plans
+          - name: Plans FactBox
+            uid: O:Page::System#Azure#Identity#Plans_FactBox
+          - name: User Plan Members
+            uid: O:Page::System#Azure#Identity#User_Plan_Members
+          - name: User Plan Members FactBox
+            uid: O:Page::System#Azure#Identity#User_Plan_Members_FactBox
+          - name: User Plans FactBox
+            uid: O:Page::System#Azure#Identity#User_Plans_FactBox
+        - name: Queries
+          items:
+          - name: Plan
+            uid: O:Query::System#Azure#Identity#Plan
+          - name: Role Center from Plans
+            uid: O:Query::System#Azure#Identity#Role_Center_from_Plans
+          - name: Users in Plans
+            uid: O:Query::System#Azure#Identity#Users_in_Plans
+        - name: PageExtensions
+          items:
+          - name: Plan User Details
+            uid: O:PageExtension::System#Azure#Identity#Plan_User_Details
+        - name: TableExtensions
+          items:
+          - name: Plan User Details
+            uid: O:TableExtension::System#Azure#Identity#Plan_User_Details
+        - name: Enums
+          items:
+          - name: Azure AD Permission Change Action
+            uid: O:Enum::System#Azure#Identity#Azure_AD_Permission_Change_Action
+          - name: Azure AD Update Type
+            uid: O:Enum::System#Azure#Identity#Azure_AD_Update_Type
+          - name: Azure AD User Update Entity
+            uid: O:Enum::System#Azure#Identity#Azure_AD_User_Update_Entity
+          - name: User Plan Experience
+            uid: O:Enum::System#Azure#Identity#User_Plan_Experience
+        - name: PermissionSets
+          items:
+          - name: AAD User Management - Exec
+            uid: O:PermissionSet::System#Azure#Identity#AAD_User_Management_-_Exec
+          - name: Azure AD Graph - Objects
+            uid: O:PermissionSet::System#Azure#Identity#Azure_AD_Graph_-_Objects
+          - name: Azure AD Plan - Admin
+            uid: O:PermissionSet::System#Azure#Identity#Azure_AD_Plan_-_Admin
+          - name: Azure AD Plan - View
+            uid: O:PermissionSet::System#Azure#Identity#Azure_AD_Plan_-_View
+          - name: Azure AD Tenant - Objects
+            uid: O:PermissionSet::System#Azure#Identity#Azure_AD_Tenant_-_Objects
+          - name: Azure AD User - View
+            uid: O:PermissionSet::System#Azure#Identity#Azure_AD_User_-_View
+      - name: KeyVault
+        items:
+        - name: Codeunits
+          items:
+          - name: Azure Key Vault
+            uid: O:Codeunit::System#Azure#KeyVault#Azure_Key_Vault
+        - name: PermissionSets
+          items:
+          - name: Azure Key Vault - Objects
+            uid: O:PermissionSet::System#Azure#KeyVault#Azure_Key_Vault_-_Objects
+      - name: Storage
+        items:
+        - name: Files
+          items:
+          - name: Tables
+            items:
+            - name: AFS Directory Content
+              uid: O:Table::System#Azure#Storage#Files#AFS_Directory_Content
+            - name: AFS Handle
+              uid: O:Table::System#Azure#Storage#Files#AFS_Handle
+          - name: Codeunits
+            items:
+            - name: AFS File Client
+              uid: O:Codeunit::System#Azure#Storage#Files#AFS_File_Client
+            - name: AFS Operation Response
+              uid: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+            - name: AFS Optional Parameters
+              uid: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+          - name: Enums
+            items:
+            - name: AFS File Attribute
+              uid: O:Enum::System#Azure#Storage#Files#AFS_File_Attribute
+            - name: AFS File Last Write Time
+              uid: O:Enum::System#Azure#Storage#Files#AFS_File_Last_Write_Time
+            - name: AFS File Permission Copy Mode
+              uid: O:Enum::System#Azure#Storage#Files#AFS_File_Permission_Copy_Mode
+            - name: AFS File Resource Type
+              uid: O:Enum::System#Azure#Storage#Files#AFS_File_Resource_Type
+            - name: AFS Property
+              uid: O:Enum::System#Azure#Storage#Files#AFS_Property
+            - name: AFS Write
+              uid: O:Enum::System#Azure#Storage#Files#AFS_Write
+        - name: Tables
+          items:
+          - name: ABS Container
+            uid: O:Table::System#Azure#Storage#ABS_Container
+          - name: ABS Container Content
+            uid: O:Table::System#Azure#Storage#ABS_Container_Content
+          - name: SAS Parameters
+            uid: O:Table::System#Azure#Storage#SAS_Parameters
+        - name: Codeunits
+          items:
+          - name: ABS Blob Client
+            uid: O:Codeunit::System#Azure#Storage#ABS_Blob_Client
+          - name: ABS Container Client
+            uid: O:Codeunit::System#Azure#Storage#ABS_Container_Client
+          - name: ABS Operation Response
+            uid: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+          - name: ABS Optional Parameters
+            uid: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+          - name: Storage Service Authorization
+            uid: O:Codeunit::System#Azure#Storage#Storage_Service_Authorization
+        - name: Enums
+          items:
+          - name: ABS Blob Access Tier
+            uid: O:Enum::System#Azure#Storage#ABS_Blob_Access_Tier
+          - name: ABS Blob Expiry Option
+            uid: O:Enum::System#Azure#Storage#ABS_Blob_Expiry_Option
+          - name: ABS Blob Public Access
+            uid: O:Enum::System#Azure#Storage#ABS_Blob_Public_Access
+          - name: ABS Blob Resource Type
+            uid: O:Enum::System#Azure#Storage#ABS_Blob_Resource_Type
+          - name: ABS Block List Type
+            uid: O:Enum::System#Azure#Storage#ABS_Block_List_Type
+          - name: ABS Rehydrate Priority
+            uid: O:Enum::System#Azure#Storage#ABS_Rehydrate_Priority
+          - name: SAS Permission
+            uid: O:Enum::System#Azure#Storage#SAS_Permission
+          - name: SAS Resource Type
+            uid: O:Enum::System#Azure#Storage#SAS_Resource_Type
+          - name: SAS Service Type
+            uid: O:Enum::System#Azure#Storage#SAS_Service_Type
+          - name: Storage Service API Version
+            uid: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+        - name: Interfaces
+          items:
+          - name: Storage Service Authorization
+            uid: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+    - name: DataAdministration
+      items:
+      - name: Tables
+        items:
+        - name: Reten. Pol. Deleting Param
+          uid: O:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param
+        - name: Reten. Pol. Filtering Param
+          uid: O:Table::System#DataAdministration#Reten#_Pol#_Filtering_Param
+        - name: Retention Period
+          uid: O:Table::System#DataAdministration#Retention_Period
+        - name: Retention Policy Setup
+          uid: O:Table::System#DataAdministration#Retention_Policy_Setup
+        - name: Retention Policy Setup Line
+          uid: O:Table::System#DataAdministration#Retention_Policy_Setup_Line
+      - name: Codeunits
+        items:
+        - name: Apply Retention Policy
+          uid: O:Codeunit::System#DataAdministration#Apply_Retention_Policy
+        - name: Data Archive
+          uid: O:Codeunit::System#DataAdministration#Data_Archive
+        - name: Environment Cleanup
+          uid: O:Codeunit::System#DataAdministration#Environment_Cleanup
+        - name: Media Cleanup
+          uid: O:Codeunit::System#DataAdministration#Media_Cleanup
+        - name: Media Cleanup Runner
+          uid: O:Codeunit::System#DataAdministration#Media_Cleanup_Runner
+        - name: Reten. Pol. Allowed Tables
+          uid: O:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables
+        - name: Retention Policy Log
+          uid: O:Codeunit::System#DataAdministration#Retention_Policy_Log
+        - name: Retention Policy Setup
+          uid: O:Codeunit::System#DataAdministration#Retention_Policy_Setup
+        - name: Table Information Cache
+          uid: O:Codeunit::System#DataAdministration#Table_Information_Cache
+      - name: Pages
+        items:
+        - name: Company Size Cache Part
+          uid: O:Page::System#DataAdministration#Company_Size_Cache_Part
+        - name: Detached Media Cleanup
+          uid: O:Page::System#DataAdministration#Detached_Media_Cleanup
+        - name: Media Cleanup FactBox
+          uid: O:Page::System#DataAdministration#Media_Cleanup_FactBox
+        - name: Reten. Policy Setup ListPart
+          uid: O:Page::System#DataAdministration#Reten#_Policy_Setup_ListPart
+        - name: Retention Periods
+          uid: O:Page::System#DataAdministration#Retention_Periods
+        - name: Retention Policy Log Entries
+          uid: O:Page::System#DataAdministration#Retention_Policy_Log_Entries
+        - name: Retention Policy Setup Card
+          uid: O:Page::System#DataAdministration#Retention_Policy_Setup_Card
+        - name: Retention Policy Setup Lines
+          uid: O:Page::System#DataAdministration#Retention_Policy_Setup_Lines
+        - name: Retention Policy Setup List
+          uid: O:Page::System#DataAdministration#Retention_Policy_Setup_List
+        - name: Table Information
+          uid: O:Page::System#DataAdministration#Table_Information
+        - name: Table Information Cache Part
+          uid: O:Page::System#DataAdministration#Table_Information_Cache_Part
+      - name: Enums
+        items:
+        - name: Environment Type
+          uid: O:Enum::System#DataAdministration#Environment_Type
+        - name: Reten. Pol. Deleting
+          uid: O:Enum::System#DataAdministration#Reten#_Pol#_Deleting
+        - name: Reten. Pol. Filtering
+          uid: O:Enum::System#DataAdministration#Reten#_Pol#_Filtering
+        - name: Retention Period Enum
+          uid: O:Enum::System#DataAdministration#Retention_Period_Enum
+        - name: Retention Policy Log Category
+          uid: O:Enum::System#DataAdministration#Retention_Policy_Log_Category
+        - name: Retention Policy Log Message Type
+          uid: O:Enum::System#DataAdministration#Retention_Policy_Log_Message_Type
+      - name: Interfaces
+        items:
+        - name: Data Archive Provider
+          uid: O:Interface::System#DataAdministration#Data_Archive_Provider
+        - name: Reten. Pol. Deleting
+          uid: O:Interface::System#DataAdministration#Reten#_Pol#_Deleting
+        - name: Reten. Pol. Filtering
+          uid: O:Interface::System#DataAdministration#Reten#_Pol#_Filtering
+        - name: Retention Period
+          uid: O:Interface::System#DataAdministration#Retention_Period
+      - name: PermissionSets
+        items:
+        - name: Environment Cleanup - Read
+          uid: O:PermissionSet::System#DataAdministration#Environment_Cleanup_-_Read
+        - name: Retention Pol. Admin
+          uid: O:PermissionSet::System#DataAdministration#Retention_Pol#_Admin
+        - name: Retention Pol. View
+          uid: O:PermissionSet::System#DataAdministration#Retention_Pol#_View
+        - name: Retention Policy - Admin
+          uid: O:PermissionSet::System#DataAdministration#Retention_Policy_-_Admin
+        - name: Retention Policy - View
+          uid: O:PermissionSet::System#DataAdministration#Retention_Policy_-_View
+    - name: DateTime
+      items:
+      - name: Codeunits
+        items:
+        - name: Recurrence Schedule
+          uid: O:Codeunit::System#DateTime#Recurrence_Schedule
+        - name: Time Zone
+          uid: O:Codeunit::System#DateTime#Time_Zone
+        - name: Time Zone Selection
+          uid: O:Codeunit::System#DateTime#Time_Zone_Selection
+      - name: Pages
+        items:
+        - name: Date-Time Dialog
+          uid: O:Page::System#DateTime#Date-Time_Dialog
+        - name: Recurrence Schedule Card
+          uid: O:Page::System#DateTime#Recurrence_Schedule_Card
+        - name: Time Zones Lookup
+          uid: O:Page::System#DateTime#Time_Zones_Lookup
+      - name: Enums
+        items:
+        - name: Recurrence - Day of Week
+          uid: O:Enum::System#DateTime#Recurrence_-_Day_of_Week
+        - name: Recurrence - Month
+          uid: O:Enum::System#DateTime#Recurrence_-_Month
+        - name: Recurrence - Monthly Pattern
+          uid: O:Enum::System#DateTime#Recurrence_-_Monthly_Pattern
+        - name: Recurrence - Ordinal No.
+          uid: O:Enum::System#DateTime#Recurrence_-_Ordinal_No#
+        - name: Recurrence - Pattern
+          uid: O:Enum::System#DateTime#Recurrence_-_Pattern
+      - name: PermissionSets
+        items:
+        - name: Date-Time Dialog - Objects
+          uid: O:PermissionSet::System#DateTime#Date-Time_Dialog_-_Objects
+        - name: Time Zone Selection - Read
+          uid: O:PermissionSet::System#DateTime#Time_Zone_Selection_-_Read
+    - name: Device
+      items:
+      - name: Codeunits
+        items:
+        - name: Camera
+          uid: O:Codeunit::System#Device#Camera
+        - name: Geolocation
+          uid: O:Codeunit::System#Device#Geolocation
+        - name: Printer Setup
+          uid: O:Codeunit::System#Device#Printer_Setup
+      - name: Pages
+        items:
+        - name: Camera
+          uid: O:Page::System#Device#Camera
+        - name: Geolocation
+          uid: O:Page::System#Device#Geolocation
+        - name: Media Upload
+          uid: O:Page::System#Device#Media_Upload
+        - name: Printer Management
+          uid: O:Page::System#Device#Printer_Management
+      - name: ControlAddIns
+        items:
+        - name: BarcodeScannerProviderAddIn
+          uid: O:ControlAddIn::System#Device#BarcodeScannerProviderAddIn
+        - name: CameraBarcodeScannerProviderAddIn
+          uid: O:ControlAddIn::System#Device#CameraBarcodeScannerProviderAddIn
+      - name: Enums
+        items:
+        - name: BarcodeFailure
+          uid: O:Enum::System#Device#BarcodeFailure
+        - name: Geolocation Status
+          uid: O:Enum::System#Device#Geolocation_Status
+        - name: Image Encoding
+          uid: O:Enum::System#Device#Image_Encoding
+        - name: Media Type
+          uid: O:Enum::System#Device#Media_Type
+        - name: Printer Paper Kind
+          uid: O:Enum::System#Device#Printer_Paper_Kind
+        - name: Printer Paper Source Kind
+          uid: O:Enum::System#Device#Printer_Paper_Source_Kind
+        - name: Printer Type
+          uid: O:Enum::System#Device#Printer_Type
+        - name: Printer Unit
+          uid: O:Enum::System#Device#Printer_Unit
+    - name: Email
+      items:
+      - name: Tables
+        items:
+        - name: Email Account
+          uid: O:Table::System#Email#Email_Account
+        - name: Email Address Lookup
+          uid: O:Table::System#Email#Email_Address_Lookup
+        - name: Email Attachments
+          uid: O:Table::System#Email#Email_Attachments
+        - name: Email Outbox
+          uid: O:Table::System#Email#Email_Outbox
+        - name: Email Related Attachment
+          uid: O:Table::System#Email#Email_Related_Attachment
+        - name: Email Scenario Attachments
+          uid: O:Table::System#Email#Email_Scenario_Attachments
+        - name: Sent Email
+          uid: O:Table::System#Email#Sent_Email
+      - name: Codeunits
+        items:
+        - name: Default Email Rate Limit
+          uid: O:Codeunit::System#Email#Default_Email_Rate_Limit
+        - name: Email
+          uid: O:Codeunit::System#Email#Email
+        - name: Email Account
+          uid: O:Codeunit::System#Email#Email_Account
+        - name: Email Address Lookup
+          uid: O:Codeunit::System#Email#Email_Address_Lookup
+        - name: Email Attachment Upgrade
+          uid: O:Codeunit::System#Email#Email_Attachment_Upgrade
+        - name: Email Message
+          uid: O:Codeunit::System#Email#Email_Message
+        - name: Email Scenario
+          uid: O:Codeunit::System#Email#Email_Scenario
+        - name: Email Test Mail
+          uid: O:Codeunit::System#Email#Email_Test_Mail
+      - name: Pages
+        items:
+        - name: Email Account Wizard
+          uid: O:Page::System#Email#Email_Account_Wizard
+        - name: Email Accounts
+          uid: O:Page::System#Email#Email_Accounts
+        - name: Email Activities
+          uid: O:Page::System#Email#Email_Activities
+        - name: Email Address Lookup
+          uid: O:Page::System#Email#Email_Address_Lookup
+        - name: Email Attachments
+          uid: O:Page::System#Email#Email_Attachments
+        - name: Email Choose Scenario Attach
+          uid: O:Page::System#Email#Email_Choose_Scenario_Attach
+        - name: Email Editor
+          uid: O:Page::System#Email#Email_Editor
+        - name: Email Outbox
+          uid: O:Page::System#Email#Email_Outbox
+        - name: Email Rate Limit Wizard
+          uid: O:Page::System#Email#Email_Rate_Limit_Wizard
+        - name: Email Related Attachments
+          uid: O:Page::System#Email#Email_Related_Attachments
+        - name: Email Relation Picker
+          uid: O:Page::System#Email#Email_Relation_Picker
+        - name: Email Scenario Attach Setup
+          uid: O:Page::System#Email#Email_Scenario_Attach_Setup
+        - name: Email Scenario Setup
+          uid: O:Page::System#Email#Email_Scenario_Setup
+        - name: Email Scenarios FactBox
+          uid: O:Page::System#Email#Email_Scenarios_FactBox
+        - name: Email Scenarios for Account
+          uid: O:Page::System#Email#Email_Scenarios_for_Account
+        - name: Email User-Specified Address
+          uid: O:Page::System#Email#Email_User-Specified_Address
+        - name: Email View Policy List
+          uid: O:Page::System#Email#Email_View_Policy_List
+        - name: Email Viewer
+          uid: O:Page::System#Email#Email_Viewer
+        - name: Sent Emails
+          uid: O:Page::System#Email#Sent_Emails
+        - name: Sent Emails List Part
+          uid: O:Page::System#Email#Sent_Emails_List_Part
+      - name: Enums
+        items:
+        - name: Email Action
+          uid: O:Enum::System#Email#Email_Action
+        - name: Email Address Entity
+          uid: O:Enum::System#Email#Email_Address_Entity
+        - name: Email Connector
+          uid: O:Enum::System#Email#Email_Connector
+        - name: Email Recipient Type
+          uid: O:Enum::System#Email#Email_Recipient_Type
+        - name: Email Relation Origin
+          uid: O:Enum::System#Email#Email_Relation_Origin
+        - name: Email Relation Type
+          uid: O:Enum::System#Email#Email_Relation_Type
+        - name: Email Scenario
+          uid: O:Enum::System#Email#Email_Scenario
+        - name: Email Status
+          uid: O:Enum::System#Email#Email_Status
+        - name: Email View Policy
+          uid: O:Enum::System#Email#Email_View_Policy
+      - name: Interfaces
+        items:
+        - name: Default Email Rate Limit
+          uid: O:Interface::System#Email#Default_Email_Rate_Limit
+        - name: Email Connector
+          uid: O:Interface::System#Email#Email_Connector
+        - name: Email View Policy
+          uid: O:Interface::System#Email#Email_View_Policy
+      - name: PermissionSets
+        items:
+        - name: Email - Admin
+          uid: O:PermissionSet::System#Email#Email_-_Admin
+        - name: Email - Edit
+          uid: O:PermissionSet::System#Email#Email_-_Edit
+    - name: Environment
+      items:
+      - name: Configuration
+        items:
+        - name: Tables
+          items:
+          - name: Application User Settings
+            uid: O:Table::System#Environment#Configuration#Application_User_Settings
+          - name: Feature Data Update Status
+            uid: O:Table::System#Environment#Configuration#Feature_Data_Update_Status
+          - name: Feature Dependency
+            uid: O:Table::System#Environment#Configuration#Feature_Dependency
+          - name: Feature Key Buffer
+            uid: O:Table::System#Environment#Configuration#Feature_Key_Buffer
+          - name: Signup Context Values
+            uid: O:Table::System#Environment#Configuration#Signup_Context_Values
+          - name: User Settings
+            uid: O:Table::System#Environment#Configuration#User_Settings
+        - name: Codeunits
+          items:
+          - name: Advanced Settings
+            uid: O:Codeunit::System#Environment#Configuration#Advanced_Settings
+          - name: Assisted Setup Installation
+            uid: O:Codeunit::System#Environment#Configuration#Assisted_Setup_Installation
+          - name: Assisted Setup Upgrade
+            uid: O:Codeunit::System#Environment#Configuration#Assisted_Setup_Upgrade
+          - name: Checklist
+            uid: O:Codeunit::System#Environment#Configuration#Checklist
+          - name: Checklist Banner
+            uid: O:Codeunit::System#Environment#Configuration#Checklist_Banner
+          - name: Default Role Center
+            uid: O:Codeunit::System#Environment#Configuration#Default_Role_Center
+          - name: Feature Data Error Handler
+            uid: O:Codeunit::System#Environment#Configuration#Feature_Data_Error_Handler
+          - name: Feature Management Facade
+            uid: O:Codeunit::System#Environment#Configuration#Feature_Management_Facade
+          - name: Guided Experience
+            uid: O:Codeunit::System#Environment#Configuration#Guided_Experience
+          - name: Guided Experience Item Cleanup
+            uid: O:Codeunit::System#Environment#Configuration#Guided_Experience_Item_Cleanup
+          - name: Guided Experience Upgrade
+            uid: O:Codeunit::System#Environment#Configuration#Guided_Experience_Upgrade
+          - name: Navigation Bar Subscribers
+            uid: O:Codeunit::System#Environment#Configuration#Navigation_Bar_Subscribers
+          - name: Server Setting
+            uid: O:Codeunit::System#Environment#Configuration#Server_Setting
+          - name: Spotlight Tour
+            uid: O:Codeunit::System#Environment#Configuration#Spotlight_Tour
+          - name: System Initialization
+            uid: O:Codeunit::System#Environment#Configuration#System_Initialization
+          - name: Update Feature Data
+            uid: O:Codeunit::System#Environment#Configuration#Update_Feature_Data
+          - name: User Settings
+            uid: O:Codeunit::System#Environment#Configuration#User_Settings
+        - name: Pages
+          items:
+          - name: Accessible Companies
+            uid: O:Page::System#Environment#Configuration#Accessible_Companies
+          - name: Advanced Settings
+            uid: O:Page::System#Environment#Configuration#Advanced_Settings
+          - name: App Setup List
+            uid: O:Page::System#Environment#Configuration#App_Setup_List
+          - name: Assisted Setup
+            uid: O:Page::System#Environment#Configuration#Assisted_Setup
+          - name: Blank Role Center
+            uid: O:Page::System#Environment#Configuration#Blank_Role_Center
+          - name: Checklist
+            uid: O:Page::System#Environment#Configuration#Checklist
+          - name: Checklist Administration
+            uid: O:Page::System#Environment#Configuration#Checklist_Administration
+          - name: Checklist Banner
+            uid: O:Page::System#Environment#Configuration#Checklist_Banner
+          - name: Checklist Item Roles
+            uid: O:Page::System#Environment#Configuration#Checklist_Item_Roles
+          - name: Checklist Item Users
+            uid: O:Page::System#Environment#Configuration#Checklist_Item_Users
+          - name: Checklist Resurfacing
+            uid: O:Page::System#Environment#Configuration#Checklist_Resurfacing
+          - name: Feature Management
+            uid: O:Page::System#Environment#Configuration#Feature_Management
+          - name: Guided Experience Item Cleanup
+            uid: O:Page::System#Environment#Configuration#Guided_Experience_Item_Cleanup
+          - name: Guided Experience Item List
+            uid: O:Page::System#Environment#Configuration#Guided_Experience_Item_List
+          - name: Manual Setup
+            uid: O:Page::System#Environment#Configuration#Manual_Setup
+          - name: Roles
+            uid: O:Page::System#Environment#Configuration#Roles
+          - name: Schedule Feature Data Update
+            uid: O:Page::System#Environment#Configuration#Schedule_Feature_Data_Update
+          - name: Upcoming Changes Factbox
+            uid: O:Page::System#Environment#Configuration#Upcoming_Changes_Factbox
+          - name: User Personalization
+            uid: O:Page::System#Environment#Configuration#User_Personalization
+          - name: User Settings
+            uid: O:Page::System#Environment#Configuration#User_Settings
+          - name: User Settings FactBox
+            uid: O:Page::System#Environment#Configuration#User_Settings_FactBox
+          - name: User Settings List
+            uid: O:Page::System#Environment#Configuration#User_Settings_List
+        - name: Profiles
+          items:
+          - name: BLANK
+            uid: O:Profile::System#Environment#Configuration#BLANK
+        - name: Enums
+          items:
+          - name: Assisted Setup Group
+            uid: O:Enum::System#Environment#Configuration#Assisted_Setup_Group
+          - name: Feature Status
+            uid: O:Enum::System#Environment#Configuration#Feature_Status
+          - name: Feature To Update
+            uid: O:Enum::System#Environment#Configuration#Feature_To_Update
+          - name: Guided Experience Type
+            uid: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+          - name: Manual Setup Category
+            uid: O:Enum::System#Environment#Configuration#Manual_Setup_Category
+          - name: Signup Context
+            uid: O:Enum::System#Environment#Configuration#Signup_Context
+          - name: Spotlight Tour Text
+            uid: O:Enum::System#Environment#Configuration#Spotlight_Tour_Text
+          - name: Spotlight Tour Type
+            uid: O:Enum::System#Environment#Configuration#Spotlight_Tour_Type
+        - name: Interfaces
+          items:
+          - name: Feature Data Update
+            uid: O:Interface::System#Environment#Configuration#Feature_Data_Update
+          - name: Feature Management
+            uid: O:Interface::System#Environment#Configuration#Feature_Management
+        - name: PermissionSets
+          items:
+          - name: Feature Mgt. - Admin
+            uid: O:PermissionSet::System#Environment#Configuration#Feature_Mgt#_-_Admin
+          - name: Guided Experience - Objects
+            uid: O:PermissionSet::System#Environment#Configuration#Guided_Experience_-_Objects
+          - name: Guided Experience - Read
+            uid: O:PermissionSet::System#Environment#Configuration#Guided_Experience_-_Read
+          - name: Guided Experience - View
+            uid: O:PermissionSet::System#Environment#Configuration#Guided_Experience_-_View
+          - name: Navigation Bar Subs. - Objects
+            uid: O:PermissionSet::System#Environment#Configuration#Navigation_Bar_Subs#_-_Objects
+          - name: Server Settings - Objects
+            uid: O:PermissionSet::System#Environment#Configuration#Server_Settings_-_Objects
+          - name: System Initialization - Exec
+            uid: O:PermissionSet::System#Environment#Configuration#System_Initialization_-_Exec
+          - name: User Settings - View
+            uid: O:PermissionSet::System#Environment#Configuration#User_Settings_-_View
+      - name: Codeunits
+        items:
+        - name: Client Type Management
+          uid: O:Codeunit::System#Environment#Client_Type_Management
+        - name: Environment Information
+          uid: O:Codeunit::System#Environment#Environment_Information
+        - name: Tenant Information
+          uid: O:Codeunit::System#Environment#Tenant_Information
+        - name: Tenant License State
+          uid: O:Codeunit::System#Environment#Tenant_License_State
+      - name: ControlAddIns
+        items:
+        - name: RoleCenterSelector
+          uid: O:ControlAddIn::System#Environment#RoleCenterSelector
+        - name: WelcomeWizard
+          uid: O:ControlAddIn::System#Environment#WelcomeWizard
+      - name: Enums
+        items:
+        - name: Tenant License State
+          uid: O:Enum::System#Environment#Tenant_License_State
+      - name: PermissionSets
+        items:
+        - name: Client Type Mgt. - Objects
+          uid: O:PermissionSet::System#Environment#Client_Type_Mgt#_-_Objects
+        - name: Environment Info. - Objects
+          uid: O:PermissionSet::System#Environment#Environment_Info#_-_Objects
+        - name: Tenant License State - Read
+          uid: O:PermissionSet::System#Environment#Tenant_License_State_-_Read
+    - name: Feedback
+      items:
+      - name: Tables
+        items:
+        - name: Customer Experience Survey
+          uid: O:Table::System#Feedback#Customer_Experience_Survey
+      - name: Codeunits
+        items:
+        - name: Customer Experience Survey
+          uid: O:Codeunit::System#Feedback#Customer_Experience_Survey
+        - name: Satisfaction Survey Mgt.
+          uid: O:Codeunit::System#Feedback#Satisfaction_Survey_Mgt#
+      - name: Pages
+        items:
+        - name: Customer Experience Survey
+          uid: O:Page::System#Feedback#Customer_Experience_Survey
+        - name: Satisfaction Survey
+          uid: O:Page::System#Feedback#Satisfaction_Survey
+      - name: ControlAddIns
+        items:
+        - name: CustomerExperienceSurvey
+          uid: O:ControlAddIn::System#Feedback#CustomerExperienceSurvey
+        - name: SatisfactionSurvey
+          uid: O:ControlAddIn::System#Feedback#SatisfactionSurvey
+        - name: SatisfactionSurveyAsync
+          uid: O:ControlAddIn::System#Feedback#SatisfactionSurveyAsync
+    - name: Globalization
+      items:
+      - name: Tables
+        items:
+        - name: Language
+          uid: O:Table::System#Globalization#Language
+      - name: Codeunits
+        items:
+        - name: Language
+          uid: O:Codeunit::System#Globalization#Language
+        - name: Translation
+          uid: O:Codeunit::System#Globalization#Translation
+      - name: Pages
+        items:
+        - name: Languages
+          uid: O:Page::System#Globalization#Languages
+        - name: Translation
+          uid: O:Page::System#Globalization#Translation
+        - name: Windows Languages
+          uid: O:Page::System#Globalization#Windows_Languages
+      - name: PermissionSets
+        items:
+        - name: Language - Read
+          uid: O:PermissionSet::System#Globalization#Language_-_Read
+        - name: Language - View
+          uid: O:PermissionSet::System#Globalization#Language_-_View
+        - name: Translation - Edit
+          uid: O:PermissionSet::System#Globalization#Translation_-_Edit
+        - name: Translation - Read
+          uid: O:PermissionSet::System#Globalization#Translation_-_Read
+    - name: Integration
+      items:
+      - name: Excel
+        items:
+        - name: Tables
+          items:
+          - name: Edit in Excel Settings
+            uid: O:Table::System#Integration#Excel#Edit_in_Excel_Settings
+        - name: Codeunits
+          items:
+          - name: Edit in Excel
+            uid: O:Codeunit::System#Integration#Excel#Edit_in_Excel
+          - name: Edit in Excel Filters
+            uid: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters
+          - name: Edit in Excel Workbook
+            uid: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook
+        - name: Pages
+          items:
+          - name: Excel Centralized Depl. Wizard
+            uid: O:Page::System#Integration#Excel#Excel_Centralized_Depl#_Wizard
+        - name: Enums
+          items:
+          - name: Edit in Excel Edm Type
+            uid: O:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type
+          - name: Edit in Excel Filter Collection Type
+            uid: O:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Collection_Type
+          - name: Edit in Excel Filter Type
+            uid: O:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type
+        - name: Interfaces
+          items:
+          - name: Edit in Excel Field Filter
+            uid: O:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+        - name: PermissionSets
+          items:
+          - name: Edit in Excel - View
+            uid: O:PermissionSet::System#Integration#Excel#Edit_in_Excel_-_View
+          - name: Edit in Excel-Admin
+            uid: O:PermissionSet::System#Integration#Excel#Edit_in_Excel-Admin
+      - name: Graph
+        items:
+        - name: Authorization
+          items:
+          - name: Codeunits
+            items:
+            - name: Graph Authorization
+              uid: O:Codeunit::System#Integration#Graph#Authorization#Graph_Authorization
+          - name: Interfaces
+            items:
+            - name: Graph Authorization
+              uid: O:Interface::System#Integration#Graph#Authorization#Graph_Authorization
+        - name: Codeunits
+          items:
+          - name: Graph Client
+            uid: O:Codeunit::System#Integration#Graph#Graph_Client
+          - name: Graph Optional Parameters
+            uid: O:Codeunit::System#Integration#Graph#Graph_Optional_Parameters
+        - name: Enums
+          items:
+          - name: Graph API Version
+            uid: O:Enum::System#Integration#Graph#Graph_API_Version
+          - name: Graph ConflictBehavior
+            uid: O:Enum::System#Integration#Graph#Graph_ConflictBehavior
+      - name: PowerBI
+        items:
+        - name: ControlAddIns
+          items:
+          - name: PowerBIManagement
+            uid: O:ControlAddIn::System#Integration#PowerBI#PowerBIManagement
+      - name: Sharepoint
+        items:
+        - name: Tables
+          items:
+          - name: SharePoint File
+            uid: O:Table::System#Integration#Sharepoint#SharePoint_File
+          - name: SharePoint Folder
+            uid: O:Table::System#Integration#Sharepoint#SharePoint_Folder
+          - name: SharePoint List
+            uid: O:Table::System#Integration#Sharepoint#SharePoint_List
+          - name: SharePoint List Item
+            uid: O:Table::System#Integration#Sharepoint#SharePoint_List_Item
+          - name: SharePoint List Item Atch
+            uid: O:Table::System#Integration#Sharepoint#SharePoint_List_Item_Atch
+        - name: Codeunits
+          items:
+          - name: SharePoint Auth.
+            uid: O:Codeunit::System#Integration#Sharepoint#SharePoint_Auth#
+          - name: SharePoint Client
+            uid: O:Codeunit::System#Integration#Sharepoint#SharePoint_Client
+        - name: Interfaces
+          items:
+          - name: HTTP Diagnostics
+            uid: O:Interface::System#Integration#Sharepoint#HTTP_Diagnostics
+          - name: SharePoint Authorization
+            uid: O:Interface::System#Integration#Sharepoint#SharePoint_Authorization
+        - name: PermissionSets
+          items:
+          - name: SharePoint Auth. - Objects
+            uid: O:PermissionSet::System#Integration#Sharepoint#SharePoint_Auth#_-_Objects
+      - name: Word
+        items:
+        - name: Tables
+          items:
+          - name: Word Template
+            uid: O:Table::System#Integration#Word#Word_Template
+        - name: Codeunits
+          items:
+          - name: Word Template
+            uid: O:Codeunit::System#Integration#Word#Word_Template
+          - name: Word Template Custom Field
+            uid: O:Codeunit::System#Integration#Word#Word_Template_Custom_Field
+          - name: Word Template Field Value
+            uid: O:Codeunit::System#Integration#Word#Word_Template_Field_Value
+        - name: Pages
+          items:
+          - name: Word Template Creation Wizard
+            uid: O:Page::System#Integration#Word#Word_Template_Creation_Wizard
+          - name: Word Template Selection Wizard
+            uid: O:Page::System#Integration#Word#Word_Template_Selection_Wizard
+          - name: Word Template To Text Wizard
+            uid: O:Page::System#Integration#Word#Word_Template_To_Text_Wizard
+          - name: Word Templates
+            uid: O:Page::System#Integration#Word#Word_Templates
+          - name: Word Templates Field Selection
+            uid: O:Page::System#Integration#Word#Word_Templates_Field_Selection
+          - name: Word Templates Related Card
+            uid: O:Page::System#Integration#Word#Word_Templates_Related_Card
+          - name: Word Templates Related Edit
+            uid: O:Page::System#Integration#Word#Word_Templates_Related_Edit
+          - name: Word Templates Related FactBox
+            uid: O:Page::System#Integration#Word#Word_Templates_Related_FactBox
+          - name: Word Templates Related List
+            uid: O:Page::System#Integration#Word#Word_Templates_Related_List
+          - name: Word Templates Related Part
+            uid: O:Page::System#Integration#Word#Word_Templates_Related_Part
+          - name: Word Templates Table Lookup
+            uid: O:Page::System#Integration#Word#Word_Templates_Table_Lookup
+          - name: Word Templates Tables Part
+            uid: O:Page::System#Integration#Word#Word_Templates_Tables_Part
+        - name: Enums
+          items:
+          - name: Word Templates Save Format
+            uid: O:Enum::System#Integration#Word#Word_Templates_Save_Format
+      - name: Tables
+        items:
+        - name: Document Sharing
+          uid: O:Table::System#Integration#Document_Sharing
+        - name: Page Summary Settings
+          uid: O:Table::System#Integration#Page_Summary_Settings
+        - name: Tenant Web Service Columns
+          uid: O:Table::System#Integration#Tenant_Web_Service_Columns
+        - name: Tenant Web Service Filter
+          uid: O:Table::System#Integration#Tenant_Web_Service_Filter
+        - name: Tenant Web Service OData
+          uid: O:Table::System#Integration#Tenant_Web_Service_OData
+        - name: Web Service Aggregate
+          uid: O:Table::System#Integration#Web_Service_Aggregate
+      - name: Codeunits
+        items:
+        - name: Document Sharing
+          uid: O:Codeunit::System#Integration#Document_Sharing
+        - name: Page Action Provider
+          uid: O:Codeunit::System#Integration#Page_Action_Provider
+        - name: Page Summary Provider
+          uid: O:Codeunit::System#Integration#Page_Summary_Provider
+        - name: Page Summary Settings
+          uid: O:Codeunit::System#Integration#Page_Summary_Settings
+        - name: Web Service Management
+          uid: O:Codeunit::System#Integration#Web_Service_Management
+      - name: Pages
+        items:
+        - name: Document Sharing
+          uid: O:Page::System#Integration#Document_Sharing
+        - name: Page Summary Settings
+          uid: O:Page::System#Integration#Page_Summary_Settings
+      - name: ControlAddIns
+        items:
+        - name: BusinessChart
+          uid: O:ControlAddIn::System#Integration#BusinessChart
+        - name: WebPageViewer
+          uid: O:ControlAddIn::System#Integration#WebPageViewer
+      - name: Enums
+        items:
+        - name: Action Container Type
+          uid: O:Enum::System#Integration#Action_Container_Type
+        - name: Client Type
+          uid: O:Enum::System#Integration#Client_Type
+        - name: Doc. Sharing Conflict Behavior
+          uid: O:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior
+        - name: Document Sharing Intent
+          uid: O:Enum::System#Integration#Document_Sharing_Intent
+        - name: Document Sharing Source
+          uid: O:Enum::System#Integration#Document_Sharing_Source
+        - name: OData Protocol Version
+          uid: O:Enum::System#Integration#OData_Protocol_Version
+        - name: Summary Type
+          uid: O:Enum::System#Integration#Summary_Type
+      - name: PermissionSets
+        items:
+        - name: Page Summary - Admin
+          uid: O:PermissionSet::System#Integration#Page_Summary_-_Admin
+        - name: Web Service Management - Admin
+          uid: O:PermissionSet::System#Integration#Web_Service_Management_-_Admin
+        - name: Web Service Management - View
+          uid: O:PermissionSet::System#Integration#Web_Service_Management_-_View
+    - name: IO
+      items:
+      - name: Codeunits
+        items:
+        - name: Data Compression
+          uid: O:Codeunit::System#IO#Data_Compression
+      - name: PermissionSets
+        items:
+        - name: Data Compression - Objects
+          uid: O:PermissionSet::System#IO#Data_Compression_-_Objects
+    - name: Media
+      items:
+      - name: Codeunits
+        items:
+        - name: Video
+          uid: O:Codeunit::System#Media#Video
+      - name: Pages
+        items:
+        - name: Product Videos
+          uid: O:Page::System#Media#Product_Videos
+        - name: Video Link
+          uid: O:Page::System#Media#Video_Link
+      - name: ControlAddIns
+        items:
+        - name: VideoPlayer
+          uid: O:ControlAddIn::System#Media#VideoPlayer
+      - name: Enums
+        items:
+        - name: Video Category
+          uid: O:Enum::System#Media#Video_Category
+      - name: PermissionSets
+        items:
+        - name: Video - Read
+          uid: O:PermissionSet::System#Media#Video_-_Read
+    - name: Privacy
+      items:
+      - name: Tables
+        items:
+        - name: Data Privacy Entities
+          uid: O:Table::System#Privacy#Data_Privacy_Entities
+      - name: Codeunits
+        items:
+        - name: Data Classification Mgt.
+          uid: O:Codeunit::System#Privacy#Data_Classification_Mgt#
+        - name: Privacy Notice
+          uid: O:Codeunit::System#Privacy#Privacy_Notice
+        - name: System Upgrade Privacy Notices
+          uid: O:Codeunit::System#Privacy#System_Upgrade_Privacy_Notices
+      - name: Pages
+        items:
+        - name: Data Classification Wizard
+          uid: O:Page::System#Privacy#Data_Classification_Wizard
+        - name: Data Classification Worksheet
+          uid: O:Page::System#Privacy#Data_Classification_Worksheet
+        - name: Field Content Buffer
+          uid: O:Page::System#Privacy#Field_Content_Buffer
+        - name: Field Data Classification
+          uid: O:Page::System#Privacy#Field_Data_Classification
+        - name: Power Automate Privacy Notice
+          uid: O:Page::System#Privacy#Power_Automate_Privacy_Notice
+        - name: Privacy Notice
+          uid: O:Page::System#Privacy#Privacy_Notice
+        - name: Privacy Notice Approvals
+          uid: O:Page::System#Privacy#Privacy_Notice_Approvals
+        - name: Privacy Notices
+          uid: O:Page::System#Privacy#Privacy_Notices
+      - name: Enums
+        items:
+        - name: Privacy Notice Approval State
+          uid: O:Enum::System#Privacy#Privacy_Notice_Approval_State
+      - name: PermissionSets
+        items:
+        - name: Priv. Notice - Admin
+          uid: O:PermissionSet::System#Privacy#Priv#_Notice_-_Admin
+        - name: Priv. Notice - View
+          uid: O:PermissionSet::System#Privacy#Priv#_Notice_-_View
+        - name: Privacy Notice - Read
+          uid: O:PermissionSet::System#Privacy#Privacy_Notice_-_Read
+    - name: Reflection
+      items:
+      - name: Tables
+        items:
+        - name: Record Selection Buffer
+          uid: O:Table::System#Reflection#Record_Selection_Buffer
+      - name: Codeunits
+        items:
+        - name: Field Selection
+          uid: O:Codeunit::System#Reflection#Field_Selection
+        - name: Record Reference
+          uid: O:Codeunit::System#Reflection#Record_Reference
+        - name: Record Selection
+          uid: O:Codeunit::System#Reflection#Record_Selection
+        - name: Table Key
+          uid: O:Codeunit::System#Reflection#Table_Key
+      - name: Pages
+        items:
+        - name: Fields Lookup
+          uid: O:Page::System#Reflection#Fields_Lookup
+        - name: Objects
+          uid: O:Page::System#Reflection#Objects
+        - name: Record Lookup
+          uid: O:Page::System#Reflection#Record_Lookup
+      - name: Interfaces
+        items:
+        - name: Record Reference
+          uid: O:Interface::System#Reflection#Record_Reference
+      - name: PermissionSets
+        items:
+        - name: Field Selection - Read
+          uid: O:PermissionSet::System#Reflection#Field_Selection_-_Read
+        - name: Object Selection - Read
+          uid: O:PermissionSet::System#Reflection#Object_Selection_-_Read
+        - name: Record Reference - Exec
+          uid: O:PermissionSet::System#Reflection#Record_Reference_-_Exec
+    - name: RestClient
+      items:
+      - name: Codeunits
+        items:
+        - name: Http Authentication Anonymous
+          uid: O:Codeunit::System#RestClient#Http_Authentication_Anonymous
+        - name: Http Authentication Basic
+          uid: O:Codeunit::System#RestClient#Http_Authentication_Basic
+        - name: Http Client Handler
+          uid: O:Codeunit::System#RestClient#Http_Client_Handler
+        - name: Http Content
+          uid: O:Codeunit::System#RestClient#Http_Content
+        - name: Http Request Message
+          uid: O:Codeunit::System#RestClient#Http_Request_Message
+        - name: Http Response Message
+          uid: O:Codeunit::System#RestClient#Http_Response_Message
+        - name: HttpAuthOAuthClientCredentials
+          uid: O:Codeunit::System#RestClient#HttpAuthOAuthClientCredentials
+        - name: Rest Client
+          uid: O:Codeunit::System#RestClient#Rest_Client
+      - name: Enums
+        items:
+        - name: Http Method
+          uid: O:Enum::System#RestClient#Http_Method
+      - name: Interfaces
+        items:
+        - name: Http Authentication
+          uid: O:Interface::System#RestClient#Http_Authentication
+        - name: Http Client Handler
+          uid: O:Interface::System#RestClient#Http_Client_Handler
+    - name: Security
+      items:
+      - name: AccessControl
+        items:
+        - name: Tables
+          items:
+          - name: Security Group Buffer
+            uid: O:Table::System#Security#AccessControl#Security_Group_Buffer
+          - name: Security Group Member Buffer
+            uid: O:Table::System#Security#AccessControl#Security_Group_Member_Buffer
+        - name: Codeunits
+          items:
+          - name: Log Activity Permissions
+            uid: O:Codeunit::System#Security#AccessControl#Log_Activity_Permissions
+          - name: Password Dialog Management
+            uid: O:Codeunit::System#Security#AccessControl#Password_Dialog_Management
+          - name: Password Handler
+            uid: O:Codeunit::System#Security#AccessControl#Password_Handler
+          - name: Permission Set Relation
+            uid: O:Codeunit::System#Security#AccessControl#Permission_Set_Relation
+          - name: Security Group
+            uid: O:Codeunit::System#Security#AccessControl#Security_Group
+        - name: Pages
+          items:
+          - name: Copy Security Group
+            uid: O:Page::System#Security#AccessControl#Copy_Security_Group
+          - name: Expanded Permissions
+            uid: O:Page::System#Security#AccessControl#Expanded_Permissions
+          - name: Expanded Permissions Factbox
+            uid: O:Page::System#Security#AccessControl#Expanded_Permissions_Factbox
+          - name: Included PermissionSet FactBox
+            uid: O:Page::System#Security#AccessControl#Included_PermissionSet_FactBox
+          - name: Lookup Permission Set
+            uid: O:Page::System#Security#AccessControl#Lookup_Permission_Set
+          - name: Metadata Permission Subform
+            uid: O:Page::System#Security#AccessControl#Metadata_Permission_Subform
+          - name: New Security Group
+            uid: O:Page::System#Security#AccessControl#New_Security_Group
+          - name: Password Dialog
+            uid: O:Page::System#Security#AccessControl#Password_Dialog
+          - name: Permission Lookup List
+            uid: O:Page::System#Security#AccessControl#Permission_Lookup_List
+          - name: Permission Set
+            uid: O:Page::System#Security#AccessControl#Permission_Set
+          - name: Permission Set Lookup List
+            uid: O:Page::System#Security#AccessControl#Permission_Set_Lookup_List
+          - name: Permission Set Subform
+            uid: O:Page::System#Security#AccessControl#Permission_Set_Subform
+          - name: Permission Set Tree
+            uid: O:Page::System#Security#AccessControl#Permission_Set_Tree
+          - name: Sec. Group Permissions Part
+            uid: O:Page::System#Security#AccessControl#Sec#_Group_Permissions_Part
+          - name: Security Group Lookup
+            uid: O:Page::System#Security#AccessControl#Security_Group_Lookup
+          - name: Security Group Members
+            uid: O:Page::System#Security#AccessControl#Security_Group_Members
+          - name: Security Group Members Part
+            uid: O:Page::System#Security#AccessControl#Security_Group_Members_Part
+          - name: Security Group Permission Sets
+            uid: O:Page::System#Security#AccessControl#Security_Group_Permission_Sets
+          - name: Security Groups
+            uid: O:Page::System#Security#AccessControl#Security_Groups
+          - name: Tenant Permission Subform
+            uid: O:Page::System#Security#AccessControl#Tenant_Permission_Subform
+        - name: Reports
+          items:
+          - name: Change Password
+            uid: O:Report::System#Security#AccessControl#Change_Password
+        - name: Queries
+          items:
+          - name: Device
+            uid: O:Query::System#Security#AccessControl#Device
+        - name: XmlPorts
+          items:
+          - name: Export Permission Sets System
+            uid: O:XmlPort::System#Security#AccessControl#Export_Permission_Sets_System
+          - name: Export Permission Sets Tenant
+            uid: O:XmlPort::System#Security#AccessControl#Export_Permission_Sets_Tenant
+          - name: Export/Import Security Groups
+            uid: O:XmlPort::System#Security#AccessControl#Export/Import_Security_Groups
+          - name: Import Permission Sets
+            uid: O:XmlPort::System#Security#AccessControl#Import_Permission_Sets
+        - name: Enums
+          items:
+          - name: Permission Set Copy Type
+            uid: O:Enum::System#Security#AccessControl#Permission_Set_Copy_Type
+        - name: PermissionSets
+          items:
+          - name: Automate - Exec
+            uid: O:PermissionSet::System#Security#AccessControl#Automate_-_Exec
+          - name: Company - Edit
+            uid: O:PermissionSet::System#Security#AccessControl#Company_-_Edit
+          - name: Company - Read
+            uid: O:PermissionSet::System#Security#AccessControl#Company_-_Read
+          - name: D365 ATTACH DEBUG
+            uid: O:PermissionSet::System#Security#AccessControl#D365_ATTACH_DEBUG
+          - name: D365 BACKUP/RESTORE
+            uid: O:PermissionSet::System#Security#AccessControl#D365_BACKUP/RESTORE
+          - name: D365 SNAPSHOT DEBUG
+            uid: O:PermissionSet::System#Security#AccessControl#D365_SNAPSHOT_DEBUG
+          - name: Data Analysis - Exec
+            uid: O:PermissionSet::System#Security#AccessControl#Data_Analysis_-_Exec
+          - name: Excel Export Action
+            uid: O:PermissionSet::System#Security#AccessControl#Excel_Export_Action
+          - name: Export Report Excel
+            uid: O:PermissionSet::System#Security#AccessControl#Export_Report_Excel
+          - name: LOGIN
+            uid: O:PermissionSet::System#Security#AccessControl#LOGIN
+          - name: Media - Read
+            uid: O:PermissionSet::System#Security#AccessControl#Media_-_Read
+          - name: Media - View
+            uid: O:PermissionSet::System#Security#AccessControl#Media_-_View
+          - name: Metadata - Read
+            uid: O:PermissionSet::System#Security#AccessControl#Metadata_-_Read
+          - name: PageScripting - Play
+            uid: O:PermissionSet::System#Security#AccessControl#PageScripting_-_Play
+          - name: PageScripting - Rec
+            uid: O:PermissionSet::System#Security#AccessControl#PageScripting_-_Rec
+          - name: Permissions & Licenses - Edit
+            uid: O:PermissionSet::System#Security#AccessControl#Permissions_&amp;_Licenses_-_Edit
+          - name: Permissions & Licenses - Read
+            uid: O:PermissionSet::System#Security#AccessControl#Permissions_&amp;_Licenses_-_Read
+          - name: Power BI - Read
+            uid: O:PermissionSet::System#Security#AccessControl#Power_BI_-_Read
+          - name: Reporting - Edit
+            uid: O:PermissionSet::System#Security#AccessControl#Reporting_-_Edit
+          - name: SECURITY
+            uid: O:PermissionSet::System#Security#AccessControl#SECURITY
+          - name: Session - Edit
+            uid: O:PermissionSet::System#Security#AccessControl#Session_-_Edit
+          - name: Session - Read
+            uid: O:PermissionSet::System#Security#AccessControl#Session_-_Read
+          - name: SUPER
+            uid: O:PermissionSet::System#Security#AccessControl#SUPER
+          - name: SUPER (DATA)
+            uid: O:PermissionSet::System#Security#AccessControl#SUPER_(DATA)
+          - name: System App - Admin
+            uid: O:PermissionSet::System#Security#AccessControl#System_App_-_Admin
+          - name: System App - Basic
+            uid: O:PermissionSet::System#Security#AccessControl#System_App_-_Basic
+          - name: System Execute - Basic
+            uid: O:PermissionSet::System#Security#AccessControl#System_Execute_-_Basic
+          - name: TROUBLESHOOT TOOLS
+            uid: O:PermissionSet::System#Security#AccessControl#TROUBLESHOOT_TOOLS
+          - name: User Personalization - Edit
+            uid: O:PermissionSet::System#Security#AccessControl#User_Personalization_-_Edit
+          - name: Webhook - Edit
+            uid: O:PermissionSet::System#Security#AccessControl#Webhook_-_Edit
+      - name: Authentication
+        items:
+        - name: Codeunits
+          items:
+          - name: OAuth
+            uid: O:Codeunit::System#Security#Authentication#OAuth
+          - name: OAuth2
+            uid: O:Codeunit::System#Security#Authentication#OAuth2
+        - name: Pages
+          items:
+          - name: OAuth2ControlAddIn
+            uid: O:Page::System#Security#Authentication#OAuth2ControlAddIn
+        - name: ControlAddIns
+          items:
+          - name: OAuthControlAddIn
+            uid: O:ControlAddIn::System#Security#Authentication#OAuthControlAddIn
+          - name: OAuthIntegration
+            uid: O:ControlAddIn::System#Security#Authentication#OAuthIntegration
+        - name: Enums
+          items:
+          - name: Http Request Type
+            uid: O:Enum::System#Security#Authentication#Http_Request_Type
+          - name: Prompt Interaction
+            uid: O:Enum::System#Security#Authentication#Prompt_Interaction
+        - name: PermissionSets
+          items:
+          - name: OAuth - Objects
+            uid: O:PermissionSet::System#Security#Authentication#OAuth_-_Objects
+      - name: Encryption
+        items:
+        - name: Codeunits
+          items:
+          - name: CertificateRequest
+            uid: O:Codeunit::System#Security#Encryption#CertificateRequest
+          - name: Cryptography Management
+            uid: O:Codeunit::System#Security#Encryption#Cryptography_Management
+          - name: DESCryptoServiceProvider
+            uid: O:Codeunit::System#Security#Encryption#DESCryptoServiceProvider
+          - name: DSACryptoServiceProvider
+            uid: O:Codeunit::System#Security#Encryption#DSACryptoServiceProvider
+          - name: EncryptedXml
+            uid: O:Codeunit::System#Security#Encryption#EncryptedXml
+          - name: Rfc2898DeriveBytes
+            uid: O:Codeunit::System#Security#Encryption#Rfc2898DeriveBytes
+          - name: Rijndael Cryptography
+            uid: O:Codeunit::System#Security#Encryption#Rijndael_Cryptography
+          - name: RSACryptoServiceProvider
+            uid: O:Codeunit::System#Security#Encryption#RSACryptoServiceProvider
+          - name: Signature Key
+            uid: O:Codeunit::System#Security#Encryption#Signature_Key
+          - name: SignedXml
+            uid: O:Codeunit::System#Security#Encryption#SignedXml
+          - name: X509Certificate2
+            uid: O:Codeunit::System#Security#Encryption#X509Certificate2
+        - name: Pages
+          items:
+          - name: Data Encryption Management
+            uid: O:Page::System#Security#Encryption#Data_Encryption_Management
+        - name: Enums
+          items:
+          - name: Hash Algorithm
+            uid: O:Enum::System#Security#Encryption#Hash_Algorithm
+          - name: RSA Signature Padding
+            uid: O:Enum::System#Security#Encryption#RSA_Signature_Padding
+          - name: SignatureAlgorithm
+            uid: O:Enum::System#Security#Encryption#SignatureAlgorithm
+          - name: SymmetricAlgorithm
+            uid: O:Enum::System#Security#Encryption#SymmetricAlgorithm
+          - name: X509 Content Type
+            uid: O:Enum::System#Security#Encryption#X509_Content_Type
+        - name: Interfaces
+          items:
+          - name: Signature Algorithm v2
+            uid: O:Interface::System#Security#Encryption#Signature_Algorithm_v2
+          - name: SignatureAlgorithm
+            uid: O:Interface::System#Security#Encryption#SignatureAlgorithm
+          - name: SymmetricAlgorithm
+            uid: O:Interface::System#Security#Encryption#SymmetricAlgorithm
+        - name: PermissionSets
+          items:
+          - name: Cryptography Mgt. - Objects
+            uid: O:PermissionSet::System#Security#Encryption#Cryptography_Mgt#_-_Objects
+      - name: User
+        items:
+        - name: Tables
+          items:
+          - name: User Details
+            uid: O:Table::System#Security#User#User_Details
+        - name: Codeunits
+          items:
+          - name: User Details
+            uid: O:Codeunit::System#Security#User#User_Details
+          - name: User Login Time Tracker
+            uid: O:Codeunit::System#Security#User#User_Login_Time_Tracker
+          - name: User Login Times Upgrade
+            uid: O:Codeunit::System#Security#User#User_Login_Times_Upgrade
+          - name: User Permissions
+            uid: O:Codeunit::System#Security#User#User_Permissions
+          - name: User Selection
+            uid: O:Codeunit::System#Security#User#User_Selection
+        - name: Pages
+          items:
+          - name: User Details
+            uid: O:Page::System#Security#User#User_Details
+          - name: User Lookup
+            uid: O:Page::System#Security#User#User_Lookup
+        - name: PermissionSets
+          items:
+          - name: User Details - View
+            uid: O:PermissionSet::System#Security#User#User_Details_-_View
+          - name: User Login Times - Read
+            uid: O:PermissionSet::System#Security#User#User_Login_Times_-_Read
+          - name: User Login Times - View
+            uid: O:PermissionSet::System#Security#User#User_Login_Times_-_View
+          - name: User Permissions - Read
+            uid: O:PermissionSet::System#Security#User#User_Permissions_-_Read
+          - name: User Selection - Read
+            uid: O:PermissionSet::System#Security#User#User_Selection_-_Read
+      - name: Codeunits
+        items:
+        - name: App Key Vault Secret Provider
+          uid: O:Codeunit::System#Security#App_Key_Vault_Secret_Provider
+        - name: In Memory Secret Provider
+          uid: O:Codeunit::System#Security#In_Memory_Secret_Provider
+      - name: Interfaces
+        items:
+        - name: Secret Provider
+          uid: O:Interface::System#Security#Secret_Provider
+        - name: Secret Provider v2
+          uid: O:Interface::System#Security#Secret_Provider_v2
+    - name: Telemetry
+      items:
+      - name: Codeunits
+        items:
+        - name: Feature Telemetry
+          uid: O:Codeunit::System#Telemetry#Feature_Telemetry
+        - name: Telemetry
+          uid: O:Codeunit::System#Telemetry#Telemetry
+        - name: Telemetry Custom Dimensions
+          uid: O:Codeunit::System#Telemetry#Telemetry_Custom_Dimensions
+        - name: Telemetry Loggers
+          uid: O:Codeunit::System#Telemetry#Telemetry_Loggers
+      - name: Enums
+        items:
+        - name: Feature Uptake Status
+          uid: O:Enum::System#Telemetry#Feature_Uptake_Status
+      - name: Interfaces
+        items:
+        - name: Telemetry Logger
+          uid: O:Interface::System#Telemetry#Telemetry_Logger
+      - name: PermissionSets
+        items:
+        - name: Telemetry - Exec
+          uid: O:PermissionSet::System#Telemetry#Telemetry_-_Exec
+    - name: Text
+      items:
+      - name: Tables
+        items:
+        - name: Barcode Encode Settings
+          uid: O:Table::System#Text#Barcode_Encode_Settings
+        - name: Barcode Encode Settings 2D
+          uid: O:Table::System#Text#Barcode_Encode_Settings_2D
+      - name: Codeunits
+        items:
+        - name: Auto Format
+          uid: O:Codeunit::System#Text#Auto_Format
+        - name: Base64 Convert
+          uid: O:Codeunit::System#Text#Base64_Convert
+        - name: Caption Class
+          uid: O:Codeunit::System#Text#Caption_Class
+        - name: Encoding
+          uid: O:Codeunit::System#Text#Encoding
+        - name: Entity Text
+          uid: O:Codeunit::System#Text#Entity_Text
+        - name: Entity Text AI Install
+          uid: O:Codeunit::System#Text#Entity_Text_AI_Install
+        - name: Entity Text AI Upgrade
+          uid: O:Codeunit::System#Text#Entity_Text_AI_Upgrade
+        - name: Filter Tokens
+          uid: O:Codeunit::System#Text#Filter_Tokens
+      - name: Pages
+        items:
+        - name: Azure OpenAi Settings
+          uid: O:Page::System#Text#Azure_OpenAi_Settings
+        - name: Copilot Information
+          uid: O:Page::System#Text#Copilot_Information
+        - name: Entity Text
+          uid: O:Page::System#Text#Entity_Text
+        - name: Entity Text Factbox Part
+          uid: O:Page::System#Text#Entity_Text_Factbox_Part
+        - name: Entity Text Part
+          uid: O:Page::System#Text#Entity_Text_Part
+      - name: Enums
+        items:
+        - name: Auto Format
+          uid: O:Enum::System#Text#Auto_Format
+        - name: Barcode Font Provider
+          uid: O:Enum::System#Text#Barcode_Font_Provider
+        - name: Barcode Font Provider 2D
+          uid: O:Enum::System#Text#Barcode_Font_Provider_2D
+        - name: Barcode Image Provider 2D
+          uid: O:Enum::System#Text#Barcode_Image_Provider_2D
+        - name: Barcode Symbology
+          uid: O:Enum::System#Text#Barcode_Symbology
+        - name: Barcode Symbology 2D
+          uid: O:Enum::System#Text#Barcode_Symbology_2D
+        - name: Entity Text Actions
+          uid: O:Enum::System#Text#Entity_Text_Actions
+        - name: Entity Text Emphasis
+          uid: O:Enum::System#Text#Entity_Text_Emphasis
+        - name: Entity Text Format
+          uid: O:Enum::System#Text#Entity_Text_Format
+        - name: Entity Text Tone
+          uid: O:Enum::System#Text#Entity_Text_Tone
+      - name: EnumExtensions
+        items:
+        - name: Entity Text Capability
+          uid: O:EnumExtension::System#Text#Entity_Text_Capability
+      - name: Interfaces
+        items:
+        - name: Barcode Font Encoder
+          uid: O:Interface::System#Text#Barcode_Font_Encoder
+        - name: Barcode Font Encoder 2D
+          uid: O:Interface::System#Text#Barcode_Font_Encoder_2D
+        - name: Barcode Font Provider
+          uid: O:Interface::System#Text#Barcode_Font_Provider
+        - name: Barcode Font Provider 2D
+          uid: O:Interface::System#Text#Barcode_Font_Provider_2D
+        - name: Barcode Image Encoder 2D
+          uid: O:Interface::System#Text#Barcode_Image_Encoder_2D
+        - name: Barcode Image Provider 2D
+          uid: O:Interface::System#Text#Barcode_Image_Provider_2D
+      - name: PermissionSets
+        items:
+        - name: Base64 Convert - Objects
+          uid: O:PermissionSet::System#Text#Base64_Convert_-_Objects
+    - name: Tooling
+      items:
+      - name: Tables
+        items:
+        - name: Profiling Node
+          uid: O:Table::System#Tooling#Profiling_Node
+        - name: Query Navigation Validation
+          uid: O:Table::System#Tooling#Query_Navigation_Validation
+        - name: SmartList Designer Handler
+          uid: O:Table::System#Tooling#SmartList_Designer_Handler
+      - name: Codeunits
+        items:
+        - name: Sampling Performance Profiler
+          uid: O:Codeunit::System#Tooling#Sampling_Performance_Profiler
+      - name: Pages
+        items:
+        - name: Performance Profiler
+          uid: O:Page::System#Tooling#Performance_Profiler
+        - name: Profiling Call Tree
+          uid: O:Page::System#Tooling#Profiling_Call_Tree
+        - name: Profiling Duration By Method
+          uid: O:Page::System#Tooling#Profiling_Duration_By_Method
+        - name: Profiling Duration By Object
+          uid: O:Page::System#Tooling#Profiling_Duration_By_Object
+        - name: Profiling Full Time Chart
+          uid: O:Page::System#Tooling#Profiling_Full_Time_Chart
+        - name: Profiling Self Time Chart
+          uid: O:Page::System#Tooling#Profiling_Self_Time_Chart
+      - name: Enums
+        items:
+        - name: Sampling Interval
+          uid: O:Enum::System#Tooling#Sampling_Interval
+    - name: Upgrade
+      items:
+      - name: Codeunits
+        items:
+        - name: Upgrade Tag
+          uid: O:Codeunit::System#Upgrade#Upgrade_Tag
+      - name: PermissionSets
+        items:
+        - name: Upgrade Tags - Read
+          uid: O:PermissionSet::System#Upgrade#Upgrade_Tags_-_Read
+        - name: Upgrade Tags - View
+          uid: O:PermissionSet::System#Upgrade#Upgrade_Tags_-_View
+    - name: Utilities
+      items:
+      - name: Tables
+        items:
+        - name: Captures
+          uid: O:Table::System#Utilities#Captures
+        - name: Groups
+          uid: O:Table::System#Utilities#Groups
+        - name: Matches
+          uid: O:Table::System#Utilities#Matches
+        - name: Regex Options
+          uid: O:Table::System#Utilities#Regex_Options
+      - name: Codeunits
+        items:
+        - name: Confirm Management
+          uid: O:Codeunit::System#Utilities#Confirm_Management
+        - name: Image
+          uid: O:Codeunit::System#Utilities#Image
+        - name: Math
+          uid: O:Codeunit::System#Utilities#Math
+        - name: Persistent Blob
+          uid: O:Codeunit::System#Utilities#Persistent_Blob
+        - name: Record Link Management
+          uid: O:Codeunit::System#Utilities#Record_Link_Management
+        - name: Regex
+          uid: O:Codeunit::System#Utilities#Regex
+        - name: Remove Orphaned Record Links
+          uid: O:Codeunit::System#Utilities#Remove_Orphaned_Record_Links
+        - name: Temp Blob
+          uid: O:Codeunit::System#Utilities#Temp_Blob
+        - name: Temp Blob List
+          uid: O:Codeunit::System#Utilities#Temp_Blob_List
+        - name: Uri
+          uid: O:Codeunit::System#Utilities#Uri
+        - name: Uri Builder
+          uid: O:Codeunit::System#Utilities#Uri_Builder
+      - name: ControlAddIns
+        items:
+        - name: PageReady
+          uid: O:ControlAddIn::System#Utilities#PageReady
+      - name: Enums
+        items:
+        - name: Image Format
+          uid: O:Enum::System#Utilities#Image_Format
+        - name: RegexOptions
+          uid: O:Enum::System#Utilities#RegexOptions
+        - name: Rotate Flip Type
+          uid: O:Enum::System#Utilities#Rotate_Flip_Type
+        - name: Uri Query Duplicate Behaviour
+          uid: O:Enum::System#Utilities#Uri_Query_Duplicate_Behaviour
+        - name: UriKind
+          uid: O:Enum::System#Utilities#UriKind
+      - name: PermissionSets
+        items:
+        - name: Confirm Management - Objects
+          uid: O:PermissionSet::System#Utilities#Confirm_Management_-_Objects
+        - name: Record Link Management - Read
+          uid: O:PermissionSet::System#Utilities#Record_Link_Management_-_Read
+        - name: Record Link Management - View
+          uid: O:PermissionSet::System#Utilities#Record_Link_Management_-_View
+        - name: Regex - Objects
+          uid: O:PermissionSet::System#Utilities#Regex_-_Objects
+        - name: URI - Objects
+          uid: O:PermissionSet::System#Utilities#URI_-_Objects
+    - name: Visualization
+      items:
+      - name: Codeunits
+        items:
+        - name: Business Chart
+          uid: O:Codeunit::System#Visualization#Business_Chart
+        - name: Cues And KPIs
+          uid: O:Codeunit::System#Visualization#Cues_And_KPIs
+        - name: Headlines
+          uid: O:Codeunit::System#Visualization#Headlines
+      - name: Pages
+        items:
+        - name: Cue Setup Administrator
+          uid: O:Page::System#Visualization#Cue_Setup_Administrator
+        - name: Cue Setup End User
+          uid: O:Page::System#Visualization#Cue_Setup_End_User
+      - name: Enums
+        items:
+        - name: Business Chart Data Type
+          uid: O:Enum::System#Visualization#Business_Chart_Data_Type
+        - name: Business Chart Type
+          uid: O:Enum::System#Visualization#Business_Chart_Type
+        - name: Cues And KPIs Style
+          uid: O:Enum::System#Visualization#Cues_And_KPIs_Style
+    - name: Xml
+      items:
+      - name: Codeunits
+        items:
+        - name: Xml Validation
+          uid: O:Codeunit::System#Xml#Xml_Validation
+        - name: XmlWriter
+          uid: O:Codeunit::System#Xml#XmlWriter
+  - name: ControlAddIns
+    items:
+    - name: Microsoft.Dynamics.Nav.Client.BusinessChart
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#BusinessChart
+    - name: Microsoft.Dynamics.Nav.Client.FlowIntegration
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#FlowIntegration
+    - name: Microsoft.Dynamics.Nav.Client.OAuthIntegration
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#OAuthIntegration
+    - name: Microsoft.Dynamics.Nav.Client.PageReady
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#PageReady
+    - name: Microsoft.Dynamics.Nav.Client.PowerBIManagement
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#PowerBIManagement
+    - name: Microsoft.Dynamics.Nav.Client.RoleCenterSelector
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#RoleCenterSelector
+    - name: Microsoft.Dynamics.Nav.Client.VideoPlayer
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#VideoPlayer
+    - name: Microsoft.Dynamics.Nav.Client.WebPageViewer
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#WebPageViewer
+    - name: Microsoft.Dynamics.Nav.Client.WelcomeWizard
+      uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#WelcomeWizard
+- name: Obsoleted
+  items:
+  - name: "18.0"
+    uid: N:Module::System_Application_obsolete_by_18.0
+  - name: "22.0"
+    uid: N:Module::System_Application_obsolete_by_22.0
+  - name: "23.0"
+    uid: N:Module::System_Application_obsolete_by_23.0
+  - name: "24.0"
+    uid: N:Module::System_Application_obsolete_by_24.0

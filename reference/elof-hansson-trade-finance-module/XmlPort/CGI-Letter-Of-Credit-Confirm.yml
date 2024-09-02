@@ -1,0 +1,50 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Letter Of Credit Confirm"'
+alId: ID 70309
+baseKind: XmlPort
+kind: XmlPort
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Letter Of Credit Confirm
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: Caption
+  value: Letter Of Credit Confirm
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+commentId: O:XmlPort::CGI Letter Of Credit Confirm
+summary: >-
+  Letter of Credit Confirm from csv file
+
+  it update the table CGI TFM LCGB Header field Confirmed
+
+  based on field "LCBG GUID"
+name: '"CGI Letter Of Credit Confirm"'
+uid: O:XmlPort::CGI_Letter_Of_Credit_Confirm

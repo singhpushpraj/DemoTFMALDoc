@@ -1,0 +1,57 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email View Policy List"
+alId: ID 8930
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  name: System.Email."Email View Policy"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: AdditionalSearchTerms
+  value: Email Personalization,Email Preferences,Policies
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: User Email View Policies
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "8930"
+  promoted: true
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Email View Policy" = rimd,
+                      tabledata User = r
+  promoted: false
+- name: AboutText
+  value: Email view policies control the emails a user can get access to.
+  promoted: false
+- name: AboutTitle
+  value: About email view policies
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: admin-how-setup-email#set-up-view-policies
+  promoted: false
+commentId: O:Page::System#Email#Email View Policy List
+summary: Page to display and control what view policies users have been assigned.
+name: '"Email View Policy List"'
+uid: O:Page::System#Email#Email_View_Policy_List

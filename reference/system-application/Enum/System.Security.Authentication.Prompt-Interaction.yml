@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Authentication."Prompt Interaction"
+alId: ID 501
+namespace: System.Security.Authentication
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Security.Authentication
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: No prompt parameter in the request
+  name: None
+  uid: E:Enum::System#Security#Authentication#Prompt_Interaction.None
+- summary: The user should be prompted to reauthenticate.
+  name: Login
+  uid: E:Enum::System#Security#Authentication#Prompt_Interaction.Login
+- summary: The user is prompted to select an account, interrupting single sign on. The user may select an existing signed-in account, enter their credentials for a remembered account, or choose to use a different account altogether.
+  name: '"Select Account"'
+  uid: E:Enum::System#Security#Authentication#Prompt_Interaction.Select_Account
+- summary: User consent has been granted, but needs to be updated. The user should be prompted to consent.
+  name: Consent
+  uid: E:Enum::System#Security#Authentication#Prompt_Interaction.Consent
+- summary: An administrator should be prompted to consent on behalf of all users in their organization.
+  name: '"Admin Consent"'
+  uid: E:Enum::System#Security#Authentication#Prompt_Interaction.Admin_Consent
+commentId: O:Enum::System#Security#Authentication#Prompt Interaction
+summary: This enum contains the Prompt Interaction values possible for OAuth 2.0.
+name: '"Prompt Interaction"'
+uid: O:Enum::System#Security#Authentication#Prompt_Interaction

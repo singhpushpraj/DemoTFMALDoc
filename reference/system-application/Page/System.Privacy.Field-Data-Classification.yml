@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Field Data Classification"
+alId: ID 1750
+namespace: System.Privacy
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: admin-classifying-data-sensitivity
+  promoted: false
+- name: Permissions
+  value: tabledata Field = r
+  promoted: false
+commentId: O:Page::System#Privacy#Field Data Classification
+summary: Displays a list of fields and their corresponding data classifications.
+name: '"Field Data Classification"'
+uid: O:Page::System#Privacy#Field_Data_Classification

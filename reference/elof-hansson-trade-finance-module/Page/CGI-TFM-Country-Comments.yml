@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Country Comments"'
+alId: ID 70304
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_TFM_Comment_Line
+  name: '"CGI TFM Comment Line"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Country Comments
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: "70302"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_TFM_Comment_Line
+    name: '"CGI TFM Comment Line"'
+    isExternal: false
+commentId: O:Page::CGI TFM Country Comments
+summary: >-
+  70304 CGI TFM Country Comments
+
+  Provides information about TFM Country Comments
+name: '"CGI TFM Country Comments"'
+uid: O:Page::CGI_TFM_Country_Comments

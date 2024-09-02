@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Profiling Self Time Chart"
+alId: ID 1922
+namespace: System.Tooling
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Time Spent
+  promoted: false
+- name: PageType
+  value: CardPart
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Tooling#Profiling Self Time Chart
+summary: The chart showing the breakdown of self time spent by app name / app publisher on the performance profiler page.
+name: '"Profiling Self Time Chart"'
+uid: O:Page::System#Tooling#Profiling_Self_Time_Chart

@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Details - View"
+alId: ID 775
+namespace: System.Security.User
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"User Details - Objects"'
+  promoted: false
+commentId: O:PermissionSet::System#Security#User#User Details - View
+name: '"User Details - View"'
+uid: O:PermissionSet::System#Security#User#User_Details_-_View

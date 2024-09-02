@@ -1,0 +1,97 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Accounts"
+alId: ID 8887
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Email#Email_Account
+  name: System.Email."Email Account"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: Caption
+  value: Email Accounts
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: SourceTable
+  value: "8902"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Email#Email_Account
+    name: System.Email."Email Account"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: AdditionalSearchTerms
+  value: SMTP,Office 365,Exchange,Outlook
+  promoted: false
+- name: PromotedActionCategories
+  value: New,Process,Report,Navigate
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetAccount(var EmailAccount: Record "Email Account" temporary)'
+    parameters:
+    - id: EmailAccount
+      description: The selected email account
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Gets the selected email account.
+  name: GetAccount
+  uid: M:Page::System#Email#Email_Accounts.GetAccount(Email_Account@)
+- syntax:
+    content: 'procedure SetAccount(var EmailAccount: Record "Email Account" temporary)'
+    parameters:
+    - id: EmailAccount
+      description: The email account to be initially selected on the page
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Sets an email account to be selected.
+  name: SetAccount
+  uid: M:Page::System#Email#Email_Accounts.SetAccount(Email_Account@)
+- syntax:
+    content: procedure EnableLookupMode()
+  summary: Enables the lookup mode on the page.
+  name: EnableLookupMode
+  uid: M:Page::System#Email#Email_Accounts.EnableLookupMode
+commentId: O:Page::System#Email#Email Accounts
+summary: Lists all of the registered email accounts
+name: '"Email Accounts"'
+uid: O:Page::System#Email#Email_Accounts

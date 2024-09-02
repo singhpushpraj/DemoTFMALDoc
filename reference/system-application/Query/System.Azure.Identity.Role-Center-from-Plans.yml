@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Role Center from Plans"
+alId: ID 777
+namespace: System.Azure.Identity
+baseKind: Query
+kind: Query
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Query](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-query-object)'
+objectProperties:
+- name: Caption
+  value: RoleCenter from Plans
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata Plan = r,
+                      tabledata "User Plan" = r
+  promoted: false
+queryColumns:
+- dataItem: Plan
+  columnType:
+    name: Integer
+    isExternal: true
+  name: Role_Center_ID
+  uid: C:Query::System#Azure#Identity#Role_Center_from_Plans.User_Plan.Plan.Role_Center_ID
+commentId: O:Query::System#Azure#Identity#Role Center from Plans
+summary: Displays a list of the Role Center Ids assigned to users through plans.
+name: '"Role Center from Plans"'
+uid: O:Query::System#Azure#Identity#Role_Center_from_Plans

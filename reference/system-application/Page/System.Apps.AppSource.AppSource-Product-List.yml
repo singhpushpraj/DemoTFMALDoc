@@ -1,0 +1,52 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps.AppSource."AppSource Product List"
+alId: ID 2515
+namespace: System.Apps.AppSource
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps.AppSource
+langs:
+- al
+sourceTableType:
+  name: System.Apps.AppSource."AppSource Product"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: Caption
+  value: Microsoft AppSource Apps
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: AdditionalSearchTerms
+  value: Extension,Extensions,Marketplace,Management,Customization,Personalization,Install,Publish,Extend,App,Add-In,Customize,Plug-In,AppSource,Customize,Plug-In
+  promoted: false
+- name: SourceTable
+  value: "2515"
+  promoted: true
+- name: SourceTableView
+  value: sorting(DisplayName)
+  promoted: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Apps#AppSource#AppSource Product List
+summary: List of Products retrieved from AppSource
+name: '"AppSource Product List"'
+uid: O:Page::System#Apps#AppSource#AppSource_Product_List

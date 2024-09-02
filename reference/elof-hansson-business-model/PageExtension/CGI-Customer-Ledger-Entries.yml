@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Customer Ledger Entries"'
+alId: ID 60310
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Customer Ledger Entries
+summary: Page Extenion CGI Customer Ledger Entries (ID 60310) extends page customer ledger entries
+name: '"CGI Customer Ledger Entries"'
+uid: O:PageExtension::CGI_Customer_Ledger_Entries

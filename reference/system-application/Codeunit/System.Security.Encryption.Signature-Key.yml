@@ -1,0 +1,102 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."Signature Key"
+alId: ID 1474
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use FromXmlString with SecretText data type for XmlString.,24.0)]'
+    content: 'procedure FromXmlString(XmlString: Text)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing key information.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Saves an key value from the key information from an XML string.
+  name: FromXmlString
+  obsoletion:
+    state: pending
+    reason: Use FromXmlString with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Signature_Key.FromXmlString(Text)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use FromBase64String with SecretText data type for Password.,24.0)]'
+    content: 'procedure FromBase64String(CertBase64Value: Text, Password: Text, IncludePrivateParameters: Boolean)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IncludePrivateParameters
+      description: true to include private parameters; otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Saves an key value from an certificate in Base64 format
+  name: FromBase64String
+  obsoletion:
+    state: pending
+    reason: Use FromBase64String with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Signature_Key.FromBase64String(Text,Text,Boolean)
+- syntax:
+    content: 'procedure FromXmlString(XmlString: SecretText)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing key information.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Saves an key value from the key information from an XML string.
+  name: FromXmlString
+  uid: M:Codeunit::System#Security#Encryption#Signature_Key.FromXmlString(SecretText)
+- syntax:
+    content: 'procedure FromBase64String(CertBase64Value: Text, Password: SecretText, IncludePrivateParameters: Boolean)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IncludePrivateParameters
+      description: true to include private parameters; otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Saves an key value from an certificate in Base64 format
+  name: FromBase64String
+  uid: M:Codeunit::System#Security#Encryption#Signature_Key.FromBase64String(Text,SecretText,Boolean)
+commentId: O:Codeunit::System#Security#Encryption#Signature Key
+summary: Represents the key of asymmetric algorithm.
+name: '"Signature Key"'
+uid: O:Codeunit::System#Security#Encryption#Signature_Key

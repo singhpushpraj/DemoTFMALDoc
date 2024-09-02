@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Blob Expiry Option"
+alId: ID 9045
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: RelativeToCreation
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Expiry_Option.RelativeToCreation
+- name: RelativeToNow
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Expiry_Option.RelativeToNow
+- name: Absolute
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Expiry_Option.Absolute
+- name: NeverExpire
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Expiry_Option.NeverExpire
+commentId: O:Enum::System#Azure#Storage#ABS Blob Expiry Option
+summary: See https://go.microsoft.com/fwlink/?linkid=2211406
+name: '"ABS Blob Expiry Option"'
+uid: O:Enum::System#Azure#Storage#ABS_Blob_Expiry_Option

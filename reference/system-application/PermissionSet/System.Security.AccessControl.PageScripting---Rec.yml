@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."PageScripting - Rec"
+alId: ID 9651
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Allow Page Scripting Recording
+  promoted: false
+commentId: O:PermissionSet::System#Security#AccessControl#PageScripting - Rec
+name: '"PageScripting - Rec"'
+uid: O:PermissionSet::System#Security#AccessControl#PageScripting_-_Rec

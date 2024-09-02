@@ -1,0 +1,481 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities.Math
+alId: ID 710
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Pi(): Decimal'
+    return:
+      description: Value of pi.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the value of pi.
+  name: Pi
+  uid: M:Codeunit::System#Utilities#Math.Pi:Decimal
+- syntax:
+    content: 'procedure E(): Decimal'
+    return:
+      description: Value of E.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the value of E.
+  name: E
+  uid: M:Codeunit::System#Utilities#Math.E:Decimal
+- syntax:
+    content: 'procedure Abs(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A decimal.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: A decimal number, x, such that 0 ≤ x ≤MaxValue
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the absolute value of a Decimal number.
+  name: Abs
+  uid: M:Codeunit::System#Utilities#Math.Abs(Decimal):Decimal
+- syntax:
+    content: 'procedure Acos(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A number representing a cosine.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: An angle, θ, measured in radians, such that 0 ≤θ≤π
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the angle whose cosine is the specified number.
+  name: Acos
+  uid: M:Codeunit::System#Utilities#Math.Acos(Decimal):Decimal
+- syntax:
+    content: 'procedure Asin(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A number representing a sine, where decimalValue must be greater than or equal to -1, but less than or equal to 1.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: An angle, θ, measured in radians, such that -π/2 ≤θ≤π/2
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the angle whose sine is the specified number.
+  name: Asin
+  uid: M:Codeunit::System#Utilities#Math.Asin(Decimal):Decimal
+- syntax:
+    content: 'procedure Atan(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A number representing a tangent.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: An angle, θ, measured in radians, such that -π/2 ≤θ≤π/2.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the angle whose tangent is the specified number.
+  name: Atan
+  uid: M:Codeunit::System#Utilities#Math.Atan(Decimal):Decimal
+- syntax:
+    content: 'procedure Atan2(y: Decimal, x: Decimal): Decimal'
+    parameters:
+    - id: "y"
+      description: The y coordinate of a point.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: x
+      description: The x coordinate of a point.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: An angle, θ, measured in radians, such that -π≤θ≤π, and tan(θ) = y / x, where (x, y) is a point in the Cartesian plane.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the angle whose tangent is the quotient of two specified numbers.
+  name: Atan2
+  uid: M:Codeunit::System#Utilities#Math.Atan2(Decimal,Decimal):Decimal
+- syntax:
+    content: 'procedure BigMul(a: Integer, b: Integer): BigInteger'
+    parameters:
+    - id: a
+      description: The first number to multiply.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: b
+      description: The second number to multiply.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The number containing the product of the specified numbers.
+      returnType:
+        name: BigInteger
+        isExternal: true
+  summary: Produces the full product of two 32-bit numbers.
+  name: BigMul
+  uid: M:Codeunit::System#Utilities#Math.BigMul(Integer,Integer):BigInteger
+- syntax:
+    content: 'procedure Ceiling(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A decimal number.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The smallest integral value that is greater than or equal to decimalValue.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the smallest integral value that is greater than or equal to the specified decimal number.
+  name: Ceiling
+  uid: M:Codeunit::System#Utilities#Math.Ceiling(Decimal):Decimal
+- syntax:
+    content: 'procedure Cos(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: An angle, measured in radians.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The cosine of decimalValue.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the cosine of the specified angle.
+  name: Cos
+  uid: M:Codeunit::System#Utilities#Math.Cos(Decimal):Decimal
+- syntax:
+    content: 'procedure Cosh(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: An angle, measured in radians.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The hyperbolic cosine of value.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the hyperbolic cosine of the specified angle.
+  name: Cosh
+  uid: M:Codeunit::System#Utilities#Math.Cosh(Decimal):Decimal
+- syntax:
+    content: 'procedure Exp(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A number specifying a power.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The number e raised to the power decimalValue.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns e raised to the specified power.
+  name: Exp
+  uid: M:Codeunit::System#Utilities#Math.Exp(Decimal):Decimal
+- syntax:
+    content: 'procedure Floor(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A decimal number.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The largest integral value less than or equal to decimalValue.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the largest integral value less than or equal to the specified decimal number.
+  name: Floor
+  uid: M:Codeunit::System#Utilities#Math.Floor(Decimal):Decimal
+- syntax:
+    content: 'procedure IEEERemainder(x: Decimal, y: Decimal): Decimal'
+    parameters:
+    - id: x
+      description: A dividend.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: "y"
+      description: A divisor.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: A number equal to x - (y Q), where Q is the quotient of x / y rounded to the nearest integer (if x / y falls halfway between two integers, the even integer is returned).
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the remainder resulting from the division of a specified number by another specified number.
+  name: IEEERemainder
+  uid: M:Codeunit::System#Utilities#Math.IEEERemainder(Decimal,Decimal):Decimal
+- syntax:
+    content: 'procedure Log(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: The number whose logarithm is to be found.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The natural logarithm of decimalValue; that is, ln decimalValue, or log e decimalValue
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the natural (base e) logarithm of a specified number.
+  name: Log
+  uid: M:Codeunit::System#Utilities#Math.Log(Decimal):Decimal
+- syntax:
+    content: 'procedure Log(a: Decimal, newBase: Decimal): Decimal'
+    parameters:
+    - id: a
+      description: The number whose logarithm is to be found.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: newBase
+      description: The base of the logarithm.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The logarithm of a specified number in a specified base.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the logarithm of a specified number in a specified base.
+  name: Log
+  uid: M:Codeunit::System#Utilities#Math.Log(Decimal,Decimal):Decimal
+- syntax:
+    content: 'procedure Log10(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A number whose logarithm is to be found.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The base 10 logarithm of the specified number
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the base 10 logarithm of a specified number.
+  name: Log10
+  uid: M:Codeunit::System#Utilities#Math.Log10(Decimal):Decimal
+- syntax:
+    content: 'procedure Max(decimalValue1: Decimal, decimalValue2: Decimal): Decimal'
+    parameters:
+    - id: decimalValue1
+      description: The first of two decimal numbers to compare.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: decimalValue2
+      description: The second of two decimal numbers to compare.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: Parameter decimalValue1 or decimalValue2, whichever is larger.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the larger of two decimal numbers.
+  name: Max
+  uid: M:Codeunit::System#Utilities#Math.Max(Decimal,Decimal):Decimal
+- syntax:
+    content: 'procedure Min(decimalValue1: Decimal, decimalValue2: Decimal): Decimal'
+    parameters:
+    - id: decimalValue1
+      description: The first of two decimal numbers to compare.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: decimalValue2
+      description: The second of two decimal numbers to compare.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: Parameter decimalValue1 or decimalValue2, whichever is smaller.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the smaller of two decimal numbers.
+  name: Min
+  uid: M:Codeunit::System#Utilities#Math.Min(Decimal,Decimal):Decimal
+- syntax:
+    content: 'procedure Pow(x: Decimal, y: Decimal): Decimal'
+    parameters:
+    - id: x
+      description: A double-precision floating-point number to be raised to a power.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: "y"
+      description: A double-precision floating-point number that specifies a power.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The number x raised to the power y.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns a specified number raised to the specified power.
+  name: Pow
+  uid: M:Codeunit::System#Utilities#Math.Pow(Decimal,Decimal):Decimal
+- syntax:
+    content: 'procedure Sign(decimalValue: Decimal): Integer'
+    parameters:
+    - id: decimalValue
+      description: A signed decimal number.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: A number that indicates the sign of value.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Returns an integer that indicates the sign of a decimal number.
+  name: Sign
+  uid: M:Codeunit::System#Utilities#Math.Sign(Decimal):Integer
+- syntax:
+    content: 'procedure Sinh(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: An angle, measured in radians.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The hyperbolic sine of value.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the hyperbolic sine of the specified angle.
+  name: Sinh
+  uid: M:Codeunit::System#Utilities#Math.Sinh(Decimal):Decimal
+- syntax:
+    content: 'procedure Sin(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: An angle, measured in radians.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The sine of a.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the sine of the specified angle.
+  name: Sin
+  uid: M:Codeunit::System#Utilities#Math.Sin(Decimal):Decimal
+- syntax:
+    content: 'procedure Sqrt(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: The number whose square root is to be found.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The positive square root of decimalValue.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the square root of a specified number.
+  name: Sqrt
+  uid: M:Codeunit::System#Utilities#Math.Sqrt(Decimal):Decimal
+- syntax:
+    content: 'procedure Tan(a: Decimal): Decimal'
+    parameters:
+    - id: a
+      description: An angle, measured in radians.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The tangent of a.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the tangent of the specified angle.
+  name: Tan
+  uid: M:Codeunit::System#Utilities#Math.Tan(Decimal):Decimal
+- syntax:
+    content: 'procedure Tanh(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: An angle, measured in radians.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The hyperbolic tangent of value.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Returns the hyperbolic tangent of the specified angle.
+  name: Tanh
+  uid: M:Codeunit::System#Utilities#Math.Tanh(Decimal):Decimal
+- syntax:
+    content: 'procedure Truncate(decimalValue: Decimal): Decimal'
+    parameters:
+    - id: decimalValue
+      description: A number to truncate.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: The integral part of decimalValue.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Calculates the integral part of a specified decimal number.
+  name: Truncate
+  uid: M:Codeunit::System#Utilities#Math.Truncate(Decimal):Decimal
+commentId: O:Codeunit::System#Utilities#Math
+summary: Provides constants and static methods for trigonometric, logarithmic, and other common mathematical functions.
+name: Math
+uid: O:Codeunit::System#Utilities#Math

@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device.BarcodeFailure
+alId: ID 8761
+namespace: System.Device
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+enumValues:
+- summary: The barcode scanning action was canceled.
+  name: Cancel
+  uid: E:Enum::System#Device#BarcodeFailure.Cancel
+- summary: No barcode was found.
+  name: NoBarcode
+  uid: E:Enum::System#Device#BarcodeFailure.NoBarcode
+- summary: An error occurred while scanning the barcode.
+  name: Error
+  uid: E:Enum::System#Device#BarcodeFailure.Error
+commentId: O:Enum::System#Device#BarcodeFailure
+summary: The failure for the barcode scanner.
+name: BarcodeFailure
+uid: O:Enum::System#Device#BarcodeFailure

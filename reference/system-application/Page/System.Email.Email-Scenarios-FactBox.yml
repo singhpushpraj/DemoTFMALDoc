@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Scenarios FactBox"
+alId: ID 8895
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  name: System.Email."Email Scenario"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: SourceTable
+  value: "8906"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "Email Scenario" = r
+  promoted: false
+commentId: O:Page::System#Email#Email Scenarios FactBox
+summary: Lists of all scenarios assigned to an account.
+name: '"Email Scenarios FactBox"'
+uid: O:Page::System#Email#Email_Scenarios_FactBox

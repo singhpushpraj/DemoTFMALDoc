@@ -1,0 +1,80 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Application User Settings"
+alId: ID 9222
+namespace: System.Environment.Configuration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: rimX
+  promoted: false
+- name: InherentPermissions
+  value: rimX
+  promoted: false
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+fields:
+- description: The user security ID of the user to whom the settings apply.
+  type:
+    name: Guid
+    isExternal: true
+  name: '"User Security ID"'
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.User_Security_ID
+- description: Specifies whether teaching tips are enabled.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Teaching Tips"'
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.Teaching_Tips
+- description: Specifies whether the legacy action bar is enabled.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Legacy Action Bar"'
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.Legacy_Action_Bar
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Environment#Configuration#Application_User_Settings.SystemRowVersion
+commentId: O:Table::System#Environment#Configuration#Application User Settings
+summary: Table that stores user settings the Application defines.
+name: '"Application User Settings"'
+uid: O:Table::System#Environment#Configuration#Application_User_Settings

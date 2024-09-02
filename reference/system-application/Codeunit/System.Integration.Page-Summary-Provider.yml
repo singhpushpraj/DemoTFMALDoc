@@ -1,0 +1,203 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Page Summary Provider"
+alId: ID 2718
+namespace: System.Integration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetPageSummary(PageId: Integer, Bookmark: Text): Text'
+    parameters:
+    - id: PageId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Bookmark
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Text value for the page summary in JSON format.
+      returnType:
+        name: Text
+        isExternal: true
+  examples:
+  - >2+
+
+    {
+      "version":"1.1",
+      "pageCaption":"Customer Card",
+      "pageType":"Card",
+      "summaryType":"Brick",
+      "cardPageId": "0",
+      "fields":[
+         {"caption":"No.","fieldValue":"01445544","type":"Code"},
+         {"caption":"Name","fieldValue":"Progressive Home Furnishings","type":"Text"},
+         {"caption":"Contact","fieldValue":"Mr. Scott Mitchell","type":"Text"},
+         {"caption":"Balance Due (LCY)","fieldValue":"1.499,03","type":"Decimal"}]
+      }
+    }
+
+
+    In case of an error:
+
+    {
+      "version":"1.1",
+      "pageCaption":"Customer Card",
+      "pageType":"Card",
+      "summaryType":"Caption",
+      "error":[
+        "code":"InvalidBookmark"
+        "message":"The bookmark is invalid."
+      ]
+    }
+  name: GetPageSummary
+  uid: M:Codeunit::System#Integration#Page_Summary_Provider.GetPageSummary(Integer,Text):Text
+- syntax:
+    content: 'procedure GetPageSummaryBySystemID(PageId: Integer, SystemId: Guid): Text'
+    parameters:
+    - id: PageId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: Text value for the page summary in JSON format.
+      returnType:
+        name: Text
+        isExternal: true
+  examples:
+  - >2+
+
+    {
+      "version":"1.1",
+      "pageCaption":"Customer Card",
+      "pageType":"Card",
+      "summaryType":"Brick",
+      "cardPageId": "0",
+      "url":"https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&page=22&bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3",
+      "fields":[
+         {"caption":"No.","fieldValue":"01445544","type":"Code"},
+         {"caption":"Name","fieldValue":"Progressive Home Furnishings","type":"Text"},
+         {"caption":"Contact","fieldValue":"Mr. Scott Mitchell","type":"Text"},
+         {"caption":"Balance Due (LCY)","fieldValue":"1.499,03","type":"Decimal"}]
+      }
+    }
+
+
+    In case of an error:
+
+    {
+      "version":"1.1",
+      "pageCaption":"Customer Card",
+      "pageType":"Card",
+      "summaryType":"Caption",
+      "error":[
+        "code":"InvalidSystemId"
+        "message":"The system id is invalid."
+      ]
+    }
+  name: GetPageSummaryBySystemID
+  uid: M:Codeunit::System#Integration#Page_Summary_Provider.GetPageSummaryBySystemID(Integer,Guid):Text
+- syntax:
+    content: 'procedure GetPageSummary(PageId: Integer): Text'
+    parameters:
+    - id: PageId
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: Text value for the page summary in JSON format.
+      returnType:
+        name: Text
+        isExternal: true
+  examples:
+  - >2+
+
+    {
+      "version":"1.1",
+      "pageCaption":"Customer Card",
+      "pageType":"Card",
+      "summaryType":"Caption",
+    }
+
+
+    In case of error:
+
+    {
+      "version":"1.1",
+      "pageCaption":"Customer Card",
+      "pageType":"Card",
+      "summaryType":"Caption",
+      "error":[
+        "code":"error code"
+        "message":"error message"
+      ]
+    }
+  name: GetPageSummary
+  uid: M:Codeunit::System#Integration#Page_Summary_Provider.GetPageSummary(Integer):Text
+- syntax:
+    content: 'procedure GetPageUrlBySystemID(PageId: Integer, SystemId: Guid): Text'
+    parameters:
+    - id: PageId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: Text value for the page url info in JSON format.
+      returnType:
+        name: Text
+        isExternal: true
+  examples:
+  - >2+
+
+    {
+      "version":"1.1",
+      "url":"https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&page=22&bookmark=27%3bEgAAAAJ7CDAAMQA5ADAANQA4ADkAMw%3d%3",
+    }
+
+
+    In case of an error:
+
+    {
+      "version":"1.1",
+      "error":[
+        "code":"InvalidSystemId"
+        "message":"The system id is invalid."
+      ]
+    }
+  name: GetPageUrlBySystemID
+  uid: M:Codeunit::System#Integration#Page_Summary_Provider.GetPageUrlBySystemID(Integer,Guid):Text
+- syntax:
+    content: 'procedure GetVersion(): Text[30]'
+    return:
+      description: Text value for the current version of Page Summary Provider.
+      returnType:
+        name: Text[30]
+        isExternal: true
+  summary: Gets the current version of the Page Summary Provider.
+  name: GetVersion
+  uid: M:Codeunit::System#Integration#Page_Summary_Provider.GetVersion:Text[30]
+commentId: O:Codeunit::System#Integration#Page Summary Provider
+summary: >-
+  Exposes functionality that gets page summary for a selected page.
+
+  This codeunit is exposed as a webservice and hence all functions are available through OData calls.
+name: '"Page Summary Provider"'
+uid: O:Codeunit::System#Integration#Page_Summary_Provider

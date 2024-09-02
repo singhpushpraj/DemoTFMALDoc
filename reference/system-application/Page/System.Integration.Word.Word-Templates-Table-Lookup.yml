@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Templates Table Lookup"
+alId: ID 9988
+namespace: System.Integration.Word
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+sourceTableType:
+  name: System.Integration.Word."Word Templates Table"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: Caption
+  value: Word Templates Tables
+  promoted: false
+- name: SourceTable
+  value: "9987"
+  promoted: true
+- name: Permissions
+  value: tabledata "Word Templates Table" = r
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[Obsolete(Use Page.GetRecord instead.,22.0)]'
+    content: 'procedure GetRecord(var SelectedWordTemplatesTable: Record "Word Templates Table")'
+    parameters:
+    - id: SelectedWordTemplatesTable
+      parameterType:
+        name: Record "Word Templates Table"
+        isExternal: true
+  name: GetRecord
+  obsoletion:
+    state: pending
+    reason: Use Page.GetRecord instead.
+    version: "22.0"
+  uid: M:Page::System#Integration#Word#Word_Templates_Table_Lookup.GetRecord(Word_Templates_Table@)
+commentId: O:Page::System#Integration#Word#Word Templates Table Lookup
+summary: A look-up page to select a table to be used in a Word template.
+name: '"Word Templates Table Lookup"'
+uid: O:Page::System#Integration#Word#Word_Templates_Table_Lookup

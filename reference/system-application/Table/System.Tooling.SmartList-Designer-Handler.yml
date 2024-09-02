@@ -1,0 +1,97 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."SmartList Designer Handler"
+alId: ID 2888
+namespace: System.Tooling
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: ObsoleteState
+  value: Removed
+  promoted: false
+- name: ObsoleteTag
+  value: "23.0"
+  promoted: false
+- name: ObsoleteReason
+  value: The SmartList Designer is not supported in Business Central.
+  promoted: false
+fields:
+- description: >-
+    The primary key of the table. As a single-record table this value
+
+    should only ever be set to the empty string ''.
+  type:
+    name: Code[10]
+    isExternal: true
+  name: PrimaryKey
+  uid: F:Table::System#Tooling#SmartList_Designer_Handler.PrimaryKey[10]
+- description: >-
+    The AppId of the extension that has registered itself as the handler
+
+    of SmartList Designer events.
+  type:
+    name: Guid
+    isExternal: true
+  name: HandlerExtensionId
+  uid: F:Table::System#Tooling#SmartList_Designer_Handler.HandlerExtensionId
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Tooling#SmartList_Designer_Handler.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Tooling#SmartList_Designer_Handler.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Tooling#SmartList_Designer_Handler.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Tooling#SmartList_Designer_Handler.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Tooling#SmartList_Designer_Handler.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Tooling#SmartList_Designer_Handler.SystemRowVersion
+commentId: O:Table::System#Tooling#SmartList Designer Handler
+summary: >-
+  A single-record table that can be used to handle contention between multiple subscribers of the events for the SmartList Designer.
+
+  Consumers of the events should check this record to see if another extension is registered as the handler and then decide if they
+
+  should execute code within their own subscriptions to these events. Likewise, consumers could set this record to register themselves
+
+  as the handler of events.
+name: '"SmartList Designer Handler"'
+obsoletion:
+  state: removed
+  reason: The SmartList Designer is not supported in Business Central.
+  version: "23.0"
+uid: O:Table::System#Tooling#SmartList_Designer_Handler

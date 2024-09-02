@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Purchase Calc. List"'
+alId: ID 70304
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  internalReference: O:Page::CGI_Purchase_Calculation_List
+  name: '"CGI Purchase Calculation List"'
+  isExternal: false
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI TFM Purchase Calc# List
+summary: >-
+  pagextension 70304 CGI TFM Purchase Calc. List extends CGI Purchase Calculation List
+
+  contains TFM related fields
+name: '"CGI TFM Purchase Calc. List"'
+uid: O:PageExtension::CGI_TFM_Purchase_Calc#_List

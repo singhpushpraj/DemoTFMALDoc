@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Purch. Inv. Header"'
+alId: ID 60330
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Calculation No."'
+  uid: F:TableExtension::CGI_Purch#_Inv#_Header.CGI_Calculation_No#[20]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"CGI Business Term Code"'
+  uid: F:TableExtension::CGI_Purch#_Inv#_Header.CGI_Business_Term_Code[10]
+- type:
+    internalReference: O:Enum::CGI_VendorBankCodeType
+    name: '"CGI VendorBankCodeType"'
+    isExternal: false
+  name: '"CGI Bank Code Type"'
+  uid: F:TableExtension::CGI_Purch#_Inv#_Header.CGI_Bank_Code_Type
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"CGI Bank Code"'
+  uid: F:TableExtension::CGI_Purch#_Inv#_Header.CGI_Bank_Code[30]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"CGI Sub Account"'
+  uid: F:TableExtension::CGI_Purch#_Inv#_Header.CGI_Sub_Account[10]
+commentId: O:TableExtension::CGI Purch# Inv# Header
+summary: TableExtenion CGI Purch. Inv. Header (ID 60330).
+name: '"CGI Purch. Inv. Header"'
+uid: O:TableExtension::CGI_Purch#_Inv#_Header

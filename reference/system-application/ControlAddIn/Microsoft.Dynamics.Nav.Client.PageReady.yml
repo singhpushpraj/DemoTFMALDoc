@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"Microsoft.Dynamics.Nav.Client.PageReady"'
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: 'N:Module::System_Application::Namespace::'
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+objectProperties:
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ObsoleteReason
+  value: Replaced with PageReady addin.
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ObsoleteReason
+  value: Replaced with PageReady addin.
+  promoted: false
+commentId: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#PageReady
+name: '"Microsoft.Dynamics.Nav.Client.PageReady"'
+obsoletion:
+  state: pending
+  reason: Replaced with PageReady addin.
+  version: "24.0"
+uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#PageReady

@@ -1,0 +1,50 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Comment List"'
+alId: ID 70310
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_TFM_Comment_Line
+  name: '"CGI TFM Comment Line"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: TFM Comment List
+  promoted: false
+- name: DataCaptionFields
+  value: "2"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: "70302"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_TFM_Comment_Line
+    name: '"CGI TFM Comment Line"'
+    isExternal: false
+- name: UsageCategory
+  value: None
+  promoted: false
+commentId: O:Page::CGI TFM Comment List
+summary: >-
+  page 70310 CGI TFM Comment List
+
+  Display the related TFM comment list
+name: '"CGI TFM Comment List"'
+uid: O:Page::CGI_TFM_Comment_List

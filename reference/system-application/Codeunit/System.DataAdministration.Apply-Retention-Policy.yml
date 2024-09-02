@@ -1,0 +1,177 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Apply Retention Policy"
+alId: ID 3910
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure ApplyRetentionPolicy(UserInvokedRun: Boolean)'
+    parameters:
+    - id: UserInvokedRun
+      description: Use this value to indicate whether the user initiated the function call or an automated process did. This value is later passed in the event OnApplyRetentionPolicyRecordLimitExceeded.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Applies all enabled, non-manual retention polices. This will delete records according to the settings defined in the Retention Policy Setup table.
+  name: ApplyRetentionPolicy
+  uid: M:Codeunit::System#DataAdministration#Apply_Retention_Policy.ApplyRetentionPolicy(Boolean)
+- syntax:
+    content: 'procedure ApplyRetentionPolicy(RetentionPolicySetup: Record "Retention Policy Setup", UserInvokedRun: Boolean)'
+    parameters:
+    - id: RetentionPolicySetup
+      description: This is the setup record which defines the retention policy to apply.
+      parameterType:
+        name: Record "Retention Policy Setup"
+        isExternal: true
+    - id: UserInvokedRun
+      description: Use this value to indicate whether the user initiated the functioncall or an automated process did. This value is later passed in the event OnApplyRetentionPolicyRecordLimitExceeded.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Applies the given Retention Policy. This will delete records according to the settings defined in the Retention Policy Setup table.
+  name: ApplyRetentionPolicy
+  uid: M:Codeunit::System#DataAdministration#Apply_Retention_Policy.ApplyRetentionPolicy(Retention_Policy_Setup,Boolean)
+- syntax:
+    content: 'procedure GetExpiredRecordCount(RetentionPolicySetup: Record "Retention Policy Setup"): Integer'
+    parameters:
+    - id: RetentionPolicySetup
+      description: This is the setup record which defines the retention policy for which the expired records will be counted.
+      parameterType:
+        name: Record "Retention Policy Setup"
+        isExternal: true
+    return:
+      description: The number of records which are expired.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Returns the number of expired records for the given Retention Policy Setup record. These records would be deleted if the Retention Policy was applied.
+  name: GetExpiredRecordCount
+  uid: M:Codeunit::System#DataAdministration#Apply_Retention_Policy.GetExpiredRecordCount(Retention_Policy_Setup):Integer
+- syntax:
+    content: 'procedure GetExpiredRecordCount(RetentionPolicySetup: Record "Retention Policy Setup", var ExpiredRecordExpirationDate: Date): Integer'
+    parameters:
+    - id: RetentionPolicySetup
+      description: This is the setup record which defines the retention policy for which the expired records will be counted.
+      parameterType:
+        name: Record "Retention Policy Setup"
+        isExternal: true
+    - id: ExpiredRecordExpirationDate
+      description: The earliest expiration date for which there are more expired records than the maximum to be deleted in a single run.
+      parameterType:
+        name: Date
+        isExternal: true
+    return:
+      description: The number of records which are expired.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Returns the number of expired records for the given Retention Policy Setup record. These records would be deleted if the Retention Policy was applied.
+  name: GetExpiredRecordCount
+  uid: M:Codeunit::System#DataAdministration#Apply_Retention_Policy.GetExpiredRecordCount(Retention_Policy_Setup,Date@):Integer
+- syntax:
+    content: 'procedure SetWhereOlderExpirationDateFilter(DateFieldNo: Integer, ExpirationDate: Date, var RecordRef: RecordRef, FilterGroup: Integer, NullDateReplacementValue: Date)'
+    parameters:
+    - id: DateFieldNo
+      description: The date or datetime field the filter will be placed on.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ExpirationDate
+      description: The expiration date used in the filter.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: RecordRef
+      description: The record reference on which the filter will be placed.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: FilterGroup
+      description: The filtergroup in which the filter will be placed.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: NullDateReplacementValue
+      description: The date to be used to determine whether a record has expired when the date or datetime value of the record is 0D.
+      parameterType:
+        name: Date
+        isExternal: true
+  summary: This method places a filter on the record reference where records are older than the ExpirationDate. The filter excludes any record where the date field specified in DateFieldNo has no value.
+  name: SetWhereOlderExpirationDateFilter
+  uid: M:Codeunit::System#DataAdministration#Apply_Retention_Policy.SetWhereOlderExpirationDateFilter(Integer,Date,RecordRef@,Integer,Date)
+- syntax:
+    content: 'procedure SetWhereNewerExpirationDateFilter(DateFieldNo: Integer, ExpirationDate: Date, var RecordRef: RecordRef, FilterGroup: Integer, NullDateReplacementValue: Date)'
+    parameters:
+    - id: DateFieldNo
+      description: The date or datetime field the filter will be placed on.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ExpirationDate
+      description: The expiration date used in the filter.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: RecordRef
+      description: The record reference on whic the filter will be placed.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: FilterGroup
+      description: The filtergroup in which the filter will be placed.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: NullDateReplacementValue
+      description: The date to be used to determine whether a record has expired when the date or datetime value of the record is 0D.
+      parameterType:
+        name: Date
+        isExternal: true
+  summary: This method places a filter on the record reference where records are newer than the ExpirationDate. The filter excludes any record where the date field specified in DateFieldNo has no value.
+  name: SetWhereNewerExpirationDateFilter
+  uid: M:Codeunit::System#DataAdministration#Apply_Retention_Policy.SetWhereNewerExpirationDateFilter(Integer,Date,RecordRef@,Integer,Date)
+- syntax:
+    content: 'procedure SetSingleDateExpirationDateFilter(DateFieldNo: Integer, ExpirationDate: Date, var RecordRef: RecordRef, FilterGroup: Integer, NullDateReplacementValue: Date)'
+    parameters:
+    - id: DateFieldNo
+      description: The date or datetime field the filter will be placed on.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ExpirationDate
+      description: The expiration date used in the filter.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: RecordRef
+      description: The record reference on whic the filter will be placed.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: FilterGroup
+      description: The filtergroup in which the filter will be placed.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: NullDateReplacementValue
+      description: The date to be used to determine whether a record has expired when the date or datetime value of the record is 0D.
+      parameterType:
+        name: Date
+        isExternal: true
+  summary: This method places a filter on the record reference where records are expired one day at the expiration date. The filter excludes any record where the date field specified in DateFieldNo has no value.
+  name: SetSingleDateExpirationDateFilter
+  uid: M:Codeunit::System#DataAdministration#Apply_Retention_Policy.SetSingleDateExpirationDateFilter(Integer,Date,RecordRef@,Integer,Date)
+commentId: O:Codeunit::System#DataAdministration#Apply Retention Policy
+summary: This codeunit provides functions to apply a retention policy.
+name: '"Apply Retention Policy"'
+uid: O:Codeunit::System#DataAdministration#Apply_Retention_Policy

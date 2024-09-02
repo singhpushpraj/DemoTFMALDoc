@@ -1,0 +1,99 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Address Lookup"
+alId: ID 8944
+namespace: System.Email
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+fields:
+- description: Name of suggested contact.
+  type:
+    name: Text[250]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Email#Email_Address_Lookup.Name[250]
+- description: Email address of suggested contact.
+  type:
+    name: Text[250]
+    isExternal: true
+  name: '"E-Mail Address"'
+  uid: F:Table::System#Email#Email_Address_Lookup.E-Mail_Address[250]
+- description: Company that suggested contact works for.
+  type:
+    name: Text[250]
+    isExternal: true
+  name: Company
+  uid: F:Table::System#Email#Email_Address_Lookup.Company[250]
+- description: Table id for suggested record.
+  type:
+    name: Integer
+    isExternal: true
+  name: '"Source Table Number"'
+  uid: F:Table::System#Email#Email_Address_Lookup.Source_Table_Number
+- description: System id for suggested record.
+  type:
+    name: Guid
+    isExternal: true
+  name: '"Source System Id"'
+  uid: F:Table::System#Email#Email_Address_Lookup.Source_System_Id
+- description: Records entity type.
+  type:
+    internalReference: O:Enum::System#Email#Email_Address_Entity
+    name: System.Email."Email Address Entity"
+    isExternal: false
+  name: '"Entity type"'
+  uid: F:Table::System#Email#Email_Address_Lookup.Entity_type
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Email#Email_Address_Lookup.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Email#Email_Address_Lookup.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Email#Email_Address_Lookup.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Email#Email_Address_Lookup.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Email#Email_Address_Lookup.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Email#Email_Address_Lookup.SystemRowVersion
+commentId: O:Table::System#Email#Email Address Lookup
+summary: >-
+  Temporary table that holds email address suggestions.
+
+  Table is used when user lookup addresses in the email editor.
+name: '"Email Address Lookup"'
+uid: O:Table::System#Email#Email_Address_Lookup

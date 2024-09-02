@@ -1,0 +1,77 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Custom Report Mgt. PDF WOR"'
+alId: ID 60350
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure SaveCustomReportAsPDF(RecordVariant: Variant, ReportFilter: Text[30])'
+    parameters:
+    - id: RecordVariant
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ReportFilter
+      parameterType:
+        name: Text[30]
+        isExternal: true
+  name: SaveCustomReportAsPDF
+  uid: M:Codeunit::CGI_Custom_Report_Mgt#_PDF_WOR.SaveCustomReportAsPDF(Variant,Text[30])
+- syntax:
+    content: 'procedure PrintCustomReport(RecordVariant: Variant, ReportFilter: Text[30])'
+    parameters:
+    - id: RecordVariant
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ReportFilter
+      parameterType:
+        name: Text[30]
+        isExternal: true
+  name: PrintCustomReport
+  uid: M:Codeunit::CGI_Custom_Report_Mgt#_PDF_WOR.PrintCustomReport(Variant,Text[30])
+- syntax:
+    content: 'procedure SaveDocumentAsBLOB(TempBlob: __MissingTypeSymbol__, NameText: Text[250], ReportID: Integer, FileExtension: Text[30], Ref1: Code[20], Ref2: Code[20], Ref3: Code[20], CustomReportDesc: Text[250])'
+    parameters:
+    - id: TempBlob
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: NameText
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: ReportID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FileExtension
+      parameterType:
+        name: Text[30]
+        isExternal: true
+    - id: Ref1
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: Ref2
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: Ref3
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: CustomReportDesc
+      parameterType:
+        name: Text[250]
+        isExternal: true
+  name: SaveDocumentAsBLOB
+  uid: M:Codeunit::CGI_Custom_Report_Mgt#_PDF_WOR.SaveDocumentAsBLOB(__MissingSymbol__,Text[250],Integer,Text[30],Code[20],Code[20],Code[20],Text[250])
+commentId: O:Codeunit::CGI Custom Report Mgt# PDF WOR
+name: '"CGI Custom Report Mgt. PDF WOR"'
+uid: O:Codeunit::CGI_Custom_Report_Mgt#_PDF_WOR

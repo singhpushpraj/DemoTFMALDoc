@@ -1,0 +1,79 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Sent Emails"
+alId: ID 8883
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Email#Sent_Email
+  name: System.Email."Sent Email"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: Caption
+  value: Sent Emails
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: SourceTable
+  value: "8889"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Email#Sent_Email
+    name: System.Email."Sent Email"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: tabledata "Sent Email" = rd
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+methods:
+- syntax:
+    content: 'procedure SetNewerThan(NewDate: DateTime)'
+    parameters:
+    - id: NewDate
+      description: Earliest date to include sent emails from.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Set date filter for sent emails.
+  name: SetNewerThan
+  uid: M:Page::System#Email#Sent_Emails.SetNewerThan(DateTime)
+- syntax:
+    content: 'procedure SetRelatedRecord(TableID: Integer, SystemID: Guid)'
+    parameters:
+    - id: TableID
+      description: The entity table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemID
+      description: A record to filter on.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Set filter for related record on sent emails.
+  name: SetRelatedRecord
+  uid: M:Page::System#Email#Sent_Emails.SetRelatedRecord(Integer,Guid)
+commentId: O:Page::System#Email#Sent Emails
+summary: Provides an overview of all e-mail that were sent out.
+name: '"Sent Emails"'
+uid: O:Page::System#Email#Sent_Emails

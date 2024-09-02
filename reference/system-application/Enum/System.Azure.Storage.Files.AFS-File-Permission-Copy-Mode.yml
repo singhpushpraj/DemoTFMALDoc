@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS File Permission Copy Mode"
+alId: ID 8956
+namespace: System.Azure.Storage.Files
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Copy file permissions from source to destination.
+  name: Source
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Permission_Copy_Mode.Source
+- summary: Override file permissions on destination with permissions from the request.
+  name: Override
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Permission_Copy_Mode.Override
+commentId: O:Enum::System#Azure#Storage#Files#AFS File Permission Copy Mode
+summary: Describes possible values for File Permission Copy Mode header.
+name: '"AFS File Permission Copy Mode"'
+uid: O:Enum::System#Azure#Storage#Files#AFS_File_Permission_Copy_Mode

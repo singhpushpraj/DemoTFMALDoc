@@ -1,0 +1,82 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection."Record Selection"
+alId: ID 9555
+namespace: System.Reflection
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Open(TableId: Integer, MaximumCount: Integer, var SelectedRecord: Record "Record Selection Buffer" temporary): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table from which records should be selected.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: MaximumCount
+      description: The maximum number of records allowed in the table that is being looked up. If there are more records, an error is thrown.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SelectedRecord
+      description: The variable to set the selected records.
+      parameterType:
+        name: Record "Record Selection Buffer" temporary
+        isExternal: true
+    return:
+      description: Returns true if a record was selected.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Opens the record lookup page and assigns the selected records on the `SelectedRecord` parameter.
+  name: Open
+  uid: M:Codeunit::System#Reflection#Record_Selection.Open(Integer,Integer,Record_Selection_Buffer@):Boolean
+- syntax:
+    content: 'procedure ToText(TableId: Integer, SystemId: Guid): Text'
+    parameters:
+    - id: TableId
+      description: The ID of the table from which the record is located.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: The system id of the record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: A string representation of the record.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Returns a string representation of the record from the given `TableId` with the given `SystemId`.
+
+    The string representation is a comma separated string of fields that describes the record.
+  examples:
+  - >2+
+
+    For the Company Information table, an example return value is "CRONUS International Ltd.".
+
+    For the Bank Account Ledger Entry table, an example return value is "37,Order 106015,GIRO,01/01/24,Payment,108017"
+  name: ToText
+  uid: M:Codeunit::System#Reflection#Record_Selection.ToText(Integer,Guid):Text
+commentId: O:Codeunit::System#Reflection#Record Selection
+summary: Exposes functionality to look up records.
+name: '"Record Selection"'
+uid: O:Codeunit::System#Reflection#Record_Selection

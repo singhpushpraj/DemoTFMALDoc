@@ -1,0 +1,236 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Graph."Graph Client"
+alId: ID 9350
+namespace: System.Integration.Graph
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Graph
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Initialize(GraphAPIVersion: Enum "Graph API Version", GraphAuthorizationInstance: Interface "Graph Authorization")'
+    parameters:
+    - id: GraphAPIVersion
+      description: API Version to use.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Graph#Graph_API_Version
+        name: System.Integration.Graph."Graph API Version"
+        isExternal: false
+    - id: GraphAuthorizationInstance
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#Integration#Graph#Authorization#Graph_Authorization
+        name: System.Integration.Graph.Authorization."Graph Authorization"
+        isExternal: false
+  summary: Initializes Microsoft Graph client.
+  remarks: Should be called before any GET,PATCH,POST,DELTE request
+  name: Initialize
+  uid: M:Codeunit::System#Integration#Graph#Graph_Client.Initialize(Enum::System#Integration#Graph#Graph_API_Version,Interface::System#Integration#Graph#Authorization#Graph_Authorization)
+- syntax:
+    content: 'procedure Initialize(GraphAPIVersion: Enum "Graph API Version", GraphAuthorizationInstance: Interface "Graph Authorization", HttpClientHandlerInstance: Interface "Http Client Handler")'
+    parameters:
+    - id: GraphAPIVersion
+      description: API Version to use.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Graph#Graph_API_Version
+        name: System.Integration.Graph."Graph API Version"
+        isExternal: false
+    - id: GraphAuthorizationInstance
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#Integration#Graph#Authorization#Graph_Authorization
+        name: System.Integration.Graph.Authorization."Graph Authorization"
+        isExternal: false
+    - id: HttpClientHandlerInstance
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#RestClient#Http_Client_Handler
+        name: System.RestClient."Http Client Handler"
+        isExternal: false
+  summary: Initializes Microsoft Graph client.
+  remarks: Should be called before any GET,PATCH,POST,DELTE request
+  name: Initialize
+  uid: M:Codeunit::System#Integration#Graph#Graph_Client.Initialize(Enum::System#Integration#Graph#Graph_API_Version,Interface::System#Integration#Graph#Authorization#Graph_Authorization,Interface::System#RestClient#Http_Client_Handler)
+- syntax:
+    content: 'procedure SetBaseUrl(BaseUrl: Text)'
+    parameters:
+    - id: BaseUrl
+      description: A valid URL string
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    The base URL to use when constructing the final request URI.
+
+    If not set, the base URL is https://graph.microsoft.com .
+  remarks: It's optional to set the BaseUrl.
+  name: SetBaseUrl
+  uid: M:Codeunit::System#Integration#Graph#Graph_Client.SetBaseUrl(Text)
+- syntax:
+    content: 'procedure Get(RelativeUriToResource: Text, var HttpResponseMessage: Codeunit "Http Response Message"): Boolean'
+    parameters:
+    - id: RelativeUriToResource
+      description: A relativ uri including the resource segments
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HttpResponseMessage
+      description: The response message object.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Get any request to the microsoft graph API
+  remarks: Does not require UI interaction.
+  name: Get
+  uid: M:Codeunit::System#Integration#Graph#Graph_Client.Get(Text,Codeunit::System#RestClient#Http_Response_Message@):Boolean
+- syntax:
+    content: 'procedure Get(RelativeUriToResource: Text, GraphOptionalParameters: Codeunit "Graph Optional Parameters", var HttpResponseMessage: Codeunit "Http Response Message"): Boolean'
+    parameters:
+    - id: RelativeUriToResource
+      description: A relativ uri including the resource segment
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: GraphOptionalParameters
+      description: A wrapper for optional header and query parameters
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Graph#Graph_Optional_Parameters
+        name: System.Integration.Graph."Graph Optional Parameters"
+        isExternal: false
+    - id: HttpResponseMessage
+      description: The response message object.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Get any request to the microsoft graph API
+  remarks: Does not require UI interaction.
+  name: Get
+  uid: M:Codeunit::System#Integration#Graph#Graph_Client.Get(Text,Codeunit::System#Integration#Graph#Graph_Optional_Parameters,Codeunit::System#RestClient#Http_Response_Message@):Boolean
+- syntax:
+    content: 'procedure Post(RelativeUriToResource: Text, GraphOptionalParameters: Codeunit "Graph Optional Parameters", RequestHttpContent: Codeunit "Http Content", var HttpResponseMessage: Codeunit "Http Response Message"): Boolean'
+    parameters:
+    - id: RelativeUriToResource
+      description: A relativ uri including the resource segment
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: GraphOptionalParameters
+      description: A wrapper for optional header and query parameters
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Graph#Graph_Optional_Parameters
+        name: System.Integration.Graph."Graph Optional Parameters"
+        isExternal: false
+    - id: RequestHttpContent
+      description: The HttpContent object for the request.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+    - id: HttpResponseMessage
+      description: The response message object.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Post any request to the microsoft graph API
+  remarks: Does not require UI interaction.
+  name: Post
+  uid: M:Codeunit::System#Integration#Graph#Graph_Client.Post(Text,Codeunit::System#Integration#Graph#Graph_Optional_Parameters,Codeunit::System#RestClient#Http_Content,Codeunit::System#RestClient#Http_Response_Message@):Boolean
+- syntax:
+    content: 'procedure Patch(RelativeUriToResource: Text, GraphOptionalParameters: Codeunit "Graph Optional Parameters", RequestHttpContent: Codeunit "Http Content", var HttpResponseMessage: Codeunit "Http Response Message"): Boolean'
+    parameters:
+    - id: RelativeUriToResource
+      description: A relativ uri including the resource segment
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: GraphOptionalParameters
+      description: A wrapper for optional header and query parameters
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Graph#Graph_Optional_Parameters
+        name: System.Integration.Graph."Graph Optional Parameters"
+        isExternal: false
+    - id: RequestHttpContent
+      description: The HttpContent object for the request.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+    - id: HttpResponseMessage
+      description: The response message object.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Patch any request to the microsoft graph API
+  remarks: Does not require UI interaction.
+  name: Patch
+  uid: M:Codeunit::System#Integration#Graph#Graph_Client.Patch(Text,Codeunit::System#Integration#Graph#Graph_Optional_Parameters,Codeunit::System#RestClient#Http_Content,Codeunit::System#RestClient#Http_Response_Message@):Boolean
+- syntax:
+    content: 'procedure Delete(RelativeUriToResource: Text, GraphOptionalParameters: Codeunit "Graph Optional Parameters", var HttpResponseMessage: Codeunit "Http Response Message"): Boolean'
+    parameters:
+    - id: RelativeUriToResource
+      description: A relativ uri to the resource - e.g. /users/{id|userPrincipalName}.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: GraphOptionalParameters
+      description: A wrapper for optional header and query parameters
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Graph#Graph_Optional_Parameters
+        name: System.Integration.Graph."Graph Optional Parameters"
+        isExternal: false
+    - id: HttpResponseMessage
+      description: The response message object.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Send a DELETE request to the microsoft graph API
+  remarks: Does not require UI interaction.
+  name: Delete
+  uid: M:Codeunit::System#Integration#Graph#Graph_Client.Delete(Text,Codeunit::System#Integration#Graph#Graph_Optional_Parameters,Codeunit::System#RestClient#Http_Response_Message@):Boolean
+commentId: O:Codeunit::System#Integration#Graph#Graph Client
+summary: Exposes functionality to query Microsoft Graph Api
+name: '"Graph Client"'
+uid: O:Codeunit::System#Integration#Graph#Graph_Client

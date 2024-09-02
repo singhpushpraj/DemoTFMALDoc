@@ -1,0 +1,54 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Period Enum"
+alId: ID 3900
+namespace: System.DataAdministration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: The "Never Delete" value results in a retention period where records are never removed.
+  name: '"Never Delete"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.Never_Delete
+- summary: The Custom value can be used to create user defined retention periods.
+  name: Custom
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.Custom
+- summary: The "1 Week" value results in a retention period where records that are older than seven days are deleted.
+  name: '"1 Week"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.1_Week
+- summary: The "28 Days" value results in a retention period where records that are older than twenty-eight days are deleted.
+  name: '"28 Days"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.28_Days
+- summary: The "1 Month" value results in a retention period where records that are older than one month are deleted.
+  name: '"1 Month"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.1_Month
+- summary: The "3 Months" value results in a retention period where records that are older than three months are deleted.
+  name: '"3 Months"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.3_Months
+- summary: The "6 Months" value results in a retention period where records that are older than six months are deleted.
+  name: '"6 Months"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.6_Months
+- summary: The "1 Year" value results in a retention period where records that are older than one year are deleted.
+  name: '"1 Year"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.1_Year
+- summary: The "3 Years" value results in a retention period where records that are older than three years are deleted.
+  name: '"3 Years"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.3_Years
+- summary: The "5 Years" value results in a retention period where records that are older than five years are deleted.
+  name: '"5 Years"'
+  uid: E:Enum::System#DataAdministration#Retention_Period_Enum.5_Years
+implements:
+- internalReference: O:Interface::System#DataAdministration#Retention_Period
+  name: System.DataAdministration."Retention Period"
+  isExternal: false
+commentId: O:Enum::System#DataAdministration#Retention Period Enum
+summary: Enum that defines standard retention periods.
+name: '"Retention Period Enum"'
+uid: O:Enum::System#DataAdministration#Retention_Period_Enum

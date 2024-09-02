@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Globalization."Translation - Read"
+alId: ID 3711
+namespace: System.Globalization
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Globalization
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Translation - Objects"'
+  promoted: false
+commentId: O:PermissionSet::System#Globalization#Translation - Read
+name: '"Translation - Read"'
+uid: O:PermissionSet::System#Globalization#Translation_-_Read

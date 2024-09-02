@@ -1,0 +1,64 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"Microsoft.Dynamics.Nav.Client.OAuthIntegration"'
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: 'N:Module::System_Application::Namespace::'
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+objectProperties:
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ObsoleteReason
+  value: Replaced with OAuthIntegration addin.
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ObsoleteReason
+  value: Replaced with OAuthIntegration addin.
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure StartAuthorization(AuthRequestUrl: Text)'
+    parameters:
+    - id: AuthRequestUrl
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Starts the authorization process.
+  name: StartAuthorization
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#OAuthIntegration.StartAuthorization(Text)
+- syntax:
+    content: 'procedure Authorize(Url: Text, LinkName: Text, LinkToolTip: Text)'
+    parameters:
+    - id: Url
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LinkName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LinkToolTip
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates link to start the authorization process
+  name: Authorize
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#OAuthIntegration.Authorize(Text,Text,Text)
+commentId: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#OAuthIntegration
+name: '"Microsoft.Dynamics.Nav.Client.OAuthIntegration"'
+obsoletion:
+  state: pending
+  reason: Replaced with OAuthIntegration addin.
+  version: "24.0"
+uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#OAuthIntegration

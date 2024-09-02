@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Log Message Type"
+alId: ID 3902
+namespace: System.DataAdministration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Message type used for creating log entries of type Error
+  name: Error
+  uid: E:Enum::System#DataAdministration#Retention_Policy_Log_Message_Type.Error
+- summary: Message type used for creating log entries of type Warning
+  name: Warning
+  uid: E:Enum::System#DataAdministration#Retention_Policy_Log_Message_Type.Warning
+- summary: Message type used for creating log entries of type Info
+  name: Info
+  uid: E:Enum::System#DataAdministration#Retention_Policy_Log_Message_Type.Info
+commentId: O:Enum::System#DataAdministration#Retention Policy Log Message Type
+summary: Specifies the type of log message.
+name: '"Retention Policy Log Message Type"'
+uid: O:Enum::System#DataAdministration#Retention_Policy_Log_Message_Type

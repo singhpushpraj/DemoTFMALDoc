@@ -1,0 +1,20 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Payment Terms"'
+alId: ID 60312
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Used by Trade Finance"'
+  uid: F:TableExtension::CGI_Payment_Terms.CGI_Used_by_Trade_Finance
+commentId: O:TableExtension::CGI Payment Terms
+summary: TableExtension CGI Payment Terms (ID 60312) extends Record Payment Terms.
+name: '"CGI Payment Terms"'
+uid: O:TableExtension::CGI_Payment_Terms

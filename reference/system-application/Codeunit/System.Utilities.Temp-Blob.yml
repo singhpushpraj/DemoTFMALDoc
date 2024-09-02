@@ -1,0 +1,222 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Temp Blob"
+alId: ID 4100
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure CreateInStream(): InStream'
+    return:
+      description: The InStream variable with the BLOB content attached.
+      returnType:
+        name: InStream
+        isExternal: true
+  summary: Creates an InStream object with default encoding for the TempBlob. This enables you to read data from the TempBlob.
+  name: CreateInStream
+  uid: M:Codeunit::System#Utilities#Temp_Blob.CreateInStream:InStream
+- syntax:
+    content: 'procedure CreateInStream(var InStream: InStream)'
+    parameters:
+    - id: InStream
+      description: The InStream variable passed as a VAR to which the BLOB content will be attached.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Creates an InStream object with default encoding for the TempBlob. This enables you to read data from the TempBlob.
+  name: CreateInStream
+  uid: M:Codeunit::System#Utilities#Temp_Blob.CreateInStream(InStream@)
+- syntax:
+    content: 'procedure CreateInStream(Encoding: TextEncoding): InStream'
+    parameters:
+    - id: Encoding
+      description: The text encoding to use.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+    return:
+      description: The InStream variable with the BLOB content attached.
+      returnType:
+        name: InStream
+        isExternal: true
+  summary: Creates an InStream object with default encoding for the TempBlob. This enables you to read data from the TempBlob.
+  name: CreateInStream
+  uid: M:Codeunit::System#Utilities#Temp_Blob.CreateInStream(TextEncoding):InStream
+- syntax:
+    content: 'procedure CreateInStream(var InStream: InStream, Encoding: TextEncoding)'
+    parameters:
+    - id: InStream
+      description: The InStream variable passed as a VAR to which the BLOB content will be attached.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: Encoding
+      description: The text encoding to use.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+  summary: Creates an InStream object with the specified encoding for the TempBlob. This enables you to read data from the TempBlob.
+  name: CreateInStream
+  uid: M:Codeunit::System#Utilities#Temp_Blob.CreateInStream(InStream@,TextEncoding)
+- syntax:
+    content: 'procedure CreateOutStream(): OutStream'
+    return:
+      description: The OutStream variable passed which the BLOB content will be attached.
+      returnType:
+        name: OutStream
+        isExternal: true
+  summary: Creates an OutStream object with default encoding for the TempBlob. This enables you to write data to the TempBlob.
+  name: CreateOutStream
+  uid: M:Codeunit::System#Utilities#Temp_Blob.CreateOutStream:OutStream
+- syntax:
+    content: 'procedure CreateOutStream(var OutStream: OutStream)'
+    parameters:
+    - id: OutStream
+      description: The OutStream variable passed as a VAR to which the BLOB content will be attached.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Creates an OutStream object with default encoding for the TempBlob. This enables you to write data to the TempBlob.
+  name: CreateOutStream
+  uid: M:Codeunit::System#Utilities#Temp_Blob.CreateOutStream(OutStream@)
+- syntax:
+    content: 'procedure CreateOutStream(Encoding: TextEncoding): OutStream'
+    parameters:
+    - id: Encoding
+      description: The text encoding to use.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+    return:
+      description: The OutStream variable with the BLOB content attached.
+      returnType:
+        name: OutStream
+        isExternal: true
+  summary: Creates an OutStream object with the specified encoding for the TempBlob. This enables you to write data to the TempBlob.
+  name: CreateOutStream
+  uid: M:Codeunit::System#Utilities#Temp_Blob.CreateOutStream(TextEncoding):OutStream
+- syntax:
+    content: 'procedure CreateOutStream(var OutStream: OutStream, Encoding: TextEncoding)'
+    parameters:
+    - id: OutStream
+      description: The OutStream variable passed as a VAR to which the BLOB content will be attached.
+      parameterType:
+        name: OutStream
+        isExternal: true
+    - id: Encoding
+      description: The text encoding to use.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+  summary: Creates an OutStream object with the specified encoding for the TempBlob. This enables you to write data to the TempBlob.
+  name: CreateOutStream
+  uid: M:Codeunit::System#Utilities#Temp_Blob.CreateOutStream(OutStream@,TextEncoding)
+- syntax:
+    content: 'procedure HasValue(): Boolean'
+    return:
+      description: True if the TempBlob has a value.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the TempBlob has a value.
+  name: HasValue
+  uid: M:Codeunit::System#Utilities#Temp_Blob.HasValue:Boolean
+- syntax:
+    content: 'procedure Length(): Integer'
+    return:
+      description: The number of bytes stored in the BLOB.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Determines the length of the data stored in the TempBlob.
+  name: Length
+  uid: M:Codeunit::System#Utilities#Temp_Blob.Length:Integer
+- syntax:
+    content: 'procedure FromRecord(RecordVariant: Variant, FieldNo: Integer)'
+    parameters:
+    - id: RecordVariant
+      description: Any Record variable.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldNo
+      description: The field number of the BLOB field to be read.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Copies the value of the BLOB field on the RecordVariant in the specified field to the TempBlob.
+  name: FromRecord
+  uid: M:Codeunit::System#Utilities#Temp_Blob.FromRecord(Variant,Integer)
+- syntax:
+    content: 'procedure FromRecordRef(RecordRef: RecordRef, FieldNo: Integer)'
+    parameters:
+    - id: RecordRef
+      description: A RecordRef variable attached to a Record.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: FieldNo
+      description: The field number of the BLOB field to be read.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Copies the value of the BLOB field on the RecordRef in the specified field to the TempBlob.
+  name: FromRecordRef
+  uid: M:Codeunit::System#Utilities#Temp_Blob.FromRecordRef(RecordRef,Integer)
+- syntax:
+    content: 'procedure ToRecordRef(var RecordRef: RecordRef, FieldNo: Integer)'
+    parameters:
+    - id: RecordRef
+      description: A RecordRef variable attached to a Record.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: FieldNo
+      description: The field number of the Blob field to be written.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Copies the value of the TempBlob to the specified field on the RecordRef.
+  name: ToRecordRef
+  uid: M:Codeunit::System#Utilities#Temp_Blob.ToRecordRef(RecordRef@,Integer)
+- syntax:
+    content: 'procedure FromFieldRef(BlobFieldRef: FieldRef)'
+    parameters:
+    - id: BlobFieldRef
+      description: A FieldRef variable attached to a field for a record.
+      parameterType:
+        name: FieldRef
+        isExternal: true
+  summary: Copies the value of the FieldRef to the TempBlob.
+  name: FromFieldRef
+  uid: M:Codeunit::System#Utilities#Temp_Blob.FromFieldRef(FieldRef)
+- syntax:
+    content: 'procedure ToFieldRef(var BlobFieldRef: FieldRef)'
+    parameters:
+    - id: BlobFieldRef
+      description: A FieldRef variable attached to a field for a record.
+      parameterType:
+        name: FieldRef
+        isExternal: true
+  summary: Copies the value of the TempBlob to the specified FieldRef.
+  name: ToFieldRef
+  uid: M:Codeunit::System#Utilities#Temp_Blob.ToFieldRef(FieldRef@)
+commentId: O:Codeunit::System#Utilities#Temp Blob
+summary: The container to store BLOB data in-memory.
+name: '"Temp Blob"'
+uid: O:Codeunit::System#Utilities#Temp_Blob

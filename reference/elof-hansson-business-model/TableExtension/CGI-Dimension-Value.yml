@@ -1,0 +1,20 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Dimension Value"'
+alId: ID 60310
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Adjust Int. Interest Rate"'
+  uid: F:TableExtension::CGI_Dimension_Value.CGI_Adjust_Int#_Interest_Rate
+commentId: O:TableExtension::CGI Dimension Value
+summary: TableExtension CGI Dimension Value (ID 60310) extends Record Dimension Value.
+name: '"CGI Dimension Value"'
+uid: O:TableExtension::CGI_Dimension_Value

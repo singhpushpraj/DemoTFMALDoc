@@ -1,0 +1,85 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection.Objects
+alId: ID 358
+namespace: System.Reflection
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata AllObjWithCaption = r,
+                      tabledata "Published Application" = r
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetObjectTypeVisible(Visible: Boolean)'
+    parameters:
+    - id: Visible
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetObjectTypeVisible
+  uid: M:Page::System#Reflection#Objects.SetObjectTypeVisible(Boolean)
+- syntax:
+    content: 'procedure SetObjectNameVisible(Visible: Boolean)'
+    parameters:
+    - id: Visible
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetObjectNameVisible
+  uid: M:Page::System#Reflection#Objects.SetObjectNameVisible(Boolean)
+- syntax:
+    content: 'procedure SetObjectCaptionVisible(Visible: Boolean)'
+    parameters:
+    - id: Visible
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetObjectCaptionVisible
+  uid: M:Page::System#Reflection#Objects.SetObjectCaptionVisible(Boolean)
+- syntax:
+    content: 'procedure GetSelectedRecords(CurrSelectedRecords: __MissingTypeSymbol__)'
+    parameters:
+    - id: CurrSelectedRecords
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: GetSelectedRecords
+  uid: M:Page::System#Reflection#Objects.GetSelectedRecords(__MissingSymbol__@)
+commentId: O:Page::System#Reflection#Objects
+summary: List page that contains all of the application objects.
+name: Objects
+uid: O:Page::System#Reflection#Objects

@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Upload And Deploy Extension"
+alId: ID 2507
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+commentId: O:Page::System#Apps#Upload And Deploy Extension
+summary: Allows users to upload an extension and schedule its deployment.
+name: '"Upload And Deploy Extension"'
+uid: O:Page::System#Apps#Upload_And_Deploy_Extension

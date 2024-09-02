@@ -1,0 +1,51 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Vendor"'
+alId: ID 60300
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Agent"'
+  uid: F:TableExtension::CGI_Vendor.CGI_Agent
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Freighter"'
+  uid: F:TableExtension::CGI_Vendor.CGI_Freighter
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"CGI Business Terms Code"'
+  uid: F:TableExtension::CGI_Vendor.CGI_Business_Terms_Code[10]
+- type:
+    name: Option
+    isExternal: true
+  name: '"CGI Profit Share"'
+  uid: F:TableExtension::CGI_Vendor.CGI_Profit_Share
+- type:
+    internalReference: O:Enum::CGI_VendorBankCodeType
+    name: '"CGI VendorBankCodeType"'
+    isExternal: false
+  name: '"CGI Bank Code Type"'
+  uid: F:TableExtension::CGI_Vendor.CGI_Bank_Code_Type
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"CGI Bank Code"'
+  uid: F:TableExtension::CGI_Vendor.CGI_Bank_Code[30]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Insurance Company"'
+  uid: F:TableExtension::CGI_Vendor.CGI_Insurance_Company
+commentId: O:TableExtension::CGI Vendor
+summary: TableExtension CGI Vendor (ID 60300) extends Record Vendor.
+name: '"CGI Vendor"'
+uid: O:TableExtension::CGI_Vendor

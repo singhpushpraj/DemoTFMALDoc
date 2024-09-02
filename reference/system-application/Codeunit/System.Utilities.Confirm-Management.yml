@@ -1,0 +1,115 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Confirm Management"
+alId: ID 27
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetResponseOrDefault(ConfirmQuestion: Text): Boolean'
+    parameters:
+    - id: ConfirmQuestion
+      description: The question to be asked to the user.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The response of the user or the default response passed if no UI is allowed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Raises a confirm dialog with a question and the default response on which the cursor is shown.
+
+    If UI is not allowed, the default response is returned.
+  name: GetResponseOrDefault
+  uid: M:Codeunit::System#Utilities#Confirm_Management.GetResponseOrDefault(Text):Boolean
+- syntax:
+    content: 'procedure GetResponseOrDefault(ConfirmQuestion: Text, DefaultButton: Boolean): Boolean'
+    parameters:
+    - id: ConfirmQuestion
+      description: The question to be asked to the user.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DefaultButton
+      description: The default response expected.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: The response of the user or the default response passed if no UI is allowed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Raises a confirm dialog with a question and the default response on which the cursor is shown.
+
+    If UI is not allowed, the default response is returned.
+  name: GetResponseOrDefault
+  uid: M:Codeunit::System#Utilities#Confirm_Management.GetResponseOrDefault(Text,Boolean):Boolean
+- syntax:
+    content: 'procedure GetResponse(ConfirmQuestion: Text): Boolean'
+    parameters:
+    - id: ConfirmQuestion
+      description: The question to be asked to the user.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The response of the user or FALSE if no UI is allowed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Raises a confirm dialog with a question and the default response on which the cursor is shown.
+
+    If UI is not allowed, the function returns FALSE.
+  name: GetResponse
+  uid: M:Codeunit::System#Utilities#Confirm_Management.GetResponse(Text):Boolean
+- syntax:
+    content: 'procedure GetResponse(ConfirmQuestion: Text, DefaultButton: Boolean): Boolean'
+    parameters:
+    - id: ConfirmQuestion
+      description: The question to be asked to the user.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DefaultButton
+      description: The default response expected.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: The response of the user or FALSE if no UI is allowed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Raises a confirm dialog with a question and the default response on which the cursor is shown.
+
+    If UI is not allowed, the function returns FALSE.
+  name: GetResponse
+  uid: M:Codeunit::System#Utilities#Confirm_Management.GetResponse(Text,Boolean):Boolean
+commentId: O:Codeunit::System#Utilities#Confirm Management
+summary: Exposes functionality to raise a confirm dialog with a question that is to be asked to the user.
+name: '"Confirm Management"'
+uid: O:Codeunit::System#Utilities#Confirm_Management

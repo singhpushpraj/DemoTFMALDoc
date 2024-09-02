@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Document Sharing Source"
+alId: ID 9561
+namespace: System.Integration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The source of the share is from the Application.
+  name: App
+  uid: E:Enum::System#Integration#Document_Sharing_Source.App
+- summary: The source of the share is from the System.
+  name: System
+  uid: E:Enum::System#Integration#Document_Sharing_Source.System
+commentId: O:Enum::System#Integration#Document Sharing Source
+summary: Enum describing the source of the document share record
+name: '"Document Sharing Source"'
+uid: O:Enum::System#Integration#Document_Sharing_Source

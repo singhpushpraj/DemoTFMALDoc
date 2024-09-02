@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Spotlight Tour Text"
+alId: ID 1997
+namespace: System.Environment.Configuration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The title for the first step in the spotlight tour.
+  name: Step1Title
+  uid: E:Enum::System#Environment#Configuration#Spotlight_Tour_Text.Step1Title
+- summary: The text for the first step in the spotlight tour.
+  name: Step1Text
+  uid: E:Enum::System#Environment#Configuration#Spotlight_Tour_Text.Step1Text
+- summary: The title for the second step in the spotlight tour.
+  name: Step2Title
+  uid: E:Enum::System#Environment#Configuration#Spotlight_Tour_Text.Step2Title
+- summary: The text for the second step in the spotlight tour.
+  name: Step2Text
+  uid: E:Enum::System#Environment#Configuration#Spotlight_Tour_Text.Step2Text
+commentId: O:Enum::System#Environment#Configuration#Spotlight Tour Text
+summary: Specifies the exact step of a spotlight tour that a text belongs to.
+name: '"Spotlight Tour Text"'
+uid: O:Enum::System#Environment#Configuration#Spotlight_Tour_Text

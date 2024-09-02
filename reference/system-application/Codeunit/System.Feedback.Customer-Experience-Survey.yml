@@ -1,0 +1,148 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Feedback."Customer Experience Survey"
+alId: ID 9260
+namespace: System.Feedback
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Feedback
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure RegisterEvent(EventName: Text): Boolean'
+    parameters:
+    - id: EventName
+      description: Name of the event to be registered.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Returns true if the request was successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Pushes a new event entry to the CES back-end for the current user.
+  name: RegisterEvent
+  uid: M:Codeunit::System#Feedback#Customer_Experience_Survey.RegisterEvent(Text):Boolean
+- syntax:
+    content: 'procedure GetEligibility(SurveyName: Text, var FormsProId: Text, var FormsProEligibilityId: Text, var IsEligible: Boolean): Boolean'
+    parameters:
+    - id: SurveyName
+      description: Name of the survey.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FormsProId
+      description: ID of the survey.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FormsProEligibilityId
+      description: This ID is used to render survey.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IsEligible
+      description: True means that the user is eligible for prompting, and false means the user is not eligible and should not be prompted.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: Returns true if the request was successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the eligibility of the current user for the indicated survey. Making this API call resets the eligibility flag (this avoids double prompting).
+  name: GetEligibility
+  uid: M:Codeunit::System#Feedback#Customer_Experience_Survey.GetEligibility(Text,Text@,Text@,Boolean@):Boolean
+- syntax:
+    content: 'procedure RegisterEventAndGetEligibility(EventName: Text, SurveyName: Text, var FormsProId: Text, var FormsProEligibilityId: Text, var IsEligible: Boolean): Boolean'
+    parameters:
+    - id: EventName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SurveyName
+      description: Name of the survey.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FormsProId
+      description: ID of the survey.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FormsProEligibilityId
+      description: This ID is used to render survey.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IsEligible
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: Returns true if the request was successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Push a new event entry to the CES back-end, and get the eligibility of a given user for the indicated survey. This endpoint combines the functionality of the above 2 endpoints (adding an event and checking user eligibility).
+  name: RegisterEventAndGetEligibility
+  uid: M:Codeunit::System#Feedback#Customer_Experience_Survey.RegisterEventAndGetEligibility(Text,Text,Text@,Text@,Boolean@):Boolean
+- syntax:
+    content: 'procedure GetSurvey(SurveyName: Text, var CustomerExperienceSurvey: Record "Customer Experience Survey" temporary): Boolean'
+    parameters:
+    - id: SurveyName
+      description: Name of the survey.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CustomerExperienceSurvey
+      description: Survey record with details.
+      parameterType:
+        name: Record "Customer Experience Survey" temporary
+        isExternal: true
+    return:
+      description: Returns true if the request was successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns the details for a single survey
+  name: GetSurvey
+  uid: M:Codeunit::System#Feedback#Customer_Experience_Survey.GetSurvey(Text,Customer_Experience_Survey@):Boolean
+- syntax:
+    content: 'procedure RenderSurvey(SurveyName: Text, FormsProId: Text, FormsProEligibilityId: Text)'
+    parameters:
+    - id: SurveyName
+      description: Name of the survey.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FormsProId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FormsProEligibilityId
+      description: This ID is used to render survey.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Renders a given survey
+  name: RenderSurvey
+  uid: M:Codeunit::System#Feedback#Customer_Experience_Survey.RenderSurvey(Text,Text,Text)
+commentId: O:Codeunit::System#Feedback#Customer Experience Survey
+summary: Provides methods to connect to CES.
+name: '"Customer Experience Survey"'
+uid: O:Codeunit::System#Feedback#Customer_Experience_Survey

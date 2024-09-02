@@ -1,0 +1,127 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Setup Line"
+alId: ID 3902
+namespace: System.DataAdministration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+methods:
+- syntax:
+    content: procedure SetTableFilter()
+  summary: Use this procedure to open a Filter Page Builder page and store the resulting filter in view format on the current record.
+  name: SetTableFilter
+  uid: M:Table::System#DataAdministration#Retention_Policy_Setup_Line.SetTableFilter
+- syntax:
+    content: 'procedure GetTableFilterView(): Text'
+    return:
+      description: The filter in the view format.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Use this procedure to get the filter in view format stored in the current record.
+  name: GetTableFilterView
+  uid: M:Table::System#DataAdministration#Retention_Policy_Setup_Line.GetTableFilterView:Text
+- syntax:
+    content: 'procedure GetTableFilterText(): Text[2048]'
+    return:
+      description: The Filter in text format.
+      returnType:
+        name: Text[2048]
+        isExternal: true
+  summary: Use this procedure to get the filter in text format stored in the current record.
+  name: GetTableFilterText
+  uid: M:Table::System#DataAdministration#Retention_Policy_Setup_Line.GetTableFilterText:Text[2048]
+- syntax:
+    content: 'procedure IsLocked(): Boolean'
+    return:
+      description: True if the line is locked.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Use this procedure to verify whether the retention policy setup line is locked.
+  name: IsLocked
+  uid: M:Table::System#DataAdministration#Retention_Policy_Setup_Line.IsLocked:Boolean
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Table ID"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Table_ID
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"Table Name"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Table_Name[30]
+- type:
+    name: Text[249]
+    isExternal: true
+  name: '"Table Caption"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Table_Caption[249]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Line No."'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Line_No#
+- type:
+    name: Boolean
+    isExternal: true
+  name: Enabled
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Enabled
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Retention Period"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Retention_Period[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Date Field No."'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Date_Field_No#
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"Date Field Name"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Date_Field_Name[30]
+- type:
+    name: Text[80]
+    isExternal: true
+  name: '"Date Field Caption"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.Date_Field_Caption[80]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup_Line.SystemRowVersion
+commentId: O:Table::System#DataAdministration#Retention Policy Setup Line
+summary: This table stores the filter used to apply retention policies to subsets of records in a table.
+name: '"Retention Policy Setup Line"'
+uid: O:Table::System#DataAdministration#Retention_Policy_Setup_Line

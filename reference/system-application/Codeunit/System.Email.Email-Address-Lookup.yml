@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Address Lookup"
+alId: ID 8945
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure GetSelectedSuggestionsAsText(var EmailAddressLookup: Record "Email Address Lookup" temporary): Text'
+    parameters:
+    - id: EmailAddressLookup
+      parameterType:
+        name: Record "Email Address Lookup" temporary
+        isExternal: true
+    return:
+      description: A concatenated string of the email addresses.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Produces a string of email addresses from an Email Address record.
+  name: GetSelectedSuggestionsAsText
+  uid: M:Codeunit::System#Email#Email_Address_Lookup.GetSelectedSuggestionsAsText(Email_Address_Lookup@):Text
+commentId: O:Codeunit::System#Email#Email Address Lookup
+summary: Provides functionality to run an email address lookup.
+name: '"Email Address Lookup"'
+uid: O:Codeunit::System#Email#Email_Address_Lookup

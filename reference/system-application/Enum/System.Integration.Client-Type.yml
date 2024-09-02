@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Client Type"
+alId: ID 9751
+namespace: System.Integration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies that the client type is SOAP.
+  name: SOAP
+  uid: E:Enum::System#Integration#Client_Type.SOAP
+- summary: Specifies that the client type is OData V3.
+  name: ODataV3
+  uid: E:Enum::System#Integration#Client_Type.ODataV3
+- summary: Specifies that the client type is OData V4.
+  name: ODataV4
+  uid: E:Enum::System#Integration#Client_Type.ODataV4
+commentId: O:Enum::System#Integration#Client Type
+summary: This enum has the web service client types.
+name: '"Client Type"'
+uid: O:Enum::System#Integration#Client_Type

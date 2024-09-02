@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Feedback.CustomerExperienceSurvey
+namespace: System.Feedback
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Feedback
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure renderSurvey(ParentElementId: Text, SurveyId: Text, TenantId: Text, FormsProEligibilityId: Text, Locale: Text)'
+    parameters:
+    - id: ParentElementId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SurveyId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TenantId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FormsProEligibilityId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Locale
+      parameterType:
+        name: Text
+        isExternal: true
+  name: renderSurvey
+  uid: M:ControlAddIn::System#Feedback#CustomerExperienceSurvey.renderSurvey(Text,Text,Text,Text,Text)
+commentId: O:ControlAddIn::System#Feedback#CustomerExperienceSurvey
+name: CustomerExperienceSurvey
+uid: O:ControlAddIn::System#Feedback#CustomerExperienceSurvey

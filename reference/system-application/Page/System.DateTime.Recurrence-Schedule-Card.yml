@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Recurrence Schedule Card"
+alId: ID 4690
+namespace: System.DateTime
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+sourceTableType:
+  name: System.DateTime."Recurrence Schedule"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataCaptionExpression
+  value: Format(Rec.Pattern)
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "4690"
+  promoted: true
+- name: Permissions
+  value: tabledata "Recurrence Schedule" = rmd
+  promoted: false
+commentId: O:Page::System#DateTime#Recurrence Schedule Card
+summary: Allows users to view and edit existing recurrence schedules.
+name: '"Recurrence Schedule Card"'
+uid: O:Page::System#DateTime#Recurrence_Schedule_Card

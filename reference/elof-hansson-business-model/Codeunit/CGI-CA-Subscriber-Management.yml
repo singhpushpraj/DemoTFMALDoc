@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA Subscriber Management"'
+alId: ID 60301
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+commentId: O:Codeunit::CGI CA Subscriber Management
+summary: Codeunit CGI CA Subscriber Management (ID 60301)
+name: '"CGI CA Subscriber Management"'
+uid: O:Codeunit::CGI_CA_Subscriber_Management

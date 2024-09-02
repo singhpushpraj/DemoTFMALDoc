@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Templates Related Card"
+alId: ID 9986
+namespace: System.Integration.Word
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+sourceTableType:
+  name: System.Integration.Word."Word Templates Related Table"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: Card
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Related Entity
+  promoted: false
+- name: DataCaptionExpression
+  value: Rec."Related Table Caption"
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: SourceTable
+  value: "9990"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Integration#Word#Word Templates Related Card
+summary: A list part factbox to view related entities for Word templates.
+name: '"Word Templates Related Card"'
+uid: O:Page::System#Integration#Word#Word_Templates_Related_Card

@@ -1,0 +1,156 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."SharePoint Auth."
+alId: ID 9142
+namespace: System.Integration.Sharepoint
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use CreateAuthorizationCode with SecretText data type for ClientSecret.,24.0)]'
+    content: 'procedure CreateAuthorizationCode(EntraTenantId: Text, ClientId: Text, ClientSecret: Text, Scope: Text): Interface "SharePoint Authorization"'
+    parameters:
+    - id: EntraTenantId
+      description: Microsoft Entra tenant ID
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal - App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      description: The Application (client) secret configured in the "Azure Portal - Certificates & Secrets".
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scope
+      description: A scope that you want the user to consent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Codeunit instance implementing authorization interface
+      returnType:
+        internalReference: O:Interface::System#Integration#Sharepoint#SharePoint_Authorization
+        name: System.Integration.Sharepoint."SharePoint Authorization"
+        isExternal: false
+  summary: Creates an authorization mechanism with authentication code.
+  name: CreateAuthorizationCode
+  obsoletion:
+    state: pending
+    reason: Use CreateAuthorizationCode with SecretText data type for ClientSecret.
+    version: "24.0"
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Auth#.CreateAuthorizationCode(Text,Text,Text,Text):Interface::System#Integration#Sharepoint#SharePoint_Authorization
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use CreateAuthorizationCode with SecretText data type for ClientSecret.,24.0)]'
+    content: 'procedure CreateAuthorizationCode(EntraTenantId: Text, ClientId: Text, ClientSecret: Text, Scopes: List of [Text]): Interface "SharePoint Authorization"'
+    parameters:
+    - id: EntraTenantId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Interface::System#Integration#Sharepoint#SharePoint_Authorization
+        name: System.Integration.Sharepoint."SharePoint Authorization"
+        isExternal: false
+  name: CreateAuthorizationCode
+  obsoletion:
+    state: pending
+    reason: Use CreateAuthorizationCode with SecretText data type for ClientSecret.
+    version: "24.0"
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Auth#.CreateAuthorizationCode(Text,Text,Text,List_of_[Text]):Interface::System#Integration#Sharepoint#SharePoint_Authorization
+- syntax:
+    content: 'procedure CreateAuthorizationCode(EntraTenantId: Text, ClientId: Text, ClientSecret: SecretText, Scope: Text): Interface "SharePoint Authorization"'
+    parameters:
+    - id: EntraTenantId
+      description: Microsoft Entra tenant ID
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal - App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      description: The Application (client) secret configured in the "Azure Portal - Certificates & Secrets".
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Scope
+      description: A scope that you want the user to consent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Codeunit instance implementing authorization interface
+      returnType:
+        internalReference: O:Interface::System#Integration#Sharepoint#SharePoint_Authorization
+        name: System.Integration.Sharepoint."SharePoint Authorization"
+        isExternal: false
+  summary: Creates an authorization mechanism with authentication code.
+  name: CreateAuthorizationCode
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Auth#.CreateAuthorizationCode(Text,Text,SecretText,Text):Interface::System#Integration#Sharepoint#SharePoint_Authorization
+- syntax:
+    content: 'procedure CreateAuthorizationCode(EntraTenantId: Text, ClientId: Text, ClientSecret: SecretText, Scopes: List of [Text]): Interface "SharePoint Authorization"'
+    parameters:
+    - id: EntraTenantId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Interface::System#Integration#Sharepoint#SharePoint_Authorization
+        name: System.Integration.Sharepoint."SharePoint Authorization"
+        isExternal: false
+  name: CreateAuthorizationCode
+  uid: M:Codeunit::System#Integration#Sharepoint#SharePoint_Auth#.CreateAuthorizationCode(Text,Text,SecretText,List_of_[Text]):Interface::System#Integration#Sharepoint#SharePoint_Authorization
+commentId: O:Codeunit::System#Integration#Sharepoint#SharePoint Auth#
+summary: Provides functionality for creating means for authorizing HTTP requests made to SharePoint REST API.
+name: '"SharePoint Auth."'
+uid: O:Codeunit::System#Integration#Sharepoint#SharePoint_Auth#

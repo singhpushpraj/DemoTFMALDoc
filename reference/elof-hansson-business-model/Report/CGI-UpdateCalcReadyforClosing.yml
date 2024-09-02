@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI UpdateCalcReadyforClosing"'
+alId: ID 60364
+baseKind: Report
+kind: Report
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Report](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-report-object)'
+objectProperties:
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: UseRequestPage
+  value: "False"
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: UseRequestPage
+  value: "False"
+  promoted: false
+commentId: O:Report::CGI UpdateCalcReadyforClosing
+name: '"CGI UpdateCalcReadyforClosing"'
+uid: O:Report::CGI_UpdateCalcReadyforClosing

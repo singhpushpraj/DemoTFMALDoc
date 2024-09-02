@@ -1,0 +1,61 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Font Encoder"
+namespace: System.Text
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure EncodeFont(InputText: Text, var BarcodeEncodeSettings: Record "Barcode Encode Settings" temporary): Text'
+    parameters:
+    - id: InputText
+      description: The text to encode.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BarcodeEncodeSettings
+      description: Settings to use when encoding the input text.
+      parameterType:
+        name: Record "Barcode Encode Settings" temporary
+        isExternal: true
+    return:
+      description: The encoded barcode.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Encodes a input text to a barcode font.
+  name: EncodeFont
+  uid: M:Interface::System#Text#Barcode_Font_Encoder.EncodeFont(Text,Barcode_Encode_Settings@):Text
+- syntax:
+    content: 'procedure IsValidInput(InputText: Text, var BarcodeEncodeSettings: Record "Barcode Encode Settings" temporary): Boolean'
+    parameters:
+    - id: InputText
+      description: The text to validate.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BarcodeEncodeSettings
+      parameterType:
+        name: Record "Barcode Encode Settings" temporary
+        isExternal: true
+    return:
+      description: True if the validation succeeds; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Validates whether a text can be encoded.
+
+    The validation is based on a regular expression according to
+
+    https://www.neodynamic.com/Products/Help/BarcodeWinControl2.5/working_barcode_symbologies.htm
+  name: IsValidInput
+  uid: M:Interface::System#Text#Barcode_Font_Encoder.IsValidInput(Text,Barcode_Encode_Settings@):Boolean
+commentId: O:Interface::System#Text#Barcode Font Encoder
+summary: Exposes common interface for barcode font encoder.
+name: '"Barcode Font Encoder"'
+uid: O:Interface::System#Text#Barcode_Font_Encoder

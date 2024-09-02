@@ -1,0 +1,131 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Data Archive Provider"
+namespace: System.DataAdministration
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure Create(Description: Text): Integer'
+    parameters:
+    - id: Description
+      description: The name or description for the archive entry. Will typically be the calling object name.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The entry no. of the created archive entry - if any.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Creates a new archive entry.
+  name: Create
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.Create(Text):Integer
+- syntax:
+    content: 'procedure Open(ID: Integer)'
+    parameters:
+    - id: ID
+      description: The ID of the archive entry.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Opens an existing archive entry.
+  name: Open
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.Open(Integer)
+- syntax:
+    content: procedure Save()
+  summary: Saves and closes the currently open archive entry.
+  name: Save
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.Save
+- syntax:
+    content: procedure DiscardChanges()
+  summary: Discards any additions and closes the currently open archive entry.
+  name: DiscardChanges
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.DiscardChanges
+- syntax:
+    content: 'procedure SaveRecord(var RecordRef: RecordRef)'
+    parameters:
+    - id: RecordRef
+      description: The record will be copied to the archive.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: Saves the supplied record to the currently open archive entry.
+  name: SaveRecord
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.SaveRecord(RecordRef@)
+- syntax:
+    content: 'procedure SaveRecord(RecordVar: Variant)'
+    parameters:
+    - id: RecordVar
+      description: The record will be copied to the archive.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Saves the supplied record to the currently open archive entry.
+  name: SaveRecord
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.SaveRecord(Variant)
+- syntax:
+    content: 'procedure SaveRecords(var RecordRef: RecordRef)'
+    parameters:
+    - id: RecordRef
+      description: All records for the RecRef within the filters will be copied to the archive.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: Saves all records within the filters to the currently open archive entry.
+  name: SaveRecords
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.SaveRecords(RecordRef@)
+- syntax:
+    content: procedure StartSubscriptionToDelete()
+  summary: Starts subscription to the OnDatabaseDelete trigger and calls SaveRecord with any deleted record.
+  name: StartSubscriptionToDelete
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.StartSubscriptionToDelete
+- syntax:
+    content: 'procedure StartSubscriptionToDelete(ResetSession: Boolean)'
+    parameters:
+    - id: ResetSession
+      description: If true, then the session will be reset. This can be necessary if a deletion has already been made on any table that should be archived.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Starts subscription to the OnDatabaseDelete trigger and calls SaveRecord with any deleted record.
+  name: StartSubscriptionToDelete
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.StartSubscriptionToDelete(Boolean)
+- syntax:
+    content: procedure StopSubscriptionToDelete()
+  summary: Stops the subscription to the OnDatabaseDelete trigger.
+  name: StopSubscriptionToDelete
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.StopSubscriptionToDelete
+- syntax:
+    content: 'procedure DataArchiveProviderExists(): Boolean'
+    return:
+      description: Returns true if a provider for this interface is installed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Informs the consumer app whether there is a provider for this interface.
+  name: DataArchiveProviderExists
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.DataArchiveProviderExists:Boolean
+- syntax:
+    content: 'procedure SetDataArchiveProvider(var NewDataArchiveProvider: Interface "Data Archive Provider")'
+    parameters:
+    - id: NewDataArchiveProvider
+      description: The global instance of IDataArchiveProvider.
+      parameterType:
+        internalReference: O:Interface::System#DataAdministration#Data_Archive_Provider
+        name: System.DataAdministration."Data Archive Provider"
+        isExternal: false
+  summary: Sets the instance of the provider. Needed for self-reference.
+  name: SetDataArchiveProvider
+  uid: M:Interface::System#DataAdministration#Data_Archive_Provider.SetDataArchiveProvider(Interface::System#DataAdministration#Data_Archive_Provider@)
+commentId: O:Interface::System#DataAdministration#Data Archive Provider
+summary: >-
+  Exposes an interface for Data Archive.
+
+  Data Archive is called from application objects to store data.
+name: '"Data Archive Provider"'
+uid: O:Interface::System#DataAdministration#Data_Archive_Provider

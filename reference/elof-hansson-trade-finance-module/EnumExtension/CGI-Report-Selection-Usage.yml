@@ -1,0 +1,20 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Report Selection Usage"'
+alId: ID 70300
+baseKind: Enum
+kind: EnumExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  name: Microsoft.Foundation.Reporting."Report Selection Usage"
+  isExternal: true
+seeAlso:
+- '[Enum Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+enumValues:
+- name: '"LC-BG"'
+  uid: E:EnumExtension::CGI_Report_Selection_Usage.LC-BG
+commentId: O:EnumExtension::CGI Report Selection Usage
+summary: enumextension 703000 CGI Report Selection Usage extends Report Selection Usage
+name: '"CGI Report Selection Usage"'
+uid: O:EnumExtension::CGI_Report_Selection_Usage

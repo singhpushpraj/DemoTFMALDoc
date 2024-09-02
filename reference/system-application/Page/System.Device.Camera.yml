@@ -1,0 +1,146 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device.Camera
+alId: ID 1908
+namespace: System.Device
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Camera
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsAvailable(): Boolean'
+    return:
+      description: True if the camera is available, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the camera on the client device is available.
+  name: IsAvailable
+  uid: M:Page::System#Device#Camera.IsAvailable:Boolean
+- syntax:
+    content: 'procedure SetAllowEdit(AllowEdit: Boolean)'
+    parameters:
+    - id: AllowEdit
+      description: True to enable simple editing, false otherwise.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether simple editing is allowed before the picture is stored.
+  name: SetAllowEdit
+  uid: M:Page::System#Device#Camera.SetAllowEdit(Boolean)
+- syntax:
+    content: 'procedure SetEncodingType(EncodingType: Enum "Image Encoding")'
+    parameters:
+    - id: EncodingType
+      description: The encoding to use when saving the picture.
+      parameterType:
+        internalReference: O:Enum::System#Device#Image_Encoding
+        name: System.Device."Image Encoding"
+        isExternal: false
+  summary: Sets the returned image file's encoding. The default is <see cref="JPEG"></see>.
+  name: SetEncodingType
+  uid: M:Page::System#Device#Camera.SetEncodingType(Enum::System#Device#Image_Encoding)
+- syntax:
+    content: 'procedure SetQuality(Quality: Integer)'
+    parameters:
+    - id: Quality
+      description: The quality of the picture to be taken.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: >-
+    Sets the quality of the saved image, expressed as a number
+
+    between 0 and 100, where 100 is the highest available resolution.
+
+    The default is 50.
+  name: SetQuality
+  uid: M:Page::System#Device#Camera.SetQuality(Integer)
+- syntax:
+    content: 'procedure GetPicture(var TempBlob: Codeunit "Temp Blob")'
+    parameters:
+    - id: TempBlob
+      description: The object to put the picture BLOB in.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+  summary: >-
+    Gets the picture that was taken when the page was opened.
+
+    An error is displayed if the function is called without opening the page first.
+  name: GetPicture
+  uid: M:Page::System#Device#Camera.GetPicture(Codeunit::System#Utilities#Temp_Blob@)
+- syntax:
+    content: 'procedure HasPicture(): Boolean'
+    return:
+      description: True if the picture is available, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the picture is available and can be obtained with a <see cref="GetPicture"></see> method.
+  remarks: >-
+    The picture will not be available if the page was not opened
+
+    (e. g. Camera.RunModal() function was not called) or if the dialog was canceled.
+  name: HasPicture
+  uid: M:Page::System#Device#Camera.HasPicture:Boolean
+- syntax:
+    content: 'procedure GetPicture(InStream: InStream)'
+    parameters:
+    - id: InStream
+      description: The InStream to read the picture from.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: >-
+    Gets the picture that was taken when the page was opened.
+
+    An error is displayed if the function is called without opening the page first.
+  name: GetPicture
+  uid: M:Page::System#Device#Camera.GetPicture(InStream)
+commentId: O:Page::System#Device#Camera
+summary: Provides an interface for accessing the camera on the client device.
+examples:
+- >2+
+
+  ``` AL
+
+  Camera.RunModal();
+
+  if Camera.HasPicture() then begin
+      Camera.GetPicture(InStream);
+  ...
+
+  end;
+
+  Clear(Camera);
+
+  ```
+name: Camera
+uid: O:Page::System#Device#Camera

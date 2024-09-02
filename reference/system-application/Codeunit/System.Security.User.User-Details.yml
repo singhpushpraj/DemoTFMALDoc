@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Details"
+alId: ID 774
+namespace: System.Security.User
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Get(var UserDetails: Record "User Details" temporary)'
+    parameters:
+    - id: UserDetails
+      description: The user details record to be populated.
+      parameterType:
+        name: Record "User Details" temporary
+        isExternal: true
+  summary: Retrieves the details of a user.
+  name: Get
+  uid: M:Codeunit::System#Security#User#User_Details.Get(User_Details@)
+commentId: O:Codeunit::System#Security#User#User Details
+summary: Contains functionality related to retrieving user details.
+name: '"User Details"'
+uid: O:Codeunit::System#Security#User#User_Details

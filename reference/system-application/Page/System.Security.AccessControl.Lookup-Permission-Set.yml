@@ -1,0 +1,61 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Lookup Permission Set"
+alId: ID 9854
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Permission Set Lookup
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableView
+  value: >-
+    sorting(Scope, "Role ID", "App ID")
+                          order(ascending)
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetSelectedRecord(CurrSelectedRecord: __MissingTypeSymbol__)'
+    parameters:
+    - id: CurrSelectedRecord
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: GetSelectedRecord
+  uid: M:Page::System#Security#AccessControl#Lookup_Permission_Set.GetSelectedRecord(__MissingSymbol__@)
+- syntax:
+    content: 'procedure GetSelectedRecords(CurrSelectedRecords: __MissingTypeSymbol__)'
+    parameters:
+    - id: CurrSelectedRecords
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: GetSelectedRecords
+  uid: M:Page::System#Security#AccessControl#Lookup_Permission_Set.GetSelectedRecords(__MissingSymbol__@)
+commentId: O:Page::System#Security#AccessControl#Lookup Permission Set
+summary: Look up page for selecting a permission set.
+name: '"Lookup Permission Set"'
+uid: O:Page::System#Security#AccessControl#Lookup_Permission_Set

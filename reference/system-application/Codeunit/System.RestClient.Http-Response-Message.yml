@@ -1,0 +1,193 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.RestClient."Http Response Message"
+alId: ID 2356
+namespace: System.RestClient
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.RestClient
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetIsBlockedByEnvironment(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: True if the request is blocked by the environment; otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets whether the request is blocked by the environment.
+  name: SetIsBlockedByEnvironment
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.SetIsBlockedByEnvironment(Boolean)
+- syntax:
+    content: 'procedure GetIsBlockedByEnvironment(): Boolean'
+    return:
+      description: True if the request is blocked by the environment; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets whether the request is blocked by the environment.
+  name: GetIsBlockedByEnvironment
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.GetIsBlockedByEnvironment:Boolean
+- syntax:
+    content: 'procedure SetHttpStatusCode(Value: Integer)'
+    parameters:
+    - id: Value
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: SetHttpStatusCode
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.SetHttpStatusCode(Integer)
+- syntax:
+    content: 'procedure GetHttpStatusCode(): Integer'
+    return:
+      description: The HTTP status code.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the HTTP status code of the response message.
+  name: GetHttpStatusCode
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.GetHttpStatusCode:Integer
+- syntax:
+    content: 'procedure SetIsSuccessStatusCode(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: True if the HTTP response message has a success status code; otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets whether the HTTP response message has a success status code.
+  remarks: Any value in the HTTP status code range 2xx is considered to be successful.
+  name: SetIsSuccessStatusCode
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.SetIsSuccessStatusCode(Boolean)
+- syntax:
+    content: 'procedure GetIsSuccessStatusCode(): Boolean'
+    return:
+      description: True if the HTTP response message has a success status code; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether the HTTP response message has a success status code.
+  remarks: Any value in the HTTP status code range 2xx is considered to be successful.
+  name: GetIsSuccessStatusCode
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.GetIsSuccessStatusCode:Boolean
+- syntax:
+    content: 'procedure SetReasonPhrase(Value: Text)'
+    parameters:
+    - id: Value
+      description: The reason phrase sent by the server.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the reason phrase which typically is sent by servers together with the status code.
+  name: SetReasonPhrase
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.SetReasonPhrase(Text)
+- syntax:
+    content: 'procedure GetReasonPhrase(): Text'
+    return:
+      description: The reason phrase sent by the server.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the reason phrase which typically is sent by servers together with the status code.
+  name: GetReasonPhrase
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.GetReasonPhrase:Text
+- syntax:
+    content: 'procedure SetContent(Content: Codeunit "Http Content")'
+    parameters:
+    - id: Content
+      description: The content of the HTTP response message.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Sets the HTTP content sent back by the server.
+  name: SetContent
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.SetContent(Codeunit::System#RestClient#Http_Content)
+- syntax:
+    content: 'procedure GetContent(): Codeunit "Http Content"'
+    return:
+      description: The content of the HTTP response message.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Gets the HTTP content sent back by the server.
+  name: GetContent
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.GetContent:Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure SetResponseMessage(ResponseMessage: HttpResponseMessage)'
+    parameters:
+    - id: ResponseMessage
+      description: The HTTP response message.
+      parameterType:
+        name: HttpResponseMessage
+        isExternal: true
+  summary: Sets the HTTP response message.
+  name: SetResponseMessage
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.SetResponseMessage(HttpResponseMessage)
+- syntax:
+    content: 'procedure GetResponseMessage(): HttpResponseMessage'
+    return:
+      description: The HTTPResponseMessage object.
+      returnType:
+        name: HttpResponseMessage
+        isExternal: true
+  summary: Gets the HTTP response message.
+  name: GetResponseMessage
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.GetResponseMessage:HttpResponseMessage
+- syntax:
+    content: 'procedure SetHeaders(Headers: HttpHeaders)'
+    parameters:
+    - id: Headers
+      description: The HTTP headers.
+      parameterType:
+        name: HttpHeaders
+        isExternal: true
+  summary: Sets the HTTP headers.
+  name: SetHeaders
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.SetHeaders(HttpHeaders)
+- syntax:
+    content: 'procedure GetHeaders(): HttpHeaders'
+    return:
+      description: The HTTP headers.
+      returnType:
+        name: HttpHeaders
+        isExternal: true
+  summary: Gets the HTTP headers.
+  name: GetHeaders
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.GetHeaders:HttpHeaders
+- syntax:
+    content: 'procedure SetErrorMessage(Value: Text)'
+    parameters:
+    - id: Value
+      description: The error message.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets an error message when the request failed.
+  name: SetErrorMessage
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.SetErrorMessage(Text)
+- syntax:
+    content: 'procedure GetErrorMessage(): Text'
+    return:
+      description: The error message.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the error message when the request failed.
+  name: GetErrorMessage
+  uid: M:Codeunit::System#RestClient#Http_Response_Message.GetErrorMessage:Text
+commentId: O:Codeunit::System#RestClient#Http Response Message
+summary: Holder object for the HTTP response data.
+name: '"Http Response Message"'
+uid: O:Codeunit::System#RestClient#Http_Response_Message

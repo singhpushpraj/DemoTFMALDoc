@@ -1,0 +1,120 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."SharePoint List"
+alId: ID 9105
+namespace: System.Integration.Sharepoint
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Caption
+  value: SharePoint List
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.Id
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Title
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.Title[250]
+- type:
+    name: DateTime
+    isExternal: true
+  name: Created
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.Created
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Description
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.Description[250]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Base Template"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.Base_Template[250]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Base Type"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.Base_Type[250]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Is Catalog"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.Is_Catalog
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"List Item Entity Type"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.List_Item_Entity_Type[250]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataId
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.OdataId[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataType
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.OdataType[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataEditLink
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.OdataEditLink[2048]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List.SystemRowVersion
+commentId: O:Table::System#Integration#Sharepoint#SharePoint List
+summary: Holds information about list entity.
+name: '"SharePoint List"'
+uid: O:Table::System#Integration#Sharepoint#SharePoint_List

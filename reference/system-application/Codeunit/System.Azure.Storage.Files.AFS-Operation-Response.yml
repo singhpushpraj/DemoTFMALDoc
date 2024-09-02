@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS Operation Response"
+alId: ID 8959
+namespace: System.Azure.Storage.Files
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsSuccessful(): Boolean'
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the operation was successful.
+  name: IsSuccessful
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response.IsSuccessful:Boolean
+- syntax:
+    content: 'procedure GetError(): Text'
+    return:
+      description: Text representation of the error that occurred during the operation.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the error (if any) of the response.
+  name: GetError
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response.GetError:Text
+- syntax:
+    content: 'procedure GetHeaders(): HttpHeaders'
+    return:
+      description: HttpHeaders of the response.
+      returnType:
+        name: HttpHeaders
+        isExternal: true
+  summary: Gets the HttpHeaders (if any) of the response.
+  name: GetHeaders
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response.GetHeaders:HttpHeaders
+commentId: O:Codeunit::System#Azure#Storage#Files#AFS Operation Response
+summary: Stores the response of an AFS client operation.
+name: '"AFS Operation Response"'
+uid: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response

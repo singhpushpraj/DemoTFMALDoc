@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Signup Context"
+alId: ID 150
+namespace: System.Environment.Configuration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: The blank value indicates the sinup context was not set or unknown.
+  name: '" "'
+  uid: E:Enum::System#Environment#Configuration#Signup_Context._
+- summary: The Viral Signup value indicates the tenant was created by viral signup.
+  name: '"Viral Signup"'
+  uid: E:Enum::System#Environment#Configuration#Signup_Context.Viral_Signup
+commentId: O:Enum::System#Environment#Configuration#Signup Context
+summary: The Signup Context is used to track from where a tenant originated.
+name: '"Signup Context"'
+uid: O:Enum::System#Environment#Configuration#Signup_Context

@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Import TFM Comments"'
+alId: ID 70304
+baseKind: XmlPort
+kind: XmlPort
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Import TFM Comments
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+- name: Caption
+  value: Import TFM Comments
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+commentId: O:XmlPort::CGI Import TFM Comments
+summary: >-
+  Imports TFM Comments from csv file into table CGI TFM Comment Line
+
+  It checks based on field "LCBG GUID", if not record is found,
+
+  it will create the SQL Data Buffer with Import Type = TFM Comments
+name: '"CGI Import TFM Comments"'
+uid: O:XmlPort::CGI_Import_TFM_Comments

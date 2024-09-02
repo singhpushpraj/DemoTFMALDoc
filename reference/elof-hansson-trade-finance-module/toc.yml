@@ -1,0 +1,165 @@
+﻿items:
+- name: Overview
+  uid: N:Module::Elof_Hansson_Trade_Finance_Module
+- name: Reference
+  items:
+  - name: Tables
+    items:
+    - name: CGI TFM Approve Buffer
+      uid: O:Table::CGI_TFM_Approve_Buffer
+    - name: CGI TFM Comment Code
+      uid: O:Table::CGI_TFM_Comment_Code
+    - name: CGI TFM Comment Line
+      uid: O:Table::CGI_TFM_Comment_Line
+    - name: CGI TFM LCBG Header
+      uid: O:Table::CGI_TFM_LCBG_Header
+    - name: CGI TFM LCBG Line
+      uid: O:Table::CGI_TFM_LCBG_Line
+    - name: CGI TFM SQLData Buffer
+      uid: O:Table::CGI_TFM_SQLData_Buffer
+  - name: Codeunits
+    items:
+    - name: CGI TFM Approve Buffer Posting
+      uid: O:Codeunit::CGI_TFM_Approve_Buffer_Posting
+    - name: CGI TFM Send Email
+      uid: O:Codeunit::CGI_TFM_Send_Email
+    - name: Update LCBG Sales Invoice Info
+      uid: O:Codeunit::Update_LCBG_Sales_Invoice_Info
+  - name: Pages
+    items:
+    - name: CGI Add Precalc. to LC Dialog
+      uid: O:Page::CGI_Add_Precalc#_to_LC_Dialog
+    - name: CGI Letter of Cr. Export List
+      uid: O:Page::CGI_Letter_of_Cr#_Export_List
+    - name: CGI Letter of Cr. Import List
+      uid: O:Page::CGI_Letter_of_Cr#_Import_List
+    - name: CGI Letter of Credit Export
+      uid: O:Page::CGI_Letter_of_Credit_Export
+    - name: CGI Letter of Credit Import
+      uid: O:Page::CGI_Letter_of_Credit_Import
+    - name: CGI TFM Administration
+      uid: O:Page::CGI_TFM_Administration
+    - name: CGI TFM Approve Calc. Buffer
+      uid: O:Page::CGI_TFM_Approve_Calc#_Buffer
+    - name: CGI TFM Bank Guarantee
+      uid: O:Page::CGI_TFM_Bank_Guarantee
+    - name: CGI TFM Bank Guarantee List
+      uid: O:Page::CGI_TFM_Bank_Guarantee_List
+    - name: CGI TFM Bnk. Guarantee List
+      uid: O:Page::CGI_TFM_Bnk#_Guarantee_List
+    - name: CGI TFM Comment List
+      uid: O:Page::CGI_TFM_Comment_List
+    - name: CGI TFM Comment Sheet
+      uid: O:Page::CGI_TFM_Comment_Sheet
+    - name: CGI TFM Confirming fee
+      uid: O:Page::CGI_TFM_Confirming_fee
+    - name: CGI TFM Country Comments
+      uid: O:Page::CGI_TFM_Country_Comments
+    - name: CGI TFM Document Layout - LCBG
+      uid: O:Page::CGI_TFM_Document_Layout_-_LCBG
+    - name: CGI TFM LC Bank Guarant. Costs
+      uid: O:Page::CGI_TFM_LC_Bank_Guarant#_Costs
+    - name: CGI TFM LC Calculation
+      uid: O:Page::CGI_TFM_LC_Calculation
+    - name: CGI TFM LC Purchase Invoices
+      uid: O:Page::CGI_TFM_LC_Purchase_Invoices
+    - name: CGI TFM LC Sales Invoices
+      uid: O:Page::CGI_TFM_LC_Sales_Invoices
+    - name: CGI TFM Letter of Cr. List
+      uid: O:Page::CGI_TFM_Letter_of_Cr#_List
+    - name: CGI TFM Main Menu
+      uid: O:Page::CGI_TFM_Main_Menu
+    - name: CGI TFM Migration
+      uid: O:Page::CGI_TFM_Migration
+    - name: CGI TFM SQLData Buffer
+      uid: O:Page::CGI_TFM_SQLData_Buffer
+  - name: Reports
+    items:
+    - name: CGI Select Email Type
+      uid: O:Report::CGI_Select_Email_Type
+    - name: CGI Send LCBG Email
+      uid: O:Report::CGI_Send_LCBG_Email
+  - name: XmlPorts
+    items:
+    - name: CGI Import Bank Guarantee
+      uid: O:XmlPort::CGI_Import_Bank_Guarantee
+    - name: CGI Import BG Calculation
+      uid: O:XmlPort::CGI_Import_BG_Calculation
+    - name: CGI Import BGCost
+      uid: O:XmlPort::CGI_Import_BGCost
+    - name: CGI Import Country Comments
+      uid: O:XmlPort::CGI_Import_Country_Comments
+    - name: CGI Import LC Calculation
+      uid: O:XmlPort::CGI_Import_LC_Calculation
+    - name: CGI Import Letter Of Cr. Bank
+      uid: O:XmlPort::CGI_Import_Letter_Of_Cr#_Bank
+    - name: CGI Import Letter Of Cr. Expo
+      uid: O:XmlPort::CGI_Import_Letter_Of_Cr#_Expo
+    - name: CGI Import Letter Of Cr. Imp
+      uid: O:XmlPort::CGI_Import_Letter_Of_Cr#_Imp
+    - name: CGI Import TFM Comments
+      uid: O:XmlPort::CGI_Import_TFM_Comments
+    - name: CGI Letter Of Credit Confirm
+      uid: O:XmlPort::CGI_Letter_Of_Credit_Confirm
+  - name: PageExtensions
+    items:
+    - name: CGI TFM Calculation Card
+      uid: O:PageExtension::CGI_TFM_Calculation_Card
+    - name: CGI TFM Calculation List
+      uid: O:PageExtension::CGI_TFM_Calculation_List
+    - name: 'CGI TFM Calculation Setup '
+      uid: O:PageExtension::CGI_TFM_Calculation_Setup_
+    - name: CGI TFM Division List
+      uid: O:PageExtension::CGI_TFM_Division_List
+    - name: CGI TFM Purchase Calc. List
+      uid: O:PageExtension::CGI_TFM_Purchase_Calc#_List
+    - name: CGI TFM Purchase Calculation
+      uid: O:PageExtension::CGI_TFM_Purchase_Calculation
+    - name: CGI TFM Sales Calculation
+      uid: O:PageExtension::CGI_TFM_Sales_Calculation
+    - name: CGI TFM Sales Calculation List
+      uid: O:PageExtension::CGI_TFM_Sales_Calculation_List
+    - name: CGI TFM Vendor Card
+      uid: O:PageExtension::CGI_TFM_Vendor_Card
+  - name: TableExtensions
+    items:
+    - name: CGI TFM Calculation Header
+      uid: O:TableExtension::CGI_TFM_Calculation_Header
+    - name: CGI TFM Calculation Setup
+      uid: O:TableExtension::CGI_TFM_Calculation_Setup
+    - name: CGI TFM Division
+      uid: O:TableExtension::CGI_TFM_Division
+    - name: CGI TFM Vendor
+      uid: O:TableExtension::CGI_TFM_Vendor
+    - name: CGITFM Custom Report Selection
+      uid: O:TableExtension::CGITFM_Custom_Report_Selection
+  - name: Enums
+    items:
+    - name: CGI TFM Email Type
+      uid: O:Enum::CGI_TFM_Email_Type
+    - name: CGI TFM LCBG Bank Charge
+      uid: O:Enum::CGI_TFM_LCBG_Bank_Charge
+    - name: CGI TFM LCBG BankGuaranteeType
+      uid: O:Enum::CGI_TFM_LCBG_BankGuaranteeType
+    - name: CGI TFM LCBG Beneficiary Type
+      uid: O:Enum::CGI_TFM_LCBG_Beneficiary_Type
+    - name: CGI TFM LCBG Insurance
+      uid: O:Enum::CGI_TFM_LCBG_Insurance
+    - name: CGI TFM LCBG LCType
+      uid: O:Enum::CGI_TFM_LCBG_LCType
+    - name: CGI TFM LCBG SanctionClause
+      uid: O:Enum::CGI_TFM_LCBG_SanctionClause
+    - name: CGI TFM LCBG Status
+      uid: O:Enum::CGI_TFM_LCBG_Status
+    - name: CGI TFM LCBG Type
+      uid: O:Enum::CGI_TFM_LCBG_Type
+  - name: EnumExtensions
+    items:
+    - name: CGI Report Selection Usage
+      uid: O:EnumExtension::CGI_Report_Selection_Usage
+  - name: PermissionSets
+    items:
+    - name: CGI TFM Admin
+      uid: O:PermissionSet::CGI_TFM_Admin
+    - name: CGI TFM Super
+      uid: O:PermissionSet::CGI_TFM_Super

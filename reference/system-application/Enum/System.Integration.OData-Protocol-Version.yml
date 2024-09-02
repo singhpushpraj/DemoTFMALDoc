@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."OData Protocol Version"
+alId: ID 9750
+namespace: System.Integration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Specifies that the OData protocol version is V3.
+  name: V3
+  uid: E:Enum::System#Integration#OData_Protocol_Version.V3
+- summary: Specifies that the OData protocol version is V4.
+  name: V4
+  uid: E:Enum::System#Integration#OData_Protocol_Version.V4
+commentId: O:Enum::System#Integration#OData Protocol Version
+summary: This enum has the OData protocol versions.
+name: '"OData Protocol Version"'
+uid: O:Enum::System#Integration#OData_Protocol_Version

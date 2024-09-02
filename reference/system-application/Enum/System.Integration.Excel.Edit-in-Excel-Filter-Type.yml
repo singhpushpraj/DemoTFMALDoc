@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel Filter Type"
+alId: ID 1481
+namespace: System.Integration.Excel
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: '"Less Than"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type.Less_Than
+- name: '"Less or Equal"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type.Less_or_Equal
+- name: Equal
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type.Equal
+- name: '"Greater or Equal"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type.Greater_or_Equal
+- name: '"Greater Than"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type.Greater_Than
+- name: '"Not Equal"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type.Not_Equal
+commentId: O:Enum::System#Integration#Excel#Edit in Excel Filter Type
+summary: This enum specifies the type of filter comparison to perform with the given value. Ex. Field < 1000 is "Less Than".
+name: '"Edit in Excel Filter Type"'
+uid: O:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type

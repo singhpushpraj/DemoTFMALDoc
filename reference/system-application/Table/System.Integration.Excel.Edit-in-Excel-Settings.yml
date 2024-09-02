@@ -1,0 +1,75 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel Settings"
+alId: ID 1480
+namespace: System.Integration.Excel
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: InherentEntitlements
+  value: RX
+  promoted: false
+- name: InherentPermissions
+  value: RX
+  promoted: false
+fields:
+- type:
+    name: Code[10]
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Integration#Excel#Edit_in_Excel_Settings.Id[10]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Use Centralized deployments"'
+  uid: F:Table::System#Integration#Excel#Edit_in_Excel_Settings.Use_Centralized_deployments
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Excel#Edit_in_Excel_Settings.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Excel#Edit_in_Excel_Settings.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Excel#Edit_in_Excel_Settings.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Excel#Edit_in_Excel_Settings.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Excel#Edit_in_Excel_Settings.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Excel#Edit_in_Excel_Settings.SystemRowVersion
+commentId: O:Table::System#Integration#Excel#Edit in Excel Settings
+summary: Contains settings for Edit in Excel.
+name: '"Edit in Excel Settings"'
+uid: O:Table::System#Integration#Excel#Edit_in_Excel_Settings

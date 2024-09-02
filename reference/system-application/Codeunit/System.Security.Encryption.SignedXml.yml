@@ -1,0 +1,444 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.SignedXml
+alId: ID 1460
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure InitializeSignedXml(SigningXmlDocument: XmlDocument)'
+    parameters:
+    - id: SigningXmlDocument
+      description: The XmlDocument object to use to initialize the new instance of SignedXml.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+  summary: Initializes a new instance of the SignedXml class from the specified XML document.
+  name: InitializeSignedXml
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.InitializeSignedXml(XmlDocument)
+- syntax:
+    content: 'procedure InitializeSignedXml(SigningXmlElement: XmlElement)'
+    parameters:
+    - id: SigningXmlElement
+      description: The XmlElement object to use to initialize the new instance of SignedXml.
+      parameterType:
+        name: XmlElement
+        isExternal: true
+  summary: Initializes a new instance of the SignedXml class from the specified XmlElement object.
+  name: InitializeSignedXml
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.InitializeSignedXml(XmlElement)
+- syntax:
+    content: 'procedure SetSigningKey(XmlString: Text)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing key information.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the key used for signing a SignedXml object.
+  name: SetSigningKey
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.SetSigningKey(Text)
+- syntax:
+    content: 'procedure SetSigningKey(XmlString: Text, SignatureAlgorithm: Enum SignatureAlgorithm)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing key information.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SignatureAlgorithm
+      description: The type of asymmetric algorithms.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#SignatureAlgorithm
+        name: System.Security.Encryption.SignatureAlgorithm
+        isExternal: false
+  summary: Sets the key used for signing a SignedXml object.
+  name: SetSigningKey
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.SetSigningKey(Text,Enum::System#Security#Encryption#SignatureAlgorithm)
+- syntax:
+    content: 'procedure SetSigningKey(SignatureKey: Codeunit "Signature Key")'
+    parameters:
+    - id: SignatureKey
+      description: The key used for signing the SignedXml object.
+      parameterType:
+        internalReference: O:Codeunit::System#Security#Encryption#Signature_Key
+        name: System.Security.Encryption."Signature Key"
+        isExternal: false
+  summary: Sets the key used for signing a SignedXml object.
+  name: SetSigningKey
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.SetSigningKey(Codeunit::System#Security#Encryption#Signature_Key)
+- syntax:
+    content: 'procedure InitializeReference(Uri: Text)'
+    parameters:
+    - id: Uri
+      description: The Uri with which to initialize the new instance of Reference.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the Reference class with the specified Uri.
+  name: InitializeReference
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.InitializeReference(Text)
+- syntax:
+    content: 'procedure SetDigestMethod(DigestMethod: Text)'
+    parameters:
+    - id: DigestMethod
+      description: The digest method URI of the current Reference. The default value is http://www.w3.org/2001/04/xmlenc#sha256.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the digest method Uniform Resource Identifier (URI) of the current Reference.
+  name: SetDigestMethod
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.SetDigestMethod(Text)
+- syntax:
+    content: 'procedure AddXmlDsigExcC14NTransformToReference(InclusiveNamespacesPrefixList: Text)'
+    parameters:
+    - id: InclusiveNamespacesPrefixList
+      description: A string that contains namespace prefixes to canonicalize using the standard canonicalization algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a XmlDsigExcC14NTransform object to the list of transforms to be performed on the data before passing it to the digest algorithm.
+  name: AddXmlDsigExcC14NTransformToReference
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.AddXmlDsigExcC14NTransformToReference(Text)
+- syntax:
+    content: 'procedure SetCanonicalizationMethod(CanonicalizationMethod: Text)'
+    parameters:
+    - id: CanonicalizationMethod
+      description: The canonicalization algorithm used before signing for the current SignedInfo object.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the canonicalization algorithm that is used before signing for the current SignedInfo object.
+  name: SetCanonicalizationMethod
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.SetCanonicalizationMethod(Text)
+- syntax:
+    content: 'procedure SetXmlDsigExcC14NTransformAsCanonicalizationMethod(InclusiveNamespacesPrefixList: Text)'
+    parameters:
+    - id: InclusiveNamespacesPrefixList
+      description: A string that contains namespace prefixes to canonicalize using the standard canonicalization algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the XmlDsigExcC14NTransform as canonicalization algorithm that is used before signing for the current SignedInfo object.
+  name: SetXmlDsigExcC14NTransformAsCanonicalizationMethod
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.SetXmlDsigExcC14NTransformAsCanonicalizationMethod(Text)
+- syntax:
+    content: 'procedure SetSignatureMethod(SignatureMethod: Text)'
+    parameters:
+    - id: SignatureMethod
+      description: The name of the algorithm used for signature generation and validation for the current SignedInfo object.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the name of the algorithm used for signature generation and validation for the current SignedInfo object.
+  name: SetSignatureMethod
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.SetSignatureMethod(Text)
+- syntax:
+    content: procedure InitializeKeyInfo()
+  summary: Initializes a new instance of the KeyInfo class.
+  name: InitializeKeyInfo
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.InitializeKeyInfo
+- syntax:
+    content: 'procedure AddClause(KeyInfoNodeXmlElement: XmlElement)'
+    parameters:
+    - id: KeyInfoNodeXmlElement
+      description: The xml element of KeyInfoNode to add to the collection of KeyInfoClause.
+      parameterType:
+        name: XmlElement
+        isExternal: true
+  summary: Adds a xml element of KeyInfoNode to the collection of KeyInfoClause.
+  name: AddClause
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.AddClause(XmlElement)
+- syntax:
+    content: 'procedure LoadXml(SignatureElement: XmlElement)'
+    parameters:
+    - id: SignatureElement
+      description: The XML element to load the SignedXml state from.
+      parameterType:
+        name: XmlElement
+        isExternal: true
+  summary: Loads a SignedXml state from an XML element.
+  name: LoadXml
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.LoadXml(XmlElement)
+- syntax:
+    content: procedure InitializeDataObject()
+  summary: Initializes a new instance of the DataObject class.
+  name: InitializeDataObject
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.InitializeDataObject
+- syntax:
+    content: 'procedure AddObject(DataObjectXmlElement: XmlElement)'
+    parameters:
+    - id: DataObjectXmlElement
+      description: The xml element of DataObject to add to the list of objects to be signed.
+      parameterType:
+        name: XmlElement
+        isExternal: true
+  summary: Adds a xml element of DataObject object to the list of objects to be signed.
+  name: AddObject
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.AddObject(XmlElement)
+- syntax:
+    content: procedure AddXmlDsigExcC14NTransformToReference()
+  summary: Adds a AddXmlDsigExcC14NTransformToReference object to the list of transforms to be performed on the data before passing it to the digest algorithm.
+  name: AddXmlDsigExcC14NTransformToReference
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.AddXmlDsigExcC14NTransformToReference
+- syntax:
+    content: procedure AddXmlDsigEnvelopedSignatureTransform()
+  summary: Adds a AddXmlDsigEnvelopedSignatureTransform object to the list of transforms to be performed on the data before passing it to the digest algorithm.
+  name: AddXmlDsigEnvelopedSignatureTransform
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.AddXmlDsigEnvelopedSignatureTransform
+- syntax:
+    content: procedure AddReferenceToSignedXML()
+  summary: Adds a Reference object to the Signed XML and clears Reference object.
+  name: AddReferenceToSignedXML
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.AddReferenceToSignedXML
+- syntax:
+    content: procedure ComputeSignature()
+  summary: Computes an Xml digital signature from Xml document.
+  name: ComputeSignature
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.ComputeSignature
+- syntax:
+    content: 'procedure CheckSignature(): Boolean'
+    return:
+      description: true if the signature verifies; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the signature verifies using the public key in the signature.
+  name: CheckSignature
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.CheckSignature:Boolean
+- syntax:
+    signatures:
+    - '[Obsolete(Replaced with CheckSignature which takes in a SecretText,24.0)]'
+    content: 'procedure CheckSignature(XmlString: Text): Boolean'
+    parameters:
+    - id: XmlString
+      description: The XML string containing key information.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: true if the signature verifies; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the Signature property verifies for the specified key.
+  name: CheckSignature
+  obsoletion:
+    state: pending
+    reason: Replaced with CheckSignature which takes in a SecretText
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.CheckSignature(Text):Boolean
+- syntax:
+    content: 'procedure CheckSignature(XmlString: SecretText): Boolean'
+    parameters:
+    - id: XmlString
+      description: The XML string containing key information.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      description: true if the signature verifies; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the Signature property verifies for the specified key.
+  name: CheckSignature
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.CheckSignature(SecretText):Boolean
+- syntax:
+    signatures:
+    - '[Obsolete(Replaced with CheckSignature which takes in a SecretText,24.0)]'
+    - '[NonDebuggable]'
+    content: 'procedure CheckSignature(X509CertBase64Value: Text, X509CertPassword: Text, VerifySignatureOnly: Boolean): Boolean'
+    parameters:
+    - id: X509CertBase64Value
+      description: The X509Certificate2 in Base64 format to use to verify the signature.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertPassword
+      description: The password to the X509Certificate2.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: VerifySignatureOnly
+      description: true to verify the signature only; false to verify both the signature and certificate.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the signature verifies; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the signature verifies for the specified X509Certificate2 and, optionally, whether the certificate is valid.
+  name: CheckSignature
+  obsoletion:
+    state: pending
+    reason: Replaced with CheckSignature which takes in a SecretText
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.CheckSignature(Text,Text,Boolean):Boolean
+- syntax:
+    content: 'procedure CheckSignature(X509CertBase64Value: Text, X509CertPassword: SecretText, VerifySignatureOnly: Boolean): Boolean'
+    parameters:
+    - id: X509CertBase64Value
+      description: The X509Certificate2 in Base64 format to use to verify the signature.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertPassword
+      description: The password to the X509Certificate2.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: VerifySignatureOnly
+      description: true to verify the signature only; false to verify both the signature and certificate.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the signature verifies; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the signature verifies for the specified X509Certificate2 and, optionally, whether the certificate is valid.
+  name: CheckSignature
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.CheckSignature(Text,SecretText,Boolean):Boolean
+- syntax:
+    content: 'procedure GetXml(): XmlElement'
+    return:
+      description: The Xml representation of the signature.
+      returnType:
+        name: XmlElement
+        isExternal: true
+  summary: Returns the Xml representation of a signature.
+  name: GetXml
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXml:XmlElement
+- syntax:
+    content: 'procedure GetXmlDsigDSAUrl(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2000/09/xmldsig#dsa-sha1.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the standard DSA algorithm for XML digital signatures.
+  name: GetXmlDsigDSAUrl
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigDSAUrl:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigExcC14NTransformUrl(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2001/10/xml-exc-c14n#.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for exclusive XML canonicalization.
+  name: GetXmlDsigExcC14NTransformUrl
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigExcC14NTransformUrl:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigHMACSHA1Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2000/09/xmldsig#hmac-sha1.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the standard HMACSHA1 algorithm for XML digital signatures.
+  name: GetXmlDsigHMACSHA1Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigHMACSHA1Url:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigRSASHA1Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2000/09/xmldsig#rsa-sha1.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the standard RSA signature method for XML digital signatures.
+  name: GetXmlDsigRSASHA1Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigRSASHA1Url:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigRSASHA256Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2001/04/xmldsig-more#rsa-sha256.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the RSA SHA-256 signature method variation for XML digital signatures.
+  name: GetXmlDsigRSASHA256Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigRSASHA256Url:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigRSASHA384Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2001/04/xmldsig-more#rsa-sha384.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the RSA SHA-384 signature method variation for XML digital signatures.
+  name: GetXmlDsigRSASHA384Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigRSASHA384Url:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigRSASHA512Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2001/04/xmldsig-more#rsa-sha512.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the RSA SHA-512 signature method variation for XML digital signatures.
+  name: GetXmlDsigRSASHA512Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigRSASHA512Url:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigSHA1Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2000/09/xmldsig#sha1.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the standard SHA1 digest method for XML digital signatures.
+  name: GetXmlDsigSHA1Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigSHA1Url:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigSHA256Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2001/04/xmlenc#sha256.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the standard SHA256 digest method for XML digital signatures.
+  name: GetXmlDsigSHA256Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigSHA256Url:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigSHA384Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2001/04/xmldsig-more#sha384.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the standard SHA384 digest method for XML digital signatures.
+  name: GetXmlDsigSHA384Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigSHA384Url:Text[250]
+- syntax:
+    content: 'procedure GetXmlDsigSHA512Url(): Text[250]'
+    return:
+      description: The value http://www.w3.org/2001/04/xmlenc#sha512.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Represents the Uniform Resource Identifier (URI) for the standard SHA512 digest method for XML digital signatures.
+  name: GetXmlDsigSHA512Url
+  uid: M:Codeunit::System#Security#Encryption#SignedXml.GetXmlDsigSHA512Url:Text[250]
+commentId: O:Codeunit::System#Security#Encryption#SignedXml
+summary: Provides a functionality to singing an xml document.
+name: SignedXml
+uid: O:Codeunit::System#Security#Encryption#SignedXml

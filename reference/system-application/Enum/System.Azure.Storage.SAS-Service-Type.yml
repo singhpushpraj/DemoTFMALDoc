@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."SAS Service Type"
+alId: ID 9062
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Blob
+  uid: E:Enum::System#Azure#Storage#SAS_Service_Type.Blob
+- name: Queue
+  uid: E:Enum::System#Azure#Storage#SAS_Service_Type.Queue
+- name: Table
+  uid: E:Enum::System#Azure#Storage#SAS_Service_Type.Table
+- name: File
+  uid: E:Enum::System#Azure#Storage#SAS_Service_Type.File
+commentId: O:Enum::System#Azure#Storage#SAS Service Type
+summary: >-
+  Defines the possible service types for account SAS
+
+  More Information: https://go.microsoft.com/fwlink/?linkid=2210398
+name: '"SAS Service Type"'
+uid: O:Enum::System#Azure#Storage#SAS_Service_Type

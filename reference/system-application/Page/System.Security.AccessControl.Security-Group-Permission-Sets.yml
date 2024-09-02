@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Security Group Permission Sets"
+alId: ID 9868
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: DataCaptionExpression
+  value: PageCaptionExpression
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+commentId: O:Page::System#Security#AccessControl#Security Group Permission Sets
+summary: View and edit the permission sets associated with a security group.
+name: '"Security Group Permission Sets"'
+uid: O:Page::System#Security#AccessControl#Security_Group_Permission_Sets

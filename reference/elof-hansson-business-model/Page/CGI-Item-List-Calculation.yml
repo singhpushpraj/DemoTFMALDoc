@@ -1,0 +1,73 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Item List Calculation"'
+alId: ID 60321
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#all'
+  promoted: false
+- name: Caption
+  value: EH Item List
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: Permissions
+  value: tabledata Item = rm
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: UsageCategory
+  value: Lists
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetSelectionFilter(): Text'
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: GetSelectionFilter
+  uid: M:Page::CGI_Item_List_Calculation.GetSelectionFilter:Text
+- syntax:
+    content: 'procedure SetSelection(Item: __MissingTypeSymbol__)'
+    parameters:
+    - id: Item
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: SetSelection
+  uid: M:Page::CGI_Item_List_Calculation.SetSelection(__MissingSymbol__@)
+- syntax:
+    content: 'procedure FillWithSelected(ReturnItem: __MissingTypeSymbol__)'
+    parameters:
+    - id: ReturnItem
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: FillWithSelected
+  uid: M:Page::CGI_Item_List_Calculation.FillWithSelected(__MissingSymbol__@)
+- syntax:
+    content: 'procedure ReturnRec(): Code[20]'
+    return:
+      returnType:
+        name: Code[20]
+        isExternal: true
+  name: ReturnRec
+  uid: M:Page::CGI_Item_List_Calculation.ReturnRec:Code[20]
+commentId: O:Page::CGI Item List Calculation
+name: '"CGI Item List Calculation"'
+uid: O:Page::CGI_Item_List_Calculation

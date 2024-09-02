@@ -1,0 +1,359 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Web Service Management"
+alId: ID 9750
+namespace: System.Integration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure CreateTenantWebService(ObjectType: Option, ObjectId: Integer, ObjectName: Text, Published: Boolean)'
+    parameters:
+    - id: ObjectType
+      description: The type of the object.
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: ObjectId
+      description: The ID of the object.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ObjectName
+      description: The name of the object.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Published
+      description: Indicates whether the web service is published or not.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a tenant web service for a given object. If the tenant web service already exists, it modifies the tenant web service accordingly.
+  name: CreateTenantWebService
+  uid: M:Codeunit::System#Integration#Web_Service_Management.CreateTenantWebService(Option,Integer,Text,Boolean)
+- syntax:
+    content: 'procedure GetWebServiceUrl(WebServiceAggregate: Record "Web Service Aggregate", ClientType: Enum "Client Type"): Text'
+    parameters:
+    - id: WebServiceAggregate
+      description: The record for getting web service URL.
+      parameterType:
+        name: Record "Web Service Aggregate"
+        isExternal: true
+    - id: ClientType
+      description: The client type of the URL. Clients are SOAP, ODataV3 and ODataV4.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Client_Type
+        name: System.Integration."Client Type"
+        isExternal: false
+    return:
+      description: Web service URL for the given record.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the web service URL for a given Web Service Aggregate record and client type.
+  name: GetWebServiceUrl
+  uid: M:Codeunit::System#Integration#Web_Service_Management.GetWebServiceUrl(Web_Service_Aggregate,Enum::System#Integration#Client_Type):Text
+- syntax:
+    content: 'procedure CreateTenantWebServiceColumnsFromTemp(var TenantWebServiceColumns: Record "Tenant Web Service Columns", var TempTenantWebServiceColumns: Record "Tenant Web Service Columns" temporary, TenantWebServiceRecordId: RecordId)'
+    parameters:
+    - id: TenantWebServiceColumns
+      description: Record that the columns from temporary records are inserted to.
+      parameterType:
+        name: Record "Tenant Web Service Columns"
+        isExternal: true
+    - id: TempTenantWebServiceColumns
+      description: Temporary record that the columns are inserted from.
+      parameterType:
+        name: Record "Tenant Web Service Columns" temporary
+        isExternal: true
+    - id: TenantWebServiceRecordId
+      description: The ID of the Tenant Web Service corresponding to columns.
+      parameterType:
+        name: RecordId
+        isExternal: true
+  summary: Creates tenant web service columns from temporary records.
+  name: CreateTenantWebServiceColumnsFromTemp
+  uid: M:Codeunit::System#Integration#Web_Service_Management.CreateTenantWebServiceColumnsFromTemp(Tenant_Web_Service_Columns@,Tenant_Web_Service_Columns@,RecordId)
+- syntax:
+    content: 'procedure CreateTenantWebServiceFilterFromRecordRef(var TenantWebServiceFilter: Record "Tenant Web Service Filter", var RecordRef: RecordRef, TenantWebServiceRecordId: RecordId)'
+    parameters:
+    - id: TenantWebServiceFilter
+      description: Record that the filter from record reference is inserted to.
+      parameterType:
+        name: Record "Tenant Web Service Filter"
+        isExternal: true
+    - id: RecordRef
+      description: Record reference that the filter is inserted from.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: TenantWebServiceRecordId
+      description: The ID of the Tenant Web Service corresponding to the filter.
+      parameterType:
+        name: RecordId
+        isExternal: true
+  summary: Creates a tenant web service filter from a record reference.
+  name: CreateTenantWebServiceFilterFromRecordRef
+  uid: M:Codeunit::System#Integration#Web_Service_Management.CreateTenantWebServiceFilterFromRecordRef(Tenant_Web_Service_Filter@,RecordRef@,RecordId)
+- syntax:
+    content: 'procedure GetTenantWebServiceFilter(TenantWebServiceFilter: Record "Tenant Web Service Filter"): Text'
+    parameters:
+    - id: TenantWebServiceFilter
+      description: The record for getting filter.
+      parameterType:
+        name: Record "Tenant Web Service Filter"
+        isExternal: true
+    return:
+      description: Tenant web service filter for the given record.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the tenant web service filter for a given record.
+  name: GetTenantWebServiceFilter
+  uid: M:Codeunit::System#Integration#Web_Service_Management.GetTenantWebServiceFilter(Tenant_Web_Service_Filter):Text
+- syntax:
+    content: 'procedure RetrieveTenantWebServiceFilter(var TenantWebServiceFilter: Record "Tenant Web Service Filter"): Text'
+    parameters:
+    - id: TenantWebServiceFilter
+      description: The record for getting filter.
+      parameterType:
+        name: Record "Tenant Web Service Filter"
+        isExternal: true
+    return:
+      description: Tenant web service filter for the given record.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the tenant web service filter for a given record.
+  name: RetrieveTenantWebServiceFilter
+  uid: M:Codeunit::System#Integration#Web_Service_Management.RetrieveTenantWebServiceFilter(Tenant_Web_Service_Filter@):Text
+- syntax:
+    content: 'procedure SetTenantWebServiceFilter(var TenantWebServiceFilter: Record "Tenant Web Service Filter", FilterText: Text)'
+    parameters:
+    - id: TenantWebServiceFilter
+      description: The record for setting tenant web service filter.
+      parameterType:
+        name: Record "Tenant Web Service Filter"
+        isExternal: true
+    - id: FilterText
+      description: The tenant web service filter that is set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the tenant web service filter for a given record.
+  name: SetTenantWebServiceFilter
+  uid: M:Codeunit::System#Integration#Web_Service_Management.SetTenantWebServiceFilter(Tenant_Web_Service_Filter@,Text)
+- syntax:
+    content: 'procedure GetODataSelectClause(TenantWebServiceOData: Record "Tenant Web Service OData"): Text'
+    parameters:
+    - id: TenantWebServiceOData
+      description: The record for getting OData select clause.
+      parameterType:
+        name: Record "Tenant Web Service OData"
+        isExternal: true
+    return:
+      description: OData select clause for the given record.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the OData select clause for a given record.
+  name: GetODataSelectClause
+  uid: M:Codeunit::System#Integration#Web_Service_Management.GetODataSelectClause(Tenant_Web_Service_OData):Text
+- syntax:
+    content: 'procedure SetODataSelectClause(var TenantWebServiceOData: Record "Tenant Web Service OData", ODataText: Text)'
+    parameters:
+    - id: TenantWebServiceOData
+      description: The record for setting OData select clause.
+      parameterType:
+        name: Record "Tenant Web Service OData"
+        isExternal: true
+    - id: ODataText
+      description: The OData select clause that is set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the OData select clause for a given record.
+  name: SetODataSelectClause
+  uid: M:Codeunit::System#Integration#Web_Service_Management.SetODataSelectClause(Tenant_Web_Service_OData@,Text)
+- syntax:
+    content: 'procedure GetODataFilterClause(TenantWebServiceOData: Record "Tenant Web Service OData"): Text'
+    parameters:
+    - id: TenantWebServiceOData
+      description: The record for getting OData filter clause.
+      parameterType:
+        name: Record "Tenant Web Service OData"
+        isExternal: true
+    return:
+      description: OData filter clause for the given record.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the OData filter clause for a given record.
+  name: GetODataFilterClause
+  uid: M:Codeunit::System#Integration#Web_Service_Management.GetODataFilterClause(Tenant_Web_Service_OData):Text
+- syntax:
+    content: 'procedure SetODataFilterClause(var TenantWebServiceOData: Record "Tenant Web Service OData", ODataText: Text)'
+    parameters:
+    - id: TenantWebServiceOData
+      description: The record for setting OData filter clause.
+      parameterType:
+        name: Record "Tenant Web Service OData"
+        isExternal: true
+    - id: ODataText
+      description: The OData filter clause that is set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the OData filter clause for a given record.
+  name: SetODataFilterClause
+  uid: M:Codeunit::System#Integration#Web_Service_Management.SetODataFilterClause(Tenant_Web_Service_OData@,Text)
+- syntax:
+    content: 'procedure GetODataV4FilterClause(TenantWebServiceOData: Record "Tenant Web Service OData"): Text'
+    parameters:
+    - id: TenantWebServiceOData
+      description: The record for getting OData V4 filter clause.
+      parameterType:
+        name: Record "Tenant Web Service OData"
+        isExternal: true
+    return:
+      description: OData V4 filter clause for the given record.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the OData V4 filter clause for a given record.
+  name: GetODataV4FilterClause
+  uid: M:Codeunit::System#Integration#Web_Service_Management.GetODataV4FilterClause(Tenant_Web_Service_OData):Text
+- syntax:
+    content: 'procedure SetODataV4FilterClause(var TenantWebServiceOData: Record "Tenant Web Service OData", ODataText: Text)'
+    parameters:
+    - id: TenantWebServiceOData
+      description: The record for setting OData V4 filter clause.
+      parameterType:
+        name: Record "Tenant Web Service OData"
+        isExternal: true
+    - id: ODataText
+      description: The OData V4 filter clause that is set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the OData V4 filter clause for a given record.
+  name: SetODataV4FilterClause
+  uid: M:Codeunit::System#Integration#Web_Service_Management.SetODataV4FilterClause(Tenant_Web_Service_OData@,Text)
+- syntax:
+    content: 'procedure GetObjectCaption(WebServiceAggregate: Record "Web Service Aggregate"): Text[80]'
+    parameters:
+    - id: WebServiceAggregate
+      description: The record for getting the name of the object.
+      parameterType:
+        name: Record "Web Service Aggregate"
+        isExternal: true
+    return:
+      description: Name of the object.
+      returnType:
+        name: Text[80]
+        isExternal: true
+  summary: Gets the name of the object that will be exposed to the web service for a given record.
+  name: GetObjectCaption
+  uid: M:Codeunit::System#Integration#Web_Service_Management.GetObjectCaption(Web_Service_Aggregate):Text[80]
+- syntax:
+    content: 'procedure LoadRecords(var WebServiceAggregate: Record "Web Service Aggregate")'
+    parameters:
+    - id: WebServiceAggregate
+      description: The variable that the records are loaded into.
+      parameterType:
+        name: Record "Web Service Aggregate"
+        isExternal: true
+  summary: Loads records from Web Service and Tenant Web Service table into given Web Service Aggregate record.
+  name: LoadRecords
+  uid: M:Codeunit::System#Integration#Web_Service_Management.LoadRecords(Web_Service_Aggregate@)
+- syntax:
+    content: 'procedure LoadRecordsFromTenantWebServiceColumns(TenantWebService: __MissingTypeSymbol__)'
+    parameters:
+    - id: TenantWebService
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: LoadRecordsFromTenantWebServiceColumns
+  uid: M:Codeunit::System#Integration#Web_Service_Management.LoadRecordsFromTenantWebServiceColumns(__MissingSymbol__@)
+- syntax:
+    content: 'procedure InsertSelectedColumns(TenantWebService: __MissingTypeSymbol__, ColumnDictionary: DotNet "System.Collections.Generic.Dictionary`2", var TargetTenantWebServiceColumns: Record "Tenant Web Service Columns", DataItem: Integer)'
+    parameters:
+    - id: TenantWebService
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ColumnDictionary
+      parameterType:
+        name: DotNet "System.Collections.Generic.Dictionary`2"
+        isExternal: true
+    - id: TargetTenantWebServiceColumns
+      parameterType:
+        name: Record "Tenant Web Service Columns"
+        isExternal: true
+    - id: DataItem
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: InsertSelectedColumns
+  uid: M:Codeunit::System#Integration#Web_Service_Management.InsertSelectedColumns(__MissingSymbol__@,__MissingSymbol__@,Tenant_Web_Service_Columns@,Integer)
+- syntax:
+    content: 'procedure RemoveUnselectedColumnsFromFilter(TenantWebService: __MissingTypeSymbol__, DataItem: Integer, DataItemView: Text): Text'
+    parameters:
+    - id: TenantWebService
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: DataItem
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DataItemView
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: RemoveUnselectedColumnsFromFilter
+  uid: M:Codeunit::System#Integration#Web_Service_Management.RemoveUnselectedColumnsFromFilter(__MissingSymbol__@,Integer,Text):Text
+- syntax:
+    content: 'procedure IsServiceNameValid(Value: Text): Boolean'
+    parameters:
+    - id: Value
+      description: The service name to be checked.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: If given service name valid or not.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if given service name is valid.
+  name: IsServiceNameValid
+  uid: M:Codeunit::System#Integration#Web_Service_Management.IsServiceNameValid(Text):Boolean
+- syntax:
+    content: 'procedure DeleteWebService(var WebServiceAggregate: Record "Web Service Aggregate")'
+    parameters:
+    - id: WebServiceAggregate
+      description: The record to be deleted.
+      parameterType:
+        name: Record "Web Service Aggregate"
+        isExternal: true
+  summary: Deletes a webservice.
+  name: DeleteWebService
+  uid: M:Codeunit::System#Integration#Web_Service_Management.DeleteWebService(Web_Service_Aggregate@)
+commentId: O:Codeunit::System#Integration#Web Service Management
+summary: Provides methods for creating and modifying web services, accessing web service URLs, and getting and setting web service filters and clauses.
+name: '"Web Service Management"'
+uid: O:Codeunit::System#Integration#Web_Service_Management

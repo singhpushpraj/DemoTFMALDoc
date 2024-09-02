@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Telemetry."Feature Uptake Status"
+alId: ID 8703
+namespace: System.Telemetry
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Telemetry
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The feature has not been discovered.
+  name: Undiscovered
+  uid: E:Enum::System#Telemetry#Feature_Uptake_Status.Undiscovered
+- summary: The feature has been discovered.
+  name: Discovered
+  uid: E:Enum::System#Telemetry#Feature_Uptake_Status.Discovered
+- summary: The feature has been set up.
+  name: '"Set up"'
+  uid: E:Enum::System#Telemetry#Feature_Uptake_Status.Set_up
+- summary: The feature has been used.
+  name: Used
+  uid: E:Enum::System#Telemetry#Feature_Uptake_Status.Used
+commentId: O:Enum::System#Telemetry#Feature Uptake Status
+summary: Specifies the uptake status of an application feature.
+name: '"Feature Uptake Status"'
+uid: O:Enum::System#Telemetry#Feature_Uptake_Status

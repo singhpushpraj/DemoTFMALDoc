@@ -1,0 +1,104 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD User Management"
+alId: ID 9010
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SynchronizeLicensedUserFromDirectory(AuthenticationEmail: Text): Boolean'
+    parameters:
+    - id: AuthenticationEmail
+      description: The user's authentication email.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if there is a user in Microsoft Entra corresponding to the authentication email; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Synchronizes a user with the Microsoft Entra user corresponding to the authentication
+
+    email that is passed as a parameter. If the user record does not exist, it gets created.
+  name: SynchronizeLicensedUserFromDirectory
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_User_Management.SynchronizeLicensedUserFromDirectory(Text):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: procedure SynchronizeAllLicensedUsersFromDirectory()
+  summary: >-
+    Synchronizes all the users from the database with the ones from Microsoft Entra.
+
+    Microsoft Entra users that do not exist in the database are created.
+  name: SynchronizeAllLicensedUsersFromDirectory
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_User_Management.SynchronizeAllLicensedUsersFromDirectory
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IsUserTenantAdmin(): Boolean'
+    return:
+      description: True if the user is a tenant admin; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the user is a tenant admin.
+  name: IsUserTenantAdmin
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_User_Management.IsUserTenantAdmin:Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure ArePermissionsCustomized(UserSecurityId: Guid): Boolean'
+    parameters:
+    - id: UserSecurityId
+      description: The security ID of the user to check for.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the user with the given user security ID has custom permissions; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether custom permissions are assigned to the user.
+  name: ArePermissionsCustomized
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_User_Management.ArePermissionsCustomized(Guid):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IsUserDelegated(UserSecID: Guid): Boolean'
+    parameters:
+    - id: UserSecID
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the user is a delegated user; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the user is a delegated user.
+  name: IsUserDelegated
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_User_Management.IsUserDelegated(Guid):Boolean
+commentId: O:Codeunit::System#Azure#Identity#Azure AD User Management
+summary: Exposes functionality to manage Microsoft Entra users.
+name: '"Azure AD User Management"'
+uid: O:Codeunit::System#Azure#Identity#Azure_AD_User_Management

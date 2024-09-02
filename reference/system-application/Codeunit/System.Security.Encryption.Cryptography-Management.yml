@@ -1,0 +1,700 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."Cryptography Management"
+alId: ID 1266
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure EncryptText(InputString: Text[215]): Text'
+    parameters:
+    - id: InputString
+      description: The value to encrypt.
+      parameterType:
+        name: Text[215]
+        isExternal: true
+    return:
+      description: Encrypted value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns plain text as an encrypted value.
+  name: EncryptText
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.EncryptText(Text[215]):Text
+- syntax:
+    content: 'procedure Decrypt(EncryptedString: Text): Text'
+    parameters:
+    - id: EncryptedString
+      description: The value to decrypt.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Plain text.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns encrypted text as plain text.
+  name: Decrypt
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.Decrypt(Text):Text
+- syntax:
+    content: 'procedure IsEncryptionEnabled(): Boolean'
+    return:
+      description: True if encryption is enabled, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if Encryption is enabled.
+  name: IsEncryptionEnabled
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.IsEncryptionEnabled:Boolean
+- syntax:
+    content: 'procedure IsEncryptionPossible(): Boolean'
+    return:
+      description: True if the encryption key exists, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the encryption key is present, which only works if encryption is enabled.
+  name: IsEncryptionPossible
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.IsEncryptionPossible:Boolean
+- syntax:
+    content: 'procedure GetEncryptionIsNotActivatedQst(): Text'
+    return:
+      description: String of a recommended question to activate encryption.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the recommended question to activate encryption.
+  name: GetEncryptionIsNotActivatedQst
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GetEncryptionIsNotActivatedQst:Text
+- syntax:
+    content: 'procedure GenerateHash(InputString: Text, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a hash from a string based on the provided hash algorithm.
+  name: GenerateHash
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHash(Text,Option):Text
+- syntax:
+    signatures:
+    - '[Obsolete(Use GenerateHash with SecretText data type for Key.,24.0)]'
+    - '[NonDebuggable]'
+    content: 'procedure GenerateHash(InputString: Text, "Key": Text, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Key
+      description: Key to use in the hash algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a keyed hash from a string based on provided hash algorithm and key.
+  name: GenerateHash
+  obsoletion:
+    state: pending
+    reason: Use GenerateHash with SecretText data type for Key.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHash(Text,Text,Option):Text
+- syntax:
+    content: 'procedure GenerateHash(InputString: Text, "Key": SecretText, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Key
+      description: Key to use in the hash algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a keyed hash from a string based on provided hash algorithm and key.
+  name: GenerateHash
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHash(Text,SecretText,Option):Text
+- syntax:
+    content: 'procedure GenerateHash(InputInStream: InStream, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputInStream
+      description: Input string.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Base64 hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a hash from a stream based on the provided hash algorithm.
+  name: GenerateHash
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHash(InStream,Option):Text
+- syntax:
+    content: 'procedure GenerateHashAsBase64String(InputString: Text, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Base64 hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a base64 encoded hash from a string based on provided hash algorithm.
+  name: GenerateHashAsBase64String
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHashAsBase64String(Text,Option):Text
+- syntax:
+    signatures:
+    - '[Obsolete(Use GenerateHashAsBase64String with SecretText data type for Key.,24.0)]'
+    - '[NonDebuggable]'
+    content: 'procedure GenerateHashAsBase64String(InputString: Text, "Key": Text, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Key
+      description: Key to use in the hash algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Base64 hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a keyed base64 encoded hash from a string based on provided hash algorithm and key.
+  name: GenerateHashAsBase64String
+  obsoletion:
+    state: pending
+    reason: Use GenerateHashAsBase64String with SecretText data type for Key.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHashAsBase64String(Text,Text,Option):Text
+- syntax:
+    content: 'procedure GenerateHashAsBase64String(InputString: Text, "Key": SecretText, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Key
+      description: Key to use in the hash algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Base64 hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a keyed base64 encoded hash from a string based on provided hash algorithm and key.
+  name: GenerateHashAsBase64String
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHashAsBase64String(Text,SecretText,Option):Text
+- syntax:
+    signatures:
+    - '[Obsolete(Use GenerateBase64KeyedHashAsBase64String with SecretText data type for Key.,24.0)]'
+    - '[NonDebuggable]'
+    content: 'procedure GenerateBase64KeyedHashAsBase64String(InputString: Text, "Key": Text, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Key
+      description: Key to use in the hash algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Base64 hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates keyed base64 encoded hash from provided string based on provided hash algorithm and base64 key.
+  name: GenerateBase64KeyedHashAsBase64String
+  obsoletion:
+    state: pending
+    reason: Use GenerateBase64KeyedHashAsBase64String with SecretText data type for Key.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateBase64KeyedHashAsBase64String(Text,Text,Option):Text
+- syntax:
+    content: 'procedure GenerateBase64KeyedHashAsBase64String(InputString: Text, "Key": SecretText, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Key
+      description: Key to use in the hash algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Base64 hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates keyed base64 encoded hash from provided string based on provided hash algorithm and base64 key.
+  name: GenerateBase64KeyedHashAsBase64String
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateBase64KeyedHashAsBase64String(Text,SecretText,Option):Text
+- syntax:
+    signatures:
+    - '[Obsolete(Use GenerateBase64KeyedHash with SecretText data type for Key.,24.0)]'
+    - '[NonDebuggable]'
+    content: 'procedure GenerateBase64KeyedHash(InputString: Text, "Key": Text, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Key
+      description: Key to use in the hash algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates keyed base64 encoded hash from provided string based on provided hash algorithm and base64 key.
+  name: GenerateBase64KeyedHash
+  obsoletion:
+    state: pending
+    reason: Use GenerateBase64KeyedHash with SecretText data type for Key.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateBase64KeyedHash(Text,Text,Option):Text
+- syntax:
+    content: 'procedure GenerateBase64KeyedHash(InputString: Text, "Key": SecretText, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Key
+      description: Key to use in the hash algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: HashAlgorithmType
+      description: The available hash algorithms include HMACMD5, HMACSHA1, HMACSHA256, HMACSHA384, and HMACSHA512.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Hashed value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates keyed base64 encoded hash from provided string based on provided hash algorithm and base64 key.
+  name: GenerateBase64KeyedHash
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateBase64KeyedHash(Text,SecretText,Option):Text
+- syntax:
+    signatures:
+    - '[Obsolete(Use SignData with SecretText data type for XmlString.,24.0)]'
+    - '[NonDebuggable]'
+    content: 'procedure SignData(InputString: Text, XmlString: Text, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: InputString
+      description: Input string for signing.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: XmlString
+      description: The private key to use in the hash algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The stream to write the signature for the specified string.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified string and signs it.
+  name: SignData
+  obsoletion:
+    state: pending
+    reason: Use SignData with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.SignData(Text,Text,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    content: 'procedure SignData(InputString: Text, XmlString: SecretText, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: InputString
+      description: Input string for signing.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: XmlString
+      description: The private key to use in the hash algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The stream to write the signature for the specified string.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified string and signs it.
+  name: SignData
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.SignData(Text,SecretText,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    signatures:
+    - '[Obsolete(Use SignData with SecretText data type for XmlString.,24.0)]'
+    - '[NonDebuggable]'
+    content: 'procedure SignData(DataInStream: InStream, XmlString: Text, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: DataInStream
+      description: The stream of input data.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: XmlString
+      description: The private key to use in the hash algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The stream to write the signature for the specified input data.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified data and signs it.
+  name: SignData
+  obsoletion:
+    state: pending
+    reason: Use SignData with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.SignData(InStream,Text,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    content: 'procedure SignData(DataInStream: InStream, XmlString: SecretText, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: DataInStream
+      description: The stream of input data.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: XmlString
+      description: The private key to use in the hash algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The stream to write the signature for the specified input data.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified data and signs it.
+  name: SignData
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.SignData(InStream,SecretText,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    content: 'procedure SignData(InputString: Text, SignatureKey: Codeunit "Signature Key", HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: InputString
+      description: Input string for signing.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SignatureKey
+      description: The private key to use in the hash algorithm.
+      parameterType:
+        internalReference: O:Codeunit::System#Security#Encryption#Signature_Key
+        name: System.Security.Encryption."Signature Key"
+        isExternal: false
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The stream to write the signature for the specified string.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified string and signs it.
+  name: SignData
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.SignData(Text,Codeunit::System#Security#Encryption#Signature_Key,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    content: 'procedure SignData(DataInStream: InStream, SignatureKey: Codeunit "Signature Key", HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: DataInStream
+      description: The stream of input data.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: SignatureKey
+      description: The private key to use in the hash algorithm.
+      parameterType:
+        internalReference: O:Codeunit::System#Security#Encryption#Signature_Key
+        name: System.Security.Encryption."Signature Key"
+        isExternal: false
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The stream to write the signature for the specified input data.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified data and signs it.
+  name: SignData
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.SignData(InStream,Codeunit::System#Security#Encryption#Signature_Key,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    content: 'procedure VerifyData(InputString: Text, XmlString: Text, HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: XmlString
+      description: The public key to use in the hash algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      description: The stream of signature.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the signature is valid; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies that a digital signature is valid.
+  name: VerifyData
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.VerifyData(Text,Text,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+- syntax:
+    content: 'procedure VerifyData(DataInStream: InStream, XmlString: Text, HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: DataInStream
+      description: The stream of input data.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: XmlString
+      description: The public key to use in the hash algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      description: The stream of signature.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the signature is valid; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies that a digital signature is valid.
+  name: VerifyData
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.VerifyData(InStream,Text,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+- syntax:
+    content: 'procedure VerifyData(InputString: Text, SignatureKey: Codeunit "Signature Key", HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: InputString
+      description: Input string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SignatureKey
+      description: The private key to use in the hash algorithm.
+      parameterType:
+        internalReference: O:Codeunit::System#Security#Encryption#Signature_Key
+        name: System.Security.Encryption."Signature Key"
+        isExternal: false
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      description: The stream of signature.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the signature is valid; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies that a digital signature is valid.
+  name: VerifyData
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.VerifyData(Text,Codeunit::System#Security#Encryption#Signature_Key,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+- syntax:
+    content: 'procedure VerifyData(DataInStream: InStream, SignatureKey: Codeunit "Signature Key", HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: DataInStream
+      description: The stream of input data.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: SignatureKey
+      description: The private key to use in the hash algorithm.
+      parameterType:
+        internalReference: O:Codeunit::System#Security#Encryption#Signature_Key
+        name: System.Security.Encryption."Signature Key"
+        isExternal: false
+    - id: HashAlgorithm
+      description: The available hash algorithms are MD5, SHA1, SHA256, SHA384, and SHA512.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      description: The stream of signature.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the signature is valid; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies that a digital signature is valid.
+  name: VerifyData
+  uid: M:Codeunit::System#Security#Encryption#Cryptography_Management.VerifyData(InStream,Codeunit::System#Security#Encryption#Signature_Key,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+commentId: O:Codeunit::System#Security#Encryption#Cryptography Management
+summary: >-
+  Provides helper functions for encryption and hashing.
+
+  For encryption in an on-premises versions, use it to turn encryption on or off, and import and export the encryption key.
+
+  Encryption is always turned on for online versions.
+name: '"Cryptography Management"'
+uid: O:Codeunit::System#Security#Encryption#Cryptography_Management

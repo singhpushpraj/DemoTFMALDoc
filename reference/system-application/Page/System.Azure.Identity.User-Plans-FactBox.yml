@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."User Plans FactBox"
+alId: ID 9826
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity."User Plan"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: User Plans
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "9005"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "User Plan" = r
+  promoted: false
+commentId: O:Page::System#Azure#Identity#User Plans FactBox
+summary: ListPart page that contains the plans assigned to users.
+name: '"User Plans FactBox"'
+uid: O:Page::System#Azure#Identity#User_Plans_FactBox

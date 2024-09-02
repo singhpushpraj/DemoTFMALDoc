@@ -1,0 +1,22 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Activities"
+alId: ID 8885
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: CardPart
+  promoted: true
+- name: Caption
+  value: Email Status
+  promoted: false
+commentId: O:Page::System#Email#Email Activities
+summary: Provides information about the status of the emails.
+name: '"Email Activities"'
+uid: O:Page::System#Email#Email_Activities

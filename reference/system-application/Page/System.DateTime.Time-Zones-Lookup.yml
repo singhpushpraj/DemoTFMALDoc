@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Time Zones Lookup"
+alId: ID 9216
+namespace: System.DateTime
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Time Zones
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: Permissions
+  value: tabledata "Time Zone" = r
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#DateTime#Time Zones Lookup
+summary: List page that contains all Time zones.
+name: '"Time Zones Lookup"'
+uid: O:Page::System#DateTime#Time_Zones_Lookup

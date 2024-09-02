@@ -1,0 +1,802 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Guided Experience"
+alId: ID 1990
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure InsertManualSetup(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, ObjectTypeToRun: ObjectType, ObjectIDToRun: Integer, ManualSetupCategory: Enum "Manual Setup Category", Keywords: Text[250])'
+    parameters:
+    - id: Title
+      description: The title of the manual setup.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      description: A short title used for the checklist.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      description: The description of the manual setup.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      description: How many minutes the setup is expected to take, should be lower than 30000.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ObjectTypeToRun
+      description: The type of the object to be run as part of the setup.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectIDToRun
+      description: The ID of the object to be run as part of the setup.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ManualSetupCategory
+      description: The category that this manual setup belongs to.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Manual_Setup_Category
+        name: System.Environment.Configuration."Manual Setup Category"
+        isExternal: false
+    - id: Keywords
+      description: The keywords related to the manual setup.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+  summary: Inserts a manual setup page.
+  name: InsertManualSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertManualSetup(Text[2048],Text[50],Text[1024],Integer,ObjectType,Integer,Enum::System#Environment#Configuration#Manual_Setup_Category,Text[250])
+- syntax:
+    content: 'procedure InsertManualSetup(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, ObjectTypeToRun: ObjectType, ObjectIDToRun: Integer, ManualSetupCategory: Enum "Manual Setup Category", Keywords: Text[250], IsPrimarySetup: Boolean)'
+    parameters:
+    - id: Title
+      description: The title of the manual setup.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      description: A short title used for the checklist.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      description: The description of the manual setup.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      description: How many minutes the setup is expected to take, should be lower than 30000.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ObjectTypeToRun
+      description: The type of the object to be run as part of the setup.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectIDToRun
+      description: The ID of the object to be run as part of the setup.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ManualSetupCategory
+      description: The category that this manual setup belongs to.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Manual_Setup_Category
+        name: System.Environment.Configuration."Manual Setup Category"
+        isExternal: false
+    - id: Keywords
+      description: The keywords related to the manual setup.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: IsPrimarySetup
+      description: Is this a primary setup for this extension.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Inserts a manual setup page.
+  name: InsertManualSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertManualSetup(Text[2048],Text[50],Text[1024],Integer,ObjectType,Integer,Enum::System#Environment#Configuration#Manual_Setup_Category,Text[250],Boolean)
+- syntax:
+    content: 'procedure InsertAssistedSetup(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, ObjectTypeToRun: ObjectType, ObjectIDToRun: Integer, AssistedSetupGroup: Enum "Assisted Setup Group", VideoUrl: Text[250], VideoCategory: Enum "Video Category", HelpUrl: Text[250])'
+    parameters:
+    - id: Title
+      description: The title of the assisted setup.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      description: A short title used for the checklist.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      description: The description of the assisted setup.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      description: How many minutes the setup is expected to take, should be lower than 30000.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ObjectTypeToRun
+      description: The type of the object to be run as part of the setup.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectIDToRun
+      description: The ID of the object to be run as part of the setup.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: AssistedSetupGroup
+      description: The assisted setup group enum that this belongs to.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Assisted_Setup_Group
+        name: System.Environment.Configuration."Assisted Setup Group"
+        isExternal: false
+    - id: VideoUrl
+      description: The URL of the video that explains the purpose and use of this setup.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: VideoCategory
+      description: The category of the video for this setup.
+      parameterType:
+        internalReference: O:Enum::System#Media#Video_Category
+        name: System.Media."Video Category"
+        isExternal: false
+    - id: HelpUrl
+      parameterType:
+        name: Text[250]
+        isExternal: true
+  summary: Inserts an assisted setup page.
+  name: InsertAssistedSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertAssistedSetup(Text[2048],Text[50],Text[1024],Integer,ObjectType,Integer,Enum::System#Environment#Configuration#Assisted_Setup_Group,Text[250],Enum::System#Media#Video_Category,Text[250])
+- syntax:
+    content: 'procedure InsertAssistedSetup(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, ObjectTypeToRun: ObjectType, ObjectIDToRun: Integer, AssistedSetupGroup: Enum "Assisted Setup Group", VideoUrl: Text[250], VideoCategory: Enum "Video Category", HelpUrl: Text[250], IsPrimarySetup: Boolean)'
+    parameters:
+    - id: Title
+      description: The title of the assisted setup.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      description: A short title used for the checklist.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      description: The description of the assisted setup.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      description: How many minutes the setup is expected to take, should be lower than 30000.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ObjectTypeToRun
+      description: The type of the object to be run as part of the setup.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectIDToRun
+      description: The ID of the object to be run as part of the setup.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: AssistedSetupGroup
+      description: The assisted setup group enum that this belongs to.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Assisted_Setup_Group
+        name: System.Environment.Configuration."Assisted Setup Group"
+        isExternal: false
+    - id: VideoUrl
+      description: The URL of the video that explains the purpose and use of this setup.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: VideoCategory
+      description: The category of the video for this setup.
+      parameterType:
+        internalReference: O:Enum::System#Media#Video_Category
+        name: System.Media."Video Category"
+        isExternal: false
+    - id: HelpUrl
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: IsPrimarySetup
+      description: Is this a primary setup for this extenion.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Inserts an assisted setup page.
+  name: InsertAssistedSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertAssistedSetup(Text[2048],Text[50],Text[1024],Integer,ObjectType,Integer,Enum::System#Environment#Configuration#Assisted_Setup_Group,Text[250],Enum::System#Media#Video_Category,Text[250],Boolean)
+- syntax:
+    content: 'procedure InsertLearnLink(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, Link: Text[250])'
+    parameters:
+    - id: Title
+      description: The title of the learn link.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      description: A short title used for the checklist.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      description: The description of the learn link.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      description: How many minutes the user should expect to spend using the link, should be lower than 30000.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Link
+      description: The learn link.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+  summary: Inserts a learn link.
+  name: InsertLearnLink
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertLearnLink(Text[2048],Text[50],Text[1024],Integer,Text[250])
+- syntax:
+    content: 'procedure InsertTour(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, PageID: Integer)'
+    parameters:
+    - id: Title
+      description: The title of the tour.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      description: A short title used for the checklist.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      description: The description of the tour.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      description: How many minutes the user should expect to spend taking the tour, should be lower than 30000.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: PageID
+      description: The ID of the page that the tour is run on.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Inserts a tour for a page.
+  name: InsertTour
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertTour(Text[2048],Text[50],Text[1024],Integer,Integer)
+- syntax:
+    content: 'procedure InsertSpotlightTour(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, PageID: Integer, SpotlighTourType: Enum "Spotlight Tour Type", SpotlightTourTexts: Dictionary of [Enum "Spotlight Tour Text", Text])'
+    parameters:
+    - id: Title
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: PageID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SpotlighTourType
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Spotlight_Tour_Type
+        name: System.Environment.Configuration."Spotlight Tour Type"
+        isExternal: false
+    - id: SpotlightTourTexts
+      parameterType:
+        name: Dictionary of [Enum System.Environment.Configuration."Spotlight Tour Text", Text]
+        isExternal: true
+  name: InsertSpotlightTour
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertSpotlightTour(Text[2048],Text[50],Text[1024],Integer,Integer,Enum::System#Environment#Configuration#Spotlight_Tour_Type,Dictionary_of_[Spotlight_Tour_Text,Text])
+- syntax:
+    content: 'procedure InsertApplicationFeature(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, ObjectTypeToRun: ObjectType, ObjectIDToRun: Integer)'
+    parameters:
+    - id: Title
+      description: The title of the application feature.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      description: A short title used for the checklist.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      description: The description of the application feature.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      description: How many minutes the user should expect to spend, should be lower than 30000.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ObjectTypeToRun
+      description: The object type to run for the application feature.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectIDToRun
+      description: The object ID to run for the application feature.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Inserts a guided experience item for an application feature.
+  name: InsertApplicationFeature
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertApplicationFeature(Text[2048],Text[50],Text[1024],Integer,ObjectType,Integer)
+- syntax:
+    content: 'procedure InsertVideo(Title: Text[2048], ShortTitle: Text[50], Description: Text[1024], ExpectedDuration: Integer, VideoURL: Text[250], VideoCategory: Enum "Video Category")'
+    parameters:
+    - id: Title
+      description: The title of the video.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: ShortTitle
+      description: A short title used for the checklist.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: Description
+      description: The description of the video.
+      parameterType:
+        name: Text[1024]
+        isExternal: true
+    - id: ExpectedDuration
+      description: The duration of the video in minutes, should be lower than 30000.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: VideoURL
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: VideoCategory
+      description: The category of the video.
+      parameterType:
+        internalReference: O:Enum::System#Media#Video_Category
+        name: System.Media."Video Category"
+        isExternal: false
+  summary: Inserts a guided experience item for a video.
+  name: InsertVideo
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.InsertVideo(Text[2048],Text[50],Text[1024],Integer,Text[250],Enum::System#Media#Video_Category)
+- syntax:
+    content: procedure OpenManualSetupPage()
+  summary: Opens the Manual Setup page containing the setup guides.
+  name: OpenManualSetupPage
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.OpenManualSetupPage
+- syntax:
+    content: 'procedure OpenManualSetupPage(ManualSetupCategory: Enum "Manual Setup Category")'
+    parameters:
+    - id: ManualSetupCategory
+      description: The group which the view should be filtered to.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Manual_Setup_Category
+        name: System.Environment.Configuration."Manual Setup Category"
+        isExternal: false
+  summary: Opens the Manual Setup page with the setup guides filtered on a selected group of guides.
+  name: OpenManualSetupPage
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.OpenManualSetupPage(Enum::System#Environment#Configuration#Manual_Setup_Category)
+- syntax:
+    content: 'procedure AddTranslationForSetupObjectTitle(GuidedExperienceType: Enum "Guided Experience Type", ObjectType: ObjectType, ObjectID: Integer, LanguageID: Integer, Translation: Text)'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of setup object.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: LanguageID
+      description: The language ID for which the translation is made.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Translation
+      description: The translated text of the title.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds the translation for the title of the setup object.
+  name: AddTranslationForSetupObjectTitle
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.AddTranslationForSetupObjectTitle(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer,Integer,Text)
+- syntax:
+    content: 'procedure AddTranslationForSetupObjectDescription(GuidedExperienceType: Enum "Guided Experience Type", ObjectType: ObjectType, ObjectID: Integer, LanguageID: Integer, Translation: Text)'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of setup object.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: LanguageID
+      description: The language ID for which the translation is made.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Translation
+      description: The translated text of the description.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds the translation for the description of the setup object.
+  name: AddTranslationForSetupObjectDescription
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.AddTranslationForSetupObjectDescription(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer,Integer,Text)
+- syntax:
+    content: 'procedure AddTranslationForSetupObjectShortTitle(GuidedExperienceType: Enum "Guided Experience Type", ObjectType: ObjectType, ObjectID: Integer, LanguageID: Integer, Translation: Text)'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of setup object.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: LanguageID
+      description: The language ID for which the translation is made.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Translation
+      description: The translated text of the short title.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds the translation for the short title of the setup object.
+  name: AddTranslationForSetupObjectShortTitle
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.AddTranslationForSetupObjectShortTitle(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer,Integer,Text)
+- syntax:
+    content: 'procedure IsAssistedSetupComplete(ObjectType: ObjectType, ObjectID: Integer): Boolean'
+    parameters:
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: Returns true if the given setup guide has been completed by a user, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether a user has completed the setup corresponding to the object type and ID.
+  name: IsAssistedSetupComplete
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.IsAssistedSetupComplete(ObjectType,Integer):Boolean
+- syntax:
+    content: 'procedure Exists(GuidedExperienceType: Enum "Guided Experience Type", ObjectType: ObjectType, ObjectID: Integer): Boolean'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of setup object.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if a guided experience item exists for the provided object type and ID; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether a guided experience item exists for the given object type and ID.
+  name: Exists
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.Exists(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer):Boolean
+- syntax:
+    content: 'procedure Exists(GuidedExperienceType: Enum "Guided Experience Type", Link: Text[250]): Boolean'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of setup object.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: Link
+      description: The link that identifies the guided experience item.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    return:
+      description: True if a guided experience item exists for the provided link; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether a guided experience item exists for the link.
+  name: Exists
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.Exists(Enum::System#Environment#Configuration#Guided_Experience_Type,Text[250]):Boolean
+- syntax:
+    content: 'procedure AssistedSetupExistsAndIsNotComplete(ObjectType: ObjectType, ObjectID: Integer): Boolean'
+    parameters:
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if it exists and is incomplete, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether a guided experience item exists but has not been completed for the given object type and ID.
+  name: AssistedSetupExistsAndIsNotComplete
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.AssistedSetupExistsAndIsNotComplete(ObjectType,Integer):Boolean
+- syntax:
+    content: 'procedure CompleteAssistedSetup(ObjectType: ObjectType, ObjectID: Integer)'
+    parameters:
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the status of the guided experience item to complete.
+  remarks: This is typically called from inside the guided experience item when the setup is finished.
+  name: CompleteAssistedSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.CompleteAssistedSetup(ObjectType,Integer)
+- syntax:
+    content: 'procedure ResetAssistedSetup(ObjectType: ObjectType, ObjectID: Integer)'
+    parameters:
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Resets the status of the guided experience item so that it does not appear to have been completed.
+  name: ResetAssistedSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.ResetAssistedSetup(ObjectType,Integer)
+- syntax:
+    content: 'procedure Run(GuidedExperienceType: Enum "Guided Experience Type", ObjectType: ObjectType, ObjectID: Integer)'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of setup object.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Issues the call to start the guided experience item.
+  name: Run
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.Run(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer)
+- syntax:
+    content: procedure OpenAssistedSetup()
+  summary: Opens the Assisted Setup page with the setup guides in it.
+  name: OpenAssistedSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.OpenAssistedSetup
+- syntax:
+    content: 'procedure OpenAssistedSetup(AssistedSetupGroup: Enum "Assisted Setup Group")'
+    parameters:
+    - id: AssistedSetupGroup
+      description: The group of guides to display on the Assisted Setup page.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Assisted_Setup_Group
+        name: System.Environment.Configuration."Assisted Setup Group"
+        isExternal: false
+  summary: Opens the Assisted Setup page with the setup guides filtered on a selected group of guides.
+  name: OpenAssistedSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.OpenAssistedSetup(Enum::System#Environment#Configuration#Assisted_Setup_Group)
+- syntax:
+    content: 'procedure Remove(GuidedExperienceType: Enum "Guided Experience Type", ObjectType: ObjectType, ObjectID: Integer)'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of setup object.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectType
+      description: The object type that identifies the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID that identifies the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Removes a guided experience item.
+  remarks: The OnRegister subscriber which adds this guided experience item needs to be removed first.
+  name: Remove
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.Remove(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer)
+- syntax:
+    content: 'procedure Remove(GuidedExperienceType: Enum "Guided Experience Type", Link: Text[250])'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of guided experience item.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: Link
+      description: The link that identifies the guided experience item.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+  summary: Removes a guided experience item.
+  remarks: The OnRegister subscriber which adds this guided experience item needs to be removed first.
+  name: Remove
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.Remove(Enum::System#Environment#Configuration#Guided_Experience_Type,Text[250])
+- syntax:
+    content: 'procedure Remove(GuidedExperienceType: Enum "Guided Experience Type", ObjectType: ObjectType, ObjectID: Integer, SpotlightTourType: Enum "Spotlight Tour Type")'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of guided experience item.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectType
+      description: The object type of the guided experience item.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      description: The object ID of the guided experience item.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SpotlightTourType
+      description: The type of spotlight tour of the guided experience item.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Spotlight_Tour_Type
+        name: System.Environment.Configuration."Spotlight Tour Type"
+        isExternal: false
+  summary: Removes a guided experience item.
+  name: Remove
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.Remove(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer,Enum::System#Environment#Configuration#Spotlight_Tour_Type)
+- syntax:
+    content: 'procedure RunExtensionSetup(AppId: Guid)'
+    parameters:
+    - id: AppId
+      description: The app id of the app whose setup needs to be run.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Opens the primary setup for an app.
+  name: RunExtensionSetup
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.RunExtensionSetup(Guid)
+- syntax:
+    content: 'procedure SetupForExtensionExists(AppId: Guid): Boolean'
+    parameters:
+    - id: AppId
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: checks if setup for an extension exist.
+  name: SetupForExtensionExists
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.SetupForExtensionExists(Guid):Boolean
+- syntax:
+    content: 'procedure OpenCombinedSetupList(AppId: Guid)'
+    parameters:
+    - id: AppId
+      description: The app id of the app whose setup pages will be shown.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Opens a aggregated list of both manual setup and assisted setup pages for an extension.
+  name: OpenCombinedSetupList
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.OpenCombinedSetupList(Guid)
+- syntax:
+    content: 'procedure CleanupOldGuidedExperienceItems(OnlyFirstParty: Boolean, Threshold: Integer)'
+    parameters:
+    - id: OnlyFirstParty
+      description: If true, only clean up first party items.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Threshold
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Clean up old guided experience items with too many old version.
+  name: CleanupOldGuidedExperienceItems
+  uid: M:Codeunit::System#Environment#Configuration#Guided_Experience.CleanupOldGuidedExperienceItems(Boolean,Integer)
+commentId: O:Codeunit::System#Environment#Configuration#Guided Experience
+summary: Manage the guided experience items that users can access.
+name: '"Guided Experience"'
+uid: O:Codeunit::System#Environment#Configuration#Guided_Experience

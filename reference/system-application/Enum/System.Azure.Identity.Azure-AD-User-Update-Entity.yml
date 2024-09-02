@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD User Update Entity"
+alId: ID 9515
+namespace: System.Azure.Identity
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Represents an update to the authentication email property of a user.
+  name: '"Authentication Email"'
+  uid: E:Enum::System#Azure#Identity#Azure_AD_User_Update_Entity.Authentication_Email
+- summary: Represents an update to the contact email property of a user.
+  name: '"Contact Email"'
+  uid: E:Enum::System#Azure#Identity#Azure_AD_User_Update_Entity.Contact_Email
+- summary: Represents an update to the full name property of a user.
+  name: '"Full Name"'
+  uid: E:Enum::System#Azure#Identity#Azure_AD_User_Update_Entity.Full_Name
+- summary: Represents an update to the assigned plans for a user.
+  name: Plan
+  uid: E:Enum::System#Azure#Identity#Azure_AD_User_Update_Entity.Plan
+- summary: Represents an update to the language setting of a user.
+  name: '"Language ID"'
+  uid: E:Enum::System#Azure#Identity#Azure_AD_User_Update_Entity.Language_ID
+commentId: O:Enum::System#Azure#Identity#Azure AD User Update Entity
+summary: The entities that are updated in Business Central from Office 365.
+remarks: >-
+  The order in which the update is processed must be in the following order.
+
+  Authentication email must be updated before Plan, and Plan must be updated before Language ID.
+name: '"Azure AD User Update Entity"'
+uid: O:Enum::System#Azure#Identity#Azure_AD_User_Update_Entity

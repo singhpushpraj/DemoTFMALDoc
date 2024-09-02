@@ -1,0 +1,65 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Entity Text"
+alId: ID 2013
+namespace: System.Text
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: Copilot pages are using the prompt dialog page, to edit entity text with a rich text editor, use a rich text control instead.
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Entity Text
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: DataCaptionExpression
+  value: "''"
+  promoted: false
+commentId: O:Page::System#Text#Entity Text
+summary: >-
+  The fallback edit page shown if the OnEditEntityText is not handled.
+
+  Uses the "Entity Text Part" to render the rich text editor.
+name: '"Entity Text"'
+obsoletion:
+  state: pending
+  reason: Copilot pages are using the prompt dialog page, to edit entity text with a rich text editor, use a rich text control instead.
+  version: "24.0"
+uid: O:Page::System#Text#Entity_Text

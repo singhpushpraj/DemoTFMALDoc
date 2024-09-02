@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD Graph"
+alId: ID 9012
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Azure#Identity#Azure AD Graph
+summary: Exposes functionality to query Microsoft Entra.
+name: '"Azure AD Graph"'
+uid: O:Codeunit::System#Azure#Identity#Azure_AD_Graph

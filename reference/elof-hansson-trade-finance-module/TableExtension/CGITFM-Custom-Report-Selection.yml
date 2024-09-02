@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGITFM Custom Report Selection"'
+alId: ID 70303
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  name: Microsoft.Foundation.Reporting."Custom Report Selection"
+  isExternal: true
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"CGI Email Subject"'
+  uid: F:TableExtension::CGITFM_Custom_Report_Selection.CGI_Email_Subject[100]
+- type:
+    internalReference: O:Enum::CGI_TFM_Email_Type
+    name: '"CGI TFM Email Type"'
+    isExternal: false
+  name: '"CGI Email Type"'
+  uid: F:TableExtension::CGITFM_Custom_Report_Selection.CGI_Email_Type
+commentId: O:TableExtension::CGITFM Custom Report Selection
+summary: >-
+  tableextension 70303 CGITFM Custom Report Selection extends Custom Report Selection
+
+  contains TFM related fields
+name: '"CGITFM Custom Report Selection"'
+uid: O:TableExtension::CGITFM_Custom_Report_Selection

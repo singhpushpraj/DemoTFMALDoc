@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Default Permission Set In Plan"
+alId: ID 9823
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: Getting the default permissions will be done only inside the Azure AD Plan module.
+  promoted: false
+- name: ObsoleteTag
+  value: "22.0"
+  promoted: false
+commentId: O:Codeunit::System#Azure#Identity#Default Permission Set In Plan
+summary: Provides functionality to fetch the default permission sets for a plan.
+name: '"Default Permission Set In Plan"'
+obsoletion:
+  state: pending
+  reason: Getting the default permissions will be done only inside the Azure AD Plan module.
+  version: "22.0"
+uid: O:Codeunit::System#Azure#Identity#Default_Permission_Set_In_Plan

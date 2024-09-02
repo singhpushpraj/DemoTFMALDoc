@@ -1,0 +1,69 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."User Settings"
+alId: ID 9204
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Environment#Configuration#User_Settings
+  name: System.Environment.Configuration."User Settings"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: AdditionalSearchTerms
+  value: company,role center,work date,role
+  promoted: false
+- name: DataCaptionExpression
+  value: Rec."User ID"
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: My Settings
+  promoted: false
+- name: PageType
+  value: StandardDialog
+  promoted: true
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: SourceTable
+  value: "9172"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Environment#Configuration#User_Settings
+    name: System.Environment.Configuration."User Settings"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "True"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: HelpLink
+  value: https://go.microsoft.com/fwlink/?linkid=2149387
+  promoted: false
+- name: Permissions
+  value: tabledata User = r
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#User Settings
+summary: Page that shows the settings of a given user.
+name: '"User Settings"'
+uid: O:Page::System#Environment#Configuration#User_Settings

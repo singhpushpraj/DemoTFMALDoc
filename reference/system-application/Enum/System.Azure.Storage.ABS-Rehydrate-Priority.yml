@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Rehydrate Priority"
+alId: ID 9046
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Standard priority. Default value.
+  name: Standard
+  uid: E:Enum::System#Azure#Storage#ABS_Rehydrate_Priority.Standard
+- summary: High priority
+  name: High
+  uid: E:Enum::System#Azure#Storage#ABS_Rehydrate_Priority.High
+commentId: O:Enum::System#Azure#Storage#ABS Rehydrate Priority
+summary: >-
+  Indicates the priority with which to rehydrate an archived blob.
+
+  The priority can be set on a blob only one time. This header will be ignored on subsequent requests to the same blob. The default priority without this header is Standard.
+name: '"ABS Rehydrate Priority"'
+uid: O:Enum::System#Azure#Storage#ABS_Rehydrate_Priority

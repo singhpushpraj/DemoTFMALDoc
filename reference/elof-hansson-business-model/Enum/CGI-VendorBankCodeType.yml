@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI VendorBankCodeType"'
+alId: ID 60311
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '" "'
+  uid: E:Enum::CGI_VendorBankCodeType._
+- name: FW
+  uid: E:Enum::CGI_VendorBankCodeType.FW
+- name: SC
+  uid: E:Enum::CGI_VendorBankCodeType.SC
+- name: BSB
+  uid: E:Enum::CGI_VendorBankCodeType.BSB
+commentId: O:Enum::CGI VendorBankCodeType
+name: '"CGI VendorBankCodeType"'
+uid: O:Enum::CGI_VendorBankCodeType

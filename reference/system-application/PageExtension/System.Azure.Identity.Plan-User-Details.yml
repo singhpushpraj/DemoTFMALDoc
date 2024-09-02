@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plan User Details"
+alId: ID 774
+namespace: System.Azure.Identity
+baseKind: Page
+kind: PageExtension
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+extends:
+  internalReference: O:Page::System#Security#User#User_Details
+  name: System.Security.User."User Details"
+  isExternal: false
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+objectProperties:
+- name: Editable
+  value: "False"
+  promoted: false
+commentId: O:PageExtension::System#Azure#Identity#Plan User Details
+summary: A page extension that adds details about plans to the User Details page
+name: '"Plan User Details"'
+uid: O:PageExtension::System#Azure#Identity#Plan_User_Details

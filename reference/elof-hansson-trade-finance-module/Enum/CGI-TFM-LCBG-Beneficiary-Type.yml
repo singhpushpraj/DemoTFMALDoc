@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG Beneficiary Type"'
+alId: ID 70305
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Customer
+  uid: E:Enum::CGI_TFM_LCBG_Beneficiary_Type.Customer
+- name: Vendor
+  uid: E:Enum::CGI_TFM_LCBG_Beneficiary_Type.Vendor
+commentId: O:Enum::CGI TFM LCBG Beneficiary Type
+summary: Contains CGI TFM LCBG Beneficiary Type (Customer/Vendor)
+name: '"CGI TFM LCBG Beneficiary Type"'
+uid: O:Enum::CGI_TFM_LCBG_Beneficiary_Type

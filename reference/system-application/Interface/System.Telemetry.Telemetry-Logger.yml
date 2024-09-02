@@ -1,0 +1,57 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Telemetry."Telemetry Logger"
+namespace: System.Telemetry
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Telemetry
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure LogMessage(EventId: Text, Message: Text, Verbosity: Verbosity, DataClassification: DataClassification, TelemetryScope: TelemetryScope, CustomDimensions: Dictionary of [Text, Text])'
+    parameters:
+    - id: EventId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Message
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Verbosity
+      parameterType:
+        name: Verbosity
+        isExternal: true
+    - id: DataClassification
+      parameterType:
+        name: DataClassification
+        isExternal: true
+    - id: TelemetryScope
+      parameterType:
+        name: TelemetryScope
+        isExternal: true
+    - id: CustomDimensions
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+  name: LogMessage
+  uid: M:Interface::System#Telemetry#Telemetry_Logger.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope,Dictionary_of_[Text,Text])
+commentId: O:Interface::System#Telemetry#Telemetry Logger
+summary: The interface that allows 3d party extensions to emit telemetry to their own telemetry stores when the Telemetry codeunit is used.
+examples:
+- >2+
+
+  codeunit 50100 "My Telemetry Logger" implements "Telemetry Logger"
+
+  {
+      Access = Internal;
+
+      procedure LogMessage(EventId: Text; Message: Text; Verbosity: Verbosity; DataClassification: DataClassification; TelemetryScope: TelemetryScope; CustomDimensions: Dictionary of [Text, Text])
+      begin
+          Session.LogMessage(EventId, Message, Verbosity, DataClassification, TelemetryScope, CustomDimensions);
+      end;
+  }
+name: '"Telemetry Logger"'
+uid: O:Interface::System#Telemetry#Telemetry_Logger

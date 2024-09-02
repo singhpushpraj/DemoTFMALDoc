@@ -1,0 +1,51 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Relation Picker"
+alId: ID 8910
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  name: System.Email."Email Related Record"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "8909"
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: Caption
+  value: Related Records
+  promoted: false
+- name: Permissions
+  value: tabledata "Email Related Record" = r
+  promoted: false
+commentId: O:Page::System#Email#Email Relation Picker
+name: '"Email Relation Picker"'
+uid: O:Page::System#Email#Email_Relation_Picker

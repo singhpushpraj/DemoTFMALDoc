@@ -1,0 +1,70 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Template Selection Wizard"
+alId: ID 9996
+namespace: System.Integration.Word
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Integration#Word#Word_Template
+  name: System.Integration.Word."Word Template"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: Caption
+  value: Apply Word Template
+  promoted: false
+- name: SourceTable
+  value: "9988"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Integration#Word#Word_Template
+    name: System.Integration.Word."Word Template"
+    isExternal: false
+- name: Permissions
+  value: tabledata "Word Template" = rm
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+methods:
+- syntax:
+    content: 'procedure IsDocSaveFormat(): Boolean'
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsDocSaveFormat
+  uid: M:Page::System#Integration#Word#Word_Template_Selection_Wizard.IsDocSaveFormat:Boolean
+- syntax:
+    content: 'procedure SetTemplate(WordTemplate: Record "Word Template")'
+    parameters:
+    - id: WordTemplate
+      description: The template to set.
+      parameterType:
+        name: Record "Word Template"
+        isExternal: true
+  summary: Sets the template to apply. If not set, the user will be prompted to choose a template as part of the wizard.
+  name: SetTemplate
+  uid: M:Page::System#Integration#Word#Word_Template_Selection_Wizard.SetTemplate(Word_Template)
+- syntax:
+    content: 'procedure SetData(RecordVariant: Variant)'
+    parameters:
+    - id: RecordVariant
+      description: The record to set.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Sets the record to be used when applying the template.
+  name: SetData
+  uid: M:Page::System#Integration#Word#Word_Template_Selection_Wizard.SetData(Variant)
+commentId: O:Page::System#Integration#Word#Word Template Selection Wizard
+summary: A wizard to select a Word template and apply it for a record.
+name: '"Word Template Selection Wizard"'
+uid: O:Page::System#Integration#Word#Word_Template_Selection_Wizard

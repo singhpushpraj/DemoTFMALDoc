@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Table::System#Azure#Storage#SAS_Parameters">
+  <h1>Table &quot;SAS Parameters&quot;</h1>
+
+
+<div class="font-style-italic">ID 9064</div>
+<div class="font-style-italic">Namespace: System.Azure.Storage</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Optional parameters for Shared Access Signature authorization for Azure Storage Services.
+see: <a href="https://go.microsoft.com/fwlink/?linkid=2210398">https://go.microsoft.com/fwlink/?linkid=2210398</a></p>
+
+  		</div>
+  	</div>
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  			<tr>
+  					<td class="font-weight-bold">Extensible</td>
+  					<td class="font-style-italic font-weight-bold">
+							False
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>TableType</td>
+  					<td class="font-style-italic">
+							Temporary
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="fields">Fields</h2>
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Type</th>
+  				<th>Description</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  				<tr>
+  					<td>ApiVersion</td>
+  					<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Azure.Storage.Storage-Service-API-Version.html">System.Azure.Storage.&quot;Storage Service API Version&quot;</a>						
+  					</td>
+  					<td><p>Specifies the storage service version to use to execute the request made using the account SAS URI.</p>
+</td>
+  				</tr>
+  				<tr>
+  					<td>SignedStart</td>
+  					<td class="font-style-italic">
+DateTime						
+  					</td>
+  					<td><p>The time at which the SAS becomes valid, expressed in one of the accepted ISO 8601 UTC formats. If omitted, the start time is assumed to be the time when the storage service receives the request.</p>
+</td>
+  				</tr>
+  				<tr>
+  					<td>SignedIp</td>
+  					<td class="font-style-italic">
+Text[2048]						
+  					</td>
+  					<td><p>Specifies an IP address or a range of IP addresses from which to accept requests. When specifying a range, note that the range is inclusive.</p>
+</td>
+  				</tr>
+  				<tr>
+  					<td>SignedProtocol</td>
+  					<td class="font-style-italic">
+Option						
+  					</td>
+  					<td><p>Specifies the protocol permitted for a request made with the account SAS. Possible values are both HTTPS and HTTP (https,http) or HTTPS only (https)</p>
+</td>
+  				</tr>
+  				<tr>
+  					<td>SignedEncryptionScope</td>
+  					<td class="font-style-italic">
+Text[63]						
+  					</td>
+  					<td><p>Indicates the encryption scope to use to encrypt the request contents.
+This field is supported with version 2020-12-06 and later.
+See also: <a href="https://learn.microsoft.com/en-us/rest/api/storageservices/create-account-sas#specify-the-encryption-scope">https://learn.microsoft.com/en-us/rest/api/storageservices/create-account-sas#specify-the-encryption-scope</a>
+The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only
+Every dash (-) character must be immediately preceded and followed by a letter or number.
+See also: <a href="https://learn.microsoft.com/en-us/rest/api/storagerp/encryption-scopes/put?tabs=HTTP#uri-parameters">https://learn.microsoft.com/en-us/rest/api/storagerp/encryption-scopes/put?tabs=HTTP#uri-parameters</a></p>
+</td>
+  				</tr>
+  				<tr>
+  					<td>SystemId</td>
+  					<td class="font-style-italic">
+Guid						
+  					</td>
+  					<td></td>
+  				</tr>
+  				<tr>
+  					<td>SystemCreatedAt</td>
+  					<td class="font-style-italic">
+DateTime						
+  					</td>
+  					<td></td>
+  				</tr>
+  				<tr>
+  					<td>SystemCreatedBy</td>
+  					<td class="font-style-italic">
+Guid						
+  					</td>
+  					<td></td>
+  				</tr>
+  				<tr>
+  					<td>SystemModifiedAt</td>
+  					<td class="font-style-italic">
+DateTime						
+  					</td>
+  					<td></td>
+  				</tr>
+  				<tr>
+  					<td>SystemModifiedBy</td>
+  					<td class="font-style-italic">
+Guid						
+  					</td>
+  					<td></td>
+  				</tr>
+  				<tr>
+  					<td>SystemRowVersion</td>
+  					<td class="font-style-italic">
+BigInteger						
+  					</td>
+  					<td></td>
+  				</tr>
+  		</tbody>
+  	</table>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object">Table</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

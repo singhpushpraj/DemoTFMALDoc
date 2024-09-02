@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Blob Public Access"
+alId: ID 9043
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Indicates full public read access for container and blob data. Clients can use anonymous requests to enumerate blobs in the container, but cannot enumerate containers in the storage account.
+  name: Container
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Public_Access.Container
+- summary: ndicates public read access to blob data in this container. The blob data can be read via anonymous request, but container data is not available. Clients cannot enumerate blobs in the container via anonymous request.
+  name: Blob
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Public_Access.Blob
+commentId: O:Enum::System#Azure#Storage#ABS Blob Public Access
+summary: Indicator of whether data in the container may be accessed publicly and the level of access.
+name: '"ABS Blob Public Access"'
+uid: O:Enum::System#Azure#Storage#ABS_Blob_Public_Access

@@ -1,0 +1,104 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel Workbook"
+alId: ID 1488
+namespace: System.Integration.Excel
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Initialize(ServiceName: Text[250])'
+    parameters:
+    - id: ServiceName
+      description: The name of the service the Excel add-in should connect to. This service must exist and be published.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+  summary: Initialize the workbook. This will setup all required information for the add-in.
+  name: Initialize
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook.Initialize(Text[250])
+- syntax:
+    content: 'procedure SetFilters(EditInExcelFilters: Codeunit "Edit in Excel Filters")'
+    parameters:
+    - id: EditInExcelFilters
+      description: Filters to be applied.
+      parameterType:
+        internalReference: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters
+        name: System.Integration.Excel."Edit in Excel Filters"
+        isExternal: false
+  summary: Sets the filters in the Excel Add-in.
+  name: SetFilters
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook.SetFilters(Codeunit::System#Integration#Excel#Edit_in_Excel_Filters)
+- syntax:
+    content: 'procedure SetSearchText(SearchText: Text)'
+    parameters:
+    - id: SearchText
+      description: The text that should be searched for.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Set the search text of the Excel Add-in. This works similar to searching on a page for the specified text.
+  name: SetSearchText
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook.SetSearchText(Text)
+- syntax:
+    content: 'procedure AddColumn(Caption: Text, OdataFieldName: Text)'
+    parameters:
+    - id: Caption
+      description: Caption of the field.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OdataFieldName
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Add the specified OdataField with the given caption to the Excel file.
+  name: AddColumn
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook.AddColumn(Text,Text)
+- syntax:
+    content: 'procedure InsertColumn(Index: Integer, Caption: Text, OdataFieldName: Text)'
+    parameters:
+    - id: Index
+      description: Location to insert.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Caption
+      description: Caption of the field.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OdataFieldName
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Add the specified OdataField with the given caption to the Excel file at the specified location.
+  name: InsertColumn
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook.InsertColumn(Integer,Text,Text)
+- syntax:
+    content: procedure ImposeExcelOnlineRestrictions()
+  summary: When the Excel file is opened in Excel online, there are certain restrictions such as a column limit. This will trim additional columns and impose any future restrictions.
+  name: ImposeExcelOnlineRestrictions
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook.ImposeExcelOnlineRestrictions
+- syntax:
+    content: 'procedure ExportToStream(): InStream'
+    return:
+      description: An InStream containing the generated Excel file.
+      returnType:
+        name: InStream
+        isExternal: true
+  summary: Generate an Excel file and create an InStream with the content.
+  name: ExportToStream
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook.ExportToStream:InStream
+commentId: O:Codeunit::System#Integration#Excel#Edit in Excel Workbook
+summary: This codeunit provides an interface to create workbooks using the Excel Add-in.
+name: '"Edit in Excel Workbook"'
+uid: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Workbook

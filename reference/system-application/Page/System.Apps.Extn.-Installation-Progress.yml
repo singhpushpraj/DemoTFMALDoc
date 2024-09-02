@@ -1,0 +1,22 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extn. Installation Progress"
+alId: ID 2505
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: Caption
+  value: Installing app
+  promoted: false
+commentId: O:Page::System#Apps#Extn# Installation Progress
+summary: Displays the deployment status for extensions that are deployed or are scheduled for deployment.
+name: '"Extn. Installation Progress"'
+uid: O:Page::System#Apps#Extn#_Installation_Progress

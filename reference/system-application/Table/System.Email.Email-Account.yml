@@ -1,0 +1,74 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Account"
+alId: ID 8902
+namespace: System.Email
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Account Id"'
+  uid: F:Table::System#Email#Email_Account.Account_Id
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Email#Email_Account.Name[250]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Email Address"'
+  uid: F:Table::System#Email#Email_Account.Email_Address[250]
+- type:
+    internalReference: O:Enum::System#Email#Email_Connector
+    name: System.Email."Email Connector"
+    isExternal: false
+  name: Connector
+  uid: F:Table::System#Email#Email_Account.Connector
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Email#Email_Account.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Email#Email_Account.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Email#Email_Account.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Email#Email_Account.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Email#Email_Account.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Email#Email_Account.SystemRowVersion
+commentId: O:Table::System#Email#Email Account
+summary: A common representation of an email account.
+name: '"Email Account"'
+uid: O:Table::System#Email#Email_Account

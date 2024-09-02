@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD User Updates Part"
+alId: ID 9516
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity."Azure AD User Update Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Updates
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "9010"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Permissions
+  value: tabledata "Azure AD User Update Buffer" = rd
+  promoted: false
+commentId: O:Page::System#Azure#Identity#Azure AD User Updates Part
+summary: A list part page to view and remove synchronized user updates.
+name: '"Azure AD User Updates Part"'
+uid: O:Page::System#Azure#Identity#Azure_AD_User_Updates_Part

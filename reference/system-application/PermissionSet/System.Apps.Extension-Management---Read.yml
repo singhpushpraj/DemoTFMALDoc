@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Management - Read"
+alId: ID 2500
+namespace: System.Apps
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Extension Management - Objects"'
+  promoted: false
+commentId: O:PermissionSet::System#Apps#Extension Management - Read
+name: '"Extension Management - Read"'
+uid: O:PermissionSet::System#Apps#Extension_Management_-_Read

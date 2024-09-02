@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Functions."Azure Functions Authentication"
+namespace: System.Azure.Functions
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Azure.Functions
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure Authenticate(var RequestMessage: HttpRequestMessage): Boolean'
+    parameters:
+    - id: RequestMessage
+      description: Request message used to communicate with Azure function.
+      parameterType:
+        name: HttpRequestMessage
+        isExternal: true
+    return:
+      description: True if authentication was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Exposes interface to authenticate request message to azure function.
+  name: Authenticate
+  uid: M:Interface::System#Azure#Functions#Azure_Functions_Authentication.Authenticate(HttpRequestMessage@):Boolean
+commentId: O:Interface::System#Azure#Functions#Azure Functions Authentication
+summary: Common interface for different authentication options.
+name: '"Azure Functions Authentication"'
+uid: O:Interface::System#Azure#Functions#Azure_Functions_Authentication

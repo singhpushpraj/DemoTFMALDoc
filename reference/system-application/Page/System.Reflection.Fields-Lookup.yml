@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection."Fields Lookup"
+alId: ID 9806
+namespace: System.Reflection
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: tabledata Field = r
+  promoted: false
+commentId: O:Page::System#Reflection#Fields Lookup
+summary: List page that contains table fields.
+name: '"Fields Lookup"'
+uid: O:Page::System#Reflection#Fields_Lookup

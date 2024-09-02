@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Session - Edit"
+alId: ID 96
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Session - Read"'
+  promoted: false
+commentId: O:PermissionSet::System#Security#AccessControl#Session - Edit
+name: '"Session - Edit"'
+uid: O:PermissionSet::System#Security#AccessControl#Session_-_Edit

@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Relation Origin"
+alId: ID 8909
+namespace: System.Email
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Compose context of an email. Relations added to the email when it was first composed.
+  name: '"Compose Context"'
+  uid: E:Enum::System#Email#Email_Relation_Origin.Compose_Context
+- summary: Email address lookup. Relations added to the email using address lookup.
+  name: '"Email Address Lookup"'
+  uid: E:Enum::System#Email#Email_Relation_Origin.Email_Address_Lookup
+commentId: O:Enum::System#Email#Email Relation Origin
+summary: Represent how a email relation was added to an email.
+name: '"Email Relation Origin"'
+uid: O:Enum::System#Email#Email_Relation_Origin

@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."New Security Group"
+alId: ID 9872
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: Caption
+  value: New Security Group
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+commentId: O:Page::System#Security#AccessControl#New Security Group
+summary: A pop-up window for creating a new security group.
+name: '"New Security Group"'
+uid: O:Page::System#Security#AccessControl#New_Security_Group

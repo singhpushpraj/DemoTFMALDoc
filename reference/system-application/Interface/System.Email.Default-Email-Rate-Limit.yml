@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Default Email Rate Limit"
+namespace: System.Email
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure GetDefaultEmailRateLimit(): Integer'
+    return:
+      description: A default email rate limit.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Provides the default email rate limit for the connector.
+  name: GetDefaultEmailRateLimit
+  uid: M:Interface::System#Email#Default_Email_Rate_Limit.GetDefaultEmailRateLimit:Integer
+commentId: O:Interface::System#Email#Default Email Rate Limit
+summary: A default email rate limit interface used to limit how many e-mails per second a connector can send.
+name: '"Default Email Rate Limit"'
+uid: O:Interface::System#Email#Default_Email_Rate_Limit

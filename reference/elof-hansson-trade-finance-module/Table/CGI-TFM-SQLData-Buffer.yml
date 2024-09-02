@@ -1,0 +1,199 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM SQLData Buffer"'
+alId: ID 70304
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: SQLData Buffer
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: DrillDownPageId
+  value: CGI TFM SQLData Buffer
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_SQLData_Buffer
+    name: '"CGI TFM SQLData Buffer"'
+    isExternal: false
+- name: LookupPageId
+  value: CGI TFM SQLData Buffer
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_SQLData_Buffer
+    name: '"CGI TFM SQLData Buffer"'
+    isExternal: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: '"LCBG ID"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.LCBG_ID
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_Type
+    name: '"CGI TFM LCBG Type"'
+    isExternal: false
+  name: Type
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Type
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_LCType
+    name: '"CGI TFM LCBG LCType"'
+    isExternal: false
+  name: '"LC Type"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.LC_Type
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Customer No."'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Customer_No#[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Vendor No."'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Vendor_No#[20]
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_Beneficiary_Type
+    name: '"CGI TFM LCBG Beneficiary Type"'
+    isExternal: false
+  name: '"Beneficiary Type"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Beneficiary_Type
+- type:
+    name: Text[250]
+    isExternal: true
+  name: CostText
+  uid: F:Table::CGI_TFM_SQLData_Buffer.CostText[250]
+- type:
+    name: Date
+    isExternal: true
+  name: FromDate
+  uid: F:Table::CGI_TFM_SQLData_Buffer.FromDate
+- type:
+    name: Date
+    isExternal: true
+  name: ToDate
+  uid: F:Table::CGI_TFM_SQLData_Buffer.ToDate
+- type:
+    name: Date
+    isExternal: true
+  name: BookingDate
+  uid: F:Table::CGI_TFM_SQLData_Buffer.BookingDate
+- type:
+    name: Decimal
+    isExternal: true
+  name: Cost
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Cost
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Calculate Ins. Premium"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Calculate_Ins#_Premium
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Insurance Premium"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Insurance_Premium
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Created Date"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Created_Date
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Created By"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Created_By[50]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Modified Date"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Modified_Date
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Modified by"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Modified_by[50]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Comment
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Comment[250]
+- type:
+    name: Date
+    isExternal: true
+  name: '"Comment Date"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Comment_Date
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Line No."'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Line_No#
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Calcualtion No."'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Calcualtion_No#[20]
+- type:
+    name: Guid
+    isExternal: true
+  name: LCBGGUID
+  uid: F:Table::CGI_TFM_SQLData_Buffer.LCBGGUID
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Beneficiary No."'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Beneficiary_No#[20]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Attachmnet File Name"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Attachmnet_File_Name[250]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Import Type"'
+  uid: F:Table::CGI_TFM_SQLData_Buffer.Import_Type[50]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_TFM_SQLData_Buffer.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_TFM_SQLData_Buffer.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_TFM_SQLData_Buffer.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_TFM_SQLData_Buffer.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_TFM_SQLData_Buffer.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_TFM_SQLData_Buffer.SystemRowVersion
+commentId: O:Table::CGI TFM SQLData Buffer
+summary: >-
+  it contains the records of CGI TFM SQLData Buffer,
+
+  records get create during import of tfm related xmlports, when records 
+
+  are not found in existing system
+name: '"CGI TFM SQLData Buffer"'
+uid: O:Table::CGI_TFM_SQLData_Buffer

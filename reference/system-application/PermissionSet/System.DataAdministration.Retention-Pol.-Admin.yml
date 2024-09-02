@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Pol. Admin"
+alId: ID 3904
+namespace: System.DataAdministration
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Retention Policy - Admin"'
+  promoted: false
+commentId: O:PermissionSet::System#DataAdministration#Retention Pol# Admin
+name: '"Retention Pol. Admin"'
+uid: O:PermissionSet::System#DataAdministration#Retention_Pol#_Admin

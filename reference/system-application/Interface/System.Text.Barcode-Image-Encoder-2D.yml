@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Image Encoder 2D"
+namespace: System.Text
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure EncodeImage(InputText: Text, BarcodeEncodeSettings2D: Record "Barcode Encode Settings 2D" temporary): Codeunit "Temp Blob"'
+    parameters:
+    - id: InputText
+      description: The text to encode.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BarcodeEncodeSettings2D
+      description: The settings to use when encoding the text.
+      parameterType:
+        name: Record "Barcode Encode Settings 2D" temporary
+        isExternal: true
+    return:
+      description: The encoded barcode.
+      returnType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+  summary: Encodes a input text to a barcode image.
+  name: EncodeImage
+  uid: M:Interface::System#Text#Barcode_Image_Encoder_2D.EncodeImage(Text,Barcode_Encode_Settings_2D):Codeunit::System#Utilities#Temp_Blob
+commentId: O:Interface::System#Text#Barcode Image Encoder 2D
+summary: Exposes common interface for 2D barcode image encoder.
+name: '"Barcode Image Encoder 2D"'
+uid: O:Interface::System#Text#Barcode_Image_Encoder_2D

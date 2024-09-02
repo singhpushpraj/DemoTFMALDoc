@@ -1,0 +1,19 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Printer Setup"
+alId: ID 2616
+namespace: System.Device
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+commentId: O:Codeunit::System#Device#Printer Setup
+summary: Exposes functionality to manage printer settings.
+name: '"Printer Setup"'
+uid: O:Codeunit::System#Device#Printer_Setup

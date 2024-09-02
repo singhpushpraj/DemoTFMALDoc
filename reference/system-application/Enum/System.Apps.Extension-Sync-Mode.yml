@@ -1,0 +1,43 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Sync Mode"
+alId: ID 2505
+namespace: System.Apps
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: AssignmentCompatibility
+  value: "True"
+  promoted: false
+enumValues:
+- summary: >-
+    Modifies the database schema by creating or extending the tables required to
+
+    satisfy the app's metadata. This mode considers existing versions of the specified
+
+    app in its calculations.
+  name: Add
+  uid: E:Enum::System#Apps#Extension_Sync_Mode.Add
+- summary: >-
+    A destructive sync mode which makes the resulting schema match the extension in question
+
+    regardless of its starting state. This means no change is off limits. This also means
+
+    that changes which delete things (tables, fields, etc.) also delete the data they contain.
+  remarks: >-
+    This mode is intended for use when e.g. renaming tables. It can lead to data loss if used
+
+    without caution.
+  name: '"Force Sync"'
+  uid: E:Enum::System#Apps#Extension_Sync_Mode.Force_Sync
+commentId: O:Enum::System#Apps#Extension Sync Mode
+summary: Specifies how to sync the extension.
+name: '"Extension Sync Mode"'
+uid: O:Enum::System#Apps#Extension_Sync_Mode

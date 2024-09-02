@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Item Card"'
+alId: ID 60348
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Item Card
+summary: Pageextension CGI Item Card (ID 60348) extends page Item Card
+name: '"CGI Item Card"'
+uid: O:PageExtension::CGI_Item_Card

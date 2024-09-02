@@ -1,0 +1,740 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email.Email
+alId: ID 8901
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SaveAsDraft(EmailMessage: Codeunit "Email Message")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to save.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+  summary: Saves a draft email in the Outbox.
+  name: SaveAsDraft
+  uid: M:Codeunit::System#Email#Email.SaveAsDraft(Codeunit::System#Email#Email_Message)
+- syntax:
+    content: 'procedure SaveAsDraft(EmailMessage: Codeunit "Email Message", var EmailOutbox: Record "Email Outbox")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to save.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailOutbox
+      description: The created outbox entry.
+      parameterType:
+        name: Record "Email Outbox"
+        isExternal: true
+  summary: Saves a draft email in the Outbox.
+  name: SaveAsDraft
+  uid: M:Codeunit::System#Email#Email.SaveAsDraft(Codeunit::System#Email#Email_Message,Email_Outbox@)
+- syntax:
+    content: 'procedure SaveAsDraft(EmailMessage: Codeunit "Email Message", EmailAccountId: Guid, EmailConnector: Enum "Email Connector", var EmailOutbox: Record "Email Outbox")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to save.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccountId
+      description: The email account ID for sending.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailConnector
+      description: The email connector for sending.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Connector
+        name: System.Email."Email Connector"
+        isExternal: false
+    - id: EmailOutbox
+      description: The created outbox entry.
+      parameterType:
+        name: Record "Email Outbox"
+        isExternal: true
+  summary: Saves a draft email in the Outbox.
+  name: SaveAsDraft
+  uid: M:Codeunit::System#Email#Email.SaveAsDraft(Codeunit::System#Email#Email_Message,Guid,Enum::System#Email#Email_Connector,Email_Outbox@)
+- syntax:
+    content: 'procedure Enqueue(EmailMessage: Codeunit "Email Message")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+  summary: Enqueues an email to be sent in the background.
+  remarks: The default account will be used for sending the email.
+  name: Enqueue
+  uid: M:Codeunit::System#Email#Email.Enqueue(Codeunit::System#Email#Email_Message)
+- syntax:
+    content: 'procedure Enqueue(EmailMessage: Codeunit "Email Message", NotBefore: DateTime)'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: NotBefore
+      description: The date and time for sending the email.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Enqueues an email to be sent in the background.
+  remarks: The default account will be used for sending the email.
+  name: Enqueue
+  uid: M:Codeunit::System#Email#Email.Enqueue(Codeunit::System#Email#Email_Message,DateTime)
+- syntax:
+    content: 'procedure Enqueue(EmailMessage: Codeunit "Email Message", EmailScenario: Enum "Email Scenario")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailScenario
+      description: The scenario to use in order to determine the email account to use for sending the email.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+  summary: Enqueues an email to be sent in the background.
+  name: Enqueue
+  uid: M:Codeunit::System#Email#Email.Enqueue(Codeunit::System#Email#Email_Message,Enum::System#Email#Email_Scenario)
+- syntax:
+    content: 'procedure Enqueue(EmailMessage: Codeunit "Email Message", EmailScenario: Enum "Email Scenario", NotBefore: DateTime)'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailScenario
+      description: The scenario to use in order to determine the email account to use for sending the email.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+    - id: NotBefore
+      description: The date and time for sending the email.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Enqueues an email to be sent in the background.
+  name: Enqueue
+  uid: M:Codeunit::System#Email#Email.Enqueue(Codeunit::System#Email#Email_Message,Enum::System#Email#Email_Scenario,DateTime)
+- syntax:
+    content: 'procedure Enqueue(EmailMessage: Codeunit "Email Message", EmailAccount: Record "Email Account" temporary)'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccount
+      description: The email account to use for sending the email.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Enqueues an email to be sent in the background.
+  remarks: Both "Account Id" and Connector fields need to be set on the `EmailAccount` parameter.
+  name: Enqueue
+  uid: M:Codeunit::System#Email#Email.Enqueue(Codeunit::System#Email#Email_Message,Email_Account)
+- syntax:
+    content: 'procedure Enqueue(EmailMessage: Codeunit "Email Message", EmailAccount: Record "Email Account" temporary, NotBefore: DateTime)'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccount
+      description: The email account to use for sending the email.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    - id: NotBefore
+      description: The earliest date and time for sending the email.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Enqueues an email to be sent in the background.
+  name: Enqueue
+  uid: M:Codeunit::System#Email#Email.Enqueue(Codeunit::System#Email#Email_Message,Email_Account,DateTime)
+- syntax:
+    content: 'procedure Enqueue(EmailMessage: Codeunit "Email Message", EmailAccountId: Guid, EmailConnector: Enum "Email Connector")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccountId
+      description: The ID of the email account to use for sending the email.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailConnector
+      description: The email connector to use for sending the email.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Connector
+        name: System.Email."Email Connector"
+        isExternal: false
+  summary: Enqueues an email to be sent in the background.
+  name: Enqueue
+  uid: M:Codeunit::System#Email#Email.Enqueue(Codeunit::System#Email#Email_Message,Guid,Enum::System#Email#Email_Connector)
+- syntax:
+    content: 'procedure Enqueue(EmailMessage: Codeunit "Email Message", EmailAccountId: Guid, EmailConnector: Enum "Email Connector", NotBefore: DateTime)'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccountId
+      description: The ID of the email account to use for sending the email.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailConnector
+      description: The email connector to use for sending the email.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Connector
+        name: System.Email."Email Connector"
+        isExternal: false
+    - id: NotBefore
+      description: The date and time for sending the email.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Enqueues an email to be sent in the background.
+  name: Enqueue
+  uid: M:Codeunit::System#Email#Email.Enqueue(Codeunit::System#Email#Email_Message,Guid,Enum::System#Email#Email_Connector,DateTime)
+- syntax:
+    content: 'procedure Send(EmailMessage: Codeunit "Email Message"): Boolean'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    return:
+      description: True if the email was successfully sent; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Sends the email in the current session.
+  remarks: The default account will be used for sending the email.
+  name: Send
+  uid: M:Codeunit::System#Email#Email.Send(Codeunit::System#Email#Email_Message):Boolean
+- syntax:
+    content: 'procedure Send(EmailMessage: Codeunit "Email Message", EmailScenario: Enum "Email Scenario"): Boolean'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailScenario
+      description: The scenario to use in order to determine the email account to use for sending the email.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+    return:
+      description: True if the email was successfully sent; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Sends the email in the current session.
+  name: Send
+  uid: M:Codeunit::System#Email#Email.Send(Codeunit::System#Email#Email_Message,Enum::System#Email#Email_Scenario):Boolean
+- syntax:
+    content: 'procedure Send(EmailMessage: Codeunit "Email Message", EmailAccount: Record "Email Account" temporary): Boolean'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccount
+      description: The email account to use for sending the email.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    return:
+      description: True if the email was successfully sent; otherwise - false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Sends the email in the current session.
+  remarks: Both "Account Id" and Connector fields need to be set on the `EmailAccount` parameter.
+  name: Send
+  uid: M:Codeunit::System#Email#Email.Send(Codeunit::System#Email#Email_Message,Email_Account):Boolean
+- syntax:
+    content: 'procedure Send(EmailMessage: Codeunit "Email Message", EmailAccountId: Guid, EmailConnector: Enum "Email Connector"): Boolean'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccountId
+      description: The ID of the email account to use for sending the email.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailConnector
+      description: The email connector to use for sending the email.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Connector
+        name: System.Email."Email Connector"
+        isExternal: false
+    return:
+      description: True if the email was successfully sent; otherwise - false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Sends the email in the current session.
+  name: Send
+  uid: M:Codeunit::System#Email#Email.Send(Codeunit::System#Email#Email_Message,Guid,Enum::System#Email#Email_Connector):Boolean
+- syntax:
+    content: 'procedure OpenInEditor(EmailMessage: Codeunit "Email Message")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+  summary: Opens an email message in "Email Editor" page.
+  name: OpenInEditor
+  uid: M:Codeunit::System#Email#Email.OpenInEditor(Codeunit::System#Email#Email_Message)
+- syntax:
+    content: 'procedure OpenInEditor(EmailMessage: Codeunit "Email Message", EmailScenario: Enum "Email Scenario")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailScenario
+      description: The scenario to use in order to determine the email account to use  on the page.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+  summary: Opens an email message in "Email Editor" page.
+  name: OpenInEditor
+  uid: M:Codeunit::System#Email#Email.OpenInEditor(Codeunit::System#Email#Email_Message,Enum::System#Email#Email_Scenario)
+- syntax:
+    content: 'procedure OpenInEditor(EmailMessage: Codeunit "Email Message", EmailAccount: Record "Email Account" temporary)'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccount
+      description: The email account to fill in.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Opens an email message in "Email Editor" page.
+  remarks: Both "Account Id" and Connector fields need to be set on the `EmailAccount` parameter.
+  name: OpenInEditor
+  uid: M:Codeunit::System#Email#Email.OpenInEditor(Codeunit::System#Email#Email_Message,Email_Account)
+- syntax:
+    content: 'procedure OpenInEditor(EmailMessage: Codeunit "Email Message", EmailAccountId: Guid, EmailConnector: Enum "Email Connector")'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccountId
+      description: The ID of the email account to use on the page.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailConnector
+      description: The email connector to use on the page.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Connector
+        name: System.Email."Email Connector"
+        isExternal: false
+  summary: Opens an email message in "Email Editor" page.
+  name: OpenInEditor
+  uid: M:Codeunit::System#Email#Email.OpenInEditor(Codeunit::System#Email#Email_Message,Guid,Enum::System#Email#Email_Connector)
+- syntax:
+    content: 'procedure OpenInEditorModally(EmailMessage: Codeunit "Email Message"): Enum "Email Action"'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    return:
+      description: The action that the user performed with the email message.
+      returnType:
+        internalReference: O:Enum::System#Email#Email_Action
+        name: System.Email."Email Action"
+        isExternal: false
+  summary: Opens an email message in "Email Editor" page modally.
+  name: OpenInEditorModally
+  uid: M:Codeunit::System#Email#Email.OpenInEditorModally(Codeunit::System#Email#Email_Message):Enum::System#Email#Email_Action
+- syntax:
+    content: 'procedure OpenInEditorModally(EmailMessage: Codeunit "Email Message", EmailScenario: Enum "Email Scenario"): Enum "Email Action"'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailScenario
+      description: The scenario to use in order to determine the email account to use  on the page.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+    return:
+      description: The action that the user performed with the email message.
+      returnType:
+        internalReference: O:Enum::System#Email#Email_Action
+        name: System.Email."Email Action"
+        isExternal: false
+  summary: Opens an email message in "Email Editor" page modally.
+  name: OpenInEditorModally
+  uid: M:Codeunit::System#Email#Email.OpenInEditorModally(Codeunit::System#Email#Email_Message,Enum::System#Email#Email_Scenario):Enum::System#Email#Email_Action
+- syntax:
+    content: 'procedure OpenInEditorModallyWithScenario(EmailMessage: Codeunit "Email Message", EmailAccount: Record "Email Account" temporary, Scenario: Enum "Email Scenario"): Enum "Email Action"'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccount
+      description: The email account to fill in.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    - id: Scenario
+      description: The email scenario to fill in.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+    return:
+      description: The action that the user performed with the email message.
+      returnType:
+        internalReference: O:Enum::System#Email#Email_Action
+        name: System.Email."Email Action"
+        isExternal: false
+  summary: Opens an email message in "Email Editor" page modally with scenario.
+  remarks: Both "Account Id" and Connector fields need to be set on the `EmailAccount` parameter.
+  name: OpenInEditorModallyWithScenario
+  uid: M:Codeunit::System#Email#Email.OpenInEditorModallyWithScenario(Codeunit::System#Email#Email_Message,Email_Account,Enum::System#Email#Email_Scenario):Enum::System#Email#Email_Action
+- syntax:
+    content: 'procedure OpenInEditorModally(EmailMessage: Codeunit "Email Message", EmailAccount: Record "Email Account" temporary): Enum "Email Action"'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccount
+      description: The email account to fill in.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    return:
+      description: The action that the user performed with the email message.
+      returnType:
+        internalReference: O:Enum::System#Email#Email_Action
+        name: System.Email."Email Action"
+        isExternal: false
+  summary: Opens an email message in "Email Editor" page modally.
+  remarks: Both "Account Id" and Connector fields need to be set on the `EmailAccount` parameter.
+  name: OpenInEditorModally
+  uid: M:Codeunit::System#Email#Email.OpenInEditorModally(Codeunit::System#Email#Email_Message,Email_Account):Enum::System#Email#Email_Action
+- syntax:
+    content: 'procedure OpenInEditorModally(EmailMessage: Codeunit "Email Message", EmailAccountId: Guid, EmailConnector: Enum "Email Connector"): Enum "Email Action"'
+    parameters:
+    - id: EmailMessage
+      description: The email message to use as payload.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailAccountId
+      description: The ID of the email account to use on the page.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailConnector
+      description: The email connector to use on the page.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Connector
+        name: System.Email."Email Connector"
+        isExternal: false
+    return:
+      description: The action that the user performed with the email message.
+      returnType:
+        internalReference: O:Enum::System#Email#Email_Action
+        name: System.Email."Email Action"
+        isExternal: false
+  summary: Opens an email message in "Email Editor" page modally.
+  name: OpenInEditorModally
+  uid: M:Codeunit::System#Email#Email.OpenInEditorModally(Codeunit::System#Email#Email_Message,Guid,Enum::System#Email#Email_Connector):Enum::System#Email#Email_Action
+- syntax:
+    content: 'procedure GetSentEmailsForRecord(TableId: Integer, SystemId: Guid, var ResultSentEmails: Record "Sent Email" temporary)'
+    parameters:
+    - id: TableId
+      description: The table ID of the record.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: The system ID of the record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ResultSentEmails
+      parameterType:
+        name: Record "Sent Email" temporary
+        isExternal: true
+  summary: Gets the sent emails related to a record.
+  name: GetSentEmailsForRecord
+  uid: M:Codeunit::System#Email#Email.GetSentEmailsForRecord(Integer,Guid,Sent_Email@)
+- syntax:
+    content: 'procedure GetSentEmailsForRecord(RecordVariant: Variant, var ResultSentEmails: Record "Sent Email" temporary)'
+    parameters:
+    - id: RecordVariant
+      description: Source Record.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ResultSentEmails
+      description: The sent email related to a record.
+      parameterType:
+        name: Record "Sent Email" temporary
+        isExternal: true
+  summary: Gets the sent emails related to a record.
+  name: GetSentEmailsForRecord
+  uid: M:Codeunit::System#Email#Email.GetSentEmailsForRecord(Variant,Sent_Email@)
+- syntax:
+    content: 'procedure GetEmailOutboxForRecord(RecordVariant: Variant, var ResultEmailOutbox: Record "Email Outbox" temporary)'
+    parameters:
+    - id: RecordVariant
+      description: Source record.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ResultEmailOutbox
+      description: The outbox emails related to a record.
+      parameterType:
+        name: Record "Email Outbox" temporary
+        isExternal: true
+  summary: Gets the outbox emails related to a record.
+  name: GetEmailOutboxForRecord
+  uid: M:Codeunit::System#Email#Email.GetEmailOutboxForRecord(Variant,Email_Outbox@)
+- syntax:
+    content: 'procedure OpenSentEmails(TableId: Integer, SystemId: Guid)'
+    parameters:
+    - id: TableId
+      description: The table ID of the record.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: The system ID of the record.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Open the sent emails page for a source record given by its table ID and system ID.
+  name: OpenSentEmails
+  uid: M:Codeunit::System#Email#Email.OpenSentEmails(Integer,Guid)
+- syntax:
+    content: 'procedure OpenSentEmails(RecordVariant: Variant)'
+    parameters:
+    - id: RecordVariant
+      description: Source record. Can be either Record, RecordRef or RecordId.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Open the sent emails page for a source record.
+  name: OpenSentEmails
+  uid: M:Codeunit::System#Email#Email.OpenSentEmails(Variant)
+- syntax:
+    content: 'procedure OpenSentEmails(TableId: Integer, SystemId: Guid, NewerThanDate: DateTime)'
+    parameters:
+    - id: TableId
+      description: The table ID of the source record.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: The system ID of the source record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: NewerThanDate
+      description: The date to which the sent emails are filtered.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Open the sent emails page for a source record given by its table ID and system ID.
+  name: OpenSentEmails
+  uid: M:Codeunit::System#Email#Email.OpenSentEmails(Integer,Guid,DateTime)
+- syntax:
+    content: 'procedure GetOutboxEmailRecordStatus(MessageId: Guid): Enum "Email Status"'
+    parameters:
+    - id: MessageId
+      description: The MessageId of the record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: Email Status of the record.
+      returnType:
+        internalReference: O:Enum::System#Email#Email_Status
+        name: System.Email."Email Status"
+        isExternal: false
+  summary: Gets the outbox email status.
+  name: GetOutboxEmailRecordStatus
+  uid: M:Codeunit::System#Email#Email.GetOutboxEmailRecordStatus(Guid):Enum::System#Email#Email_Status
+- syntax:
+    content: 'procedure AddRelation(EmailMessage: Codeunit "Email Message", TableId: Integer, SystemId: Guid, RelationType: Enum "Email Relation Type", Origin: Enum "Email Relation Origin")'
+    parameters:
+    - id: EmailMessage
+      description: The email message for which to create the relation.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: TableId
+      description: The table ID of the record.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: The system ID of the record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: RelationType
+      description: The relation type to set.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Relation_Type
+        name: System.Email."Email Relation Type"
+        isExternal: false
+    - id: Origin
+      description: The origin of when the relation is added to the email.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Relation_Origin
+        name: System.Email."Email Relation Origin"
+        isExternal: false
+  summary: Adds a relation between an email message and a record.
+  name: AddRelation
+  uid: M:Codeunit::System#Email#Email.AddRelation(Codeunit::System#Email#Email_Message,Integer,Guid,Enum::System#Email#Email_Relation_Type,Enum::System#Email#Email_Relation_Origin)
+- syntax:
+    content: 'procedure RemoveRelation(EmailMessage: Codeunit "Email Message", TableId: Integer, SystemId: Guid): Boolean'
+    parameters:
+    - id: EmailMessage
+      description: The email message for which to remove the relation.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: TableId
+      description: The table ID of the record.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemId
+      description: The system ID of the record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Removes a related record from an email message.
+  name: RemoveRelation
+  uid: M:Codeunit::System#Email#Email.RemoveRelation(Codeunit::System#Email#Email_Message,Integer,Guid):Boolean
+- syntax:
+    content: 'procedure HasRelations(EmailMessage: Codeunit "Email Message"): Boolean'
+    parameters:
+    - id: EmailMessage
+      description: The email message for which to check.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    return:
+      description: True if it has a related records, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Check if email has any related records linked.
+  name: HasRelations
+  uid: M:Codeunit::System#Email#Email.HasRelations(Codeunit::System#Email#Email_Message):Boolean
+- syntax:
+    content: 'procedure AddDefaultAttachments(EmailMessage: Codeunit "Email Message", EmailScenario: Enum "Email Scenario")'
+    parameters:
+    - id: EmailMessage
+      description: The email message for which to add the attachments.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: EmailScenario
+      description: Includes the default attachments from this scenario.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+  summary: Adds the default attachments of a scenario to the email message.
+  name: AddDefaultAttachments
+  uid: M:Codeunit::System#Email#Email.AddDefaultAttachments(Codeunit::System#Email#Email_Message,Enum::System#Email#Email_Scenario)
+commentId: O:Codeunit::System#Email#Email
+summary: Provides functionality to create and send emails.
+name: Email
+uid: O:Codeunit::System#Email#Email

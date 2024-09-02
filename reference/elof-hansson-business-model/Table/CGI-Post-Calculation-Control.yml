@@ -1,0 +1,67 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Post Calculation Control"'
+alId: ID 60361
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataClassification
+  value: EndUserIdentifiableInformation
+  promoted: false
+- name: Caption
+  value: Post Calculation Control
+  promoted: false
+fields:
+- type:
+    internalReference: O:Enum::CGIPostCalculationControlType
+    name: CGIPostCalculationControlType
+    isExternal: false
+  name: Type
+  uid: F:Table::CGI_Post_Calculation_Control.Type
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Division Code"'
+  uid: F:Table::CGI_Post_Calculation_Control.Division_Code[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: Value
+  uid: F:Table::CGI_Post_Calculation_Control.Value
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Post_Calculation_Control.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Post_Calculation_Control.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Post_Calculation_Control.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Post_Calculation_Control.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Post_Calculation_Control.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Post_Calculation_Control.SystemRowVersion
+commentId: O:Table::CGI Post Calculation Control
+name: '"CGI Post Calculation Control"'
+uid: O:Table::CGI_Post_Calculation_Control

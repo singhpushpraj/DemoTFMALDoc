@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Export/Import Security Groups"
+alId: ID 9001
+namespace: System.Security.AccessControl
+baseKind: XmlPort
+kind: XmlPort
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Export/Import Security Groups
+  promoted: false
+- name: UseRequestPage
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "Security Group" = r
+  promoted: false
+- name: Caption
+  value: Export/Import Security Groups
+  promoted: false
+- name: UseRequestPage
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "Security Group" = r
+  promoted: false
+commentId: O:XmlPort::System#Security#AccessControl#Export/Import Security Groups
+summary: Imports or exports a security group.
+name: '"Export/Import Security Groups"'
+uid: O:XmlPort::System#Security#AccessControl#Export/Import_Security_Groups

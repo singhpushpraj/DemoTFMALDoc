@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Import Bank Guarantee"'
+alId: ID 70301
+baseKind: XmlPort
+kind: XmlPort
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Import Bank Guarantee
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+- name: Caption
+  value: Import Bank Guarantee
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+commentId: O:XmlPort::CGI Import Bank Guarantee
+summary: >-
+  Import Bank Guarantee records from csv file
+
+  if no beneficiary no. (customer/vendor) found, it will create the records in SQL Data Buffer
+
+  with 'Import Type = BankGuarantee'
+name: '"CGI Import Bank Guarantee"'
+uid: O:XmlPort::CGI_Import_Bank_Guarantee

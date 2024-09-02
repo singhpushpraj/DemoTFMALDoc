@@ -1,0 +1,20 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA User"'
+alId: ID 60301
+baseKind: PermissionSet
+kind: PermissionSet
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: CA User
+  promoted: false
+commentId: O:PermissionSet::CGI CA User
+name: '"CGI CA User"'
+uid: O:PermissionSet::CGI_CA_User

@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CAW Reservation"'
+alId: ID 60325
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+methods:
+- syntax:
+    content: 'procedure SetCalcLine(var CurrentCGICalculationLine: Record "CGI Calculation Line")'
+    parameters:
+    - id: CurrentCGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: SetCalcLine
+  uid: M:PageExtension::CGI_CAW_Reservation.SetCalcLine(CGI_Calculation_Line@)
+commentId: O:PageExtension::CGI CAW Reservation
+name: '"CGI CAW Reservation"'
+uid: O:PageExtension::CGI_CAW_Reservation

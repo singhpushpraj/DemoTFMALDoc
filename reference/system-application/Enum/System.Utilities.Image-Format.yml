@@ -1,0 +1,47 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Image Format"
+alId: ID 3971
+namespace: System.Utilities
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Bmp image format
+  name: Bmp
+  uid: E:Enum::System#Utilities#Image_Format.Bmp
+- summary: Emf image format
+  name: Emf
+  uid: E:Enum::System#Utilities#Image_Format.Emf
+- summary: Exif image format
+  name: Exif
+  uid: E:Enum::System#Utilities#Image_Format.Exif
+- summary: Gif image format
+  name: Gif
+  uid: E:Enum::System#Utilities#Image_Format.Gif
+- summary: Icon image format
+  name: Icon
+  uid: E:Enum::System#Utilities#Image_Format.Icon
+- summary: Jpeg image format
+  name: Jpeg
+  uid: E:Enum::System#Utilities#Image_Format.Jpeg
+- summary: Png image format
+  name: Png
+  uid: E:Enum::System#Utilities#Image_Format.Png
+- summary: Tiff image format
+  name: Tiff
+  uid: E:Enum::System#Utilities#Image_Format.Tiff
+- summary: Wmf image format
+  name: Wmf
+  uid: E:Enum::System#Utilities#Image_Format.Wmf
+commentId: O:Enum::System#Utilities#Image Format
+summary: This enum contains the Image format types.
+name: '"Image Format"'
+uid: O:Enum::System#Utilities#Image_Format

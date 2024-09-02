@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."SharePoint Authorization"
+namespace: System.Integration.Sharepoint
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure Authorize(var HttpRequestMessage: HttpRequestMessage)'
+    parameters:
+    - id: HttpRequestMessage
+      parameterType:
+        name: HttpRequestMessage
+        isExternal: true
+  summary: Authorizes an HTTP request by providing the needed authorization information to it.
+  name: Authorize
+  uid: M:Interface::System#Integration#Sharepoint#SharePoint_Authorization.Authorize(HttpRequestMessage@)
+commentId: O:Interface::System#Integration#Sharepoint#SharePoint Authorization
+summary: Common interface for different authorization options.
+name: '"SharePoint Authorization"'
+uid: O:Interface::System#Integration#Sharepoint#SharePoint_Authorization

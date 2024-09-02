@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Recurrence - Ordinal No."
+alId: ID 4693
+namespace: System.DateTime
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies that the recurrence will occur in the first week of the month.
+  name: First
+  uid: E:Enum::System#DateTime#Recurrence_-_Ordinal_No#.First
+- summary: Specifies that the recurrence will occur in the second week of the month.
+  name: Second
+  uid: E:Enum::System#DateTime#Recurrence_-_Ordinal_No#.Second
+- summary: Specifies that the recurrence will occur in the third week of the month.
+  name: Third
+  uid: E:Enum::System#DateTime#Recurrence_-_Ordinal_No#.Third
+- summary: Specifies that the recurrence will occur in the fourth week of the month.
+  name: Fourth
+  uid: E:Enum::System#DateTime#Recurrence_-_Ordinal_No#.Fourth
+- summary: >-
+    Specifies that the recurrence will occur in the last week of the month.
+
+    In months with four weeks, the "Last" enum is the same as "Fourth" enum.
+  name: Last
+  uid: E:Enum::System#DateTime#Recurrence_-_Ordinal_No#.Last
+commentId: O:Enum::System#DateTime#Recurrence - Ordinal No#
+summary: This enum has the ordinal numbers for which the recurrence will occur.
+name: '"Recurrence - Ordinal No."'
+uid: O:Enum::System#DateTime#Recurrence_-_Ordinal_No#

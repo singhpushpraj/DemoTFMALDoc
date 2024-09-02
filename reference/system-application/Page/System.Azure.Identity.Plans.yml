@@ -1,0 +1,80 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity.Plans
+alId: ID 9824
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity.Plan
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Plans
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "9004"
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-how-users-permissions
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: tabledata Plan = r
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetSelectedPlan(PlanId: Guid)'
+    parameters:
+    - id: PlanId
+      description: The ID of the plan to select.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Set selected plan when the page is used in lookup mode.
+  name: SetSelectedPlan
+  uid: M:Page::System#Azure#Identity#Plans.SetSelectedPlan(Guid)
+- syntax:
+    content: 'procedure GetSelectedPlan(var PlanId: Guid, var PlanName: Text[50])'
+    parameters:
+    - id: PlanId
+      description: The ID of the selected plan.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: PlanName
+      description: The name of the selected plan.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+  summary: Gets the selected plan.
+  name: GetSelectedPlan
+  uid: M:Page::System#Azure#Identity#Plans.GetSelectedPlan(Guid@,Text[50]@)
+commentId: O:Page::System#Azure#Identity#Plans
+summary: List page that contains all plans that can be assigned to users.
+name: Plans
+uid: O:Page::System#Azure#Identity#Plans

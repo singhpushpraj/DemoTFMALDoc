@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Item Journal"'
+alId: ID 60349
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Item Journal
+summary: Pageextension CGI Item Journal (ID 60349) extends page Item Journal
+name: '"CGI Item Journal"'
+uid: O:PageExtension::CGI_Item_Journal

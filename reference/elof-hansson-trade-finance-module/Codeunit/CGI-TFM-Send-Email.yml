@@ -1,0 +1,33 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Send Email"'
+alId: ID 70300
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure FindDocLayout(TFMLCBGHeader: Record "CGI TFM LCBG Header")'
+    parameters:
+    - id: TFMLCBGHeader
+      description: ""
+      parameterType:
+        name: Record "CGI TFM LCBG Header"
+        isExternal: true
+  summary: it find the required document layment to send the email
+  name: FindDocLayout
+  uid: M:Codeunit::CGI_TFM_Send_Email.FindDocLayout(CGI_TFM_LCBG_Header)
+commentId: O:Codeunit::CGI TFM Send Email
+summary: >-
+  It send the email from Letter of credit export/import and Bank Guarantee
+
+  it takes the email account setting from the system and do the necessary check before
+
+  the sending and then send the email. The email adddress has to pick from 
+
+  defined at Division record
+name: '"CGI TFM Send Email"'
+uid: O:Codeunit::CGI_TFM_Send_Email

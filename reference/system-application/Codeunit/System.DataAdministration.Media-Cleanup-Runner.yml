@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Media Cleanup Runner"
+alId: ID 1929
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#DataAdministration#Media Cleanup Runner
+name: '"Media Cleanup Runner"'
+uid: O:Codeunit::System#DataAdministration#Media_Cleanup_Runner

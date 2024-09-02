@@ -1,0 +1,78 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Page Summary Settings"
+alId: ID 2718
+namespace: System.Integration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Caption
+  value: Page Summary Settings
+  promoted: false
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: RX
+  promoted: false
+- name: InherentPermissions
+  value: RX
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: Company
+  uid: F:Table::System#Integration#Page_Summary_Settings.Company
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Show Record summary"'
+  uid: F:Table::System#Integration#Page_Summary_Settings.Show_Record_summary
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Page_Summary_Settings.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Page_Summary_Settings.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Page_Summary_Settings.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Page_Summary_Settings.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Page_Summary_Settings.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Page_Summary_Settings.SystemRowVersion
+commentId: O:Table::System#Integration#Page Summary Settings
+summary: Contains settings for page summary card.
+name: '"Page Summary Settings"'
+uid: O:Table::System#Integration#Page_Summary_Settings

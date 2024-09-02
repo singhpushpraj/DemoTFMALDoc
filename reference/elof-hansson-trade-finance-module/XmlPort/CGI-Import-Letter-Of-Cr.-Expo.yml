@@ -1,0 +1,65 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Import Letter Of Cr. Expo"'
+alId: ID 70300
+baseKind: XmlPort
+kind: XmlPort
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Import Letter Of Credit - Expo
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+- name: Caption
+  value: Import Letter Of Credit - Expo
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+methods:
+- syntax:
+    content: procedure InitRecord()
+  name: InitRecord
+  uid: M:XmlPort::CGI_Import_Letter_Of_Cr#_Expo.InitRecord
+- syntax:
+    content: procedure InitSeries()
+  name: InitSeries
+  uid: M:XmlPort::CGI_Import_Letter_Of_Cr#_Expo.InitSeries
+commentId: O:XmlPort::CGI Import Letter Of Cr# Expo
+summary: >-
+  Imports Letter of Credit  Export record from csv file
+
+  it customer no does not exist, it will create the sql data buffer with 
+
+  'Import Type = LetterOfCredit Export'
+name: '"CGI Import Letter Of Cr. Expo"'
+uid: O:XmlPort::CGI_Import_Letter_Of_Cr#_Expo

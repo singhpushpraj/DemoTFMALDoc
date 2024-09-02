@@ -1,0 +1,193 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Update Post Calc Details"'
+alId: ID 60366
+baseKind: Report
+kind: Report
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Report](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-report-object)'
+objectProperties:
+- name: Caption
+  value: EH Update Post Calc Details
+  promoted: false
+- name: UsageCategory
+  value: Tasks
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Update Post Calc Details
+  promoted: false
+- name: UsageCategory
+  value: Tasks
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+methods:
+- syntax:
+    content: procedure CreatePostCalculationHeader()
+  name: CreatePostCalculationHeader
+  uid: M:Report::CGI_Update_Post_Calc_Details.CreatePostCalculationHeader
+- syntax:
+    content: 'procedure GetResultBefInterestPrecalc(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: GetResultBefInterestPrecalc
+  uid: M:Report::CGI_Update_Post_Calc_Details.GetResultBefInterestPrecalc:Decimal
+- syntax:
+    content: 'procedure CalculateDiffQtyPercent(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: CalculateDiffQtyPercent
+  uid: M:Report::CGI_Update_Post_Calc_Details.CalculateDiffQtyPercent:Decimal
+- syntax:
+    content: procedure CalculateAfterCalcAmounts()
+  name: CalculateAfterCalcAmounts
+  uid: M:Report::CGI_Update_Post_Calc_Details.CalculateAfterCalcAmounts
+- syntax:
+    content: 'procedure CalculateCalcItemLinesAmt(var OtherCostDiffPr: Decimal)'
+    parameters:
+    - id: OtherCostDiffPr
+      parameterType:
+        name: Decimal
+        isExternal: true
+  name: CalculateCalcItemLinesAmt
+  uid: M:Report::CGI_Update_Post_Calc_Details.CalculateCalcItemLinesAmt(Decimal@)
+- syntax:
+    content: 'procedure GetAmount(AmtTypeP: Option, CalcNo: Code[20]): Decimal'
+    parameters:
+    - id: AmtTypeP
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: CalcNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: GetAmount
+  uid: M:Report::CGI_Update_Post_Calc_Details.GetAmount(Option,Code[20]):Decimal
+- syntax:
+    content: 'procedure SetSalesDiff(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetSalesDiff
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetSalesDiff:Decimal
+- syntax:
+    content: 'procedure SetOtherRevDiff(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetOtherRevDiff
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetOtherRevDiff:Decimal
+- syntax:
+    content: 'procedure SetPurchDiff(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetPurchDiff
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetPurchDiff:Decimal
+- syntax:
+    content: 'procedure SetFreightDiff(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetFreightDiff
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetFreightDiff:Decimal
+- syntax:
+    content: 'procedure SetOtherCostDiff(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetOtherCostDiff
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetOtherCostDiff:Decimal
+- syntax:
+    content: procedure CreatePostCalculationLine()
+  name: CreatePostCalculationLine
+  uid: M:Report::CGI_Update_Post_Calc_Details.CreatePostCalculationLine
+- syntax:
+    content: 'procedure SetOtherCostAmountPostCalc(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetOtherCostAmountPostCalc
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetOtherCostAmountPostCalc:Decimal
+- syntax:
+    content: 'procedure SetPurchAmtPostCalc(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetPurchAmtPostCalc
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetPurchAmtPostCalc:Decimal
+- syntax:
+    content: 'procedure SetOtherRevAmountPostCalc(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetOtherRevAmountPostCalc
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetOtherRevAmountPostCalc:Decimal
+- syntax:
+    content: 'procedure SetSalesAmountPostCalc(): Decimal'
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: SetSalesAmountPostCalc
+  uid: M:Report::CGI_Update_Post_Calc_Details.SetSalesAmountPostCalc:Decimal
+- syntax:
+    content: 'procedure GetPreQuantity(Type: Enum "CGI CA CalculationLineType"): Decimal'
+    parameters:
+    - id: Type
+      parameterType:
+        internalReference: O:Enum::CGI_CA_CalculationLineType
+        name: '"CGI CA CalculationLineType"'
+        isExternal: false
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: GetPreQuantity
+  uid: M:Report::CGI_Update_Post_Calc_Details.GetPreQuantity(Enum::CGI_CA_CalculationLineType):Decimal
+- syntax:
+    content: 'procedure GetPostQuantity(Type: Enum "CGI CA CalculationLineType"): Decimal'
+    parameters:
+    - id: Type
+      parameterType:
+        internalReference: O:Enum::CGI_CA_CalculationLineType
+        name: '"CGI CA CalculationLineType"'
+        isExternal: false
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: GetPostQuantity
+  uid: M:Report::CGI_Update_Post_Calc_Details.GetPostQuantity(Enum::CGI_CA_CalculationLineType):Decimal
+commentId: O:Report::CGI Update Post Calc Details
+name: '"CGI Update Post Calc Details"'
+uid: O:Report::CGI_Update_Post_Calc_Details

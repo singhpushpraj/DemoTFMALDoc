@@ -1,0 +1,50 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD Graph User"
+alId: ID 9024
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IsUserDelegatedAdmin(): Boolean'
+    return:
+      description: True if the current user is Delegated Admin, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns whether the current user is Delegated Admin.
+  name: IsUserDelegatedAdmin
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Graph_User.IsUserDelegatedAdmin:Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IsUserDelegatedHelpdesk(): Boolean'
+    return:
+      description: True if the current user is Delegated Helpdesk, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns whether the current user is Delegated Helpdesk.
+  name: IsUserDelegatedHelpdesk
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Graph_User.IsUserDelegatedHelpdesk:Boolean
+commentId: O:Codeunit::System#Azure#Identity#Azure AD Graph User
+summary: Exposes functionality to retrieve and update Microsoft Entra users.
+name: '"Azure AD Graph User"'
+uid: O:Codeunit::System#Azure#Identity#Azure_AD_Graph_User

@@ -1,0 +1,30 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Checklist Resurfacing"
+alId: ID 1997
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ConfirmationDialog
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Caption
+  value: Show the checklist
+  promoted: false
+- name: AdditionalSearchTerms
+  value: Tour,Checklist,Resurface,Banner
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Checklist Resurfacing
+name: '"Checklist Resurfacing"'
+uid: O:Page::System#Environment#Configuration#Checklist_Resurfacing

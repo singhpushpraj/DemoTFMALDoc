@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."System Execute - Basic"
+alId: ID 68
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+commentId: O:PermissionSet::System#Security#AccessControl#System Execute - Basic
+name: '"System Execute - Basic"'
+uid: O:PermissionSet::System#Security#AccessControl#System_Execute_-_Basic

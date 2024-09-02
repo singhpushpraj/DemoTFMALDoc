@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Authentication.OAuthControlAddIn
+namespace: System.Security.Authentication
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Security.Authentication
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure StartAuthorization(AuthRequestUrl: Text)'
+    parameters:
+    - id: AuthRequestUrl
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Starts the authorization process.
+  name: StartAuthorization
+  uid: M:ControlAddIn::System#Security#Authentication#OAuthControlAddIn.StartAuthorization(Text)
+commentId: O:ControlAddIn::System#Security#Authentication#OAuthControlAddIn
+name: OAuthControlAddIn
+uid: O:ControlAddIn::System#Security#Authentication#OAuthControlAddIn

@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Navigation Bar Subscribers"
+alId: ID 154
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Environment#Configuration#Navigation Bar Subscribers
+summary: Collection of the default subscribers to system events and corresponding overridable integration events.
+name: '"Navigation Bar Subscribers"'
+uid: O:Codeunit::System#Environment#Configuration#Navigation_Bar_Subscribers

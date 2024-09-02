@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."SAS Resource Type"
+alId: ID 9063
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Service
+  uid: E:Enum::System#Azure#Storage#SAS_Resource_Type.Service
+- name: Container
+  uid: E:Enum::System#Azure#Storage#SAS_Resource_Type.Container
+- name: Object
+  uid: E:Enum::System#Azure#Storage#SAS_Resource_Type.Object
+commentId: O:Enum::System#Azure#Storage#SAS Resource Type
+summary: >-
+  Defines the possible resource types for account SAS.
+
+  See: https://go.microsoft.com/fwlink/?linkid=2210398
+name: '"SAS Resource Type"'
+uid: O:Enum::System#Azure#Storage#SAS_Resource_Type

@@ -1,0 +1,234 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Xml."Xml Validation"
+alId: ID 6240
+namespace: System.Xml
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Xml
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TryValidateAgainstSchema(Xml: Text, XmlSchema: Text, Namespace: Text): Boolean'
+    parameters:
+    - id: Xml
+      description: Xml string to validate.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: XmlSchema
+      description: Xml schema string to validate against.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Namespace
+      description: Namespace of the xml schema.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Performs validation of an XML from a string against a schema from a string.
+  name: TryValidateAgainstSchema
+  uid: M:Codeunit::System#Xml#Xml_Validation.TryValidateAgainstSchema(Text,Text,Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TryValidateAgainstSchema(XmlDoc: XmlDocument, XmlSchemaDoc: XmlDocument, Namespace: Text): Boolean'
+    parameters:
+    - id: XmlDoc
+      description: Xml document to validate.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: XmlSchemaDoc
+      description: Xml document with the schema to validate against.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: Namespace
+      description: Namespace of the xml schema.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Performs validation of a XmlDocument against a schema in a XmlDocument.
+  name: TryValidateAgainstSchema
+  uid: M:Codeunit::System#Xml#Xml_Validation.TryValidateAgainstSchema(XmlDocument,XmlDocument,Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TryValidateAgainstSchema(XmlDocInStream: InStream, XmlSchemaInStream: InStream, Namespace: Text): Boolean'
+    parameters:
+    - id: XmlDocInStream
+      description: InStream holding the xml document to validate.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: XmlSchemaInStream
+      description: InStream holding the schema to validate against.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: Namespace
+      description: Namespace of the xml schema.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Performs validation of a XmlDocument against a schema in a stream.
+  name: TryValidateAgainstSchema
+  uid: M:Codeunit::System#Xml#Xml_Validation.TryValidateAgainstSchema(InStream,InStream,Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TrySetValidatedDocument(Xml: Text): Boolean'
+    parameters:
+    - id: Xml
+      description: Xml string to validate.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Sets validated document from a string.
+  name: TrySetValidatedDocument
+  uid: M:Codeunit::System#Xml#Xml_Validation.TrySetValidatedDocument(Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TrySetValidatedDocument(XmlDoc: XmlDocument): Boolean'
+    parameters:
+    - id: XmlDoc
+      description: Xml document to validate.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Sets validated document in a XmlDocument.
+  name: TrySetValidatedDocument
+  uid: M:Codeunit::System#Xml#Xml_Validation.TrySetValidatedDocument(XmlDocument):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TrySetValidatedDocument(XmlDocInStream: InStream): Boolean'
+    parameters:
+    - id: XmlDocInStream
+      description: InStream holding the XML document to validate.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Sets validated document from a stream.
+  name: TrySetValidatedDocument
+  uid: M:Codeunit::System#Xml#Xml_Validation.TrySetValidatedDocument(InStream):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TryAddValidationSchema(Xml: Text, Namespace: Text): Boolean'
+    parameters:
+    - id: Xml
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Namespace
+      description: Namespace of the XML schema.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds validation schema to validated document from a string.
+  name: TryAddValidationSchema
+  uid: M:Codeunit::System#Xml#Xml_Validation.TryAddValidationSchema(Text,Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TryAddValidationSchema(XmlSchemaDoc: XmlDocument, Namespace: Text): Boolean'
+    parameters:
+    - id: XmlSchemaDoc
+      description: Xml document with the schema to validate against.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: Namespace
+      description: Namespace of the XML schema.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds validation schema to validated document in a XmlDocument.
+  name: TryAddValidationSchema
+  uid: M:Codeunit::System#Xml#Xml_Validation.TryAddValidationSchema(XmlDocument,Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TryAddValidationSchema(XmlSchemaInStream: InStream, Namespace: Text): Boolean'
+    parameters:
+    - id: XmlSchemaInStream
+      description: InStream holding the XSD schema to validate against.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: Namespace
+      description: Namespace of the XML schema.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds validation schema to validated document from a stream.
+  name: TryAddValidationSchema
+  uid: M:Codeunit::System#Xml#Xml_Validation.TryAddValidationSchema(InStream,Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure TryValidateAgainstSchema(): Boolean'
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Performs validation of a XML document against one or multiple XSD schemas.
+  name: TryValidateAgainstSchema
+  uid: M:Codeunit::System#Xml#Xml_Validation.TryValidateAgainstSchema:Boolean
+commentId: O:Codeunit::System#Xml#Xml Validation
+summary: Provides helper functions for xml validation against a schema.
+name: '"Xml Validation"'
+uid: O:Codeunit::System#Xml#Xml_Validation

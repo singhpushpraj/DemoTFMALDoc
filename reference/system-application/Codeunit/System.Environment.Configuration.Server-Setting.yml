@@ -1,0 +1,62 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Server Setting"
+alId: ID 6723
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetIsSaasExcelAddinEnabled(): Boolean'
+    return:
+      description: True if enabled; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether Excel add-in is enabled on the server.
+  remarks: Gets the value of the server setting IsSaasExcelAddinEnabled.
+  name: GetIsSaasExcelAddinEnabled
+  uid: M:Codeunit::System#Environment#Configuration#Server_Setting.GetIsSaasExcelAddinEnabled:Boolean
+- syntax:
+    content: 'procedure GetUsePermissionSetsFromExtensions(): Boolean'
+    return:
+      description: True if enabled; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether permissions are read from the permission table in SQL or from metadata (.al code)
+  remarks: Gets the value of the server setting UsePermissionSetsFromExtensions.
+  name: GetUsePermissionSetsFromExtensions
+  uid: M:Codeunit::System#Environment#Configuration#Server_Setting.GetUsePermissionSetsFromExtensions:Boolean
+- syntax:
+    content: 'procedure GetEnableMembershipEntitlement(): Boolean'
+    return:
+      description: True if enabled; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether Entitlements are enabled
+  remarks: Gets the value of the server setting EnableMembershipEntitlement.
+  name: GetEnableMembershipEntitlement
+  uid: M:Codeunit::System#Environment#Configuration#Server_Setting.GetEnableMembershipEntitlement:Boolean
+commentId: O:Codeunit::System#Environment#Configuration#Server Setting
+summary: Exposes functionality to fetch some application server settings for the server which hosts the current tenant.
+name: '"Server Setting"'
+uid: O:Codeunit::System#Environment#Configuration#Server_Setting

@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Entity Text AI Upgrade"
+alId: ID 2015
+namespace: System.Text
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Subtype
+  value: Upgrade
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Text#Entity Text AI Upgrade
+name: '"Entity Text AI Upgrade"'
+uid: O:Codeunit::System#Text#Entity_Text_AI_Upgrade

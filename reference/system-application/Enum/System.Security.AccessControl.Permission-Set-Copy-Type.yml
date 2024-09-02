@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Permission Set Copy Type"
+alId: ID 9863
+namespace: System.Security.AccessControl
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Reference
+  uid: E:Enum::System#Security#AccessControl#Permission_Set_Copy_Type.Reference
+- name: Flat
+  uid: E:Enum::System#Security#AccessControl#Permission_Set_Copy_Type.Flat
+- name: Clone
+  uid: E:Enum::System#Security#AccessControl#Permission_Set_Copy_Type.Clone
+commentId: O:Enum::System#Security#AccessControl#Permission Set Copy Type
+name: '"Permission Set Copy Type"'
+uid: O:Enum::System#Security#AccessControl#Permission_Set_Copy_Type

@@ -1,0 +1,97 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Other Costs and Revenues"'
+alId: ID 60313
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Other Costs and Revenues
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: DrillDownPageId
+  value: CGI Other Costs and Rev. List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Other_Costs_and_Rev#_List
+    name: '"CGI Other Costs and Rev. List"'
+    isExternal: false
+- name: LookupPageId
+  value: CGI Other Costs and Rev. List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Other_Costs_and_Rev#_List
+    name: '"CGI Other Costs and Rev. List"'
+    isExternal: false
+fields:
+- type:
+    internalReference: O:Enum::CGI_CA_OtherCostsAndRevenuType
+    name: '"CGI CA OtherCostsAndRevenuType"'
+    isExternal: false
+  name: Type
+  uid: F:Table::CGI_Other_Costs_and_Revenues.Type
+- type:
+    name: Code[20]
+    isExternal: true
+  name: Code
+  uid: F:Table::CGI_Other_Costs_and_Revenues.Code[20]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: Description
+  uid: F:Table::CGI_Other_Costs_and_Revenues.Description[50]
+- type:
+    name: Boolean
+    isExternal: true
+  name: AllowAmount
+  uid: F:Table::CGI_Other_Costs_and_Revenues.AllowAmount
+- type:
+    name: Boolean
+    isExternal: true
+  name: AllowUnitPrice
+  uid: F:Table::CGI_Other_Costs_and_Revenues.AllowUnitPrice
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Post Calculation Adjust Sales"'
+  uid: F:Table::CGI_Other_Costs_and_Revenues.Post_Calculation_Adjust_Sales
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Other_Costs_and_Revenues.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Other_Costs_and_Revenues.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Other_Costs_and_Revenues.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Other_Costs_and_Revenues.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Other_Costs_and_Revenues.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Other_Costs_and_Revenues.SystemRowVersion
+commentId: O:Table::CGI Other Costs and Revenues
+summary: Table CGI Other Costs and Revenues (ID 60313).
+name: '"CGI Other Costs and Revenues"'
+uid: O:Table::CGI_Other_Costs_and_Revenues

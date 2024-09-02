@@ -1,0 +1,96 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Deployments"
+alId: ID 7768
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetTurbo0301(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the AOAI deployment model Turbo 0301.
+  name: GetTurbo0301
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetTurbo0301:Text
+- syntax:
+    content: 'procedure GetGPT40613(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the AOAI deployment model GPT4 0613.
+  name: GetGPT40613
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT40613:Text
+- syntax:
+    content: 'procedure GetTurbo0613(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the AOAI deployment model Turbo 0613.
+  name: GetTurbo0613
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetTurbo0613:Text
+- syntax:
+    content: 'procedure GetGPT35TurboLatest(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the latest AOAI deployment model of GPT3.5 Turbo.
+  name: GetGPT35TurboLatest
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT35TurboLatest:Text
+- syntax:
+    content: 'procedure GetGPT35TurboPreview(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of preview AOAI deployment model of GPT3.5 Turbo.
+  name: GetGPT35TurboPreview
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT35TurboPreview:Text
+- syntax:
+    content: 'procedure GetGPT4Latest(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of the latest AOAI deployment model of GPT4.
+  name: GetGPT4Latest
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4Latest:Text
+- syntax:
+    content: 'procedure GetGPT4Preview(): Text'
+    return:
+      description: The deployment name.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the name of preview AOAI deployment model of GPT4.
+  name: GetGPT4Preview
+  uid: M:Codeunit::System#AI#AOAI_Deployments.GetGPT4Preview:Text
+commentId: O:Codeunit::System#AI#AOAI Deployments
+summary: This codeunit is used to get the AOAI deployment names.
+name: '"AOAI Deployments"'
+uid: O:Codeunit::System#AI#AOAI_Deployments

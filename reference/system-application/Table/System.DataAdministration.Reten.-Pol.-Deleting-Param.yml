@@ -1,0 +1,133 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Reten. Pol. Deleting Param"
+alId: ID 3907
+namespace: System.DataAdministration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+fields:
+- description: Identifies the record in the table
+  type:
+    name: Code[10]
+    isExternal: true
+  name: '"Primary Key"'
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.Primary_Key[10]
+- description: Indicates that indirect permissions are required to delete expired records for the retention policy.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Indirect Permission Required"'
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.Indirect_Permission_Required
+- description: if set to true the event OnApplyRetentionPolicyIndirectPermissionRequired will not be raised.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Skip Event Indirect Perm. Req."'
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.Skip_Event_Indirect_Perm#_Req#
+- description: Indicates the maximum number of records to be deleted.
+  type:
+    name: Integer
+    isExternal: true
+  name: '"Max. Number of Rec. to Delete"'
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.Max#_Number_of_Rec#_to_Delete
+- description: if set to true the event OnApplyRetentionPolicyRecordLimitExceeded will not be raised.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Skip Event Rec. Limit Exceeded"'
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.Skip_Event_Rec#_Limit_Exceeded
+- description: Indicates the maximum number of records that can be deleted at the same time accross all retention policies
+  type:
+    name: Integer
+    isExternal: true
+  name: '"Total Max. Nr. of Rec. to Del."'
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.Total_Max#_Nr#_of_Rec#_to_Del#
+- description: >-
+    If true, indicates that user is applying the retention policies manually.
+
+    If false, the retention policies are applied by a scheduled task.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"User Invoked Run"'
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.User_Invoked_Run
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param.SystemRowVersion
+commentId: O:Table::System#DataAdministration#Reten# Pol# Deleting Param
+summary: >-
+  The table is used as a parameter table for the DeleteRecords method on the Reten. Pol Deleting interface.
+
+
+  if "Indirect Permission Required" is true and the implementation does not have the required indirect permissions,
+
+  then "Skip Event Indirect Perm. Req." should be set to false. This will allow a subscriber to handle the deletion.
+
+
+  if there are more records to be deleted than as indicated by "Max. Number of Rec. to Delete",
+
+  then only a number of records equal to "Max. Number of Rec. to Delete" should be deleted.
+
+  In the case where not all records were deleted, "Skip Event Rec. Limit Exceeded" should be set to false. This
+
+  will allow either a subscriber or the user to schedule another run to delete the remaining records.
+
+
+  "Total Max. Nr. of Rec. to Del." is provided for information only. This is the maximum number of records recommended to delete
+
+  in a single run of Apply Retention Policies.
+
+
+  "User Invoked Run" is provided for information only.
+name: '"Reten. Pol. Deleting Param"'
+uid: O:Table::System#DataAdministration#Reten#_Pol#_Deleting_Param

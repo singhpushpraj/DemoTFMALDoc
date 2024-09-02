@@ -1,0 +1,291 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.IO."Data Compression"
+alId: ID 425
+namespace: System.IO
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.IO
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: procedure CreateZipArchive()
+  summary: Creates a new ZipArchive instance.
+  name: CreateZipArchive
+  uid: M:Codeunit::System#IO#Data_Compression.CreateZipArchive
+- syntax:
+    content: 'procedure OpenZipArchive(InputInStream: InStream, OpenForUpdate: Boolean)'
+    parameters:
+    - id: InputInStream
+      description: The InStream that contains the content of the compressed archive.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OpenForUpdate
+      description: Indicates whether the archive should be opened in Update mode. The default (false) indicated the archive will be opened in Read mode.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a ZipArchive instance from the given InStream.
+  name: OpenZipArchive
+  uid: M:Codeunit::System#IO#Data_Compression.OpenZipArchive(InStream,Boolean)
+- syntax:
+    content: 'procedure OpenZipArchive(InputInStream: InStream, OpenForUpdate: Boolean, EncodingCodePageNumber: Integer)'
+    parameters:
+    - id: InputInStream
+      description: The InStream that contains the content of the compressed archive.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OpenForUpdate
+      description: Indicates whether the archive should be opened in Update mode. The default (false) indicated the archive will be opened in Read mode.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: EncodingCodePageNumber
+      description: Specifies the code page number of the text encoding which is used for the compressed archive entry names in the input stream.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Creates a ZipArchive instance from the given InStream.
+  name: OpenZipArchive
+  uid: M:Codeunit::System#IO#Data_Compression.OpenZipArchive(InStream,Boolean,Integer)
+- syntax:
+    content: 'procedure OpenZipArchive(TempBlob: Codeunit "Temp Blob", OpenForUpdate: Boolean)'
+    parameters:
+    - id: TempBlob
+      description: The instance of Temp Blob codeunit that contains the content of the compressed archive.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    - id: OpenForUpdate
+      description: Indicates whether the archive should be opened in Update mode. The default (false) indicated the archive will be opened in Read mode.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a ZipArchive instance from the given instance of Temp Blob codeunit.
+  name: OpenZipArchive
+  uid: M:Codeunit::System#IO#Data_Compression.OpenZipArchive(Codeunit::System#Utilities#Temp_Blob,Boolean)
+- syntax:
+    content: 'procedure SaveZipArchive(OutputOutStream: OutStream)'
+    parameters:
+    - id: OutputOutStream
+      description: The OutStream to which the ZipArchive is saved.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Saves the ZipArchive to the given OutStream.
+  name: SaveZipArchive
+  uid: M:Codeunit::System#IO#Data_Compression.SaveZipArchive(OutStream)
+- syntax:
+    content: 'procedure SaveZipArchive(var TempBlob: Codeunit "Temp Blob")'
+    parameters:
+    - id: TempBlob
+      description: The instance of the Temp Blob codeunit to which the ZipArchive is saved.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+  summary: Saves the ZipArchive to the given instance of Temp Blob codeunit.
+  name: SaveZipArchive
+  uid: M:Codeunit::System#IO#Data_Compression.SaveZipArchive(Codeunit::System#Utilities#Temp_Blob@)
+- syntax:
+    content: procedure CloseZipArchive()
+  summary: Disposes the ZipArchive.
+  name: CloseZipArchive
+  uid: M:Codeunit::System#IO#Data_Compression.CloseZipArchive
+- syntax:
+    content: 'procedure GetEntryList(var EntryList: List of [Text])'
+    parameters:
+    - id: EntryList
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: GetEntryList
+  uid: M:Codeunit::System#IO#Data_Compression.GetEntryList(List_of_[Text]@)
+- syntax:
+    signatures:
+    - '[Obsolete(This function has been replaced by the function ExtractEntry(EntryName: Text; OutputOutStream: OutStream) which instead returns the entry length.,23.0)]'
+    content: 'procedure ExtractEntry(EntryName: Text, OutputOutStream: OutStream, var EntryLength: Integer)'
+    parameters:
+    - id: EntryName
+      description: The name of the ZipArchive entry to be extracted.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OutputOutStream
+      description: The OutStream to which binary content of the extracted entry is saved.
+      parameterType:
+        name: OutStream
+        isExternal: true
+    - id: EntryLength
+      description: The length of the extracted entry.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Extracts an entry from the ZipArchive.
+  name: ExtractEntry
+  obsoletion:
+    state: pending
+    reason: 'This function has been replaced by the function ExtractEntry(EntryName: Text; OutputOutStream: OutStream) which instead returns the entry length.'
+    version: "23.0"
+  uid: M:Codeunit::System#IO#Data_Compression.ExtractEntry(Text,OutStream,Integer@)
+- syntax:
+    content: 'procedure ExtractEntry(EntryName: Text, OutputOutStream: OutStream): Integer'
+    parameters:
+    - id: EntryName
+      description: The name of the ZipArchive entry to be extracted.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OutputOutStream
+      description: The OutStream to which binary content of the extracted entry is saved.
+      parameterType:
+        name: OutStream
+        isExternal: true
+    return:
+      description: The length of the extracted entry.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Extracts an entry from the ZipArchive.
+  name: ExtractEntry
+  uid: M:Codeunit::System#IO#Data_Compression.ExtractEntry(Text,OutStream):Integer
+- syntax:
+    content: 'procedure ExtractEntry(EntryName: Text, var TempBlob: Codeunit "Temp Blob"): Integer'
+    parameters:
+    - id: EntryName
+      description: The name of the ZipArchive entry to be extracted.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TempBlob
+      description: The TempBlob the uncompressed binary data will be written to.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    return:
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Extracts an entry from the ZipArchive to a TempBlob instance.
+  name: ExtractEntry
+  uid: M:Codeunit::System#IO#Data_Compression.ExtractEntry(Text,Codeunit::System#Utilities#Temp_Blob@):Integer
+- syntax:
+    content: 'procedure AddEntry(InStreamToAdd: InStream, PathInArchive: Text)'
+    parameters:
+    - id: InStreamToAdd
+      description: The InStream that contains the binary content that should be added as an entry in the ZipArchive.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: PathInArchive
+      description: The path that the added entry should have within the ZipArchive.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds an entry to the ZipArchive.
+  name: AddEntry
+  uid: M:Codeunit::System#IO#Data_Compression.AddEntry(InStream,Text)
+- syntax:
+    content: 'procedure RemoveEntry(PathInArchive: Text)'
+    parameters:
+    - id: PathInArchive
+      description: The path that the removed entry should have within the ZipArchive.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Removes an entry from the ZipArchive.
+  name: RemoveEntry
+  uid: M:Codeunit::System#IO#Data_Compression.RemoveEntry(Text)
+- syntax:
+    content: 'procedure IsGZip(InStream: InStream): Boolean'
+    parameters:
+    - id: InStream
+      description: An InStream that contains binary content.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: Returns true if and only if the given InStream is compressed with GZip
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the given InStream is compressed with GZip.
+  name: IsGZip
+  uid: M:Codeunit::System#IO#Data_Compression.IsGZip(InStream):Boolean
+- syntax:
+    content: 'procedure IsZip(InStream: InStream): Boolean'
+    parameters:
+    - id: InStream
+      description: An InStream that contains binary content.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: Returns true if and only if the given InStream is compressed with Zip
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the given InStream is compressed with Zip.
+  name: IsZip
+  uid: M:Codeunit::System#IO#Data_Compression.IsZip(InStream):Boolean
+- syntax:
+    content: 'procedure GZipCompress(InputInStream: InStream, CompressedOutStream: OutStream)'
+    parameters:
+    - id: InputInStream
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: CompressedOutStream
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: >-
+    Compresses a stream with GZip algorithm.
+
+    <param name="InputInStream">The InStream that contains the content that should be compressed.</param>
+
+    <param name="CompressedOutStream">The OutStream into which the compressed stream is copied to.</param>
+  name: GZipCompress
+  uid: M:Codeunit::System#IO#Data_Compression.GZipCompress(InStream,OutStream)
+- syntax:
+    content: 'procedure GZipDecompress(InputInStream: InStream, DecompressedOutStream: OutStream)'
+    parameters:
+    - id: InputInStream
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: DecompressedOutStream
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: >-
+    Decompresses a GZipStream.
+
+    <param name="InputInStream">The InStream that contains the content that should be decompressed.</param>
+
+    <param name="DecompressedOutStream">The OutStream into which the decompressed stream is copied to.</param>
+  name: GZipDecompress
+  uid: M:Codeunit::System#IO#Data_Compression.GZipDecompress(InStream,OutStream)
+commentId: O:Codeunit::System#IO#Data Compression
+summary: >-
+  Exposes functionality to provide ability to create, update, read and dispose a binary data compression archive.
+
+  This module supports compression and decompression with Zip format and GZip format.
+name: '"Data Compression"'
+uid: O:Codeunit::System#IO#Data_Compression

@@ -1,0 +1,36 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Settings"
+alId: ID 2511
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataCaptionExpression
+  value: AppNameValue
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Nav App Setting" = rm,
+                      tabledata "Published Application" = r
+  promoted: false
+commentId: O:Page::System#Apps#Extension Settings
+summary: Displays settings for the selected extension, and allows users to edit them.
+name: '"Extension Settings"'
+uid: O:Page::System#Apps#Extension_Settings

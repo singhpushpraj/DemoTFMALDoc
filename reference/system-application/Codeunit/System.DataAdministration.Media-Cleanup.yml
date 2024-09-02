@@ -1,0 +1,143 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Media Cleanup"
+alId: ID 1927
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetDetachedTenantMedia(TempTenantMedia: __MissingTypeSymbol__, LoadMediaContent: Boolean): Boolean'
+    parameters:
+    - id: TempTenantMedia
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: LoadMediaContent
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: GetDetachedTenantMedia
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.GetDetachedTenantMedia(__MissingSymbol__@,Boolean):Boolean
+- syntax:
+    content: 'procedure GetDetachedTenantMedia(TempTenantMedia: __MissingTypeSymbol__, LoadMediaContent: Boolean, RecordLimit: Integer): Boolean'
+    parameters:
+    - id: TempTenantMedia
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: LoadMediaContent
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: RecordLimit
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: GetDetachedTenantMedia
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.GetDetachedTenantMedia(__MissingSymbol__@,Boolean,Integer):Boolean
+- syntax:
+    content: 'procedure GetTenantMediaFromDetachedMediaSet(TempTenantMedia: __MissingTypeSymbol__, LoadMediaContent: Boolean): Boolean'
+    parameters:
+    - id: TempTenantMedia
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: LoadMediaContent
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: GetTenantMediaFromDetachedMediaSet
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.GetTenantMediaFromDetachedMediaSet(__MissingSymbol__@,Boolean):Boolean
+- syntax:
+    content: 'procedure GetTenantMediaFromDetachedMediaSet(TempTenantMedia: __MissingTypeSymbol__, LoadMediaContent: Boolean, RecordLimit: Integer): Boolean'
+    parameters:
+    - id: TempTenantMedia
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: LoadMediaContent
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: RecordLimit
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: GetTenantMediaFromDetachedMediaSet
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.GetTenantMediaFromDetachedMediaSet(__MissingSymbol__@,Boolean,Integer):Boolean
+- syntax:
+    content: 'procedure DownloadTenantMedia(MediaId: Guid): Boolean'
+    parameters:
+    - id: MediaId
+      description: ID of the tenant media.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads the content of the specified tenant media id.
+  name: DownloadTenantMedia
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.DownloadTenantMedia(Guid):Boolean
+- syntax:
+    content: 'procedure DeleteDetachedTenantMedia(TempTenantMedia: __MissingTypeSymbol__)'
+    parameters:
+    - id: TempTenantMedia
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: DeleteDetachedTenantMedia
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.DeleteDetachedTenantMedia(__MissingSymbol__@)
+- syntax:
+    content: procedure DeleteDetachedTenantMediaSet()
+  summary: Deletes all detached tenant media sets.
+  name: DeleteDetachedTenantMediaSet
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.DeleteDetachedTenantMediaSet
+- syntax:
+    content: procedure DeleteDetachedTenantMedia()
+  summary: >-
+    Deletes all detached tenant media.
+
+    Note: This function will delete detached media in batches of 100 and commit in between each batch.
+
+    This is to ensure we don't get stuck always trying to delete the same media and time out.
+  name: DeleteDetachedTenantMedia
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.DeleteDetachedTenantMedia
+- syntax:
+    content: procedure ScheduleCleanupDetachedMedia()
+  summary: >-
+    Schedules a background task which will remove both detached Tenant Media and detached Tenant Media Set.
+
+    If user cannot schedule tasks, will suggest running the task in the foreground.
+  name: ScheduleCleanupDetachedMedia
+  uid: M:Codeunit::System#DataAdministration#Media_Cleanup.ScheduleCleanupDetachedMedia
+commentId: O:Codeunit::System#DataAdministration#Media Cleanup
+summary: Provides an interface for cleaning up Media
+name: '"Media Cleanup"'
+uid: O:Codeunit::System#DataAdministration#Media_Cleanup

@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Templates Save Format"
+alId: ID 9987
+namespace: System.Integration.Word
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Saves the document in the Microsoft Word 97 - 2007 Document format.
+  name: Doc
+  uid: E:Enum::System#Integration#Word#Word_Templates_Save_Format.Doc
+- summary: Saves the document as an Office Open XML WordprocessingML Document (macro-free).
+  name: Docx
+  uid: E:Enum::System#Integration#Word#Word_Templates_Save_Format.Docx
+- summary: Saves the document as PDF (Adobe Portable Document) format.
+  name: PDF
+  uid: E:Enum::System#Integration#Word#Word_Templates_Save_Format.PDF
+- summary: Saves the document in the HTML format.
+  name: Html
+  uid: E:Enum::System#Integration#Word#Word_Templates_Save_Format.Html
+- summary: Saves the document in the plain text format.
+  name: Text
+  uid: E:Enum::System#Integration#Word#Word_Templates_Save_Format.Text
+commentId: O:Enum::System#Integration#Word#Word Templates Save Format
+summary: Specifies the available formats in which the user can generate documents from Word templates.
+name: '"Word Templates Save Format"'
+uid: O:Enum::System#Integration#Word#Word_Templates_Save_Format

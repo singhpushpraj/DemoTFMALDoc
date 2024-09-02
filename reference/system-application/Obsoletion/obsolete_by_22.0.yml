@@ -1,0 +1,111 @@
+﻿### YamlMime:BusinessCentralObsoletionList
+tag: "22.0"
+groups:
+- groupName: "22.0"
+  symbols:
+  - kind: Method
+    internalReference: M:Codeunit::System#Azure#Identity#Plan_Ids.GetM365CollaborationPlanId:Guid
+    name: 'GetM365CollaborationPlanId(): Guid'
+    reason: Replaced by GetMicrosoft365PlanId()
+  - kind: Codeunit
+    internalReference: O:Codeunit::System#Azure#Identity#Default_Permission_Set_In_Plan
+    name: Codeunit 9823 "Default Permission Set In Plan"
+    reason: Getting the default permissions will be done only inside the Azure AD Plan module.
+  - kind: Page
+    internalReference: O:Page::System#Azure#Identity#Default_Permission_Set_In_Plan
+    name: Page 9827 "Default Permission Set In Plan"
+    reason: The source table will be changed to Default Permission Set In Plan.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Azure#Identity#Azure_AD_Graph_-_Objects
+    name: PermissionSet 9012 "Azure AD Graph - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Azure#Identity#Azure_AD_Tenant_-_Objects
+    name: PermissionSet 433 "Azure AD Tenant - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Azure#KeyVault#Azure_Key_Vault_-_Objects
+    name: PermissionSet 2200 "Azure Key Vault - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: Method
+    internalReference: M:Page::System#Security#AccessControl#Tenant_Permission_Subform.SetPageVariables(Guid)
+    name: 'SetPageVariables(AppId: Guid)'
+    reason: No longer used.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Security#Authentication#OAuth_-_Objects
+    name: PermissionSet 1288 "OAuth - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#User#User_Permissions.HasUserCustomPermissions(Guid):Boolean
+    name: 'HasUserCustomPermissions(UserSecurityId: Guid): Boolean'
+    reason: Replaced with the ArePermissionsCustomized procedure in codeunit Azure AD User Management.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Security#User#User_Login_Times_-_Read
+    name: PermissionSet 9008 "User Login Times - Read"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Security#User#User_Login_Times_-_View
+    name: PermissionSet 9013 "User Login Times - View"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Environment#Configuration#Navigation_Bar_Subs#_-_Objects
+    name: PermissionSet 1818 "Navigation Bar Subs. - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Environment#Configuration#Server_Settings_-_Objects
+    name: PermissionSet 3703 "Server Settings - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Environment#Client_Type_Mgt#_-_Objects
+    name: PermissionSet 4030 "Client Type Mgt. - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Environment#Environment_Info#_-_Objects
+    name: PermissionSet 417 "Environment Info. - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Text#Base64_Convert_-_Objects
+    name: PermissionSet 4110 "Base64 Convert - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Utilities#Confirm_Management_-_Objects
+    name: PermissionSet 26 "Confirm Management - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Utilities#Regex_-_Objects
+    name: PermissionSet 3960 "Regex - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Utilities#URI_-_Objects
+    name: PermissionSet 3060 "URI - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Excel#Edit_in_Excel.EditPageInExcel(Text[240],Text,Text)
+    name: 'EditPageInExcel(PageCaption: Text[240], PageId: Text, Filter: Text)'
+    reason: Filters are now provided through EditinExcelFilters
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Excel#Edit_in_Excel.EditPageInExcel(Text[240],Text,Text,Text)
+    name: 'EditPageInExcel(PageCaption: Text[240], PageId: Text, Filter: Text, FileName: Text)'
+    reason: Filters are now provided through EditinExcelFilters
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Word#Word_Template.RemoveRelatedTable(Code[30],Integer):Boolean
+    name: 'RemoveRelatedTable(WordTemplateCode: Code[30], TableId: Integer): Boolean'
+    reason: Replaced by RemoveTable below
+  - kind: Page
+    internalReference: O:Page::System#Integration#Word#Word_Templates_Related_List
+    name: Page 9985 "Word Templates Related List"
+    reason: No longer used. Use page 9987 Word Templates Related Part instead.
+  - kind: Method
+    internalReference: M:Page::System#Integration#Word#Word_Templates_Table_Lookup.GetRecord(Word_Templates_Table@)
+    name: 'GetRecord(var SelectedWordTemplatesTable: Record 9987 "Word Templates Table")'
+    reason: Use Page.GetRecord instead.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#IO#Data_Compression_-_Objects
+    name: PermissionSet 421 "Data Compression - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Reflection#Record_Reference_-_Exec
+    name: PermissionSet 3918 "Record Reference - Exec"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  uid: N:Module::System_Application_obsolete_by_22.0#22.0
+uid: N:Module::System_Application_obsolete_by_22.0

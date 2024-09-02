@@ -1,0 +1,36 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Setup Lines"
+alId: ID 3902
+namespace: System.DataAdministration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#DataAdministration#Retention_Policy_Setup_Line
+  name: System.DataAdministration."Retention Policy Setup Line"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "3902"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#DataAdministration#Retention_Policy_Setup_Line
+    name: System.DataAdministration."Retention Policy Setup Line"
+    isExternal: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: AutoSplitKey
+  value: "True"
+  promoted: false
+commentId: O:Page::System#DataAdministration#Retention Policy Setup Lines
+summary: This page shows the retention policy setup lines. Each line defines a subset of records in a table for which you can set a separate retention period.
+name: '"Retention Policy Setup Lines"'
+uid: O:Page::System#DataAdministration#Retention_Policy_Setup_Lines

@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."System Initialization"
+alId: ID 150
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsInProgress(): Boolean'
+    return:
+      description: True, if the system initialization is in progress; false, otherwise
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the system initialization is currently in progress.
+  name: IsInProgress
+  uid: M:Codeunit::System#Environment#Configuration#System_Initialization.IsInProgress:Boolean
+- syntax:
+    content: 'procedure ShouldCheckSignupContext(): Boolean'
+    return:
+      description: Returns true if the signup context is still relevant for the tenant
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the signup context should be considered or whether it has expired.
+  name: ShouldCheckSignupContext
+  uid: M:Codeunit::System#Environment#Configuration#System_Initialization.ShouldCheckSignupContext:Boolean
+commentId: O:Codeunit::System#Environment#Configuration#System Initialization
+summary: Exposes functionality to check whether the system is initializing as well as an event to subscribed to in order to execute logic right after the system has initialized.
+name: '"System Initialization"'
+uid: O:Codeunit::System#Environment#Configuration#System_Initialization

@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Setup Card"
+alId: ID 3901
+namespace: System.DataAdministration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#DataAdministration#Retention_Policy_Setup
+  name: System.DataAdministration."Retention Policy Setup"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: Document
+  promoted: true
+- name: Caption
+  value: Retention Policy
+  promoted: false
+- name: SourceTable
+  value: "3901"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#DataAdministration#Retention_Policy_Setup
+    name: System.DataAdministration."Retention Policy Setup"
+    isExternal: false
+- name: DataCaptionFields
+  value: 1,3,4
+  promoted: false
+- name: PromotedActionCategories
+  value: New, Process, Report, Navigate
+  promoted: false
+commentId: O:Page::System#DataAdministration#Retention Policy Setup Card
+summary: This page shows the retention policy setup.
+name: '"Retention Policy Setup Card"'
+uid: O:Page::System#DataAdministration#Retention_Policy_Setup_Card

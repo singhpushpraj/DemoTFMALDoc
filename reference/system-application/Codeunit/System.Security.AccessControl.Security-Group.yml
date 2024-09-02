@@ -1,0 +1,313 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Security Group"
+alId: ID 9031
+namespace: System.Security.AccessControl
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Create(GroupCode: Code[20], GroupId: Text)'
+    parameters:
+    - id: GroupCode
+      description: The code of the newly created group.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: GroupId
+      description: The SID of a Windows group or object ID of the Microsoft Entra security group.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates a new security group.
+  name: Create
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.Create(Code[20],Text)
+- syntax:
+    content: 'procedure Delete(GroupCode: Code[20])'
+    parameters:
+    - id: GroupCode
+      description: The code of the group to delete.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: Deletes a security group.
+  name: Delete
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.Delete(Code[20])
+- syntax:
+    content: 'procedure Copy(SourceGroupCode: Code[20], DestinationGroupCode: Code[20], DestinationGroupId: Text)'
+    parameters:
+    - id: SourceGroupCode
+      description: The code of the security group to copy.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: DestinationGroupCode
+      description: The code of the copied security group.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: DestinationGroupId
+      description: The ID of the copied security group.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Copies a security group.
+  name: Copy
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.Copy(Code[20],Code[20],Text)
+- syntax:
+    content: 'procedure CopyPermissions(SourceGroupCode: Code[20], DestinationGroupCode: Code[20])'
+    parameters:
+    - id: SourceGroupCode
+      description: The code of the security group to fetch the permissions from.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: DestinationGroupCode
+      description: The code of the security group to add the the permissions to.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: Copies permission sets from the source security group to the destination security group.
+  name: CopyPermissions
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.CopyPermissions(Code[20],Code[20])
+- syntax:
+    content: 'procedure AddPermissionSet(GroupCode: Code[20], RoleId: Code[20], Company: Text[30], Scope: Option, AppId: Guid)'
+    parameters:
+    - id: GroupCode
+      description: The code of the security group to add a permission set to.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: RoleId
+      description: The ID of the role (permission set).
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: Company
+      description: The company for which to add the permission set.
+      parameterType:
+        name: Text[30]
+        isExternal: true
+    - id: Scope
+      description: The scope of the permission set.
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: AppId
+      description: The ID of the app from which the permission set originates.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Adds a permission set to a security group.
+  name: AddPermissionSet
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.AddPermissionSet(Code[20],Code[20],Text[30],Option,Guid)
+- syntax:
+    content: 'procedure RemovePermissionSet(GroupCode: Code[20], RoleId: Code[20], Company: Text[30], Scope: Option, AppId: Guid): Boolean'
+    parameters:
+    - id: GroupCode
+      description: The code of the security group to remove a permission set from.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: RoleId
+      description: The ID of the role (permission set).
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: Company
+      description: The company for which to remove the permission set.
+      parameterType:
+        name: Text[30]
+        isExternal: true
+    - id: Scope
+      description: The scope of the permission set.
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: AppId
+      description: The ID of the app from which the permission set originates.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True, if the permission set was removed, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Removes a permission set from a security group.
+  name: RemovePermissionSet
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.RemovePermissionSet(Code[20],Code[20],Text[30],Option,Guid):Boolean
+- syntax:
+    content: 'procedure GetGroups(var SecurityGroupBuffer: Record "Security Group Buffer" temporary)'
+    parameters:
+    - id: SecurityGroupBuffer
+      description: The resulting list of security groups.
+      parameterType:
+        name: Record "Security Group Buffer" temporary
+        isExternal: true
+  summary: Gets all the defined security groups.
+  name: GetGroups
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.GetGroups(Security_Group_Buffer@)
+- syntax:
+    content: 'procedure GetGroups(var SecurityGroupBuffer: Record "Security Group Buffer" temporary, FetchGroupNames: Boolean)'
+    parameters:
+    - id: SecurityGroupBuffer
+      description: The resulting list of security groups.
+      parameterType:
+        name: Record "Security Group Buffer" temporary
+        isExternal: true
+    - id: FetchGroupNames
+      description: Specifies if group names should be fetched, as loading them can take some time.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Gets all the defined security groups.
+  name: GetGroups
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.GetGroups(Security_Group_Buffer@,Boolean)
+- syntax:
+    content: 'procedure GetMembers(var SecurityGroupMemberBuffer: Record "Security Group Member Buffer" temporary): List of [Code[20]]'
+    parameters:
+    - id: SecurityGroupMemberBuffer
+      parameterType:
+        name: Record "Security Group Member Buffer" temporary
+        isExternal: true
+    return:
+      returnType:
+        name: List of [Code[20]]
+        isExternal: true
+  name: GetMembers
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.GetMembers(Security_Group_Member_Buffer@):List_of_[Code]
+- syntax:
+    content: 'procedure ValidateGroupId(GroupId: Text)'
+    parameters:
+    - id: GroupId
+      description: The SID of a Windows group or object ID of the Microsoft Entra security group.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Validates the group ID that can be used for a security group.
+  name: ValidateGroupId
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.ValidateGroupId(Text)
+- syntax:
+    content: 'procedure GetGroupUserSecurityId(GroupCode: Code[20]): Guid'
+    parameters:
+    - id: GroupCode
+      description: The code of the security group for which to get the group user security ID.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      description: The user security ID of a special user record that corresponds to a Microsoft Entra security group or Windows group.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Gets the user security ID of a special user record that corresponds to a Microsoft Entra security group or Windows group.
+  name: GetGroupUserSecurityId
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.GetGroupUserSecurityId(Code[20]):Guid
+- syntax:
+    content: 'procedure GetName(GroupCode: Code[20], var GroupName: Text[250]): Boolean'
+    parameters:
+    - id: GroupCode
+      description: The code of the security group.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: GroupName
+      description: The name of the security group.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    return:
+      description: True, if the operation succeeds, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the name of the security group.
+  name: GetName
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.GetName(Code[20],Text[250]@):Boolean
+- syntax:
+    content: 'procedure GetId(GroupCode: Code[20]): Text[250]'
+    parameters:
+    - id: GroupCode
+      description: The code of the security group.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      description: The ID of the security group.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Gets the SID of a Windows group or an object ID of a Microsoft Entra security group by group code.
+  name: GetId
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.GetId(Code[20]):Text[250]
+- syntax:
+    content: 'procedure GetCode(GroupId: Text[250], var GroupCode: Code[20]): Boolean'
+    parameters:
+    - id: GroupId
+      description: The SID of a Windows group or an object ID of a Microsoft Entra security group.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: GroupCode
+      description: The code of the security group.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      description: True, if the code was found successfully, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the code of the security group by its ID.
+  name: GetCode
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.GetCode(Text[250],Code[20]@):Boolean
+- syntax:
+    content: 'procedure IsWindowsAuthentication(): Boolean'
+    return:
+      description: True, if the current authentication type is Windows, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the current authentication type is Windows, meaning that Windows groups will be used for defining security groups.
+  name: IsWindowsAuthentication
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.IsWindowsAuthentication:Boolean
+- syntax:
+    content: 'procedure Export(SecurityGroupCodes: List of [Code[20]], Destination: OutStream)'
+    parameters:
+    - id: SecurityGroupCodes
+      parameterType:
+        name: List of [Code[20]]
+        isExternal: true
+    - id: Destination
+      parameterType:
+        name: OutStream
+        isExternal: true
+  name: Export
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.Export(List_of_[Code],OutStream)
+- syntax:
+    content: 'procedure Import(Source: InStream)'
+    parameters:
+    - id: Source
+      description: The InStream containing the XML content to import.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Imports a list of security groups.
+  name: Import
+  uid: M:Codeunit::System#Security#AccessControl#Security_Group.Import(InStream)
+commentId: O:Codeunit::System#Security#AccessControl#Security Group
+summary: >-
+  Exposes functionality for working with security groups.
+
+  Security groups correspond to either Windows groups or Microsoft Entra security groups depending on the authentication type.
+name: '"Security Group"'
+uid: O:Codeunit::System#Security#AccessControl#Security_Group

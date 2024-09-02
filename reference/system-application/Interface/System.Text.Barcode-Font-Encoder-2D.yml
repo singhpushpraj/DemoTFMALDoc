@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Font Encoder 2D"
+namespace: System.Text
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure EncodeFont(InputText: Text): Text'
+    parameters:
+    - id: InputText
+      description: The text to encode.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The encoded barcode.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Encodes a input text to a barcode font.
+  name: EncodeFont
+  uid: M:Interface::System#Text#Barcode_Font_Encoder_2D.EncodeFont(Text):Text
+commentId: O:Interface::System#Text#Barcode Font Encoder 2D
+summary: Exposes common interface for 2D barcode font encoder.
+name: '"Barcode Font Encoder 2D"'
+uid: O:Interface::System#Text#Barcode_Font_Encoder_2D

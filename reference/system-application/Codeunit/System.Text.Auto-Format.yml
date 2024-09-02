@@ -1,0 +1,72 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Auto Format"
+alId: ID 45
+namespace: System.Text
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure ResolveAutoFormat(AutoFormatType: Enum "Auto Format", AutoFormatExpr: Text[80]): Text[80]'
+    parameters:
+    - id: AutoFormatType
+      description: >2+
+
+        A value that determines how data is formatted.
+
+        The values that are available are "0" and "11".
+
+        Use "0" to ignore the value that AutoFormatExpr passes and use the standard format for decimals instead.
+
+        Use "11" to apply a specific format in AutoFormatExpr without additional transformation.
+      parameterType:
+        internalReference: O:Enum::System#Text#Auto_Format
+        name: System.Text."Auto Format"
+        isExternal: false
+    - id: AutoFormatExpr
+      description: An expression that specifies how to format data.
+      parameterType:
+        name: Text[80]
+        isExternal: true
+    return:
+      description: The resolved expression that defines data formatting
+      returnType:
+        name: Text[80]
+        isExternal: true
+  summary: >-
+    Formats the appearance of decimal data types.
+
+    Use this method if you need to format decimals for text message in the same way how system formats decimals in fields.
+  name: ResolveAutoFormat
+  uid: M:Codeunit::System#Text#Auto_Format.ResolveAutoFormat(Enum::System#Text#Auto_Format,Text[80]):Text[80]
+- syntax:
+    content: 'procedure ReadRounding(): Decimal'
+    return:
+      description: Returns the rounding precision.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Gets the default rounding precision.
+  name: ReadRounding
+  uid: M:Codeunit::System#Text#Auto_Format.ReadRounding:Decimal
+commentId: O:Codeunit::System#Text#Auto Format
+summary: Exposes functionality to format the appearance of decimal data types in fields of a table, report, or page.
+name: '"Auto Format"'
+uid: O:Codeunit::System#Text#Auto_Format

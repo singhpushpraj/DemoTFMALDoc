@@ -1,0 +1,97 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Scenario"
+alId: ID 8893
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure GetDefaultEmailAccount(var EmailAccount: Record "Email Account" temporary): Boolean'
+    parameters:
+    - id: EmailAccount
+      description: Out parameter holding information about the default email account.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    return:
+      description: True if an account for the the default scenario was found; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the default email account.
+  name: GetDefaultEmailAccount
+  uid: M:Codeunit::System#Email#Email_Scenario.GetDefaultEmailAccount(Email_Account@):Boolean
+- syntax:
+    content: 'procedure GetEmailAccount(Scenario: Enum "Email Scenario", var EmailAccount: Record "Email Account" temporary): Boolean'
+    parameters:
+    - id: Scenario
+      description: The scenario to look for.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+    - id: EmailAccount
+      description: Out parameter holding information about the email account.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    return:
+      description: True if an account for the specified scenario was found; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Gets the email account used by the given email scenario.
+
+    If the no account is defined for the provided scenario, the default account (if defined) will be returned.
+  name: GetEmailAccount
+  uid: M:Codeunit::System#Email#Email_Scenario.GetEmailAccount(Enum::System#Email#Email_Scenario,Email_Account@):Boolean
+- syntax:
+    content: 'procedure SetDefaultEmailAccount(EmailAccount: Record "Email Account" temporary)'
+    parameters:
+    - id: EmailAccount
+      description: The email account to use.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Sets a default email account.
+  name: SetDefaultEmailAccount
+  uid: M:Codeunit::System#Email#Email_Scenario.SetDefaultEmailAccount(Email_Account)
+- syntax:
+    content: 'procedure SetEmailAccount(Scenario: Enum "Email Scenario", EmailAccount: Record "Email Account" temporary)'
+    parameters:
+    - id: Scenario
+      description: The scenario for which to set an email account.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+    - id: EmailAccount
+      description: The email account to use.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Sets an email account to be used by the given email scenario.
+  name: SetEmailAccount
+  uid: M:Codeunit::System#Email#Email_Scenario.SetEmailAccount(Enum::System#Email#Email_Scenario,Email_Account)
+- syntax:
+    content: 'procedure UnassignScenario(Scenario: Enum "Email Scenario")'
+    parameters:
+    - id: Scenario
+      description: The scenario to unassign.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Scenario
+        name: System.Email."Email Scenario"
+        isExternal: false
+  summary: Unassign an email scenario. The scenario will then use the default email account.
+  name: UnassignScenario
+  uid: M:Codeunit::System#Email#Email_Scenario.UnassignScenario(Enum::System#Email#Email_Scenario)
+commentId: O:Codeunit::System#Email#Email Scenario
+summary: Provides functionality to work with email scenarios.
+name: '"Email Scenario"'
+uid: O:Codeunit::System#Email#Email_Scenario

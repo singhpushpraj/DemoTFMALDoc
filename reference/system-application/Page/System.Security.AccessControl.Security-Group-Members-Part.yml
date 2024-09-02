@@ -1,0 +1,36 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Security Group Members Part"
+alId: ID 9866
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Security#AccessControl#Security_Group_Member_Buffer
+  name: System.Security.AccessControl."Security Group Member Buffer"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Members
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "9021"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Security#AccessControl#Security_Group_Member_Buffer
+    name: System.Security.AccessControl."Security Group Member Buffer"
+    isExternal: false
+- name: Editable
+  value: "False"
+  promoted: false
+commentId: O:Page::System#Security#AccessControl#Security Group Members Part
+summary: Present security group memberships in a page part or factbox.
+name: '"Security Group Members Part"'
+uid: O:Page::System#Security#AccessControl#Security_Group_Members_Part

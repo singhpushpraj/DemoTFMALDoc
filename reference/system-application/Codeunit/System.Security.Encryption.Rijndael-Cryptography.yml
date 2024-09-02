@@ -1,0 +1,435 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."Rijndael Cryptography"
+alId: ID 1258
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: procedure InitRijndaelProvider()
+  summary: Initializes a new instance of the RijndaelManaged class with default values.
+  name: InitRijndaelProvider
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider
+- syntax:
+    signatures:
+    - '[Obsolete(Use InitRijndaelProvider with SecretText data type for EncryptionKey.,24.0)]'
+    content: 'procedure InitRijndaelProvider(EncryptionKey: Text)'
+    parameters:
+    - id: EncryptionKey
+      description: Represents the secret key for the symmetric algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the RijndaelManaged class providing the encryption key.
+  name: InitRijndaelProvider
+  obsoletion:
+    state: pending
+    reason: Use InitRijndaelProvider with SecretText data type for EncryptionKey.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(Text)
+- syntax:
+    signatures:
+    - '[Obsolete(Use InitRijndaelProvider with SecretText data type for EncryptionKey.,24.0)]'
+    content: 'procedure InitRijndaelProvider(EncryptionKey: Text, BlockSize: Integer)'
+    parameters:
+    - id: EncryptionKey
+      description: Represents the secret key for the symmetric algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BlockSize
+      description: Represents the block size, in bits, of the cryptographic operation.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Initializes a new instance of the RijndaelManaged class providing the encryption key and block size.
+  name: InitRijndaelProvider
+  obsoletion:
+    state: pending
+    reason: Use InitRijndaelProvider with SecretText data type for EncryptionKey.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(Text,Integer)
+- syntax:
+    signatures:
+    - '[Obsolete(Use InitRijndaelProvider with SecretText data type for EncryptionKey.,24.0)]'
+    content: 'procedure InitRijndaelProvider(EncryptionKey: Text, BlockSize: Integer, CipherMode: Text)'
+    parameters:
+    - id: EncryptionKey
+      description: Represents the secret key for the symmetric algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BlockSize
+      description: Represents the block size, in bits, of the cryptographic operation.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: CipherMode
+      description: 'Represents the cipher mode used in the symmetric algorithm. Valid values: ECB,CBC,CFB,CTS,OFB'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the RijndaelManaged class providing the encryption key, block size and cipher mode.
+  name: InitRijndaelProvider
+  obsoletion:
+    state: pending
+    reason: Use InitRijndaelProvider with SecretText data type for EncryptionKey.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(Text,Integer,Text)
+- syntax:
+    signatures:
+    - '[Obsolete(Use InitRijndaelProvider with SecretText data type for EncryptionKey.,24.0)]'
+    content: 'procedure InitRijndaelProvider(EncryptionKey: Text, BlockSize: Integer, CipherMode: Text, PaddingMode: Text)'
+    parameters:
+    - id: EncryptionKey
+      description: Represents the secret key for the symmetric algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BlockSize
+      description: Represents the block size, in bits, of the cryptographic operation.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: CipherMode
+      description: 'Represents the cipher mode used in the symmetric algorithm. Valid values: ECB,CBC,CFB,CTS,OFB'
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PaddingMode
+      description: 'Represents the padding mode used in the symmetric algorithm.. Valid values: None,ANSIX923,ISO10126,PKCS7,Zeros'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the RijndaelManaged class providing the encryption key, block size, cipher mode and padding mode.
+  name: InitRijndaelProvider
+  obsoletion:
+    state: pending
+    reason: Use InitRijndaelProvider with SecretText data type for EncryptionKey.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(Text,Integer,Text,Text)
+- syntax:
+    content: 'procedure InitRijndaelProvider(EncryptionKey: SecretText)'
+    parameters:
+    - id: EncryptionKey
+      description: Represents the secret key for the symmetric algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Initializes a new instance of the RijndaelManaged class providing the encryption key.
+  name: InitRijndaelProvider
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(SecretText)
+- syntax:
+    content: 'procedure InitRijndaelProvider(EncryptionKey: SecretText, BlockSize: Integer)'
+    parameters:
+    - id: EncryptionKey
+      description: Represents the secret key for the symmetric algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: BlockSize
+      description: Represents the block size, in bits, of the cryptographic operation.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Initializes a new instance of the RijndaelManaged class providing the encryption key and block size.
+  name: InitRijndaelProvider
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(SecretText,Integer)
+- syntax:
+    content: 'procedure InitRijndaelProvider(EncryptionKey: SecretText, BlockSize: Integer, CipherMode: Text)'
+    parameters:
+    - id: EncryptionKey
+      description: Represents the secret key for the symmetric algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: BlockSize
+      description: Represents the block size, in bits, of the cryptographic operation.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: CipherMode
+      description: 'Represents the cipher mode used in the symmetric algorithm. Valid values: ECB,CBC,CFB,CTS,OFB'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the RijndaelManaged class providing the encryption key, block size and cipher mode.
+  name: InitRijndaelProvider
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(SecretText,Integer,Text)
+- syntax:
+    content: 'procedure InitRijndaelProvider(EncryptionKey: SecretText, BlockSize: Integer, CipherMode: Text, PaddingMode: Text)'
+    parameters:
+    - id: EncryptionKey
+      description: Represents the secret key for the symmetric algorithm.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: BlockSize
+      description: Represents the block size, in bits, of the cryptographic operation.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: CipherMode
+      description: 'Represents the cipher mode used in the symmetric algorithm. Valid values: ECB,CBC,CFB,CTS,OFB'
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PaddingMode
+      description: 'Represents the padding mode used in the symmetric algorithm.. Valid values: None,ANSIX923,ISO10126,PKCS7,Zeros'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the RijndaelManaged class providing the encryption key, block size, cipher mode and padding mode.
+  name: InitRijndaelProvider
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(SecretText,Integer,Text,Text)
+- syntax:
+    content: 'procedure SetBlockSize(BlockSize: Integer)'
+    parameters:
+    - id: BlockSize
+      description: Represents the block size, in bits, of the cryptographic operation.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets a new block size value for the RijndaelManaged class.
+  name: SetBlockSize
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.SetBlockSize(Integer)
+- syntax:
+    content: 'procedure SetCipherMode(CipherMode: Text)'
+    parameters:
+    - id: CipherMode
+      description: 'Represents the cipher mode used in the symmetric algorithm. Valid values: ECB,CBC,CFB,CTS,OFB'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets a new cipher mode value for the RijndaelManaged class.
+  name: SetCipherMode
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.SetCipherMode(Text)
+- syntax:
+    content: 'procedure SetPaddingMode(PaddingMode: Text)'
+    parameters:
+    - id: PaddingMode
+      description: 'Represents the padding mode used in the symmetric algorithm.. Valid values: None,ANSIX923,ISO10126,PKCS7,Zeros'
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets a new padding mode value for the RijndaelManaged class.
+  name: SetPaddingMode
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.SetPaddingMode(Text)
+- syntax:
+    signatures:
+    - '[Obsolete(Use SetEncryptionData with SecretText data type for KeyAsBase64.,24.0)]'
+    content: 'procedure SetEncryptionData(KeyAsBase64: Text, VectorAsBase64: Text)'
+    parameters:
+    - id: KeyAsBase64
+      description: Represents the secret key for the symmetric algorithm encoded as Base64 Text
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: VectorAsBase64
+      description: Represents the initialization vector (IV) for the symmetric algorithm encoded as Base64 Text
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the key and vector for the RijndaelManaged class.
+  name: SetEncryptionData
+  obsoletion:
+    state: pending
+    reason: Use SetEncryptionData with SecretText data type for KeyAsBase64.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.SetEncryptionData(Text,Text)
+- syntax:
+    content: 'procedure SetEncryptionData(KeyAsBase64: SecretText, VectorAsBase64: Text)'
+    parameters:
+    - id: KeyAsBase64
+      description: Represents the secret key for the symmetric algorithm encoded as Base64 Text
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: VectorAsBase64
+      description: Represents the initialization vector (IV) for the symmetric algorithm encoded as Base64 Text
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the key and vector for the RijndaelManaged class.
+  name: SetEncryptionData
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.SetEncryptionData(SecretText,Text)
+- syntax:
+    content: 'procedure IsValidKeySize(KeySize: Integer): Boolean'
+    parameters:
+    - id: KeySize
+      description: Key Size.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the key size is valid; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the specified key size is valid for the current algorithm.
+  name: IsValidKeySize
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.IsValidKeySize(Integer):Boolean
+- syntax:
+    content: 'procedure GetLegalKeySizeValues(var MinSize: Integer, var MaxSize: Integer, var SkipSize: Integer)'
+    parameters:
+    - id: MinSize
+      description: Minimum Size in bits
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: MaxSize
+      description: Maximum Size in bits
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SkipSize
+      description: Skip Size in bits
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Specifies the key sizes, in bits, that are supported by the symmetric algorithm.
+  name: GetLegalKeySizeValues
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.GetLegalKeySizeValues(Integer@,Integer@,Integer@)
+- syntax:
+    content: 'procedure GetLegalBlockSizeValues(var MinSize: Integer, var MaxSize: Integer, var SkipSize: Integer)'
+    parameters:
+    - id: MinSize
+      description: Minimum Size in bits
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: MaxSize
+      description: Maximum Size in bits
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SkipSize
+      description: Skip Size in bits
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Specifies the block sizes, in bits, that are supported by the symmetric algorithm.
+  name: GetLegalBlockSizeValues
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.GetLegalBlockSizeValues(Integer@,Integer@,Integer@)
+- syntax:
+    signatures:
+    - '[Obsolete(Use GetEncryptionData with SecretText data type for KeyAsBase64.,24.0)]'
+    - '[NonDebuggable]'
+    content: 'procedure GetEncryptionData(var KeyAsBase64: Text, var VectorAsBase64: Text)'
+    parameters:
+    - id: KeyAsBase64
+      description: Represents the secret key for the symmetric algorithm encoded as Base64 Text
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: VectorAsBase64
+      description: Represents the initialization vector (IV) for the symmetric algorithm encoded as Base64 Text
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Gets the key and vector from the RijndaelManaged class
+  name: GetEncryptionData
+  obsoletion:
+    state: pending
+    reason: Use GetEncryptionData with SecretText data type for KeyAsBase64.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.GetEncryptionData(Text@,Text@)
+- syntax:
+    content: 'procedure GetEncryptionData(var KeyAsBase64: SecretText, var VectorAsBase64: Text)'
+    parameters:
+    - id: KeyAsBase64
+      description: Represents the secret key for the symmetric algorithm encoded as Base64 Text
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: VectorAsBase64
+      description: Represents the initialization vector (IV) for the symmetric algorithm encoded as Base64 Text
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Gets the key and vector from the RijndaelManaged class
+  name: GetEncryptionData
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.GetEncryptionData(SecretText@,Text@)
+- syntax:
+    content: 'procedure Encrypt(PlainText: Text): Text'
+    parameters:
+    - id: PlainText
+      description: The value to encrypt.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Encrypted value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns plain text as an encrypted value.
+  name: Encrypt
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.Encrypt(Text):Text
+- syntax:
+    content: 'procedure Encrypt(PlainText: SecretText): SecretText'
+    parameters:
+    - id: PlainText
+      description: The value to encrypt.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      description: Encrypted value.
+      returnType:
+        name: SecretText
+        isExternal: true
+  summary: Returns plain text as an encrypted value.
+  name: Encrypt
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.Encrypt(SecretText):SecretText
+- syntax:
+    content: 'procedure Decrypt(CryptedText: Text): Text'
+    parameters:
+    - id: CryptedText
+      description: The value to decrypt.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Plain text.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns encrypted text as plain text.
+  name: Decrypt
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.Decrypt(Text):Text
+- syntax:
+    content: 'procedure Decrypt(CryptedText: SecretText): SecretText'
+    parameters:
+    - id: CryptedText
+      description: The value to decrypt.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      description: Plain text.
+      returnType:
+        name: SecretText
+        isExternal: true
+  summary: Returns encrypted text as plain text.
+  name: Decrypt
+  uid: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.Decrypt(SecretText):SecretText
+commentId: O:Codeunit::System#Security#Encryption#Rijndael Cryptography
+summary: Provides helper functions for the Advanced Encryption Standard.
+name: '"Rijndael Cryptography"'
+uid: O:Codeunit::System#Security#Encryption#Rijndael_Cryptography

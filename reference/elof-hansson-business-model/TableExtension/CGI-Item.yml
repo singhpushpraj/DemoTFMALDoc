@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Item"'
+alId: ID 60301
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    internalReference: O:Enum::CGI_CA_CalculationLineItemType
+    name: '"CGI CA CalculationLineItemType"'
+    isExternal: false
+  name: '"CGI Division"'
+  uid: F:TableExtension::CGI_Item.CGI_Division
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI GSM"'
+  uid: F:TableExtension::CGI_Item.CGI_GSM
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Reel Width"'
+  uid: F:TableExtension::CGI_Item.CGI_Reel_Width
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Diameter"'
+  uid: F:TableExtension::CGI_Item.CGI_Diameter
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Core"'
+  uid: F:TableExtension::CGI_Item.CGI_Core
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Sheet Size"'
+  uid: F:TableExtension::CGI_Item.CGI_Sheet_Size[20]
+commentId: O:TableExtension::CGI Item
+summary: TableExtension CGI Item (ID 60301) extends Record Item.
+name: '"CGI Item"'
+uid: O:TableExtension::CGI_Item

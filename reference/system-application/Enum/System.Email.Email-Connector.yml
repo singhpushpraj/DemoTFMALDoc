@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Connector"
+alId: ID 8889
+namespace: System.Email
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: DefaultImplementation
+  value: 0,8896
+  promoted: false
+implements:
+- internalReference: O:Interface::System#Email#Email_Connector
+  name: System.Email."Email Connector"
+  isExternal: false
+- internalReference: O:Interface::System#Email#Default_Email_Rate_Limit
+  name: System.Email."Default Email Rate Limit"
+  isExternal: false
+commentId: O:Enum::System#Email#Email Connector
+summary: Enum that holds all of the available email connectors.
+name: '"Email Connector"'
+uid: O:Enum::System#Email#Email_Connector

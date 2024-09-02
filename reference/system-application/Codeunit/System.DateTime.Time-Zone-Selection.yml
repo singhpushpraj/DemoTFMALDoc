@@ -1,0 +1,69 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Time Zone Selection"
+alId: ID 9198
+namespace: System.DateTime
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure LookupTimeZone(var TimeZoneText: Text[180]): Boolean'
+    parameters:
+    - id: TimeZoneText
+      description: Out parameter with the Time Zone id of the selected Time Zone.
+      parameterType:
+        name: Text[180]
+        isExternal: true
+    return:
+      description: True if a timezone was selected.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Opens a window for viewing and selecting a Time Zone.
+  name: LookupTimeZone
+  uid: M:Codeunit::System#DateTime#Time_Zone_Selection.LookupTimeZone(Text[180]@):Boolean
+- syntax:
+    content: 'procedure ValidateTimeZone(var TimeZoneText: Text[180])'
+    parameters:
+    - id: TimeZoneText
+      description: The Time Zone text to validate.
+      parameterType:
+        name: Text[180]
+        isExternal: true
+  summary: Validate a time zone text given as input and converts it into a Time Zone ID.
+  name: ValidateTimeZone
+  uid: M:Codeunit::System#DateTime#Time_Zone_Selection.ValidateTimeZone(Text[180]@)
+- syntax:
+    content: 'procedure GetTimeZoneDisplayName(TimeZoneText: Text[180]): Text[250]'
+    parameters:
+    - id: TimeZoneText
+      description: The search query for the Time Zone.
+      parameterType:
+        name: Text[180]
+        isExternal: true
+    return:
+      description: The Display Name of the Time Zone.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Finds the Time Zone that matches the given text and returns its display name.
+  name: GetTimeZoneDisplayName
+  uid: M:Codeunit::System#DateTime#Time_Zone_Selection.GetTimeZoneDisplayName(Text[180]):Text[250]
+commentId: O:Codeunit::System#DateTime#Time Zone Selection
+summary: Provides basic functionality to lookup page for Time zones.
+name: '"Time Zone Selection"'
+uid: O:Codeunit::System#DateTime#Time_Zone_Selection

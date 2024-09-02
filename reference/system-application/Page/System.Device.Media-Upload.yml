@@ -1,0 +1,131 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Media Upload"
+alId: ID 1909
+namespace: System.Device
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Media Upload
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsAvailable(): Boolean'
+    return:
+      description: True if the media upload is available, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether media upload on the client device is available.
+  name: IsAvailable
+  uid: M:Page::System#Device#Media_Upload.IsAvailable:Boolean
+- syntax:
+    content: 'procedure SetMediaType(MediaType: Enum "Media Type")'
+    parameters:
+    - id: MediaType
+      description: The type of media to upload.
+      parameterType:
+        internalReference: O:Enum::System#Device#Media_Type
+        name: System.Device."Media Type"
+        isExternal: false
+  summary: Sets the type of media to select from.
+  name: SetMediaType
+  uid: M:Page::System#Device#Media_Upload.SetMediaType(Enum::System#Device#Media_Type)
+- syntax:
+    content: 'procedure SetUploadFromSavedPhotoAlbum(UploadFromSavedPhotoAlbum: Boolean)'
+    parameters:
+    - id: UploadFromSavedPhotoAlbum
+      description: Whether to upload media from Saved Photo Album.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the media source to Saved Photo Album. The default media source is Photo Library.
+  remarks: Has no effect on Android.
+  name: SetUploadFromSavedPhotoAlbum
+  uid: M:Page::System#Device#Media_Upload.SetUploadFromSavedPhotoAlbum(Boolean)
+- syntax:
+    content: 'procedure GetMedia(var TempBlob: Codeunit "Temp Blob")'
+    parameters:
+    - id: TempBlob
+      description: The object to put the picture BLOB in.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+  summary: >-
+    Gets the picture or video that was chosen when the page was opened.
+
+    An error is displayed if the function is called without opening the page first.
+  name: GetMedia
+  uid: M:Page::System#Device#Media_Upload.GetMedia(Codeunit::System#Utilities#Temp_Blob@)
+- syntax:
+    content: 'procedure HasMedia(): Boolean'
+    return:
+      description: True if the media is available, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the media is available and can be obtained with a <see cref="GetMedia"></see> method.
+  remarks: >-
+    The media will not be available if the page was not opened
+
+    (e. g. MediaUpload.RunModal() function was not called) or if the dialog was canceled.
+  name: HasMedia
+  uid: M:Page::System#Device#Media_Upload.HasMedia:Boolean
+- syntax:
+    content: 'procedure GetMedia(InStream: InStream)'
+    parameters:
+    - id: InStream
+      description: The InStream to read the picture from.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: >-
+    Gets the picture or video that was chosen when the page was opened.
+
+    An error is thrown if the function is called without opening the page first.
+  name: GetMedia
+  uid: M:Page::System#Device#Media_Upload.GetMedia(InStream)
+commentId: O:Page::System#Device#Media Upload
+summary: Provides an interface for accessing the media on the client device.
+examples:
+- >2+
+
+  ``` AL
+
+  MediaUpload.RunModal();
+
+  if MediaUpload.HasMedia() then begin
+      MediaUpload.GetMedia(InStream);
+  ...
+
+  end;
+
+  Clear(MediaUpload);
+
+  ```
+name: '"Media Upload"'
+uid: O:Page::System#Device#Media_Upload

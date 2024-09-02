@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Customer"'
+alId: ID 60308
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Risk Premium Percent"'
+  uid: F:TableExtension::CGI_Customer.CGI_Risk_Premium_Percent
+- type:
+    internalReference: O:Enum::CGI_CustomerCountryLimitType
+    name: '"CGI CustomerCountryLimitType"'
+    isExternal: false
+  name: '"CGI Country Limit Type"'
+  uid: F:TableExtension::CGI_Customer.CGI_Country_Limit_Type
+commentId: O:TableExtension::CGI Customer
+summary: TableExtension CGI Customer (ID 60308) extends Record Customer.
+name: '"CGI Customer"'
+uid: O:TableExtension::CGI_Customer

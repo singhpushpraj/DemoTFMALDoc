@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Entity Text Format"
+alId: ID 2010
+namespace: System.Text
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Generate a short tagline.
+  name: Tagline
+  uid: E:Enum::System#Text#Entity_Text_Format.Tagline
+- summary: Generate a paragraph of text.
+  name: Paragraph
+  uid: E:Enum::System#Text#Entity_Text_Format.Paragraph
+- summary: Generate a tagline and paragraph in one prompt.
+  name: TaglineParagraph
+  uid: E:Enum::System#Text#Entity_Text_Format.TaglineParagraph
+- summary: Generate a brief summary.
+  name: Brief
+  uid: E:Enum::System#Text#Entity_Text_Format.Brief
+commentId: O:Enum::System#Text#Entity Text Format
+summary: Enum containing supported text formats for generation.
+name: '"Entity Text Format"'
+uid: O:Enum::System#Text#Entity_Text_Format

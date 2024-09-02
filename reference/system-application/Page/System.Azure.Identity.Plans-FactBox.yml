@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plans FactBox"
+alId: ID 9825
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity.Plan
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Plans
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "9004"
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-how-users-permissions
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: tabledata Plan = r
+  promoted: false
+commentId: O:Page::System#Azure#Identity#Plans FactBox
+summary: ListPart page that contains all the plans.
+name: '"Plans FactBox"'
+uid: O:Page::System#Azure#Identity#Plans_FactBox

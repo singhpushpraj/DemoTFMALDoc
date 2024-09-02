@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Ptd Purch. Cr. Memo Subfrm"'
+alId: ID 60344
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Ptd Purch# Cr# Memo Subfrm
+summary: Pageextension CGI Ptd Purch. Cr. Memo Subform (ID 60344) extends page posted Purch. Cr. Memo Subform
+name: '"CGI Ptd Purch. Cr. Memo Subfrm"'
+uid: O:PageExtension::CGI_Ptd_Purch#_Cr#_Memo_Subfrm

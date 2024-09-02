@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Other Costs and Rev. List"'
+alId: ID 60313
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Other_Costs_and_Revenues
+  name: '"CGI Other Costs and Revenues"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Other Costs and Revenues
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "60313"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Other_Costs_and_Revenues
+    name: '"CGI Other Costs and Revenues"'
+    isExternal: false
+- name: UsageCategory
+  value: Lists
+  promoted: false
+commentId: O:Page::CGI Other Costs and Rev# List
+summary: Page CGI Other Costs and Rev. List (ID 60313).
+name: '"CGI Other Costs and Rev. List"'
+uid: O:Page::CGI_Other_Costs_and_Rev#_List

@@ -1,0 +1,1201 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS File Client"
+alId: ID 8950
+namespace: System.Azure.Storage.Files
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Initialize(StorageAccount: Text, FileShare: Text, Authorization: Interface "Storage Service Authorization")'
+    parameters:
+    - id: StorageAccount
+      description: The name of the storage account to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileShare
+      description: The name of the file share to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Authorization
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  summary: Initializes the AFS Client.
+  name: Initialize
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.Initialize(Text,Text,Interface::System#Azure#Storage#Storage_Service_Authorization)
+- syntax:
+    content: 'procedure Initialize(StorageAccount: Text, FileShare: Text, Authorization: Interface "Storage Service Authorization", APIVersion: Enum "Storage Service API Version")'
+    parameters:
+    - id: StorageAccount
+      description: The name of the storage account to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileShare
+      description: The name of the file share to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Authorization
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+    - id: APIVersion
+      description: The API Version to use.
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+        name: System.Azure.Storage."Storage Service API Version"
+        isExternal: false
+  summary: Initializes the AFS Client.
+  name: Initialize
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.Initialize(Text,Text,Interface::System#Azure#Storage#Storage_Service_Authorization,Enum::System#Azure#Storage#Storage_Service_API_Version)
+- syntax:
+    content: 'procedure CreateFile(FilePath: Text, InStream: InStream): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path where the file will be created.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InStream
+      description: The file content, only used to check file size.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: An operation response object.
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: >-
+    Creates a file in the file share.
+
+    This does not fill in the file content, it only initializes the file.
+  name: CreateFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.CreateFile(Text,InStream):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure CreateFile(FilePath: Text, InStream: InStream, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path where the file will be created.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InStream
+      description: The file content, only used to check file size.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object.
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: >-
+    Creates a file in the file share.
+
+    This does not fill in the file content, it only initializes the file.
+  name: CreateFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.CreateFile(Text,InStream,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure CreateFile(FilePath: Text, FileSize: Integer): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path where the file will be created.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileSize
+      description: The size of the file to initialize, in bytes.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: An operation response object.
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: >-
+    Creates a file in the file share.
+
+    This does not fill in the file content, it only initializes the file.
+  name: CreateFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.CreateFile(Text,Integer):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure CreateFile(FilePath: Text, FileSize: Integer, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path where the file will be created.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FileSize
+      description: The size of the file to initialize, in bytes.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object.
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: >-
+    Creates a file in the file share.
+
+    This does not fill in the file content, it only initializes the file.
+  name: CreateFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.CreateFile(Text,Integer,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure GetFileAsFile(FilePath: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: >-
+    Receives a file as a File from a file share.
+
+    The file will be downloaded through the browser.
+  name: GetFileAsFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.GetFileAsFile(Text):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure GetFileAsFile(FilePath: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: >-
+    Receives a file as a File from a file share.
+
+    The file will be downloaded through the browser.
+  name: GetFileAsFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.GetFileAsFile(Text,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure GetFileAsStream(FilePath: Text, var TargetInStream: InStream): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetInStream
+      description: The result instream containing the content of the file.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Receives a file as a stream from a file share.
+  name: GetFileAsStream
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.GetFileAsStream(Text,InStream@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure GetFileAsStream(FilePath: Text, var TargetInStream: InStream, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetInStream
+      description: The result instream containing the  content of the file.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Receives a file as a stream from a file share.
+  name: GetFileAsStream
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.GetFileAsStream(Text,InStream@,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure GetFileAsText(FilePath: Text, var TargetText: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetText
+      description: The result text containing the content of the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Receives a file as a text from a file share.
+  name: GetFileAsText
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.GetFileAsText(Text,Text@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure GetFileAsText(FilePath: Text, var TargetText: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetText
+      description: The result text containing the content of the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Receives a file as a text from a file share.
+  name: GetFileAsText
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.GetFileAsText(Text,Text@,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure GetFileMetadata(FilePath: Text, var TargetMetadata: Dictionary of [Text, Text]): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetMetadata
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  name: GetFileMetadata
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.GetFileMetadata(Text,Dictionary_of_[Text,Text]@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure GetFileMetadata(FilePath: Text, var TargetMetadata: Dictionary of [Text, Text], AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetMetadata
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: AFSOptionalParameters
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  name: GetFileMetadata
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.GetFileMetadata(Text,Dictionary_of_[Text,Text]@,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure SetFileMetadata(FilePath: Text, Metadata: Dictionary of [Text, Text]): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Metadata
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  name: SetFileMetadata
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.SetFileMetadata(Text,Dictionary_of_[Text,Text]):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure SetFileMetadata(FilePath: Text, var Metadata: Dictionary of [Text, Text], AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Metadata
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: AFSOptionalParameters
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  name: SetFileMetadata
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.SetFileMetadata(Text,Dictionary_of_[Text,Text]@,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure PutFileUI(): Codeunit "AFS Operation Response"'
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads a file to the file share.
+
+    User will be prompted to specify the file to send.
+  name: PutFileUI
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.PutFileUI:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure PutFileUI(AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads a file to the file share.
+
+    User will be prompted to specify the file to send.
+  name: PutFileUI
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.PutFileUI(Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure PutFileStream(FilePath: Text, var SourceInStream: InStream): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceInStream
+      description: The source instream containing the content of the file.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Uploads a file to the file share from instream.
+  name: PutFileStream
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.PutFileStream(Text,InStream@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure PutFileStream(FilePath: Text, var SourceInStream: InStream, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceInStream
+      description: The source instream containing the content of the file.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Uploads a file to the file share from instream.
+  name: PutFileStream
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.PutFileStream(Text,InStream@,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure PutFileText(FilePath: Text, SourceText: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceText
+      description: The source text containing the content of the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Uploads a file to the file share from text.
+  name: PutFileText
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.PutFileText(Text,Text):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure PutFileText(FilePath: Text, SourceText: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceText
+      description: The source text containing the content of the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Uploads a file to the file share from text.
+  name: PutFileText
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.PutFileText(Text,Text,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure DeleteFile(FilePath: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Deletes a file from the file share.
+  name: DeleteFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.DeleteFile(Text):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure DeleteFile(FilePath: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Deletes a file from the file share.
+  name: DeleteFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.DeleteFile(Text,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ListDirectory(DirectoryPath: Text[2048], var AFSDirectoryContent: Record "AFS Directory Content" temporary): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DirectoryPath
+      description: The path of the directory to list.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: AFSDirectoryContent
+      description: The result collection with contents of the directory (temporary)
+      parameterType:
+        name: Record "AFS Directory Content" temporary
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Lists files and directories from the file share.
+  name: ListDirectory
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ListDirectory(Text[2048],AFS_Directory_Content@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ListDirectory(DirectoryPath: Text[2048], var AFSDirectoryContent: Record "AFS Directory Content" temporary, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DirectoryPath
+      description: The path of the directory to list.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: AFSDirectoryContent
+      description: The result collection with contents of the directory (temporary)
+      parameterType:
+        name: Record "AFS Directory Content" temporary
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Lists files and directories from the file share.
+  name: ListDirectory
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ListDirectory(Text[2048],AFS_Directory_Content@,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ListDirectory(DirectoryPath: Text[2048], PreserveDirectoryContent: Boolean, var AFSDirectoryContent: Record "AFS Directory Content" temporary): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DirectoryPath
+      description: The path of the directory to list.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: PreserveDirectoryContent
+      description: Specifies if the result collection should be cleared before filling it with the response data.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: AFSDirectoryContent
+      description: The result collection with contents of the directory (temporary)
+      parameterType:
+        name: Record "AFS Directory Content" temporary
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Lists files and directories from the file share.
+  name: ListDirectory
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ListDirectory(Text[2048],Boolean,AFS_Directory_Content@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ListDirectory(DirectoryPath: Text[2048], PreserveDirectoryContent: Boolean, var AFSDirectoryContent: Record "AFS Directory Content" temporary, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DirectoryPath
+      description: The path of the directory to list.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: PreserveDirectoryContent
+      description: Specifies if the result collection should be cleared before filling it with the response data.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: AFSDirectoryContent
+      description: The result collection with contents of the directory (temporary)
+      parameterType:
+        name: Record "AFS Directory Content" temporary
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Lists files and directories from the file share.
+  name: ListDirectory
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ListDirectory(Text[2048],Boolean,AFS_Directory_Content@,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure CreateDirectory(DirectoryPath: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DirectoryPath
+      description: The path of the directory to create.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Creates directory on the file share.
+  name: CreateDirectory
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.CreateDirectory(Text):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure CreateDirectory(DirectoryPath: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DirectoryPath
+      description: The path of the directory to create.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Creates directory on the file share.
+  name: CreateDirectory
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.CreateDirectory(Text,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure DeleteDirectory(DirectoryPath: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DirectoryPath
+      description: The path of the directory to delete.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Deletes an empty directory from the file share.
+  name: DeleteDirectory
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.DeleteDirectory(Text):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure DeleteDirectory(DirectoryPath: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DirectoryPath
+      description: The path of the directory to delete.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Deletes an empty directory from the file share.
+  name: DeleteDirectory
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.DeleteDirectory(Text,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure CopyFile(SourceFileURI: Text, DestinationFilePath: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: SourceFileURI
+      description: The URI to the source file. If the source file is on a different share than the destination file, the URI needs to be authorized.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DestinationFilePath
+      description: The path where to destination file should be created.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Copies a file on the file share.
+  name: CopyFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.CopyFile(Text,Text):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure CopyFile(SourceFileURI: Text, DestinationFilePath: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: SourceFileURI
+      description: The URI to the source file. If the source file is on a different share than the destination file, the URI needs to be authorized.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DestinationFilePath
+      description: The path where to destination file should be created.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Copies a file on the file share.
+  name: CopyFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.CopyFile(Text,Text,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure AbortCopyFile(DestinationFilePath: Text, CopyID: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DestinationFilePath
+      description: The path where to destination file should be created.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CopyID
+      description: The ID of the copy opeartion to abort.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Stops a file copy operation that is in progress.
+  name: AbortCopyFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.AbortCopyFile(Text,Text):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure AbortCopyFile(DestinationFilePath: Text, CopyID: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: DestinationFilePath
+      description: The path where to destination file should be created.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CopyID
+      description: The ID of the copy opeartion to abort.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Stops a file copy operation that is in progress.
+  name: AbortCopyFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.AbortCopyFile(Text,Text,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ListHandles(Path: Text, var AFSHandle: Record "AFS Handle" temporary): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: Path
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSHandle
+      description: The result collection containing all the handles to the file (temporary).
+      parameterType:
+        name: Record "AFS Handle" temporary
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Lists all the open handles to the file.
+  name: ListHandles
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ListHandles(Text,AFS_Handle@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ListHandles(Path: Text, var AFSHandle: Record "AFS Handle" temporary, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: Path
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSHandle
+      description: The result collection containing all the handles to the file (temporary).
+      parameterType:
+        name: Record "AFS Handle" temporary
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Lists all the open handles to the file.
+  name: ListHandles
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ListHandles(Text,AFS_Handle@,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure RenameFile(SourceFilePath: Text, DestinationFilePath: Text): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: SourceFilePath
+      description: The path to the source file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DestinationFilePath
+      description: The path to which the file will be renamed.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Renames a file on the file share.
+  name: RenameFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.RenameFile(Text,Text):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure RenameFile(SourceFilePath: Text, DestinationFilePath: Text, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: SourceFilePath
+      description: The path to the source file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DestinationFilePath
+      description: The path to which the file will be renamed.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Renames a file on the file share.
+  name: RenameFile
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.RenameFile(Text,Text,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(FilePath: Text, ProposedLeaseId: Guid, var LeaseId: Guid): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ProposedLeaseId
+      description: The proposed id for the new lease.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation reponse object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Requests a new lease. If the file does not have an active lease, the file service creates a lease on the file.
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.AcquireLease(Text,Guid,Guid@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(FilePath: Text, ProposedLeaseId: Guid, AFSOptionalParameters: Codeunit "AFS Optional Parameters", var LeaseId: Guid): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ProposedLeaseId
+      description: The proposed id for the new lease.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation reponse object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Requests a new lease. If the file does not have an active lease, the file service creates a lease on the file.
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.AcquireLease(Text,Guid,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters,Guid@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ChangeLease(FilePath: Text, ProposedLeaseId: Guid, var LeaseId: Guid): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ProposedLeaseId
+      description: The proposed id for the new lease.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: LeaseId
+      description: Previous lease id. Will be replaced by a new lease id if the request is successful.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: Return value of type Codeunit "AFS Operation Response".
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Changes a lease id to a new lease id.
+  name: ChangeLease
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ChangeLease(Text,Guid,Guid@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ChangeLease(FilePath: Text, ProposedLeaseId: Guid, AFSOptionalParameters: Codeunit "AFS Optional Parameters", var LeaseId: Guid): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ProposedLeaseId
+      description: The proposed id for the new lease.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    - id: LeaseId
+      description: Previous lease id. Will be replaced by a new lease id if the request is successful.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: Return value of type Codeunit "AFS Operation Response".
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Changes a lease id to a new lease id.
+  name: ChangeLease
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ChangeLease(Text,Guid,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters,Guid@):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ReleaseLease(FilePath: Text, LeaseId: Guid): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be released
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation reponse object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Releases a lease on a File if it is no longer needed so that another client may immediately acquire a lease against the file.
+  name: ReleaseLease
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ReleaseLease(Text,Guid):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure ReleaseLease(FilePath: Text, LeaseId: Guid, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be released
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation reponse object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Releases a lease on a File if it is no longer needed so that another client may immediately acquire a lease against the file.
+  name: ReleaseLease
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.ReleaseLease(Text,Guid,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure BreakLease(FilePath: Text, LeaseId: Guid): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be broken
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation reponse object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Breaks a lease on a file.
+  name: BreakLease
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.BreakLease(Text,Guid):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+- syntax:
+    content: 'procedure BreakLease(FilePath: Text, LeaseId: Guid, AFSOptionalParameters: Codeunit "AFS Optional Parameters"): Codeunit "AFS Operation Response"'
+    parameters:
+    - id: FilePath
+      description: The path to the file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be broken
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: AFSOptionalParameters
+      description: Optional parameters to pass with the request.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters
+        name: System.Azure.Storage.Files."AFS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation reponse object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+        name: System.Azure.Storage.Files."AFS Operation Response"
+        isExternal: false
+  summary: Breaks a lease on a file.
+  name: BreakLease
+  uid: M:Codeunit::System#Azure#Storage#Files#AFS_File_Client.BreakLease(Text,Guid,Codeunit::System#Azure#Storage#Files#AFS_Optional_Parameters):Codeunit::System#Azure#Storage#Files#AFS_Operation_Response
+commentId: O:Codeunit::System#Azure#Storage#Files#AFS File Client
+summary: Provides functionality to access the Azure File Storage.
+name: '"AFS File Client"'
+uid: O:Codeunit::System#Azure#Storage#Files#AFS_File_Client

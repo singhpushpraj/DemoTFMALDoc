@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Deployment Status"
+alId: ID 2508
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+- name: Permissions
+  value: tabledata "Nav App Tenant Operation" = r
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Extension Installation Status
+  promoted: false
+commentId: O:Page::System#Apps#Extension Deployment Status
+summary: Displays the deployment status for extensions that are deployed or are scheduled for deployment.
+name: '"Extension Deployment Status"'
+uid: O:Page::System#Apps#Extension_Deployment_Status

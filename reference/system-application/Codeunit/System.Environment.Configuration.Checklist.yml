@@ -1,0 +1,305 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration.Checklist
+alId: ID 1992
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Insert(GuidedExperienceType: Enum "Guided Experience Type", ObjectTypeToRun: ObjectType, ObjectIDToRun: Integer, OrderID: Integer, TempAllProfile: __MissingTypeSymbol__, ShouldEveryoneComplete: Boolean)'
+    parameters:
+    - id: GuidedExperienceType
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectTypeToRun
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectIDToRun
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: OrderID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempAllProfile
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ShouldEveryoneComplete
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: Insert
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Insert(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer,Integer,__MissingSymbol__@,Boolean)
+- syntax:
+    content: 'procedure Insert(GuidedExperienceType: Enum "Guided Experience Type", ObjectTypeToRun: ObjectType, ObjectIDToRun: Integer, OrderID: Integer, TempUser: __MissingTypeSymbol__)'
+    parameters:
+    - id: GuidedExperienceType
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectTypeToRun
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectIDToRun
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: OrderID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempUser
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: Insert
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Insert(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer,Integer,__MissingSymbol__@)
+- syntax:
+    content: 'procedure Insert(GuidedExperienceType: Enum "Guided Experience Type", Link: Text[250], OrderID: Integer, TempAllProfile: __MissingTypeSymbol__, ShouldEveryoneComplete: Boolean)'
+    parameters:
+    - id: GuidedExperienceType
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: Link
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: OrderID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempAllProfile
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ShouldEveryoneComplete
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: Insert
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Insert(Enum::System#Environment#Configuration#Guided_Experience_Type,Text[250],Integer,__MissingSymbol__@,Boolean)
+- syntax:
+    content: 'procedure Insert(GuidedExperienceType: Enum "Guided Experience Type", Link: Text[250], OrderID: Integer, TempUser: __MissingTypeSymbol__)'
+    parameters:
+    - id: GuidedExperienceType
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: Link
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: OrderID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempUser
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: Insert
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Insert(Enum::System#Environment#Configuration#Guided_Experience_Type,Text[250],Integer,__MissingSymbol__@)
+- syntax:
+    content: 'procedure Insert(PageID: Integer, SpotlightTourType: Enum "Spotlight Tour Type", OrderID: Integer, TempAllProfile: __MissingTypeSymbol__, ShouldEveryoneComplete: Boolean)'
+    parameters:
+    - id: PageID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SpotlightTourType
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Spotlight_Tour_Type
+        name: System.Environment.Configuration."Spotlight Tour Type"
+        isExternal: false
+    - id: OrderID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempAllProfile
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ShouldEveryoneComplete
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: Insert
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Insert(Integer,Enum::System#Environment#Configuration#Spotlight_Tour_Type,Integer,__MissingSymbol__@,Boolean)
+- syntax:
+    content: 'procedure Insert(PageID: Integer, SpotlightTourType: Enum "Spotlight Tour Type", OrderID: Integer, TempUser: __MissingTypeSymbol__)'
+    parameters:
+    - id: PageID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SpotlightTourType
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Spotlight_Tour_Type
+        name: System.Environment.Configuration."Spotlight Tour Type"
+        isExternal: false
+    - id: OrderID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TempUser
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: Insert
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Insert(Integer,Enum::System#Environment#Configuration#Spotlight_Tour_Type,Integer,__MissingSymbol__@)
+- syntax:
+    content: 'procedure Delete(GuidedExperienceType: Enum "Guided Experience Type", ObjectTypeToRun: ObjectType, ObjectID: Integer)'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of guided experience item that the checklist item references.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: ObjectTypeToRun
+      description: The object type run by the guided experience item that the checklist item references.
+      parameterType:
+        name: ObjectType
+        isExternal: true
+    - id: ObjectID
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Deletes a checklist item.
+  name: Delete
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Delete(Enum::System#Environment#Configuration#Guided_Experience_Type,ObjectType,Integer)
+- syntax:
+    content: 'procedure Delete(GuidedExperienceType: Enum "Guided Experience Type", Link: Text[250])'
+    parameters:
+    - id: GuidedExperienceType
+      description: The type of guided experience item that the checklist item references.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Guided_Experience_Type
+        name: System.Environment.Configuration."Guided Experience Type"
+        isExternal: false
+    - id: Link
+      description: The URL that is open by the guided experience item that the checklist item references.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+  summary: Deletes a checklist item.
+  name: Delete
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Delete(Enum::System#Environment#Configuration#Guided_Experience_Type,Text[250])
+- syntax:
+    content: 'procedure Delete(PageID: Integer, SpotlightTourType: Enum "Spotlight Tour Type")'
+    parameters:
+    - id: PageID
+      description: The ID of the page that the spotlight tour runs on.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SpotlightTourType
+      description: The type of spotlight tour.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Configuration#Spotlight_Tour_Type
+        name: System.Environment.Configuration."Spotlight Tour Type"
+        isExternal: false
+  summary: Deletes a spotlight tour checklist item.
+  name: Delete
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.Delete(Integer,Enum::System#Environment#Configuration#Spotlight_Tour_Type)
+- syntax:
+    content: 'procedure ShouldInitializeChecklist(ShouldSkipForEvaluationCompany: Boolean): Boolean'
+    parameters:
+    - id: ShouldSkipForEvaluationCompany
+      description: If true, then the function will always return false for evaluation companies.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the checklist should be initialized and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the checklist should be initialized for the current company.
+  name: ShouldInitializeChecklist
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.ShouldInitializeChecklist(Boolean):Boolean
+- syntax:
+    content: procedure MarkChecklistSetupInProgress()
+  summary: Marks the checklist setup in progress.
+  name: MarkChecklistSetupInProgress
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.MarkChecklistSetupInProgress
+- syntax:
+    content: procedure MarkChecklistSetupAsDone()
+  summary: Marks the checklist setup as done.
+  name: MarkChecklistSetupAsDone
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.MarkChecklistSetupAsDone
+- syntax:
+    content: procedure InitializeGuidedExperienceItems()
+  summary: Initializes the guided experience items. Mostly called once in a company's lifecycle from BaseApp, if used in an extension, please see also ShouldInitializeChecklist.
+  name: InitializeGuidedExperienceItems
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.InitializeGuidedExperienceItems
+- syntax:
+    content: 'procedure UpdateUserName(var RecordRef: RecordRef, Company: Text[30], UserName: Text[50], TableID: Integer)'
+    parameters:
+    - id: RecordRef
+      description: The recordref that poins to the record that is to be modified.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: Company
+      description: The company in which the table is to be modified.
+      parameterType:
+        name: Text[30]
+        isExternal: true
+    - id: UserName
+      description: The new user name.
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: TableID
+      description: The table for which the user name is to be modified.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Updates the user name for checklist records that have it as a primary key.
+  name: UpdateUserName
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.UpdateUserName(RecordRef@,Text[30],Text[50],Integer)
+- syntax:
+    content: 'procedure IsChecklistVisible(): Boolean'
+    return:
+      description: True if the checklist is visible and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the checklist is visible for the current user on the profile that the user is currently on.
+  name: IsChecklistVisible
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.IsChecklistVisible:Boolean
+- syntax:
+    content: 'procedure SetChecklistVisibility(Visible: Boolean)'
+    parameters:
+    - id: Visible
+      description: True if the checklist should be visible and false otherwise.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the checklist visibility for the current user and the profile that the user is currently using.
+  name: SetChecklistVisibility
+  uid: M:Codeunit::System#Environment#Configuration#Checklist.SetChecklistVisibility(Boolean)
+commentId: O:Codeunit::System#Environment#Configuration#Checklist
+summary: Manage the checklist presented to users by inserting and deleting checklist items and controling the visibility of the checklist.
+name: Checklist
+uid: O:Codeunit::System#Environment#Configuration#Checklist

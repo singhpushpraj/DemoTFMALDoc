@@ -1,0 +1,52 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Field Content Buffer"
+alId: ID 1753
+namespace: System.Privacy
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+sourceTableType:
+  name: System.Privacy."Field Content Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Caption
+  value: Field Contents
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "1754"
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: admin-classifying-data-sensitivity
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Privacy#Field Content Buffer
+summary: Displays a list of field content buffers.
+name: '"Field Content Buffer"'
+uid: O:Page::System#Privacy#Field_Content_Buffer

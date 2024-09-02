@@ -1,0 +1,6223 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Security#Authentication#OAuth2">
+  <h1>Codeunit OAuth2</h1>
+
+
+<div class="font-style-italic">ID 501</div>
+<div class="font-style-italic">Namespace: System.Security.Authentication</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Contains methods supporting authentication via OAuth 2.0 protocol.</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">AcquireTokenByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the authorization token based on the authorization code via the OAuth2 v1.0 code grant flow.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the &quot;Azure portal – App registrations&quot; experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Base64-encoded certificate for the Application (client) configured in the &quot;Azure Portal - Certificates &amp; Secrets&quot;.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResourceURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application ID of the resource the application is requesting access to. This parameter can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								<p>Indicates the type of user interaction that is required.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Exit parameter containing the access token. When this parameter is empty, check the AuthCodeErr for a description of the error.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Exit parameter containing the encountered error in the authorization code grant flow. This parameter will be empty in case the token is aquired successfuly.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenByAuthorizationCode</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokenByAuthorizationCode with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokenByAuthorizationCode with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokenByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensByAuthorizationCode</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokensByAuthorizationCode with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokensByAuthorizationCode with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokensByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var IdToken: Text, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokensByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokensByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var IdToken: Text, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenAndTokenCacheByAuthorizationCode</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokenAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokenAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokenAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensAndTokenCacheByAuthorizationCode</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokensAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokensAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokensAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: Text, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenWithClientCredentials</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the access token via the Client Credentials OAuth2 v1.0 grant flow.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, var AccessToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the Azure portal – App registrations experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) secret configured in the Azure Portal - Certificates &amp; Secrets.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResourceURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application ID of the resource the application is requesting access to. This parameter can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Exit parameter containing the access token.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenWithClientCredentials</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], var AccessToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireAuthorizationCodeTokenFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the access token from cache or a refreshed token via OAuth2 v1.0 protocol.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the Azure portal – App registrations experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates &amp; Secrets.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResourceURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application ID of the resource the application is requesting access to. This parameter can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Exit parameter containing the access token.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireAuthorizationCodeTokenFromCache</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireAuthorizationCodeTokenFromCache with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireAuthorizationCodeTokenFromCache with SecretText data type for AccessToken.,24.0)]
+procedure AcquireAuthorizationCodeTokenFromCache(ClientId: Text, ClientSecret: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensFromCache</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokensFromCache with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokensFromCache with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokensFromCache(ClientId: Text, ClientSecret: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireAuthorizationCodeTokenFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokensFromCacheWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokensFromCacheWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensWithCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireTokensWithCertificate with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireTokensWithCertificate with SecretText data type for AccessToken.,24.0)]
+procedure AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireOnBehalfOfTokenByTokenCache</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireOnBehalfOfTokenByTokenCache with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireOnBehalfOfTokenByTokenCache with SecretText data type for AccessToken.,24.0)]
+procedure AcquireOnBehalfOfTokenByTokenCache(ClientId: Text, ClientSecret: Text, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: Text, var NewTokenCache: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LoginHint
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NewTokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireOnBehalfOfTokensByTokenCache</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use AcquireOnBehalfOfTokensByTokenCache with SecretText data type for AccessToken.</p>
+    	</div>
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[TryFunction]
+[Obsolete(Use AcquireOnBehalfOfTokensByTokenCache with SecretText data type for AccessToken.,24.0)]
+procedure AcquireOnBehalfOfTokensByTokenCache(ClientId: Text, ClientSecret: Text, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: Text, var IdToken: Text, var NewTokenCache: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LoginHint
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NewTokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the authorization token based on the authorization code via the OAuth2 v1.0 code grant flow.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the &quot;Azure portal – App registrations&quot; experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Base64-encoded certificate for the Application (client) configured in the &quot;Azure Portal - Certificates &amp; Secrets&quot;.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResourceURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application ID of the resource the application is requesting access to. This parameter can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								<p>Indicates the type of user interaction that is required.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Exit parameter containing the access token. When this parameter is empty, check the AuthCodeErr for a description of the error.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Exit parameter containing the encountered error in the authorization code grant flow. This parameter will be empty in case the token is aquired successfuly.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the authorization token based on the authorization code via the OAuth2 v1.0 code grant flow.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the &quot;Azure portal – App registrations&quot; experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Base64-encoded certificate for the Application (client) configured in the &quot;Azure Portal - Certificates &amp; Secrets&quot;.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Password for the certificate.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResourceURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application ID of the resource the application is requesting access to. This parameter can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								<p>Indicates the type of user interaction that is required.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Exit parameter containing the access token. When this parameter is empty, check the AuthCodeErr for a description of the error.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Exit parameter containing the encountered error in the authorization code grant flow. This parameter will be empty in case the token is aquired successfuly.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenByAuthorizationCode</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenByAuthorizationCode(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensByAuthorizationCode</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensByAuthorizationCode(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var IdToken: Text, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var IdToken: Text, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var IdToken: Text, var AuthCodeErr: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AuthCodeErr
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenAndTokenCacheByAuthorizationCode</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensAndTokenCacheByAuthorizationCode</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum &quot;Prompt Interaction&quot;, var AccessToken: SecretText, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PromptInteraction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Authentication.Prompt-Interaction.html">System.Security.Authentication.&quot;Prompt Interaction&quot;</a>                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Error
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">RequestClientCredentialsAdminPermissions</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Request the permissions from a directory admin.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure RequestClientCredentialsAdminPermissions(ClientId: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, var HasGrantConsentSucceeded: Boolean, var PermissionGrantError: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the Azure portal – App registrations experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HasGrantConsentSucceeded
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Exit parameter indicating the success of granting application permissions.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PermissionGrantError
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Exit parameter containing the encountered error in the application permissions grant. This parameter will be empty in case the flow is completed successfuly.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenWithClientCredentials</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the access token via the Client Credentials OAuth2 v1.0 grant flow.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, var AccessToken: SecretText): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the Azure portal – App registrations experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>The Application (client) secret configured in the Azure Portal - Certificates &amp; Secrets.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResourceURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application ID of the resource the application is requesting access to. This parameter can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Exit parameter containing the access token.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokenWithClientCredentials</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireAuthorizationCodeTokenFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the access token from cache or a refreshed token via OAuth2 v1.0 protocol.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: SecretText): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the Azure portal – App registrations experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates &amp; Secrets.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResourceURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application ID of the resource the application is requesting access to. This parameter can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Exit parameter containing the access token.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireAuthorizationCodeTokenFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the access token from cache or a refreshed token via OAuth2 v1.0 protocol.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: SecretText): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application (client) ID that the Azure portal – App registrations experience assigned to your app.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates &amp; Secrets.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Password for the certificate.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The identity authorization provider URL.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ResourceURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The Application ID of the resource the application is requesting access to. This parameter can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Exit parameter containing the access token.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireAuthorizationCodeTokenFromCache</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireAuthorizationCodeTokenFromCache(ClientId: Text, ClientSecret: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensFromCache</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensFromCache(ClientId: Text, ClientSecret: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireAuthorizationCodeTokenFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireAuthorizationCodeTokenFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensFromCacheWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireTokensWithCertificate</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Certificate
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertificatePassword
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								OAuthAuthorityUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireOnBehalfOfTokenByTokenCache</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireOnBehalfOfTokenByTokenCache(ClientId: Text, ClientSecret: SecretText, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: SecretText, var NewTokenCache: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LoginHint
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NewTokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">AcquireOnBehalfOfTokensByTokenCache</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">[TryFunction]
+procedure AcquireOnBehalfOfTokensByTokenCache(ClientId: Text, ClientSecret: SecretText, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: SecretText, var IdToken: Text, var NewTokenCache: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ClientId
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ClientSecret
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LoginHint
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RedirectURL
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Scopes
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								TokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								AccessToken
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IdToken
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NewTokenCache
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetLastErrorMessage</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Get the last error message that happened during acquiring of an access token.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetLastErrorMessage(): Text</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>The last error message that happened during acquiring of an access token.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetDefaultRedirectURL</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Returns the default Business Central redirectURL</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+procedure GetDefaultRedirectURL(var RedirectUrl: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RedirectUrl
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

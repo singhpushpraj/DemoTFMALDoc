@@ -1,0 +1,33 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.SignatureAlgorithm
+alId: ID 1446
+namespace: System.Security.Encryption
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies the RSA algorithm implemented by RSACryptoServiceProvider
+  name: RSA
+  uid: E:Enum::System#Security#Encryption#SignatureAlgorithm.RSA
+- summary: Specifies the DSA algorithm implemented by DSACryptoServiceProvider
+  name: DSA
+  uid: E:Enum::System#Security#Encryption#SignatureAlgorithm.DSA
+implements:
+- internalReference: O:Interface::System#Security#Encryption#SignatureAlgorithm
+  name: System.Security.Encryption.SignatureAlgorithm
+  isExternal: false
+- internalReference: O:Interface::System#Security#Encryption#Signature_Algorithm_v2
+  name: System.Security.Encryption."Signature Algorithm v2"
+  isExternal: false
+commentId: O:Enum::System#Security#Encryption#SignatureAlgorithm
+summary: Specifies the types of asymmetric algorithms.
+name: SignatureAlgorithm
+uid: O:Enum::System#Security#Encryption#SignatureAlgorithm

@@ -1,0 +1,71 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Operation Response"
+alId: ID 9050
+namespace: System.Azure.Storage
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsSuccessful(): Boolean'
+    return:
+      description: True if the operation was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the operation was successful.
+  name: IsSuccessful
+  uid: M:Codeunit::System#Azure#Storage#ABS_Operation_Response.IsSuccessful:Boolean
+- syntax:
+    content: 'procedure GetError(): Text'
+    return:
+      description: Text representation of the error that occurred during the operation.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the error (if any) of the response.
+  name: GetError
+  uid: M:Codeunit::System#Azure#Storage#ABS_Operation_Response.GetError:Text
+- syntax:
+    content: 'procedure GetNextMarker(): Text'
+    return:
+      description: Text representation of the NextMarker that is returned during the operation.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the NextMarker (if any) of the response.
+  name: GetNextMarker
+  uid: M:Codeunit::System#Azure#Storage#ABS_Operation_Response.GetNextMarker:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetHeaderValueFromResponseHeaders(HeaderName: Text): Text'
+    parameters:
+    - id: HeaderName
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: GetHeaderValueFromResponseHeaders
+  uid: M:Codeunit::System#Azure#Storage#ABS_Operation_Response.GetHeaderValueFromResponseHeaders(Text):Text
+commentId: O:Codeunit::System#Azure#Storage#ABS Operation Response
+summary: Holder object for holding for ABS client operations result.
+name: '"ABS Operation Response"'
+uid: O:Codeunit::System#Azure#Storage#ABS_Operation_Response

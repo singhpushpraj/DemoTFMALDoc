@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.BusinessChart
+namespace: System.Integration
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure Update(ChartData: JsonObject)'
+    parameters:
+    - id: ChartData
+      description: The full set of data needed for initializing the chart.
+      parameterType:
+        name: JsonObject
+        isExternal: true
+  summary: Initialize and updates the chart. This method must be called before any controls will work.
+  name: Update
+  uid: M:ControlAddIn::System#Integration#BusinessChart.Update(JsonObject)
+commentId: O:ControlAddIn::System#Integration#BusinessChart
+name: BusinessChart
+uid: O:ControlAddIn::System#Integration#BusinessChart

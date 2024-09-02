@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Custom Permission Set In Plan"
+alId: ID 9058
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity."Custom Permission Set In Plan"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Permission Set Plan Assignment
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: "9018"
+  promoted: true
+- name: Editable
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Custom Permission Set In Plan" = rimd,
+                      tabledata "Published Application" = r
+  promoted: false
+commentId: O:Page::System#Azure#Identity#Custom Permission Set In Plan
+summary: List part that holds the custom permission sets assigned to a plan.
+name: '"Custom Permission Set In Plan"'
+uid: O:Page::System#Azure#Identity#Custom_Permission_Set_In_Plan

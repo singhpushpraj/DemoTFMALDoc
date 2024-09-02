@@ -1,0 +1,74 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CAW Item Led Entries"'
+alId: ID 60344
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: AdditionalSearchTerms
+  value: inventory transactions
+  promoted: false
+- name: ApplicationArea
+  value: '#Basic,#Suite'
+  promoted: false
+- name: Caption
+  value: Item Ledger Entries
+  promoted: false
+- name: DataCaptionExpression
+  value: GetCaption()
+  promoted: false
+- name: DataCaptionFields
+  value: "2"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableView
+  value: >-
+    sorting("Entry No.")
+                          order(descending)
+  promoted: false
+- name: UsageCategory
+  value: none
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure FillWithSelected(ItemLedgerEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: ItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: FillWithSelected
+  uid: M:Page::CGI_CAW_Item_Led_Entries.FillWithSelected(__MissingSymbol__@)
+- syntax:
+    content: 'procedure ReturnRec(): Code[20]'
+    return:
+      returnType:
+        name: Code[20]
+        isExternal: true
+  summary: ReturnRec.
+  name: ReturnRec
+  uid: M:Page::CGI_CAW_Item_Led_Entries.ReturnRec:Code[20]
+- syntax:
+    content: 'procedure GetSelectionFilter(ItemLedgerEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: ItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: GetSelectionFilter
+  uid: M:Page::CGI_CAW_Item_Led_Entries.GetSelectionFilter(__MissingSymbol__@)
+commentId: O:Page::CGI CAW Item Led Entries
+name: '"CGI CAW Item Led Entries"'
+uid: O:Page::CGI_CAW_Item_Led_Entries

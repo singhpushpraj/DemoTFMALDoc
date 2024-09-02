@@ -1,0 +1,36 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plan Upgrade Tag"
+alId: ID 9058
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetAddDeviceISVEmbUpgradeTag(): Code[250]'
+    return:
+      description: The device upgrade tag.
+      returnType:
+        name: Code[250]
+        isExternal: true
+  summary: Returns the device upgrade tag.
+  name: GetAddDeviceISVEmbUpgradeTag
+  uid: M:Codeunit::System#Azure#Identity#Plan_Upgrade_Tag.GetAddDeviceISVEmbUpgradeTag:Code[250]
+commentId: O:Codeunit::System#Azure#Identity#Plan Upgrade Tag
+summary: Exposes functionality to retrieve the device upgrade tag.
+name: '"Plan Upgrade Tag"'
+uid: O:Codeunit::System#Azure#Identity#Plan_Upgrade_Tag

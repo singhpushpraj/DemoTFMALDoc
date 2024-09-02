@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Lookup"
+alId: ID 9843
+namespace: System.Security.User
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataCaptionExpression
+  value: "''"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableView
+  value: sorting("User Name")
+  promoted: false
+- name: Permissions
+  value: tabledata User = r
+  promoted: false
+commentId: O:Page::System#Security#User#User Lookup
+summary: Lookup page for users.
+name: '"User Lookup"'
+uid: O:Page::System#Security#User#User_Lookup

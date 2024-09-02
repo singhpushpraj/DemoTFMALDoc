@@ -1,0 +1,137 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Chat Completion Params"
+alId: ID 7761
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetTemperature(): Decimal'
+    return:
+      description: The sampling temperature being used.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
+  name: GetTemperature
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.GetTemperature:Decimal
+- syntax:
+    content: 'procedure GetMaxTokens(): Integer'
+    return:
+      description: The maximum number of tokens allowed for the generated answer.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the maximum number of tokens allowed for the generated answer.
+  remarks: 0 or less uses the API default.
+  name: GetMaxTokens
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.GetMaxTokens:Integer
+- syntax:
+    content: 'procedure GetMaxHistory(): Integer'
+    return:
+      description: The maximum number of messages to send.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the maximum number of messages to send back as the message history.
+  name: GetMaxHistory
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.GetMaxHistory:Integer
+- syntax:
+    content: 'procedure GetPresencePenalty(): Decimal'
+    return:
+      description: The presence penalty value.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Gets the presence penalty value.
+  name: GetPresencePenalty
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.GetPresencePenalty:Decimal
+- syntax:
+    content: 'procedure GetFrequencyPenalty(): Decimal'
+    return:
+      description: The frequency penalty value.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Gets the frequency penalty value.
+  name: GetFrequencyPenalty
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.GetFrequencyPenalty:Decimal
+- syntax:
+    content: 'procedure SetTemperature(NewTemperature: Decimal)'
+    parameters:
+    - id: NewTemperature
+      description: The new sampling temperature to use.
+      parameterType:
+        name: Decimal
+        isExternal: true
+  summary: Sets the sampling temperature to use, between 0 and 2. A higher temperature increases the likelihood that the next most probable token will not be selected. When requesting structured data, set the temperature to 0. For human sounding speech, 0.7 is a typical value
+  name: SetTemperature
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.SetTemperature(Decimal)
+- syntax:
+    content: 'procedure SetMaxTokens(NewMaxTokens: Integer)'
+    parameters:
+    - id: NewMaxTokens
+      description: The new maximum number of tokens allowed for the generated answer.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the maximum number of tokens allowed for the generated answer. The maximum number of tokens allowed for the generated answer. By default, the number of tokens the model can return will be (4096 - prompt tokens).
+  remarks: If the prompt's tokens + max_tokens exceeds the model's context length, the generate request will return an error.
+  name: SetMaxTokens
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.SetMaxTokens(Integer)
+- syntax:
+    content: 'procedure SetMaxHistory(NewMaxHistory: Integer)'
+    parameters:
+    - id: NewMaxHistory
+      description: The new maximum number of messages to send.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the maximum number of messages to send back as the message history.
+  remarks: The default is 10 messages including the primary System Message.
+  name: SetMaxHistory
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.SetMaxHistory(Integer)
+- syntax:
+    content: 'procedure SetPresencePenalty(NewPresencePenalty: Decimal)'
+    parameters:
+    - id: NewPresencePenalty
+      description: The new presence penalty value.
+      parameterType:
+        name: Decimal
+        isExternal: true
+  summary: Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+  name: SetPresencePenalty
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.SetPresencePenalty(Decimal)
+- syntax:
+    content: 'procedure SetFrequencyPenalty(NewFrequencyPenalty: Decimal)'
+    parameters:
+    - id: NewFrequencyPenalty
+      description: The new frequency penalty value.
+      parameterType:
+        name: Decimal
+        isExternal: true
+  summary: Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+  name: SetFrequencyPenalty
+  uid: M:Codeunit::System#AI#AOAI_Chat_Completion_Params.SetFrequencyPenalty(Decimal)
+commentId: O:Codeunit::System#AI#AOAI Chat Completion Params
+summary: >-
+  Represents the Chat Completion parameters used by the API.
+
+  See more details at https://aka.ms/AAlrz36.
+name: '"AOAI Chat Completion Params"'
+uid: O:Codeunit::System#AI#AOAI_Chat_Completion_Params

@@ -1,0 +1,55 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plan Configuration List"
+alId: ID 9061
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity."Plan Configuration"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: License Configuration
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "9017"
+  promoted: true
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: Permissions
+  value: tabledata "Plan Configuration" = rimd
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: ui-how-users-permissions#licensespermissions
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: AboutTitle
+  value: About license configuration
+  promoted: false
+- name: AboutText
+  value: License configuration allows you to set up the default permissions that new users will get when accessing the system.
+  promoted: false
+commentId: O:Page::System#Azure#Identity#Plan Configuration List
+summary: List page to show all available plan configurations.
+name: '"Plan Configuration List"'
+uid: O:Page::System#Azure#Identity#Plan_Configuration_List

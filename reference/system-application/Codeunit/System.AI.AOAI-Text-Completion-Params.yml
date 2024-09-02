@@ -1,0 +1,157 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Text Completion Params"
+alId: ID 7765
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetMaxTokens(): Integer'
+    return:
+      description: The maximum number of tokens to generate in the completion.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Get the maximum number of tokens to generate in the completion.
+  remarks: 0 or less uses the API default.
+  name: GetMaxTokens
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.GetMaxTokens:Integer
+- syntax:
+    content: 'procedure GetTemperature(): Decimal'
+    return:
+      description: The sampling temperature to use.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Get the sampling temperature to use.
+  name: GetTemperature
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.GetTemperature:Decimal
+- syntax:
+    content: 'procedure GetTopP(): Decimal'
+    return:
+      description: The nucleus sampling to use.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Get the nucleus sampling to use.
+  name: GetTopP
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.GetTopP:Decimal
+- syntax:
+    content: 'procedure GetSuffix(): Text'
+    return:
+      description: The suffix that comes after a completion of inserted text.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the suffix that comes after a completion of inserted text.
+  name: GetSuffix
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.GetSuffix:Text
+- syntax:
+    content: 'procedure GetPresencePenalty(): Decimal'
+    return:
+      description: The presence penalty to use.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Get the presence penalty to use.
+  name: GetPresencePenalty
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.GetPresencePenalty:Decimal
+- syntax:
+    content: 'procedure GetFrequencyPenalty(): Decimal'
+    return:
+      description: The frequency penalty to use.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Get the frequency penalty to use.
+  name: GetFrequencyPenalty
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.GetFrequencyPenalty:Decimal
+- syntax:
+    content: 'procedure SetMaxTokens(NewMaxTokens: Integer)'
+    parameters:
+    - id: NewMaxTokens
+      description: The new maximum number of tokens to generate in the completion.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: The maximum number of tokens to generate in the completion. The token count of your prompt plus max_tokens can't exceed the model's context length. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
+  remarks: If the prompt's tokens + max_tokens exceeds the model's context length, the generate request will return an error.
+  name: SetMaxTokens
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.SetMaxTokens(Integer)
+- syntax:
+    content: 'procedure SetTemperature(NewTemperature: Decimal)'
+    parameters:
+    - id: NewTemperature
+      description: The new sampling temperature to use.
+      parameterType:
+        name: Decimal
+        isExternal: true
+  summary: Sets the sampling temperature to use, between 0 and 2. A higher temperature increases the likelihood that the next most probable token will not be selected. When requesting structured data, set the temperature to 0. For human sounding speech, 0.7 is a typical value
+  name: SetTemperature
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.SetTemperature(Decimal)
+- syntax:
+    content: 'procedure SetTopP(NewTopP: Decimal)'
+    parameters:
+    - id: NewTopP
+      description: New nucleus sampling to use
+      parameterType:
+        name: Decimal
+        isExternal: true
+  summary: An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or temperature but not both.
+  name: SetTopP
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.SetTopP(Decimal)
+- syntax:
+    content: 'procedure SetSuffix(NewSuffix: Text)'
+    parameters:
+    - id: NewSuffix
+      description: The new suffix that comes after a completion of inserted text.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: The suffix that comes after a completion of inserted text.
+  name: SetSuffix
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.SetSuffix(Text)
+- syntax:
+    content: 'procedure SetPresencePenalty(NewPresencePenalty: Decimal)'
+    parameters:
+    - id: NewPresencePenalty
+      description: The new presence penalty to use.
+      parameterType:
+        name: Decimal
+        isExternal: true
+  summary: Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+  name: SetPresencePenalty
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.SetPresencePenalty(Decimal)
+- syntax:
+    content: 'procedure SetFrequencyPenalty(NewFrequencyPenalty: Decimal)'
+    parameters:
+    - id: NewFrequencyPenalty
+      description: The new frequency penalty to use.
+      parameterType:
+        name: Decimal
+        isExternal: true
+  summary: Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
+  name: SetFrequencyPenalty
+  uid: M:Codeunit::System#AI#AOAI_Text_Completion_Params.SetFrequencyPenalty(Decimal)
+commentId: O:Codeunit::System#AI#AOAI Text Completion Params
+summary: >-
+  Represents the Completion parameters used by the API.
+
+  See more details at https://aka.ms/AAlsi39.
+name: '"AOAI Text Completion Params"'
+uid: O:Codeunit::System#AI#AOAI_Text_Completion_Params

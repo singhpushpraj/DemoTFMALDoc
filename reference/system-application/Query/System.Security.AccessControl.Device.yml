@@ -1,0 +1,53 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl.Device
+alId: ID 776
+namespace: System.Security.AccessControl
+baseKind: Query
+kind: Query
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Query](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-query-object)'
+objectProperties:
+- name: Caption
+  value: Device
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: tabledata Device = r
+  promoted: false
+queryColumns:
+- dataItem: Device
+  columnType:
+    name: None
+    isExternal: true
+  name: MAC_Address
+  uid: C:Query::System#Security#AccessControl#Device.Device.MAC_Address
+- dataItem: Device
+  columnType:
+    name: None
+    isExternal: true
+  name: Name
+  uid: C:Query::System#Security#AccessControl#Device.Device.Name
+- dataItem: Device
+  columnType:
+    name: None
+    isExternal: true
+  name: Device_Type
+  uid: C:Query::System#Security#AccessControl#Device.Device.Device_Type
+- dataItem: Device
+  columnType:
+    name: None
+    isExternal: true
+  name: Enabled
+  uid: C:Query::System#Security#AccessControl#Device.Device.Enabled
+commentId: O:Query::System#Security#AccessControl#Device
+summary: Displays a list of devices.
+name: Device
+uid: O:Query::System#Security#AccessControl#Device

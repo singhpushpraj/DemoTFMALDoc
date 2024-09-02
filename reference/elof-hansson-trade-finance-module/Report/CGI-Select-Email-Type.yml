@@ -1,0 +1,53 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Select Email Type"'
+alId: ID 70301
+baseKind: Report
+kind: Report
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Report](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-report-object)'
+objectProperties:
+- name: Caption
+  value: Send Email
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: ShowPrintStatus
+  value: "False"
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+- name: Caption
+  value: Send Email
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: ShowPrintStatus
+  value: "False"
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetEmailType(): Code[20]'
+    return:
+      description: ""
+      returnType:
+        name: Code[20]
+        isExternal: true
+  summary: function to GetEmailType
+  name: GetEmailType
+  uid: M:Report::CGI_Select_Email_Type.GetEmailType:Code[20]
+commentId: O:Report::CGI Select Email Type
+summary: >-
+  Report to select CGI Select Email Type 
+
+  it display several options to Email Type to be send
+name: '"CGI Select Email Type"'
+uid: O:Report::CGI_Select_Email_Type

@@ -1,0 +1,395 @@
+﻿items:
+- name: Overview
+  uid: N:Module::Elof_Hansson_Business_Model
+- name: Reference
+  items:
+  - name: Tables
+    items:
+    - name: CGI Business Terms
+      uid: O:Table::CGI_Business_Terms
+    - name: CGI Calculation Header
+      uid: O:Table::CGI_Calculation_Header
+    - name: CGI Calculation Line
+      uid: O:Table::CGI_Calculation_Line
+    - name: CGI Calculation Processing Log
+      uid: O:Table::CGI_Calculation_Processing_Log
+    - name: CGI Calculation Setup
+      uid: O:Table::CGI_Calculation_Setup
+    - name: CGI Division
+      uid: O:Table::CGI_Division
+    - name: CGI Division Details
+      uid: O:Table::CGI_Division_Details
+    - name: CGI Extended Precalculations
+      uid: O:Table::CGI_Extended_Precalculations
+    - name: CGI Other Costs and Revenues
+      uid: O:Table::CGI_Other_Costs_and_Revenues
+    - name: CGI Post Calc. Header Archive
+      uid: O:Table::CGI_Post_Calc#_Header_Archive
+    - name: CGI Post Calc. Line Archive
+      uid: O:Table::CGI_Post_Calc#_Line_Archive
+    - name: CGI Post Calculation Control
+      uid: O:Table::CGI_Post_Calculation_Control
+    - name: CGI Post Calculation Header
+      uid: O:Table::CGI_Post_Calculation_Header
+    - name: CGI Post Calculation Line
+      uid: O:Table::CGI_Post_Calculation_Line
+    - name: CGI Printed Sales Documents
+      uid: O:Table::CGI_Printed_Sales_Documents
+    - name: CGI Stockkeeping Cost
+      uid: O:Table::CGI_Stockkeeping_Cost
+    - name: CGI Sub Account
+      uid: O:Table::CGI_Sub_Account
+  - name: Codeunits
+    items:
+    - name: CGI CA Approvals Mgmt
+      uid: O:Codeunit::CGI_CA_Approvals_Mgmt
+    - name: CGI CA Page Functions
+      uid: O:Codeunit::CGI_CA_Page_Functions
+    - name: CGI CA Response Handling
+      uid: O:Codeunit::CGI_CA_Response_Handling
+    - name: CGI CA Subscriber Management
+      uid: O:Codeunit::CGI_CA_Subscriber_Management
+    - name: CGI CA Workflow Event Handling
+      uid: O:Codeunit::CGI_CA_Workflow_Event_Handling
+    - name: CGI CA Workflow Setup
+      uid: O:Codeunit::CGI_CA_Workflow_Setup
+    - name: CGI Calc Reserv Subscriber Mgt
+      uid: O:Codeunit::CGI_Calc_Reserv_Subscriber_Mgt
+    - name: CGI Calculation Line-Reserve
+      uid: O:Codeunit::CGI_Calculation_Line-Reserve
+    - name: CGI Calculation Management
+      uid: O:Codeunit::CGI_Calculation_Management
+    - name: CGI CAP Page Functions
+      uid: O:Codeunit::CGI_CAP_Page_Functions
+    - name: CGI Custom Report Mgt. PDF WOR
+      uid: O:Codeunit::CGI_Custom_Report_Mgt#_PDF_WOR
+    - name: CGI Try/Catch Calculation Mgt.
+      uid: O:Codeunit::CGI_Try/Catch_Calculation_Mgt#
+  - name: Pages
+    items:
+    - name: CGI Approvals Factbox
+      uid: O:Page::CGI_Approvals_Factbox
+    - name: CGI Business Terms List
+      uid: O:Page::CGI_Business_Terms_List
+    - name: CGI CA General Factbox
+      uid: O:Page::CGI_CA_General_Factbox
+    - name: CGI Calc. Item Ledg. Ent. Line
+      uid: O:Page::CGI_Calc#_Item_Ledg#_Ent#_Line
+    - name: CGI Calc. Item Lines Sales 2
+      uid: O:Page::CGI_Calc#_Item_Lines_Sales_2
+    - name: CGI Calc. Reservation Lines
+      uid: O:Page::CGI_Calc#_Reservation_Lines
+    - name: CGI Calcul Item Lines Sal
+      uid: O:Page::CGI_Calcul_Item_Lines_Sal
+    - name: CGI Calculation - Navigate
+      uid: O:Page::CGI_Calculation_-_Navigate
+    - name: CGI Calculation Card
+      uid: O:Page::CGI_Calculation_Card
+    - name: CGI Calculation Comments
+      uid: O:Page::CGI_Calculation_Comments
+    - name: CGI Calculation Cust. Subform
+      uid: O:Page::CGI_Calculation_Cust#_Subform
+    - name: CGI Calculation Item Lines Per
+      uid: O:Page::CGI_Calculation_Item_Lines_Per
+    - name: CGI Calculation Item Lines Sal
+      uid: O:Page::CGI_Calculation_Item_Lines_Sal
+    - name: CGI Calculation ItemLines Purc
+      uid: O:Page::CGI_Calculation_ItemLines_Purc
+    - name: CGI Calculation Lines Lookup
+      uid: O:Page::CGI_Calculation_Lines_Lookup
+    - name: CGI Calculation List
+      uid: O:Page::CGI_Calculation_List
+    - name: CGI Calculation per salesperso
+      uid: O:Page::CGI_Calculation_per_salesperso
+    - name: CGI Calculation Setup
+      uid: O:Page::CGI_Calculation_Setup
+    - name: CGI Calculation Statistics
+      uid: O:Page::CGI_Calculation_Statistics
+    - name: Cgi CAP Cost Rev. Margin Det.
+      uid: O:Page::Cgi_CAP_Cost_Rev#_Margin_Det#
+    - name: CGI CAW Item Led Entries
+      uid: O:Page::CGI_CAW_Item_Led_Entries
+    - name: CGI Chart of Accounts Overview
+      uid: O:Page::CGI_Chart_of_Accounts_Overview
+    - name: CGI Confirm Save Document
+      uid: O:Page::CGI_Confirm_Save_Document
+    - name: Cgi Cost Rev. Margin Details
+      uid: O:Page::Cgi_Cost_Rev#_Margin_Details
+    - name: CGI Division Details
+      uid: O:Page::CGI_Division_Details
+    - name: CGI Division List
+      uid: O:Page::CGI_Division_List
+    - name: CGI Finished Calculation Card
+      uid: O:Page::CGI_Finished_Calculation_Card
+    - name: CGI Finished Calculation Lines
+      uid: O:Page::CGI_Finished_Calculation_Lines
+    - name: CGI Finished Calculations List
+      uid: O:Page::CGI_Finished_Calculations_List
+    - name: CGI Item List Calculation
+      uid: O:Page::CGI_Item_List_Calculation
+    - name: CGI Other Costs and Rev. List
+      uid: O:Page::CGI_Other_Costs_and_Rev#_List
+    - name: CGI Post Calculation Card
+      uid: O:Page::CGI_Post_Calculation_Card
+    - name: CGI Post Calculation Control
+      uid: O:Page::CGI_Post_Calculation_Control
+    - name: CGI Post Calculation Lines
+      uid: O:Page::CGI_Post_Calculation_Lines
+    - name: CGI Post Calculation List
+      uid: O:Page::CGI_Post_Calculation_List
+    - name: CGI Printed Sales Doc. List
+      uid: O:Page::CGI_Printed_Sales_Doc#_List
+    - name: CGI Purchase Calculation Card
+      uid: O:Page::CGI_Purchase_Calculation_Card
+    - name: CGI Purchase Calculation List
+      uid: O:Page::CGI_Purchase_Calculation_List
+    - name: CGI Report Sel. Print
+      uid: O:Page::CGI_Report_Sel#_Print
+    - name: CGI Sales Calculation
+      uid: O:Page::CGI_Sales_Calculation
+    - name: CGI SalesCalc. WarehouseList
+      uid: O:Page::CGI_SalesCalc#_WarehouseList
+    - name: CGI Sub Account List
+      uid: O:Page::CGI_Sub_Account_List
+  - name: Reports
+    items:
+    - name: CGI AfterCalculation
+      uid: O:Report::CGI_AfterCalculation
+    - name: CGI Calculation
+      uid: O:Report::CGI_Calculation
+    - name: CGI Copy comments to calculati
+      uid: O:Report::CGI_Copy_comments_to_calculati
+    - name: CGI Int. Interest Calculation
+      uid: O:Report::CGI_Int#_Interest_Calculation
+    - name: CGI Item per Vendor
+      uid: O:Report::CGI_Item_per_Vendor
+    - name: CGI ProfitPerSalespersonCalc
+      uid: O:Report::CGI_ProfitPerSalespersonCalc
+    - name: CGI Update Post Calc Details
+      uid: O:Report::CGI_Update_Post_Calc_Details
+    - name: CGI UpdateCalcReadyforClosing
+      uid: O:Report::CGI_UpdateCalcReadyforClosing
+    - name: CGI UpdateCalcStatus
+      uid: O:Report::CGI_UpdateCalcStatus
+  - name: PageExtensions
+    items:
+    - name: CGI CAW Avail Purchase Lines
+      uid: O:PageExtension::CGI_CAW_Avail_Purchase_Lines
+    - name: CGI CAW Reservation
+      uid: O:PageExtension::CGI_CAW_Reservation
+    - name: CGI Country Region
+      uid: O:PageExtension::CGI_Country_Region
+    - name: CGI Custom Report Layouts
+      uid: O:PageExtension::CGI_Custom_Report_Layouts
+    - name: CGI Customer Card
+      uid: O:PageExtension::CGI_Customer_Card
+    - name: CGI Customer Ledger Entries
+      uid: O:PageExtension::CGI_Customer_Ledger_Entries
+    - name: CGI Edit Dimension Set Entries
+      uid: O:PageExtension::CGI_Edit_Dimension_Set_Entries
+    - name: CGI Item Card
+      uid: O:PageExtension::CGI_Item_Card
+    - name: CGI Item Journal
+      uid: O:PageExtension::CGI_Item_Journal
+    - name: CGI Item Ledger Entries
+      uid: O:PageExtension::CGI_Item_Ledger_Entries
+    - name: CGI Item List
+      uid: O:PageExtension::CGI_Item_List
+    - name: CGI Item Lookup
+      uid: O:PageExtension::CGI_Item_Lookup
+    - name: CGI Posted Purch. Inv. Subform
+      uid: O:PageExtension::CGI_Posted_Purch#_Inv#_Subform
+    - name: CGI Posted Purchase  Cr. Memo
+      uid: O:PageExtension::CGI_Posted_Purchase__Cr#_Memo
+    - name: CGI Posted Purchase Invoice
+      uid: O:PageExtension::CGI_Posted_Purchase_Invoice
+    - name: CGI Posted Purchase Receipt
+      uid: O:PageExtension::CGI_Posted_Purchase_Receipt
+    - name: CGI Posted Sales Credit Memo
+      uid: O:PageExtension::CGI_Posted_Sales_Credit_Memo
+    - name: CGI Posted Sales CrMo Subform
+      uid: O:PageExtension::CGI_Posted_Sales_CrMo_Subform
+    - name: CGI Posted Sales Inv. Subform
+      uid: O:PageExtension::CGI_Posted_Sales_Inv#_Subform
+    - name: CGI Posted Sales Invoice
+      uid: O:PageExtension::CGI_Posted_Sales_Invoice
+    - name: CGI Posted Sales Shipment
+      uid: O:PageExtension::CGI_Posted_Sales_Shipment
+    - name: CGI Posted Sales Shpt. Subform
+      uid: O:PageExtension::CGI_Posted_Sales_Shpt#_Subform
+    - name: CGI Ptd Purch. Cr. Memo Subfrm
+      uid: O:PageExtension::CGI_Ptd_Purch#_Cr#_Memo_Subfrm
+    - name: CGI Ptd. Purch. Rpct. Subform
+      uid: O:PageExtension::CGI_Ptd#_Purch#_Rpct#_Subform
+    - name: CGI Purch. Cr. Memo Subform
+      uid: O:PageExtension::CGI_Purch#_Cr#_Memo_Subform
+    - name: CGI Purch. Invoice Subform
+      uid: O:PageExtension::CGI_Purch#_Invoice_Subform
+    - name: CGI Purch. Order Arch. Subform
+      uid: O:PageExtension::CGI_Purch#_Order_Arch#_Subform
+    - name: CGI Purchase Credit Memo
+      uid: O:PageExtension::CGI_Purchase_Credit_Memo
+    - name: CGI Purchase Invoice
+      uid: O:PageExtension::CGI_Purchase_Invoice
+    - name: CGI Purchase Order
+      uid: O:PageExtension::CGI_Purchase_Order
+    - name: CGI Purchase Order Archive
+      uid: O:PageExtension::CGI_Purchase_Order_Archive
+    - name: CGI Purchase Order Subform
+      uid: O:PageExtension::CGI_Purchase_Order_Subform
+    - name: CGI Sales Cr. Memo Subform
+      uid: O:PageExtension::CGI_Sales_Cr#_Memo_Subform
+    - name: CGI Sales Credit Memo
+      uid: O:PageExtension::CGI_Sales_Credit_Memo
+    - name: CGI Sales Invoice
+      uid: O:PageExtension::CGI_Sales_Invoice
+    - name: CGI Sales Invoice Subform
+      uid: O:PageExtension::CGI_Sales_Invoice_Subform
+    - name: CGI Sales Order
+      uid: O:PageExtension::CGI_Sales_Order
+    - name: CGI Sales Order Arch. Subform
+      uid: O:PageExtension::CGI_Sales_Order_Arch#_Subform
+    - name: CGI Sales Order Archive
+      uid: O:PageExtension::CGI_Sales_Order_Archive
+    - name: CGI Sales Order List
+      uid: O:PageExtension::CGI_Sales_Order_List
+    - name: CGI Sales Order Subform
+      uid: O:PageExtension::CGI_Sales_Order_Subform
+    - name: CGI Salesperson/Purchaser Card
+      uid: O:PageExtension::CGI_Salesperson/Purchaser_Card
+    - name: CGI Standard Text Codes
+      uid: O:PageExtension::CGI_Standard_Text_Codes
+    - name: CGI User Setup
+      uid: O:PageExtension::CGI_User_Setup
+    - name: CGI Vendor Card
+      uid: O:PageExtension::CGI_Vendor_Card
+    - name: CGI Vendor Ledger Entries
+      uid: O:PageExtension::CGI_Vendor_Ledger_Entries
+  - name: TableExtensions
+    items:
+    - name: CGI Country Region
+      uid: O:TableExtension::CGI_Country_Region
+    - name: CGI Cust. Ledger Entry
+      uid: O:TableExtension::CGI_Cust#_Ledger_Entry
+    - name: CGI Custom Report Layout
+      uid: O:TableExtension::CGI_Custom_Report_Layout
+    - name: CGI Customer
+      uid: O:TableExtension::CGI_Customer
+    - name: CGI Dimension Value
+      uid: O:TableExtension::CGI_Dimension_Value
+    - name: CGI G/L Entry
+      uid: O:TableExtension::CGI_G/L_Entry
+    - name: CGI Gen. Journal Line
+      uid: O:TableExtension::CGI_Gen#_Journal_Line
+    - name: CGI Item
+      uid: O:TableExtension::CGI_Item
+    - name: CGI Item Journal Line
+      uid: O:TableExtension::CGI_Item_Journal_Line
+    - name: CGI Item Ledger Entry
+      uid: O:TableExtension::CGI_Item_Ledger_Entry
+    - name: CGI Payment Terms
+      uid: O:TableExtension::CGI_Payment_Terms
+    - name: CGI PEB Temp Purch. Doc Line
+      uid: O:TableExtension::CGI_PEB_Temp_Purch#_Doc_Line
+    - name: CGI PEB Temp Sales Doc Line
+      uid: O:TableExtension::CGI_PEB_Temp_Sales_Doc_Line
+    - name: CGI Purch. Cr. Memo Hdr.
+      uid: O:TableExtension::CGI_Purch#_Cr#_Memo_Hdr#
+    - name: CGI Purch. Cr. Memo Line
+      uid: O:TableExtension::CGI_Purch#_Cr#_Memo_Line
+    - name: CGI Purch. Inv. Header
+      uid: O:TableExtension::CGI_Purch#_Inv#_Header
+    - name: CGI Purch. Inv. Line
+      uid: O:TableExtension::CGI_Purch#_Inv#_Line
+    - name: CGI Purch. Rcpt. Header
+      uid: O:TableExtension::CGI_Purch#_Rcpt#_Header
+    - name: CGI Purch. Rcpt. Line
+      uid: O:TableExtension::CGI_Purch#_Rcpt#_Line
+    - name: CGI Purchase Header
+      uid: O:TableExtension::CGI_Purchase_Header
+    - name: CGI Purchase Header Archive
+      uid: O:TableExtension::CGI_Purchase_Header_Archive
+    - name: CGI Purchase Line
+      uid: O:TableExtension::CGI_Purchase_Line
+    - name: CGI Purchase Line Archive
+      uid: O:TableExtension::CGI_Purchase_Line_Archive
+    - name: CGI Sales Cr. Memo Header
+      uid: O:TableExtension::CGI_Sales_Cr#_Memo_Header
+    - name: CGI Sales Cr.Memo Line
+      uid: O:TableExtension::CGI_Sales_Cr#Memo_Line
+    - name: CGI Sales Header
+      uid: O:TableExtension::CGI_Sales_Header
+    - name: CGI Sales Header Archive
+      uid: O:TableExtension::CGI_Sales_Header_Archive
+    - name: CGI Sales Invoice Header
+      uid: O:TableExtension::CGI_Sales_Invoice_Header
+    - name: CGI Sales Invoice Line
+      uid: O:TableExtension::CGI_Sales_Invoice_Line
+    - name: CGI Sales Line
+      uid: O:TableExtension::CGI_Sales_Line
+    - name: CGI Sales Line Archive
+      uid: O:TableExtension::CGI_Sales_Line_Archive
+    - name: CGI Sales Shipment Header
+      uid: O:TableExtension::CGI_Sales_Shipment_Header
+    - name: CGI Sales Shipment Line
+      uid: O:TableExtension::CGI_Sales_Shipment_Line
+    - name: CGI Salesperson/Purchaser
+      uid: O:TableExtension::CGI_Salesperson/Purchaser
+    - name: CGI Standard Text
+      uid: O:TableExtension::CGI_Standard_Text
+    - name: CGI User Setup
+      uid: O:TableExtension::CGI_User_Setup
+    - name: CGI VAT Posting Setup
+      uid: O:TableExtension::CGI_VAT_Posting_Setup
+    - name: CGI Vendor
+      uid: O:TableExtension::CGI_Vendor
+    - name: CGI Vendor Ledger Entry
+      uid: O:TableExtension::CGI_Vendor_Ledger_Entry
+  - name: Enums
+    items:
+    - name: CGI CA CalcToQuoteCheck
+      uid: O:Enum::CGI_CA_CalcToQuoteCheck
+    - name: CGI CA CalculateCreditLimitOn
+      uid: O:Enum::CGI_CA_CalculateCreditLimitOn
+    - name: CGI CA Calculation Status
+      uid: O:Enum::CGI_CA_Calculation_Status
+    - name: CGI CA CalculationLineItemType
+      uid: O:Enum::CGI_CA_CalculationLineItemType
+    - name: CGI CA CalculationLineType
+      uid: O:Enum::CGI_CA_CalculationLineType
+    - name: CGI CA CostRevenueType
+      uid: O:Enum::CGI_CA_CostRevenueType
+    - name: CGI CA DefaultPercentBasedOn
+      uid: O:Enum::CGI_CA_DefaultPercentBasedOn
+    - name: CGI CA OtherCostsAndRevenuType
+      uid: O:Enum::CGI_CA_OtherCostsAndRevenuType
+    - name: CGI CA PayableBy
+      uid: O:Enum::CGI_CA_PayableBy
+    - name: CGI CA UseDueDateFrom
+      uid: O:Enum::CGI_CA_UseDueDateFrom
+    - name: CGI Calc. Approval Status
+      uid: O:Enum::CGI_Calc#_Approval_Status
+    - name: CGI Calculation Type
+      uid: O:Enum::CGI_Calculation_Type
+    - name: CGI Comment Status
+      uid: O:Enum::CGI_Comment_Status
+    - name: CGI CustomerCountryLimitType
+      uid: O:Enum::CGI_CustomerCountryLimitType
+    - name: CGI Default Posting Date
+      uid: O:Enum::CGI_Default_Posting_Date
+    - name: CGI Post Calculation Type
+      uid: O:Enum::CGI_Post_Calculation_Type
+    - name: CGI VendorBankCodeType
+      uid: O:Enum::CGI_VendorBankCodeType
+    - name: CGIPostCalculationControlType
+      uid: O:Enum::CGIPostCalculationControlType
+  - name: EnumExtensions
+    items:
+    - name: CGI Comment Line Table Name
+      uid: O:EnumExtension::CGI_Comment_Line_Table_Name
+  - name: PermissionSets
+    items:
+    - name: CGI CA Admin
+      uid: O:PermissionSet::CGI_CA_Admin
+    - name: CGI CA User
+      uid: O:PermissionSet::CGI_CA_User

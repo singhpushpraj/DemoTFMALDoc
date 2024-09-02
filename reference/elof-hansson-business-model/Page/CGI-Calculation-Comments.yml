@@ -1,0 +1,47 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Comments"'
+alId: ID 60329
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: AutoSplitKey
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Calculation Comments
+  promoted: false
+- name: DataCaptionFields
+  value: "2"
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: MultipleNewLines
+  value: "True"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+methods:
+- syntax:
+    content: procedure _CopySelectedCommentLines()
+  name: _CopySelectedCommentLines
+  uid: M:Page::CGI_Calculation_Comments._CopySelectedCommentLines
+- syntax:
+    content: procedure CopySelectedCommentLines()
+  name: CopySelectedCommentLines
+  uid: M:Page::CGI_Calculation_Comments.CopySelectedCommentLines
+commentId: O:Page::CGI Calculation Comments
+name: '"CGI Calculation Comments"'
+uid: O:Page::CGI_Calculation_Comments

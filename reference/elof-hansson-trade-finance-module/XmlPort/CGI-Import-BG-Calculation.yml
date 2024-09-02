@@ -1,0 +1,58 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Import BG Calculation"'
+alId: ID 70308
+baseKind: XmlPort
+kind: XmlPort
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Import BG Calculation
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+- name: Caption
+  value: Import BG Calculation
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: TextEncoding
+  value: WINDOWS
+  promoted: false
+commentId: O:XmlPort::CGI Import BG Calculation
+summary: >-
+  Import BG Calculation from csv file
+
+  it checks existing record based on "LCBG GUID" in bank guarantee
+
+  if no records found in bank guarantee, it will create the records in SQL Data Buffer
+
+  with 'Import Type = Calculation'
+name: '"CGI Import BG Calculation"'
+uid: O:XmlPort::CGI_Import_BG_Calculation

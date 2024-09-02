@@ -1,0 +1,36 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Assisted Setup Upgrade"
+alId: ID 1807
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Subtype
+  value: Upgrade
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: tabledata "Guided Experience Item" = r
+  promoted: false
+methods:
+- syntax:
+    content: procedure DeleteAssistedSetup()
+  name: DeleteAssistedSetup
+  uid: M:Codeunit::System#Environment#Configuration#Assisted_Setup_Upgrade.DeleteAssistedSetup
+- syntax:
+    content: procedure UpgradeToGuidedExperienceItem()
+  name: UpgradeToGuidedExperienceItem
+  uid: M:Codeunit::System#Environment#Configuration#Assisted_Setup_Upgrade.UpgradeToGuidedExperienceItem
+commentId: O:Codeunit::System#Environment#Configuration#Assisted Setup Upgrade
+name: '"Assisted Setup Upgrade"'
+uid: O:Codeunit::System#Environment#Configuration#Assisted_Setup_Upgrade

@@ -1,0 +1,62 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Printer Paper Source Kind"
+alId: ID 2617
+namespace: System.Device
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Automatically fed paper.
+  name: AutomaticFeed
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.AutomaticFeed
+- summary: A paper cassette.
+  name: Cassette
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.Cassette
+- summary: A printer-specific paper source.
+  name: Custom
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.Custom
+- summary: An envelope.
+  name: Envelope
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.Envelope
+- summary: The default input bin of printer.
+  name: FormSource
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.FormSource
+- summary: The large-capacity bin of printer.
+  name: LargeCapacity
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.LargeCapacity
+- summary: Large-format paper.
+  name: LargeFormat
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.LargeFormat
+- summary: The lower bin of a printer.
+  name: Lower
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.Lower
+- summary: Manually fed paper.
+  name: Manual
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.Manual
+- summary: Manually fed envelope.
+  name: ManualFeed
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.ManualFeed
+- summary: The middle bin of a printer.
+  name: Middle
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.Middle
+- summary: Small-format paper.
+  name: SmallFormat
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.SmallFormat
+- summary: A tractor feed.
+  name: TractorFeed
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.TractorFeed
+- summary: The upper bin of a printer.
+  name: Upper
+  uid: E:Enum::System#Device#Printer_Paper_Source_Kind.Upper
+commentId: O:Enum::System#Device#Printer Paper Source Kind
+summary: Standard paper sources.
+name: '"Printer Paper Source Kind"'
+uid: O:Enum::System#Device#Printer_Paper_Source_Kind

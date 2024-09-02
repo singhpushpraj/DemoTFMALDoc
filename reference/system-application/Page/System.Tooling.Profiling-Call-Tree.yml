@@ -1,0 +1,51 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Profiling Call Tree"
+alId: ID 1921
+namespace: System.Tooling
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Tooling#Profiling_Node
+  name: System.Tooling."Profiling Node"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Call Tree
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "1921"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Tooling#Profiling_Node
+    name: System.Tooling."Profiling Node"
+    isExternal: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Tooling#Profiling Call Tree
+summary: The list showing call tree of methods that occured during the performance profiler recording.
+name: '"Profiling Call Tree"'
+uid: O:Page::System#Tooling#Profiling_Call_Tree

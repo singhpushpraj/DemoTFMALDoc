@@ -1,0 +1,100 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Container"
+alId: ID 9044
+namespace: System.Azure.Storage
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Azure#Storage#ABS_Container.Name[2048]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Last Modified"'
+  uid: F:Table::System#Azure#Storage#ABS_Container.Last_Modified
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Deny Encryption Scope Override"'
+  uid: F:Table::System#Azure#Storage#ABS_Container.Deny_Encryption_Scope_Override
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Has Immutability Policy"'
+  uid: F:Table::System#Azure#Storage#ABS_Container.Has_Immutability_Policy
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Has Legal Hold"'
+  uid: F:Table::System#Azure#Storage#ABS_Container.Has_Legal_Hold
+- type:
+    name: Blob
+    isExternal: true
+  name: '"XML Value"'
+  uid: F:Table::System#Azure#Storage#ABS_Container.XML_Value
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: URI
+  uid: F:Table::System#Azure#Storage#ABS_Container.URI[2048]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Azure#Storage#ABS_Container.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Azure#Storage#ABS_Container.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Azure#Storage#ABS_Container.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Azure#Storage#ABS_Container.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Azure#Storage#ABS_Container.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Azure#Storage#ABS_Container.SystemRowVersion
+commentId: O:Table::System#Azure#Storage#ABS Container
+summary: Holds information about containers in a storage account.
+name: '"ABS Container"'
+uid: O:Table::System#Azure#Storage#ABS_Container

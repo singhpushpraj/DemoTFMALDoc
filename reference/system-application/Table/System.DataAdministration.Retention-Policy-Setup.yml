@@ -1,0 +1,100 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Setup"
+alId: ID 3901
+namespace: System.DataAdministration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataCaptionFields
+  value: 2,4
+  promoted: false
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Table Id"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Table_Id
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"Table Name"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Table_Name[30]
+- type:
+    name: Text[249]
+    isExternal: true
+  name: '"Table Caption"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Table_Caption[249]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Retention Period"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Retention_Period[20]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Enabled
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Enabled
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Apply to all records"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Apply_to_all_records
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Date Field No."'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Date_Field_No#
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"Date Field Name"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Date_Field_Name[30]
+- type:
+    name: Text[80]
+    isExternal: true
+  name: '"Date Field Caption"'
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Date_Field_Caption[80]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Manual
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.Manual
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#DataAdministration#Retention_Policy_Setup.SystemRowVersion
+commentId: O:Table::System#DataAdministration#Retention Policy Setup
+summary: This table stores the retention policy setup records.
+name: '"Retention Policy Setup"'
+uid: O:Table::System#DataAdministration#Retention_Policy_Setup

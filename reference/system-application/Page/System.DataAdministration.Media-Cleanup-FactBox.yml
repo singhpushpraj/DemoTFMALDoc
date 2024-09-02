@@ -1,0 +1,33 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Media Cleanup FactBox"
+alId: ID 1928
+namespace: System.DataAdministration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Media picture
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+commentId: O:Page::System#DataAdministration#Media Cleanup FactBox
+name: '"Media Cleanup FactBox"'
+uid: O:Page::System#DataAdministration#Media_Cleanup_FactBox

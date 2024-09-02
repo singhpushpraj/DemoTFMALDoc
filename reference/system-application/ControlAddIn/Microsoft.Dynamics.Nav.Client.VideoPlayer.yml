@@ -1,0 +1,93 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"Microsoft.Dynamics.Nav.Client.VideoPlayer"'
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: 'N:Module::System_Application::Namespace::'
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+objectProperties:
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ObsoleteReason
+  value: Replaced with VideoPlayer addin.
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ObsoleteReason
+  value: Replaced with VideoPlayer addin.
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetFrameAttribute(AttributeName: Text, AttributeValue: Text)'
+    parameters:
+    - id: AttributeName
+      description: >2+
+
+        The name of the attribute
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AttributeValue
+      description: >2+
+
+        Value of the attribute
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Used to set the attribute to control how video is played
+  name: SetFrameAttribute
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#VideoPlayer.SetFrameAttribute(Text,Text)
+- syntax:
+    content: 'procedure RemoveAttribute(AttributeName: Text)'
+    parameters:
+    - id: AttributeName
+      description: >2+
+
+        The name of the attribute
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Removes specified attribute
+  name: RemoveAttribute
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#VideoPlayer.RemoveAttribute(Text)
+- syntax:
+    content: 'procedure SetWidth(VideoWidth: Integer)'
+    parameters:
+    - id: VideoWidth
+      description: >2+
+
+        Width of the video
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Set prefered video width
+  name: SetWidth
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#VideoPlayer.SetWidth(Integer)
+- syntax:
+    content: 'procedure SetHeight(VideoHeight: Integer)'
+    parameters:
+    - id: VideoHeight
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Set Video Height
+  name: SetHeight
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#VideoPlayer.SetHeight(Integer)
+commentId: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#VideoPlayer
+summary: MSN video player
+name: '"Microsoft.Dynamics.Nav.Client.VideoPlayer"'
+obsoletion:
+  state: pending
+  reason: Replaced with VideoPlayer addin.
+  version: "24.0"
+uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#VideoPlayer

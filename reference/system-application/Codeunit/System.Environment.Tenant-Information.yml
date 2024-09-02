@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment."Tenant Information"
+alId: ID 417
+namespace: System.Environment
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetTenantId(): Text'
+    return:
+      description: If it cannot be found, an empty string is returned.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the tenant ID.
+  name: GetTenantId
+  uid: M:Codeunit::System#Environment#Tenant_Information.GetTenantId:Text
+- syntax:
+    content: 'procedure GetTenantDisplayName(): Text'
+    return:
+      description: If it cannot be found, an empty string is returned.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the tenant name.
+  name: GetTenantDisplayName
+  uid: M:Codeunit::System#Environment#Tenant_Information.GetTenantDisplayName:Text
+commentId: O:Codeunit::System#Environment#Tenant Information
+summary: Exposes functionality to fetch attributes concerning the current tenant.
+name: '"Tenant Information"'
+uid: O:Codeunit::System#Environment#Tenant_Information

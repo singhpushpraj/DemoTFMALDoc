@@ -1,0 +1,107 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Connector"
+namespace: System.Email
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure Send(EmailMessage: Codeunit "Email Message", AccountId: Guid)'
+    parameters:
+    - id: EmailMessage
+      description: The email message that is to be sent out.
+      parameterType:
+        internalReference: O:Codeunit::System#Email#Email_Message
+        name: System.Email."Email Message"
+        isExternal: false
+    - id: AccountId
+      description: The email account ID which is used to send out the email.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Sends an e-mail using the provided account.
+  name: Send
+  uid: M:Interface::System#Email#Email_Connector.Send(Codeunit::System#Email#Email_Message,Guid)
+- syntax:
+    content: 'procedure GetAccounts(var Accounts: Record "Email Account" temporary)'
+    parameters:
+    - id: Accounts
+      description: Out variable that holds the registered e-mail accounts for the connector.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Gets the e-mail accounts registered for the connector.
+  name: GetAccounts
+  uid: M:Interface::System#Email#Email_Connector.GetAccounts(Email_Account@)
+- syntax:
+    content: 'procedure ShowAccountInformation(AccountId: Guid)'
+    parameters:
+    - id: AccountId
+      description: The ID of the e-mail account
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Shows the information for an e-mail account.
+  name: ShowAccountInformation
+  uid: M:Interface::System#Email#Email_Connector.ShowAccountInformation(Guid)
+- syntax:
+    content: 'procedure RegisterAccount(var EmailAccount: Record "Email Account" temporary): Boolean'
+    parameters:
+    - id: EmailAccount
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    return:
+      description: True if an account was registered.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Registers an e-mail account for the connector.
+  remarks: The out parameter must hold the account ID of the added account.
+  name: RegisterAccount
+  uid: M:Interface::System#Email#Email_Connector.RegisterAccount(Email_Account@):Boolean
+- syntax:
+    content: 'procedure DeleteAccount(AccountId: Guid): Boolean'
+    parameters:
+    - id: AccountId
+      description: The ID of the e-mail account
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if an account was deleted.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes an e-mail account for the connector.
+  name: DeleteAccount
+  uid: M:Interface::System#Email#Email_Connector.DeleteAccount(Guid):Boolean
+- syntax:
+    content: 'procedure GetLogoAsBase64(): Text'
+    return:
+      description: Base64 encoded image.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Provides a custom logo for the connector that shows in the Setup Email Account Guide.
+  remarks: The recomended image size is 128x128.
+  name: GetLogoAsBase64
+  uid: M:Interface::System#Email#Email_Connector.GetLogoAsBase64:Text
+- syntax:
+    content: 'procedure GetDescription(): Text[250]'
+    return:
+      description: A more detailed desctiption of the connector.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Provides a more detailed description of the connector.
+  name: GetDescription
+  uid: M:Interface::System#Email#Email_Connector.GetDescription:Text[250]
+commentId: O:Interface::System#Email#Email Connector
+summary: An e-mail connector interface used to creating e-mail accounts and sending an e-mail.
+name: '"Email Connector"'
+uid: O:Interface::System#Email#Email_Connector

@@ -1,0 +1,176 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.DSACryptoServiceProvider
+alId: ID 1447
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure ToXmlString(IncludePrivateParameters: Boolean): Text'
+    parameters:
+    - id: IncludePrivateParameters
+      description: true to include private parameters; otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: An XML string encoding of the current DSA object.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Creates and returns an XML string representation of the current DSA object.
+  name: ToXmlString
+  uid: M:Codeunit::System#Security#Encryption#DSACryptoServiceProvider.ToXmlString(Boolean):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use SignData with SecretText data type for XmlString.,24.0)]'
+    content: 'procedure SignData(XmlString: Text, DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing DSA key information.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DataInStream
+      description: The input stream to hash and sign.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      description: The hash algorithm to use to create the hash value.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The DSA signature stream for the specified data.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified stream using the specified hash algorithm and signs the resulting hash value.
+  name: SignData
+  obsoletion:
+    state: pending
+    reason: Use SignData with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#DSACryptoServiceProvider.SignData(Text,InStream,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use VerifyData with SecretText data type for XmlString.,24.0)]'
+    content: 'procedure VerifyData(XmlString: Text, DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: XmlString
+      description: The XML string containing DSA key information.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DataInStream
+      description: The input stream of data that was signed.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      description: The name of the hash algorithm used to create the hash value of the data.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      description: The stream of signature data to be verified.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the signature is valid; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies that a digital signature is valid by calculating the hash value of the specified stream using the specified hash algorithm and comparing it to the provided signature.
+  name: VerifyData
+  obsoletion:
+    state: pending
+    reason: Use VerifyData with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#DSACryptoServiceProvider.VerifyData(Text,InStream,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+- syntax:
+    content: 'procedure SignData(XmlString: SecretText, DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing DSA key information.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: DataInStream
+      description: The input stream to hash and sign.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      description: The hash algorithm to use to create the hash value.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The DSA signature stream for the specified data.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified stream using the specified hash algorithm and signs the resulting hash value.
+  name: SignData
+  uid: M:Codeunit::System#Security#Encryption#DSACryptoServiceProvider.SignData(SecretText,InStream,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    content: 'procedure VerifyData(XmlString: SecretText, DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: XmlString
+      description: The XML string containing DSA key information.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: DataInStream
+      description: The input stream of data that was signed.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      description: The name of the hash algorithm used to create the hash value of the data.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      description: The stream of signature data to be verified.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the signature is valid; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies that a digital signature is valid by calculating the hash value of the specified stream using the specified hash algorithm and comparing it to the provided signature.
+  name: VerifyData
+  uid: M:Codeunit::System#Security#Encryption#DSACryptoServiceProvider.VerifyData(SecretText,InStream,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+commentId: O:Codeunit::System#Security#Encryption#DSACryptoServiceProvider
+summary: Defines a wrapper object to access the cryptographic service provider (CSP) implementation of the DSA algorithm.
+name: DSACryptoServiceProvider
+uid: O:Codeunit::System#Security#Encryption#DSACryptoServiceProvider

@@ -1,0 +1,94 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"Microsoft.Dynamics.Nav.Client.FlowIntegration"'
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: 'N:Module::System_Application::Namespace::'
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+objectProperties:
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ObsoleteReason
+  value: Replaced with FlowIntegration addin.
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: ObsoleteReason
+  value: Replaced with FlowIntegration addin.
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Initialize(HostName: Text, Locale: Text, FlowServiceToken: Text)'
+    parameters:
+    - id: HostName
+      description: Flow service url needed by Flow API.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Locale
+      description: Four-letter language and region code.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FlowServiceToken
+      description: Microsoft Flow Service Access Token.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Function that initializes the Flow API
+  name: Initialize
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#FlowIntegration.Initialize(Text,Text,Text)
+- syntax:
+    content: 'procedure LoadFlows(EnvironmentId: Text)'
+    parameters:
+    - id: EnvironmentId
+      description: Flow Environmnet ID
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Function that loads the embedded Flow into a container on a webpage
+  name: LoadFlows
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#FlowIntegration.LoadFlows(Text)
+- syntax:
+    content: 'procedure LoadTemplates(EnvironmentId: Text, SearchTerm: Text, PageSize: Text, Destination: Text)'
+    parameters:
+    - id: EnvironmentId
+      description: Flow Environmnet ID
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SearchTerm
+      description: Filters templates matching the search term
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PageSize
+      description: Number of templates to be displayed in the container
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Destination
+      description: Determines page that opens when one selects a template
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Function that loads embedded Flow templates into a container on a webpage
+  name: LoadTemplates
+  uid: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#FlowIntegration.LoadTemplates(Text,Text,Text,Text)
+commentId: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#FlowIntegration
+name: '"Microsoft.Dynamics.Nav.Client.FlowIntegration"'
+obsoletion:
+  state: pending
+  reason: Replaced with FlowIntegration addin.
+  version: "24.0"
+uid: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#FlowIntegration

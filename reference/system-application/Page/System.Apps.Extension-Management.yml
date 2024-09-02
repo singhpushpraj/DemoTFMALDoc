@@ -1,0 +1,63 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Management"
+alId: ID 2500
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Extension Management
+  promoted: false
+- name: AdditionalSearchTerms
+  value: app,add-in,customize,plug-in,appsource
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableView
+  value: >-
+    sorting(Name)
+                          order(ascending)
+                          where(Name = filter(<> '_Exclude_*'),
+                                "Package Type" = filter(= Extension | Designer),
+                                "Tenant Visible" = const(true))
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+- name: Permissions
+  value: tabledata "Published Application" = r
+  promoted: false
+commentId: O:Page::System#Apps#Extension Management
+summary: Lists the available extensions, and provides features for managing them.
+name: '"Extension Management"'
+uid: O:Page::System#Apps#Extension_Management

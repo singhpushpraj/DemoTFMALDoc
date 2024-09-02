@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Installation"
+alId: ID 2503
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+sourceTableType:
+  name: System.Apps."Extension Installation"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: PageType
+  value: Card
+  promoted: true
+- name: SourceTable
+  value: "2503"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+commentId: O:Page::System#Apps#Extension Installation
+summary: Installs the selected extension.
+name: '"Extension Installation"'
+uid: O:Page::System#Apps#Extension_Installation

@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device.BarcodeScannerProviderAddIn
+namespace: System.Device
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: procedure RequestBarcodeScannerAsync()
+  summary: This method is used to request the barcode scanner.
+  name: RequestBarcodeScannerAsync
+  uid: M:ControlAddIn::System#Device#BarcodeScannerProviderAddIn.RequestBarcodeScannerAsync
+- syntax:
+    content: 'procedure RequestBarcodeScannerAsync(IntentAction: Text, IntentCategory: Text, DataString: Text, DataFormat: Text)'
+    parameters:
+    - id: IntentAction
+      description: The intent action to which the barcode scanner receiver is registered.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IntentCategory
+      description: The intent category to which the barcode scanner receiver is registered.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DataString
+      description: The intent data string key to which the barcode data is added.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DataFormat
+      description: The intent data format key to which the barcode format is added.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: This method is used to request the barcode scanner.
+  name: RequestBarcodeScannerAsync
+  uid: M:ControlAddIn::System#Device#BarcodeScannerProviderAddIn.RequestBarcodeScannerAsync(Text,Text,Text,Text)
+commentId: O:ControlAddIn::System#Device#BarcodeScannerProviderAddIn
+summary: The failure reason for the barcode scanner.
+name: BarcodeScannerProviderAddIn
+uid: O:ControlAddIn::System#Device#BarcodeScannerProviderAddIn

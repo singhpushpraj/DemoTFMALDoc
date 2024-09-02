@@ -1,0 +1,54 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Import Letter Of Cr. Bank"'
+alId: ID 70303
+baseKind: XmlPort
+kind: XmlPort
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Import Letter Of Credit Bank
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+- name: Caption
+  value: Import Letter Of Credit Bank
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: FieldDelimiter
+  value: <>
+  promoted: false
+- name: FieldSeparator
+  value: ;
+  promoted: false
+- name: Format
+  value: VariableText
+  promoted: false
+commentId: O:XmlPort::CGI Import Letter Of Cr# Bank
+summary: >-
+  Import Letter Of Credit Bank from csv file
+
+  it checks based on field "LCBG GUID" and updates the calculation lines to 
+
+  Letter of credit Bank
+
+  it related LOC not found, it will creare the record in sql data buffer 
+
+  with 'Import Type = LetterOfCredit Bank'
+name: '"CGI Import Letter Of Cr. Bank"'
+uid: O:XmlPort::CGI_Import_Letter_Of_Cr#_Bank

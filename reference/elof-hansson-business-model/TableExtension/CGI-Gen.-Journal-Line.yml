@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Gen. Journal Line"'
+alId: ID 60320
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"CGI Sales Business Terms"'
+  uid: F:TableExtension::CGI_Gen#_Journal_Line.CGI_Sales_Business_Terms[10]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Calc Log Source No."'
+  uid: F:TableExtension::CGI_Gen#_Journal_Line.CGI_Calc_Log_Source_No#[20]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI From Cash Receipt Jnl"'
+  uid: F:TableExtension::CGI_Gen#_Journal_Line.CGI_From_Cash_Receipt_Jnl
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI From Payment Jnl"'
+  uid: F:TableExtension::CGI_Gen#_Journal_Line.CGI_From_Payment_Jnl
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Calculation No."'
+  uid: F:TableExtension::CGI_Gen#_Journal_Line.CGI_Calculation_No#[20]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Already moved"'
+  uid: F:TableExtension::CGI_Gen#_Journal_Line.CGI_Already_moved
+commentId: O:TableExtension::CGI Gen# Journal Line
+summary: TableExtenion CGI Gen. Journal Line (ID 60320).
+name: '"CGI Gen. Journal Line"'
+uid: O:TableExtension::CGI_Gen#_Journal_Line

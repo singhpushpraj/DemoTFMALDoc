@@ -1,0 +1,30 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Graph."Graph API Version"
+alId: ID 9350
+namespace: System.Integration.Graph
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration.Graph
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: '"v1.0"'
+  uid: E:Enum::System#Integration#Graph#Graph_API_Version.v1#0
+- name: beta
+  uid: E:Enum::System#Integration#Graph#Graph_API_Version.beta
+commentId: O:Enum::System#Integration#Graph#Graph API Version
+summary: >-
+  Defines the available API versions for Microsoft Graph API.
+
+  See: https://learn.microsoft.com/en-us/graph/versioning-and-support#versions
+name: '"Graph API Version"'
+uid: O:Enum::System#Integration#Graph#Graph_API_Version

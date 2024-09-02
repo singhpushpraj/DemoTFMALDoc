@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."RSA Signature Padding"
+alId: ID 1285
+namespace: System.Security.Encryption
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: 'Specifies PKCS #1 v1.5 padding mode.'
+  name: Pkcs1
+  uid: E:Enum::System#Security#Encryption#RSA_Signature_Padding.Pkcs1
+- summary: Specifies PSS padding mode.
+  name: Pss
+  uid: E:Enum::System#Security#Encryption#RSA_Signature_Padding.Pss
+commentId: O:Enum::System#Security#Encryption#RSA Signature Padding
+summary: Enum that specifies all of the available padding modes. For more details check .NET RSASignaturePadding Class
+name: '"RSA Signature Padding"'
+uid: O:Enum::System#Security#Encryption#RSA_Signature_Padding

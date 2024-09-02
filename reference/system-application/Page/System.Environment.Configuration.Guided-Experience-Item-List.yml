@@ -1,0 +1,43 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Guided Experience Item List"
+alId: ID 1996
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  name: System.Environment.Configuration."Guided Experience Item"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Guided Experience Item List
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "1990"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "Guided Experience Item" = r
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Guided Experience Item List
+summary: Lists guided experience items.
+name: '"Guided Experience Item List"'
+uid: O:Page::System#Environment#Configuration#Guided_Experience_Item_List

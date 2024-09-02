@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.SymmetricAlgorithm
+alId: ID 1465
+namespace: System.Security.Encryption
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DefaultImplementation
+  value: "1467"
+  promoted: false
+- name: UnknownValueImplementation
+  value: "1467"
+  promoted: false
+enumValues:
+- name: Aes
+  uid: E:Enum::System#Security#Encryption#SymmetricAlgorithm.Aes
+- name: TripleDES
+  uid: E:Enum::System#Security#Encryption#SymmetricAlgorithm.TripleDES
+implements:
+- internalReference: O:Interface::System#Security#Encryption#SymmetricAlgorithm
+  name: System.Security.Encryption.SymmetricAlgorithm
+  isExternal: false
+commentId: O:Enum::System#Security#Encryption#SymmetricAlgorithm
+summary: Enum SymmetricAlgorithm (ID 1465) implements Interface SymmetricAlgorithm.
+name: SymmetricAlgorithm
+uid: O:Enum::System#Security#Encryption#SymmetricAlgorithm

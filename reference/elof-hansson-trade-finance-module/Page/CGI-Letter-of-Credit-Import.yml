@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Letter of Credit Import"'
+alId: ID 70315
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_TFM_LCBG_Header
+  name: '"CGI TFM LCBG Header"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: TFM Letter of Credit Import
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: SourceTable
+  value: "70300"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_TFM_LCBG_Header
+    name: '"CGI TFM LCBG Header"'
+    isExternal: false
+- name: SourceTableView
+  value: >-
+    sorting("LCBG No.")
+                          where(Type = const("Letter of Credit"),
+                                         "LC Type" = const(Import))
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+methods:
+- syntax:
+    content: procedure SetStyle()
+  name: SetStyle
+  uid: M:Page::CGI_Letter_of_Credit_Import.SetStyle
+commentId: O:Page::CGI Letter of Credit Import
+summary: >-
+  page 70315 CGI Letter of Credit Import
+
+  n import letter of credit is issued by the buyer's financial institution, which means the bank will pay the exporter if the buyer does not pay on time.
+name: '"CGI Letter of Credit Import"'
+uid: O:Page::CGI_Letter_of_Credit_Import

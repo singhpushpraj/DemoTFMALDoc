@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Globalization.Translation
+alId: ID 3712
+namespace: System.Globalization
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Globalization
+langs:
+- al
+sourceTableType:
+  name: System.Globalization.Translation
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataCaptionExpression
+  value: CaptionTxt
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "3712"
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-get-ready-business
+  promoted: false
+- name: Permissions
+  value: tabledata Translation = rimd
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+commentId: O:Page::System#Globalization#Translation
+summary: This page shows the target language and the translation for data in a table field.
+name: Translation
+uid: O:Page::System#Globalization#Translation

@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Guided Experience Upgrade"
+alId: ID 1999
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Subtype
+  value: Upgrade
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Guided Experience Item" = rimd,
+                        tabledata "Checklist Item" = rimd,
+                        tabledata "Checklist Item Role" = rimd,
+                        tabledata "Checklist Item User" = rimd
+  promoted: false
+commentId: O:Codeunit::System#Environment#Configuration#Guided Experience Upgrade
+name: '"Guided Experience Upgrade"'
+uid: O:Codeunit::System#Environment#Configuration#Guided_Experience_Upgrade

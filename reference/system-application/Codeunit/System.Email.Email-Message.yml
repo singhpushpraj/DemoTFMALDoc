@@ -1,0 +1,527 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Message"
+alId: ID 8904
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Create(ToRecipients: Text, Subject: Text, Body: Text)'
+    parameters:
+    - id: ToRecipients
+      description: The recipient(s) of the email. A string containing the email addresses of the recipients separated by semicolon.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Subject
+      description: The subject of the email.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Body
+      description: Raw text that will be used as body of the email.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates the email with recipients, subject, and body.
+  name: Create
+  uid: M:Codeunit::System#Email#Email_Message.Create(Text,Text,Text)
+- syntax:
+    content: 'procedure Create(ToRecipients: Text, Subject: Text, Body: Text, HtmlFormatted: Boolean)'
+    parameters:
+    - id: ToRecipients
+      description: The recipient(s) of the email. A string containing the email addresses of the recipients separated by semicolon.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Subject
+      description: The subject of the email.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Body
+      description: The body of the email.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HtmlFormatted
+      description: Whether the body is HTML formatted.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Creates the email with recipients, subject, and body.
+  name: Create
+  uid: M:Codeunit::System#Email#Email_Message.Create(Text,Text,Text,Boolean)
+- syntax:
+    content: 'procedure Create(ToRecipients: List of [Text], Subject: Text, Body: Text, HtmlFormatted: Boolean)'
+    parameters:
+    - id: ToRecipients
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: Subject
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Body
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HtmlFormatted
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: Create
+  uid: M:Codeunit::System#Email#Email_Message.Create(List_of_[Text],Text,Text,Boolean)
+- syntax:
+    content: 'procedure Create(ToRecipients: List of [Text], Subject: Text, Body: Text, HtmlFormatted: Boolean, CCRecipients: List of [Text], BCCRecipients: List of [Text])'
+    parameters:
+    - id: ToRecipients
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: Subject
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Body
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HtmlFormatted
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: CCRecipients
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: BCCRecipients
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Create
+  uid: M:Codeunit::System#Email#Email_Message.Create(List_of_[Text],Text,Text,Boolean,List_of_[Text],List_of_[Text])
+- syntax:
+    content: 'procedure Get(MessageId: Guid): Boolean'
+    parameters:
+    - id: MessageId
+      description: The ID of the email message to get.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the email was found; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the email message with the given ID.
+  name: Get
+  uid: M:Codeunit::System#Email#Email_Message.Get(Guid):Boolean
+- syntax:
+    content: 'procedure GetBody(): Text'
+    return:
+      description: The body of the email.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the body of the email message.
+  name: GetBody
+  uid: M:Codeunit::System#Email#Email_Message.GetBody:Text
+- syntax:
+    content: 'procedure SetBody(Body: Text)'
+    parameters:
+    - id: Body
+      description: The body to set to the email message.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the body of the email message.
+  name: SetBody
+  uid: M:Codeunit::System#Email#Email_Message.SetBody(Text)
+- syntax:
+    content: 'procedure AppendToBody(Value: Text)'
+    parameters:
+    - id: Value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Appends to the body of the email message.
+
+    <param name="Value">The value to append to the body of the email message.</param>
+  name: AppendToBody
+  uid: M:Codeunit::System#Email#Email_Message.AppendToBody(Text)
+- syntax:
+    content: 'procedure GetSubject(): Text[2048]'
+    return:
+      description: The subject of the email.
+      returnType:
+        name: Text[2048]
+        isExternal: true
+  summary: Gets the subject of the email message.
+  name: GetSubject
+  uid: M:Codeunit::System#Email#Email_Message.GetSubject:Text[2048]
+- syntax:
+    content: 'procedure SetSubject(Subject: Text)'
+    parameters:
+    - id: Subject
+      description: The subject to set to the email message.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the subject of the email message.
+  name: SetSubject
+  uid: M:Codeunit::System#Email#Email_Message.SetSubject(Text)
+- syntax:
+    content: 'procedure IsBodyHTMLFormatted(): Boolean'
+    return:
+      description: True if the email body is formatted in HTML; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the email body is formatted in HTML.
+  name: IsBodyHTMLFormatted
+  uid: M:Codeunit::System#Email#Email_Message.IsBodyHTMLFormatted:Boolean
+- syntax:
+    content: 'procedure SetBodyHTMLFormatted(Value: Boolean)'
+    parameters:
+    - id: Value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Sets whether the email body is formatted in HTML.
+
+    <param name="Value">True if the email body is formatted in HTML; otherwise - false.</param>
+  name: SetBodyHTMLFormatted
+  uid: M:Codeunit::System#Email#Email_Message.SetBodyHTMLFormatted(Boolean)
+- syntax:
+    content: 'procedure GetId(): Guid'
+    return:
+      description: The ID of the email.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Gets the ID of the email message.
+  name: GetId
+  uid: M:Codeunit::System#Email#Email_Message.GetId:Guid
+- syntax:
+    content: 'procedure GetRecipients(RecipientType: Enum "Email Recipient Type", var Recipients: List of [Text])'
+    parameters:
+    - id: RecipientType
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Recipient_Type
+        name: System.Email."Email Recipient Type"
+        isExternal: false
+    - id: Recipients
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: GetRecipients
+  uid: M:Codeunit::System#Email#Email_Message.GetRecipients(Enum::System#Email#Email_Recipient_Type,List_of_[Text]@)
+- syntax:
+    content: 'procedure SetRecipients(RecipientType: Enum "Email Recipient Type", Recipients: Text)'
+    parameters:
+    - id: RecipientType
+      description: Specifies the type of the recipients.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Recipient_Type
+        name: System.Email."Email Recipient Type"
+        isExternal: false
+    - id: Recipients
+      description: Specifies the list of the recipients' email addresses as a semicolon (;) separated list.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the recipents of a certain type of the email message.
+  name: SetRecipients
+  uid: M:Codeunit::System#Email#Email_Message.SetRecipients(Enum::System#Email#Email_Recipient_Type,Text)
+- syntax:
+    content: 'procedure SetRecipients(RecipientType: Enum "Email Recipient Type", Recipients: List of [Text])'
+    parameters:
+    - id: RecipientType
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Recipient_Type
+        name: System.Email."Email Recipient Type"
+        isExternal: false
+    - id: Recipients
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: SetRecipients
+  uid: M:Codeunit::System#Email#Email_Message.SetRecipients(Enum::System#Email#Email_Recipient_Type,List_of_[Text])
+- syntax:
+    content: 'procedure AddRecipient(RecipientType: Enum "Email Recipient Type", Recipient: Text)'
+    parameters:
+    - id: RecipientType
+      description: Specifies the type of the recipient.
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Recipient_Type
+        name: System.Email."Email Recipient Type"
+        isExternal: false
+    - id: Recipient
+      description: Specifies the recipient's email address.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a recipient of a certain type to the email message.
+  name: AddRecipient
+  uid: M:Codeunit::System#Email#Email_Message.AddRecipient(Enum::System#Email#Email_Recipient_Type,Text)
+- syntax:
+    content: 'procedure AddAttachment(AttachmentName: Text[250], ContentType: Text[250], AttachmentBase64: Text)'
+    parameters:
+    - id: AttachmentName
+      description: The name of the file attachment.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: ContentType
+      description: The Content Type of the file attachment.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: AttachmentBase64
+      description: The Base64 text representation of the attachment.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a file attachment to the email message.
+  name: AddAttachment
+  uid: M:Codeunit::System#Email#Email_Message.AddAttachment(Text[250],Text[250],Text)
+- syntax:
+    content: 'procedure AddAttachment(AttachmentName: Text[250], ContentType: Text[250], AttachmentInStream: InStream)'
+    parameters:
+    - id: AttachmentName
+      description: The name of the file attachment.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: ContentType
+      description: The Content Type of the file attachment.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: AttachmentInStream
+      description: The instream of the attachment.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Adds a file attachment to the email message.
+  name: AddAttachment
+  uid: M:Codeunit::System#Email#Email_Message.AddAttachment(Text[250],Text[250],InStream)
+- syntax:
+    content: 'procedure AddAttachment(AttachmentName: Text[250], ContentType: Text[250], InLine: Boolean, ContentId: Text[40], AttachmentInStream: InStream)'
+    parameters:
+    - id: AttachmentName
+      description: The name of the file attachment.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: ContentType
+      description: The Content Type of the file attachment.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: InLine
+      description: Specifies whether the attachment is inline.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: ContentId
+      description: The Content ID of the file attachment.
+      parameterType:
+        name: Text[40]
+        isExternal: true
+    - id: AttachmentInStream
+      description: The instream of the attachment.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Adds a file attachment to the email message.
+  name: AddAttachment
+  uid: M:Codeunit::System#Email#Email_Message.AddAttachment(Text[250],Text[250],Boolean,Text[40],InStream)
+- syntax:
+    content: 'procedure AddAttachmentFromScenario(var EmailAttachments: Record "Email Attachments" temporary)'
+    parameters:
+    - id: EmailAttachments
+      description: The reference to the email attachments
+      parameterType:
+        name: Record "Email Attachments" temporary
+        isExternal: true
+  summary: Adds attachments from scenario to the email message.
+  name: AddAttachmentFromScenario
+  uid: M:Codeunit::System#Email#Email_Message.AddAttachmentFromScenario(Email_Attachments@)
+- syntax:
+    content: 'procedure Attachments_DeleteContent(): Boolean'
+    return:
+      description: Returns true if contents was successfully deleted, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes the contents of the currently selected attachment.
+  name: Attachments_DeleteContent
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_DeleteContent:Boolean
+- syntax:
+    content: 'procedure Attachments_DeleteContent(BypassSentCheck: Boolean): Boolean'
+    parameters:
+    - id: BypassSentCheck
+      description: If true, the attachment content will be deleted even if the email message has been sent.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: Returns true if contents was successfully deleted, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes the contents of the currently selected attachment.
+  name: Attachments_DeleteContent
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_DeleteContent(Boolean):Boolean
+- syntax:
+    content: 'procedure Attachments_Delete(): Boolean'
+    return:
+      description: Returns true if attachment was successfully deleted, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes the currently selected attachment.
+  name: Attachments_Delete
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_Delete:Boolean
+- syntax:
+    content: 'procedure Attachments_Delete(BypassSentCheck: Boolean): Boolean'
+    parameters:
+    - id: BypassSentCheck
+      description: If true, the attachment will be deleted even if the email message has been sent.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: Returns true if attachment was successfully deleted, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes the currently selected attachment.
+  name: Attachments_Delete
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_Delete(Boolean):Boolean
+- syntax:
+    content: 'procedure Attachments_First(): Boolean'
+    return:
+      description: True if there is any attachment; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Finds the first attachment of the email message.
+  name: Attachments_First
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_First:Boolean
+- syntax:
+    content: 'procedure Attachments_Next(): Integer'
+    return:
+      description: The ID of the next attachment if it was found; otherwise - 0.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Finds the next attachment of the email message.
+  name: Attachments_Next
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_Next:Integer
+- syntax:
+    content: 'procedure Attachments_GetName(): Text[250]'
+    return:
+      description: The name of the current attachment.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Gets the name of the current attachment.
+  name: Attachments_GetName
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_GetName:Text[250]
+- syntax:
+    content: 'procedure Attachments_GetContent(var AttachmentInStream: InStream)'
+    parameters:
+    - id: AttachmentInStream
+      description: Out parameter with the content of the current attachment.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Gets the content of the current attachment.
+  name: Attachments_GetContent
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_GetContent(InStream@)
+- syntax:
+    content: 'procedure Attachments_GetContentBase64(): Text'
+    return:
+      description: The content of the current attachment in Base64 encoding.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the content of the current attachment in Base64 encoding.
+  name: Attachments_GetContentBase64
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_GetContentBase64:Text
+- syntax:
+    content: 'procedure Attachments_GetContentType(): Text[250]'
+    return:
+      description: The content type of the current attachment.
+      returnType:
+        name: Text[250]
+        isExternal: true
+  summary: Gets the content type of the current attachment.
+  name: Attachments_GetContentType
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_GetContentType:Text[250]
+- syntax:
+    content: 'procedure Attachments_GetContentId(): Text[40]'
+    return:
+      description: The content ID of the current attachment.
+      returnType:
+        name: Text[40]
+        isExternal: true
+  summary: Gets the content ID of the current attachment.
+  remarks: This value is filled only if the attachment is inline the email body.
+  name: Attachments_GetContentId
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_GetContentId:Text[40]
+- syntax:
+    content: 'procedure Attachments_GetLength(): Integer'
+    return:
+      description: The content length of the current attachment.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the content length of the current attachment.
+  name: Attachments_GetLength
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_GetLength:Integer
+- syntax:
+    content: 'procedure Attachments_IsInline(): Boolean'
+    return:
+      description: True if the attachment is inline the message body; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the attachment is inline the message body.
+  name: Attachments_IsInline
+  uid: M:Codeunit::System#Email#Email_Message.Attachments_IsInline:Boolean
+- syntax:
+    content: 'procedure GetRelatedAttachments(var EmailRelatedAttachments: Record "Email Related Attachment" temporary): Boolean'
+    parameters:
+    - id: EmailRelatedAttachments
+      description: Out parameter with the related attachments.
+      parameterType:
+        name: Record "Email Related Attachment" temporary
+        isExternal: true
+    return:
+      description: True if any related attachments were found; otherwise - false
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the related attachments.
+  name: GetRelatedAttachments
+  uid: M:Codeunit::System#Email#Email_Message.GetRelatedAttachments(Email_Related_Attachment@):Boolean
+commentId: O:Codeunit::System#Email#Email Message
+summary: Codeunit to create and manage email messages.
+name: '"Email Message"'
+uid: O:Codeunit::System#Email#Email_Message

@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Checklist Administration"
+alId: ID 1992
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  name: System.Environment.Configuration."Checklist Item Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Checklist Administration
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: SourceTable
+  value: "1995"
+  promoted: true
+- name: Editable
+  value: "True"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DataCaptionExpression
+  value: "''"
+  promoted: false
+- name: Permissions
+  value: tabledata "Checklist Item Buffer" = rimd
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Checklist Administration
+summary: Provides capabilities to edit and insert new checklist items based on existing guided experience items.
+name: '"Checklist Administration"'
+uid: O:Page::System#Environment#Configuration#Checklist_Administration

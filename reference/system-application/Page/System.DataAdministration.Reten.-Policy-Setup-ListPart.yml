@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Reten. Policy Setup ListPart"
+alId: ID 3905
+namespace: System.DataAdministration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#DataAdministration#Retention_Policy_Setup
+  name: System.DataAdministration."Retention Policy Setup"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: Caption
+  value: Retention Policies
+  promoted: false
+- name: SourceTable
+  value: "3901"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#DataAdministration#Retention_Policy_Setup
+    name: System.DataAdministration."Retention Policy Setup"
+    isExternal: false
+- name: CardPageId
+  value: Retention Policy Setup Card
+  promoted: false
+  xrefType:
+    internalReference: O:Page::System#DataAdministration#Retention_Policy_Setup_Card
+    name: System.DataAdministration."Retention Policy Setup Card"
+    isExternal: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+commentId: O:Page::System#DataAdministration#Reten# Policy Setup ListPart
+summary: This page lists all of the retention policies that have been defined.
+name: '"Reten. Policy Setup ListPart"'
+uid: O:Page::System#DataAdministration#Reten#_Policy_Setup_ListPart

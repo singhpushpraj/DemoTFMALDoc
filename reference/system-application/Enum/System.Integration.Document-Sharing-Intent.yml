@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Document Sharing Intent"
+alId: ID 9560
+namespace: System.Integration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Intent to open a preview of the document.
+  name: Open
+  uid: E:Enum::System#Integration#Document_Sharing_Intent.Open
+- summary: Intent to open the share dialog for the document.
+  name: Share
+  uid: E:Enum::System#Integration#Document_Sharing_Intent.Share
+- summary: >-
+    Intent to give the user a prompt to decide what action to take with the document.
+
+    Note: This will fail if GuiAllowed() is false.
+  name: Prompt
+  uid: E:Enum::System#Integration#Document_Sharing_Intent.Prompt
+- summary: Intent to open a preview of the document for editing and then download the resulting document.
+  name: Edit
+  uid: E:Enum::System#Integration#Document_Sharing_Intent.Edit
+commentId: O:Enum::System#Integration#Document Sharing Intent
+summary: Enum describing the intent of the document share record
+name: '"Document Sharing Intent"'
+uid: O:Enum::System#Integration#Document_Sharing_Intent

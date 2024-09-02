@@ -1,0 +1,61 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Default Permission Set In Plan"
+alId: ID 9827
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer
+  name: System.Azure.Identity."Permission Set In Plan Buffer"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "9016"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer
+    name: System.Azure.Identity."Permission Set In Plan Buffer"
+    isExternal: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: The source table will be changed to Default Permission Set In Plan.
+  promoted: false
+- name: ObsoleteTag
+  value: "22.0"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+commentId: O:Page::System#Azure#Identity#Default Permission Set In Plan
+summary: List part that holds the default permission sets assigned to a plan.
+name: '"Default Permission Set In Plan"'
+obsoletion:
+  state: pending
+  reason: The source table will be changed to Default Permission Set In Plan.
+  version: "22.0"
+uid: O:Page::System#Azure#Identity#Default_Permission_Set_In_Plan

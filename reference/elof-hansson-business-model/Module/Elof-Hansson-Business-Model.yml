@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: Elof Hansson Business Model by CGI Sverige AB (1.0.0.6)
+baseKind: Module
+kind: Module
+objectProperties:
+- name: Version
+  value: 1.0.0.6
+  promoted: false
+- name: Publisher
+  value: CGI Sverige AB
+  promoted: false
+summary: ""
+name: Elof Hansson Business Model
+uid: N:Module::Elof_Hansson_Business_Model

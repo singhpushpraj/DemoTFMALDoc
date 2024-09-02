@@ -1,0 +1,152 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Data Archive"
+alId: ID 600
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Create(Description: Text): Integer'
+    parameters:
+    - id: Description
+      description: The name or description for the archive entry. Will typically be the calling object name.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The entry no. of the created archive entry - if any.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Creates a new archive entry.
+  name: Create
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.Create(Text):Integer
+- syntax:
+    content: 'procedure CreateAndStartLoggingDeletions(Description: Text): Integer'
+    parameters:
+    - id: Description
+      description: The name or description for the archive entry. Will typically be the calling object name.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The entry no. of the created archive entry - if any.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Creates a new archive entry, resets the session and starts logging all new deletions.
+  name: CreateAndStartLoggingDeletions
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.CreateAndStartLoggingDeletions(Text):Integer
+- syntax:
+    content: 'procedure Open(ID: Integer)'
+    parameters:
+    - id: ID
+      description: The ID of the archive entry.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Opens an existing archive entry.
+  name: Open
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.Open(Integer)
+- syntax:
+    content: procedure Save()
+  summary: Saves and closes the currently open archive entry.
+  name: Save
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.Save
+- syntax:
+    content: procedure DiscardChanges()
+  summary: Discards any additions and closes the currently open archive entry.
+  name: DiscardChanges
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.DiscardChanges
+- syntax:
+    content: 'procedure SaveRecord(RecordVariant: Variant)'
+    parameters:
+    - id: RecordVariant
+      description: The record will be copied to the archive.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Saves the supplied record to the currently open archive entry.
+  name: SaveRecord
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.SaveRecord(Variant)
+- syntax:
+    content: 'procedure SaveRecord(var RecordRef: RecordRef)'
+    parameters:
+    - id: RecordRef
+      description: The record will be copied to the archive.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: Saves the supplied record to the currently open archive entry.
+  name: SaveRecord
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.SaveRecord(RecordRef@)
+- syntax:
+    content: 'procedure SaveRecords(var RecordRef: RecordRef)'
+    parameters:
+    - id: RecordRef
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: Saves all records within the filters to the currently open archive entry.
+  name: SaveRecords
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.SaveRecords(RecordRef@)
+- syntax:
+    content: procedure StartSubscriptionToDelete()
+  summary: Starts subscription to the OnDatabaseDelete trigger and calls SaveRecord with any deleted record.
+  name: StartSubscriptionToDelete
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.StartSubscriptionToDelete
+- syntax:
+    content: 'procedure StartSubscriptionToDelete(ResetSession: Boolean)'
+    parameters:
+    - id: ResetSession
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Starts subscription to the OnDatabaseDelete trigger and calls SaveRecord with any deleted record.
+  name: StartSubscriptionToDelete
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.StartSubscriptionToDelete(Boolean)
+- syntax:
+    content: procedure StopSubscriptionToDelete()
+  summary: Stops the subscription to the OnDatabaseDelete trigger.
+  name: StopSubscriptionToDelete
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.StopSubscriptionToDelete
+- syntax:
+    content: 'procedure DataArchiveProviderExists(): Boolean'
+    return:
+      description: Returns true if a provider for this interface is installed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Informs the consumer app whether there is a provider for this interface.
+  name: DataArchiveProviderExists
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.DataArchiveProviderExists:Boolean
+- syntax:
+    content: 'procedure SetDataArchiveProvider(var NewDataArchiveProvider: Interface "Data Archive Provider")'
+    parameters:
+    - id: NewDataArchiveProvider
+      parameterType:
+        internalReference: O:Interface::System#DataAdministration#Data_Archive_Provider
+        name: System.DataAdministration."Data Archive Provider"
+        isExternal: false
+  summary: Checks if there is an implementation of an IDataArchiveProvider
+  name: SetDataArchiveProvider
+  uid: M:Codeunit::System#DataAdministration#Data_Archive.SetDataArchiveProvider(Interface::System#DataAdministration#Data_Archive_Provider@)
+commentId: O:Codeunit::System#DataAdministration#Data Archive
+summary: Exposes functionality to archive / save data before deleting it.
+name: '"Data Archive"'
+uid: O:Codeunit::System#DataAdministration#Data_Archive

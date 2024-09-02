@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS Property"
+alId: ID 8953
+namespace: System.Azure.Storage.Files
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Indicates the the Timestamps should be included in the response.
+  name: Timestamps
+  uid: E:Enum::System#Azure#Storage#Files#AFS_Property.Timestamps
+- summary: Indicates the the ETag should be included in the response.
+  name: ETag
+  uid: E:Enum::System#Azure#Storage#Files#AFS_Property.ETag
+- summary: Indicates the the Attributes should be included in the response.
+  name: Attributes
+  uid: E:Enum::System#Azure#Storage#Files#AFS_Property.Attributes
+- summary: Indicates the the PermissionKey should be included in the response.
+  name: PermissionKey
+  uid: E:Enum::System#Azure#Storage#Files#AFS_Property.PermissionKey
+commentId: O:Enum::System#Azure#Storage#Files#AFS Property
+summary: Describes possible values of the additional AFS properties.
+name: '"AFS Property"'
+uid: O:Enum::System#Azure#Storage#Files#AFS_Property

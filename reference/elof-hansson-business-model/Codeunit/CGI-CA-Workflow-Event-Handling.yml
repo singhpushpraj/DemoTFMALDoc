@@ -1,0 +1,110 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA Workflow Event Handling"'
+alId: ID 60308
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure RunWorkflowOnSendCAEarningsForApprovalCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnSendCAEarningsForApprovalCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnSendCAEarningsForApprovalCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnCancelCAEarningsApprovalRequestCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnCancelCAEarningsApprovalRequestCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnCancelCAEarningsApprovalRequestCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnAfterReleaseCAEarningsCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnAfterReleaseCAEarningsCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnAfterReleaseCAEarningsCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnApproveCAEarningsApprovalRequestCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnApproveCAEarningsApprovalRequestCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnApproveCAEarningsApprovalRequestCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnDelegateCAEarningsApprovalRequestCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnDelegateCAEarningsApprovalRequestCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnDelegateCAEarningsApprovalRequestCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnRejectCAEarningsApprovalRequestCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnRejectCAEarningsApprovalRequestCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnRejectCAEarningsApprovalRequestCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnSendCACreditForApprovalCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnSendCACreditForApprovalCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnSendCACreditForApprovalCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnCancelCACreditApprovalRequestCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnCancelCACreditApprovalRequestCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnCancelCACreditApprovalRequestCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnAfterReleaseCACreditCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnAfterReleaseCACreditCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnAfterReleaseCACreditCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnApproveCACreditApprovalRequestCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnApproveCACreditApprovalRequestCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnApproveCACreditApprovalRequestCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnDelegateCACreditApprovalRequestCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnDelegateCACreditApprovalRequestCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnDelegateCACreditApprovalRequestCode:Code[128]
+- syntax:
+    content: 'procedure RunWorkflowOnRejectCACreditApprovalRequestCode(): Code[128]'
+    return:
+      returnType:
+        name: Code[128]
+        isExternal: true
+  name: RunWorkflowOnRejectCACreditApprovalRequestCode
+  uid: M:Codeunit::CGI_CA_Workflow_Event_Handling.RunWorkflowOnRejectCACreditApprovalRequestCode:Code[128]
+commentId: O:Codeunit::CGI CA Workflow Event Handling
+name: '"CGI CA Workflow Event Handling"'
+uid: O:Codeunit::CGI_CA_Workflow_Event_Handling

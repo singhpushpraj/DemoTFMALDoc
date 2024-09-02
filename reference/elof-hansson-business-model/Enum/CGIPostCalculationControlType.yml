@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: CGIPostCalculationControlType
+alId: ID 60312
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '" "'
+  uid: E:Enum::CGIPostCalculationControlType._
+- name: Sales
+  uid: E:Enum::CGIPostCalculationControlType.Sales
+- name: '"Other Revenues"'
+  uid: E:Enum::CGIPostCalculationControlType.Other_Revenues
+- name: Purchase
+  uid: E:Enum::CGIPostCalculationControlType.Purchase
+- name: Freight
+  uid: E:Enum::CGIPostCalculationControlType.Freight
+- name: '"Agent Commission"'
+  uid: E:Enum::CGIPostCalculationControlType.Agent_Commission
+- name: '"Other Costs"'
+  uid: E:Enum::CGIPostCalculationControlType.Other_Costs
+- name: Bank
+  uid: E:Enum::CGIPostCalculationControlType.Bank
+- name: Insurance
+  uid: E:Enum::CGIPostCalculationControlType.Insurance
+- name: '"Internal Interest Rate"'
+  uid: E:Enum::CGIPostCalculationControlType.Internal_Interest_Rate
+- name: '"Risk Premium"'
+  uid: E:Enum::CGIPostCalculationControlType.Risk_Premium
+commentId: O:Enum::CGIPostCalculationControlType
+name: CGIPostCalculationControlType
+uid: O:Enum::CGIPostCalculationControlType

@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Comment Status"'
+alId: ID 60360
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '" "'
+  uid: E:Enum::CGI_Comment_Status._
+- name: '"Ok to Finish"'
+  uid: E:Enum::CGI_Comment_Status.Ok_to_Finish
+- name: Investigate
+  uid: E:Enum::CGI_Comment_Status.Investigate
+- name: '"Not ok to finish"'
+  uid: E:Enum::CGI_Comment_Status.Not_ok_to_finish
+commentId: O:Enum::CGI Comment Status
+name: '"CGI Comment Status"'
+uid: O:Enum::CGI_Comment_Status

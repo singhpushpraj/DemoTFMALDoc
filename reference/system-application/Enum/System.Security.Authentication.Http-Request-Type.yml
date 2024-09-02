@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Authentication."Http Request Type"
+alId: ID 1289
+namespace: System.Security.Authentication
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Security.Authentication
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Specifies that the Http request type is GET.
+  name: GET
+  uid: E:Enum::System#Security#Authentication#Http_Request_Type.GET
+- summary: Specifies that the Http request type is POST.
+  name: POST
+  uid: E:Enum::System#Security#Authentication#Http_Request_Type.POST
+- summary: Specifies that the Http request type is PATCH.
+  name: PATCH
+  uid: E:Enum::System#Security#Authentication#Http_Request_Type.PATCH
+- summary: Specifies that the Http request type is PUT.
+  name: PUT
+  uid: E:Enum::System#Security#Authentication#Http_Request_Type.PUT
+- summary: Specifies that the Http request type is DELETE.
+  name: DELETE
+  uid: E:Enum::System#Security#Authentication#Http_Request_Type.DELETE
+- summary: Specifies that the Http request type is HEAD.
+  name: HEAD
+  uid: E:Enum::System#Security#Authentication#Http_Request_Type.HEAD
+- summary: Specifies that the Http request type is OPTIONS.
+  name: OPTIONS
+  uid: E:Enum::System#Security#Authentication#Http_Request_Type.OPTIONS
+commentId: O:Enum::System#Security#Authentication#Http Request Type
+summary: This enum contains the REST Http Request types.
+name: '"Http Request Type"'
+uid: O:Enum::System#Security#Authentication#Http_Request_Type

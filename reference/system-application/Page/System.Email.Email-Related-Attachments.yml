@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Related Attachments"
+alId: ID 8890
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Email#Email_Related_Attachment
+  name: System.Email."Email Related Attachment"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "8910"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Email#Email_Related_Attachment
+    name: System.Email."Email Related Attachment"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Caption
+  value: Related Attachments
+  promoted: false
+commentId: O:Page::System#Email#Email Related Attachments
+summary: Displays a list of related attachments to an email.
+name: '"Email Related Attachments"'
+uid: O:Page::System#Email#Email_Related_Attachments

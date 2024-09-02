@@ -1,0 +1,170 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Setup"
+alId: ID 3902
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetTableFilterView(var RetentionPolicySetupLine: Record "Retention Policy Setup Line"): Text[2048]'
+    parameters:
+    - id: RetentionPolicySetupLine
+      description: The record where the filter is stored.
+      parameterType:
+        name: Record "Retention Policy Setup Line"
+        isExternal: true
+    return:
+      description: The filter in Text format.
+      returnType:
+        name: Text[2048]
+        isExternal: true
+  summary: Use this procedure to open a Filter Page Builder page and store the resulting filter in view format on the retention policy setup line.
+  name: SetTableFilterView
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.SetTableFilterView(Retention_Policy_Setup_Line@):Text[2048]
+- syntax:
+    content: 'procedure GetTableFilterView(RetentionPolicySetupLine: Record "Retention Policy Setup Line"): Text'
+    parameters:
+    - id: RetentionPolicySetupLine
+      description: The record where the filter is stored.
+      parameterType:
+        name: Record "Retention Policy Setup Line"
+        isExternal: true
+    return:
+      description: The filter in View format.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Use this procedure to get the filter that is stored in a view format on the retention policy setup line.
+  name: GetTableFilterView
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.GetTableFilterView(Retention_Policy_Setup_Line):Text
+- syntax:
+    content: 'procedure GetTableFilterText(RetentionPolicySetupLine: Record "Retention Policy Setup Line"): Text[2048]'
+    parameters:
+    - id: RetentionPolicySetupLine
+      description: The record where the filter is stored.
+      parameterType:
+        name: Record "Retention Policy Setup Line"
+        isExternal: true
+    return:
+      description: The Filter in text format.
+      returnType:
+        name: Text[2048]
+        isExternal: true
+  summary: Use this procedure to get the filter that is stored in a text format on the retention policy setup line.
+  name: GetTableFilterText
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.GetTableFilterText(Retention_Policy_Setup_Line):Text[2048]
+- syntax:
+    content: 'procedure TableIdLookup(TableId: Integer): Integer'
+    parameters:
+    - id: TableId
+      description: The currently stored Table ID. This value will be selected when you open the lookup.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The new selected table id.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Use this procedure to open a lookup page to select one of the allowed Table Id's.
+  name: TableIdLookup
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.TableIdLookup(Integer):Integer
+- syntax:
+    content: 'procedure DateFieldNoLookup(TableId: Integer, FieldNo: Integer): Integer'
+    parameters:
+    - id: TableId
+      description: The table ID for which you want to select a field number.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      description: The currently selected field number.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The new selected field number.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Use this procedure to open a lookup page to select one of the date or datetime fields for the given table.
+  name: DateFieldNoLookup
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.DateFieldNoLookup(Integer,Integer):Integer
+- syntax:
+    content: 'procedure IsRetentionPolicyEnabled(): Boolean'
+    return:
+      description: True if a retention policy is enabled. False if no retention policies are enabled.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: This procedure checks whether any retention policies are enabled.
+  name: IsRetentionPolicyEnabled
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.IsRetentionPolicyEnabled:Boolean
+- syntax:
+    content: 'procedure IsRetentionPolicyEnabled(TableId: Integer): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table that will be checked for an enabled retention policy.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if a retention policy is enabled for the table ID. False if no retention policy is enabled for the table ID.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: This procedure checks whether a retention policy is enabled for the given table ID.
+  name: IsRetentionPolicyEnabled
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.IsRetentionPolicyEnabled(Integer):Boolean
+- syntax:
+    content: 'procedure FindOrCreateRetentionPeriod(RetentionPeriodEnum: Enum "Retention Period Enum"): Code[20]'
+    parameters:
+    - id: RetentionPeriodEnum
+      description: Specifies the retention period enum value for which the retention period record should be found or created.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Retention_Period_Enum
+        name: System.DataAdministration."Retention Period Enum"
+        isExternal: false
+    return:
+      description: The retention period code for the retention period record.
+      returnType:
+        name: Code[20]
+        isExternal: true
+  summary: Finds or creates a new retention period record for the provided retention period.
+  name: FindOrCreateRetentionPeriod
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.FindOrCreateRetentionPeriod(Enum::System#DataAdministration#Retention_Period_Enum):Code[20]
+- syntax:
+    content: 'procedure FindOrCreateRetentionPeriod(RetentionPeriodEnum: Enum "Retention Period Enum", RetPeriodCalc: DateFormula): Code[20]'
+    parameters:
+    - id: RetentionPeriodEnum
+      description: Specifies the retention period length enum value for which the retention period record should be found or created.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Retention_Period_Enum
+        name: System.DataAdministration."Retention Period Enum"
+        isExternal: false
+    - id: RetPeriodCalc
+      description: Specifies the retention period length date formula for which the retention period record should be found or created.
+      parameterType:
+        name: DateFormula
+        isExternal: true
+    return:
+      description: The retention period code for the retention period record.
+      returnType:
+        name: Code[20]
+        isExternal: true
+  summary: Finds or creates a new retention period record for the provided retention period.
+  name: FindOrCreateRetentionPeriod
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Setup.FindOrCreateRetentionPeriod(Enum::System#DataAdministration#Retention_Period_Enum,DateFormula):Code[20]
+commentId: O:Codeunit::System#DataAdministration#Retention Policy Setup
+summary: This codeunit contains helper methods for retention policy setups.
+name: '"Retention Policy Setup"'
+uid: O:Codeunit::System#DataAdministration#Retention_Policy_Setup

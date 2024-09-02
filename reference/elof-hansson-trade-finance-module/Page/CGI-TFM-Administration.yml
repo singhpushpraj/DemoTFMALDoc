@@ -1,0 +1,47 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Administration"'
+alId: ID 70311
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  name: Microsoft.Foundation.Address."Country/Region"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: TFM Administration
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: Permissions
+  value: >-
+    tabledata "Country/Region" = rimd,
+                      tabledata "CGI TFM Comment Line" = rimd
+  promoted: false
+- name: SourceTable
+  value: "9"
+  promoted: true
+  xrefType:
+    name: Microsoft.Foundation.Address."Country/Region"
+    isExternal: true
+- name: UsageCategory
+  value: Lists
+  promoted: false
+commentId: O:Page::CGI TFM Administration
+summary: page 70311 CGI TFM Administration
+name: '"CGI TFM Administration"'
+uid: O:Page::CGI_TFM_Administration

@@ -1,0 +1,81 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Record Link Management"
+alId: ID 447
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure CopyLinks(FromRecord: Variant, ToRecord: Variant)'
+    parameters:
+    - id: FromRecord
+      description: The source record from which links are copied.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ToRecord
+      description: The destination record to which links are copied.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Copies all the links from one record to the other and sets Notify to FALSE for them.
+  name: CopyLinks
+  uid: M:Codeunit::System#Utilities#Record_Link_Management.CopyLinks(Variant,Variant)
+- syntax:
+    content: 'procedure WriteNote(RecordLink: __MissingTypeSymbol__, Note: Text)'
+    parameters:
+    - id: RecordLink
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: Note
+      parameterType:
+        name: Text
+        isExternal: true
+  name: WriteNote
+  uid: M:Codeunit::System#Utilities#Record_Link_Management.WriteNote(__MissingSymbol__@,Text)
+- syntax:
+    content: 'procedure ReadNote(RecordLink: __MissingTypeSymbol__): Text'
+    parameters:
+    - id: RecordLink
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: ReadNote
+  uid: M:Codeunit::System#Utilities#Record_Link_Management.ReadNote(__MissingSymbol__):Text
+- syntax:
+    content: 'procedure RemoveLinks(RecVariant: Variant)'
+    parameters:
+    - id: RecVariant
+      description: A filtered record. All record links associated with records within the filtered recordset will be deleted.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Removes all record links from all records in the RecVariant within current filters
+  name: RemoveLinks
+  uid: M:Codeunit::System#Utilities#Record_Link_Management.RemoveLinks(Variant)
+- syntax:
+    content: procedure RemoveOrphanedLinks()
+  summary: Iterates over the record link table and removes those with obsolete record ids.
+  name: RemoveOrphanedLinks
+  uid: M:Codeunit::System#Utilities#Record_Link_Management.RemoveOrphanedLinks
+commentId: O:Codeunit::System#Utilities#Record Link Management
+summary: Exposes functionality to administer record links related to table records.
+name: '"Record Link Management"'
+uid: O:Codeunit::System#Utilities#Record_Link_Management

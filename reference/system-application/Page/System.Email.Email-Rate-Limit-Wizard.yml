@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Rate Limit Wizard"
+alId: ID 8898
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  name: System.Email."Email Rate Limit"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Set Email Rate Limit per Minute
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "8912"
+  promoted: true
+- name: InstructionalText
+  value: Assign email rate limit for an account
+  promoted: false
+- name: Permissions
+  value: tabledata "Email Rate Limit" = rim
+  promoted: false
+commentId: O:Page::System#Email#Email Rate Limit Wizard
+summary: Page is used to display email rate limit usage by email accounts.
+name: '"Email Rate Limit Wizard"'
+uid: O:Page::System#Email#Email_Rate_Limit_Wizard

@@ -1,0 +1,2303 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Authentication.OAuth2
+alId: ID 501
+namespace: System.Security.Authentication
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Authentication
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the "Azure portal – App registrations" experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      description: The Base64-encoded certificate for the Application (client) configured in the "Azure Portal - Certificates & Secrets".
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID of the resource the application is requesting access to. This parameter can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PromptInteraction
+      description: Indicates the type of user interaction that is required.
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      description: Exit parameter containing the access token. When this parameter is empty, check the AuthCodeErr for a description of the error.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthCodeErr
+      description: Exit parameter containing the encountered error in the authorization code grant flow. This parameter will be empty in case the token is aquired successfuly.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the authorization token based on the authorization code via the OAuth2 v1.0 code grant flow.
+  name: AcquireTokenByAuthorizationCodeWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,Text,Text,Text,Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokenByAuthorizationCode with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokenByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenByAuthorizationCode
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokenByAuthorizationCode with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCode(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenByAuthorizationCodeWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokensByAuthorizationCode with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokensByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensByAuthorizationCode
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokensByAuthorizationCode with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCode(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokensByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensByAuthorizationCodeWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokensByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokenAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokenAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenAndTokenCacheByAuthorizationCode
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokenAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCode(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokensAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokensAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensAndTokenCacheByAuthorizationCode
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokensAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCode(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: Text, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, var AccessToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal – App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      description: The Application (client) secret configured in the Azure Portal - Certificates & Secrets.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID of the resource the application is requesting access to. This parameter can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      description: Exit parameter containing the access token.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the access token via the Client Credentials OAuth2 v1.0 grant flow.
+  name: AcquireTokenWithClientCredentials
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenWithClientCredentials(Text,Text,Text,Text,Text,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], var AccessToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenWithClientCredentials
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenWithClientCredentials(Text,Text,Text,Text,List_of_[Text],Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal – App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      description: The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates & Secrets.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID of the resource the application is requesting access to. This parameter can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      description: Exit parameter containing the access token.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the access token from cache or a refreshed token via OAuth2 v1.0 protocol.
+  name: AcquireAuthorizationCodeTokenFromCacheWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,Text,Text,Text,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireAuthorizationCodeTokenFromCache with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireAuthorizationCodeTokenFromCache(ClientId: Text, ClientSecret: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireAuthorizationCodeTokenFromCache
+  obsoletion:
+    state: pending
+    reason: Use AcquireAuthorizationCodeTokenFromCache with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCache(Text,Text,Text,Text,List_of_[Text],Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokensFromCache with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokensFromCache(ClientId: Text, ClientSecret: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensFromCache
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokensFromCache with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCache(Text,Text,Text,Text,List_of_[Text],Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireAuthorizationCodeTokenFromCacheWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,Text,Text,List_of_[Text],Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokensFromCacheWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensFromCacheWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokensFromCacheWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCacheWithCertificate(Text,Text,Text,Text,List_of_[Text],Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireTokensWithCertificate with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensWithCertificate
+  obsoletion:
+    state: pending
+    reason: Use AcquireTokensWithCertificate with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensWithCertificate(Text,Text,Text,Text,List_of_[Text],Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireOnBehalfOfTokenByTokenCache with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireOnBehalfOfTokenByTokenCache(ClientId: Text, ClientSecret: Text, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: Text, var NewTokenCache: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LoginHint
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: NewTokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireOnBehalfOfTokenByTokenCache
+  obsoletion:
+    state: pending
+    reason: Use AcquireOnBehalfOfTokenByTokenCache with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireOnBehalfOfTokenByTokenCache(Text,Text,Text,Text,List_of_[Text],Text,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    - '[Obsolete(Use AcquireOnBehalfOfTokensByTokenCache with SecretText data type for AccessToken.,24.0)]'
+    content: 'procedure AcquireOnBehalfOfTokensByTokenCache(ClientId: Text, ClientSecret: Text, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: Text, var IdToken: Text, var NewTokenCache: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LoginHint
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: NewTokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireOnBehalfOfTokensByTokenCache
+  obsoletion:
+    state: pending
+    reason: Use AcquireOnBehalfOfTokensByTokenCache with SecretText data type for AccessToken.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireOnBehalfOfTokensByTokenCache(Text,Text,Text,Text,List_of_[Text],Text,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the "Azure portal – App registrations" experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      description: The Base64-encoded certificate for the Application (client) configured in the "Azure Portal - Certificates & Secrets".
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID of the resource the application is requesting access to. This parameter can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PromptInteraction
+      description: Indicates the type of user interaction that is required.
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      description: Exit parameter containing the access token. When this parameter is empty, check the AuthCodeErr for a description of the error.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AuthCodeErr
+      description: Exit parameter containing the encountered error in the authorization code grant flow. This parameter will be empty in case the token is aquired successfuly.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the authorization token based on the authorization code via the OAuth2 v1.0 code grant flow.
+  name: AcquireTokenByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,Text,Text,Text,Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the "Azure portal – App registrations" experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      description: The Base64-encoded certificate for the Application (client) configured in the "Azure Portal - Certificates & Secrets".
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      description: Password for the certificate.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID of the resource the application is requesting access to. This parameter can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PromptInteraction
+      description: Indicates the type of user interaction that is required.
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      description: Exit parameter containing the access token. When this parameter is empty, check the AuthCodeErr for a description of the error.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AuthCodeErr
+      description: Exit parameter containing the encountered error in the authorization code grant flow. This parameter will be empty in case the token is aquired successfuly.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the authorization token based on the authorization code via the OAuth2 v1.0 code grant flow.
+  name: AcquireTokenByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,Text,Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenByAuthorizationCode(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenByAuthorizationCode
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCode(Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensByAuthorizationCode(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensByAuthorizationCode
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCode(Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthCodeErr
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenAndTokenCacheByAuthorizationCode
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCode(Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensAndTokenCacheByAuthorizationCode
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCode(Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum "Prompt Interaction", var AccessToken: SecretText, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: PromptInteraction
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Prompt_Interaction
+        name: System.Security.Authentication."Prompt Interaction"
+        isExternal: false
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Error
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,SecretText@,Text@,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure RequestClientCredentialsAdminPermissions(ClientId: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, var HasGrantConsentSucceeded: Boolean, var PermissionGrantError: Text): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal – App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HasGrantConsentSucceeded
+      description: Exit parameter indicating the success of granting application permissions.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: PermissionGrantError
+      description: Exit parameter containing the encountered error in the application permissions grant. This parameter will be empty in case the flow is completed successfuly.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Request the permissions from a directory admin.
+  name: RequestClientCredentialsAdminPermissions
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.RequestClientCredentialsAdminPermissions(Text,Text,Text,Boolean@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, var AccessToken: SecretText): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal – App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      description: The Application (client) secret configured in the Azure Portal - Certificates & Secrets.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID of the resource the application is requesting access to. This parameter can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      description: Exit parameter containing the access token.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the access token via the Client Credentials OAuth2 v1.0 grant flow.
+  name: AcquireTokenWithClientCredentials
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenWithClientCredentials(Text,SecretText,Text,Text,Text,SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokenWithClientCredentials
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenWithClientCredentials(Text,SecretText,Text,Text,List_of_[Text],SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: SecretText): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal – App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      description: The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates & Secrets.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID of the resource the application is requesting access to. This parameter can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      description: Exit parameter containing the access token.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the access token from cache or a refreshed token via OAuth2 v1.0 protocol.
+  name: AcquireAuthorizationCodeTokenFromCacheWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,Text,Text,Text,SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: SecretText): Boolean'
+    parameters:
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal – App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      description: The Base64-encoded certificate for the Application (client) configured in the Azure Portal - Certificates & Secrets.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      description: Password for the certificate.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirectURLs you registered in the portal. If this parameter is empty, the default Business Central URL will be used.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID of the resource the application is requesting access to. This parameter can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      description: Exit parameter containing the access token.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the access token from cache or a refreshed token via OAuth2 v1.0 protocol.
+  name: AcquireAuthorizationCodeTokenFromCacheWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,SecretText,Text,Text,Text,SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireAuthorizationCodeTokenFromCache(ClientId: Text, ClientSecret: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireAuthorizationCodeTokenFromCache
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCache(Text,SecretText,Text,Text,List_of_[Text],SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensFromCache(ClientId: Text, ClientSecret: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensFromCache
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCache(Text,SecretText,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireAuthorizationCodeTokenFromCacheWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,Text,Text,List_of_[Text],SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireAuthorizationCodeTokenFromCacheWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensFromCacheWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCacheWithCertificate(Text,Text,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensFromCacheWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCacheWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensWithCertificate(Text,Text,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, CertificatePassword: SecretText, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: SecretText, var IdToken: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertificatePassword
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireTokensWithCertificate
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensWithCertificate(Text,Text,SecretText,Text,Text,List_of_[Text],SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireOnBehalfOfTokenByTokenCache(ClientId: Text, ClientSecret: SecretText, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: SecretText, var NewTokenCache: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: LoginHint
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: NewTokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireOnBehalfOfTokenByTokenCache
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireOnBehalfOfTokenByTokenCache(Text,SecretText,Text,Text,List_of_[Text],Text,SecretText@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure AcquireOnBehalfOfTokensByTokenCache(ClientId: Text, ClientSecret: SecretText, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: SecretText, var IdToken: Text, var NewTokenCache: Text): Boolean'
+    parameters:
+    - id: ClientId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: LoginHint
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Scopes
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: TokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessToken
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: IdToken
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: NewTokenCache
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: AcquireOnBehalfOfTokensByTokenCache
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.AcquireOnBehalfOfTokensByTokenCache(Text,SecretText,Text,Text,List_of_[Text],Text,SecretText@,Text@,Text@):Boolean
+- syntax:
+    content: 'procedure GetLastErrorMessage(): Text'
+    return:
+      description: The last error message that happened during acquiring of an access token.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the last error message that happened during acquiring of an access token.
+  name: GetLastErrorMessage
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.GetLastErrorMessage:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetDefaultRedirectURL(var RedirectUrl: Text)'
+    parameters:
+    - id: RedirectUrl
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Returns the default Business Central redirectURL
+  name: GetDefaultRedirectURL
+  uid: M:Codeunit::System#Security#Authentication#OAuth2.GetDefaultRedirectURL(Text@)
+commentId: O:Codeunit::System#Security#Authentication#OAuth2
+summary: Contains methods supporting authentication via OAuth 2.0 protocol.
+name: OAuth2
+uid: O:Codeunit::System#Security#Authentication#OAuth2

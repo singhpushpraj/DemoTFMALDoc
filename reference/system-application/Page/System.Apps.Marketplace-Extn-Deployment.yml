@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Marketplace Extn Deployment"
+alId: ID 2510
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Caption
+  value: Extension Installation
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+commentId: O:Page::System#Apps#Marketplace Extn Deployment
+summary: Provides an interface for installing extensions from AppSource.
+name: '"Marketplace Extn Deployment"'
+uid: O:Page::System#Apps#Marketplace_Extn_Deployment

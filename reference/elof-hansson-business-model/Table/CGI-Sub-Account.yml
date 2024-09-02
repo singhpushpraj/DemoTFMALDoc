@@ -1,0 +1,90 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Sub Account"'
+alId: ID 60312
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Sub Account
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: DrillDownPageId
+  value: CGI Sub Account List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Sub_Account_List
+    name: '"CGI Sub Account List"'
+    isExternal: false
+- name: LookupPageId
+  value: CGI Sub Account List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Sub_Account_List
+    name: '"CGI Sub Account List"'
+    isExternal: false
+methods:
+- syntax:
+    content: procedure CheckDefaultSubAcc()
+  summary: CheckDefaultSubAcc.
+  name: CheckDefaultSubAcc
+  uid: M:Table::CGI_Sub_Account.CheckDefaultSubAcc
+fields:
+- type:
+    name: Code[10]
+    isExternal: true
+  name: Code
+  uid: F:Table::CGI_Sub_Account.Code[10]
+- type:
+    name: Text[30]
+    isExternal: true
+  name: Name
+  uid: F:Table::CGI_Sub_Account.Name[30]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Default
+  uid: F:Table::CGI_Sub_Account.Default
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Sub_Account.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Sub_Account.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Sub_Account.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Sub_Account.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Sub_Account.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Sub_Account.SystemRowVersion
+commentId: O:Table::CGI Sub Account
+summary: >-
+  Table CGI Sub Account (ID 60312).
+
+  Abstract: This is required to mark all agentlines with new information sub-account.
+name: '"CGI Sub Account"'
+uid: O:Table::CGI_Sub_Account

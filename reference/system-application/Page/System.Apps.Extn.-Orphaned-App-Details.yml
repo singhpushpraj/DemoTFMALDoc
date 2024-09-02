@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extn. Orphaned App Details"
+alId: ID 2513
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Orphaned Extension Data Details
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+- name: Permissions
+  value: tabledata "Extension Database Snapshot" = r
+  promoted: false
+commentId: O:Page::System#Apps#Extn# Orphaned App Details
+summary: Displays details about the selected extension, and offers features for installing and uninstalling it.
+name: '"Extn. Orphaned App Details"'
+uid: O:Page::System#Apps#Extn#_Orphaned_App_Details

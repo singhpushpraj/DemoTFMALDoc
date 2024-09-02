@@ -1,0 +1,20 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Salesperson/Purchaser"'
+alId: ID 60309
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"CGI Division Code"'
+  uid: F:TableExtension::CGI_Salesperson/Purchaser.CGI_Division_Code[10]
+commentId: O:TableExtension::CGI Salesperson/Purchaser
+summary: TableExtension CGI Salesperson/Purchaser (ID 60309) extends Record Salesperson/Purchaser.
+name: '"CGI Salesperson/Purchaser"'
+uid: O:TableExtension::CGI_Salesperson/Purchaser

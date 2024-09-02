@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Templates Tables Part"
+alId: ID 9997
+namespace: System.Integration.Word
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+sourceTableType:
+  name: System.Integration.Word."Word Templates Table"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Word Template Tables
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "9987"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Permissions
+  value: tabledata "Word Templates Table" = rmd
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Integration#Word#Word Templates Tables Part
+summary: A list part page to view, add and remove tables for Word templates.
+name: '"Word Templates Tables Part"'
+uid: O:Page::System#Integration#Word#Word_Templates_Tables_Part

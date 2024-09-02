@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Privacy Notice - Read"
+alId: ID 1564
+namespace: System.Privacy
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: Caption
+  value: Privacy Notice - Read
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Privacy Notice - Objects"'
+  promoted: false
+commentId: O:PermissionSet::System#Privacy#Privacy Notice - Read
+name: '"Privacy Notice - Read"'
+uid: O:PermissionSet::System#Privacy#Privacy_Notice_-_Read

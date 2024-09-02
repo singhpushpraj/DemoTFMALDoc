@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."Copilot Availability"
+alId: ID 7774
+namespace: System.AI
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The Copilot Capability is in preview.
+  name: Preview
+  uid: E:Enum::System#AI#Copilot_Availability.Preview
+- summary: The Copilot Capability is generally available.
+  name: '"Generally Available"'
+  uid: E:Enum::System#AI#Copilot_Availability.Generally_Available
+commentId: O:Enum::System#AI#Copilot Availability
+summary: The availability of the Copilot Capability.
+name: '"Copilot Availability"'
+uid: O:Enum::System#AI#Copilot_Availability

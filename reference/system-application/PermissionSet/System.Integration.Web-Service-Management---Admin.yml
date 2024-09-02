@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Web Service Management - Admin"
+alId: ID 6712
+namespace: System.Integration
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Web Service Management - View"'
+  promoted: false
+commentId: O:PermissionSet::System#Integration#Web Service Management - Admin
+name: '"Web Service Management - Admin"'
+uid: O:PermissionSet::System#Integration#Web_Service_Management_-_Admin

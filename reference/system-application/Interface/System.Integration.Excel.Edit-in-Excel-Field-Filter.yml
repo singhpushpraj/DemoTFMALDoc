@@ -1,0 +1,86 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel Field Filter"
+namespace: System.Integration.Excel
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure AddFilterValue(EditInExcelFilterType: Enum "Edit in Excel Filter Type", FilterValue: Text): Interface "Edit in Excel Field Filter"'
+    parameters:
+    - id: EditInExcelFilterType
+      description: The filter type, such as Equal, Greater than.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type
+        name: System.Integration.Excel."Edit in Excel Filter Type"
+        isExternal: false
+    - id: FilterValue
+      description: The value which the field should be Equal to, Greater than etc.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+        name: System.Integration.Excel."Edit in Excel Field Filter"
+        isExternal: false
+  summary: Add a filter value
+  name: AddFilterValue
+  uid: M:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter.AddFilterValue(Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type,Text):Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+- syntax:
+    content: 'procedure Get(Index: Integer, var EditinExcelFilterType: Enum "Edit in Excel Filter Type", var FilterValue: Text)'
+    parameters:
+    - id: Index
+      description: The index of the filter.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: EditinExcelFilterType
+      parameterType:
+        internalReference: O:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type
+        name: System.Integration.Excel."Edit in Excel Filter Type"
+        isExternal: false
+    - id: FilterValue
+      description: The value which the field should be Equal to, Greater than etc.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Get a specific filter
+  name: Get
+  uid: M:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter.Get(Integer,Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type@,Text@)
+- syntax:
+    content: 'procedure Remove(Index: Integer)'
+    parameters:
+    - id: Index
+      description: The index of the filter.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Remove a specific filter
+  name: Remove
+  uid: M:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter.Remove(Integer)
+- syntax:
+    content: 'procedure Count(): Integer'
+    return:
+      description: The number of filters
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Counts the number of filters
+  name: Count
+  uid: M:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter.Count:Integer
+commentId: O:Interface::System#Integration#Excel#Edit in Excel Field Filter
+summary: This codeunit provides an interface to create a filter for a specific field for Edit in Excel.
+name: '"Edit in Excel Field Filter"'
+uid: O:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter

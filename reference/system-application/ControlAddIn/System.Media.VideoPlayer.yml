@@ -1,0 +1,71 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Media.VideoPlayer
+namespace: System.Media
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Media
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure SetFrameAttribute(AttributeName: Text, AttributeValue: Text)'
+    parameters:
+    - id: AttributeName
+      description: >2+
+
+        The name of the attribute
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AttributeValue
+      description: >2+
+
+        Value of the attribute
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Used to set the attribute to control how video is played
+  name: SetFrameAttribute
+  uid: M:ControlAddIn::System#Media#VideoPlayer.SetFrameAttribute(Text,Text)
+- syntax:
+    content: 'procedure RemoveAttribute(AttributeName: Text)'
+    parameters:
+    - id: AttributeName
+      description: >2+
+
+        The name of the attribute
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Removes specified attribute
+  name: RemoveAttribute
+  uid: M:ControlAddIn::System#Media#VideoPlayer.RemoveAttribute(Text)
+- syntax:
+    content: 'procedure SetWidth(VideoWidth: Integer)'
+    parameters:
+    - id: VideoWidth
+      description: >2+
+
+        Width of the video
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Set prefered video width
+  name: SetWidth
+  uid: M:ControlAddIn::System#Media#VideoPlayer.SetWidth(Integer)
+- syntax:
+    content: 'procedure SetHeight(VideoHeight: Integer)'
+    parameters:
+    - id: VideoHeight
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Set Video Height
+  name: SetHeight
+  uid: M:ControlAddIn::System#Media#VideoPlayer.SetHeight(Integer)
+commentId: O:ControlAddIn::System#Media#VideoPlayer
+summary: MSN video player
+name: VideoPlayer
+uid: O:ControlAddIn::System#Media#VideoPlayer

@@ -1,0 +1,92 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Security Group Buffer"
+alId: ID 9022
+namespace: System.Security.AccessControl
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: Caption
+  value: Security Group
+  promoted: false
+fields:
+- description: The security group code.
+  type:
+    name: Code[20]
+    isExternal: true
+  name: Code
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.Code[20]
+- description: User security ID of a special user record that corresponds to a Microsoft Entra security group or Windows group.
+  type:
+    name: Guid
+    isExternal: true
+  name: '"Group User SID"'
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.Group_User_SID
+- description: SID of a Windows group or an object ID of a Microsoft Entra security group.
+  type:
+    name: Text[250]
+    isExternal: true
+  name: '"Group ID"'
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.Group_ID[250]
+- description: Windows group name or a Microsoft Entra security group name.
+  type:
+    name: Text[250]
+    isExternal: true
+  name: '"Group Name"'
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.Group_Name[250]
+- description: Whether the group was retrieved successfully from Graph / Windows Active Directory.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Retrieved Successfully"'
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.Retrieved_Successfully
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Security#AccessControl#Security_Group_Buffer.SystemRowVersion
+commentId: O:Table::System#Security#AccessControl#Security Group Buffer
+summary: The container used for fetching the defined security groups.
+name: '"Security Group Buffer"'
+uid: O:Table::System#Security#AccessControl#Security_Group_Buffer

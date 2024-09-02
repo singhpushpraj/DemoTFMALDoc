@@ -1,0 +1,47 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Report Sel. Print"'
+alId: ID 60362
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Report Sel. Print
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: UsageCategory
+  value: None
+  promoted: false
+- name: ApplicationArea
+  value: '#all'
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableView
+  value: where("CGI Show" = const(true))
+  promoted: false
+commentId: O:Page::CGI Report Sel# Print
+name: '"CGI Report Sel. Print"'
+uid: O:Page::CGI_Report_Sel#_Print

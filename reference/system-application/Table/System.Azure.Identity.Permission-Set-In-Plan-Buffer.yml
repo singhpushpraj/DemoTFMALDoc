@@ -1,0 +1,101 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Permission Set In Plan Buffer"
+alId: ID 9016
+namespace: System.Azure.Identity
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Permission Set in License
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Plan ID"'
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.Plan_ID
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Role ID"'
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.Role_ID[20]
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"Role Name"'
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.Role_Name[30]
+- type:
+    name: Guid
+    isExternal: true
+  name: '"App ID"'
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.App_ID
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"App Name"'
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.App_Name[250]
+- type:
+    name: Option
+    isExternal: true
+  name: Scope
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.Scope
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"Company Name"'
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.Company_Name[30]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer.SystemRowVersion
+commentId: O:Table::System#Azure#Identity#Permission Set In Plan Buffer
+summary: The container used for fetching permission sets associated with plans.
+remarks: >-
+  Default plan permission sets will never have the "Company Name" filled in,
+
+  the actual company name assigned to users will be the first sign-in company.
+name: '"Permission Set In Plan Buffer"'
+uid: O:Table::System#Azure#Identity#Permission_Set_In_Plan_Buffer

@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Media."Video Link"
+alId: ID 1821
+namespace: System.Media
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Media
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Caption
+  value: Video link
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: across-videos
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Media#Video Link
+summary: This page shows the video playing in Business Central.
+name: '"Video Link"'
+uid: O:Page::System#Media#Video_Link

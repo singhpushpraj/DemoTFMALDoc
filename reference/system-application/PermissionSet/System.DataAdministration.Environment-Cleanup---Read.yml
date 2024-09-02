@@ -1,0 +1,18 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Environment Cleanup - Read"
+alId: ID 1887
+namespace: System.DataAdministration
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+commentId: O:PermissionSet::System#DataAdministration#Environment Cleanup - Read
+name: '"Environment Cleanup - Read"'
+uid: O:PermissionSet::System#DataAdministration#Environment_Cleanup_-_Read

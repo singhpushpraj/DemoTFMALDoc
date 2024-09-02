@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Company Size Cache Part"
+alId: ID 8702
+namespace: System.DataAdministration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+sourceTableType:
+  name: System.DataAdministration."Company Size Cache"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Companies
+  promoted: false
+- name: PageType
+  value: CardPart
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "8701"
+  promoted: true
+- name: SourceTableView
+  value: sorting("Size (KB)") order(descending)
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "Company Size Cache" = r
+  promoted: false
+commentId: O:Page::System#DataAdministration#Company Size Cache Part
+summary: The Company Size Cache Part page shows information about company sizes.
+name: '"Company Size Cache Part"'
+uid: O:Page::System#DataAdministration#Company_Size_Cache_Part

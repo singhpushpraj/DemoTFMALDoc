@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Login Times Upgrade"
+alId: ID 9028
+namespace: System.Security.User
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Subtype
+  value: Upgrade
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "User Environment Login" = ri,
+                      tabledata "User Login" = r
+  promoted: false
+commentId: O:Codeunit::System#Security#User#User Login Times Upgrade
+name: '"User Login Times Upgrade"'
+uid: O:Codeunit::System#Security#User#User_Login_Times_Upgrade

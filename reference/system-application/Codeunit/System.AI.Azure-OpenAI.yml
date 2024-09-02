@@ -1,0 +1,362 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."Azure OpenAI"
+alId: ID 7771
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsEnabled(CopilotCapability: __MissingTypeSymbol__): Boolean'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsEnabled
+  uid: M:Codeunit::System#AI#Azure_OpenAI.IsEnabled(__MissingSymbol__):Boolean
+- syntax:
+    content: 'procedure IsEnabled(CopilotCapability: __MissingTypeSymbol__, Silent: Boolean): Boolean'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: Silent
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsEnabled
+  uid: M:Codeunit::System#AI#Azure_OpenAI.IsEnabled(__MissingSymbol__,Boolean):Boolean
+- syntax:
+    content: 'procedure IsAuthorizationConfigured(ModelType: Enum "AOAI Model Type"): Boolean'
+    parameters:
+    - id: ModelType
+      description: The model type to check authorization for.
+      parameterType:
+        internalReference: O:Enum::System#AI#AOAI_Model_Type
+        name: System.AI."AOAI Model Type"
+        isExternal: false
+    return:
+      description: True if API is authorized for environment.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the Azure OpenAI API authorization is configured for the environment.
+  name: IsAuthorizationConfigured
+  uid: M:Codeunit::System#AI#Azure_OpenAI.IsAuthorizationConfigured(Enum::System#AI#AOAI_Model_Type):Boolean
+- syntax:
+    content: 'procedure IsInitialized(CopilotCapability: __MissingTypeSymbol__, ModelType: Enum "AOAI Model Type"): Boolean'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ModelType
+      parameterType:
+        internalReference: O:Enum::System#AI#AOAI_Model_Type
+        name: System.AI."AOAI Model Type"
+        isExternal: false
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsInitialized
+  uid: M:Codeunit::System#AI#Azure_OpenAI.IsInitialized(__MissingSymbol__,Enum::System#AI#AOAI_Model_Type):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SetAuthorization(ModelType: Enum "AOAI Model Type", Endpoint: Text, Deployment: Text, ApiKey: SecretText)'
+    parameters:
+    - id: ModelType
+      description: The model type to set authorization for.
+      parameterType:
+        internalReference: O:Enum::System#AI#AOAI_Model_Type
+        name: System.AI."AOAI Model Type"
+        isExternal: false
+    - id: Endpoint
+      description: The endpoint to use for the model type.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Deployment
+      description: The deployment to use for the endpoint.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ApiKey
+      description: The API key to use for the endpoint.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Sets the Azure OpenAI API authorization to use for a specific model type and endpoint.
+  remarks: >-
+    Endpoint would look like: https://resource-name.openai.azure.com/
+
+    Deployment would look like: gpt-35-turbo-16k
+  name: SetAuthorization
+  uid: M:Codeunit::System#AI#Azure_OpenAI.SetAuthorization(Enum::System#AI#AOAI_Model_Type,Text,Text,SecretText)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SetAuthorization(ModelType: Enum "AOAI Model Type", Deployment: Text)'
+    parameters:
+    - id: ModelType
+      description: The model type to set authorization for.
+      parameterType:
+        internalReference: O:Enum::System#AI#AOAI_Model_Type
+        name: System.AI."AOAI Model Type"
+        isExternal: false
+    - id: Deployment
+      description: The deployment name to use for the model type.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the Azure OpenAI API authorization to use for a specific model type.
+  remarks: 'Deployment would look like: gpt-35-turbo-16k'
+  name: SetAuthorization
+  uid: M:Codeunit::System#AI#Azure_OpenAI.SetAuthorization(Enum::System#AI#AOAI_Model_Type,Text)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GenerateTextCompletion(Prompt: SecretText, var AOAIOperationResponse: Codeunit "AOAI Operation Response"): Text'
+    parameters:
+    - id: Prompt
+      description: The prompt to generate completion for.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AOAIOperationResponse
+      description: The response of the operation upon successful or failure execution.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Operation_Response
+        name: System.AI."AOAI Operation Response"
+        isExternal: false
+    return:
+      description: The generated completion.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a text completion given a prompt.
+  name: GenerateTextCompletion
+  uid: M:Codeunit::System#AI#Azure_OpenAI.GenerateTextCompletion(SecretText,Codeunit::System#AI#AOAI_Operation_Response@):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GenerateTextCompletion(Prompt: SecretText, AOAICompletionParams: Codeunit "AOAI Text Completion Params", var AOAIOperationResponse: Codeunit "AOAI Operation Response"): Text'
+    parameters:
+    - id: Prompt
+      description: The prompt to generate completion for.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AOAICompletionParams
+      description: The optional completion parameters to use.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Text_Completion_Params
+        name: System.AI."AOAI Text Completion Params"
+        isExternal: false
+    - id: AOAIOperationResponse
+      description: The response of the operation upon successful or failure execution.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Operation_Response
+        name: System.AI."AOAI Operation Response"
+        isExternal: false
+    return:
+      description: The generated completion.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a completion given a prompt and completion parameters.
+  name: GenerateTextCompletion
+  uid: M:Codeunit::System#AI#Azure_OpenAI.GenerateTextCompletion(SecretText,Codeunit::System#AI#AOAI_Text_Completion_Params,Codeunit::System#AI#AOAI_Operation_Response@):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GenerateTextCompletion(Metaprompt: SecretText, Prompt: SecretText, var AOAIOperationResponse: Codeunit "AOAI Operation Response"): Text'
+    parameters:
+    - id: Metaprompt
+      description: The metaprompt to be appended with the prompt.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Prompt
+      description: The prompt to generate completion for.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AOAIOperationResponse
+      description: The response of the operation upon successful or failure execution.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Operation_Response
+        name: System.AI."AOAI Operation Response"
+        isExternal: false
+    return:
+      description: The generated completion.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a text completion given a prompt.
+  name: GenerateTextCompletion
+  uid: M:Codeunit::System#AI#Azure_OpenAI.GenerateTextCompletion(SecretText,SecretText,Codeunit::System#AI#AOAI_Operation_Response@):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GenerateTextCompletion(Metaprompt: SecretText, Prompt: SecretText, AOAICompletionParams: Codeunit "AOAI Text Completion Params", var AOAIOperationResponse: Codeunit "AOAI Operation Response"): Text'
+    parameters:
+    - id: Metaprompt
+      description: The metaprompt to be appended with the prompt.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Prompt
+      description: The prompt to generate completion for.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AOAICompletionParams
+      description: The optional completion parameters to use.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Text_Completion_Params
+        name: System.AI."AOAI Text Completion Params"
+        isExternal: false
+    - id: AOAIOperationResponse
+      description: The response of the operation upon successful or failure execution.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Operation_Response
+        name: System.AI."AOAI Operation Response"
+        isExternal: false
+    return:
+      description: The generated completion.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a completion given a prompt and completion parameters.
+  name: GenerateTextCompletion
+  uid: M:Codeunit::System#AI#Azure_OpenAI.GenerateTextCompletion(SecretText,SecretText,Codeunit::System#AI#AOAI_Text_Completion_Params,Codeunit::System#AI#AOAI_Operation_Response@):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GenerateEmbeddings(Input: SecretText, var AOAIOperationResponse: Codeunit "AOAI Operation Response"): List of [Decimal]'
+    parameters:
+    - id: Input
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AOAIOperationResponse
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Operation_Response
+        name: System.AI."AOAI Operation Response"
+        isExternal: false
+    return:
+      returnType:
+        name: List of [Decimal]
+        isExternal: true
+  name: GenerateEmbeddings
+  uid: M:Codeunit::System#AI#Azure_OpenAI.GenerateEmbeddings(SecretText,Codeunit::System#AI#AOAI_Operation_Response@):List_of_[Decimal]
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GenerateChatCompletion(var AOAIChatMessages: Codeunit "AOAI Chat Messages", var AOAIOperationResponse: Codeunit "AOAI Operation Response")'
+    parameters:
+    - id: AOAIChatMessages
+      description: The chat messages to generate completion for.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Chat_Messages
+        name: System.AI."AOAI Chat Messages"
+        isExternal: false
+    - id: AOAIOperationResponse
+      description: The response of the operation upon successful or failure execution.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Operation_Response
+        name: System.AI."AOAI Operation Response"
+        isExternal: false
+  summary: Generates a chat completion given a list of chat messages.
+  name: GenerateChatCompletion
+  uid: M:Codeunit::System#AI#Azure_OpenAI.GenerateChatCompletion(Codeunit::System#AI#AOAI_Chat_Messages@,Codeunit::System#AI#AOAI_Operation_Response@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GenerateChatCompletion(var AOAIChatMessages: Codeunit "AOAI Chat Messages", AOAIChatCompletionParams: Codeunit "AOAI Chat Completion Params", var AOAIOperationResponse: Codeunit "AOAI Operation Response")'
+    parameters:
+    - id: AOAIChatMessages
+      description: The chat messages to generate completion for.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Chat_Messages
+        name: System.AI."AOAI Chat Messages"
+        isExternal: false
+    - id: AOAIChatCompletionParams
+      description: The optional chat completion parameters to use.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Chat_Completion_Params
+        name: System.AI."AOAI Chat Completion Params"
+        isExternal: false
+    - id: AOAIOperationResponse
+      description: The response of the operation upon successful or failure execution.
+      parameterType:
+        internalReference: O:Codeunit::System#AI#AOAI_Operation_Response
+        name: System.AI."AOAI Operation Response"
+        isExternal: false
+  summary: Generates a chat completion given a list of chat messages and completion parameters.
+  name: GenerateChatCompletion
+  uid: M:Codeunit::System#AI#Azure_OpenAI.GenerateChatCompletion(Codeunit::System#AI#AOAI_Chat_Messages@,Codeunit::System#AI#AOAI_Chat_Completion_Params,Codeunit::System#AI#AOAI_Operation_Response@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SetCopilotCapability(CopilotCapability: __MissingTypeSymbol__)'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: SetCopilotCapability
+  uid: M:Codeunit::System#AI#Azure_OpenAI.SetCopilotCapability(__MissingSymbol__)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use the AOAI Token codeunit.,24.0)]'
+    content: 'procedure ApproximateTokenCount(Input: Text): Integer'
+    parameters:
+    - id: Input
+      description: The input to get the approximate token count for.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The approximate token count.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the approximate token count for the input.
+  name: ApproximateTokenCount
+  obsoletion:
+    state: pending
+    reason: Use the AOAI Token codeunit.
+    version: "24.0"
+  uid: M:Codeunit::System#AI#Azure_OpenAI.ApproximateTokenCount(Text):Integer
+commentId: O:Codeunit::System#AI#Azure OpenAI
+summary: Provides functionality for using the Azure OpenAI API.
+name: '"Azure OpenAI"'
+uid: O:Codeunit::System#AI#Azure_OpenAI

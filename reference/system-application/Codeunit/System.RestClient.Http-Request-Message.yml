@@ -1,0 +1,145 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.RestClient."Http Request Message"
+alId: ID 2352
+namespace: System.RestClient
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.RestClient
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetHttpMethod(Method: Text)'
+    parameters:
+    - id: Method
+      description: The HTTP method to use. Valid options are GET, POST, PATCH, PUT, DELETE, HEAD, OPTIONS
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the HTTP method or the HttpRequestMessage object.
+  remarks: Default method is GET
+  name: SetHttpMethod
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.SetHttpMethod(Text)
+- syntax:
+    content: 'procedure SetHttpMethod(Method: Enum "Http Method")'
+    parameters:
+    - id: Method
+      description: The HTTP method to use.
+      parameterType:
+        internalReference: O:Enum::System#RestClient#Http_Method
+        name: System.RestClient."Http Method"
+        isExternal: false
+  summary: Sets the HTTP method for the HttpRequestMessage object.
+  remarks: Default method is GET
+  name: SetHttpMethod
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.SetHttpMethod(Enum::System#RestClient#Http_Method)
+- syntax:
+    content: 'procedure GetHttpMethod(): Text'
+    return:
+      description: The HTTP method for the HttpRequestMessage object.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the HTTP method for the HttpRequestMessage object.
+  name: GetHttpMethod
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.GetHttpMethod:Text
+- syntax:
+    content: 'procedure SetRequestUri(Uri: Text)'
+    parameters:
+    - id: Uri
+      description: The Uri to use for the HTTP request.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the Uri used for the HttpRequestMessage object.
+  remarks: The valued must not be a relative URI.
+  name: SetRequestUri
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.SetRequestUri(Text)
+- syntax:
+    content: 'procedure GetRequestUri(): Text'
+    return:
+      description: The Uri used for the HttpRequestMessage object.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the Uri used for the HttpRequestMessage object.
+  name: GetRequestUri
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.GetRequestUri:Text
+- syntax:
+    content: 'procedure SetHeader(HeaderName: Text, HeaderValue: Text)'
+    parameters:
+    - id: HeaderName
+      description: The name of the header to add.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HeaderValue
+      description: The value of the header to add.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets a new value for an existing header of the Http Request object, or addds the header if it does not already exist.
+  name: SetHeader
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.SetHeader(Text,Text)
+- syntax:
+    content: 'procedure SetHeader(HeaderName: Text, HeaderValue: SecretText)'
+    parameters:
+    - id: HeaderName
+      description: The name of the header to add.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HeaderValue
+      description: The value of the header to add.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Sets a new value for an existing header of the Http Request object, or addds the header if it does not already exist.
+  name: SetHeader
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.SetHeader(Text,SecretText)
+- syntax:
+    content: 'procedure SetHttpRequestMessage(var RequestMessage: HttpRequestMessage)'
+    parameters:
+    - id: RequestMessage
+      description: The HttpRequestMessage to set.
+      parameterType:
+        name: HttpRequestMessage
+        isExternal: true
+  summary: Sets the HttpRequestMessage that is represented by the HttpRequestMessage object.
+  name: SetHttpRequestMessage
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.SetHttpRequestMessage(HttpRequestMessage@)
+- syntax:
+    content: 'procedure GetHttpRequestMessage(): HttpRequestMessage'
+    return:
+      description: The HttpRequestMessage that is represented by the HttpRequestMessage object.
+      returnType:
+        name: HttpRequestMessage
+        isExternal: true
+  summary: Gets the HttpRequestMessage that is represented by the HttpRequestMessage object.
+  name: GetHttpRequestMessage
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.GetHttpRequestMessage:HttpRequestMessage
+- syntax:
+    content: 'procedure SetContent(HttpContent: Codeunit "Http Content")'
+    parameters:
+    - id: HttpContent
+      description: The Http Content object to set.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Sets the content of the HttpRequestMessage that is represented by the HttpRequestMessage object.
+  name: SetContent
+  uid: M:Codeunit::System#RestClient#Http_Request_Message.SetContent(Codeunit::System#RestClient#Http_Content)
+commentId: O:Codeunit::System#RestClient#Http Request Message
+summary: Holder object for the HTTP request data.
+name: '"Http Request Message"'
+uid: O:Codeunit::System#RestClient#Http_Request_Message

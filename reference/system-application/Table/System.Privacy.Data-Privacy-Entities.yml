@@ -1,0 +1,134 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Data Privacy Entities"
+alId: ID 1180
+namespace: System.Privacy
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Caption
+  value: Data Subjects
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Table No."'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Table_No#
+- type:
+    name: Text[80]
+    isExternal: true
+  name: '"Table Caption"'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Table_Caption[80]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Key Field No."'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Key_Field_No#
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"Key Field Name"'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Key_Field_Name[30]
+- type:
+    name: Blob
+    isExternal: true
+  name: '"Entity Filter"'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Entity_Filter
+- type:
+    name: Boolean
+    isExternal: true
+  name: Include
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Include
+- type:
+    name: Integer
+    isExternal: true
+  name: Fields
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Fields
+- type:
+    name: Option
+    isExternal: true
+  name: Status
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Status
+- type:
+    name: Boolean
+    isExternal: true
+  name: Reviewed
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Reviewed
+- type:
+    name: Option
+    isExternal: true
+  name: '"Status 2"'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Status_2
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Page No."'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Page_No#
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Similar Fields Reviewed"'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Similar_Fields_Reviewed
+- type:
+    name: Text[120]
+    isExternal: true
+  name: '"Similar Fields Label"'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Similar_Fields_Label[120]
+- type:
+    name: Option
+    isExternal: true
+  name: '"Default Data Sensitivity"'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Default_Data_Sensitivity
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Privacy Blocked Field No."'
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.Privacy_Blocked_Field_No#
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Privacy#Data_Privacy_Entities.SystemRowVersion
+commentId: O:Table::System#Privacy#Data Privacy Entities
+summary: Displays a list of data privacy entities.
+name: '"Data Privacy Entities"'
+uid: O:Table::System#Privacy#Data_Privacy_Entities

@@ -1,0 +1,84 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Query Navigation Validation"
+alId: ID 2889
+namespace: System.Tooling
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: ObsoleteReason
+  value: The SmartList Designer is not supported in Business Central.
+  promoted: false
+- name: ObsoleteTag
+  value: "23.0"
+  promoted: false
+- name: ObsoleteState
+  value: Removed
+  promoted: false
+fields:
+- description: Indicates the success/failure of the validation
+  type:
+    name: Boolean
+    isExternal: true
+  name: Valid
+  uid: F:Table::System#Tooling#Query_Navigation_Validation.Valid
+- description: Specifies a detailed message describing why the validation failed.
+  type:
+    name: Text[500]
+    isExternal: true
+  name: Reason
+  uid: F:Table::System#Tooling#Query_Navigation_Validation.Reason[500]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Tooling#Query_Navigation_Validation.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Tooling#Query_Navigation_Validation.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Tooling#Query_Navigation_Validation.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Tooling#Query_Navigation_Validation.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Tooling#Query_Navigation_Validation.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Tooling#Query_Navigation_Validation.SystemRowVersion
+commentId: O:Table::System#Tooling#Query Navigation Validation
+summary: Contains details about the results of validating Query Navigation data.
+name: '"Query Navigation Validation"'
+obsoletion:
+  state: removed
+  reason: The SmartList Designer is not supported in Business Central.
+  version: "23.0"
+uid: O:Table::System#Tooling#Query_Navigation_Validation

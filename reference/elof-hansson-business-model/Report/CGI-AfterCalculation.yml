@@ -1,0 +1,67 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI AfterCalculation"'
+alId: ID 60306
+baseKind: Report
+kind: Report
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Report](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-report-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Action for next Status
+  promoted: false
+- name: DefaultLayout
+  value: RDLC
+  promoted: false
+- name: RDLCLayout
+  value: ./src/Layouts/CGI AfterCalculation.rdlc
+  promoted: false
+- name: UsageCategory
+  value: ReportsAndAnalysis
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Action for next Status
+  promoted: false
+- name: DefaultLayout
+  value: RDLC
+  promoted: false
+- name: RDLCLayout
+  value: ./src/Layouts/CGI AfterCalculation.rdlc
+  promoted: false
+- name: UsageCategory
+  value: ReportsAndAnalysis
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure CheckCalcStatus(var CGICalculationHeader: Record "CGI Calculation Header", var ReasonDesc: Text)'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    - id: ReasonDesc
+      parameterType:
+        name: Text
+        isExternal: true
+  name: CheckCalcStatus
+  uid: M:Report::CGI_AfterCalculation.CheckCalcStatus(CGI_Calculation_Header@,Text@)
+- syntax:
+    content: 'procedure SetCalculationNo(pCalculationNo: Code[20])'
+    parameters:
+    - id: pCalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: SetCalculationNo
+  uid: M:Report::CGI_AfterCalculation.SetCalculationNo(Code[20])
+commentId: O:Report::CGI AfterCalculation
+name: '"CGI AfterCalculation"'
+uid: O:Report::CGI_AfterCalculation

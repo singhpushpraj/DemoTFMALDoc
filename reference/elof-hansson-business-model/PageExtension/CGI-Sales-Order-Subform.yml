@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Sales Order Subform"'
+alId: ID 60333
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Sales Order Subform
+summary: Pageextension CGI Sales Order Subform (ID 60333) extends page Sales Order Subform
+name: '"CGI Sales Order Subform"'
+uid: O:PageExtension::CGI_Sales_Order_Subform

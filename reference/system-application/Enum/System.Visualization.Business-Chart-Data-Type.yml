@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Visualization."Business Chart Data Type"
+alId: ID 479
+namespace: System.Visualization
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Visualization
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: String type, corresponds to 'System.String'
+  name: String
+  uid: E:Enum::System#Visualization#Business_Chart_Data_Type.String
+- summary: Integer type, corresponds to 'System.Int32'
+  name: Integer
+  uid: E:Enum::System#Visualization#Business_Chart_Data_Type.Integer
+- summary: Decimal type, corresponds to 'System.Decimal'
+  name: Decimal
+  uid: E:Enum::System#Visualization#Business_Chart_Data_Type.Decimal
+- summary: DateTime type, corresponds to 'System.DateTime'
+  name: DateTime
+  uid: E:Enum::System#Visualization#Business_Chart_Data_Type.DateTime
+commentId: O:Enum::System#Visualization#Business Chart Data Type
+summary: Contains the possible data types that business chart can show.
+name: '"Business Chart Data Type"'
+uid: O:Enum::System#Visualization#Business_Chart_Data_Type

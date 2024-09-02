@@ -1,0 +1,44 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Privacy Notice"
+alId: ID 1563
+namespace: System.Privacy
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Please review terms and conditions
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+methods:
+- syntax:
+    content: 'procedure GetUserApprovalState(): Enum "Privacy Notice Approval State"'
+    return:
+      returnType:
+        internalReference: O:Enum::System#Privacy#Privacy_Notice_Approval_State
+        name: System.Privacy."Privacy Notice Approval State"
+        isExternal: false
+  name: GetUserApprovalState
+  uid: M:Page::System#Privacy#Privacy_Notice.GetUserApprovalState:Enum::System#Privacy#Privacy_Notice_Approval_State
+- syntax:
+    content: procedure HideAgreeDisagreeActions()
+  name: HideAgreeDisagreeActions
+  uid: M:Page::System#Privacy#Privacy_Notice.HideAgreeDisagreeActions
+commentId: O:Page::System#Privacy#Privacy Notice
+name: '"Privacy Notice"'
+uid: O:Page::System#Privacy#Privacy_Notice

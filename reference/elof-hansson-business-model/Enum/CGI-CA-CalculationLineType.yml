@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA CalculationLineType"'
+alId: ID 60301
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Sales
+  uid: E:Enum::CGI_CA_CalculationLineType.Sales
+- name: Purchase
+  uid: E:Enum::CGI_CA_CalculationLineType.Purchase
+- name: Freight
+  uid: E:Enum::CGI_CA_CalculationLineType.Freight
+- name: '"Other Costs"'
+  uid: E:Enum::CGI_CA_CalculationLineType.Other_Costs
+- name: '"Other Revenues"'
+  uid: E:Enum::CGI_CA_CalculationLineType.Other_Revenues
+- name: Agent
+  uid: E:Enum::CGI_CA_CalculationLineType.Agent
+- name: '"Item Ledger Entry"'
+  uid: E:Enum::CGI_CA_CalculationLineType.Item_Ledger_Entry
+- name: Reservation
+  uid: E:Enum::CGI_CA_CalculationLineType.Reservation
+commentId: O:Enum::CGI CA CalculationLineType
+name: '"CGI CA CalculationLineType"'
+uid: O:Enum::CGI_CA_CalculationLineType

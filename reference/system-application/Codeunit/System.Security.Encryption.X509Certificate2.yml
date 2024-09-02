@@ -1,0 +1,671 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.X509Certificate2
+alId: ID 1286
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use VerifyCertificate with SecretText data type for Password.,24.0)]'
+    content: 'procedure VerifyCertificate(var CertBase64Value: Text, Password: Text, X509ContentType: Enum "X509 Content Type"): Boolean'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509ContentType
+      description: Specifies the format of an X.509 certificate
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#X509_Content_Type
+        name: System.Security.Encryption."X509 Content Type"
+        isExternal: false
+    return:
+      description: True if certificate is verified
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifes that a certificate is initialized and can be exported.
+  name: VerifyCertificate
+  obsoletion:
+    state: pending
+    reason: Use VerifyCertificate with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.VerifyCertificate(Text@,Text,Enum::System#Security#Encryption#X509_Content_Type):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificateFriendlyName with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificateFriendlyName(CertBase64Value: Text, Password: Text, var FriendlyName: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FriendlyName
+      description: Represents certificate Friendly Name
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the friendly name of the certificate based on it's Base64 value.
+  name: GetCertificateFriendlyName
+  obsoletion:
+    state: pending
+    reason: Use GetCertificateFriendlyName with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateFriendlyName(Text,Text,Text@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificateSubject with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificateSubject(CertBase64Value: Text, Password: Text, var Subject: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Subject
+      description: Certificate subject distinguished name
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the subject of the certificate based on it's Base64 value.
+  name: GetCertificateSubject
+  obsoletion:
+    state: pending
+    reason: Use GetCertificateSubject with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSubject(Text,Text,Text@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificateThumbprint with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificateThumbprint(CertBase64Value: Text, Password: Text, var Thumbprint: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Thumbprint
+      description: Certificate Thumbprint
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the thumbprint of the certificate based on it's Base64 value.
+  name: GetCertificateThumbprint
+  obsoletion:
+    state: pending
+    reason: Use GetCertificateThumbprint with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateThumbprint(Text,Text,Text@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificateIssuer with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificateIssuer(CertBase64Value: Text, Password: Text, var Issuer: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Issuer
+      description: Certificate Issuer
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the issuer of the certificate based on it's Base64 value.
+  name: GetCertificateIssuer
+  obsoletion:
+    state: pending
+    reason: Use GetCertificateIssuer with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateIssuer(Text,Text,Text@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificateExpiration with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificateExpiration(CertBase64Value: Text, Password: Text, var Expiration: DateTime)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Expiration
+      description: Certificate Expiration Date
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Specifies the expiration date of the certificate based on it's Base64 value.
+  name: GetCertificateExpiration
+  obsoletion:
+    state: pending
+    reason: Use GetCertificateExpiration with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateExpiration(Text,Text,DateTime@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificateNotBefore with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificateNotBefore(CertBase64Value: Text, Password: Text, var NotBefore: DateTime)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: NotBefore
+      description: Certificate NotBefore Date
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Specifies the NotBefore date of the certificate based on it's Base64 value.
+  name: GetCertificateNotBefore
+  obsoletion:
+    state: pending
+    reason: Use GetCertificateNotBefore with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateNotBefore(Text,Text,DateTime@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use HasPrivateKey with SecretText data type for Password.,24.0)]'
+    content: 'procedure HasPrivateKey(CertBase64Value: Text, Password: Text): Boolean'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the certificate has private key
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the certificate has a private key based on it's Base64 value.
+  name: HasPrivateKey
+  obsoletion:
+    state: pending
+    reason: Use HasPrivateKey with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.HasPrivateKey(Text,Text):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificatePropertiesAsJson with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificatePropertiesAsJson(CertBase64Value: Text, Password: Text, var CertPropertyJson: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CertPropertyJson
+      description: Certificate details in json
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the certificate details in Json object
+  name: GetCertificatePropertiesAsJson
+  obsoletion:
+    state: pending
+    reason: Use GetCertificatePropertiesAsJson with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePropertiesAsJson(Text,Text,Text@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificatePublicKey with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificatePublicKey(CertBase64Value: Text, Password: Text): Text'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets Certificate public key
+  name: GetCertificatePublicKey
+  obsoletion:
+    state: pending
+    reason: Use GetCertificatePublicKey with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePublicKey(Text,Text):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificatePrivateKey with SecretText data type for Password and return value.,24.0)]'
+    content: 'procedure GetCertificatePrivateKey(CertBase64Value: Text, Password: Text): Text'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets Certificate private key
+  name: GetCertificatePrivateKey
+  obsoletion:
+    state: pending
+    reason: Use GetCertificatePrivateKey with SecretText data type for Password and return value.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePrivateKey(Text,Text):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificateSerialNumber with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificateSerialNumber(CertBase64Value: Text, Password: Text, var SerialNumber: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SerialNumber
+      description: Certificate serial number
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Gets Certificate serial number
+  name: GetCertificateSerialNumber
+  obsoletion:
+    state: pending
+    reason: Use GetCertificateSerialNumber with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSerialNumber(Text,Text,Text@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetCertificateSerialNumberAsASCII with SecretText data type for Password.,24.0)]'
+    content: 'procedure GetCertificateSerialNumberAsASCII(CertBase64Value: Text, Password: Text, var SerialNumberASCII: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SerialNumberASCII
+      description: Certificate serial number as ascii
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Gets Certificate serial number as ASCII
+  name: GetCertificateSerialNumberAsASCII
+  obsoletion:
+    state: pending
+    reason: Use GetCertificateSerialNumberAsASCII with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSerialNumberAsASCII(Text,Text,Text@)
+- syntax:
+    content: 'procedure VerifyCertificate(var CertBase64Value: Text, Password: SecretText, X509ContentType: Enum "X509 Content Type"): Boolean'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: X509ContentType
+      description: Specifies the format of an X.509 certificate
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#X509_Content_Type
+        name: System.Security.Encryption."X509 Content Type"
+        isExternal: false
+    return:
+      description: True if certificate is verified
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifes that a certificate is initialized and can be exported.
+  name: VerifyCertificate
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.VerifyCertificate(Text@,SecretText,Enum::System#Security#Encryption#X509_Content_Type):Boolean
+- syntax:
+    content: 'procedure GetCertificateFriendlyName(CertBase64Value: Text, Password: SecretText, var FriendlyName: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: FriendlyName
+      description: Represents certificate Friendly Name
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the friendly name of the certificate based on it's Base64 value.
+  name: GetCertificateFriendlyName
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateFriendlyName(Text,SecretText,Text@)
+- syntax:
+    content: 'procedure GetCertificateSubject(CertBase64Value: Text, Password: SecretText, var Subject: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Subject
+      description: Certificate subject distinguished name
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the subject of the certificate based on it's Base64 value.
+  name: GetCertificateSubject
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSubject(Text,SecretText,Text@)
+- syntax:
+    content: 'procedure GetCertificateThumbprint(CertBase64Value: Text, Password: SecretText, var Thumbprint: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Thumbprint
+      description: Certificate Thumbprint
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the thumbprint of the certificate based on it's Base64 value.
+  name: GetCertificateThumbprint
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateThumbprint(Text,SecretText,Text@)
+- syntax:
+    content: 'procedure GetCertificateIssuer(CertBase64Value: Text, Password: SecretText, var Issuer: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Issuer
+      description: Certificate Issuer
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the issuer of the certificate based on it's Base64 value.
+  name: GetCertificateIssuer
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateIssuer(Text,SecretText,Text@)
+- syntax:
+    content: 'procedure GetCertificateExpiration(CertBase64Value: Text, Password: SecretText, var Expiration: DateTime)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Expiration
+      description: Certificate Expiration Date
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Specifies the expiration date of the certificate based on it's Base64 value.
+  name: GetCertificateExpiration
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateExpiration(Text,SecretText,DateTime@)
+- syntax:
+    content: 'procedure GetCertificateNotBefore(CertBase64Value: Text, Password: SecretText, var NotBefore: DateTime)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: NotBefore
+      description: Certificate NotBefore Date
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Specifies the NotBefore date of the certificate based on it's Base64 value.
+  name: GetCertificateNotBefore
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateNotBefore(Text,SecretText,DateTime@)
+- syntax:
+    content: 'procedure HasPrivateKey(CertBase64Value: Text, Password: SecretText): Boolean'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      description: True if the certificate has private key
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the certificate has a private key based on it's Base64 value.
+  name: HasPrivateKey
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.HasPrivateKey(Text,SecretText):Boolean
+- syntax:
+    content: 'procedure GetCertificatePropertiesAsJson(CertBase64Value: Text, Password: SecretText, var CertPropertyJson: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: CertPropertyJson
+      description: Certificate details in json
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies the certificate details in Json object
+  name: GetCertificatePropertiesAsJson
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePropertiesAsJson(Text,SecretText,Text@)
+- syntax:
+    content: 'procedure GetCertificatePublicKey(CertBase64Value: Text, Password: SecretText): Text'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets Certificate public key
+  name: GetCertificatePublicKey
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePublicKey(Text,SecretText):Text
+- syntax:
+    content: 'procedure GetCertificatePrivateKey(CertBase64Value: Text, Password: SecretText): SecretText'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: SecretText
+        isExternal: true
+  summary: Gets Certificate private key
+  name: GetCertificatePrivateKey
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePrivateKey(Text,SecretText):SecretText
+- syntax:
+    content: 'procedure GetCertificateSerialNumber(CertBase64Value: Text, Password: SecretText, var SerialNumber: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: SerialNumber
+      description: Certificate serial number
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Gets Certificate serial number
+  name: GetCertificateSerialNumber
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSerialNumber(Text,SecretText,Text@)
+- syntax:
+    content: 'procedure GetCertificateSerialNumberAsASCII(CertBase64Value: Text, Password: SecretText, var SerialNumberASCII: Text)'
+    parameters:
+    - id: CertBase64Value
+      description: Represents the certificate value encoded using the Base64 algorithm
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Certificate Password
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: SerialNumberASCII
+      description: Certificate serial number as ascii
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Gets Certificate serial number as ASCII
+  name: GetCertificateSerialNumberAsASCII
+  uid: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSerialNumberAsASCII(Text,SecretText,Text@)
+commentId: O:Codeunit::System#Security#Encryption#X509Certificate2
+summary: Provides helper functions to work with the X509Certificate2 class.
+name: X509Certificate2
+uid: O:Codeunit::System#Security#Encryption#X509Certificate2

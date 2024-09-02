@@ -1,0 +1,44 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."Storage Service API Version"
+alId: ID 9060
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: '"2020-10-02"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2020-10-02
+- name: '"2020-12-06"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2020-12-06
+- name: '"2021-02-12"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2021-02-12
+- name: '"2021-04-10"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2021-04-10
+- name: '"2021-06-08"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2021-06-08
+- name: '"2021-08-06"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2021-08-06
+- name: '"2021-10-04"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2021-10-04
+- name: '"2021-12-02"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2021-12-02
+- name: '"2022-11-02"'
+  uid: E:Enum::System#Azure#Storage#Storage_Service_API_Version.2022-11-02
+commentId: O:Enum::System#Azure#Storage#Storage Service API Version
+summary: >-
+  Defines the available API versions for Azure Storage Services.
+
+  See: https://go.microsoft.com/fwlink/?linkid=2210598
+name: '"Storage Service API Version"'
+uid: O:Enum::System#Azure#Storage#Storage_Service_API_Version

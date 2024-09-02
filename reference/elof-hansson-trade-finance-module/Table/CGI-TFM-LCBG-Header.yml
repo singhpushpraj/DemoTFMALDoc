@@ -1,0 +1,522 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG Header"'
+alId: ID 70300
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: TFM-LCBG Header
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: LookupPageId
+  value: CGI TFM Letter of Cr. List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_Letter_of_Cr#_List
+    name: '"CGI TFM Letter of Cr. List"'
+    isExternal: false
+- name: DrillDownPageId
+  value: CGI TFM Letter of Cr. List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_Letter_of_Cr#_List
+    name: '"CGI TFM Letter of Cr. List"'
+    isExternal: false
+methods:
+- syntax:
+    content: procedure CheckAdvisingRefNo()
+  summary: To Check Advising Reference No.
+  name: CheckAdvisingRefNo
+  uid: M:Table::CGI_TFM_LCBG_Header.CheckAdvisingRefNo
+- syntax:
+    content: procedure CheckOpeningRefNo()
+  summary: To Check Opening Reference No.
+  name: CheckOpeningRefNo
+  uid: M:Table::CGI_TFM_LCBG_Header.CheckOpeningRefNo
+- syntax:
+    content: procedure CheckConfirmingRefNo()
+  summary: To Check Confirming Reference No.
+  name: CheckConfirmingRefNo
+  uid: M:Table::CGI_TFM_LCBG_Header.CheckConfirmingRefNo
+- syntax:
+    content: procedure CheckCounterRefNo()
+  summary: To Check Counter Reference No.
+  name: CheckCounterRefNo
+  uid: M:Table::CGI_TFM_LCBG_Header.CheckCounterRefNo
+- syntax:
+    content: procedure InitRecord()
+  summary: To init records of table CGI TFM LCBG Header
+  name: InitRecord
+  uid: M:Table::CGI_TFM_LCBG_Header.InitRecord
+- syntax:
+    content: procedure InitSeries()
+  summary: To Init No series
+  name: InitSeries
+  uid: M:Table::CGI_TFM_LCBG_Header.InitSeries
+- syntax:
+    content: procedure SeriesManualTest()
+  summary: To check Series Manual Test of no. series
+  name: SeriesManualTest
+  uid: M:Table::CGI_TFM_LCBG_Header.SeriesManualTest
+- syntax:
+    content: procedure CalcExchangeRate()
+  summary: Calculate exchange rate
+  name: CalcExchangeRate
+  uid: M:Table::CGI_TFM_LCBG_Header.CalcExchangeRate
+- syntax:
+    content: procedure LCMandatoryFieldsForExport()
+  summary: To Check Letter of Credit Export mandatory fields
+  name: LCMandatoryFieldsForExport
+  uid: M:Table::CGI_TFM_LCBG_Header.LCMandatoryFieldsForExport
+- syntax:
+    content: procedure LCMandatoryFieldsForImport()
+  summary: To Check Letter of Credit Import mandatory fields
+  name: LCMandatoryFieldsForImport
+  uid: M:Table::CGI_TFM_LCBG_Header.LCMandatoryFieldsForImport
+- syntax:
+    content: procedure BGMandatoryFields()
+  summary: To Check Bank Guarantee mandatory fields
+  name: BGMandatoryFields
+  uid: M:Table::CGI_TFM_LCBG_Header.BGMandatoryFields
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"LCBG No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.LCBG_No#[20]
+- description: >-
+    Field Type is Enum
+
+    Values are "Letter of Credit" ,"Bank Guarantee"
+  type:
+    internalReference: O:Enum::CGI_TFM_LCBG_Type
+    name: '"CGI TFM LCBG Type"'
+    isExternal: false
+  name: Type
+  uid: F:Table::CGI_TFM_LCBG_Header.Type
+- description: >-
+    Field "LC Type" is enum 
+
+    Values are Export, Import
+  type:
+    internalReference: O:Enum::CGI_TFM_LCBG_LCType
+    name: '"CGI TFM LCBG LCType"'
+    isExternal: false
+  name: '"LC Type"'
+  uid: F:Table::CGI_TFM_LCBG_Header.LC_Type
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Customer No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Customer_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Customer Name"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Customer_Name[100]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Country Code"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Country_Code[10]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Advising Bank No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Advising_Bank_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Advising Bank Name"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Advising_Bank_Name[100]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Advising Country Code"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Advising_Country_Code[10]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Advising Reference No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Advising_Reference_No#[50]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Opening Bank No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Opening_Bank_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Opening Bank Name"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Opening_Bank_Name[100]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Opening Country Code"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Opening_Country_Code[10]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Opening Bank Reference No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Opening_Bank_Reference_No#[50]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Confirming Bank No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Confirming_Bank_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Confirming Bank Name"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Confirming_Bank_Name[100]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Confirming Country Code"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Confirming_Country_Code[10]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Confirming Reference No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Confirming_Reference_No#[50]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Vendor No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Vendor_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Vendor Name"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Vendor_Name[100]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Vendor Country Code"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Vendor_Country_Code[10]
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_Status
+    name: '"CGI TFM LCBG Status"'
+    isExternal: false
+  name: Status
+  uid: F:Table::CGI_TFM_LCBG_Header.Status
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Status Modified by"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Status_Modified_by[100]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Status Modified DateTime"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Status_Modified_DateTime
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Created By"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Created_By[100]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Created DateTime"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Created_DateTime
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Modified By"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Modified_By[100]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Modified DateTime"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Modified_DateTime
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_SanctionClause
+    name: '"CGI TFM LCBG SanctionClause"'
+    isExternal: false
+  name: '"Sanction Clause"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Sanction_Clause
+- type:
+    name: Code[10]
+    isExternal: true
+  name: Division
+  uid: F:Table::CGI_TFM_LCBG_Header.Division[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: Value
+  uid: F:Table::CGI_TFM_LCBG_Header.Value
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Currency Code"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Currency_Code[10]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Value Deviation"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Value_Deviation[50]
+- type:
+    name: Code[100]
+    isExternal: true
+  name: Tenor
+  uid: F:Table::CGI_TFM_LCBG_Header.Tenor[100]
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_SanctionClause
+    name: '"CGI TFM LCBG SanctionClause"'
+    isExternal: false
+  name: Confirmed
+  uid: F:Table::CGI_TFM_LCBG_Header.Confirmed
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Confirming Fee"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Confirming_Fee
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_SanctionClause
+    name: '"CGI TFM LCBG SanctionClause"'
+    isExternal: false
+  name: '"TF recommends conf"'
+  uid: F:Table::CGI_TFM_LCBG_Header.TF_recommends_conf
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_SanctionClause
+    name: '"CGI TFM LCBG SanctionClause"'
+    isExternal: false
+  name: '"Payable in Sweden"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Payable_in_Sweden
+- type:
+    name: Date
+    isExternal: true
+  name: '"Date of Expiry"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Date_of_Expiry
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Place of Expiry"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Place_of_Expiry[100]
+- type:
+    name: Date
+    isExternal: true
+  name: '"Date of shipping"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Date_of_shipping
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Stale days"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Stale_days[50]
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_SanctionClause
+    name: '"CGI TFM LCBG SanctionClause"'
+    isExternal: false
+  name: '"Partial Delivery"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Partial_Delivery
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Quantity Deviation"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Quantity_Deviation[50]
+- type:
+    name: Date
+    isExternal: true
+  name: '"Rec/Opened"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Rec/Opened
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_Bank_Charge
+    name: '"CGI TFM LCBG Bank Charge"'
+    isExternal: false
+  name: '"Bank Charges"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Bank_Charges
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_Beneficiary_Type
+    name: '"CGI TFM LCBG Beneficiary Type"'
+    isExternal: false
+  name: '"Beneficiary Type"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Beneficiary_Type
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Beneficiary No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Beneficiary_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Beneficiary Name"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Beneficiary_Name[100]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Beneficiary Country Code"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Beneficiary_Country_Code[10]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Counter Bank No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Counter_Bank_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Counter Bank Name"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Counter_Bank_Name[100]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Counter Country Code"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Counter_Country_Code[10]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Counter Reference No"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Counter_Reference_No[50]
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_BankGuaranteeType
+    name: '"CGI TFM LCBG BankGuaranteeType"'
+    isExternal: false
+  name: '"Bank Guarantee Type"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Bank_Guarantee_Type
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Currency Rate"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Currency_Rate
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Value LCY"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Value_LCY
+- type:
+    internalReference: O:Enum::CGI_TFM_LCBG_Insurance
+    name: '"CGI TFM LCBG Insurance"'
+    isExternal: false
+  name: Insurance
+  uid: F:Table::CGI_TFM_LCBG_Header.Insurance
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Insurance Premium"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Insurance_Premium
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Total cost SEK"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Total_cost_SEK
+- type:
+    name: Date
+    isExternal: true
+  name: '"Latest date of claims"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Latest_date_of_claims
+- type:
+    name: Date
+    isExternal: true
+  name: '"Cancelled Date"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Cancelled_Date
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"No. Series"'
+  uid: F:Table::CGI_TFM_LCBG_Header.No#_Series[20]
+- type:
+    name: Guid
+    isExternal: true
+  name: '"LCBG GUID"'
+  uid: F:Table::CGI_TFM_LCBG_Header.LCBG_GUID
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Line Calculation No."'
+  uid: F:Table::CGI_TFM_LCBG_Header.Line_Calculation_No#[250]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Imported Data"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Imported_Data
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Advising Bank TFM SWIFT"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Advising_Bank_TFM_SWIFT[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Opening Bank TFM SWIFT"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Opening_Bank_TFM_SWIFT[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Confirming Bank TFM SWIFT"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Confirming_Bank_TFM_SWIFT[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Counter Bank TFM SWIFT"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Counter_Bank_TFM_SWIFT[20]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Total Sales Invoice Amt"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Total_Sales_Invoice_Amt
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Total Purchase Invoice Amt"'
+  uid: F:Table::CGI_TFM_LCBG_Header.Total_Purchase_Invoice_Amt
+- type:
+    name: Boolean
+    isExternal: true
+  name: CurrencyAmountParsed
+  uid: F:Table::CGI_TFM_LCBG_Header.CurrencyAmountParsed
+- type:
+    name: Boolean
+    isExternal: true
+  name: DateOfExpiryParsed
+  uid: F:Table::CGI_TFM_LCBG_Header.DateOfExpiryParsed
+- type:
+    name: Boolean
+    isExternal: true
+  name: DateOfShippingParsed
+  uid: F:Table::CGI_TFM_LCBG_Header.DateOfShippingParsed
+- type:
+    name: Boolean
+    isExternal: true
+  name: ValueDeviationParsed
+  uid: F:Table::CGI_TFM_LCBG_Header.ValueDeviationParsed
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_TFM_LCBG_Header.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_TFM_LCBG_Header.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_TFM_LCBG_Header.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_TFM_LCBG_Header.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_TFM_LCBG_Header.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_TFM_LCBG_Header.SystemRowVersion
+commentId: O:Table::CGI TFM LCBG Header
+summary: Contains CGI TFM LCBG Header records
+name: '"CGI TFM LCBG Header"'
+uid: O:Table::CGI_TFM_LCBG_Header

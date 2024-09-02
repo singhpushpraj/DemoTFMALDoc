@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Blank Role Center"
+alId: ID 8999
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: PageType
+  value: RoleCenter
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Blank Role Center
+summary: Empty role center to use in case no other role center is present when system is initializing.
+name: '"Blank Role Center"'
+uid: O:Page::System#Environment#Configuration#Blank_Role_Center

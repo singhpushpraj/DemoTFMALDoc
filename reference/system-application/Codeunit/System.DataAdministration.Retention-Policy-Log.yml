@@ -1,0 +1,101 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Log"
+alId: ID 3908
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure LogError(Category: Enum "Retention Policy Log Category", Message: Text[2048])'
+    parameters:
+    - id: Category
+      description: The category for which to log the message.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Retention_Policy_Log_Category
+        name: System.DataAdministration."Retention Policy Log Category"
+        isExternal: false
+    - id: Message
+      description: The message to log.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: >-
+    LogError will create an entry in the Retention Policy Log Entry table with Message Type set to Error.
+
+    An error message will be displayed to the user and any changes in the current transaction will be reverted.
+  name: LogError
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Log.LogError(Enum::System#DataAdministration#Retention_Policy_Log_Category,Text[2048])
+- syntax:
+    content: 'procedure LogError(Category: Enum "Retention Policy Log Category", Message: Text[2048], DisplayError: Boolean)'
+    parameters:
+    - id: Category
+      description: The category for which to log the message.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Retention_Policy_Log_Category
+        name: System.DataAdministration."Retention Policy Log Category"
+        isExternal: false
+    - id: Message
+      description: The message to log.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    - id: DisplayError
+      description: Specifies whether the error is displayed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    LogError will create an entry in the Retention Policy Log Entry table with Message Type set to Error.
+
+    If DisplayError is true, an error message will be displayed to the user and any changes in the current transaction will be rolled back.
+
+    If DisplayError is false, no error is displayed, the code continues to run, and no changes are reverted.
+  name: LogError
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Log.LogError(Enum::System#DataAdministration#Retention_Policy_Log_Category,Text[2048],Boolean)
+- syntax:
+    content: 'procedure LogWarning(Category: Enum "Retention Policy Log Category", Message: Text[2048])'
+    parameters:
+    - id: Category
+      description: The category for which to log the message.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Retention_Policy_Log_Category
+        name: System.DataAdministration."Retention Policy Log Category"
+        isExternal: false
+    - id: Message
+      description: The message to log.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: LogWarning will create an entry in the Retention Policy Log Entry table with Message Type set to Warning. No message is displayed to the user.
+  name: LogWarning
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Log.LogWarning(Enum::System#DataAdministration#Retention_Policy_Log_Category,Text[2048])
+- syntax:
+    content: 'procedure LogInfo(Category: Enum "Retention Policy Log Category", Message: Text[2048])'
+    parameters:
+    - id: Category
+      description: The category for which to log the message.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Retention_Policy_Log_Category
+        name: System.DataAdministration."Retention Policy Log Category"
+        isExternal: false
+    - id: Message
+      description: The message to log.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: LogInfo will create an entry in the Retention Policy Log Entry table with Message Type set to Info. No message is displayed to the user.
+  name: LogInfo
+  uid: M:Codeunit::System#DataAdministration#Retention_Policy_Log.LogInfo(Enum::System#DataAdministration#Retention_Policy_Log_Category,Text[2048])
+commentId: O:Codeunit::System#DataAdministration#Retention Policy Log
+summary: This codeunit provides functions for logging error, warning, and informational messages to the Retention Policy Log Entry table.
+name: '"Retention Policy Log"'
+uid: O:Codeunit::System#DataAdministration#Retention_Policy_Log

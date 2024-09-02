@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calc. Reservation Lines"'
+alId: ID 60326
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Calculation_Line
+  name: '"CGI Calculation Line"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#all'
+  promoted: false
+- name: Caption
+  value: CalculationItemLines
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: PopulateAllFields
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: "60301"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Calculation_Line
+    name: '"CGI Calculation Line"'
+    isExternal: false
+methods:
+- syntax:
+    content: procedure _ShowReservation()
+  name: _ShowReservation
+  uid: M:Page::CGI_Calc#_Reservation_Lines._ShowReservation
+commentId: O:Page::CGI Calc# Reservation Lines
+name: '"CGI Calc. Reservation Lines"'
+uid: O:Page::CGI_Calc#_Reservation_Lines

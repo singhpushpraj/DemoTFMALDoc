@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Reten. Pol. Deleting"
+namespace: System.DataAdministration
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure DeleteRecords(var RecordRef: RecordRef, var RetenPolDeletingParam: Record "Reten. Pol. Deleting Param" temporary)'
+    parameters:
+    - id: RecordRef
+      description: The record reference with expired records for the retention policy.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RetenPolDeletingParam
+      description: The parameter table for this run of apply retention policy.
+      parameterType:
+        name: Record "Reten. Pol. Deleting Param" temporary
+        isExternal: true
+  summary: This function deletes the expired records for the retention policy according to the settings in the parameter table.
+  name: DeleteRecords
+  uid: M:Interface::System#DataAdministration#Reten#_Pol#_Deleting.DeleteRecords(RecordRef@,Reten#_Pol#_Deleting_Param@)
+commentId: O:Interface::System#DataAdministration#Reten# Pol# Deleting
+summary: The Reten. Pol. Deleting interface is used to set filters on the table for which a retention policy is applied.
+name: '"Reten. Pol. Deleting"'
+uid: O:Interface::System#DataAdministration#Reten#_Pol#_Deleting

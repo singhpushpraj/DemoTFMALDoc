@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Calculation Card"'
+alId: ID 70303
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  internalReference: O:Page::CGI_Calculation_Card
+  name: '"CGI Calculation Card"'
+  isExternal: false
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI TFM Calculation Card
+summary: >-
+  pageextension 70303 CGI TFM Calculation Card extends CGI Calculation Card
+
+  contains TFM related fields
+name: '"CGI TFM Calculation Card"'
+uid: O:PageExtension::CGI_TFM_Calculation_Card

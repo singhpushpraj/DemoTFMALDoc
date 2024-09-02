@@ -1,0 +1,53 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."SAS Permission"
+alId: ID 9064
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Read
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Read
+- name: Add
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Add
+- name: Create
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Create
+- name: Write
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Write
+- name: Delete
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Delete
+- name: List
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.List
+- name: '"Permanent Delete"'
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Permanent_Delete
+- name: Update
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Update
+- name: Process
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Process
+- summary: 'Valid for the following Object resource type only: blobs. Permits blob tag operations.'
+  name: Tag
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Tag
+- summary: 'Valid for the following Object resource type only: blob. Permits filtering by blob tag.'
+  name: Filter
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Filter
+- summary: 'Valid for the following Object resource type only: blob. Permits set/delete immutability policy and legal hold on a blob.'
+  name: '"Set Immutability Policy"'
+  uid: E:Enum::System#Azure#Storage#SAS_Permission.Set_Immutability_Policy
+commentId: O:Enum::System#Azure#Storage#SAS Permission
+summary: >-
+  Defines the possible permissions for account SAS.
+
+  See: https://go.microsoft.com/fwlink/?linkid=2211413
+name: '"SAS Permission"'
+uid: O:Enum::System#Azure#Storage#SAS_Permission

@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA CalculateCreditLimitOn"'
+alId: ID 60307
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Outstanding
+  uid: E:Enum::CGI_CA_CalculateCreditLimitOn.Outstanding
+- name: '"Order Value"'
+  uid: E:Enum::CGI_CA_CalculateCreditLimitOn.Order_Value
+- name: '"Outstanding and Order Value"'
+  uid: E:Enum::CGI_CA_CalculateCreditLimitOn.Outstanding_and_Order_Value
+commentId: O:Enum::CGI CA CalculateCreditLimitOn
+name: '"CGI CA CalculateCreditLimitOn"'
+uid: O:Enum::CGI_CA_CalculateCreditLimitOn

@@ -1,0 +1,156 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel Filters"
+alId: ID 1490
+namespace: System.Integration.Excel
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure AddField(ODataFieldName: Text, EditInExcelEdmType: Enum "Edit in Excel Edm Type"): Interface "Edit in Excel Field Filter"'
+    parameters:
+    - id: ODataFieldName
+      description: The OData name of the field referenced.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EditInExcelEdmType
+      description: The Edm type of the OData field as specified in the $metadata document.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type
+        name: System.Integration.Excel."Edit in Excel Edm Type"
+        isExternal: false
+    return:
+      returnType:
+        internalReference: O:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+        name: System.Integration.Excel."Edit in Excel Field Filter"
+        isExternal: false
+  summary: Add the specified field using 'and' collection type.
+  name: AddField
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.AddField(Text,Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type):Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+- syntax:
+    content: 'procedure AddField(ODataFieldName: Text, EditInExcelFilterOperatorType: Enum "Edit in Excel Filter Collection Type", EditInExcelEdmType: Enum "Edit in Excel Edm Type"): Interface "Edit in Excel Field Filter"'
+    parameters:
+    - id: ODataFieldName
+      description: The OData name of the field referenced.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EditInExcelFilterOperatorType
+      description: Specifies whether filters for this field have 'and' or 'or', such as Field1 = a|b|c (or operator) or Field1 = <a&>b>amp;>c (and operator). Both operators for the same field is currently not supported.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Collection_Type
+        name: System.Integration.Excel."Edit in Excel Filter Collection Type"
+        isExternal: false
+    - id: EditInExcelEdmType
+      description: The Edm type of the OData field as specified in the $metadata document.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type
+        name: System.Integration.Excel."Edit in Excel Edm Type"
+        isExternal: false
+    return:
+      returnType:
+        internalReference: O:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+        name: System.Integration.Excel."Edit in Excel Field Filter"
+        isExternal: false
+  summary: Add the specified field with a specified collection type.
+  name: AddField
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.AddField(Text,Enum::System#Integration#Excel#Edit_in_Excel_Filter_Collection_Type,Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type):Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+- syntax:
+    content: 'procedure AddField(ODataFieldName: Text, EditInExcelFilterType: Enum "Edit in Excel Filter Type", FilterValue: Text, EditInExcelEdmType: Enum "Edit in Excel Edm Type")'
+    parameters:
+    - id: ODataFieldName
+      description: The OData name of the field referenced.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EditInExcelFilterType
+      description: The filter type, such as Equal, Greater than etc.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type
+        name: System.Integration.Excel."Edit in Excel Filter Type"
+        isExternal: false
+    - id: FilterValue
+      description: The value which the field should be Equal to, Greater than etc.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EditInExcelEdmType
+      description: The Edm type of the OData field as specified in the $metadata document.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type
+        name: System.Integration.Excel."Edit in Excel Edm Type"
+        isExternal: false
+  summary: >-
+    Add the specified field with an initial value using 'and' collection type.
+
+    This is mainly intended for fields that only filter on a single value.
+  name: AddField
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.AddField(Text,Enum::System#Integration#Excel#Edit_in_Excel_Filter_Type,Text,Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type)
+- syntax:
+    content: 'procedure Get(ODataFieldName: Text): Interface "Edit in Excel Field Filter"'
+    parameters:
+    - id: ODataFieldName
+      description: The OData name of the field referenced.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: ""
+      returnType:
+        internalReference: O:Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+        name: System.Integration.Excel."Edit in Excel Field Filter"
+        isExternal: false
+  summary: Get the field filters for the specified field.
+  name: Get
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.Get(Text):Interface::System#Integration#Excel#Edit_in_Excel_Field_Filter
+- syntax:
+    content: 'procedure Remove(ODataFieldName: Text): Boolean'
+    parameters:
+    - id: ODataFieldName
+      description: The OData name of the field referenced.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Whether the field was removed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Removes the filter for the specified field.
+  name: Remove
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.Remove(Text):Boolean
+- syntax:
+    content: 'procedure Contains(ODataFieldName: Text): Boolean'
+    parameters:
+    - id: ODataFieldName
+      description: The OData name of the field referenced.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Whether the field has been added. Note this returns true even if there are no filters.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Check whether there is a filter for the specified field.
+  name: Contains
+  uid: M:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters.Contains(Text):Boolean
+commentId: O:Codeunit::System#Integration#Excel#Edit in Excel Filters
+summary: This codeunit provides an interface to create filters for Edit in Excel.
+name: '"Edit in Excel Filters"'
+uid: O:Codeunit::System#Integration#Excel#Edit_in_Excel_Filters

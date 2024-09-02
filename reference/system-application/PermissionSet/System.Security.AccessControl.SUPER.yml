@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl.SUPER
+alId: ID 31
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: This role has all permissions.
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Application Objects - Exec","SUPER (DATA)","System Objects - Exec"'
+  promoted: false
+commentId: O:PermissionSet::System#Security#AccessControl#SUPER
+name: SUPER
+uid: O:PermissionSet::System#Security#AccessControl#SUPER

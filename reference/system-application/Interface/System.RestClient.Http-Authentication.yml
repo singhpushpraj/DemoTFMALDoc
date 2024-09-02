@@ -1,0 +1,33 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.RestClient."Http Authentication"
+namespace: System.RestClient
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.RestClient
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure IsAuthenticationRequired(): Boolean'
+    return:
+      description: True if authentication is required, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether authentication is required for the request.
+  name: IsAuthenticationRequired
+  uid: M:Interface::System#RestClient#Http_Authentication.IsAuthenticationRequired:Boolean
+- syntax:
+    content: 'procedure GetAuthorizationHeaders(): Dictionary of [Text, SecretText]'
+    return:
+      returnType:
+        name: Dictionary of [Text, SecretText]
+        isExternal: true
+  name: GetAuthorizationHeaders
+  uid: M:Interface::System#RestClient#Http_Authentication.GetAuthorizationHeaders:Dictionary_of_[Text,SecretText]
+commentId: O:Interface::System#RestClient#Http Authentication
+summary: An interface to support different authorization mechanism in a generic way.
+name: '"Http Authentication"'
+uid: O:Interface::System#RestClient#Http_Authentication

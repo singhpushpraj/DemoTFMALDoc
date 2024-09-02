@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Ptd. Purch. Rpct. Subform"'
+alId: ID 60343
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Ptd# Purch# Rpct# Subform
+summary: Pageextension CGI Ptd. Purch. Rpct. Subform  Subform (ID 60343) extends page Posted Purch. Invoice Subform
+name: '"CGI Ptd. Purch. Rpct. Subform"'
+uid: O:PageExtension::CGI_Ptd#_Purch#_Rpct#_Subform

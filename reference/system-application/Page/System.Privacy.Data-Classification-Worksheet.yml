@@ -1,0 +1,68 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Data Classification Worksheet"
+alId: ID 1751
+namespace: System.Privacy
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Data Classification Worksheet
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: AccessByPermission
+  value: tabledata "Data Sensitivity" = R
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: PromotedActionCategories
+  value: New,Process,Report,Manage,View
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableView
+  value: where("Field Caption" = filter(<> ''))
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: AdditionalSearchTerms
+  value: GDPR,Data Privacy,Privacy,Personal Data
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: admin-classifying-data-sensitivity
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata Company = r,
+                      tabledata "Data Sensitivity" = rm,
+                      tabledata Field = r,
+                      tabledata User = r
+  promoted: false
+commentId: O:Page::System#Privacy#Data Classification Worksheet
+summary: Exposes functionality that allows users to classify their data.
+name: '"Data Classification Worksheet"'
+uid: O:Page::System#Privacy#Data_Classification_Worksheet

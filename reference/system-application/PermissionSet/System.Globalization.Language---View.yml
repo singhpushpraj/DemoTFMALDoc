@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Globalization."Language - View"
+alId: ID 535
+namespace: System.Globalization
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Globalization
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Language - Objects"'
+  promoted: false
+commentId: O:PermissionSet::System#Globalization#Language - View
+summary: This permission set allows you to view the language list and set the preferred language for the user
+name: '"Language - View"'
+uid: O:PermissionSet::System#Globalization#Language_-_View

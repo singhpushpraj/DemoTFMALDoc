@@ -1,0 +1,153 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Functions."Azure Functions Authentication"
+alId: ID 7800
+namespace: System.Azure.Functions
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Functions
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use CreateOAuth2 with SecretText data type for ClientSecret.,24.0)]'
+    content: 'procedure CreateOAuth2(Endpoint: Text, AuthenticationCode: Text, ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text): Interface "Azure Functions Authentication"'
+    parameters:
+    - id: Endpoint
+      description: Azure function endpoint
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthenticationCode
+      description: Azure function authentication code, empty if anonymous.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal – App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      description: The Application (client) secret configured in the Azure Portal.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, for azure function this could be empty
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID URI
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Instance of Azure function response object.
+      returnType:
+        internalReference: O:Interface::System#Azure#Functions#Azure_Functions_Authentication
+        name: System.Azure.Functions."Azure Functions Authentication"
+        isExternal: false
+  summary: Creates OAuth2 authentication instance of Azure function interface.
+  name: CreateOAuth2
+  obsoletion:
+    state: pending
+    reason: Use CreateOAuth2 with SecretText data type for ClientSecret.
+    version: "24.0"
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Authentication.CreateOAuth2(Text,Text,Text,Text,Text,Text,Text):Interface::System#Azure#Functions#Azure_Functions_Authentication
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure CreateOAuth2(Endpoint: Text, AuthenticationCode: Text, ClientId: Text, ClientSecret: SecretText, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text): Interface "Azure Functions Authentication"'
+    parameters:
+    - id: Endpoint
+      description: Azure function endpoint
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthenticationCode
+      description: Azure function authentication code, empty if anonymous.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientId
+      description: The Application (client) ID that the Azure portal – App registrations experience assigned to your app.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ClientSecret
+      description: The Application (client) secret configured in the Azure Portal.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: OAuthAuthorityUrl
+      description: The identity authorization provider URL.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RedirectURL
+      description: The redirectURL of your app, for azure function this could be empty
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ResourceURL
+      description: The Application ID URI
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Instance of Azure function response object.
+      returnType:
+        internalReference: O:Interface::System#Azure#Functions#Azure_Functions_Authentication
+        name: System.Azure.Functions."Azure Functions Authentication"
+        isExternal: false
+  summary: Creates OAuth2 authentication instance of Azure function interface.
+  name: CreateOAuth2
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Authentication.CreateOAuth2(Text,Text,Text,SecretText,Text,Text,Text):Interface::System#Azure#Functions#Azure_Functions_Authentication
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure CreateCodeAuth(Endpoint: Text, AuthenticationCode: Text): Interface "Azure Functions Authentication"'
+    parameters:
+    - id: Endpoint
+      description: Azure function endpoint
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AuthenticationCode
+      description: Azure function authentication code, empty if anonymous.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Instance of Azure function response object.
+      returnType:
+        internalReference: O:Interface::System#Azure#Functions#Azure_Functions_Authentication
+        name: System.Azure.Functions."Azure Functions Authentication"
+        isExternal: false
+  summary: Creates code authentication instance of Azure function interface.
+  name: CreateCodeAuth
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Authentication.CreateCodeAuth(Text,Text):Interface::System#Azure#Functions#Azure_Functions_Authentication
+commentId: O:Codeunit::System#Azure#Functions#Azure Functions Authentication
+summary: Provides functionality for setting authentication parameters to Azure function.
+name: '"Azure Functions Authentication"'
+uid: O:Codeunit::System#Azure#Functions#Azure_Functions_Authentication

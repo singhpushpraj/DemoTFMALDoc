@@ -1,0 +1,170 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Visualization."Cues And KPIs"
+alId: ID 9701
+namespace: System.Visualization
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Visualization
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure OpenCustomizePageForCurrentUser(TableId: Integer)'
+    parameters:
+    - id: TableId
+      description: The ID of the table for which the page will be customized.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: >-
+    Opens the cue setup user page with an implicit filter on table id.
+
+    The page shows previously added entries in the Cue Setup Administration page that have the UserId being either the current user or blank.
+
+    The page also displays all other fields the that the passed table might have of type decimal or integer.
+
+    Closing this page will transfer any changed or added setup entries to the cue setup table.
+  name: OpenCustomizePageForCurrentUser
+  uid: M:Codeunit::System#Visualization#Cues_And_KPIs.OpenCustomizePageForCurrentUser(Integer)
+- syntax:
+    content: 'procedure SetCueStyle(TableID: Integer, FieldID: Integer, Amount: Decimal, var FinalStyle: Enum "Cues And KPIs Style")'
+    parameters:
+    - id: TableID
+      description: The ID of the table containing the field for which the style is wanted.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldID
+      description: The ID of the field for which the style is wanted.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Amount
+      description: The amount for which the style will be calculated based on the threshold values of the setup.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: FinalStyle
+      description: The amount for which the style will be calculated based on the threshold values of the setup
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Cues_And_KPIs_Style
+        name: System.Visualization."Cues And KPIs Style"
+        isExternal: false
+  summary: >-
+    Retrieves a Cues And KPIs Style enum based on the cue setup of the provided TableId, FieldID and Amount.
+
+    The computed cue style is returned by var.
+  name: SetCueStyle
+  uid: M:Codeunit::System#Visualization#Cues_And_KPIs.SetCueStyle(Integer,Integer,Decimal,Enum::System#Visualization#Cues_And_KPIs_Style@)
+- syntax:
+    content: 'procedure PersonalizedCueSetupExistsForCurrentUser(TableID: Integer, FieldID: Integer): Boolean'
+    parameters:
+    - id: TableID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldID
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: If a personalized Cue Setup record exists for the current user.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Checks if a personalized Cue Setup record exists for the current user.
+
+    <param name="TableID">The ID of the table containing the field for which the style is wanted.</param>
+
+    <param name="FieldID">The ID of the field for which the style is wanted.</param>
+  name: PersonalizedCueSetupExistsForCurrentUser
+  uid: M:Codeunit::System#Visualization#Cues_And_KPIs.PersonalizedCueSetupExistsForCurrentUser(Integer,Integer):Boolean
+- syntax:
+    content: 'procedure ConvertStyleToStyleText(CueStyle: Enum "Cues And KPIs Style"): Text'
+    parameters:
+    - id: CueStyle
+      description: A Cues And KPIs Style enum from which the style text will be converted.
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Cues_And_KPIs_Style
+        name: System.Visualization."Cues And KPIs Style"
+        isExternal: false
+    return:
+      description: The converted style
+      returnType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Converts a Cues And KPIs Style enum to a style text.
+
+    Enum values 0,7,8,9,10 are defined by default, if custom values are needed take a look at OnConvertStyleToStyleText event.
+  name: ConvertStyleToStyleText
+  uid: M:Codeunit::System#Visualization#Cues_And_KPIs.ConvertStyleToStyleText(Enum::System#Visualization#Cues_And_KPIs_Style):Text
+- syntax:
+    content: 'procedure InsertData(TableID: Integer, FieldNo: Integer, LowRangeStyle: Enum "Cues And KPIs Style", Threshold1: Decimal, MiddleRangeStyle: Enum "Cues And KPIs Style", Threshold2: Decimal, HighRangeStyle: Enum "Cues And KPIs Style"): Boolean'
+    parameters:
+    - id: TableID
+      description: The ID of the table where the cue is defined.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      description: The ID of the field which the cue is based on.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: LowRangeStyle
+      description: A Cues And KPIs Style enum representing the style that cues which have a value under threshold 1 will take.
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Cues_And_KPIs_Style
+        name: System.Visualization."Cues And KPIs Style"
+        isExternal: false
+    - id: Threshold1
+      description: The lower amount which defines which style cues get based on their value
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: MiddleRangeStyle
+      description: A Cues And KPIs Style enum representing the style that cues which have a value over threshold 1 but under threshold 2 will take.
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Cues_And_KPIs_Style
+        name: System.Visualization."Cues And KPIs Style"
+        isExternal: false
+    - id: Threshold2
+      description: The upper amount which defines which style cues get based on their value
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: HighRangeStyle
+      description: A Cues And KPIs Style enum representing the style that cues which have a value over threshold 2 will take.
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Cues_And_KPIs_Style
+        name: System.Visualization."Cues And KPIs Style"
+        isExternal: false
+    return:
+      description: True if the data was inserted successfully, false otherwise
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Inserts cue setup data. The entries inserted via this method will have no value for the userid field.
+  name: InsertData
+  uid: M:Codeunit::System#Visualization#Cues_And_KPIs.InsertData(Integer,Integer,Enum::System#Visualization#Cues_And_KPIs_Style,Decimal,Enum::System#Visualization#Cues_And_KPIs_Style,Decimal,Enum::System#Visualization#Cues_And_KPIs_Style):Boolean
+commentId: O:Codeunit::System#Visualization#Cues And KPIs
+summary: Exposes functionality to set up and retrieve styles for cues.
+name: '"Cues And KPIs"'
+uid: O:Codeunit::System#Visualization#Cues_And_KPIs

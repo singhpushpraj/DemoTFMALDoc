@@ -1,0 +1,58 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Media."Product Videos"
+alId: ID 1470
+namespace: System.Media
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Media
+langs:
+- al
+sourceTableType:
+  name: System.Media."Product Video Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Caption
+  value: Product Videos
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "1470"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: across-videos
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Media#Product Videos
+summary: This page shows all registered videos.
+name: '"Product Videos"'
+uid: O:Page::System#Media#Product_Videos

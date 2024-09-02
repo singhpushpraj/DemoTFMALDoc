@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Default Role Center"
+alId: ID 9172
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Environment#Configuration#Default Role Center
+summary: >-
+  The codeunit that emits the event that sets the default Role Center.
+
+  To use another Role Center by default, you must have a profile for it.
+name: '"Default Role Center"'
+uid: O:Codeunit::System#Environment#Configuration#Default_Role_Center

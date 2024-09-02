@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."SharePoint Auth. - Objects"
+alId: ID 9150
+namespace: System.Integration.Sharepoint
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: This permission set is replaced with inherent permissions and is no longer needed.
+  promoted: false
+- name: ObsoleteTag
+  value: "23.0"
+  promoted: false
+commentId: O:PermissionSet::System#Integration#Sharepoint#SharePoint Auth# - Objects
+name: '"SharePoint Auth. - Objects"'
+obsoletion:
+  state: pending
+  reason: This permission set is replaced with inherent permissions and is no longer needed.
+  version: "23.0"
+uid: O:PermissionSet::System#Integration#Sharepoint#SharePoint_Auth#_-_Objects

@@ -1,0 +1,79 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Date-Time Dialog"
+alId: ID 684
+namespace: System.DateTime
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: PageType
+  value: StandardDialog
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-enter-date-ranges
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetDateTime(DateTime: DateTime)'
+    parameters:
+    - id: DateTime
+      description: The value to set.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Setter method to initialize the Date and Time fields on the page.
+  name: SetDateTime
+  uid: M:Page::System#DateTime#Date-Time_Dialog.SetDateTime(DateTime)
+- syntax:
+    content: 'procedure GetDateTime(): DateTime'
+    return:
+      description: The value that is set on the page.
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Getter method for the entered datetime value.
+  name: GetDateTime
+  uid: M:Page::System#DateTime#Date-Time_Dialog.GetDateTime:DateTime
+- syntax:
+    content: procedure UseDateOnly()
+  summary: Method for hiding the time on the page.
+  name: UseDateOnly
+  uid: M:Page::System#DateTime#Date-Time_Dialog.UseDateOnly
+- syntax:
+    content: 'procedure SetDate(NewDate: Date)'
+    parameters:
+    - id: NewDate
+      description: The value to set.
+      parameterType:
+        name: Date
+        isExternal: true
+  summary: Setter method to initialize the Date on the page.
+  name: SetDate
+  uid: M:Page::System#DateTime#Date-Time_Dialog.SetDate(Date)
+- syntax:
+    content: 'procedure GetDate(): Date'
+    return:
+      description: The value that is set on the page.
+      returnType:
+        name: Date
+        isExternal: true
+  summary: Getter method for the entered date value.
+  name: GetDate
+  uid: M:Page::System#DateTime#Date-Time_Dialog.GetDate:Date
+commentId: O:Page::System#DateTime#Date-Time Dialog
+summary: Dialog for entering Date or DateTime values.
+name: '"Date-Time Dialog"'
+uid: O:Page::System#DateTime#Date-Time_Dialog

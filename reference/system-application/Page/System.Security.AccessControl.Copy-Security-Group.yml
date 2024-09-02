@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Copy Security Group"
+alId: ID 9873
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Copy Security Group
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetSourceGroupCode(SourceGroupCode: Code[20])'
+    parameters:
+    - id: SourceGroupCode
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: SetSourceGroupCode
+  uid: M:Page::System#Security#AccessControl#Copy_Security_Group.SetSourceGroupCode(Code[20])
+commentId: O:Page::System#Security#AccessControl#Copy Security Group
+summary: Copies a security group.
+name: '"Copy Security Group"'
+uid: O:Page::System#Security#AccessControl#Copy_Security_Group

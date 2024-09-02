@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Lines Lookup"'
+alId: ID 60301
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Calculation_Line
+  name: '"CGI Calculation Line"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Calculation Lines Lookup
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "60301"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Calculation_Line
+    name: '"CGI Calculation Line"'
+    isExternal: false
+- name: UsageCategory
+  value: Lists
+  promoted: false
+commentId: O:Page::CGI Calculation Lines Lookup
+summary: Page CGI Calculation Line Lookup (ID  60301).
+name: '"CGI Calculation Lines Lookup"'
+uid: O:Page::CGI_Calculation_Lines_Lookup

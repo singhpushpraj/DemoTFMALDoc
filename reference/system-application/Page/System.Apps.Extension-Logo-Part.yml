@@ -1,0 +1,60 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Logo Part"
+alId: ID 2506
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: CardPart
+  promoted: true
+- name: PopulateAllFields
+  value: "True"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableView
+  value: >-
+    where("Package Type" = filter(= Extension | Designer),
+                                "Tenant Visible" = const(true))
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+- name: Permissions
+  value: tabledata "Published Application" = r
+  promoted: false
+commentId: O:Page::System#Apps#Extension Logo Part
+summary: Displays the extension logo.
+name: '"Extension Logo Part"'
+uid: O:Page::System#Apps#Extension_Logo_Part

@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Sales Line Archive"'
+alId: ID 60328
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    internalReference: O:Enum::CGI_CA_CalculationLineItemType
+    name: '"CGI CA CalculationLineItemType"'
+    isExternal: false
+  name: '"CGI Division"'
+  uid: F:TableExtension::CGI_Sales_Line_Archive.CGI_Division
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI GSM"'
+  uid: F:TableExtension::CGI_Sales_Line_Archive.CGI_GSM
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Reel Width"'
+  uid: F:TableExtension::CGI_Sales_Line_Archive.CGI_Reel_Width
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Diameter"'
+  uid: F:TableExtension::CGI_Sales_Line_Archive.CGI_Diameter
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Core"'
+  uid: F:TableExtension::CGI_Sales_Line_Archive.CGI_Core
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Sheet Size"'
+  uid: F:TableExtension::CGI_Sales_Line_Archive.CGI_Sheet_Size[20]
+commentId: O:TableExtension::CGI Sales Line Archive
+summary: TableExtenion CGI Sales Invoice Line Archiev (ID 60328).
+name: '"CGI Sales Line Archive"'
+uid: O:TableExtension::CGI_Sales_Line_Archive

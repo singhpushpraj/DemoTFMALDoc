@@ -1,0 +1,304 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.EncryptedXml
+alId: ID 1465
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use Encrypt with SecretText data type for X509CertPassword.,24.0)]'
+    content: 'procedure Encrypt(var XmlDocument: XmlDocument, ElementToEncrypt: Text, X509CertBase64Value: Text, X509CertPassword: Text)'
+    parameters:
+    - id: XmlDocument
+      description: The XmlDocument to encrypt.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: ElementToEncrypt
+      description: The name of the element to encrypt.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertBase64Value
+      description: The X509Certificate2 to use for the asymmetric encryption.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertPassword
+      description: Password to the X509Certificate2.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates a symmetric session key to encrypt the outer XML of an element using the specified X.509 certificate.
+  name: Encrypt
+  obsoletion:
+    state: pending
+    reason: Use Encrypt with SecretText data type for X509CertPassword.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#EncryptedXml.Encrypt(XmlDocument@,Text,Text,Text)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use Encrypt with SecretText data type for X509CertPassword.,24.0)]'
+    content: 'procedure Encrypt(var XmlDocument: XmlDocument, ElementToEncrypt: Text, X509CertBase64Value: Text, X509CertPassword: Text, SymmetricAlgorithm: Enum SymmetricAlgorithm)'
+    parameters:
+    - id: XmlDocument
+      description: The XmlDocument to encrypt.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: ElementToEncrypt
+      description: The name of the element to encrypt.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertBase64Value
+      description: The X509Certificate2 to use for the asymmetric encryption.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertPassword
+      description: Password to the X509Certificate2.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SymmetricAlgorithm
+      description: The symmetric algorithm to be used when encrypting.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#SymmetricAlgorithm
+        name: System.Security.Encryption.SymmetricAlgorithm
+        isExternal: false
+  summary: >-
+    Creates a symmetric session key using the specified SymmetricAlgorithm
+
+    to encrypt the outer XML of an element using the specified X.509 certificate.
+  name: Encrypt
+  obsoletion:
+    state: pending
+    reason: Use Encrypt with SecretText data type for X509CertPassword.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#EncryptedXml.Encrypt(XmlDocument@,Text,Text,Text,Enum::System#Security#Encryption#SymmetricAlgorithm)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use DecryptDocument with SecretText data type for EncryptionKey.,24.0)]'
+    content: 'procedure DecryptDocument(var EncryptedDocument: XmlDocument, EncryptionKey: Text, SignatureAlgorithm: Enum SignatureAlgorithm): Boolean'
+    parameters:
+    - id: EncryptedDocument
+      description: The XML document to decrypt.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: EncryptionKey
+      description: The asymmetric key to use to decrypt the symmetric keys in the document.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SignatureAlgorithm
+      description: The asymmetric algorithm used to decrypt the symmetric key.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#SignatureAlgorithm
+        name: System.Security.Encryption.SignatureAlgorithm
+        isExternal: false
+    return:
+      description: Returns true if decryption was successful, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Decrypts all EncryptedData elements of the XML document using the specified asymmetric key.
+  name: DecryptDocument
+  obsoletion:
+    state: pending
+    reason: Use DecryptDocument with SecretText data type for EncryptionKey.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#EncryptedXml.DecryptDocument(XmlDocument@,Text,Enum::System#Security#Encryption#SignatureAlgorithm):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use DecryptKey with SecretText data type for EncryptionKey.,24.0)]'
+    content: 'procedure DecryptKey(EncryptedKey: XmlElement, EncryptionKey: Text, UseOAEP: Boolean, var KeyBase64Value: Text, SignatureAlgorithm: Enum SignatureAlgorithm): Boolean'
+    parameters:
+    - id: EncryptedKey
+      description: The EncryptedKey XML element with the key to be decrypted.
+      parameterType:
+        name: XmlElement
+        isExternal: true
+    - id: EncryptionKey
+      description: The asymmetric key used to decrypt the symmetric key.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: UseOAEP
+      description: A value that specifies whether to use Optimal Asymmetric Encryption Padding (OAEP).
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: KeyBase64Value
+      description: The Base64 encoded decrypted key value.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SignatureAlgorithm
+      description: The asymmetric algorithm used to decrypt the symmetric key.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#SignatureAlgorithm
+        name: System.Security.Encryption.SignatureAlgorithm
+        isExternal: false
+    return:
+      description: Returns true if decryption was successful, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Decrypts an EncryptedKey XML element using an asymmetric algorithm.
+  name: DecryptKey
+  obsoletion:
+    state: pending
+    reason: Use DecryptKey with SecretText data type for EncryptionKey.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#EncryptedXml.DecryptKey(XmlElement,Text,Boolean,Text@,Enum::System#Security#Encryption#SignatureAlgorithm):Boolean
+- syntax:
+    content: 'procedure Encrypt(var XmlDocument: XmlDocument, ElementToEncrypt: Text, X509CertBase64Value: Text, X509CertPassword: SecretText)'
+    parameters:
+    - id: XmlDocument
+      description: The XmlDocument to encrypt.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: ElementToEncrypt
+      description: The name of the element to encrypt.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertBase64Value
+      description: The X509Certificate2 to use for the asymmetric encryption.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertPassword
+      description: Password to the X509Certificate2.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Creates a symmetric session key to encrypt the outer XML of an element using the specified X.509 certificate.
+  name: Encrypt
+  uid: M:Codeunit::System#Security#Encryption#EncryptedXml.Encrypt(XmlDocument@,Text,Text,SecretText)
+- syntax:
+    content: 'procedure Encrypt(var XmlDocument: XmlDocument, ElementToEncrypt: Text, X509CertBase64Value: Text, X509CertPassword: SecretText, SymmetricAlgorithm: Enum SymmetricAlgorithm)'
+    parameters:
+    - id: XmlDocument
+      description: The XmlDocument to encrypt.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: ElementToEncrypt
+      description: The name of the element to encrypt.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertBase64Value
+      description: The X509Certificate2 to use for the asymmetric encryption.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: X509CertPassword
+      description: Password to the X509Certificate2.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: SymmetricAlgorithm
+      description: The symmetric algorithm to be used when encrypting.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#SymmetricAlgorithm
+        name: System.Security.Encryption.SymmetricAlgorithm
+        isExternal: false
+  summary: >-
+    Creates a symmetric session key using the specified SymmetricAlgorithm
+
+    to encrypt the outer XML of an element using the specified X.509 certificate.
+  name: Encrypt
+  uid: M:Codeunit::System#Security#Encryption#EncryptedXml.Encrypt(XmlDocument@,Text,Text,SecretText,Enum::System#Security#Encryption#SymmetricAlgorithm)
+- syntax:
+    content: 'procedure DecryptDocument(var EncryptedDocument: XmlDocument, EncryptionKey: SecretText, SignatureAlgorithm: Enum SignatureAlgorithm): Boolean'
+    parameters:
+    - id: EncryptedDocument
+      description: The XML document to decrypt.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: EncryptionKey
+      description: The asymmetric key to use to decrypt the symmetric keys in the document.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: SignatureAlgorithm
+      description: The asymmetric algorithm used to decrypt the symmetric key.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#SignatureAlgorithm
+        name: System.Security.Encryption.SignatureAlgorithm
+        isExternal: false
+    return:
+      description: Returns true if decryption was successful, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Decrypts all EncryptedData elements of the XML document using the specified asymmetric key.
+  name: DecryptDocument
+  uid: M:Codeunit::System#Security#Encryption#EncryptedXml.DecryptDocument(XmlDocument@,SecretText,Enum::System#Security#Encryption#SignatureAlgorithm):Boolean
+- syntax:
+    content: 'procedure DecryptKey(EncryptedKey: XmlElement, EncryptionKey: SecretText, UseOAEP: Boolean, var KeyBase64Value: Text, SignatureAlgorithm: Enum SignatureAlgorithm): Boolean'
+    parameters:
+    - id: EncryptedKey
+      description: The EncryptedKey XML element with the key to be decrypted.
+      parameterType:
+        name: XmlElement
+        isExternal: true
+    - id: EncryptionKey
+      description: The asymmetric key used to decrypt the symmetric key.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: UseOAEP
+      description: A value that specifies whether to use Optimal Asymmetric Encryption Padding (OAEP).
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: KeyBase64Value
+      description: The Base64 encoded decrypted key value.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SignatureAlgorithm
+      description: The asymmetric algorithm used to decrypt the symmetric key.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#SignatureAlgorithm
+        name: System.Security.Encryption.SignatureAlgorithm
+        isExternal: false
+    return:
+      description: Returns true if decryption was successful, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Decrypts an EncryptedKey XML element using an asymmetric algorithm.
+  name: DecryptKey
+  uid: M:Codeunit::System#Security#Encryption#EncryptedXml.DecryptKey(XmlElement,SecretText,Boolean,Text@,Enum::System#Security#Encryption#SignatureAlgorithm):Boolean
+commentId: O:Codeunit::System#Security#Encryption#EncryptedXml
+summary: Provides functionality for encrypting and decrypting XML documents.
+name: EncryptedXml
+uid: O:Codeunit::System#Security#Encryption#EncryptedXml

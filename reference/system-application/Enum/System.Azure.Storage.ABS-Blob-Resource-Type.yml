@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Blob Resource Type"
+alId: ID 9050
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Indicates blob is of file type.
+  name: File
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Resource_Type.File
+- summary: Indicates blob is of directory type.
+  name: Directory
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Resource_Type.Directory
+commentId: O:Enum::System#Azure#Storage#ABS Blob Resource Type
+summary: Indicator of what type the resource is.
+name: '"ABS Blob Resource Type"'
+uid: O:Enum::System#Azure#Storage#ABS_Blob_Resource_Type

@@ -1,0 +1,22 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CustomerCountryLimitType"'
+alId: ID 60310
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '"Customer Country"'
+  uid: E:Enum::CGI_CustomerCountryLimitType.Customer_Country
+- name: '"Shipment Country"'
+  uid: E:Enum::CGI_CustomerCountryLimitType.Shipment_Country
+commentId: O:Enum::CGI CustomerCountryLimitType
+name: '"CGI CustomerCountryLimitType"'
+uid: O:Enum::CGI_CustomerCountryLimitType

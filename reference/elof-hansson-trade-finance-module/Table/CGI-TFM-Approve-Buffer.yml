@@ -1,0 +1,96 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Approve Buffer"'
+alId: ID 70305
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: TFM Approve Buffer
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: LookupPageId
+  value: CGI TFM Approve Calc. Buffer
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_Approve_Calc#_Buffer
+    name: '"CGI TFM Approve Calc. Buffer"'
+    isExternal: false
+- name: DrillDownPageId
+  value: CGI TFM Approve Calc. Buffer
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_Approve_Calc#_Buffer
+    name: '"CGI TFM Approve Calc. Buffer"'
+    isExternal: false
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"LCBG Document No."'
+  uid: F:Table::CGI_TFM_Approve_Buffer.LCBG_Document_No#[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Calculation No."'
+  uid: F:Table::CGI_TFM_Approve_Buffer.Calculation_No#[20]
+- type:
+    name: Code[50]
+    isExternal: true
+  name: Approver
+  uid: F:Table::CGI_TFM_Approve_Buffer.Approver[50]
+- type:
+    name: Text[150]
+    isExternal: true
+  name: '"Last Error Message"'
+  uid: F:Table::CGI_TFM_Approve_Buffer.Last_Error_Message[150]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Approver Name"'
+  uid: F:Table::CGI_TFM_Approve_Buffer.Approver_Name[100]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Approved DateTime"'
+  uid: F:Table::CGI_TFM_Approve_Buffer.Approved_DateTime
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_TFM_Approve_Buffer.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_TFM_Approve_Buffer.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_TFM_Approve_Buffer.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_TFM_Approve_Buffer.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_TFM_Approve_Buffer.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_TFM_Approve_Buffer.SystemRowVersion
+commentId: O:Table::CGI TFM Approve Buffer
+summary: Contains CGI TFM Approver Buffer records
+name: '"CGI TFM Approve Buffer"'
+uid: O:Table::CGI_TFM_Approve_Buffer

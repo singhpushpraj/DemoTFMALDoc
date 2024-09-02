@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Record Link Management - View"
+alId: ID 459
+namespace: System.Utilities
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Record Link Management - Read"'
+  promoted: false
+commentId: O:PermissionSet::System#Utilities#Record Link Management - View
+name: '"Record Link Management - View"'
+uid: O:PermissionSet::System#Utilities#Record_Link_Management_-_View

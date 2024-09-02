@@ -1,0 +1,52 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Finished Calculation Lines"'
+alId: ID 60371
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Post_Calc#_Line_Archive
+  name: '"CGI Post Calc. Line Archive"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: CGI Post Calculation Lines
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "60365"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Post_Calc#_Line_Archive
+    name: '"CGI Post Calc. Line Archive"'
+    isExternal: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetStyle(): Text'
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: SetStyle
+  uid: M:Page::CGI_Finished_Calculation_Lines.SetStyle:Text
+commentId: O:Page::CGI Finished Calculation Lines
+name: '"CGI Finished Calculation Lines"'
+uid: O:Page::CGI_Finished_Calculation_Lines

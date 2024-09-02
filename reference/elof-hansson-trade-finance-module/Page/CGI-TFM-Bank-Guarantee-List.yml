@@ -1,0 +1,54 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Bank Guarantee List"'
+alId: ID 70300
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_TFM_LCBG_Header
+  name: '"CGI TFM LCBG Header"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: TFM Bank Guarantee List
+  promoted: false
+- name: CardPageId
+  value: CGI TFM Bank Guarantee
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_Bank_Guarantee
+    name: '"CGI TFM Bank Guarantee"'
+    isExternal: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "70300"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_TFM_LCBG_Header
+    name: '"CGI TFM LCBG Header"'
+    isExternal: false
+- name: SourceTableView
+  value: where(Type = const("Bank Guarantee"))
+  promoted: false
+- name: UsageCategory
+  value: Lists
+  promoted: false
+commentId: O:Page::CGI TFM Bank Guarantee List
+summary: >-
+  page 70300 CGI TFM Bank Guarantee List
+
+  Display the list of Bank Guarantee records
+name: '"CGI TFM Bank Guarantee List"'
+uid: O:Page::CGI_TFM_Bank_Guarantee_List

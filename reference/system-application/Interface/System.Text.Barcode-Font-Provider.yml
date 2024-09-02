@@ -1,0 +1,114 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Font Provider"
+namespace: System.Text
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure GetSupportedBarcodeSymbologies(var Result: List of [Enum "Barcode Symbology"])'
+    parameters:
+    - id: Result
+      parameterType:
+        name: List of [Enum System.Text."Barcode Symbology"]
+        isExternal: true
+  name: GetSupportedBarcodeSymbologies
+  uid: M:Interface::System#Text#Barcode_Font_Provider.GetSupportedBarcodeSymbologies(List_of_[Barcode_Symbology]@)
+- syntax:
+    content: 'procedure EncodeFont(InputText: Text, BarcodeSymbology: Enum "Barcode Symbology"): Text'
+    parameters:
+    - id: InputText
+      description: The text to encode.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BarcodeSymbology
+      description: The symbology to use for the encoding.
+      parameterType:
+        internalReference: O:Enum::System#Text#Barcode_Symbology
+        name: System.Text."Barcode Symbology"
+        isExternal: false
+    return:
+      description: The encoded barcode.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Encodes an input text into a barcode.
+  name: EncodeFont
+  uid: M:Interface::System#Text#Barcode_Font_Provider.EncodeFont(Text,Enum::System#Text#Barcode_Symbology):Text
+- syntax:
+    content: 'procedure EncodeFont(InputText: Text, BarcodeSymbology: Enum "Barcode Symbology", BarcodeEncodeSettings: Record "Barcode Encode Settings" temporary): Text'
+    parameters:
+    - id: InputText
+      description: The text to encode.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BarcodeSymbology
+      description: The symbology to use for the encoding.
+      parameterType:
+        internalReference: O:Enum::System#Text#Barcode_Symbology
+        name: System.Text."Barcode Symbology"
+        isExternal: false
+    - id: BarcodeEncodeSettings
+      description: The settings to use when encoding the text.
+      parameterType:
+        name: Record "Barcode Encode Settings" temporary
+        isExternal: true
+    return:
+      description: The encoded barcode.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Encodes an input text into a barcode.
+  name: EncodeFont
+  uid: M:Interface::System#Text#Barcode_Font_Provider.EncodeFont(Text,Enum::System#Text#Barcode_Symbology,Barcode_Encode_Settings):Text
+- syntax:
+    content: 'procedure ValidateInput(InputText: Text, BarcodeSymbology: Enum "Barcode Symbology")'
+    parameters:
+    - id: InputText
+      description: The text to validate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BarcodeSymbology
+      description: The barcode symbology for which to check.
+      parameterType:
+        internalReference: O:Enum::System#Text#Barcode_Symbology
+        name: System.Text."Barcode Symbology"
+        isExternal: false
+  summary: Validates if the input text is in a valid format to be encoded using the provided barcode symbology.
+  remarks: The function should throw an error if the input text is in invalid format or if the symbology is not supported by the provider.
+  name: ValidateInput
+  uid: M:Interface::System#Text#Barcode_Font_Provider.ValidateInput(Text,Enum::System#Text#Barcode_Symbology)
+- syntax:
+    content: 'procedure ValidateInput(InputText: Text, BarcodeSymbology: Enum "Barcode Symbology", BarcodeEncodeSettings: Record "Barcode Encode Settings" temporary)'
+    parameters:
+    - id: InputText
+      description: The text to validate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BarcodeSymbology
+      description: The barcode symbology for which to check.
+      parameterType:
+        internalReference: O:Enum::System#Text#Barcode_Symbology
+        name: System.Text."Barcode Symbology"
+        isExternal: false
+    - id: BarcodeEncodeSettings
+      description: The settings to use for the validation.
+      parameterType:
+        name: Record "Barcode Encode Settings" temporary
+        isExternal: true
+  summary: Validates if the input text is in a valid format to be encoded using the provided barcode symbology.
+  remarks: The function should throw an error if the input text is in invalid format or if the symbology is not supported by the provider.
+  name: ValidateInput
+  uid: M:Interface::System#Text#Barcode_Font_Provider.ValidateInput(Text,Enum::System#Text#Barcode_Symbology,Barcode_Encode_Settings)
+commentId: O:Interface::System#Text#Barcode Font Provider
+summary: Interface for barcode font providers.
+name: '"Barcode Font Provider"'
+uid: O:Interface::System#Text#Barcode_Font_Provider

@@ -1,0 +1,729 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Management"'
+alId: ID 60300
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Permissions
+  value: >-
+    tabledata "G/L Entry" = m,
+                      tabledata "Cust. Ledger Entry" = r,
+                      tabledata "Vendor Ledger Entry" = r,
+                      tabledata "Sales Header" = r,
+                      tabledata "Sales Line" = r,
+                      tabledata "Purchase Header" = r,
+                      tabledata "Purchase Line" = r,
+                      tabledata "Sales Shipment Header" = r,
+                      tabledata "Purch. Rcpt. Header" = r,
+                      tabledata "Detailed Cust. Ledg. Entry" = r,
+                      tabledata "Detailed Vendor Ledg. Entry" = r
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure CalcCostPerUnit(CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: CalcCostPerUnit.
+  name: CalcCostPerUnit
+  uid: M:Codeunit::CGI_Calculation_Management.CalcCostPerUnit(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure SetFilterOnCalcLines(CalculationNo: Code[20], var CGICalculationLineP: Record "CGI Calculation Line")'
+    parameters:
+    - id: CalculationNo
+      description: Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  summary: SetFilterOnCalcLines.
+  name: SetFilterOnCalcLines
+  uid: M:Codeunit::CGI_Calculation_Management.SetFilterOnCalcLines(Code[20],CGI_Calculation_Line@)
+- syntax:
+    content: 'procedure CalculateInternalInterestLCY(var CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: CalculateInternalInterestLCY.
+  name: CalculateInternalInterestLCY
+  uid: M:Codeunit::CGI_Calculation_Management.CalculateInternalInterestLCY(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure CalcTimeFactor(PmtTermsCode: Code[20]): Integer'
+    parameters:
+    - id: PmtTermsCode
+      description: Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      description: Return value of type Integer.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: CalcTimeFactor.
+  name: CalcTimeFactor
+  uid: M:Codeunit::CGI_Calculation_Management.CalcTimeFactor(Code[20]):Integer
+- syntax:
+    content: 'procedure GetCustIntInterestRate(InterestRate: Decimal, CGICalculationHeaderP: Record "CGI Calculation Header"): Decimal'
+    parameters:
+    - id: InterestRate
+      description: Decimal.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      description: Return value of type Decimal.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: GetCustIntInterestRate.
+  name: GetCustIntInterestRate
+  uid: M:Codeunit::CGI_Calculation_Management.GetCustIntInterestRate(Decimal,CGI_Calculation_Header):Decimal
+- syntax:
+    content: 'procedure SetEnabledForPostedDocsButton(CalcNo: Code[20]): Boolean'
+    parameters:
+    - id: CalcNo
+      description: Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      description: Return value of type Boolean.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: SetEnabledForPostedDocsButton.
+  name: SetEnabledForPostedDocsButton
+  uid: M:Codeunit::CGI_Calculation_Management.SetEnabledForPostedDocsButton(Code[20]):Boolean
+- syntax:
+    content: 'procedure CopyCalculation(CGICalculationHeaderSource: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderSource
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CopyCalculation
+  uid: M:Codeunit::CGI_Calculation_Management.CopyCalculation(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure OnCommentLineCopyCommentLines(SelectedCommentLines: __MissingTypeSymbol__)'
+    parameters:
+    - id: SelectedCommentLines
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnCommentLineCopyCommentLines
+  uid: M:Codeunit::CGI_Calculation_Management.OnCommentLineCopyCommentLines(__MissingSymbol__@)
+- syntax:
+    content: 'procedure CreateOrdersFromCalc(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: CreateOrdersFromCalc
+  uid: M:Codeunit::CGI_Calculation_Management.CreateOrdersFromCalc(Code[20])
+- syntax:
+    content: 'procedure GetDimCaption(DimValue: Code[20], CalcNo: Code[20])'
+    parameters:
+    - id: DimValue
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: CalcNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: GetDimCaption
+  uid: M:Codeunit::CGI_Calculation_Management.GetDimCaption(Code[20],Code[20])
+- syntax:
+    content: 'procedure CheckWarehouseLines(CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CheckWarehouseLines
+  uid: M:Codeunit::CGI_Calculation_Management.CheckWarehouseLines(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure CheckToDateCreateOrderFromCalc(CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CheckToDateCreateOrderFromCalc
+  uid: M:Codeunit::CGI_Calculation_Management.CheckToDateCreateOrderFromCalc(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure CheckCalcReservationLines(CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CheckCalcReservationLines
+  uid: M:Codeunit::CGI_Calculation_Management.CheckCalcReservationLines(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure CheckCostLineSettings(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: CheckCostLineSettings
+  uid: M:Codeunit::CGI_Calculation_Management.CheckCostLineSettings(Code[20])
+- syntax:
+    content: 'procedure CheckDocDim(CalculationNo: Code[20]): Boolean'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: CheckDocDim
+  uid: M:Codeunit::CGI_Calculation_Management.CheckDocDim(Code[20]):Boolean
+- syntax:
+    content: 'procedure CreatePurchaseOrdersFromCalc(var CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CreatePurchaseOrdersFromCalc
+  uid: M:Codeunit::CGI_Calculation_Management.CreatePurchaseOrdersFromCalc(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure CreateSalesOrderFromCalc(var CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CreateSalesOrderFromCalc
+  uid: M:Codeunit::CGI_Calculation_Management.CreateSalesOrderFromCalc(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure GetLocation(CGICalculationLineP: Record "CGI Calculation Line"): Code[20]'
+    parameters:
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    return:
+      returnType:
+        name: Code[20]
+        isExternal: true
+  name: GetLocation
+  uid: M:Codeunit::CGI_Calculation_Management.GetLocation(CGI_Calculation_Line):Code[20]
+- syntax:
+    content: 'procedure GetBinCode(CGICalculationLineP: Record "CGI Calculation Line"): Code[20]'
+    parameters:
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    return:
+      returnType:
+        name: Code[20]
+        isExternal: true
+  name: GetBinCode
+  uid: M:Codeunit::CGI_Calculation_Management.GetBinCode(CGI_Calculation_Line):Code[20]
+- syntax:
+    content: 'procedure CreateReservationForSalesOrder(CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CreateReservationForSalesOrder
+  uid: M:Codeunit::CGI_Calculation_Management.CreateReservationForSalesOrder(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure CreateReservation(ToReservSalesLine: __MissingTypeSymbol__, ExpectedReceiptDate: Date, Quantity: Decimal, ItemLedgerEntry: __MissingTypeSymbol__, FromID: Code[10])'
+    parameters:
+    - id: ToReservSalesLine
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: ExpectedReceiptDate
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: Quantity
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: ItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: FromID
+      parameterType:
+        name: Code[10]
+        isExternal: true
+  name: CreateReservation
+  uid: M:Codeunit::CGI_Calculation_Management.CreateReservation(__MissingSymbol__@,Date,Decimal,__MissingSymbol__,Code[10])
+- syntax:
+    content: 'procedure SetLotNoForReservation(ToReservSalesLine: __MissingTypeSymbol__)'
+    parameters:
+    - id: ToReservSalesLine
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: SetLotNoForReservation
+  uid: M:Codeunit::CGI_Calculation_Management.SetLotNoForReservation(__MissingSymbol__)
+- syntax:
+    content: 'procedure UpdateSalesCalcStatus(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: UpdateSalesCalcStatus.
+  name: UpdateSalesCalcStatus
+  uid: M:Codeunit::CGI_Calculation_Management.UpdateSalesCalcStatus(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure UpdateCalcStatus(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: UpdateCalcStatus.
+  name: UpdateCalcStatus
+  uid: M:Codeunit::CGI_Calculation_Management.UpdateCalcStatus(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure UpdateCalcStatusSalesPurchase(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: UpdateCalcStatusSalesPurchase.
+  name: UpdateCalcStatusSalesPurchase
+  uid: M:Codeunit::CGI_Calculation_Management.UpdateCalcStatusSalesPurchase(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure UpdatePurchaseCalcStatus(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: UpdatePurchaseCalcStatus.
+  name: UpdatePurchaseCalcStatus
+  uid: M:Codeunit::CGI_Calculation_Management.UpdatePurchaseCalcStatus(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure CancelCalculation(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CancelCalculation
+  uid: M:Codeunit::CGI_Calculation_Management.CancelCalculation(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure FinishCalculation(var CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: FinishCalculation
+  uid: M:Codeunit::CGI_Calculation_Management.FinishCalculation(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure IsOutstandingPurchOrderExist(CalculationNo: Code[20]): Boolean'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsOutstandingPurchOrderExist
+  uid: M:Codeunit::CGI_Calculation_Management.IsOutstandingPurchOrderExist(Code[20]):Boolean
+- syntax:
+    content: 'procedure IsPurchCalcFinished(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: IsPurchCalcFinished
+  uid: M:Codeunit::CGI_Calculation_Management.IsPurchCalcFinished(Code[20])
+- syntax:
+    content: 'procedure GetSalesItemLedgEntries(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: GetSalesItemLedgEntries
+  uid: M:Codeunit::CGI_Calculation_Management.GetSalesItemLedgEntries(Code[20])
+- syntax:
+    content: 'procedure GetPurchItemLedgEntries(SalesItemLedgerEntry: __MissingTypeSymbol__, TemplateName: Code[10], BatchName: Code[10], NoSeries: Code[20])'
+    parameters:
+    - id: SalesItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: TemplateName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: BatchName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: NoSeries
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: GetPurchItemLedgEntries
+  uid: M:Codeunit::CGI_Calculation_Management.GetPurchItemLedgEntries(__MissingSymbol__,Code[10],Code[10],Code[20])
+- syntax:
+    content: 'procedure GetTotalQtyFromCalcPurchILE(CalculationNo: Code[20]): Decimal'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: GetTotalQtyFromCalcPurchILE
+  uid: M:Codeunit::CGI_Calculation_Management.GetTotalQtyFromCalcPurchILE(Code[20]):Decimal
+- syntax:
+    content: 'procedure GetGLEntryforPurchCalc(SalesItemLedgerEntry: __MissingTypeSymbol__, TempPurchItemLedgerEntry: __MissingTypeSymbol__, TemplateName: Code[10], BatchName: Code[10], NoSeries: Code[20])'
+    parameters:
+    - id: SalesItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: TempPurchItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: TemplateName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: BatchName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: NoSeries
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: GetGLEntryforPurchCalc
+  uid: M:Codeunit::CGI_Calculation_Management.GetGLEntryforPurchCalc(__MissingSymbol__,__MissingSymbol__@,Code[10],Code[10],Code[20])
+- syntax:
+    content: 'procedure InsertGenJournalLines(SalesItemLedgerEntry: __MissingTypeSymbol__, GLEntry: __MissingTypeSymbol__, TempPurchItemLedgerEntry: __MissingTypeSymbol__, TemplateName: Code[10], BatchName: Code[10], NoSeries: Code[20])'
+    parameters:
+    - id: SalesItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: GLEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: TempPurchItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: TemplateName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: BatchName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: NoSeries
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: InsertGenJournalLines
+  uid: M:Codeunit::CGI_Calculation_Management.InsertGenJournalLines(__MissingSymbol__,__MissingSymbol__,__MissingSymbol__@,Code[10],Code[10],Code[20])
+- syntax:
+    content: 'procedure MoveGLDimToJnlLineDim(TemplateName: Code[10], BatchName: Code[10], DimCode: Code[20], LineNoP: Integer, GLEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: TemplateName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: BatchName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: DimCode
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: LineNoP
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: GLEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: MoveGLDimToJnlLineDim
+  uid: M:Codeunit::CGI_Calculation_Management.MoveGLDimToJnlLineDim(Code[10],Code[10],Code[20],Integer,__MissingSymbol__)
+- syntax:
+    content: 'procedure MoveCalcDimToJnlLineDim(TemplateName: Code[10], BatchName: Code[10], DimCode: Code[20], LineNoP: Integer, GLEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: TemplateName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: BatchName
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    - id: DimCode
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: LineNoP
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: GLEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: MoveCalcDimToJnlLineDim
+  uid: M:Codeunit::CGI_Calculation_Management.MoveCalcDimToJnlLineDim(Code[10],Code[10],Code[20],Integer,__MissingSymbol__)
+- syntax:
+    content: procedure PostGenJournalLines()
+  name: PostGenJournalLines
+  uid: M:Codeunit::CGI_Calculation_Management.PostGenJournalLines
+- syntax:
+    content: 'procedure SetUseAdjstdIntIntrstPerc(NewUseAdjstdIntIntrstPerc: Boolean)'
+    parameters:
+    - id: NewUseAdjstdIntIntrstPerc
+      description: Boolean.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: SetUseAdjstdIntIntrstPerc
+  name: SetUseAdjstdIntIntrstPerc
+  uid: M:Codeunit::CGI_Calculation_Management.SetUseAdjstdIntIntrstPerc(Boolean)
+- syntax:
+    content: 'procedure UpdateExchangeRate(CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: UpdateExchangeRate
+  uid: M:Codeunit::CGI_Calculation_Management.UpdateExchangeRate(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure SetDoPost(NewValue: Boolean)'
+    parameters:
+    - id: NewValue
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetDoPost
+  uid: M:Codeunit::CGI_Calculation_Management.SetDoPost(Boolean)
+- syntax:
+    content: 'procedure CalcInterest(CalculationNo: Code[20]): Decimal'
+    parameters:
+    - id: CalculationNo
+      description: Code[20],
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: CalcInterest
+  name: CalcInterest
+  uid: M:Codeunit::CGI_Calculation_Management.CalcInterest(Code[20]):Decimal
+- syntax:
+    content: 'procedure SetProcessInPostCalc(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: SetProcessInPostCal
+  name: SetProcessInPostCalc
+  uid: M:Codeunit::CGI_Calculation_Management.SetProcessInPostCalc(Code[20])
+- syntax:
+    content: 'procedure GetGenJnlLines(CalculationNo: Code[20], GenJournalLine: __MissingTypeSymbol__)'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: GenJournalLine
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: GetGenJnlLines
+  uid: M:Codeunit::CGI_Calculation_Management.GetGenJnlLines(Code[20],__MissingSymbol__@)
+- syntax:
+    content: 'procedure GetPurchOrderNo(PurchInvNo: Code[20]): Code[20]'
+    parameters:
+    - id: PurchInvNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      returnType:
+        name: Code[20]
+        isExternal: true
+  name: GetPurchOrderNo
+  uid: M:Codeunit::CGI_Calculation_Management.GetPurchOrderNo(Code[20]):Code[20]
+- syntax:
+    content: 'procedure CopyCAWCalculation(CGICalculationHeaderSource: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderSource
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CopyCAWCalculation
+  uid: M:Codeunit::CGI_Calculation_Management.CopyCAWCalculation(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure IsCalculationEarningsApproved(CalculationNo: Code[20]): Boolean'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsCalculationEarningsApproved
+  uid: M:Codeunit::CGI_Calculation_Management.IsCalculationEarningsApproved(Code[20]):Boolean
+- syntax:
+    content: 'procedure GetValueFromSalesOrder(Calculation: Record "CGI Calculation Header", IsCountryLimit: Boolean, IsCustLimit: Boolean): Decimal'
+    parameters:
+    - id: Calculation
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    - id: IsCountryLimit
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: IsCustLimit
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: GetValueFromSalesOrder
+  uid: M:Codeunit::CGI_Calculation_Management.GetValueFromSalesOrder(CGI_Calculation_Header,Boolean,Boolean):Decimal
+- syntax:
+    content: 'procedure GetValueFromPostedSalesInv(Calculation: Record "CGI Calculation Header", IsCountryLimit: Boolean, IsCustLimit: Boolean): Decimal'
+    parameters:
+    - id: Calculation
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    - id: IsCountryLimit
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: IsCustLimit
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: GetValueFromPostedSalesInv
+  uid: M:Codeunit::CGI_Calculation_Management.GetValueFromPostedSalesInv(CGI_Calculation_Header,Boolean,Boolean):Decimal
+- syntax:
+    content: 'procedure GetCustomerCountry(Calculation: Record "CGI Calculation Header"): Code[10]'
+    parameters:
+    - id: Calculation
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      returnType:
+        name: Code[10]
+        isExternal: true
+  name: GetCustomerCountry
+  uid: M:Codeunit::CGI_Calculation_Management.GetCustomerCountry(CGI_Calculation_Header):Code[10]
+- syntax:
+    content: 'procedure UpdateCalculationExchangeRate(var CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      description: Record "CGI Calculation Header".
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: UpdateCalculationExchangeRate/
+  name: UpdateCalculationExchangeRate
+  uid: M:Codeunit::CGI_Calculation_Management.UpdateCalculationExchangeRate(CGI_Calculation_Header@)
+- syntax:
+    content: 'procedure CreateOrderFromCAW(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      description: Code[20]
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: CreateOrderFromCAW
+  name: CreateOrderFromCAW
+  uid: M:Codeunit::CGI_Calculation_Management.CreateOrderFromCAW(Code[20])
+- syntax:
+    content: 'procedure GetDefaultPostingDateSales(SalesHeader: __MissingTypeSymbol__, CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: SalesHeader
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: GetDefaultPostingDateSales
+  uid: M:Codeunit::CGI_Calculation_Management.GetDefaultPostingDateSales(__MissingSymbol__@,CGI_Calculation_Header)
+- syntax:
+    content: 'procedure GetDefaultPostingDatePurchase(PurchHeader: __MissingTypeSymbol__, CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: PurchHeader
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: GetDefaultPostingDatePurchase
+  uid: M:Codeunit::CGI_Calculation_Management.GetDefaultPostingDatePurchase(__MissingSymbol__@,CGI_Calculation_Header)
+commentId: O:Codeunit::CGI Calculation Management
+summary: Codeunit CGI Calculation Management (ID 60300).
+name: '"CGI Calculation Management"'
+uid: O:Codeunit::CGI_Calculation_Management

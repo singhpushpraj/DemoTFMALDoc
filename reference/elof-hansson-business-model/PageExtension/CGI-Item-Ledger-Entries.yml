@@ -1,0 +1,42 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Item Ledger Entries"'
+alId: ID 60319
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+methods:
+- syntax:
+    content: 'procedure FillWithSelected(ItemLedgerEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: ItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: FillWithSelected
+  uid: M:PageExtension::CGI_Item_Ledger_Entries.FillWithSelected(__MissingSymbol__@)
+- syntax:
+    content: 'procedure ReturnRec(): Code[20]'
+    return:
+      returnType:
+        name: Code[20]
+        isExternal: true
+  summary: ReturnRec.
+  name: ReturnRec
+  uid: M:PageExtension::CGI_Item_Ledger_Entries.ReturnRec:Code[20]
+- syntax:
+    content: 'procedure GetSelectionFilter(ItemLedgerEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: ItemLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: GetSelectionFilter
+  uid: M:PageExtension::CGI_Item_Ledger_Entries.GetSelectionFilter(__MissingSymbol__@)
+commentId: O:PageExtension::CGI Item Ledger Entries
+summary: Page Extenion CGI Item Ledger Entries (ID 60319) extends page item ledger entries
+name: '"CGI Item Ledger Entries"'
+uid: O:PageExtension::CGI_Item_Ledger_Entries

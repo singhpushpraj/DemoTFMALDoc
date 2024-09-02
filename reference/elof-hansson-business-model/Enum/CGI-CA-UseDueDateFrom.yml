@@ -1,0 +1,22 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA UseDueDateFrom"'
+alId: ID 60304
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Sales
+  uid: E:Enum::CGI_CA_UseDueDateFrom.Sales
+- name: Purchase
+  uid: E:Enum::CGI_CA_UseDueDateFrom.Purchase
+commentId: O:Enum::CGI CA UseDueDateFrom
+name: '"CGI CA UseDueDateFrom"'
+uid: O:Enum::CGI_CA_UseDueDateFrom

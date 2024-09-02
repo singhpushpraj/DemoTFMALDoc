@@ -1,0 +1,58 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extn Deployment Status Detail"
+alId: ID 2509
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataCaptionExpression
+  value: Rec.Description
+  promoted: false
+- name: DelayedInsert
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: ui-extensions
+  promoted: false
+- name: Caption
+  value: Extension Installation Status Detail
+  promoted: false
+commentId: O:Page::System#Apps#Extn Deployment Status Detail
+summary: Displays details about the deployment status of the selected extension.
+name: '"Extn Deployment Status Detail"'
+uid: O:Page::System#Apps#Extn_Deployment_Status_Detail

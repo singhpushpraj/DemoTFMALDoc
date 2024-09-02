@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Performance Profiler"
+alId: ID 24
+namespace: System.Tooling
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Performance Profiler
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: AboutTitle
+  value: About performance profiling
+  promoted: false
+- name: AboutText
+  value: Use the performance profiler to record a slow scenario that you can then analyze to see what took a long time. The profiler uses sampling technology, so the results may differ slightly between recordings of the same scenario.
+  promoted: false
+methods:
+- syntax:
+    content: procedure UpdateData()
+  name: UpdateData
+  uid: M:Page::System#Tooling#Performance_Profiler.UpdateData
+commentId: O:Page::System#Tooling#Performance Profiler
+summary: Sampling-based in-client performance profiler
+name: '"Performance Profiler"'
+uid: O:Page::System#Tooling#Performance_Profiler

@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Scenario"
+alId: ID 8890
+namespace: System.Email
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: >-
+    The default email scenario.
+
+    Used in the cases where no other scenario is defined.
+  name: Default
+  uid: E:Enum::System#Email#Email_Scenario.Default
+commentId: O:Enum::System#Email#Email Scenario
+summary: >-
+  Email scenarios.
+
+  Used to decouple email accounts from sending emails.
+name: '"Email Scenario"'
+uid: O:Enum::System#Email#Email_Scenario

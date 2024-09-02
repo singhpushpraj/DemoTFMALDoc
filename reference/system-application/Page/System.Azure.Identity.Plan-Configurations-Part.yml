@@ -1,0 +1,44 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plan Configurations Part"
+alId: ID 9065
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity."Plan Configuration"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: License Configurations
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "9017"
+  promoted: true
+- name: CardPageId
+  value: Plan Configuration Card
+  promoted: false
+  xrefType:
+    internalReference: O:Page::System#Azure#Identity#Plan_Configuration_Card
+    name: System.Azure.Identity."Plan Configuration Card"
+    isExternal: false
+- name: Permissions
+  value: tabledata "Plan Configuration" = r
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+commentId: O:Page::System#Azure#Identity#Plan Configurations Part
+summary: List part page to integrate the plan configurations.
+name: '"Plan Configurations Part"'
+uid: O:Page::System#Azure#Identity#Plan_Configurations_Part

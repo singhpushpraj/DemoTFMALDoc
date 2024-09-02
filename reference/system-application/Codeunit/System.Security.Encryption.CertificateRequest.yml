@@ -1,0 +1,207 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.CertificateRequest
+alId: ID 1463
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure InitializeRSA(KeySize: Integer, IncludePrivateParameters: Boolean, var KeyAsXmlString: Text)'
+    parameters:
+    - id: KeySize
+      description: The size of the key in bits.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: IncludePrivateParameters
+      description: True to include a public and private RSA key in KeyAsXmlString. False to include only the public key.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: KeyAsXmlString
+      description: Returns an XML string that contains the key of the RSA object that was created.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of RSACryptoServiceProvider with the specified key size and returns the key as an XML string.
+  name: InitializeRSA
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.InitializeRSA(Integer,Boolean,Text@)
+- syntax:
+    content: 'procedure InitializeRSA(KeySize: Integer, IncludePrivateParameters: Boolean, var KeyAsXmlString: SecretText)'
+    parameters:
+    - id: KeySize
+      description: The size of the key in bits.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: IncludePrivateParameters
+      description: True to include a public and private RSA key in KeyAsXmlString. False to include only the public key.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: KeyAsXmlString
+      description: Returns an XML string that contains the key of the RSA object that was created.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Initializes a new instance of RSACryptoServiceProvider with the specified key size and returns the key as an XML string.
+  name: InitializeRSA
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.InitializeRSA(Integer,Boolean,SecretText@)
+- syntax:
+    content: 'procedure InitializeCertificateRequestUsingRSA(SubjectName: Text, HashAlgorithm: Enum "Hash Algorithm", RSASignaturePaddingMode: Enum "RSA Signature Padding")'
+    parameters:
+    - id: SubjectName
+      description: The string representation of the subject name for the certificate or certificate request.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: HashAlgorithm
+      description: The hash algorithm to use when signing the certificate or certificate request.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: RSASignaturePaddingMode
+      description: The RSA signature padding to apply if self-signing or being signed with an X509Certificate2.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#RSA_Signature_Padding
+        name: System.Security.Encryption."RSA Signature Padding"
+        isExternal: false
+  summary: Initializes a new instance of the CertificateRequest with the specified parameters and the initialized RSA key.
+  name: InitializeCertificateRequestUsingRSA
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.InitializeCertificateRequestUsingRSA(Text,Enum::System#Security#Encryption#Hash_Algorithm,Enum::System#Security#Encryption#RSA_Signature_Padding)
+- syntax:
+    content: 'procedure AddX509BasicConstraintToCertificateRequest(CertificateAuthority: Boolean, HasPathLengthConstraint: Boolean, PathLengthConstraint: Integer, Critical: Boolean)'
+    parameters:
+    - id: CertificateAuthority
+      description: True if the certificate is from a certificate authority (CA). Otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: HasPathLengthConstraint
+      description: True if the certificate has a restriction on the number of path levels it allows; otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: PathLengthConstraint
+      description: The number of levels allowed in a certificate's path.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Critical
+      description: True if the extension is critical. Otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a X509BasicConstraint to the Certificate Request. See https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509basicconstraintsextension
+  name: AddX509BasicConstraintToCertificateRequest
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.AddX509BasicConstraintToCertificateRequest(Boolean,Boolean,Integer,Boolean)
+- syntax:
+    content: 'procedure AddX509EnhancedKeyUsageToCertificateRequest(OidValues: List of [Text], Critical: Boolean)'
+    parameters:
+    - id: OidValues
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+    - id: Critical
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: AddX509EnhancedKeyUsageToCertificateRequest
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.AddX509EnhancedKeyUsageToCertificateRequest(List_of_[Text],Boolean)
+- syntax:
+    content: 'procedure AddX509KeyUsageToCertificateRequest(X509KeyUsageFlags: Integer, Critical: Boolean)'
+    parameters:
+    - id: X509KeyUsageFlags
+      description: The sum of all flag values that are to be added. See https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509keyusageflags
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Critical
+      description: True if the extension is critical; otherwise, false.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a X509KeyUsage to the certificate request. See https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509keyusageextension
+  name: AddX509KeyUsageToCertificateRequest
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.AddX509KeyUsageToCertificateRequest(Integer,Boolean)
+- syntax:
+    content: 'procedure CreateSigningRequest(var SigningRequestPemString: Text)'
+    parameters:
+    - id: SigningRequestPemString
+      description: Returns the SigningRequest in Base 64 string format.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates an ASN.1 DER-encoded PKCS#10 CertificationRequest and returns a Base 64 encoded string.
+  name: CreateSigningRequest
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.CreateSigningRequest(Text@)
+- syntax:
+    content: 'procedure GetX509CertificateRequestExtensionCount(): Integer'
+    return:
+      description: The number of added extensions.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets how many X509Extensions have been added to the X509CertificateRequest.
+  name: GetX509CertificateRequestExtensionCount
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.GetX509CertificateRequestExtensionCount:Integer
+- syntax:
+    content: 'procedure CreateSigningRequest(SigningRequestOutStream: OutStream)'
+    parameters:
+    - id: SigningRequestOutStream
+      description: OutStream.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Creates an ASN.1 DER-encoded PKCS#10 CertificationRequest and returns it in an OutStream.
+  name: CreateSigningRequest
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.CreateSigningRequest(OutStream)
+- syntax:
+    content: 'procedure CreateSelfSigned(NotBefore: DateTime, NotAfter: DateTime, X509ContentType: Enum "X509 Content Type", var CertBase64Value: Text)'
+    parameters:
+    - id: NotBefore
+      description: The oldest date and time when this certificate is considered valid.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    - id: NotAfter
+      description: The date and time when this certificate is no longer considered valid.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    - id: X509ContentType
+      description: Specifies the format of an X.509 certificate.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#X509_Content_Type
+        name: System.Security.Encryption."X509 Content Type"
+        isExternal: false
+    - id: CertBase64Value
+      description: Returns the certificate value encoded using the Base64 algorithm.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates a self-signed certificate using the established subject, key, and optional extensions.
+  name: CreateSelfSigned
+  uid: M:Codeunit::System#Security#Encryption#CertificateRequest.CreateSelfSigned(DateTime,DateTime,Enum::System#Security#Encryption#X509_Content_Type,Text@)
+commentId: O:Codeunit::System#Security#Encryption#CertificateRequest
+summary: Provides helper functionality for creating Certificate Signing Requests (CSR:s) and Self Signed Certificates.
+name: CertificateRequest
+uid: O:Codeunit::System#Security#Encryption#CertificateRequest

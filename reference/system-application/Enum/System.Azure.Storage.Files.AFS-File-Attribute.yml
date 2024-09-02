@@ -1,0 +1,53 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS File Attribute"
+alId: ID 8955
+namespace: System.Azure.Storage.Files
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Indicates that the file is read-only.
+  name: '"Read Only"'
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.Read_Only
+- summary: Indicates that the file is hidden, and thus is not included in an ordinary directory listing.
+  name: Hidden
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.Hidden
+- summary: Indicates that the file is used by the operating system.
+  name: System
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.System
+- summary: Indicates that the there are no attributes.
+  name: None
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.None
+- summary: Indicates that the file is an archive file. Applications use this attribute to mark files for backup or removal.
+  name: Archive
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.Archive
+- summary: Indicates that the file is temporary. File systems attempt to keep all of the data in memory for quicker access rather than flushing the data back to mass storage. A temporary file should be deleted by the application as soon as it is no longer needed.
+  name: Temporary
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.Temporary
+- summary: Indicates that the file is offline. The data of the file is not immediately available.
+  name: Offline
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.Offline
+- summary: Indicates that the file will not be indexed by the content indexing service.
+  name: '"Not Content Indexed"'
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.Not_Content_Indexed
+- summary: Indicates that the file should not be read by background data integrity scanner.
+  name: '"No Scrub Data"'
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Attribute.No_Scrub_Data
+commentId: O:Enum::System#Azure#Storage#Files#AFS File Attribute
+summary: >-
+  Describes possible values for file attributes.
+
+  For the list of possible values see: https://learn.microsoft.com/en-us/rest/api/storageservices/create-file#file-system-attributes
+name: '"AFS File Attribute"'
+uid: O:Enum::System#Azure#Storage#Files#AFS_File_Attribute

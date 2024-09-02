@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Item Journal Line"'
+alId: ID 60334
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI GSM"'
+  uid: F:TableExtension::CGI_Item_Journal_Line.CGI_GSM
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Reel Width"'
+  uid: F:TableExtension::CGI_Item_Journal_Line.CGI_Reel_Width
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Diameter"'
+  uid: F:TableExtension::CGI_Item_Journal_Line.CGI_Diameter
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Core"'
+  uid: F:TableExtension::CGI_Item_Journal_Line.CGI_Core
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Sheet Size"'
+  uid: F:TableExtension::CGI_Item_Journal_Line.CGI_Sheet_Size[20]
+commentId: O:TableExtension::CGI Item Journal Line
+summary: TableExtenion CGI Item Journal Line (ID 60334) extends record Item Journal Line
+name: '"CGI Item Journal Line"'
+uid: O:TableExtension::CGI_Item_Journal_Line

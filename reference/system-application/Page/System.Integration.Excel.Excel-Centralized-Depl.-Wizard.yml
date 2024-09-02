@@ -1,0 +1,54 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Excel Centralized Depl. Wizard"
+alId: ID 1480
+namespace: System.Integration.Excel
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Integration#Excel#Edit_in_Excel_Settings
+  name: System.Integration.Excel."Edit in Excel Settings"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Excel Add-in Centralized Deployment
+  promoted: false
+- name: AdditionalSearchTerms
+  value: addin,addon,app,plugin,Office,O365,M365,Microsoft 365
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: SourceTable
+  value: "1480"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Integration#Excel#Edit_in_Excel_Settings
+    name: System.Integration.Excel."Edit in Excel Settings"
+    isExternal: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: AccessByPermission
+  value: tabledata "Edit in Excel Settings" = M
+  promoted: false
+- name: Permissions
+  value: tabledata "Media Resources" = r
+  promoted: false
+- name: HelpLink
+  value: https://go.microsoft.com/fwlink/?linkid=2221526
+  promoted: false
+commentId: O:Page::System#Integration#Excel#Excel Centralized Depl# Wizard
+summary: This is a wizard which guides the user through setting up their tenant for using Edit in Excel with Excel add-in installed through centralized deployments.
+name: '"Excel Centralized Depl. Wizard"'
+uid: O:Page::System#Integration#Excel#Excel_Centralized_Depl#_Wizard

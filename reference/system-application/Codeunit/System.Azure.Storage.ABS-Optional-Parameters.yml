@@ -1,0 +1,437 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Optional Parameters"
+alId: ID 9047
+namespace: System.Azure.Storage
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure LeaseId(Value: Guid)'
+    parameters:
+    - id: Value
+      description: Guid value specifying the LeaseID
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Sets the value for 'x-ms-lease-id' HttpHeader for a request.
+  name: LeaseId
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.LeaseId(Guid)
+- syntax:
+    content: 'procedure SourceLeaseId(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the source LeaseID
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-source-lease-id' HttpHeader for a request.
+  name: SourceLeaseId
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.SourceLeaseId(Text)
+- syntax:
+    content: 'procedure Origin(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'Origin' HttpHeader for a request.
+  name: Origin
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Origin(Text)
+- syntax:
+    content: 'procedure AccessControlRequestMethod(Value: Enum "Http Request Type")'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Http_Request_Type
+        name: System.Security.Authentication."Http Request Type"
+        isExternal: false
+  summary: Sets the value for 'Access-Control-Request-Method' HttpHeader for a request.
+  name: AccessControlRequestMethod
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.AccessControlRequestMethod(Enum::System#Security#Authentication#Http_Request_Type)
+- syntax:
+    content: 'procedure AccessControlRequestHeaders(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'Access-Control-Request-Headers' HttpHeader for a request.
+  name: AccessControlRequestHeaders
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.AccessControlRequestHeaders(Text)
+- syntax:
+    content: 'procedure ClientRequestId(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-client-request-id' HttpHeader for a request.
+  name: ClientRequestId
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.ClientRequestId(Text)
+- syntax:
+    content: 'procedure BlobPublicAccess(Value: Enum "ABS Blob Public Access")'
+    parameters:
+    - id: Value
+      description: Enum "Blob Public Access" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#ABS_Blob_Public_Access
+        name: System.Azure.Storage."ABS Blob Public Access"
+        isExternal: false
+  summary: Sets the value for 'x-ms-blob-public-access' HttpHeader for a request.
+  name: BlobPublicAccess
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.BlobPublicAccess(Enum::System#Azure#Storage#ABS_Blob_Public_Access)
+- syntax:
+    content: 'procedure Metadata(MetaName: Text, Value: Text)'
+    parameters:
+    - id: MetaName
+      description: The name of the Metadata-value.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: Text value specifying the Metadata value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-meta-[MetaName]' HttpHeader for a request.
+  name: Metadata
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Metadata(Text,Text)
+- syntax:
+    content: 'procedure TagsValue(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-tags' HttpHeader for a request.
+  name: TagsValue
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.TagsValue(Text)
+- syntax:
+    content: 'procedure SourceIfModifiedSince(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: DateTime value specifying the HttpHeader value
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Sets the value for 'x-ms-source-if-modified-since' HttpHeader for a request.
+  name: SourceIfModifiedSince
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.SourceIfModifiedSince(DateTime)
+- syntax:
+    content: 'procedure SourceIfUnmodifiedSince(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: DateTime value specifying the HttpHeader value
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Sets the value for 'x-ms-source-if-unmodified-since' HttpHeader for a request.
+  name: SourceIfUnmodifiedSince
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.SourceIfUnmodifiedSince(DateTime)
+- syntax:
+    content: 'procedure SourceIfMatch(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-source-if-match' HttpHeader for a request.
+  name: SourceIfMatch
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.SourceIfMatch(Text)
+- syntax:
+    content: 'procedure SourceIfNoneMatch(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-source-if-none-match' HttpHeader for a request.
+  name: SourceIfNoneMatch
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.SourceIfNoneMatch(Text)
+- syntax:
+    content: 'procedure CopySourceName(Value: Text)'
+    parameters:
+    - id: Value
+      description: Text value specifying the HttpHeader value
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the value for 'x-ms-copy-source' HttpHeader for a request.
+  name: CopySourceName
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.CopySourceName(Text)
+- syntax:
+    content: 'procedure RehydratePriority(Value: Enum "ABS Rehydrate Priority")'
+    parameters:
+    - id: Value
+      description: Enum "Rehydrate Priority" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#ABS_Rehydrate_Priority
+        name: System.Azure.Storage."ABS Rehydrate Priority"
+        isExternal: false
+  summary: Sets the value for 'x-ms-rehydrate-priority' HttpHeader for a request.
+  name: RehydratePriority
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.RehydratePriority(Enum::System#Azure#Storage#ABS_Rehydrate_Priority)
+- syntax:
+    content: 'procedure BlobExpiryOption(Value: Enum "ABS Blob Expiry Option")'
+    parameters:
+    - id: Value
+      description: Enum "Blob Expiry Option" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#ABS_Blob_Expiry_Option
+        name: System.Azure.Storage."ABS Blob Expiry Option"
+        isExternal: false
+  summary: Sets the value for 'x-ms-expiry-option' HttpHeader for a request.
+  name: BlobExpiryOption
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.BlobExpiryOption(Enum::System#Azure#Storage#ABS_Blob_Expiry_Option)
+- syntax:
+    content: 'procedure BlobExpiryTime(Value: Integer)'
+    parameters:
+    - id: Value
+      description: Integer value specifying the HttpHeader value
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the value for 'x-ms-expiry-time' HttpHeader for a request.
+  name: BlobExpiryTime
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.BlobExpiryTime(Integer)
+- syntax:
+    content: 'procedure BlobExpiryTime(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: DateTime value specifying the HttpHeader value
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Sets the value for 'x-ms-expiry-time' HttpHeader for a request.
+  name: BlobExpiryTime
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.BlobExpiryTime(DateTime)
+- syntax:
+    content: 'procedure BlobAccessTier(Value: Enum "ABS Blob Access Tier")'
+    parameters:
+    - id: Value
+      description: Enum "Blob Access Tier" value specifying the HttpHeader value
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#ABS_Blob_Access_Tier
+        name: System.Azure.Storage."ABS Blob Access Tier"
+        isExternal: false
+  summary: Sets the value for 'x-ms-access-tier' HttpHeader for a request.
+  name: BlobAccessTier
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.BlobAccessTier(Enum::System#Azure#Storage#ABS_Blob_Access_Tier)
+- syntax:
+    content: 'procedure Range(BytesStartValue: Integer, BytesEndValue: Integer)'
+    parameters:
+    - id: BytesStartValue
+      description: Integer value specifying the Bytes start range value
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: BytesEndValue
+      description: Integer value specifying the Bytes end range value
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the value for 'x-ms-range' HttpHeader for a request.
+  name: Range
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Range(Integer,Integer)
+- syntax:
+    content: 'procedure SourceRange(BytesStartValue: Integer, BytesEndValue: Integer)'
+    parameters:
+    - id: BytesStartValue
+      description: Integer value specifying the Bytes start range value
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: BytesEndValue
+      description: Integer value specifying the Bytes end range value
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the value for 'x-ms-source-range' HttpHeader for a request.
+  name: SourceRange
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.SourceRange(Integer,Integer)
+- syntax:
+    content: 'procedure RequiresSync(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the value for 'x-ms-requires-sync' HttpHeader for a request.
+  name: RequiresSync
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.RequiresSync(Boolean)
+- syntax:
+    content: 'procedure ReturnUserPrincipalName(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: Boolean value specifying the HttpHeader value
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Sets the value for 'x-ms-upn' HttpHeader for a request.
+
+    Version 2020-06-12 and later.
+
+    Valid for accounts with hierarchical namespace enabled.
+
+    If the user identity values that are returned in the x-ms-owner are true, they're transformed from Azure Active Directory object IDs to user principal names.
+
+    If the values are false, they're returned as Azure Active Directory object IDs. The default value is false.
+
+    Note that group and application object IDs are not translated, because they don't have unique friendly names.
+  name: ReturnUserPrincipalName
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.ReturnUserPrincipalName(Boolean)
+- syntax:
+    content: 'procedure Timeout(Value: Integer)'
+    parameters:
+    - id: Value
+      description: 'Timeout in seconds. Most operations have a max. limit of 30 seconds. For more Information see: https://go.microsoft.com/fwlink/?linkid=2210591'
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the optional timeout value for the request.
+  name: Timeout
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Timeout(Integer)
+- syntax:
+    content: 'procedure VersionId(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: The DateTime identifying the version
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: The versionid parameter is an opaque DateTime value that, when present, specifies the Version of the blob to retrieve.
+  name: VersionId
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.VersionId(DateTime)
+- syntax:
+    content: 'procedure Snapshot(Value: DateTime)'
+    parameters:
+    - id: Value
+      description: The DateTime identifying the Snapshot
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: The snapshot parameter is an opaque DateTime value that, when present, specifies the blob snapshot to retrieve.
+  name: Snapshot
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Snapshot(DateTime)
+- syntax:
+    content: 'procedure Snapshot(Value: Text)'
+    parameters:
+    - id: Value
+      description: The DateTime identifying the Snapshot
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: The snapshot parameter is an opaque DateTime value that, when present, specifies the blob snapshot to retrieve.
+  name: Snapshot
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Snapshot(Text)
+- syntax:
+    content: 'procedure Prefix(Value: Text)'
+    parameters:
+    - id: Value
+      description: Prefix to search for
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Filters the results to return only blobs whose names begin with the specified prefix.
+  name: Prefix
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Prefix(Text)
+- syntax:
+    content: 'procedure Delimiter(Value: Text)'
+    parameters:
+    - id: Value
+      description: Delimiting character/string
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    When the request includes this parameter, the operation returns a BlobPrefix element in the response body
+
+    that acts as a placeholder for all blobs with names that begin with the same substring until the delimiter character is reached.
+
+    The delimiter may be a single character or a string.
+  name: Delimiter
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Delimiter(Text)
+- syntax:
+    content: 'procedure MaxResults(Value: Integer)'
+    parameters:
+    - id: Value
+      description: Max. number of results to fetch. Must be positive between 1 - 5000
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: >-
+    Specifies the maximum number of blobs to be fetch, from 1 to 5000 if not defined it will fetch 5000
+
+    If more than 5000 blobs then use NextMarker to fetch the next set of blobs.
+
+    In certain cases, the service might return fewer results than specified by maxresults, and also return a continuation token.
+
+    Setting maxresults to a value less than or equal to zero results in error response code 400 (Bad Request).
+
+    see: https://learn.microsoft.com/en-us/rest/api/storageservices/list-blobs?tabs=azure-ad#uri-parameters
+  name: MaxResults
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.MaxResults(Integer)
+- syntax:
+    content: 'procedure NextMarker(Value: Text)'
+    parameters:
+    - id: Value
+      description: NextMarker From previous response to fetch the next 5000 or what you have defined in MaxResults
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Specifies the NextMarker of blobs to fetch
+
+    see: https://learn.microsoft.com/en-us/rest/api/storageservices/list-blobs?tabs=azure-ad#uri-parameters
+  name: NextMarker
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.NextMarker(Text)
+- syntax:
+    content: 'procedure BlockId(Value: Text)'
+    parameters:
+    - id: Value
+      description: A valid Base64 string value that identifies the block. Prior to encoding, the string must be less than or equal to 64 bytes
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Identifiers the ID of a Block in BlockBlob
+  name: BlockId
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.BlockId(Text)
+- syntax:
+    content: 'procedure Include(Value: Text)'
+    parameters:
+    - id: Value
+      description: The dataset(s) to include in text
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Specifies one or more datasets to include in the response.
+  name: Include
+  uid: M:Codeunit::System#Azure#Storage#ABS_Optional_Parameters.Include(Text)
+commentId: O:Codeunit::System#Azure#Storage#ABS Optional Parameters
+summary: Holder for the optional Azure Blob Storage HTTP headers and URL parameters.
+name: '"ABS Optional Parameters"'
+uid: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters

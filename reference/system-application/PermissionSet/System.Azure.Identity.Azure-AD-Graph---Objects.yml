@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD Graph - Objects"
+alId: ID 9012
+namespace: System.Azure.Identity
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: This permission set is replaced with inherent permissions and is no longer needed.
+  promoted: false
+- name: ObsoleteTag
+  value: "22.0"
+  promoted: false
+commentId: O:PermissionSet::System#Azure#Identity#Azure AD Graph - Objects
+name: '"Azure AD Graph - Objects"'
+obsoletion:
+  state: pending
+  reason: This permission set is replaced with inherent permissions and is no longer needed.
+  version: "22.0"
+uid: O:PermissionSet::System#Azure#Identity#Azure_AD_Graph_-_Objects

@@ -1,0 +1,107 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation - Navigate"'
+alId: ID 60324
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Navigate
+  promoted: false
+- name: PageType
+  value: Worksheet
+  promoted: true
+- name: SaveValues
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: ApplicationArea
+  value: '#all'
+  promoted: false
+- name: AdditionalSearchTerms
+  value: find,search,analyze,navigate
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: UsageCategory
+  value: Tasks
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetDoc(PostingDate: Date, DocNo: Code[20])'
+    parameters:
+    - id: PostingDate
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: DocNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: SetDoc
+  uid: M:Page::CGI_Calculation_-_Navigate.SetDoc(Date,Code[20])
+- syntax:
+    content: procedure FindTrackingRecords()
+  name: FindTrackingRecords
+  uid: M:Page::CGI_Calculation_-_Navigate.FindTrackingRecords
+- syntax:
+    content: 'procedure SetTracking(SerialNo: Code[20], LotNo: Code[20])'
+    parameters:
+    - id: SerialNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: LotNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: SetTracking
+  uid: M:Page::CGI_Calculation_-_Navigate.SetTracking(Code[20],Code[20])
+- syntax:
+    content: 'procedure ItemTrackingSearch(): Boolean'
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: ItemTrackingSearch
+  uid: M:Page::CGI_Calculation_-_Navigate.ItemTrackingSearch:Boolean
+- syntax:
+    content: procedure ClearTrackingInfo()
+  name: ClearTrackingInfo
+  uid: M:Page::CGI_Calculation_-_Navigate.ClearTrackingInfo
+- syntax:
+    content: procedure ClearInfo()
+  name: ClearInfo
+  uid: M:Page::CGI_Calculation_-_Navigate.ClearInfo
+- syntax:
+    content: 'procedure SetCalcDoc(PostingDate: Date, DocNo: Code[20])'
+    parameters:
+    - id: PostingDate
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: DocNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: SetCalcDoc
+  uid: M:Page::CGI_Calculation_-_Navigate.SetCalcDoc(Date,Code[20])
+commentId: O:Page::CGI Calculation - Navigate
+name: '"CGI Calculation - Navigate"'
+uid: O:Page::CGI_Calculation_-_Navigate

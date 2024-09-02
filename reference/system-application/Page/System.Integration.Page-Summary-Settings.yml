@@ -1,0 +1,50 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Page Summary Settings"
+alId: ID 2718
+namespace: System.Integration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#Basic,#Suite'
+  promoted: false
+- name: Caption
+  value: Card Settings
+  promoted: false
+- name: AdditionalSearchTerms
+  value: teams,adaptive card,link preview,summary,power automate,O365,M365,Microsoft 365
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: AccessByPermission
+  value: tabledata "Page Summary Settings" = M
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata Media = r,
+                      tabledata "Media Resources" = r
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+commentId: O:Page::System#Integration#Page Summary Settings
+name: '"Page Summary Settings"'
+uid: O:Page::System#Integration#Page_Summary_Settings

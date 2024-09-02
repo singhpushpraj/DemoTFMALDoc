@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Geolocation Status"
+alId: ID 7568
+namespace: System.Device
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Available
+  name: Available
+  uid: E:Enum::System#Device#Geolocation_Status.Available
+- summary: No data (no data could be obtained).
+  name: '"No Data"'
+  uid: E:Enum::System#Device#Geolocation_Status.No_Data
+- summary: Timed out (location information not obtained in due time).
+  name: '"Timed Out"'
+  uid: E:Enum::System#Device#Geolocation_Status.Timed_Out
+- summary: Not available (for example user denied app access to location).
+  name: '"Not Available"'
+  uid: E:Enum::System#Device#Geolocation_Status.Not_Available
+commentId: O:Enum::System#Device#Geolocation Status
+summary: Specifies the status of the geographical location data.
+name: '"Geolocation Status"'
+uid: O:Enum::System#Device#Geolocation_Status

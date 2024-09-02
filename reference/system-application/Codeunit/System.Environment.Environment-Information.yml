@@ -1,0 +1,153 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment."Environment Information"
+alId: ID 457
+namespace: System.Environment
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsProduction(): Boolean'
+    return:
+      description: True if the environment type is Production, False otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if environment type of tenant is Production.
+  name: IsProduction
+  uid: M:Codeunit::System#Environment#Environment_Information.IsProduction:Boolean
+- syntax:
+    content: 'procedure GetEnvironmentName(): Text'
+    return:
+      description: The name of the environment.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the name of the environment.
+  name: GetEnvironmentName
+  uid: M:Codeunit::System#Environment#Environment_Information.GetEnvironmentName:Text
+- syntax:
+    content: 'procedure IsSandbox(): Boolean'
+    return:
+      description: True if the environment type is a Sandbox, False otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if environment type of tenant is Sandbox.
+  name: IsSandbox
+  uid: M:Codeunit::System#Environment#Environment_Information.IsSandbox:Boolean
+- syntax:
+    content: 'procedure IsSaaS(): Boolean'
+    return:
+      description: True if the deployment type is a SaaS, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the deployment type is SaaS (Software as a Service).
+  name: IsSaaS
+  uid: M:Codeunit::System#Environment#Environment_Information.IsSaaS:Boolean
+- syntax:
+    content: 'procedure IsOnPrem(): Boolean'
+    return:
+      description: True if the deployment type is OnPremises, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks the deployment type is OnPremises.
+  name: IsOnPrem
+  uid: M:Codeunit::System#Environment#Environment_Information.IsOnPrem:Boolean
+- syntax:
+    content: 'procedure IsFinancials(): Boolean'
+    return:
+      description: True if the application family is Financials, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks the application family is Financials.
+  name: IsFinancials
+  uid: M:Codeunit::System#Environment#Environment_Information.IsFinancials:Boolean
+- syntax:
+    content: 'procedure IsSaaSInfrastructure(): Boolean'
+    return:
+      description: True if the deployment infrastructure type is a SaaS, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Checks if the deployment infrastucture is SaaS (Software as a Service).
+
+    Note: This function will return false in a Docker container.
+  name: IsSaaSInfrastructure
+  uid: M:Codeunit::System#Environment#Environment_Information.IsSaaSInfrastructure:Boolean
+- syntax:
+    content: 'procedure GetApplicationFamily(): Text'
+    return:
+      description: The application family.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the application family.
+  name: GetApplicationFamily
+  uid: M:Codeunit::System#Environment#Environment_Information.GetApplicationFamily:Text
+- syntax:
+    content: 'procedure VersionInstalled(AppID: Guid): Integer'
+    parameters:
+    - id: AppID
+      description: The module ID of the app.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The major version number when the app was installed.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the version which a given app was installed in.
+  name: VersionInstalled
+  uid: M:Codeunit::System#Environment#Environment_Information.VersionInstalled(Guid):Integer
+- syntax:
+    content: 'procedure CanStartSession(): Boolean'
+    return:
+      description: True, if a new session can be created, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if a new session can be started via the Session.StartSession call.
+  name: CanStartSession
+  uid: M:Codeunit::System#Environment#Environment_Information.CanStartSession:Boolean
+- syntax:
+    content: procedure EnableM365Collaboration()
+  summary: Sets M365 Collaboration to enabled in the tenant admin center
+  name: EnableM365Collaboration
+  uid: M:Codeunit::System#Environment#Environment_Information.EnableM365Collaboration
+- syntax:
+    content: 'procedure GetLinkedPowerPlatformEnvironmentId(): Text'
+    return:
+      description: The linked Power Platform environment id, if set.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the linked Power Platform environment id.
+  name: GetLinkedPowerPlatformEnvironmentId
+  uid: M:Codeunit::System#Environment#Environment_Information.GetLinkedPowerPlatformEnvironmentId:Text
+commentId: O:Codeunit::System#Environment#Environment Information
+summary: Exposes functionality to fetch attributes concerning the environment of the service on which the tenant is hosted.
+name: '"Environment Information"'
+uid: O:Codeunit::System#Environment#Environment_Information

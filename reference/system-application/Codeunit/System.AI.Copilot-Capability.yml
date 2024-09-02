@@ -1,0 +1,144 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."Copilot Capability"
+alId: ID 7773
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure RegisterCapability(CopilotCapability: __MissingTypeSymbol__, LearnMoreUrl: Text[2048])'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: LearnMoreUrl
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  name: RegisterCapability
+  uid: M:Codeunit::System#AI#Copilot_Capability.RegisterCapability(__MissingSymbol__,Text[2048])
+- syntax:
+    content: 'procedure RegisterCapability(CopilotCapability: __MissingTypeSymbol__, CopilotAvailability: Enum "Copilot Availability", LearnMoreUrl: Text[2048])'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: CopilotAvailability
+      parameterType:
+        internalReference: O:Enum::System#AI#Copilot_Availability
+        name: System.AI."Copilot Availability"
+        isExternal: false
+    - id: LearnMoreUrl
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  name: RegisterCapability
+  uid: M:Codeunit::System#AI#Copilot_Capability.RegisterCapability(__MissingSymbol__,Enum::System#AI#Copilot_Availability,Text[2048])
+- syntax:
+    content: 'procedure ModifyCapability(CopilotCapability: __MissingTypeSymbol__, CopilotAvailability: Enum "Copilot Availability", LearnMoreUrl: Text[2048])'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: CopilotAvailability
+      parameterType:
+        internalReference: O:Enum::System#AI#Copilot_Availability
+        name: System.AI."Copilot Availability"
+        isExternal: false
+    - id: LearnMoreUrl
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  name: ModifyCapability
+  uid: M:Codeunit::System#AI#Copilot_Capability.ModifyCapability(__MissingSymbol__,Enum::System#AI#Copilot_Availability,Text[2048])
+- syntax:
+    content: 'procedure UnregisterCapability(CopilotCapability: __MissingTypeSymbol__)'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: UnregisterCapability
+  uid: M:Codeunit::System#AI#Copilot_Capability.UnregisterCapability(__MissingSymbol__)
+- syntax:
+    content: 'procedure IsCapabilityRegistered(CopilotCapability: __MissingTypeSymbol__): Boolean'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsCapabilityRegistered
+  uid: M:Codeunit::System#AI#Copilot_Capability.IsCapabilityRegistered(__MissingSymbol__):Boolean
+- syntax:
+    content: 'procedure IsCapabilityRegistered(CopilotCapability: __MissingTypeSymbol__, AppId: Guid): Boolean'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: AppId
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsCapabilityRegistered
+  uid: M:Codeunit::System#AI#Copilot_Capability.IsCapabilityRegistered(__MissingSymbol__,Guid):Boolean
+- syntax:
+    content: 'procedure IsCapabilityActive(CopilotCapability: __MissingTypeSymbol__): Boolean'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsCapabilityActive
+  uid: M:Codeunit::System#AI#Copilot_Capability.IsCapabilityActive(__MissingSymbol__):Boolean
+- syntax:
+    content: 'procedure IsCapabilityActive(CopilotCapability: __MissingTypeSymbol__, AppId: Guid): Boolean'
+    parameters:
+    - id: CopilotCapability
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: AppId
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsCapabilityActive
+  uid: M:Codeunit::System#AI#Copilot_Capability.IsCapabilityActive(__MissingSymbol__,Guid):Boolean
+commentId: O:Codeunit::System#AI#Copilot Capability
+summary: The Copilot Capability codeunit is used to register, modify, and delete Copilot capabilities.
+name: '"Copilot Capability"'
+uid: O:Codeunit::System#AI#Copilot_Capability

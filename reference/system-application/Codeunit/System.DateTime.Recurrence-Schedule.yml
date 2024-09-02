@@ -1,0 +1,403 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Recurrence Schedule"
+alId: ID 4690
+namespace: System.DateTime
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetMinDateTime(DateTime: DateTime)'
+    parameters:
+    - id: DateTime
+      description: The minimum datetime.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: >-
+    Sets the earliest date to be returned from CalculateNextOccurrence.
+
+    The default MinDateTime is today at the start time set in recurrence.
+  examples:
+  - >2+
+
+    To start calculating recurrence from January 1st, 2000,
+
+    call SetMinDateTime(CREATEDATETIME(DMY2DATE(1, 1, 2000), 0T)).
+  name: SetMinDateTime
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.SetMinDateTime(DateTime)
+- syntax:
+    content: 'procedure CalculateNextOccurrence(RecurrenceID: Guid, LastOccurrence: DateTime): DateTime'
+    parameters:
+    - id: RecurrenceID
+      description: The recurrence ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: LastOccurrence
+      description: The time of the last scheduled occurrence.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    return:
+      description: Returns the DateTime value for the next occurrence. If there is no next occurrence, it returns the default value 0DT.
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Calculates the time and date for the next occurrence.
+  examples:
+  - >2+
+
+    To calculate the first occurrence (this is using the datatime provided in SetMinDateTime as a minimum datetime to return),
+
+    call CalculateNextOccurrence(RecurrenceID, 0DT)), the RecurrenceID is the ID returned from one of the create functions.
+  name: CalculateNextOccurrence
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.CalculateNextOccurrence(Guid,DateTime):DateTime
+- syntax:
+    content: 'procedure CreateDaily(StartTime: Time, StartDate: Date, EndDate: Date, DaysBetween: Integer): Guid'
+    parameters:
+    - id: StartTime
+      description: The start time of the recurrence.
+      parameterType:
+        name: Time
+        isExternal: true
+    - id: StartDate
+      description: The start date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      description: The end date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: DaysBetween
+      description: The number of days between each occurrence, starting with 1.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The ID used to reference this recurrence.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Creates a daily recurrence.
+  examples:
+  - >2+
+
+    To create a recurrence that starts today, repeats every third day, and does not have an end date,
+
+    call RecurrenceID := CreateDaily(now, today, 0D , 3).
+  name: CreateDaily
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.CreateDaily(Time,Date,Date,Integer):Guid
+- syntax:
+    content: 'procedure CreateWeekly(StartTime: Time, StartDate: Date, EndDate: Date, WeeksBetween: Integer, Monday: Boolean, Tuesday: Boolean, Wednesday: Boolean, Thursday: Boolean, Friday: Boolean, Saturday: Boolean, Sunday: Boolean): Guid'
+    parameters:
+    - id: StartTime
+      description: The start time of the recurrence.
+      parameterType:
+        name: Time
+        isExternal: true
+    - id: StartDate
+      description: The start date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      description: The end date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: WeeksBetween
+      description: The number of weeks between each occurrence, starting with 1.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Monday
+      description: Occur on Mondays.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Tuesday
+      description: Occur on Tuesdays.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Wednesday
+      description: Occur on Wednesdays.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Thursday
+      description: Occur on Thursdays.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Friday
+      description: Occur on Fridays.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Saturday
+      description: Occur on Saturdays.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Sunday
+      description: Occur on Sundays.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: The ID used to reference this recurrence.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Creates a weekly recurrence.
+  examples:
+  - >2+
+
+    To create a weekly recurrence that starts today, repeats every Monday and Wednesday, and does not have an end date,
+
+    call RecurrenceID := CreateWeekly(now, today, 0D , 1, true, false, true, false, false, false, false).
+  name: CreateWeekly
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.CreateWeekly(Time,Date,Date,Integer,Boolean,Boolean,Boolean,Boolean,Boolean,Boolean,Boolean):Guid
+- syntax:
+    content: 'procedure CreateMonthlyByDay(StartTime: Time, StartDate: Date, EndDate: Date, MonthsBetween: Integer, DayOfMonth: Integer): Guid'
+    parameters:
+    - id: StartTime
+      description: The start time of the recurrence.
+      parameterType:
+        name: Time
+        isExternal: true
+    - id: StartDate
+      description: The start date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      description: The end date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: MonthsBetween
+      description: The number of months between each occurrence, starting with 1.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DayOfMonth
+      description: The day of the month.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The ID used to reference this recurrence.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Creates a monthly recurrence by day.
+  examples:
+  - >2+
+
+    To create a monthly recurrence that repeats on the fourth day of every month,
+
+    call RecurrenceID := CreateMonthlyByDay(now, today, 0D , 1, 4).
+  name: CreateMonthlyByDay
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.CreateMonthlyByDay(Time,Date,Date,Integer,Integer):Guid
+- syntax:
+    content: 'procedure CreateMonthlyByDayOfWeek(StartTime: Time, StartDate: Date, EndDate: Date, MonthsBetween: Integer, InWeek: Enum "Recurrence - Ordinal No.", DayOfWeek: Enum "Recurrence - Day of Week"): Guid'
+    parameters:
+    - id: StartTime
+      description: The start time of the recurrence.
+      parameterType:
+        name: Time
+        isExternal: true
+    - id: StartDate
+      description: The start date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      description: The end date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: MonthsBetween
+      description: The number of months between each occurrence, starting with 1.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: InWeek
+      description: The week of the month.
+      parameterType:
+        internalReference: O:Enum::System#DateTime#Recurrence_-_Ordinal_No#
+        name: System.DateTime."Recurrence - Ordinal No."
+        isExternal: false
+    - id: DayOfWeek
+      description: The day of the week.
+      parameterType:
+        internalReference: O:Enum::System#DateTime#Recurrence_-_Day_of_Week
+        name: System.DateTime."Recurrence - Day of Week"
+        isExternal: false
+    return:
+      description: The ID used to reference this recurrence.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Creates a monthly recurrence by the day of the week.
+  examples:
+  - >2+
+
+    To create a monthly recurrence that calculates every last Friday of every month,
+
+    call RecurrenceID := CreateMonthlyByDayOfWeek(now, today, 0D , 1, RecurrenceOrdinalNo::Last, RecurrenceDayofWeek::Friday).
+  name: CreateMonthlyByDayOfWeek
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.CreateMonthlyByDayOfWeek(Time,Date,Date,Integer,Enum::System#DateTime#Recurrence_-_Ordinal_No#,Enum::System#DateTime#Recurrence_-_Day_of_Week):Guid
+- syntax:
+    content: 'procedure CreateYearlyByDay(StartTime: Time, StartDate: Date, EndDate: Date, YearsBetween: Integer, DayOfMonth: Integer, Month: Enum "Recurrence - Month"): Guid'
+    parameters:
+    - id: StartTime
+      description: The start time of the recurrence.
+      parameterType:
+        name: Time
+        isExternal: true
+    - id: StartDate
+      description: The start date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      description: The end date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: YearsBetween
+      description: The number of years between each occurrence, starting with 1.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DayOfMonth
+      description: The day of the month.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Month
+      description: The month of the year.
+      parameterType:
+        internalReference: O:Enum::System#DateTime#Recurrence_-_Month
+        name: System.DateTime."Recurrence - Month"
+        isExternal: false
+    return:
+      description: The ID used to reference this recurrence.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Creates a yearly recurrence by day.
+  examples:
+  - >2+
+
+    To create a yearly recurrence that repeats on the first day of December,
+
+    call RecurrenceID := CreateYearlyByDay(now, today, 0D , 1, 1, RecurrenceMonth::December).
+  name: CreateYearlyByDay
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.CreateYearlyByDay(Time,Date,Date,Integer,Integer,Enum::System#DateTime#Recurrence_-_Month):Guid
+- syntax:
+    content: 'procedure CreateYearlyByDayOfWeek(StartTime: Time, StartDate: Date, EndDate: Date, YearsBetween: Integer, InWeek: Enum "Recurrence - Ordinal No.", DayOfWeek: Enum "Recurrence - Day of Week", Month: Enum "Recurrence - Month"): Guid'
+    parameters:
+    - id: StartTime
+      description: The start time of the recurrence.
+      parameterType:
+        name: Time
+        isExternal: true
+    - id: StartDate
+      description: The start date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      description: The end date of the recurrence.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: YearsBetween
+      description: The number of years between each occurrence, starting with 1.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: InWeek
+      description: The week of the month.
+      parameterType:
+        internalReference: O:Enum::System#DateTime#Recurrence_-_Ordinal_No#
+        name: System.DateTime."Recurrence - Ordinal No."
+        isExternal: false
+    - id: DayOfWeek
+      description: The day of the week.
+      parameterType:
+        internalReference: O:Enum::System#DateTime#Recurrence_-_Day_of_Week
+        name: System.DateTime."Recurrence - Day of Week"
+        isExternal: false
+    - id: Month
+      description: The month of the year.
+      parameterType:
+        internalReference: O:Enum::System#DateTime#Recurrence_-_Month
+        name: System.DateTime."Recurrence - Month"
+        isExternal: false
+    return:
+      description: The ID used to reference this recurrence.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Creates a yearly recurrence by day of week of a given month.
+  examples:
+  - >2+
+
+    To create a yearly recurrence that repeats on the last Friday of every month,
+
+    call RecurrenceID := CreateYearlyByDayOfWeek(now, today, 0D , 1, RecurrenceOrdinalNo::Last, RecurrenceDayofWeek::Weekday, RecurrenceMonth::December).
+  name: CreateYearlyByDayOfWeek
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.CreateYearlyByDayOfWeek(Time,Date,Date,Integer,Enum::System#DateTime#Recurrence_-_Ordinal_No#,Enum::System#DateTime#Recurrence_-_Day_of_Week,Enum::System#DateTime#Recurrence_-_Month):Guid
+- syntax:
+    content: 'procedure OpenRecurrenceSchedule(var RecurrenceID: Guid)'
+    parameters:
+    - id: RecurrenceID
+      description: The recurrence ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Opens the card for the recurrence.
+  name: OpenRecurrenceSchedule
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.OpenRecurrenceSchedule(Guid@)
+- syntax:
+    content: 'procedure RecurrenceDisplayText(RecurrenceID: Guid): Text'
+    parameters:
+    - id: RecurrenceID
+      description: The recurrence ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The short text to display.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns a short text description of the recurrence.
+  name: RecurrenceDisplayText
+  uid: M:Codeunit::System#DateTime#Recurrence_Schedule.RecurrenceDisplayText(Guid):Text
+commentId: O:Codeunit::System#DateTime#Recurrence Schedule
+summary: Calculates when the next event will occur. Events can recur daily, weekly, monthly or yearly.
+name: '"Recurrence Schedule"'
+uid: O:Codeunit::System#DateTime#Recurrence_Schedule

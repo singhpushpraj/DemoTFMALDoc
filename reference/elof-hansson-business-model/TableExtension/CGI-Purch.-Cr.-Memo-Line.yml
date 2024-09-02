@@ -1,0 +1,52 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Purch. Cr. Memo Line"'
+alId: ID 60327
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    internalReference: O:Enum::CGI_CA_CalculationLineItemType
+    name: '"CGI CA CalculationLineItemType"'
+    isExternal: false
+  name: '"CGI Division"'
+  uid: F:TableExtension::CGI_Purch#_Cr#_Memo_Line.CGI_Division
+- type:
+    internalReference: O:Enum::CGI_CA_CalculationLineItemType
+    name: '"CGI CA CalculationLineItemType"'
+    isExternal: false
+  name: '"CGI Item Type"'
+  uid: F:TableExtension::CGI_Purch#_Cr#_Memo_Line.CGI_Item_Type
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI GSM"'
+  uid: F:TableExtension::CGI_Purch#_Cr#_Memo_Line.CGI_GSM
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Reel Width"'
+  uid: F:TableExtension::CGI_Purch#_Cr#_Memo_Line.CGI_Reel_Width
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Diameter"'
+  uid: F:TableExtension::CGI_Purch#_Cr#_Memo_Line.CGI_Diameter
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Core"'
+  uid: F:TableExtension::CGI_Purch#_Cr#_Memo_Line.CGI_Core
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Sheet Size"'
+  uid: F:TableExtension::CGI_Purch#_Cr#_Memo_Line.CGI_Sheet_Size[20]
+commentId: O:TableExtension::CGI Purch# Cr# Memo Line
+summary: TableExtenion CGI Purch. Cr. Memo Line (ID 60327).
+name: '"CGI Purch. Cr. Memo Line"'
+uid: O:TableExtension::CGI_Purch#_Cr#_Memo_Line

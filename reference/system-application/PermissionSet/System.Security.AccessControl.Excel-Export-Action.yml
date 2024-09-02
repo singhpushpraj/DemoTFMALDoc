@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Excel Export Action"
+alId: ID 4426
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: D365 Excel Export Action
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Edit in Excel - View","Export Report Excel"'
+  promoted: false
+commentId: O:PermissionSet::System#Security#AccessControl#Excel Export Action
+name: '"Excel Export Action"'
+uid: O:PermissionSet::System#Security#AccessControl#Excel_Export_Action

@@ -1,0 +1,101 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD Plan"
+alId: ID 9016
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IsPlanAssignedToUser(PlanGUID: Guid): Boolean'
+    parameters:
+    - id: PlanGUID
+      description: the plan GUID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: true if the given plan is assigned to the current user.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the plan is assigned to the current user.
+  name: IsPlanAssignedToUser
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Plan.IsPlanAssignedToUser(Guid):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IsPlanAssignedToUser(PlanGUID: Guid, UserGUID: Guid): Boolean'
+    parameters:
+    - id: PlanGUID
+      description: the plan GUID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: UserGUID
+      description: the user GUID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: true if the given plan is assigned to the given user.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the plan is assigned to a specific user.
+  name: IsPlanAssignedToUser
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Plan.IsPlanAssignedToUser(Guid,Guid):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure CheckIfPlansDifferent(GraphUserInfo: DotNet "Microsoft.Dynamics.Nav.LicensingService.Model.UserInfo", UserSecID: Guid): Boolean'
+    parameters:
+    - id: GraphUserInfo
+      parameterType:
+        name: DotNet "Microsoft.Dynamics.Nav.LicensingService.Model.UserInfo"
+        isExternal: true
+    - id: UserSecID
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: CheckIfPlansDifferent
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Plan.CheckIfPlansDifferent(__MissingSymbol__,Guid):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IsBCServicePlan(ServicePlanId: Guid): Boolean'
+    parameters:
+    - id: ServicePlanId
+      description: The plan to check.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True, if the service plan is a Business Central Plan, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether a given service plan is a Business Central service Plan
+  name: IsBCServicePlan
+  uid: M:Codeunit::System#Azure#Identity#Azure_AD_Plan.IsBCServicePlan(Guid):Boolean
+commentId: O:Codeunit::System#Azure#Identity#Azure AD Plan
+summary: Retrieve plans in Microsoft Entra and manage plans
+name: '"Azure AD Plan"'
+uid: O:Codeunit::System#Azure#Identity#Azure_AD_Plan

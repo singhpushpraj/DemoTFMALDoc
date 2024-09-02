@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Security#Encryption#CertificateRequest">
+  <h1>Codeunit CertificateRequest</h1>
+
+
+<div class="font-style-italic">ID 1463</div>
+<div class="font-style-italic">Namespace: System.Security.Encryption</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Provides helper functionality for creating Certificate Signing Requests (CSR:s) and Self Signed Certificates.</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">InitializeRSA</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes a new instance of RSACryptoServiceProvider with the specified key size and returns the key as an XML string.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+procedure InitializeRSA(KeySize: Integer, IncludePrivateParameters: Boolean, var KeyAsXmlString: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								KeySize
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The size of the key in bits.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IncludePrivateParameters
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>True to include a public and private RSA key in KeyAsXmlString. False to include only the public key.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								KeyAsXmlString
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Returns an XML string that contains the key of the RSA object that was created.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">InitializeRSA</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes a new instance of RSACryptoServiceProvider with the specified key size and returns the key as an XML string.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure InitializeRSA(KeySize: Integer, IncludePrivateParameters: Boolean, var KeyAsXmlString: SecretText)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								KeySize
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The size of the key in bits.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								IncludePrivateParameters
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>True to include a public and private RSA key in KeyAsXmlString. False to include only the public key.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								KeyAsXmlString
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Returns an XML string that contains the key of the RSA object that was created.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">InitializeCertificateRequestUsingRSA</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes a new instance of the CertificateRequest with the specified parameters and the initialized RSA key.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure InitializeCertificateRequestUsingRSA(SubjectName: Text, HashAlgorithm: Enum &quot;Hash Algorithm&quot;, RSASignaturePaddingMode: Enum &quot;RSA Signature Padding&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								SubjectName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The string representation of the subject name for the certificate or certificate request.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HashAlgorithm
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Encryption.Hash-Algorithm.html">System.Security.Encryption.&quot;Hash Algorithm&quot;</a>                 </td>
+   							<td>
+								<p>The hash algorithm to use when signing the certificate or certificate request.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								RSASignaturePaddingMode
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Encryption.RSA-Signature-Padding.html">System.Security.Encryption.&quot;RSA Signature Padding&quot;</a>                 </td>
+   							<td>
+								<p>The RSA signature padding to apply if self-signing or being signed with an X509Certificate2.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">AddX509BasicConstraintToCertificateRequest</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a X509BasicConstraint to the Certificate Request. See <a href="https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509basicconstraintsextension">https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509basicconstraintsextension</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddX509BasicConstraintToCertificateRequest(CertificateAuthority: Boolean, HasPathLengthConstraint: Boolean, PathLengthConstraint: Integer, Critical: Boolean)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertificateAuthority
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>True if the certificate is from a certificate authority (CA). Otherwise, false.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								HasPathLengthConstraint
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>True if the certificate has a restriction on the number of path levels it allows; otherwise, false.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								PathLengthConstraint
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The number of levels allowed in a certificate's path.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Critical
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>True if the extension is critical. Otherwise, false.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">AddX509EnhancedKeyUsageToCertificateRequest</h3>
+   <div class="memberInfo">
+
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddX509EnhancedKeyUsageToCertificateRequest(OidValues: List of [Text], Critical: Boolean)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								OidValues
+   							</td>
+   							<td class="font-style-italic">
+List of [Text]                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Critical
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">AddX509KeyUsageToCertificateRequest</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a X509KeyUsage to the certificate request. See <a href="https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509keyusageextension">https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509keyusageextension</a></p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddX509KeyUsageToCertificateRequest(X509KeyUsageFlags: Integer, Critical: Boolean)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								X509KeyUsageFlags
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The sum of all flag values that are to be added. See <a href="https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509keyusageflags">https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509keyusageflags</a></p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Critical
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>True if the extension is critical; otherwise, false.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateSigningRequest</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates an ASN.1 DER-encoded PKCS#10 CertificationRequest and returns a Base 64 encoded string.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateSigningRequest(var SigningRequestPemString: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								SigningRequestPemString
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Returns the SigningRequest in Base 64 string format.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetX509CertificateRequestExtensionCount</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets how many X509Extensions have been added to the X509CertificateRequest.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetX509CertificateRequestExtensionCount(): Integer</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Integer               </td>
+   						<td>
+							<p>The number of added extensions.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateSigningRequest</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates an ASN.1 DER-encoded PKCS#10 CertificationRequest and returns it in an OutStream.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateSigningRequest(SigningRequestOutStream: OutStream)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								SigningRequestOutStream
+   							</td>
+   							<td class="font-style-italic">
+OutStream                 </td>
+   							<td>
+								<p>OutStream.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateSelfSigned</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a self-signed certificate using the established subject, key, and optional extensions.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateSelfSigned(NotBefore: DateTime, NotAfter: DateTime, X509ContentType: Enum &quot;X509 Content Type&quot;, var CertBase64Value: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								NotBefore
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The oldest date and time when this certificate is considered valid.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NotAfter
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The date and time when this certificate is no longer considered valid.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								X509ContentType
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Encryption.X509-Content-Type.html">System.Security.Encryption.&quot;X509 Content Type&quot;</a>                 </td>
+   							<td>
+								<p>Specifies the format of an X.509 certificate.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Returns the certificate value encoded using the Base64 algorithm.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

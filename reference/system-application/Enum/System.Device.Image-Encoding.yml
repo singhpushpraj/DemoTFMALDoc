@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Image Encoding"
+alId: ID 1908
+namespace: System.Device
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: JPEG image encoding format.
+  name: JPEG
+  uid: E:Enum::System#Device#Image_Encoding.JPEG
+- summary: PNG image encoding format.
+  name: PNG
+  uid: E:Enum::System#Device#Image_Encoding.PNG
+commentId: O:Enum::System#Device#Image Encoding
+summary: Specifies the supported encodings for the Camera Interaction page.
+name: '"Image Encoding"'
+uid: O:Enum::System#Device#Image_Encoding

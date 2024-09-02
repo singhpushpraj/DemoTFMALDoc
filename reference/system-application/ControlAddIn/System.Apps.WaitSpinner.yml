@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps.WaitSpinner
+namespace: System.Apps
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure Wait(SecondsToWait: Integer)'
+    parameters:
+    - id: SecondsToWait
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: Wait
+  uid: M:ControlAddIn::System#Apps#WaitSpinner.Wait(Integer)
+commentId: O:ControlAddIn::System#Apps#WaitSpinner
+name: WaitSpinner
+uid: O:ControlAddIn::System#Apps#WaitSpinner

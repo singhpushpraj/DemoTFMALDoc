@@ -1,0 +1,30 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Sales Header"'
+alId: ID 60302
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Calculation No."'
+  uid: F:TableExtension::CGI_Sales_Header.CGI_Calculation_No#[20]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"CGI Sales Business Terms"'
+  uid: F:TableExtension::CGI_Sales_Header.CGI_Sales_Business_Terms[10]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI No Limit Calculation"'
+  uid: F:TableExtension::CGI_Sales_Header.CGI_No_Limit_Calculation
+commentId: O:TableExtension::CGI Sales Header
+summary: TableExtension CGI Sales Header (ID 60302) extends Record Sales Header.
+name: '"CGI Sales Header"'
+uid: O:TableExtension::CGI_Sales_Header

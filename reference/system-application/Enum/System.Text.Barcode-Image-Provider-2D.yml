@@ -1,0 +1,30 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Image Provider 2D"
+alId: ID 9207
+namespace: System.Text
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Dynamics QR Code Provider.
+  name: Dynamics2D
+  uid: E:Enum::System#Text#Barcode_Image_Provider_2D.Dynamics2D
+implements:
+- internalReference: O:Interface::System#Text#Barcode_Image_Provider_2D
+  name: System.Text."Barcode Image Provider 2D"
+  isExternal: false
+commentId: O:Enum::System#Text#Barcode Image Provider 2D
+summary: The available 2D barcode font providers.
+name: '"Barcode Image Provider 2D"'
+uid: O:Enum::System#Text#Barcode_Image_Provider_2D

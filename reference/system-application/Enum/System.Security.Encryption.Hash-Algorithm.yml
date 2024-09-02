@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."Hash Algorithm"
+alId: ID 1445
+namespace: System.Security.Encryption
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Specifies the MD5 hash algorithm
+  name: MD5
+  uid: E:Enum::System#Security#Encryption#Hash_Algorithm.MD5
+- summary: Specifies the SHA1 hash algorithm
+  name: SHA1
+  uid: E:Enum::System#Security#Encryption#Hash_Algorithm.SHA1
+- summary: Specifies the SHA256 hash algorithm
+  name: SHA256
+  uid: E:Enum::System#Security#Encryption#Hash_Algorithm.SHA256
+- summary: Specifies the SHA384 hash algorithm
+  name: SHA384
+  uid: E:Enum::System#Security#Encryption#Hash_Algorithm.SHA384
+- summary: Specifies the SHA512 hash algorithm
+  name: SHA512
+  uid: E:Enum::System#Security#Encryption#Hash_Algorithm.SHA512
+commentId: O:Enum::System#Security#Encryption#Hash Algorithm
+summary: Specifies the types of hash algorithm.
+name: '"Hash Algorithm"'
+uid: O:Enum::System#Security#Encryption#Hash_Algorithm

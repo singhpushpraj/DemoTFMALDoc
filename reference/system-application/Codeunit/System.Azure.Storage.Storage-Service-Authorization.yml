@@ -1,0 +1,247 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."Storage Service Authorization"
+alId: ID 9062
+namespace: System.Azure.Storage
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure CreateAccountSAS(SigningKey: Text, SignedVersion: Enum "Storage Service API Version", SignedServices: List of [Enum "SAS Service Type"], SignedResources: List of [Enum "SAS Resource Type"], SignedPermissions: List of [Enum "SAS Permission"], SignedExpiry: DateTime): Interface "Storage Service Authorization"'
+    parameters:
+    - id: SigningKey
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SignedVersion
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+        name: System.Azure.Storage."Storage Service API Version"
+        isExternal: false
+    - id: SignedServices
+      parameterType:
+        name: List of [Enum System.Azure.Storage."SAS Service Type"]
+        isExternal: true
+    - id: SignedResources
+      parameterType:
+        name: List of [Enum System.Azure.Storage."SAS Resource Type"]
+        isExternal: true
+    - id: SignedPermissions
+      parameterType:
+        name: List of [Enum System.Azure.Storage."SAS Permission"]
+        isExternal: true
+    - id: SignedExpiry
+      parameterType:
+        name: DateTime
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  name: CreateAccountSAS
+  uid: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateAccountSAS(Text,Enum::System#Azure#Storage#Storage_Service_API_Version,List_of_[SAS_Service_Type],List_of_[SAS_Resource_Type],List_of_[SAS_Permission],DateTime):Interface::System#Azure#Storage#Storage_Service_Authorization
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure CreateAccountSAS(SigningKey: Text, SignedVersion: Enum "Storage Service API Version", SignedServices: List of [Enum "SAS Service Type"], SignedResources: List of [Enum "SAS Resource Type"], SignedPermissions: List of [Enum "SAS Permission"], SignedExpiry: DateTime, OptionalSASParameters: Record "SAS Parameters" temporary): Interface "Storage Service Authorization"'
+    parameters:
+    - id: SigningKey
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SignedVersion
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+        name: System.Azure.Storage."Storage Service API Version"
+        isExternal: false
+    - id: SignedServices
+      parameterType:
+        name: List of [Enum System.Azure.Storage."SAS Service Type"]
+        isExternal: true
+    - id: SignedResources
+      parameterType:
+        name: List of [Enum System.Azure.Storage."SAS Resource Type"]
+        isExternal: true
+    - id: SignedPermissions
+      parameterType:
+        name: List of [Enum System.Azure.Storage."SAS Permission"]
+        isExternal: true
+    - id: SignedExpiry
+      parameterType:
+        name: DateTime
+        isExternal: true
+    - id: OptionalSASParameters
+      parameterType:
+        name: Record "SAS Parameters" temporary
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  name: CreateAccountSAS
+  uid: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateAccountSAS(Text,Enum::System#Azure#Storage#Storage_Service_API_Version,List_of_[SAS_Service_Type],List_of_[SAS_Resource_Type],List_of_[SAS_Permission],DateTime,SAS_Parameters):Interface::System#Azure#Storage#Storage_Service_Authorization
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use CreateSharedKey with SecretText data type for SharedKey.,24.0)]'
+    content: 'procedure CreateSharedKey(SharedKey: Text): Interface "Storage Service Authorization"'
+    parameters:
+    - id: SharedKey
+      description: The shared key to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A Shared Key authorization.
+      returnType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  summary: >-
+    Creates a Shared Key authorization mechanism for HTTP requests to Azure Storage Services.
+
+    See: https://go.microsoft.com/fwlink/?linkid=2210396
+  name: CreateSharedKey
+  obsoletion:
+    state: pending
+    reason: Use CreateSharedKey with SecretText data type for SharedKey.
+    version: "24.0"
+  uid: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateSharedKey(Text):Interface::System#Azure#Storage#Storage_Service_Authorization
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use CreateSharedKey with SecretText data type for SharedKey.,24.0)]'
+    content: 'procedure CreateSharedKey(SharedKey: Text, ApiVersion: Enum "Storage Service API Version"): Interface "Storage Service Authorization"'
+    parameters:
+    - id: SharedKey
+      description: The shared key to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ApiVersion
+      description: The API version to use.
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+        name: System.Azure.Storage."Storage Service API Version"
+        isExternal: false
+    return:
+      description: A Shared Key authorization.
+      returnType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  summary: >-
+    Creates a Shared Key authorization mechanism for HTTP requests to Azure Storage Services.
+
+    See: https://go.microsoft.com/fwlink/?linkid=2210396
+  name: CreateSharedKey
+  obsoletion:
+    state: pending
+    reason: Use CreateSharedKey with SecretText data type for SharedKey.
+    version: "24.0"
+  uid: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateSharedKey(Text,Enum::System#Azure#Storage#Storage_Service_API_Version):Interface::System#Azure#Storage#Storage_Service_Authorization
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure CreateSharedKey(SharedKey: SecretText): Interface "Storage Service Authorization"'
+    parameters:
+    - id: SharedKey
+      description: The shared key to use.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      description: A Shared Key authorization.
+      returnType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  summary: >-
+    Creates a Shared Key authorization mechanism for HTTP requests to Azure Storage Services.
+
+    See: https://go.microsoft.com/fwlink/?linkid=2210396
+  name: CreateSharedKey
+  uid: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateSharedKey(SecretText):Interface::System#Azure#Storage#Storage_Service_Authorization
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure CreateSharedKey(SharedKey: SecretText, ApiVersion: Enum "Storage Service API Version"): Interface "Storage Service Authorization"'
+    parameters:
+    - id: SharedKey
+      description: The shared key to use.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: ApiVersion
+      description: The API version to use.
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+        name: System.Azure.Storage."Storage Service API Version"
+        isExternal: false
+    return:
+      description: A Shared Key authorization.
+      returnType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  summary: >-
+    Creates a Shared Key authorization mechanism for HTTP requests to Azure Storage Services.
+
+    See: https://go.microsoft.com/fwlink/?linkid=2210396
+  name: CreateSharedKey
+  uid: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateSharedKey(SecretText,Enum::System#Azure#Storage#Storage_Service_API_Version):Interface::System#Azure#Storage#Storage_Service_Authorization
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure UseReadySAS(SASToken: Text): Interface "Storage Service Authorization"'
+    parameters:
+    - id: SASToken
+      description: A pre-generated SAS token.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An account SAS authorization.
+      returnType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  summary: >-
+    Uses a pre-generated account SAS (Shared Access Signature) for authorizing HTTP request to Azure Storage Services.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210398
+  name: UseReadySAS
+  uid: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.UseReadySAS(Text):Interface::System#Azure#Storage#Storage_Service_Authorization
+- syntax:
+    content: 'procedure GetDefaultAPIVersion(): Enum "Storage Service API Version"'
+    return:
+      description: The default Storage Service API Version
+      returnType:
+        internalReference: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+        name: System.Azure.Storage."Storage Service API Version"
+        isExternal: false
+  summary: Get the default Storage Service API Version.
+  name: GetDefaultAPIVersion
+  uid: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.GetDefaultAPIVersion:Enum::System#Azure#Storage#Storage_Service_API_Version
+commentId: O:Codeunit::System#Azure#Storage#Storage Service Authorization
+summary: Exposes methods to create different kinds of authorizations for HTTP Request made to Azure Storage Services.
+name: '"Storage Service Authorization"'
+uid: O:Codeunit::System#Azure#Storage#Storage_Service_Authorization

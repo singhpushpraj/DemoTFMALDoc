@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Calculation Setup"'
+alId: ID 70302
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  internalReference: O:Table::CGI_Calculation_Setup
+  name: '"CGI Calculation Setup"'
+  isExternal: false
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"LCBG Nos"'
+  uid: F:TableExtension::CGI_TFM_Calculation_Setup.LCBG_Nos[20]
+commentId: O:TableExtension::CGI TFM Calculation Setup
+summary: >-
+  tablexrenion 70303 CGI TFM Calculation Setup extends table CGI Calculation Setup
+
+  contains TFM related fields
+name: '"CGI TFM Calculation Setup"'
+uid: O:TableExtension::CGI_TFM_Calculation_Setup

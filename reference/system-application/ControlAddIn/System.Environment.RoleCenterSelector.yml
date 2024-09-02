@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.RoleCenterSelector
+namespace: System.Environment
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Environment
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure LoadRoleCenterFromJson(Json: Text)'
+    parameters:
+    - id: Json
+      parameterType:
+        name: Text
+        isExternal: true
+  name: LoadRoleCenterFromJson
+  uid: M:ControlAddIn::System#Environment#RoleCenterSelector.LoadRoleCenterFromJson(Text)
+- syntax:
+    content: 'procedure LoadPageDataFromJson(Json: Text)'
+    parameters:
+    - id: Json
+      parameterType:
+        name: Text
+        isExternal: true
+  name: LoadPageDataFromJson
+  uid: M:ControlAddIn::System#Environment#RoleCenterSelector.LoadPageDataFromJson(Text)
+- syntax:
+    content: 'procedure SetCurrentProfileId(ProfileId: Text)'
+    parameters:
+    - id: ProfileId
+      parameterType:
+        name: Text
+        isExternal: true
+  name: SetCurrentProfileId
+  uid: M:ControlAddIn::System#Environment#RoleCenterSelector.SetCurrentProfileId(Text)
+commentId: O:ControlAddIn::System#Environment#RoleCenterSelector
+name: RoleCenterSelector
+uid: O:ControlAddIn::System#Environment#RoleCenterSelector

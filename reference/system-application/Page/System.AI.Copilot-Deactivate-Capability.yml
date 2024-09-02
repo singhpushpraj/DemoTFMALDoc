@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."Copilot Deactivate Capability"
+alId: ID 7772
+namespace: System.AI
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: StandardDialog
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#AI#Copilot Deactivate Capability
+summary: Page for getting the reason for deactivation of a copilot capability.
+name: '"Copilot Deactivate Capability"'
+uid: O:Page::System#AI#Copilot_Deactivate_Capability

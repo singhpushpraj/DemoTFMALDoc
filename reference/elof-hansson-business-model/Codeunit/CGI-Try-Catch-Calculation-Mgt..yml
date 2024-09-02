@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Try/Catch Calculation Mgt."'
+alId: ID 60303
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: TableNo
+  value: CGI Calculation Header
+  promoted: false
+  xrefType:
+    internalReference: O:Table::CGI_Calculation_Header
+    name: '"CGI Calculation Header"'
+    isExternal: false
+methods:
+- syntax:
+    content: 'procedure SetFunctionToCall(NewFunctionToCall: Option)'
+    parameters:
+    - id: NewFunctionToCall
+      parameterType:
+        name: Option
+        isExternal: true
+  name: SetFunctionToCall
+  uid: M:Codeunit::CGI_Try/Catch_Calculation_Mgt#.SetFunctionToCall(Option)
+- syntax:
+    content: 'procedure SetDoPost(NewValue: Boolean)'
+    parameters:
+    - id: NewValue
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetDoPost
+  uid: M:Codeunit::CGI_Try/Catch_Calculation_Mgt#.SetDoPost(Boolean)
+commentId: O:Codeunit::CGI Try/Catch Calculation Mgt#
+summary: Codeunit CGI Try/Catch Calculation Mgt. (ID 60303)
+name: '"CGI Try/Catch Calculation Mgt."'
+uid: O:Codeunit::CGI_Try/Catch_Calculation_Mgt#

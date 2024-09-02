@@ -1,0 +1,298 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plan Ids"
+alId: ID 9027
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetBasicPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Basic Financials plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Basic Financials plan.
+  name: GetBasicPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetBasicPlanId:Guid
+- syntax:
+    content: 'procedure GetTeamMemberPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Team Member plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Team Member plan.
+  name: GetTeamMemberPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetTeamMemberPlanId:Guid
+- syntax:
+    signatures:
+    - '[Obsolete(Replaced by GetMicrosoft365PlanId(),22.0)]'
+    content: 'procedure GetM365CollaborationPlanId(): Guid'
+    return:
+      description: The ID for the Microsoft 365 Collaboration plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Microsoft 365 Collaboration plan.
+  name: GetM365CollaborationPlanId
+  obsoletion:
+    state: pending
+    reason: Replaced by GetMicrosoft365PlanId()
+    version: "22.0"
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetM365CollaborationPlanId:Guid
+- syntax:
+    content: 'procedure GetMicrosoft365PlanId(): Guid'
+    return:
+      description: The ID for the Microsoft 365 plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Microsoft 365 plan.
+  name: GetMicrosoft365PlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetMicrosoft365PlanId:Guid
+- syntax:
+    content: 'procedure GetEssentialPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Essentials plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Essentials plan.
+  name: GetEssentialPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetEssentialPlanId:Guid
+- syntax:
+    content: 'procedure GetPremiumPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Premium plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Premium plan.
+  name: GetPremiumPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetPremiumPlanId:Guid
+- syntax:
+    content: 'procedure GetViralSignupPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central for IWs plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central for IWs plan.
+  name: GetViralSignupPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetViralSignupPlanId:Guid
+- syntax:
+    content: 'procedure GetExternalAccountantPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central External Accountant plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central External Accountant plan.
+  name: GetExternalAccountantPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetExternalAccountantPlanId:Guid
+- syntax:
+    content: 'procedure GetDelegatedAdminPlanId(): Guid'
+    return:
+      description: The ID for the Delegated Admin agent - Partner plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Delegated Admin agent - Partner plan.
+  name: GetDelegatedAdminPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetDelegatedAdminPlanId:Guid
+- syntax:
+    content: 'procedure GetDelegatedBCAdminPlanId(): Guid'
+    return:
+      description: The ID for the Delegated BC Admin agent - Partner plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Delegated BC Admin agent - Partner plan.
+  name: GetDelegatedBCAdminPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetDelegatedBCAdminPlanId:Guid
+- syntax:
+    content: 'procedure GetBCAdminPlanId(): Guid'
+    return:
+      description: The ID for the Internal BC Administrator plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Internal BC Administrator plan.
+  name: GetBCAdminPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetBCAdminPlanId:Guid
+- syntax:
+    content: 'procedure GetD365AdminPartnerPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Admin - Partner plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Admin - Partner plan.
+  name: GetD365AdminPartnerPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetD365AdminPartnerPlanId:Guid
+- syntax:
+    content: 'procedure GetD365AdminPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Administrator plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Administrator plan.
+  name: GetD365AdminPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetD365AdminPlanId:Guid
+- syntax:
+    signatures:
+    - '[Obsolete(Replaced by GetGlobalAdminPlanId(),23.0)]'
+    content: 'procedure GetInternalAdminPlanId(): Guid'
+    return:
+      description: The ID for the Internal Administrator plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Internal Administrator plan.
+  name: GetInternalAdminPlanId
+  obsoletion:
+    state: pending
+    reason: Replaced by GetGlobalAdminPlanId()
+    version: "23.0"
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetInternalAdminPlanId:Guid
+- syntax:
+    content: 'procedure GetGlobalAdminPlanId(): Guid'
+    return:
+      description: The ID for the Global Administrator plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Global Administrator plan.
+  name: GetGlobalAdminPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetGlobalAdminPlanId:Guid
+- syntax:
+    content: 'procedure GetTeamMemberISVPlanId(): Guid'
+    return:
+      description: The ID for the D365 Business Central Team Member - Embedded plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the D365 Business Central Team Member - Embedded plan.
+  name: GetTeamMemberISVPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetTeamMemberISVPlanId:Guid
+- syntax:
+    content: 'procedure GetEssentialISVPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Essential - Embedded plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Essential - Embedded plan.
+  name: GetEssentialISVPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetEssentialISVPlanId:Guid
+- syntax:
+    content: 'procedure GetPremiumISVPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Premium - Embedded plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Premium - Embedded plan.
+  name: GetPremiumISVPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetPremiumISVPlanId:Guid
+- syntax:
+    content: 'procedure GetEssentialAttachPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Essential - Attach plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Essential - Attach plan.
+  name: GetEssentialAttachPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetEssentialAttachPlanId:Guid
+- syntax:
+    content: 'procedure GetDeviceISVPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Device - Embedded plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Device - Embedded plan.
+  name: GetDeviceISVPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetDeviceISVPlanId:Guid
+- syntax:
+    content: 'procedure GetDevicePlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Device plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Device plan.
+  name: GetDevicePlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetDevicePlanId:Guid
+- syntax:
+    content: 'procedure GetBasicFinancialsISVPlanId(): Guid'
+    return:
+      description: The ID for the Dynamics 365 Business Central Basic Financials - Embedded plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Dynamics 365 Business Central Basic Financials - Embedded plan.
+  name: GetBasicFinancialsISVPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetBasicFinancialsISVPlanId:Guid
+- syntax:
+    content: 'procedure GetAccountantHubPlanId(): Guid'
+    return:
+      description: The ID for the Microsoft Dynamics 365 - Accountant Hub plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Microsoft Dynamics 365 - Accountant Hub plan.
+  name: GetAccountantHubPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetAccountantHubPlanId:Guid
+- syntax:
+    content: 'procedure GetHelpDeskPlanId(): Guid'
+    return:
+      description: The ID for the Delegated Helpdesk agent - Partner plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the Delegated Helpdesk agent - Partner plan.
+  name: GetHelpDeskPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetHelpDeskPlanId:Guid
+- syntax:
+    content: 'procedure GetInfrastructurePlanId(): Guid'
+    return:
+      description: The ID for the D365 Business Central Infrastructure plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the D365 Business Central Infrastructure plan.
+  name: GetInfrastructurePlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetInfrastructurePlanId:Guid
+- syntax:
+    content: 'procedure GetPremiumPartnerSandboxPlanId(): Guid'
+    return:
+      description: The ID for the D365 Business Central Premium Partner Sandbox plan.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Returns the ID for the D365 Business Central Premium Partner Sandbox plan.
+  name: GetPremiumPartnerSandboxPlanId
+  uid: M:Codeunit::System#Azure#Identity#Plan_Ids.GetPremiumPartnerSandboxPlanId:Guid
+commentId: O:Codeunit::System#Azure#Identity#Plan Ids
+summary: Exposes functionality to get plan IDs.
+name: '"Plan Ids"'
+uid: O:Codeunit::System#Azure#Identity#Plan_Ids

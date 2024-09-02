@@ -1,0 +1,107 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."SAS Parameters"
+alId: ID 9064
+namespace: System.Azure.Storage
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+fields:
+- description: Specifies the storage service version to use to execute the request made using the account SAS URI.
+  type:
+    internalReference: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+    name: System.Azure.Storage."Storage Service API Version"
+    isExternal: false
+  name: ApiVersion
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.ApiVersion
+- description: The time at which the SAS becomes valid, expressed in one of the accepted ISO 8601 UTC formats. If omitted, the start time is assumed to be the time when the storage service receives the request.
+  type:
+    name: DateTime
+    isExternal: true
+  name: SignedStart
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SignedStart
+- description: Specifies an IP address or a range of IP addresses from which to accept requests. When specifying a range, note that the range is inclusive.
+  type:
+    name: Text[2048]
+    isExternal: true
+  name: SignedIp
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SignedIp[2048]
+- description: Specifies the protocol permitted for a request made with the account SAS. Possible values are both HTTPS and HTTP (https,http) or HTTPS only (https)
+  type:
+    name: Option
+    isExternal: true
+  name: SignedProtocol
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SignedProtocol
+- description: >-
+    Indicates the encryption scope to use to encrypt the request contents.
+
+    This field is supported with version 2020-12-06 and later.
+
+    See also: https://learn.microsoft.com/en-us/rest/api/storageservices/create-account-sas#specify-the-encryption-scope
+
+    The name of the encryption scope within the specified storage account. Encryption scope names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only
+
+    Every dash (-) character must be immediately preceded and followed by a letter or number.
+
+    See also: https://learn.microsoft.com/en-us/rest/api/storagerp/encryption-scopes/put?tabs=HTTP#uri-parameters
+  type:
+    name: Text[63]
+    isExternal: true
+  name: SignedEncryptionScope
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SignedEncryptionScope[63]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Azure#Storage#SAS_Parameters.SystemRowVersion
+commentId: O:Table::System#Azure#Storage#SAS Parameters
+summary: >-
+  Optional parameters for Shared Access Signature authorization for Azure Storage Services.
+
+  see: https://go.microsoft.com/fwlink/?linkid=2210398
+name: '"SAS Parameters"'
+uid: O:Table::System#Azure#Storage#SAS_Parameters

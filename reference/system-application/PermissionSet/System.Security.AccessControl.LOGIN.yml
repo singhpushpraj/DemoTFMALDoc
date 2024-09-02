@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl.LOGIN
+alId: ID 161
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Login access
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"System Application - Basic"'
+  promoted: false
+commentId: O:PermissionSet::System#Security#AccessControl#LOGIN
+name: LOGIN
+uid: O:PermissionSet::System#Security#AccessControl#LOGIN

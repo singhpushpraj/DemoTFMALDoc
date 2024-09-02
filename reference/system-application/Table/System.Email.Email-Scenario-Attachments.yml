@@ -1,0 +1,79 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Scenario Attachments"
+alId: ID 8911
+namespace: System.Email
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+fields:
+- type:
+    name: BigInteger
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Email#Email_Scenario_Attachments.Id
+- type:
+    internalReference: O:Enum::System#Email#Email_Scenario
+    name: System.Email."Email Scenario"
+    isExternal: false
+  name: Scenario
+  uid: F:Table::System#Email#Email_Scenario_Attachments.Scenario
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Attachment Name"'
+  uid: F:Table::System#Email#Email_Scenario_Attachments.Attachment_Name[250]
+- type:
+    name: Media
+    isExternal: true
+  name: '"Email Attachment"'
+  uid: F:Table::System#Email#Email_Scenario_Attachments.Email_Attachment
+- type:
+    name: Boolean
+    isExternal: true
+  name: AttachmentDefaultStatus
+  uid: F:Table::System#Email#Email_Scenario_Attachments.AttachmentDefaultStatus
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Email#Email_Scenario_Attachments.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Email#Email_Scenario_Attachments.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Email#Email_Scenario_Attachments.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Email#Email_Scenario_Attachments.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Email#Email_Scenario_Attachments.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Email#Email_Scenario_Attachments.SystemRowVersion
+commentId: O:Table::System#Email#Email Scenario Attachments
+summary: Table used to get Email Attachments related to Email Scenario
+name: '"Email Scenario Attachments"'
+uid: O:Table::System#Email#Email_Scenario_Attachments

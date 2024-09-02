@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS File Resource Type"
+alId: ID 8954
+namespace: System.Azure.Storage.Files
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Indicates entry is of file type.
+  name: File
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Resource_Type.File
+- summary: Indicates entry is of directory type.
+  name: Directory
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Resource_Type.Directory
+commentId: O:Enum::System#Azure#Storage#Files#AFS File Resource Type
+summary: Indicator of what type the resource is.
+name: '"AFS File Resource Type"'
+uid: O:Enum::System#Azure#Storage#Files#AFS_File_Resource_Type

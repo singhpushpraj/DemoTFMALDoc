@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS File Last Write Time"
+alId: ID 8952
+namespace: System.Azure.Storage.Files
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The file last write time is set to the current time.
+  name: Now
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Last_Write_Time.Now
+- summary: The file last write time is preserved.
+  name: Preserve
+  uid: E:Enum::System#Azure#Storage#Files#AFS_File_Last_Write_Time.Preserve
+commentId: O:Enum::System#Azure#Storage#Files#AFS File Last Write Time
+summary: Describes possible values for File Last Write Time header.
+name: '"AFS File Last Write Time"'
+uid: O:Enum::System#Azure#Storage#Files#AFS_File_Last_Write_Time

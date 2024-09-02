@@ -1,0 +1,238 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG Line"'
+alId: ID 70301
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: TFM LCBG Line
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+methods:
+- syntax:
+    content: procedure FetchPurchInvFields()
+  summary: function to fetch purchase invoice fields
+  name: FetchPurchInvFields
+  uid: M:Table::CGI_TFM_LCBG_Line.FetchPurchInvFields
+- syntax:
+    content: procedure CalcExchangeRate()
+  summary: function Calculate to exchange rate
+  name: CalcExchangeRate
+  uid: M:Table::CGI_TFM_LCBG_Line.CalcExchangeRate
+- syntax:
+    content: procedure CalcCost()
+  summary: Function to calculate the cost of insurance premium
+  name: CalcCost
+  uid: M:Table::CGI_TFM_LCBG_Line.CalcCost
+- syntax:
+    content: procedure InitRecord()
+  summary: Function to initialize the record of CGI TFM LGBG Header table
+  name: InitRecord
+  uid: M:Table::CGI_TFM_LCBG_Line.InitRecord
+- syntax:
+    content: procedure InsertSalesDoc()
+  summary: Function to insert Sales invoice line record ot CGI TFM LCBG Line table
+  name: InsertSalesDoc
+  uid: M:Table::CGI_TFM_LCBG_Line.InsertSalesDoc
+- syntax:
+    content: 'procedure CalcAmountLCY(InvAmount: Decimal): Decimal'
+    parameters:
+    - id: InvAmount
+      description: ""
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: ""
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: Calculate amount in LCY
+  name: CalcAmountLCY
+  uid: M:Table::CGI_TFM_LCBG_Line.CalcAmountLCY(Decimal):Decimal
+- syntax:
+    content: procedure DeleteCalculations()
+  summary: Delete Calculation
+  name: DeleteCalculations
+  uid: M:Table::CGI_TFM_LCBG_Line.DeleteCalculations
+- syntax:
+    content: procedure DeletionCalculations_SubPart02()
+  summary: >-
+    Function DeletionCalculations_SubPart02
+
+    It is called in function DeletionCalculations
+  name: DeletionCalculations_SubPart02
+  uid: M:Table::CGI_TFM_LCBG_Line.DeletionCalculations_SubPart02
+- syntax:
+    content: 'procedure CustomerVendorCalculationCheck(var SkipCurrencyCheck: Boolean, pPrecalculation: Record "CGI Calculation Header", pTFMLCBGHeader: Record "CGI TFM LCBG Header")'
+    parameters:
+    - id: SkipCurrencyCheck
+      description: ""
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: pPrecalculation
+      description: ""
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    - id: pTFMLCBGHeader
+      description: ""
+      parameterType:
+        name: Record "CGI TFM LCBG Header"
+        isExternal: true
+  summary: To check Customer vendor calculation check
+  name: CustomerVendorCalculationCheck
+  uid: M:Table::CGI_TFM_LCBG_Line.CustomerVendorCalculationCheck(Boolean@,CGI_Calculation_Header,CGI_TFM_LCBG_Header)
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"LCBG Document No."'
+  uid: F:Table::CGI_TFM_LCBG_Line.LCBG_Document_No#[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Line No."'
+  uid: F:Table::CGI_TFM_LCBG_Line.Line_No#
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Calculation No."'
+  uid: F:Table::CGI_TFM_LCBG_Line.Calculation_No#[20]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Approved
+  uid: F:Table::CGI_TFM_LCBG_Line.Approved
+- type:
+    name: Code[50]
+    isExternal: true
+  name: Approver
+  uid: F:Table::CGI_TFM_LCBG_Line.Approver[50]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Currency Code"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Currency_Code[10]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Invoice No."'
+  uid: F:Table::CGI_TFM_LCBG_Line.Invoice_No#[20]
+- type:
+    name: Decimal
+    isExternal: true
+  name: Amount
+  uid: F:Table::CGI_TFM_LCBG_Line.Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Amount (LCY)"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Amount_(LCY)
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Cost Text"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Cost_Text[250]
+- type:
+    name: Date
+    isExternal: true
+  name: '"Insurance From Date"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Insurance_From_Date
+- type:
+    name: Date
+    isExternal: true
+  name: '"Insurance To Date"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Insurance_To_Date
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Calc Ins Prem %"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Calc_Ins_Prem_%
+- type:
+    name: Date
+    isExternal: true
+  name: '"Booking Date"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Booking_Date
+- type:
+    name: Decimal
+    isExternal: true
+  name: Cost
+  uid: F:Table::CGI_TFM_LCBG_Line.Cost
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Cost LCY"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Cost_LCY
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Currency Rate"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Currency_Rate
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Insurance Premium"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Insurance_Premium
+- type:
+    name: Option
+    isExternal: true
+  name: '"Line Type"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Line_Type
+- type:
+    name: Date
+    isExternal: true
+  name: '"Document Date"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Document_Date
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Approver Name"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Approver_Name[100]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Imported Data"'
+  uid: F:Table::CGI_TFM_LCBG_Line.Imported_Data
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_TFM_LCBG_Line.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_TFM_LCBG_Line.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_TFM_LCBG_Line.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_TFM_LCBG_Line.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_TFM_LCBG_Line.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_TFM_LCBG_Line.SystemRowVersion
+commentId: O:Table::CGI TFM LCBG Line
+summary: Contains CGI TFM LCBG Line records
+name: '"CGI TFM LCBG Line"'
+uid: O:Table::CGI_TFM_LCBG_Line

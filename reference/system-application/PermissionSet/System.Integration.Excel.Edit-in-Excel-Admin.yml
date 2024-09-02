@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel-Admin"
+alId: ID 1480
+namespace: System.Integration.Excel
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Edit in Excel - Admin
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Edit in Excel - View","Guided Experience - View"'
+  promoted: false
+commentId: O:PermissionSet::System#Integration#Excel#Edit in Excel-Admin
+name: '"Edit in Excel-Admin"'
+uid: O:PermissionSet::System#Integration#Excel#Edit_in_Excel-Admin

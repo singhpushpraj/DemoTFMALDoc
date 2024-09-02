@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Attachments"
+alId: ID 8889
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  name: System.Email."Email Message Attachment"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "8904"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: Permissions
+  value: tabledata "Email Message Attachment" = rmd
+  promoted: false
+commentId: O:Page::System#Email#Email Attachments
+name: '"Email Attachments"'
+uid: O:Page::System#Email#Email_Attachments

@@ -1,0 +1,198 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA Approvals Mgmt"'
+alId: ID 60309
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure CheckCAEarningsApprovalPossible(var CGICalculationHeader: Record "CGI Calculation Header"): Boolean'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: CheckCAEarningsApprovalPossible
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.CheckCAEarningsApprovalPossible(CGI_Calculation_Header@):Boolean
+- syntax:
+    content: 'procedure IsCAEarningsApprovalsWorkflowEnabled(var CGICalculationHeader: Record "CGI Calculation Header"): Boolean'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsCAEarningsApprovalsWorkflowEnabled
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.IsCAEarningsApprovalsWorkflowEnabled(CGI_Calculation_Header@):Boolean
+- syntax:
+    content: 'procedure CheckCACreditApprovalPossible(var CGICalculationHeader: Record "CGI Calculation Header"): Boolean'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: CheckCACreditApprovalPossible
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.CheckCACreditApprovalPossible(CGI_Calculation_Header@):Boolean
+- syntax:
+    content: 'procedure IsCACreditApprovalsWorkflowEnabled(var CGICalculationHeader: Record "CGI Calculation Header"): Boolean'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsCACreditApprovalsWorkflowEnabled
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.IsCACreditApprovalsWorkflowEnabled(CGI_Calculation_Header@):Boolean
+- syntax:
+    content: 'procedure HasOpenEarningsApprovalEntries(RecordID: RecordId): Boolean'
+    parameters:
+    - id: RecordID
+      parameterType:
+        name: RecordId
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: HasOpenEarningsApprovalEntries
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.HasOpenEarningsApprovalEntries(RecordId):Boolean
+- syntax:
+    content: 'procedure HasOpenCreditApprovalEntries(RecordID: RecordId): Boolean'
+    parameters:
+    - id: RecordID
+      parameterType:
+        name: RecordId
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: HasOpenCreditApprovalEntries
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.HasOpenCreditApprovalEntries(RecordId):Boolean
+- syntax:
+    content: 'procedure CanCancelEarningsApprovalForRecord(RecID: RecordId): Boolean'
+    parameters:
+    - id: RecID
+      parameterType:
+        name: RecordId
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: CanCancelEarningsApprovalForRecord
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.CanCancelEarningsApprovalForRecord(RecordId):Boolean
+- syntax:
+    content: 'procedure CanCancelCreditApprovalForRecord(RecID: RecordId): Boolean'
+    parameters:
+    - id: RecID
+      parameterType:
+        name: RecordId
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: CanCancelCreditApprovalForRecord
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.CanCancelCreditApprovalForRecord(RecordId):Boolean
+- syntax:
+    content: 'procedure HasOpenEarningsApprovalEntriesForCurrentUser(RecordID: RecordId): Boolean'
+    parameters:
+    - id: RecordID
+      parameterType:
+        name: RecordId
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: HasOpenEarningsApprovalEntriesForCurrentUser
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.HasOpenEarningsApprovalEntriesForCurrentUser(RecordId):Boolean
+- syntax:
+    content: 'procedure HasOpenCreditApprovalEntriesForCurrentUser(RecordID: RecordId): Boolean'
+    parameters:
+    - id: RecordID
+      parameterType:
+        name: RecordId
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: HasOpenCreditApprovalEntriesForCurrentUser
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.HasOpenCreditApprovalEntriesForCurrentUser(RecordId):Boolean
+- syntax:
+    content: 'procedure OpenApprovalsCalculation(CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: OpenApprovalsCalculation
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.OpenApprovalsCalculation(CGI_Calculation_Header)
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnSendCAEarningsForApproval(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: OnSendCAEarningsForApproval
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.OnSendCAEarningsForApproval(CGI_Calculation_Header@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnCancelCAEarningsApprovalRequest(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: OnCancelCAEarningsApprovalRequest
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.OnCancelCAEarningsApprovalRequest(CGI_Calculation_Header@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnSendCACreditForApproval(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: OnSendCACreditForApproval
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.OnSendCACreditForApproval(CGI_Calculation_Header@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnCancelCACreditApprovalRequest(var CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: OnCancelCACreditApprovalRequest
+  uid: M:Codeunit::CGI_CA_Approvals_Mgmt.OnCancelCACreditApprovalRequest(CGI_Calculation_Header@)
+commentId: O:Codeunit::CGI CA Approvals Mgmt
+name: '"CGI CA Approvals Mgmt"'
+uid: O:Codeunit::CGI_CA_Approvals_Mgmt

@@ -1,0 +1,75 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Signup Context Values"
+alId: ID 150
+namespace: System.Environment.Configuration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: InherentEntitlements
+  value: RIX
+  promoted: false
+- name: InherentPermissions
+  value: RIX
+  promoted: false
+fields:
+- description: The primary key for the signup context values.
+  type:
+    name: Code[10]
+    isExternal: true
+  name: '"Primary Key"'
+  uid: F:Table::System#Environment#Configuration#Signup_Context_Values.Primary_Key[10]
+- description: The Signup Context is used to track from where a tenant originated.
+  type:
+    internalReference: O:Enum::System#Environment#Configuration#Signup_Context
+    name: System.Environment.Configuration."Signup Context"
+    isExternal: false
+  name: '"Signup Context"'
+  uid: F:Table::System#Environment#Configuration#Signup_Context_Values.Signup_Context
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Environment#Configuration#Signup_Context_Values.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Environment#Configuration#Signup_Context_Values.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Environment#Configuration#Signup_Context_Values.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Environment#Configuration#Signup_Context_Values.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Environment#Configuration#Signup_Context_Values.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Environment#Configuration#Signup_Context_Values.SystemRowVersion
+commentId: O:Table::System#Environment#Configuration#Signup Context Values
+summary: This table stores the signup context and additional values passed at signup.
+name: '"Signup Context Values"'
+uid: O:Table::System#Environment#Configuration#Signup_Context_Values

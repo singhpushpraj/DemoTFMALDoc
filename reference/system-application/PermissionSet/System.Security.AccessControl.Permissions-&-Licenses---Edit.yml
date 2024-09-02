@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Permissions & Licenses - Edit"
+alId: ID 89
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Permissions & Licenses - Read"'
+  promoted: false
+commentId: O:PermissionSet::System#Security#AccessControl#Permissions &amp; Licenses - Edit
+name: '"Permissions & Licenses - Edit"'
+uid: O:PermissionSet::System#Security#AccessControl#Permissions_&amp;_Licenses_-_Edit

@@ -1,0 +1,283 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Post Calc. Header Archive"'
+alId: ID 60362
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Post Calculation Header Archive
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Calculation No."'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Calculation_No#[20]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: Division
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Division[10]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Shortcut Dimension 1 Code"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Shortcut_Dimension_1_Code[20]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"SalesPerson Code"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.SalesPerson_Code[10]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Sales Business Terms"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Sales_Business_Terms[10]
+- type:
+    name: Date
+    isExternal: true
+  name: '"Expected Shipping Date"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Expected_Shipping_Date
+- type:
+    internalReference: O:Enum::CGI_CA_Calculation_Status
+    name: '"CGI CA Calculation Status"'
+    isExternal: false
+  name: Status
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Status
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Customer No."'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Customer_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Customer Name"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Customer_Name[100]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Vendor No."'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Vendor_No#[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Vendor Name"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Vendor_Name[100]
+- type:
+    name: Date
+    isExternal: true
+  name: Changed
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Changed
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Sales Payment Term Code"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Sales_Payment_Term_Code[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Result bef Int. Rate (precalc)"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Result_bef_Int#_Rate_(precalc)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Result bef Int. Rate (Aftcalc)"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Result_bef_Int#_Rate_(Aftcalc)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Result Difference Amt (Before)"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Result_Difference_Amt_(Before)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Result Difference % (Before)"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Result_Difference_%_(Before)
+- type:
+    name: Boolean
+    isExternal: true
+  name: Comment
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Comment
+- type:
+    internalReference: O:Enum::CGI_Comment_Status
+    name: '"CGI Comment Status"'
+    isExternal: false
+  name: '"Comment Status"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Comment_Status
+- type:
+    name: Decimal
+    isExternal: true
+  name: Turnover
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Turnover
+- type:
+    name: Decimal
+    isExternal: true
+  name: Result
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Result
+- type:
+    name: Boolean
+    isExternal: true
+  name: Addition
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Addition
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Difference result"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Difference_result
+- type:
+    name: Decimal
+    isExternal: true
+  name: PrecalcTurnover
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.PrecalcTurnover
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Turnover Difference"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Turnover_Difference
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Total Sales Quantity"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Total_Sales_Quantity
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Sales Diff Amount"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Sales_Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Sales Diff %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Sales_Diff_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Other Revenues Diff Amount"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Other_Revenues_Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Other Revenues Diff %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Other_Revenues_Diff_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Purchase Diff Amount"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Purchase_Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Purchase Diff %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Purchase_Diff_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Other Costs Diff Amount"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Other_Costs_Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Other Costs Diff %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Other_Costs_Diff_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Bank Diff Amount"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Bank_Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Bank Diff %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Bank_Diff_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Insurance Diff Amount"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Insurance_Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Insurance Diff %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Insurance_Diff_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Internal Interest Diff Amount"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Internal_Interest_Diff_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Internal Interest Diff %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Internal_Interest_Diff_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Risk Premium Amount"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Risk_Premium_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Risk Premium Diff %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Risk_Premium_Diff_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Actual Quantity"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Actual_Quantity
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Post Calculation OK"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Post_Calculation_OK
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Difference Quantity %"'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Difference_Quantity_%
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Last G/L Entry No."'
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.Last_G/L_Entry_No#
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Post_Calc#_Header_Archive.SystemRowVersion
+commentId: O:Table::CGI Post Calc# Header Archive
+name: '"CGI Post Calc. Header Archive"'
+uid: O:Table::CGI_Post_Calc#_Header_Archive

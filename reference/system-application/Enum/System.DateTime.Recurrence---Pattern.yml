@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Recurrence - Pattern"
+alId: ID 4692
+namespace: System.DateTime
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies that the recurrence will occur daily.
+  name: Daily
+  uid: E:Enum::System#DateTime#Recurrence_-_Pattern.Daily
+- summary: Specifies that the recurrence will occur weekly.
+  name: Weekly
+  uid: E:Enum::System#DateTime#Recurrence_-_Pattern.Weekly
+- summary: Specifies that the recurrence will occur monthly.
+  name: Monthly
+  uid: E:Enum::System#DateTime#Recurrence_-_Pattern.Monthly
+- summary: Specifies that the recurrence will occur yearly.
+  name: Yearly
+  uid: E:Enum::System#DateTime#Recurrence_-_Pattern.Yearly
+commentId: O:Enum::System#DateTime#Recurrence - Pattern
+summary: This enum has the occurrence patterns for the recurrence.
+name: '"Recurrence - Pattern"'
+uid: O:Enum::System#DateTime#Recurrence_-_Pattern

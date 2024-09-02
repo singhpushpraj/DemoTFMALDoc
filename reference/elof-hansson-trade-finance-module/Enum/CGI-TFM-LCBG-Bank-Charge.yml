@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG Bank Charge"'
+alId: ID 70304
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Blank
+  uid: E:Enum::CGI_TFM_LCBG_Bank_Charge.Blank
+- name: '"All charges for applicants account"'
+  uid: E:Enum::CGI_TFM_LCBG_Bank_Charge.All_charges_for_applicants_account
+- name: '"All charges outside opening bank for beneficiaries account"'
+  uid: E:Enum::CGI_TFM_LCBG_Bank_Charge.All_charges_outside_opening_bank_for_beneficiaries_account
+- name: '"Adv.bank charges for beneficiaries account"'
+  uid: E:Enum::CGI_TFM_LCBG_Bank_Charge.Adv#bank_charges_for_beneficiaries_account
+- name: '"Please see comment"'
+  uid: E:Enum::CGI_TFM_LCBG_Bank_Charge.Please_see_comment
+commentId: O:Enum::CGI TFM LCBG Bank Charge
+summary: Contains CGI TFM LCBG Bank Charge used in Bank Guarantee
+name: '"CGI TFM LCBG Bank Charge"'
+uid: O:Enum::CGI_TFM_LCBG_Bank_Charge

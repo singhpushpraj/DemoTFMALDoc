@@ -1,0 +1,30 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Migration"'
+alId: ID 70314
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: TFM Migration
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: UsageCategory
+  value: Lists
+  promoted: false
+commentId: O:Page::CGI TFM Migration
+summary: >-
+  page 70314 CGI TFM Migration
+
+  It contains all TFM related xmlports and user can easily access it.
+name: '"CGI TFM Migration"'
+uid: O:Page::CGI_TFM_Migration

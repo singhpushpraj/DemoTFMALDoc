@@ -1,0 +1,66 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Copy comments to calculati"'
+alId: ID 60316
+baseKind: Report
+kind: Report
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Report](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-report-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Copy comments to calculation
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: ReportsAndAnalysis
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Copy comments to calculation
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: ReportsAndAnalysis
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetCommentLine(SelectedCommentLines: __MissingTypeSymbol__)'
+    parameters:
+    - id: SelectedCommentLines
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: SetCommentLine
+  uid: M:Report::CGI_Copy_comments_to_calculati.SetCommentLine(__MissingSymbol__@)
+- syntax:
+    content: procedure CreateCommentLine()
+  name: CreateCommentLine
+  uid: M:Report::CGI_Copy_comments_to_calculati.CreateCommentLine
+- syntax:
+    content: procedure GetLastCommentLineNo()
+  name: GetLastCommentLineNo
+  uid: M:Report::CGI_Copy_comments_to_calculati.GetLastCommentLineNo
+- syntax:
+    content: 'procedure FromCalc(IsFromCalc: Boolean)'
+    parameters:
+    - id: IsFromCalc
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: FromCalc
+  uid: M:Report::CGI_Copy_comments_to_calculati.FromCalc(Boolean)
+commentId: O:Report::CGI Copy comments to calculati
+summary: Report CGI Copy comments to calculati (ID 60316).
+name: '"CGI Copy comments to calculati"'
+uid: O:Report::CGI_Copy_comments_to_calculati

@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Post Calculation Type"'
+alId: ID 60362
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Sales
+  uid: E:Enum::CGI_Post_Calculation_Type.Sales
+- name: '"Other Revenues"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Other_Revenues
+- name: '"Total Revenue"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Total_Revenue
+- name: Purchase
+  uid: E:Enum::CGI_Post_Calculation_Type.Purchase
+- name: '"Other Costs"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Other_Costs
+- name: Bank
+  uid: E:Enum::CGI_Post_Calculation_Type.Bank
+- name: '"Total Cost"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Total_Cost
+- name: Result
+  uid: E:Enum::CGI_Post_Calculation_Type.Result
+- name: '"Margin %"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Margin_%
+- name: '"Calculated Interest"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Calculated_Interest
+- name: '"Result after interest"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Result_after_interest
+- name: '"Margin after Interest %"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Margin_after_Interest_%
+- name: Volume
+  uid: E:Enum::CGI_Post_Calculation_Type.Volume
+- name: '"Sales price per Unit"'
+  uid: E:Enum::CGI_Post_Calculation_Type.Sales_price_per_Unit
+commentId: O:Enum::CGI Post Calculation Type
+name: '"CGI Post Calculation Type"'
+uid: O:Enum::CGI_Post_Calculation_Type

@@ -1,0 +1,110 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."SharePoint List Item"
+alId: ID 9103
+namespace: System.Integration.Sharepoint
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Caption
+  value: SharePoint List Item
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: Guid
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.Guid
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Title
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.Title[250]
+- type:
+    name: DateTime
+    isExternal: true
+  name: Created
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.Created
+- type:
+    name: Boolean
+    isExternal: true
+  name: Attachments
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.Attachments
+- type:
+    name: Integer
+    isExternal: true
+  name: '"File System Object Type"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.File_System_Object_Type
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Content Type Id"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.Content_Type_Id[250]
+- type:
+    name: Integer
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.Id
+- type:
+    name: Guid
+    isExternal: true
+  name: '"List Id"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.List_Id
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataEditLink
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.OdataEditLink[2048]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_List_Item.SystemRowVersion
+commentId: O:Table::System#Integration#Sharepoint#SharePoint List Item
+summary: Holds information about list item entity.
+name: '"SharePoint List Item"'
+uid: O:Table::System#Integration#Sharepoint#SharePoint_List_Item

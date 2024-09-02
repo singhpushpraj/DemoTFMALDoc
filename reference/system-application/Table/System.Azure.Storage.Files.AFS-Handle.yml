@@ -1,0 +1,112 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS Handle"
+alId: ID 8951
+namespace: System.Azure.Storage.Files
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Entry No."'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Entry_No#
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Handle ID"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Handle_ID[50]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: Path
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Path[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Client IP"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Client_IP[2048]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Open Time"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Open_Time
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Last Reconnect Time"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Last_Reconnect_Time
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"File ID"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.File_ID[50]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Parent ID"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Parent_ID[50]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Session ID"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Session_ID[50]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Next Marker"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.Next_Marker[2048]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Azure#Storage#Files#AFS_Handle.SystemRowVersion
+commentId: O:Table::System#Azure#Storage#Files#AFS Handle
+summary: Holds information about file handles that are currently open.
+name: '"AFS Handle"'
+uid: O:Table::System#Azure#Storage#Files#AFS_Handle

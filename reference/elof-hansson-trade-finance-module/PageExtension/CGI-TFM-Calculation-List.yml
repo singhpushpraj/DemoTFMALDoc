@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Calculation List"'
+alId: ID 70302
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  internalReference: O:Page::CGI_Calculation_List
+  name: '"CGI Calculation List"'
+  isExternal: false
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI TFM Calculation List
+summary: >-
+  pageextension 70302 CGI TFM Calculation List extends CGI Calculation List
+
+  contains TFM related fields
+name: '"CGI TFM Calculation List"'
+uid: O:PageExtension::CGI_TFM_Calculation_List

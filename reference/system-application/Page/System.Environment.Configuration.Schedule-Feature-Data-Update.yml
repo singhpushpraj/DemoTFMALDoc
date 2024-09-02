@@ -1,0 +1,63 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Schedule Feature Data Update"
+alId: ID 2612
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Environment#Configuration#Feature_Data_Update_Status
+  name: System.Environment.Configuration."Feature Data Update Status"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Feature Data Update
+  promoted: false
+- name: DataCaptionExpression
+  value: Rec."Feature Key"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: SourceTable
+  value: "2610"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Environment#Configuration#Feature_Data_Update_Status
+    name: System.Environment.Configuration."Feature Data Update Status"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: tabledata "Feature Data Update Status" = rim
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Set(FeatureDataUpdateStatus: Record "Feature Data Update Status")'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      description: the instance of the actual record
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+  summary: Inserts the copy of "Feature Data Update Status" record as a temporary source of the page.
+  name: Set
+  uid: M:Page::System#Environment#Configuration#Schedule_Feature_Data_Update.Set(Feature_Data_Update_Status)
+commentId: O:Page::System#Environment#Configuration#Schedule Feature Data Update
+summary: Page provide the dialog where user can run or schedule the feature datat update.
+name: '"Schedule Feature Data Update"'
+uid: O:Page::System#Environment#Configuration#Schedule_Feature_Data_Update

@@ -1,0 +1,137 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Feedback."Customer Experience Survey"
+alId: ID 9260
+namespace: System.Feedback
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Feedback
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Caption
+  value: Customer Experience Survey
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+fields:
+- type:
+    name: Text[512]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Name[512]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: Description
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Description[2048]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Survey Cooling Time"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Survey_Cooling_Time
+- type:
+    name: Integer
+    isExternal: true
+  name: '"NPS Cooling Time"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.NPS_Cooling_Time
+- type:
+    name: Integer
+    isExternal: true
+  name: '"CES Cooling Time"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.CES_Cooling_Time
+- type:
+    name: Boolean
+    isExternal: true
+  name: Enabled
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Enabled
+- type:
+    name: Text[512]
+    isExternal: true
+  name: '"Trigger Event Name"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Trigger_Event_Name[512]
+- type:
+    name: Option
+    isExternal: true
+  name: '"Trigger Type"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Trigger_Type
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Trigger Period"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Trigger_Period
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Prompt Probability"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Prompt_Probability
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Prompt Total Sample"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Prompt_Total_Sample
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Prompt Sample"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Prompt_Sample
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Prompt Period"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Prompt_Period
+- type:
+    name: Text[1024]
+    isExternal: true
+  name: '"Forms Pro Id"'
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.Forms_Pro_Id[1024]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Feedback#Customer_Experience_Survey.SystemRowVersion
+commentId: O:Table::System#Feedback#Customer Experience Survey
+name: '"Customer Experience Survey"'
+uid: O:Table::System#Feedback#Customer_Experience_Survey

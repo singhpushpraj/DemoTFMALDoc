@@ -1,0 +1,292 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Privacy Notice"
+alId: ID 1563
+namespace: System.Privacy
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure CreatePrivacyNotice(Id: Code[50], IntegrationName: Text[250], Link: Text[2048]): Boolean'
+    parameters:
+    - id: Id
+      description: Identification of the privacy notice.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    - id: IntegrationName
+      description: The name of the integration.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: Link
+      description: Link to the privacy terms.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    return:
+      description: Whether the privacy notice was created.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a privacy notice.
+  name: CreatePrivacyNotice
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.CreatePrivacyNotice(Code[50],Text[250],Text[2048]):Boolean
+- syntax:
+    content: 'procedure CreatePrivacyNotice(Id: Code[50], IntegrationName: Text[250]): Boolean'
+    parameters:
+    - id: Id
+      description: Identification of the privacy notice.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    - id: IntegrationName
+      description: The name of the integration.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    return:
+      description: Whether the privacy notice was created.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Creates a privacy notice.
+  name: CreatePrivacyNotice
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.CreatePrivacyNotice(Code[50],Text[250]):Boolean
+- syntax:
+    content: 'procedure GetDefaultPrivacyAgreementTxt(): Text'
+    return:
+      description: The default text for the privacy notice.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the default text for the privacy notice.
+  name: GetDefaultPrivacyAgreementTxt
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.GetDefaultPrivacyAgreementTxt:Text
+- syntax:
+    content: 'procedure ConfirmPrivacyNoticeApproval(Id: Code[50]): Boolean'
+    parameters:
+    - id: Id
+      description: Identification of an existing privacy notice.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    return:
+      description: Whether the privacy notice was agreed to.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    After this the step-through depends on whether the user is admin or normal user (admin means they have the Priv. Notice - Admin permission set):
+
+    Admin:
+        If admin has agreed that will be returned
+        Privacy Notice will be shown and the response (Agree/Disagree) will be stored and takes precedence for all users.
+        If the Privacy Notice was simply closed, we return false and nothing is stored.
+    User:
+        If admin has agreed or disagreed, that will be returned
+        If user has agreed, that will be returned
+        Privacy Notice will be shown and any agreement will be stored.
+        If the Privacy Notice was simply closed, we return false and nothing is stored.
+
+    <remark>This function will open a modal dialog to confirm approval and must hence be run outside a write transaction.</remark>
+
+    <remark>The privacy notice referenced must exist.</remark>
+  name: ConfirmPrivacyNoticeApproval
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.ConfirmPrivacyNoticeApproval(Code[50]):Boolean
+- syntax:
+    content: 'procedure ConfirmPrivacyNoticeApproval(Id: Code[50], SkipCheckInEval: Boolean): Boolean'
+    parameters:
+    - id: Id
+      description: Identification of an existing privacy notice.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    - id: SkipCheckInEval
+      description: If the check should return true if it has not been explicitly disagreed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: Whether the privacy notice was agreed to.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    After this the step-through depends on whether the user is admin or normal user (admin means they have the Priv. Notice - Admin permission set):
+
+    Admin:
+        If admin has agreed that will be returned
+        Privacy Notice will be shown and the response (Agree/Disagree) will be stored and takes precedence for all users.
+        If the Privacy Notice was simply closed, we return false and nothing is stored.
+    User:
+        If admin has agreed or disagreed, that will be returned
+        If user has agreed, that will be returned
+        Privacy Notice will be shown and any agreement will be stored.
+        If the Privacy Notice was simply closed, we return false and nothing is stored.
+
+    <remark>This function will open a modal dialog to confirm approval and must hence be run outside a write transaction.</remark>
+
+    <remark>The privacy notice referenced must exist.</remark>
+  name: ConfirmPrivacyNoticeApproval
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.ConfirmPrivacyNoticeApproval(Code[50],Boolean):Boolean
+- syntax:
+    content: 'procedure GetPrivacyNoticeApprovalState(Id: Code[50]): Enum "Privacy Notice Approval State"'
+    parameters:
+    - id: Id
+      description: Identification of an existing privacy notice.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    return:
+      description: The state of the privacy notice for the current user.
+      returnType:
+        internalReference: O:Enum::System#Privacy#Privacy_Notice_Approval_State
+        name: System.Privacy."Privacy Notice Approval State"
+        isExternal: false
+  summary: >-
+    Returns the state of the privacy notice for the current user without showing any privacy notice to the user.
+
+
+    An error is thrown if the privacy notice does not exist.
+  name: GetPrivacyNoticeApprovalState
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.GetPrivacyNoticeApprovalState(Code[50]):Enum::System#Privacy#Privacy_Notice_Approval_State
+- syntax:
+    content: 'procedure GetPrivacyNoticeApprovalState(Id: Code[50], SkipCheckInEval: Boolean): Enum "Privacy Notice Approval State"'
+    parameters:
+    - id: Id
+      description: Identification of an existing privacy notice.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    - id: SkipCheckInEval
+      description: If the check should return true if it has not been explicitly disagreed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: The state of the privacy notice for the current user.
+      returnType:
+        internalReference: O:Enum::System#Privacy#Privacy_Notice_Approval_State
+        name: System.Privacy."Privacy Notice Approval State"
+        isExternal: false
+  summary: >-
+    Returns the state of the privacy notice for the current user without showing any privacy notice to the user.
+
+
+    An error is thrown if the privacy notice does not exist.
+  name: GetPrivacyNoticeApprovalState
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.GetPrivacyNoticeApprovalState(Code[50],Boolean):Enum::System#Privacy#Privacy_Notice_Approval_State
+- syntax:
+    content: 'procedure ShowOneTimePrivacyNotice(IntegrationName: Text[250]): Enum "Privacy Notice Approval State"'
+    parameters:
+    - id: IntegrationName
+      description: The name of the integration.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    return:
+      description: The state of the privacy notice for the current user.
+      returnType:
+        internalReference: O:Enum::System#Privacy#Privacy_Notice_Approval_State
+        name: System.Privacy."Privacy Notice Approval State"
+        isExternal: false
+  summary: >-
+    Shows a Privacy Notice for the specified integration name.
+
+    This call does not require any Privacy Notice to exist, nor will it create one or store the content.
+
+    This function is purely to show a privacy notice and let the caller handle the consent flow.
+  name: ShowOneTimePrivacyNotice
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.ShowOneTimePrivacyNotice(Text[250]):Enum::System#Privacy#Privacy_Notice_Approval_State
+- syntax:
+    content: 'procedure ShowOneTimePrivacyNotice(IntegrationName: Text[250], Link: Text[2048]): Enum "Privacy Notice Approval State"'
+    parameters:
+    - id: IntegrationName
+      description: The name of the integration.
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    - id: Link
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+    return:
+      description: The state of the privacy notice for the current user.
+      returnType:
+        internalReference: O:Enum::System#Privacy#Privacy_Notice_Approval_State
+        name: System.Privacy."Privacy Notice Approval State"
+        isExternal: false
+  summary: >-
+    Shows a Privacy Notice for the specified integration name.
+
+    This call does not require any Privacy Notice to exist, nor will it create one or store the content.
+
+    This function is purely to show a privacy notice and let the caller handle the consent flow.
+  name: ShowOneTimePrivacyNotice
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.ShowOneTimePrivacyNotice(Text[250],Text[2048]):Enum::System#Privacy#Privacy_Notice_Approval_State
+- syntax:
+    content: 'procedure IsApprovalStateDisagreed(Id: Code[50]): Boolean'
+    parameters:
+    - id: Id
+      description: Identification of an existing privacy notice.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    return:
+      description: Whether the Privacy Notice was disagreed to.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the admin or user has disagreed with the Privacy Notice.
+  name: IsApprovalStateDisagreed
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.IsApprovalStateDisagreed(Code[50]):Boolean
+- syntax:
+    content: 'procedure SetApprovalState(PrivacyNoticeId: Code[50], PrivacyNoticeApprovalState: Enum "Privacy Notice Approval State")'
+    parameters:
+    - id: PrivacyNoticeId
+      description: Id of the privacy notice.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    - id: PrivacyNoticeApprovalState
+      parameterType:
+        internalReference: O:Enum::System#Privacy#Privacy_Notice_Approval_State
+        name: System.Privacy."Privacy Notice Approval State"
+        isExternal: false
+  summary: >-
+    Sets the approval state for the specified Privacy Notice.
+
+    If the user is an admin, the approval will be set for the entire organization otherwise it will only be set for the current user.
+  name: SetApprovalState
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.SetApprovalState(Code[50],Enum::System#Privacy#Privacy_Notice_Approval_State)
+- syntax:
+    content: 'procedure CanCurrentUserApproveForOrganization(): Boolean'
+    return:
+      description: Whether the current user can approve for the entire organization.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Checks whether the current user can approve for the entire organization.
+
+    This function basically returns whether the user has the permissions of the Priv. Notice - Admin.
+  name: CanCurrentUserApproveForOrganization
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.CanCurrentUserApproveForOrganization:Boolean
+- syntax:
+    content: procedure CreateDefaultPrivacyNotices()
+  summary: Adds all Privacy Notices from extensions using the event OnAddPrivacyNotices.
+  name: CreateDefaultPrivacyNotices
+  uid: M:Codeunit::System#Privacy#Privacy_Notice.CreateDefaultPrivacyNotices
+commentId: O:Codeunit::System#Privacy#Privacy Notice
+summary: This codeunit provides an interface for creating, showing and approving Privacy Notices
+name: '"Privacy Notice"'
+uid: O:Codeunit::System#Privacy#Privacy_Notice

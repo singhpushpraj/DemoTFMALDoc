@@ -1,0 +1,86 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Period"
+alId: ID 3900
+namespace: System.DataAdministration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: LookupPageId
+  value: Retention Periods
+  promoted: false
+  xrefType:
+    internalReference: O:Page::System#DataAdministration#Retention_Periods
+    name: System.DataAdministration."Retention Periods"
+    isExternal: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataCaptionFields
+  value: 1,2
+  promoted: false
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: Code
+  uid: F:Table::System#DataAdministration#Retention_Period.Code[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: Description
+  uid: F:Table::System#DataAdministration#Retention_Period.Description[100]
+- type:
+    internalReference: O:Enum::System#DataAdministration#Retention_Period_Enum
+    name: System.DataAdministration."Retention Period Enum"
+    isExternal: false
+  name: '"Retention Period"'
+  uid: F:Table::System#DataAdministration#Retention_Period.Retention_Period
+- type:
+    name: DateFormula
+    isExternal: true
+  name: '"Ret. Period Calculation"'
+  uid: F:Table::System#DataAdministration#Retention_Period.Ret#_Period_Calculation
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#DataAdministration#Retention_Period.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#DataAdministration#Retention_Period.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#DataAdministration#Retention_Period.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#DataAdministration#Retention_Period.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#DataAdministration#Retention_Period.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#DataAdministration#Retention_Period.SystemRowVersion
+commentId: O:Table::System#DataAdministration#Retention Period
+summary: >-
+  The Retention Periods table is used to define retention periods.
+
+  You define a retention period by selecting one of the default values in the Retention Period field, or by selecting the Custom value and providing a date formula.
+
+  The date formula must result in a date that is at least two days before the current date.
+name: '"Retention Period"'
+uid: O:Table::System#DataAdministration#Retention_Period

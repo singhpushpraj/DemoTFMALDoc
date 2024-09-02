@@ -1,0 +1,57 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Add Precalc. to LC Dialog"'
+alId: ID 70312
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Add Precalc. to LC Dialog
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetLCBGDocumentNo(LCBGDocumentNoLocal: Code[20])'
+    parameters:
+    - id: LCBGDocumentNoLocal
+      description: ""
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: >-
+    SetLCBGDocumentNo
+
+    it set the LCBGDocumentNo before access to this page
+  name: SetLCBGDocumentNo
+  uid: M:Page::CGI_Add_Precalc#_to_LC_Dialog.SetLCBGDocumentNo(Code[20])
+commentId: O:Page::CGI Add Precalc# to LC Dialog
+summary: >-
+  page 70312 CGI Add Precalc. to LC Dialog
+
+  Provides to check the selected Calculation matchesh with LOC Export/Import and Bank Gurantee
+name: '"CGI Add Precalc. to LC Dialog"'
+uid: O:Page::CGI_Add_Precalc#_to_LC_Dialog

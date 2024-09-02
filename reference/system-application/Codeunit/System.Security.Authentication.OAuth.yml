@@ -1,0 +1,328 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Authentication.OAuth
+alId: ID 1288
+namespace: System.Security.Authentication
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Authentication
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetOAuthAccessToken with SecretText data type for AccessTokenKey and AccessTokenSecret.,24.0)]'
+    content: 'procedure GetOAuthAccessToken(ConsumerKey: Text, ConsumerSecret: Text, RequestTokenUrl: Text, CallbackUrl: Text, var AccessTokenKey: Text, var AccessTokenSecret: Text): Boolean'
+    parameters:
+    - id: ConsumerKey
+      description: The OAuth consumer key. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ConsumerSecret
+      description: The OAuth consumer secret. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestTokenUrl
+      description: The URL of the OAuth provider. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CallbackUrl
+      description: Local URL for OAuth callback. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessTokenKey
+      description: The OAuth response token key.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessTokenSecret
+      description: The OAuth response token secret.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets an OAuth request token from an OAuth provider.
+  name: GetOAuthAccessToken
+  obsoletion:
+    state: pending
+    reason: Use GetOAuthAccessToken with SecretText data type for AccessTokenKey and AccessTokenSecret.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth.GetOAuthAccessToken(Text,Text,Text,Text,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetOAuthAccessToken with SecretText data type for AccessTokenKey and AccessTokenSecret.,24.0)]'
+    content: 'procedure GetOAuthAccessToken(ConsumerKey: Text, ConsumerSecret: Text, RequestTokenUrl: Text, Verifier: Text, RequestTokenKey: Text, RequestTokenSecret: Text, var AccessTokenKey: Text, var AccessTokenSecret: Text): Boolean'
+    parameters:
+    - id: ConsumerKey
+      description: The OAuth consumer key. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ConsumerSecret
+      description: The OAuth consumer secret. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestTokenUrl
+      description: The URL of the OAuth provider. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Verifier
+      description: An OAuth verifier string. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestTokenKey
+      description: The OAuth request token key. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestTokenSecret
+      description: The OAuth request token secret. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessTokenKey
+      description: Exit parameter containing the OAuth response token key.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessTokenSecret
+      description: Exit parameter containing the OAuth response token secret.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets an OAuth access token from an OAuth provider.
+  name: GetOAuthAccessToken
+  obsoletion:
+    state: pending
+    reason: Use GetOAuthAccessToken with SecretText data type for AccessTokenKey and AccessTokenSecret.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth.GetOAuthAccessToken(Text,Text,Text,Text,Text,Text,Text@,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    - '[NonDebuggable]'
+    - '[Obsolete(Use GetAuthorizationHeader with SecretText data type for AuthorizationHeader.,24.0)]'
+    content: 'procedure GetAuthorizationHeader(ConsumerKey: Text, ConsumerSecret: Text, RequestTokenKey: Text, RequestTokenSecret: Text, RequestUrl: Text, RequestMethod: Enum "Http Request Type", var AuthorizationHeader: Text): Boolean'
+    parameters:
+    - id: ConsumerKey
+      description: The OAuth consumer key. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ConsumerSecret
+      description: The OAuth consumer secret. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestTokenKey
+      description: The OAuth response token key. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestTokenSecret
+      description: The OAuth response token secret. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestUrl
+      description: The REST URL. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestMethod
+      description: The REST method call with capital letters(POST, GET, PUT, PATCH, DELETE).
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Http_Request_Type
+        name: System.Security.Authentication."Http Request Type"
+        isExternal: false
+    - id: AuthorizationHeader
+      description: Exit parameter containing the requested OAuth specific authorization header.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the authorization header for an OAuth specific REST call.
+  name: GetAuthorizationHeader
+  obsoletion:
+    state: pending
+    reason: Use GetAuthorizationHeader with SecretText data type for AuthorizationHeader.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Authentication#OAuth.GetAuthorizationHeader(Text,Text,Text,Text,Text,Enum::System#Security#Authentication#Http_Request_Type,Text@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure GetOAuthAccessToken(ConsumerKey: SecretText, ConsumerSecret: SecretText, RequestTokenUrl: Text, CallbackUrl: Text, var AccessTokenKey: SecretText, var AccessTokenSecret: SecretText): Boolean'
+    parameters:
+    - id: ConsumerKey
+      description: The OAuth consumer key. Cannot be null.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: ConsumerSecret
+      description: The OAuth consumer secret. Cannot be null.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RequestTokenUrl
+      description: The URL of the OAuth provider. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CallbackUrl
+      description: Local URL for OAuth callback. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessTokenKey
+      description: The OAuth response token key.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AccessTokenSecret
+      description: The OAuth response token secret.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets an OAuth request token from an OAuth provider.
+  name: GetOAuthAccessToken
+  uid: M:Codeunit::System#Security#Authentication#OAuth.GetOAuthAccessToken(SecretText,SecretText,Text,Text,SecretText@,SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure GetOAuthAccessToken(ConsumerKey: SecretText, ConsumerSecret: SecretText, RequestTokenUrl: Text, Verifier: Text, RequestTokenKey: Text, RequestTokenSecret: Text, var AccessTokenKey: SecretText, var AccessTokenSecret: SecretText): Boolean'
+    parameters:
+    - id: ConsumerKey
+      description: The OAuth consumer key. Cannot be null.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: ConsumerSecret
+      description: The OAuth consumer secret. Cannot be null.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RequestTokenUrl
+      description: The URL of the OAuth provider. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Verifier
+      description: An OAuth verifier string. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestTokenKey
+      description: The OAuth request token key. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestTokenSecret
+      description: The OAuth request token secret. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AccessTokenKey
+      description: Exit parameter containing the OAuth response token key.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: AccessTokenSecret
+      description: Exit parameter containing the OAuth response token secret.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets an OAuth access token from an OAuth provider.
+  name: GetOAuthAccessToken
+  uid: M:Codeunit::System#Security#Authentication#OAuth.GetOAuthAccessToken(SecretText,SecretText,Text,Text,Text,Text,SecretText@,SecretText@):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure GetAuthorizationHeader(ConsumerKey: SecretText, ConsumerSecret: SecretText, RequestTokenKey: SecretText, RequestTokenSecret: SecretText, RequestUrl: Text, RequestMethod: Enum "Http Request Type", var AuthorizationHeader: SecretText): Boolean'
+    parameters:
+    - id: ConsumerKey
+      description: The OAuth consumer key. Cannot be null.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: ConsumerSecret
+      description: The OAuth consumer secret. Cannot be null.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RequestTokenKey
+      description: The OAuth response token key. Cannot be null.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RequestTokenSecret
+      description: The OAuth response token secret. Cannot be null.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: RequestUrl
+      description: The REST URL. Cannot be null.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RequestMethod
+      description: The REST method call with capital letters(POST, GET, PUT, PATCH, DELETE).
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Http_Request_Type
+        name: System.Security.Authentication."Http Request Type"
+        isExternal: false
+    - id: AuthorizationHeader
+      description: Exit parameter containing the requested OAuth specific authorization header.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the authorization header for an OAuth specific REST call.
+  name: GetAuthorizationHeader
+  uid: M:Codeunit::System#Security#Authentication#OAuth.GetAuthorizationHeader(SecretText,SecretText,SecretText,SecretText,Text,Enum::System#Security#Authentication#Http_Request_Type,SecretText@):Boolean
+commentId: O:Codeunit::System#Security#Authentication#OAuth
+summary: Contains methods supporting authentication via OAuth 1.0 protocol.
+name: OAuth
+uid: O:Codeunit::System#Security#Authentication#OAuth

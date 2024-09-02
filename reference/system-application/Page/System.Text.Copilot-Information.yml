@@ -1,0 +1,47 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Copilot Information"
+alId: ID 2014
+namespace: System.Text
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: Information about Copilot capabilities has been moved to page 7775 "Copilot AI Capabilities"
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: Caption
+  value: Copilot
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+commentId: O:Page::System#Text#Copilot Information
+summary: Page for viewing information about Copilot.
+name: '"Copilot Information"'
+obsoletion:
+  state: pending
+  reason: Information about Copilot capabilities has been moved to page 7775 "Copilot AI Capabilities"
+  version: "24.0"
+uid: O:Page::System#Text#Copilot_Information

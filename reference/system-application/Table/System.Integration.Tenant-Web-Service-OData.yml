@@ -1,0 +1,82 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Tenant Web Service OData"
+alId: ID 6710
+namespace: System.Integration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Tenant Web Service OData
+  promoted: false
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Access
+  value: Public
+  promoted: false
+fields:
+- type:
+    name: RecordId
+    isExternal: true
+  name: TenantWebServiceID
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.TenantWebServiceID
+- type:
+    name: Blob
+    isExternal: true
+  name: ODataSelectClause
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.ODataSelectClause
+- type:
+    name: Blob
+    isExternal: true
+  name: ODataFilterClause
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.ODataFilterClause
+- type:
+    name: Blob
+    isExternal: true
+  name: ODataV4FilterClause
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.ODataV4FilterClause
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Tenant_Web_Service_OData.SystemRowVersion
+commentId: O:Table::System#Integration#Tenant Web Service OData
+summary: Contains tenant web service OData clause entities.
+name: '"Tenant Web Service OData"'
+uid: O:Table::System#Integration#Tenant_Web_Service_OData

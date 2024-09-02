@@ -1,0 +1,50 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Recurrence - Day of Week"
+alId: ID 4690
+namespace: System.DateTime
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies that the recurrence to occur on Monday.
+  name: Monday
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Monday
+- summary: Specifies that the recurrence to occur on Tuesday.
+  name: Tuesday
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Tuesday
+- summary: Specifies that the recurrence to occur on Wednesday.
+  name: Wednesday
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Wednesday
+- summary: Specifies that the recurrence to occur on Thursday.
+  name: Thursday
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Thursday
+- summary: Specifies that the recurrence to occur on Friday.
+  name: Friday
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Friday
+- summary: Specifies that the recurrence to occur on Saturday.
+  name: Saturday
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Saturday
+- summary: Specifies that the recurrence to occur on Sunday.
+  name: Sunday
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Sunday
+- summary: Specifies that the recurrence to occur every day.
+  name: Day
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Day
+- summary: Specifies that the recurrence to occur on all days from Monday to Friday.
+  name: Weekday
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Weekday
+- summary: Specifies that the recurrence to occur on Saturday and Sunday.
+  name: '"Weekend Day"'
+  uid: E:Enum::System#DateTime#Recurrence_-_Day_of_Week.Weekend_Day
+commentId: O:Enum::System#DateTime#Recurrence - Day of Week
+summary: This enum has the day of the week for which the recurrence will occur.
+name: '"Recurrence - Day of Week"'
+uid: O:Enum::System#DateTime#Recurrence_-_Day_of_Week

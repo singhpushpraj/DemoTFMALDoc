@@ -1,0 +1,110 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Functions."Azure Functions"
+alId: ID 7804
+namespace: System.Azure.Functions
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Functions
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SendGetRequest(AzureFunctionsAuthentication: Interface "Azure Functions Authentication", QueryDict: Dictionary of [Text, Text]): Codeunit "Azure Functions Response"'
+    parameters:
+    - id: AzureFunctionsAuthentication
+      parameterType:
+        internalReference: O:Interface::System#Azure#Functions#Azure_Functions_Authentication
+        name: System.Azure.Functions."Azure Functions Authentication"
+        isExternal: false
+    - id: QueryDict
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Functions#Azure_Functions_Response
+        name: System.Azure.Functions."Azure Functions Response"
+        isExternal: false
+  name: SendGetRequest
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions.SendGetRequest(Interface::System#Azure#Functions#Azure_Functions_Authentication,Dictionary_of_[Text,Text]):Codeunit::System#Azure#Functions#Azure_Functions_Response
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SendPostRequest(AzureFunctionsAuthentication: Interface "Azure Functions Authentication", Body: Text, ContentTypeHeader: Text): Codeunit "Azure Functions Response"'
+    parameters:
+    - id: AzureFunctionsAuthentication
+      parameterType:
+        internalReference: O:Interface::System#Azure#Functions#Azure_Functions_Authentication
+        name: System.Azure.Functions."Azure Functions Authentication"
+        isExternal: false
+    - id: Body
+      description: Body of the request message.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentTypeHeader
+      description: Content type of the body to add to the request header.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Instance of Azure function response object.
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Functions#Azure_Functions_Response
+        name: System.Azure.Functions."Azure Functions Response"
+        isExternal: false
+  summary: Sends a post request to Azure function.
+  name: SendPostRequest
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions.SendPostRequest(Interface::System#Azure#Functions#Azure_Functions_Authentication,Text,Text):Codeunit::System#Azure#Functions#Azure_Functions_Response
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure Send(AzureFunctionsAuthentication: Interface "Azure Functions Authentication", RequestType: Enum "Http Request Type", QueryDict: Dictionary of [Text, Text], Body: Text, ContentTypeHeader: Text): Codeunit "Azure Functions Response"'
+    parameters:
+    - id: AzureFunctionsAuthentication
+      parameterType:
+        internalReference: O:Interface::System#Azure#Functions#Azure_Functions_Authentication
+        name: System.Azure.Functions."Azure Functions Authentication"
+        isExternal: false
+    - id: RequestType
+      parameterType:
+        internalReference: O:Enum::System#Security#Authentication#Http_Request_Type
+        name: System.Security.Authentication."Http Request Type"
+        isExternal: false
+    - id: QueryDict
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: Body
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentTypeHeader
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Functions#Azure_Functions_Response
+        name: System.Azure.Functions."Azure Functions Response"
+        isExternal: false
+  name: Send
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions.Send(Interface::System#Azure#Functions#Azure_Functions_Authentication,Enum::System#Security#Authentication#Http_Request_Type,Dictionary_of_[Text,Text],Text,Text):Codeunit::System#Azure#Functions#Azure_Functions_Response
+commentId: O:Codeunit::System#Azure#Functions#Azure Functions
+summary: Provides functionality for connecting to Azure functions.
+name: '"Azure Functions"'
+uid: O:Codeunit::System#Azure#Functions#Azure_Functions

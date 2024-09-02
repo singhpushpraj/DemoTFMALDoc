@@ -1,0 +1,86 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Division"'
+alId: ID 60310
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Division
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: LookupPageId
+  value: CGI Division List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Division_List
+    name: '"CGI Division List"'
+    isExternal: false
+- name: DrillDownPageId
+  value: CGI Division List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Division_List
+    name: '"CGI Division List"'
+    isExternal: false
+fields:
+- type:
+    name: Code[10]
+    isExternal: true
+  name: Code
+  uid: F:Table::CGI_Division.Code[10]
+- type:
+    name: Text[30]
+    isExternal: true
+  name: Description
+  uid: F:Table::CGI_Division.Description[30]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Low Profit Limit"'
+  uid: F:Table::CGI_Division.Low_Profit_Limit
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Low Profit Limit %"'
+  uid: F:Table::CGI_Division.Low_Profit_Limit_%
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Division.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Division.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Division.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Division.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Division.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Division.SystemRowVersion
+commentId: O:Table::CGI Division
+summary: Table CGI Division (ID 50010).
+name: '"CGI Division"'
+uid: O:Table::CGI_Division

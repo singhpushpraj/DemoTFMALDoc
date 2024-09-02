@@ -1,0 +1,324 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.RSACryptoServiceProvider
+alId: ID 1445
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure InitializeRSA(KeySize: Integer)'
+    parameters:
+    - id: KeySize
+      description: The size of the key in bits.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Initializes a new instance of RSACryptoServiceProvider with the specified key size and returns the key as an XML string.
+  name: InitializeRSA
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.InitializeRSA(Integer)
+- syntax:
+    signatures:
+    - '[Obsolete(Use ToSecretXmlString with SecretText data type for XmlString.,24.0)]'
+    content: 'procedure ToXmlString(IncludePrivateParameters: Boolean): Text'
+    parameters:
+    - id: IncludePrivateParameters
+      description: true to include a public and private RSA key; false to include only the public key.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: An XML string containing the key of the current RSA object.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Creates and returns an XML string containing the key of the current RSA object.
+  name: ToXmlString
+  obsoletion:
+    state: pending
+    reason: Use ToSecretXmlString with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.ToXmlString(Boolean):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use SignData with SecretText data type for XmlString.,24.0)]'
+    content: 'procedure SignData(XmlString: Text, DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing RSA key information.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DataInStream
+      description: The input stream to hash and sign.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      description: The hash algorithm to use to create the hash value.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The RSA signature stream for the specified data.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified data and signs it.
+  name: SignData
+  obsoletion:
+    state: pending
+    reason: Use SignData with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.SignData(Text,InStream,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use VerifyData with SecretText data type for XmlString.,24.0)]'
+    content: 'procedure VerifyData(XmlString: Text, DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: XmlString
+      description: The XML string containing RSA key information.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DataInStream
+      description: The input stream of data that was signed.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      description: The name of the hash algorithm used to create the hash value of the data.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      description: The stream of signature data to be verified.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the signature is valid; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies that a digital signature is valid by determining the hash value in the signature using the provided public key and comparing it to the hash value of the provided data.
+  name: VerifyData
+  obsoletion:
+    state: pending
+    reason: Use VerifyData with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.VerifyData(Text,InStream,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+- syntax:
+    signatures:
+    - '[Obsolete(Use Encrypt with SecretText data type for XmlString.,24.0)]'
+    content: 'procedure Encrypt(XmlString: Text, PlainTextInStream: InStream, OaepPadding: Boolean, EncryptedTextOutStream: OutStream)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing RSA key information.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: PlainTextInStream
+      description: The input stream to encrypt.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OaepPadding
+      description: True to perform RSA encryption using OAEP padding; otherwise, false to use PKCS#1 padding.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: EncryptedTextOutStream
+      description: The RSA encryption stream for the specified text.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Encrypts the specified text with the RSA algorithm.
+  name: Encrypt
+  obsoletion:
+    state: pending
+    reason: Use Encrypt with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.Encrypt(Text,InStream,Boolean,OutStream)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use Decrypt with SecretText data type for XmlString.,24.0)]'
+    content: 'procedure Decrypt(XmlString: Text, EncryptedTextInStream: InStream, OaepPadding: Boolean, DecryptedTextOutStream: OutStream)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing RSA key information.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EncryptedTextInStream
+      description: The input stream to decrypt.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OaepPadding
+      description: true to perform RSA encryption using OAEP padding; otherwise, false to use PKCS#1 padding.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: DecryptedTextOutStream
+      description: The RSA decryption stream for the specified text.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Decrypts the specified text that was previously encrypted with the RSA algorithm.
+  name: Decrypt
+  obsoletion:
+    state: pending
+    reason: Use Decrypt with SecretText data type for XmlString.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.Decrypt(Text,InStream,Boolean,OutStream)
+- syntax:
+    content: 'procedure ToSecretXmlString(IncludePrivateParameters: Boolean): SecretText'
+    parameters:
+    - id: IncludePrivateParameters
+      description: true to include a public and private RSA key; false to include only the public key.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: An XML string containing the key of the current RSA object.
+      returnType:
+        name: SecretText
+        isExternal: true
+  summary: Creates and returns an XML string containing the key of the current RSA object.
+  name: ToSecretXmlString
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.ToSecretXmlString(Boolean):SecretText
+- syntax:
+    content: 'procedure SignData(XmlString: SecretText, DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing RSA key information.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: DataInStream
+      description: The input stream to hash and sign.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      description: The hash algorithm to use to create the hash value.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      description: The RSA signature stream for the specified data.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Computes the hash value of the specified data and signs it.
+  name: SignData
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.SignData(SecretText,InStream,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    content: 'procedure VerifyData(XmlString: SecretText, DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: XmlString
+      description: The XML string containing RSA key information.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: DataInStream
+      description: The input stream of data that was signed.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      description: The name of the hash algorithm used to create the hash value of the data.
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      description: The stream of signature data to be verified.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: True if the signature is valid; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies that a digital signature is valid by determining the hash value in the signature using the provided public key and comparing it to the hash value of the provided data.
+  name: VerifyData
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.VerifyData(SecretText,InStream,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+- syntax:
+    content: 'procedure Encrypt(XmlString: SecretText, PlainTextInStream: InStream, OaepPadding: Boolean, EncryptedTextOutStream: OutStream)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing RSA key information.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: PlainTextInStream
+      description: The input stream to encrypt.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OaepPadding
+      description: True to perform RSA encryption using OAEP padding; otherwise, false to use PKCS#1 padding.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: EncryptedTextOutStream
+      description: The RSA encryption stream for the specified text.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Encrypts the specified text with the RSA algorithm.
+  name: Encrypt
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.Encrypt(SecretText,InStream,Boolean,OutStream)
+- syntax:
+    content: 'procedure Decrypt(XmlString: SecretText, EncryptedTextInStream: InStream, OaepPadding: Boolean, DecryptedTextOutStream: OutStream)'
+    parameters:
+    - id: XmlString
+      description: The XML string containing RSA key information.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: EncryptedTextInStream
+      description: The input stream to decrypt.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OaepPadding
+      description: true to perform RSA encryption using OAEP padding; otherwise, false to use PKCS#1 padding.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: DecryptedTextOutStream
+      description: The RSA decryption stream for the specified text.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Decrypts the specified text that was previously encrypted with the RSA algorithm.
+  name: Decrypt
+  uid: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.Decrypt(SecretText,InStream,Boolean,OutStream)
+commentId: O:Codeunit::System#Security#Encryption#RSACryptoServiceProvider
+summary: Performs asymmetric encryption and decryption using the implementation of the RSA algorithm provided by the cryptographic service provider (CSP).
+name: RSACryptoServiceProvider
+uid: O:Codeunit::System#Security#Encryption#RSACryptoServiceProvider

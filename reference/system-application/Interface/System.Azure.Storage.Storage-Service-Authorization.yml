@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."Storage Service Authorization"
+namespace: System.Azure.Storage
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure Authorize(var HttpRequest: HttpRequestMessage, StorageAccount: Text)'
+    parameters:
+    - id: HttpRequest
+      description: The HTTP request to authorize.
+      parameterType:
+        name: HttpRequestMessage
+        isExternal: true
+    - id: StorageAccount
+      description: The name of the storage account to authorize against.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Authorizes an HTTP request by providing the needed authorization information to it.
+  name: Authorize
+  uid: M:Interface::System#Azure#Storage#Storage_Service_Authorization.Authorize(HttpRequestMessage@,Text)
+commentId: O:Interface::System#Azure#Storage#Storage Service Authorization
+summary: Common interface for different authorization options.
+name: '"Storage Service Authorization"'
+uid: O:Interface::System#Azure#Storage#Storage_Service_Authorization

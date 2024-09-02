@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Pol. View"
+alId: ID 3905
+namespace: System.DataAdministration
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Retention Policy - View"'
+  promoted: false
+commentId: O:PermissionSet::System#DataAdministration#Retention Pol# View
+summary: this is the minimum permission set needed to install an extension that adds a retention policy.
+name: '"Retention Pol. View"'
+uid: O:PermissionSet::System#DataAdministration#Retention_Pol#_View

@@ -1,0 +1,123 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Feature Key Buffer"
+alId: ID 2609
+namespace: System.Environment.Configuration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Feature Key
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Feature Data Update Status" = r,
+                      tabledata "Feature Dependency" = r,
+                      tabledata "Feature Key" = rm
+  promoted: false
+fields:
+- type:
+    name: Text[50]
+    isExternal: true
+  name: ID
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.ID[50]
+- type:
+    name: Option
+    isExternal: true
+  name: Enabled
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Enabled
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: Description
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Description[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Learn More Link"'
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Learn_More_Link[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Mandatory By"'
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Mandatory_By[2048]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Can Try"'
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Can_Try
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Is One Way"'
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Is_One_Way
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Data Update Required"'
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Data_Update_Required
+- type:
+    name: Integer
+    isExternal: true
+  name: Index
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Index
+- type:
+    name: Integer
+    isExternal: true
+  name: Indentation
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Indentation
+- type:
+    name: Boolean
+    isExternal: true
+  name: Parent
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.Parent
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Environment#Configuration#Feature_Key_Buffer.SystemRowVersion
+commentId: O:Table::System#Environment#Configuration#Feature Key Buffer
+summary: >-
+  This temporary table extends the "Feature Key" virtual table. The fields must be in sync across both tables.
+
+  New fields are added from id = 100 upwards.
+name: '"Feature Key Buffer"'
+uid: O:Table::System#Environment#Configuration#Feature_Key_Buffer

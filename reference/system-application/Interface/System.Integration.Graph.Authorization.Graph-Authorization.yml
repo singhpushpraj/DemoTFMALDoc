@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Graph.Authorization."Graph Authorization"
+namespace: System.Integration.Graph.Authorization
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Integration.Graph.Authorization
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure GetHttpAuthorization(): Interface "Http Authentication"'
+    return:
+      returnType:
+        internalReference: O:Interface::System#RestClient#Http_Authentication
+        name: System.RestClient."Http Authentication"
+        isExternal: false
+  summary: Returns an Http Authentication Instance
+  name: GetHttpAuthorization
+  uid: M:Interface::System#Integration#Graph#Authorization#Graph_Authorization.GetHttpAuthorization:Interface::System#RestClient#Http_Authentication
+commentId: O:Interface::System#Integration#Graph#Authorization#Graph Authorization
+summary: Common interface for different authorization options.
+name: '"Graph Authorization"'
+uid: O:Interface::System#Integration#Graph#Authorization#Graph_Authorization

@@ -1,0 +1,36 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Guided Experience Type"
+alId: ID 1990
+namespace: System.Environment.Configuration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Caption
+  value: Guided Experience Type
+  promoted: false
+- name: Access
+  value: Public
+  promoted: false
+enumValues:
+- name: '"Assisted Setup"'
+  uid: E:Enum::System#Environment#Configuration#Guided_Experience_Type.Assisted_Setup
+- name: '"Manual Setup"'
+  uid: E:Enum::System#Environment#Configuration#Guided_Experience_Type.Manual_Setup
+- name: Learn
+  uid: E:Enum::System#Environment#Configuration#Guided_Experience_Type.Learn
+- name: Tour
+  uid: E:Enum::System#Environment#Configuration#Guided_Experience_Type.Tour
+- name: '"Spotlight Tour"'
+  uid: E:Enum::System#Environment#Configuration#Guided_Experience_Type.Spotlight_Tour
+- name: Video
+  uid: E:Enum::System#Environment#Configuration#Guided_Experience_Type.Video
+- name: '"Application Feature"'
+  uid: E:Enum::System#Environment#Configuration#Guided_Experience_Type.Application_Feature
+commentId: O:Enum::System#Environment#Configuration#Guided Experience Type
+name: '"Guided Experience Type"'
+uid: O:Enum::System#Environment#Configuration#Guided_Experience_Type

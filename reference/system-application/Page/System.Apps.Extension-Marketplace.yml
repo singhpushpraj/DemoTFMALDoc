@@ -1,0 +1,57 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Marketplace"
+alId: ID 2502
+namespace: System.Apps
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Extension Marketplace
+  promoted: false
+- name: AdditionalSearchTerms
+  value: app,add-in,customize,plug-in,appsource
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: This page will be obsoleted. Microsoft AppSource apps feature will replace the Extension Marketplace.
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetSearchText(Text: Text)'
+    parameters:
+    - id: Text
+      parameterType:
+        name: Text
+        isExternal: true
+  name: SetSearchText
+  uid: M:Page::System#Apps#Extension_Marketplace.SetSearchText(Text)
+commentId: O:Page::System#Apps#Extension Marketplace
+summary: Shows the Extension Marketplace.
+name: '"Extension Marketplace"'
+obsoletion:
+  state: pending
+  reason: This page will be obsoleted. Microsoft AppSource apps feature will replace the Extension Marketplace.
+  version: "24.0"
+uid: O:Page::System#Apps#Extension_Marketplace

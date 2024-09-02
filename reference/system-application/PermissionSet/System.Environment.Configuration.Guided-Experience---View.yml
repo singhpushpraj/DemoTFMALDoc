@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Guided Experience - View"
+alId: ID 1992
+namespace: System.Environment.Configuration
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Guided Experience - Read","Translation - Edit"'
+  promoted: false
+commentId: O:PermissionSet::System#Environment#Configuration#Guided Experience - View
+name: '"Guided Experience - View"'
+uid: O:PermissionSet::System#Environment#Configuration#Guided_Experience_-_View

@@ -1,0 +1,11 @@
+﻿### YamlMime:BusinessCentralObsoletionList
+tag: "18.0"
+groups:
+- groupName: "18.0"
+  symbols:
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Apps#D365_EXTENSION_MGT
+    name: PermissionSet 2503 "D365 EXTENSION MGT"
+    reason: This permission set is replaced by permission set Exten. Mgt. - Admin
+  uid: N:Module::System_Application_obsolete_by_18.0#18.0
+uid: N:Module::System_Application_obsolete_by_18.0

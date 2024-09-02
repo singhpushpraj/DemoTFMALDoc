@@ -1,0 +1,93 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Outbox"
+alId: ID 8888
+namespace: System.Email
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: Description
+  value: The table is public so that it can also be extensible. The table is one of the modules's extensibility endpoints.
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetMessageId(): Guid'
+    return:
+      description: Message id.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Get the message id of the outbox email.
+  name: GetMessageId
+  uid: M:Table::System#Email#Email_Outbox.GetMessageId:Guid
+- syntax:
+    content: 'procedure GetAccountId(): Guid'
+    return:
+      description: Account id.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Get the account id of the outbox email.
+  name: GetAccountId
+  uid: M:Table::System#Email#Email_Outbox.GetAccountId:Guid
+- syntax:
+    content: 'procedure GetConnector(): Enum "Email Connector"'
+    return:
+      description: Email connector
+      returnType:
+        internalReference: O:Enum::System#Email#Email_Connector
+        name: System.Email."Email Connector"
+        isExternal: false
+  summary: The email connector of the outbox email.
+  name: GetConnector
+  uid: M:Table::System#Email#Email_Outbox.GetConnector:Enum::System#Email#Email_Connector
+fields:
+- type:
+    name: BigInteger
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Email#Email_Outbox.Id
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Email#Email_Outbox.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Email#Email_Outbox.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Email#Email_Outbox.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Email#Email_Outbox.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Email#Email_Outbox.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Email#Email_Outbox.SystemRowVersion
+commentId: O:Table::System#Email#Email Outbox
+summary: Holds information about draft emails and email that are about to be sent.
+name: '"Email Outbox"'
+uid: O:Table::System#Email#Email_Outbox

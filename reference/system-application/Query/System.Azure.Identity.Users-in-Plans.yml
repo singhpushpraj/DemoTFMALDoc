@@ -1,0 +1,62 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Users in Plans"
+alId: ID 774
+namespace: System.Azure.Identity
+baseKind: Query
+kind: Query
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Query](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-query-object)'
+objectProperties:
+- name: Caption
+  value: Users in Plans
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata Plan = r,
+                      tabledata User = r,
+                      tabledata "User Plan" = r
+  promoted: false
+queryColumns:
+- dataItem: User_Plan
+  columnType:
+    name: Guid
+    isExternal: true
+  name: User_Security_ID
+  uid: C:Query::System#Azure#Identity#Users_in_Plans.User_Plan.User_Security_ID
+- dataItem: User_Plan
+  columnType:
+    name: Code[50]
+    isExternal: true
+  name: User_Name
+  uid: C:Query::System#Azure#Identity#Users_in_Plans.User_Plan.User_Name
+- dataItem: User_Plan
+  columnType:
+    name: Guid
+    isExternal: true
+  name: Plan_ID
+  uid: C:Query::System#Azure#Identity#Users_in_Plans.User_Plan.Plan_ID
+- dataItem: User_Plan
+  columnType:
+    name: Text[50]
+    isExternal: true
+  name: Plan_Name
+  uid: C:Query::System#Azure#Identity#Users_in_Plans.User_Plan.Plan_Name
+- dataItem: User
+  columnType:
+    name: None
+    isExternal: true
+  name: User_State
+  uid: C:Query::System#Azure#Identity#Users_in_Plans.User_Plan.User.User_State
+commentId: O:Query::System#Azure#Identity#Users in Plans
+summary: Displays a list of the plans assigned to users.
+name: '"Users in Plans"'
+uid: O:Query::System#Azure#Identity#Users_in_Plans

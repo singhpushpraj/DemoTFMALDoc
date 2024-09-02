@@ -1,0 +1,102 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Comment Line"'
+alId: ID 70302
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: Caption
+  value: TFM Comment Line
+  promoted: false
+- name: DrillDownPageId
+  value: CGI TFM Comment List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_Comment_List
+    name: '"CGI TFM Comment List"'
+    isExternal: false
+- name: LookupPageId
+  value: CGI TFM Comment List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_TFM_Comment_List
+    name: '"CGI TFM Comment List"'
+    isExternal: false
+methods:
+- syntax:
+    content: procedure SetUpNewLine()
+  summary: Function SetUpNewLine
+  name: SetUpNewLine
+  uid: M:Table::CGI_TFM_Comment_Line.SetUpNewLine
+fields:
+- type:
+    name: Option
+    isExternal: true
+  name: '"Table Name"'
+  uid: F:Table::CGI_TFM_Comment_Line.Table_Name
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"No."'
+  uid: F:Table::CGI_TFM_Comment_Line.No#[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Line No."'
+  uid: F:Table::CGI_TFM_Comment_Line.Line_No#
+- type:
+    name: Date
+    isExternal: true
+  name: Date
+  uid: F:Table::CGI_TFM_Comment_Line.Date
+- type:
+    name: Code[10]
+    isExternal: true
+  name: Code
+  uid: F:Table::CGI_TFM_Comment_Line.Code[10]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Comment
+  uid: F:Table::CGI_TFM_Comment_Line.Comment[250]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_TFM_Comment_Line.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_TFM_Comment_Line.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_TFM_Comment_Line.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_TFM_Comment_Line.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_TFM_Comment_Line.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_TFM_Comment_Line.SystemRowVersion
+commentId: O:Table::CGI TFM Comment Line
+summary: Contains CGI TFM Comment Line records
+name: '"CGI TFM Comment Line"'
+uid: O:Table::CGI_TFM_Comment_Line

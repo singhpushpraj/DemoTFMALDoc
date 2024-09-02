@@ -1,0 +1,64 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Scenario Attach Setup"
+alId: ID 8897
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Email#Email_Attachments
+  name: System.Email."Email Attachments"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Email Scenario Attachments
+  promoted: false
+- name: DataCaptionExpression
+  value: Format(Enum::"Email Scenario".FromInteger(CurrentEmailScenario))
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "8913"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Email#Email_Attachments
+    name: System.Email."Email Attachments"
+    isExternal: false
+- name: SourceTableView
+  value: >-
+    sorting(Scenario, "Attachment Name")
+                          order(ascending)
+  promoted: false
+- name: InstructionalText
+  value: Assign email attachments for email scenario
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Email Attachments" = rimd,
+                        tabledata "Email Scenario Attachments" = rimd
+  promoted: false
+commentId: O:Page::System#Email#Email Scenario Attach Setup
+summary: Page is used to set the attachments for the scenario.
+name: '"Email Scenario Attach Setup"'
+uid: O:Page::System#Email#Email_Scenario_Attach_Setup

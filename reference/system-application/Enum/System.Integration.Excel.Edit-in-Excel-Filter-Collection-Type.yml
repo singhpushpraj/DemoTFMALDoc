@@ -1,0 +1,30 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel Filter Collection Type"
+alId: ID 1491
+namespace: System.Integration.Excel
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: and
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Collection_Type.and
+- name: or
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Collection_Type.or
+commentId: O:Enum::System#Integration#Excel#Edit in Excel Filter Collection Type
+summary: >-
+  This enum specifies whether filters for the given field are connected or disconnected
+
+  In other words if the filter being added specifies "Field = a&b" (and) or "Field = a|b" (or).
+name: '"Edit in Excel Filter Collection Type"'
+uid: O:Enum::System#Integration#Excel#Edit_in_Excel_Filter_Collection_Type

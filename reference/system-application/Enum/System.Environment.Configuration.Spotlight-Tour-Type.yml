@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Spotlight Tour Type"
+alId: ID 1996
+namespace: System.Environment.Configuration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Default value - none.
+  name: None
+  uid: E:Enum::System#Environment#Configuration#Spotlight_Tour_Type.None
+- summary: Specifies that the tour spotlights the Open in Excel functionality on the page.
+  name: '"Open in Excel"'
+  uid: E:Enum::System#Environment#Configuration#Spotlight_Tour_Type.Open_in_Excel
+- summary: Specifies that the tour spotlights the Share to Teams functionality on the page.
+  name: '"Share to Teams"'
+  uid: E:Enum::System#Environment#Configuration#Spotlight_Tour_Type.Share_to_Teams
+- summary: Specifies that the tour spotlights the Copilot functionality on the page.
+  name: Copilot
+  uid: E:Enum::System#Environment#Configuration#Spotlight_Tour_Type.Copilot
+commentId: O:Enum::System#Environment#Configuration#Spotlight Tour Type
+summary: Specifies the type of a spotlight tour.
+name: '"Spotlight Tour Type"'
+uid: O:Enum::System#Environment#Configuration#Spotlight_Tour_Type

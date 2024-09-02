@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Manual Setup Category"
+alId: ID 1875
+namespace: System.Environment.Configuration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: A default category, specifying that the manual setup is not categorized.
+  name: Uncategorized
+  uid: E:Enum::System#Environment#Configuration#Manual_Setup_Category.Uncategorized
+commentId: O:Enum::System#Environment#Configuration#Manual Setup Category
+summary: The category enum is used to navigate the setup page, which can have many records. It is encouraged to extend this enum and use the newly defined options.
+name: '"Manual Setup Category"'
+uid: O:Enum::System#Environment#Configuration#Manual_Setup_Category

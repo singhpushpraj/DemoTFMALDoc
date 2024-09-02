@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Telemetry."Telemetry Loggers"
+alId: ID 8708
+namespace: System.Telemetry
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Telemetry
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Register(TelemetryLogger: Interface "Telemetry Logger")'
+    parameters:
+    - id: TelemetryLogger
+      description: The codeunit implementing the Telemetry Logger inteface from a 3d party extension.
+      parameterType:
+        internalReference: O:Interface::System#Telemetry#Telemetry_Logger
+        name: System.Telemetry."Telemetry Logger"
+        isExternal: false
+  summary: Registers a telemetry logger from a 3d party extension. Is used in conjunction with <see cref="OnRegisterTelemetryLogger"></see>
+  name: Register
+  uid: M:Codeunit::System#Telemetry#Telemetry_Loggers.Register(Interface::System#Telemetry#Telemetry_Logger)
+commentId: O:Codeunit::System#Telemetry#Telemetry Loggers
+summary: Provides functionality for registering 3d party telemetry loggers to be used with Telemetry codeunit.
+remarks: This codeunit is only intended to be used from subscribers of <see cref="OnRegisterTelemetryLogger"></see> event.
+name: '"Telemetry Loggers"'
+uid: O:Codeunit::System#Telemetry#Telemetry_Loggers

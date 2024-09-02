@@ -1,0 +1,19 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Plan User Details"
+alId: ID 774
+namespace: System.Azure.Identity
+baseKind: Table
+kind: TableExtension
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+extends:
+  internalReference: O:Table::System#Security#User#User_Details
+  name: System.Security.User."User Details"
+  isExternal: false
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+commentId: O:TableExtension::System#Azure#Identity#Plan User Details
+summary: Adds information about user plans to the user details module.
+name: '"Plan User Details"'
+uid: O:TableExtension::System#Azure#Identity#Plan_User_Details

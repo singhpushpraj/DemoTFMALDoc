@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Font Provider 2D"
+namespace: System.Text
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure GetSupportedBarcodeSymbologies(var Result: List of [Enum "Barcode Symbology 2D"])'
+    parameters:
+    - id: Result
+      parameterType:
+        name: List of [Enum System.Text."Barcode Symbology 2D"]
+        isExternal: true
+  name: GetSupportedBarcodeSymbologies
+  uid: M:Interface::System#Text#Barcode_Font_Provider_2D.GetSupportedBarcodeSymbologies(List_of_[Barcode_Symbology_2D]@)
+- syntax:
+    content: 'procedure EncodeFont(InputText: Text, BarcodeSymbology2D: Enum "Barcode Symbology 2D"): Text'
+    parameters:
+    - id: InputText
+      description: The text to encode.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BarcodeSymbology2D
+      description: The 2D symbology to use for the encoding.
+      parameterType:
+        internalReference: O:Enum::System#Text#Barcode_Symbology_2D
+        name: System.Text."Barcode Symbology 2D"
+        isExternal: false
+    return:
+      description: The encoded barcode.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Encodes an input text into a 2D barcode.
+  name: EncodeFont
+  uid: M:Interface::System#Text#Barcode_Font_Provider_2D.EncodeFont(Text,Enum::System#Text#Barcode_Symbology_2D):Text
+commentId: O:Interface::System#Text#Barcode Font Provider 2D
+summary: Interface for 2D barcode font providers.
+name: '"Barcode Font Provider 2D"'
+uid: O:Interface::System#Text#Barcode_Font_Provider_2D

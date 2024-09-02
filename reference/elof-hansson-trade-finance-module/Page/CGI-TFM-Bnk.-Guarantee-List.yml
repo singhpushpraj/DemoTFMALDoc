@@ -1,0 +1,58 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Bnk. Guarantee List"'
+alId: ID 70301
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_TFM_LCBG_Header
+  name: '"CGI TFM LCBG Header"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: TFM Bank Guarantee List
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "70300"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_TFM_LCBG_Header
+    name: '"CGI TFM LCBG Header"'
+    isExternal: false
+- name: SourceTableView
+  value: where(Type = const("Bank Guarantee"))
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+commentId: O:Page::CGI TFM Bnk# Guarantee List
+summary: >-
+  page 70301 CGI TFM Bnk. Guarantee List
+
+  Display the related Bank Guarantee information associated with Calculation No.
+
+  In Calculation, Purchase Calculation and Sales Warehouse Calculation pages
+name: '"CGI TFM Bnk. Guarantee List"'
+uid: O:Page::CGI_TFM_Bnk#_Guarantee_List

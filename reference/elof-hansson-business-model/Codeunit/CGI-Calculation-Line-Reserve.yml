@@ -1,0 +1,265 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Line-Reserve"'
+alId: ID 60302
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Reservation Entry" = rimd,
+                      tabledata "Planning Assignment" = rimd
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure CreateReservation(var CGICalculationLine: Record "CGI Calculation Line", Description: Text[50], ExpectedReceiptDate: Date, Quantity: Decimal, QuantityBase: Decimal, ForSerialNo: Code[50], ForLotNo: Code[50])'
+    parameters:
+    - id: CGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    - id: Description
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: ExpectedReceiptDate
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: Quantity
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: QuantityBase
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: ForSerialNo
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    - id: ForLotNo
+      parameterType:
+        name: Code[50]
+        isExternal: true
+  name: CreateReservation
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.CreateReservation(CGI_Calculation_Line@,Text[50],Date,Decimal,Decimal,Code[50],Code[50])
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure CreateReservationSetFrom(TrackingSpecificationFrom: __MissingTypeSymbol__)'
+    parameters:
+    - id: TrackingSpecificationFrom
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: CreateReservationSetFrom
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.CreateReservationSetFrom(__MissingSymbol__)
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure SetBinding(Binding: __MissingTypeSymbol__)'
+    parameters:
+    - id: Binding
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: SetBinding
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.SetBinding(__MissingSymbol__)
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure FilterReservFor(FilterReservationEntry: __MissingTypeSymbol__, CGICalculationLine: Record "CGI Calculation Line")'
+    parameters:
+    - id: FilterReservationEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: CGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: FilterReservFor
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.FilterReservFor(__MissingSymbol__@,CGI_Calculation_Line)
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure Caption(CGICalculationLine: Record "CGI Calculation Line"): Text[80]'
+    parameters:
+    - id: CGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    return:
+      returnType:
+        name: Text[80]
+        isExternal: true
+  name: Caption
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.Caption(CGI_Calculation_Line):Text[80]
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure FindReservEntry(CGICalculationLine: Record "CGI Calculation Line", ReservationEntry: __MissingTypeSymbol__): Boolean'
+    parameters:
+    - id: CGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    - id: ReservationEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: FindReservEntry
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.FindReservEntry(CGI_Calculation_Line,__MissingSymbol__@):Boolean
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure ReservEntryExist(CGICalculationLine: Record "CGI Calculation Line"): Boolean'
+    parameters:
+    - id: CGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: ReservEntryExist
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.ReservEntryExist(CGI_Calculation_Line):Boolean
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure AssignForPlanning(SalesLine: __MissingTypeSymbol__)'
+    parameters:
+    - id: SalesLine
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: AssignForPlanning
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.AssignForPlanning(__MissingSymbol__@)
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure CallItemTrackingSecondSource(SalesLine: __MissingTypeSymbol__, SecondSourceQuantityArray: array[3] of Decimal, AsmToOrder: Boolean)'
+    parameters:
+    - id: SalesLine
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: SecondSourceQuantityArray
+      parameterType:
+        name: array[3] of Decimal
+        isExternal: true
+    - id: AsmToOrder
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: CallItemTrackingSecondSource
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.CallItemTrackingSecondSource(__MissingSymbol__@,Decimal[],Boolean)
+- syntax:
+    content: 'procedure SetCalculationLine(NewCGICalculationline: Record "CGI Calculation Line", CalcReservationEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: NewCGICalculationline
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    - id: CalcReservationEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: SetCalculationLine
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.SetCalculationLine(CGI_Calculation_Line,__MissingSymbol__@)
+- syntax:
+    content: 'procedure SetTradeCalcNo(FromTradeCalcNo: Code[20], FromTradeCalc: Boolean)'
+    parameters:
+    - id: FromTradeCalcNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: FromTradeCalc
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetTradeCalcNo
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.SetTradeCalcNo(Code[20],Boolean)
+- syntax:
+    content: procedure SetPurchaseAsLookupForCalcline()
+  name: SetPurchaseAsLookupForCalcline
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.SetPurchaseAsLookupForCalcline
+- syntax:
+    content: procedure ClearAllVariables()
+  name: ClearAllVariables
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.ClearAllVariables
+- syntax:
+    content: 'procedure SetCalcLineFromPageReservation(var CurrentCGICalculationLine: Record "CGI Calculation Line")'
+    parameters:
+    - id: CurrentCGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: SetCalcLineFromPageReservation
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.SetCalcLineFromPageReservation(CGI_Calculation_Line@)
+- syntax:
+    content: 'procedure SetCalcLineFromPageAvailablePurchaseLines(var CurrentCGICalculationLine: Record "CGI Calculation Line")'
+    parameters:
+    - id: CurrentCGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: SetCalcLineFromPageAvailablePurchaseLines
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.SetCalcLineFromPageAvailablePurchaseLines(CGI_Calculation_Line@)
+- syntax:
+    content: 'procedure SetCalculationLine_ReservationManagement(NewCalculationLine: Record "CGI Calculation Line", var IsHandled: Boolean)'
+    parameters:
+    - id: NewCalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    - id: IsHandled
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetCalculationLine_ReservationManagement
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.SetCalculationLine_ReservationManagement(CGI_Calculation_Line,Boolean@)
+- syntax:
+    content: 'procedure SetReservationFilters(ReservEntry: __MissingTypeSymbol__, CGICalculationLineP: Record "CGI Calculation Line")'
+    parameters:
+    - id: ReservEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: SetReservationFilters
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.SetReservationFilters(__MissingSymbol__@,CGI_Calculation_Line)
+- syntax:
+    content: 'procedure GetSourceCaption(CGICalculationLineP: Record "CGI Calculation Line"): Text'
+    parameters:
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: GetSourceCaption
+  uid: M:Codeunit::CGI_Calculation_Line-Reserve.GetSourceCaption(CGI_Calculation_Line):Text
+commentId: O:Codeunit::CGI Calculation Line-Reserve
+name: '"CGI Calculation Line-Reserve"'
+uid: O:Codeunit::CGI_Calculation_Line-Reserve

@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Authentication.OAuth2ControlAddIn
+alId: ID 502
+namespace: System.Security.Authentication
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.Authentication
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Caption
+  value: Waiting for a response. Do not close this page.
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Security#Authentication#OAuth2ControlAddIn
+name: OAuth2ControlAddIn
+uid: O:Page::System#Security#Authentication#OAuth2ControlAddIn

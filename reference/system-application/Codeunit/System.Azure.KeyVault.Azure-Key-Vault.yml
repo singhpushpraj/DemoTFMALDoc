@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.KeyVault."Azure Key Vault"
+alId: ID 2200
+namespace: System.Azure.KeyVault
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.KeyVault
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Azure#KeyVault#Azure Key Vault
+summary: Exposes functionality to handle the retrieval of azure key vault secrets, along with setting the provider and clear the secrets cache used.
+name: '"Azure Key Vault"'
+uid: O:Codeunit::System#Azure#KeyVault#Azure_Key_Vault

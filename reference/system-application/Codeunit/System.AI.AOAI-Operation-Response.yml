@@ -1,0 +1,66 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Operation Response"
+alId: ID 7770
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsSuccess(): Boolean'
+    return:
+      description: True if the operation was successful.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Check whether the operation was successful.
+  name: IsSuccess
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.IsSuccess:Boolean
+- syntax:
+    content: 'procedure GetStatusCode(): Integer'
+    return:
+      description: The status code of the operation.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Get the status code of the operation.
+  name: GetStatusCode
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.GetStatusCode:Integer
+- syntax:
+    content: 'procedure GetResult(): Text'
+    return:
+      description: The result of the operation.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the result of the operation.
+  name: GetResult
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.GetResult:Text
+- syntax:
+    content: 'procedure GetError(): Text'
+    return:
+      description: The error text of the operation.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Get the error text of the operation.
+  name: GetError
+  uid: M:Codeunit::System#AI#AOAI_Operation_Response.GetError:Text
+commentId: O:Codeunit::System#AI#AOAI Operation Response
+summary: The status and result of an operation.
+name: '"AOAI Operation Response"'
+uid: O:Codeunit::System#AI#AOAI_Operation_Response

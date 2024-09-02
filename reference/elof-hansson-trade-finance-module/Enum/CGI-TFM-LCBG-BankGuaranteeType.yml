@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG BankGuaranteeType"'
+alId: ID 70306
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '" "'
+  uid: E:Enum::CGI_TFM_LCBG_BankGuaranteeType._
+- name: '"APB-Advance Payment Bond"'
+  uid: E:Enum::CGI_TFM_LCBG_BankGuaranteeType.APB-Advance_Payment_Bond
+- name: '"BB-Bid Bond"'
+  uid: E:Enum::CGI_TFM_LCBG_BankGuaranteeType.BB-Bid_Bond
+- name: '"CG-Credit Guarantee"'
+  uid: E:Enum::CGI_TFM_LCBG_BankGuaranteeType.CG-Credit_Guarantee
+- name: '"WG-Warranty Guarantee"'
+  uid: E:Enum::CGI_TFM_LCBG_BankGuaranteeType.WG-Warranty_Guarantee
+- name: '"PB-Performance Bond"'
+  uid: E:Enum::CGI_TFM_LCBG_BankGuaranteeType.PB-Performance_Bond
+- name: '"PG-Payment Guarantee"'
+  uid: E:Enum::CGI_TFM_LCBG_BankGuaranteeType.PG-Payment_Guarantee
+- name: '"RG-Retention Guarantee"'
+  uid: E:Enum::CGI_TFM_LCBG_BankGuaranteeType.RG-Retention_Guarantee
+commentId: O:Enum::CGI TFM LCBG BankGuaranteeType
+summary: Contains CGI TFM LCBG BankGuaranteeType options
+name: '"CGI TFM LCBG BankGuaranteeType"'
+uid: O:Enum::CGI_TFM_LCBG_BankGuaranteeType

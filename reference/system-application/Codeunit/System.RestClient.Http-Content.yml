@@ -1,0 +1,408 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.RestClient."Http Content"
+alId: ID 2354
+namespace: System.RestClient
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.RestClient
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Create(Content: Text): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified Text content.
+  remarks: The Content-Type header will be set to 'text/plain'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(Text):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: SecretText): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified SecretText content.
+  remarks: The Content-Type header will be set to 'text/plain'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(SecretText):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: Text, ContentType: Text): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: The content type of the content to send to the server.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified Text content and content type.
+  remarks: If the ContentType parameter is not specified, it will be set to 'text/plain'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(Text,Text):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: SecretText, ContentType: Text): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: ContentType
+      description: The content type of the content to send to the server.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified SecretText content and content type.
+  remarks: If the ContentType parameter is not specified, it will be set to 'text/plain'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(SecretText,Text):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: JsonObject): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: JsonObject
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified JsonObject content.
+  remarks: The Content-Type header will be set to 'application/json'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(JsonObject):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: JsonArray): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified JsonArray content.
+  remarks: The Content-Type header will be set to 'application/json'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(JsonArray):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: JsonToken): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: JsonToken
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified JsonToken content.
+  remarks: The Content-Type header will be set to 'application/json'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(JsonToken):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: XmlDocument): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified XmlDocument content.
+  remarks: The Content-Type header will be set to 'text/xml'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(XmlDocument):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: Codeunit "Temp Blob"): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified "Temp Blob" Codeunit content.
+  remarks: The Content-Type header will be set to 'application/octet-stream'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(Codeunit::System#Utilities#Temp_Blob):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: Codeunit "Temp Blob", ContentType: Text): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    - id: ContentType
+      description: The content type of the content to send to the server.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified "Temp Blob" Codeunit content and content type.
+  remarks: If the ContentType parameter is not specified, it will be set to 'application/octet-stream'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(Codeunit::System#Utilities#Temp_Blob,Text):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: InStream): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified InStream content.
+  remarks: The Content-Type header will be set to 'application/octet-stream'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(InStream):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: InStream, ContentType: Text): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The content to send to the server.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: ContentType
+      description: The content type of the content to send to the server.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The Http Content object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content class with the specified InStream content and content type.
+  remarks: If the ContentType parameter is not specified, it will be set to 'application/octet-stream'.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(InStream,Text):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure Create(Content: HttpContent): Codeunit "Http Content"'
+    parameters:
+    - id: Content
+      description: The HttpContent object.
+      parameterType:
+        name: HttpContent
+        isExternal: true
+    return:
+      description: The HttpContent object.
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+  summary: Initializes a new instance of the Http Content object with the specified HttpContent object.
+  remarks: The HttpContent must be properly prepared including the Content-Type header.
+  name: Create
+  uid: M:Codeunit::System#RestClient#Http_Content.Create(HttpContent):Codeunit::System#RestClient#Http_Content
+- syntax:
+    content: 'procedure SetContentTypeHeader(ContentType: Text)'
+    parameters:
+    - id: ContentType
+      description: The value of the header to add.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the Content-Type header of the HttpContent object.
+  remarks: If the header already exists, it will be overwritten.
+  name: SetContentTypeHeader
+  uid: M:Codeunit::System#RestClient#Http_Content.SetContentTypeHeader(Text)
+- syntax:
+    content: 'procedure AddContentEncoding(ContentEncoding: Text)'
+    parameters:
+    - id: ContentEncoding
+      description: The value of the header to add.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the Content-Encoding header of the HttpContent object.
+  remarks: If the header already exists, the value will be added to the end of the list.
+  name: AddContentEncoding
+  uid: M:Codeunit::System#RestClient#Http_Content.AddContentEncoding(Text)
+- syntax:
+    content: 'procedure SetHeader(Name: Text, Value: Text)'
+    parameters:
+    - id: Name
+      description: The name of the header to add.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value of the header to add.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets a new value for an existing header of the HttpContent object, or adds the header if it does not already exist.
+  name: SetHeader
+  uid: M:Codeunit::System#RestClient#Http_Content.SetHeader(Text,Text)
+- syntax:
+    content: 'procedure SetHeader(Name: Text, Value: SecretText)'
+    parameters:
+    - id: Name
+      description: The name of the header to add.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The value of the header to add.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Sets a new value for an existing header of the HttpContent object, or adds the header if it does not already exist.
+  name: SetHeader
+  uid: M:Codeunit::System#RestClient#Http_Content.SetHeader(Text,SecretText)
+- syntax:
+    content: 'procedure GetHttpContent(): HttpContent'
+    return:
+      description: The HttpContent object.
+      returnType:
+        name: HttpContent
+        isExternal: true
+  summary: Gets the HttpContent object.
+  name: GetHttpContent
+  uid: M:Codeunit::System#RestClient#Http_Content.GetHttpContent:HttpContent
+- syntax:
+    content: 'procedure AsText(): Text'
+    return:
+      description: The content of the HTTP response message as a string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the content of the HTTP response message as a string.
+  name: AsText
+  uid: M:Codeunit::System#RestClient#Http_Content.AsText:Text
+- syntax:
+    content: 'procedure AsSecretText(): SecretText'
+    return:
+      description: The content of the HTTP response message as a SecretText.
+      returnType:
+        name: SecretText
+        isExternal: true
+  summary: Gets the content of the HTTP response message as a SecretText.
+  name: AsSecretText
+  uid: M:Codeunit::System#RestClient#Http_Content.AsSecretText:SecretText
+- syntax:
+    content: 'procedure AsBlob(): Codeunit "Temp Blob"'
+    return:
+      description: The content of the HTTP response message as a "Temp Blob" Codeunit.
+      returnType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+  summary: Gets the content of the HTTP response message as a "Temp Blob" Codeunit.
+  name: AsBlob
+  uid: M:Codeunit::System#RestClient#Http_Content.AsBlob:Codeunit::System#Utilities#Temp_Blob
+- syntax:
+    content: 'procedure AsInStream(): InStream'
+    return:
+      description: The content of the HTTP response message as an InStream.
+      returnType:
+        name: InStream
+        isExternal: true
+  summary: Gets the content of the HTTP response message as an InStream.
+  name: AsInStream
+  uid: M:Codeunit::System#RestClient#Http_Content.AsInStream:InStream
+- syntax:
+    content: 'procedure AsXmlDocument(): XmlDocument'
+    return:
+      description: The content of the HTTP response message as an XmlDocument.
+      returnType:
+        name: XmlDocument
+        isExternal: true
+  summary: Gets the content of the HTTP response message as an XmlDocument.
+  remarks: Fails in case the content is not a valid XML document.
+  name: AsXmlDocument
+  uid: M:Codeunit::System#RestClient#Http_Content.AsXmlDocument:XmlDocument
+- syntax:
+    content: 'procedure AsJson(): JsonToken'
+    return:
+      description: The content of the HTTP response message as a JsonToken.
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Gets the content of the HTTP response message as a JsonToken.
+  remarks: Fails in case the content is not a valid JSON document.
+  name: AsJson
+  uid: M:Codeunit::System#RestClient#Http_Content.AsJson:JsonToken
+commentId: O:Codeunit::System#RestClient#Http Content
+summary: Holder object for the Http Content data.
+name: '"Http Content"'
+uid: O:Codeunit::System#RestClient#Http_Content

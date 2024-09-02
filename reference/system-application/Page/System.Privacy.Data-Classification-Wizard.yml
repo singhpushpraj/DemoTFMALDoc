@@ -1,0 +1,213 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Privacy."Data Classification Wizard"
+alId: ID 1752
+namespace: System.Privacy
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Privacy
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Privacy#Data_Privacy_Entities
+  name: System.Privacy."Data Privacy Entities"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: Caption
+  value: Data Classification Assisted Setup Guide
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "1180"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Privacy#Data_Privacy_Entities
+    name: System.Privacy."Data Privacy Entities"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: admin-classifying-data-sensitivity
+  promoted: false
+methods:
+- syntax:
+    content: procedure ResetControls()
+  summary: Resets the buttons on the page, enabling and disabling them according to the current step.
+  name: ResetControls
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.ResetControls
+- syntax:
+    content: 'procedure ShouldEnableNext(): Boolean'
+    return:
+      description: True if the Next button should be enabled and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Queries on whether or not the Next button should be enabled.
+  name: ShouldEnableNext
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.ShouldEnableNext:Boolean
+- syntax:
+    content: 'procedure SetExportModeSelected(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: The Value to set.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Setter for the IsExportModeSelectedValue.
+  name: SetExportModeSelected
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.SetExportModeSelected(Boolean)
+- syntax:
+    content: 'procedure SetExpertModeSelected(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: The Value to set.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Setter for the IsExpertModeSelectedValue.
+  name: SetExpertModeSelected
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.SetExpertModeSelected(Boolean)
+- syntax:
+    content: 'procedure SetImportModeSelected(Value: Boolean)'
+    parameters:
+    - id: Value
+      description: The Value to set.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Setter for the SetImportModeSelected.
+  name: SetImportModeSelected
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.SetImportModeSelected(Boolean)
+- syntax:
+    content: 'procedure NextStep(Backward: Boolean)'
+    parameters:
+    - id: Backward
+      description: A boolean value that specifies if the next step should be to go back.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Selects the next step.
+  name: NextStep
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.NextStep(Boolean)
+- syntax:
+    content: procedure CheckMandatoryActions()
+  summary: Displays errors if the preconditions for an action are not met.
+  name: CheckMandatoryActions
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.CheckMandatoryActions
+- syntax:
+    content: 'procedure IsNextEnabled(): Boolean'
+    return:
+      description: True if the Next button is enabled and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Queries on whether the Next button is enabled.
+  name: IsNextEnabled
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.IsNextEnabled:Boolean
+- syntax:
+    content: 'procedure GetStep(): Option'
+    return:
+      description: The current step.
+      returnType:
+        name: Option
+        isExternal: true
+  summary: Gets the current step.
+  name: GetStep
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.GetStep:Option
+- syntax:
+    content: 'procedure SetStep(StepValue: Option)'
+    parameters:
+    - id: StepValue
+      description: The new value of the current step.
+      parameterType:
+        name: Option
+        isExternal: true
+  summary: Sets the current step.
+  name: SetStep
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.SetStep(Option)
+- syntax:
+    content: 'procedure IsImportModeSelected(): Boolean'
+    return:
+      description: True if import mode is selected and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Queries on whether import mode is selected.
+  name: IsImportModeSelected
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.IsImportModeSelected:Boolean
+- syntax:
+    content: 'procedure IsExportModeSelected(): Boolean'
+    return:
+      description: True if export mode is selected and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Queries on whether export mode is selected.
+  name: IsExportModeSelected
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.IsExportModeSelected:Boolean
+- syntax:
+    content: 'procedure IsExpertModeSelected(): Boolean'
+    return:
+      description: True if expert mode is selected and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Queries on whether expert mode is selected.
+  name: IsExpertModeSelected
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.IsExpertModeSelected:Boolean
+- syntax:
+    content: 'procedure GetLedgerEntriesDefaultClassification(): Option'
+    return:
+      description: The default classification for ledger entries.
+      returnType:
+        name: Option
+        isExternal: true
+  summary: Gets the default classification for ledger entries.
+  name: GetLedgerEntriesDefaultClassification
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.GetLedgerEntriesDefaultClassification:Option
+- syntax:
+    content: 'procedure GetTemplatesDefaultClassification(): Option'
+    return:
+      description: The default classification for templates.
+      returnType:
+        name: Option
+        isExternal: true
+  summary: Gets the default classification for templates.
+  name: GetTemplatesDefaultClassification
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.GetTemplatesDefaultClassification:Option
+- syntax:
+    content: 'procedure GetSetupTablesDefaultClassification(): Option'
+    return:
+      description: The default classification for setup tables.
+      returnType:
+        name: Option
+        isExternal: true
+  summary: Gets the default classification for setup tables.
+  name: GetSetupTablesDefaultClassification
+  uid: M:Page::System#Privacy#Data_Classification_Wizard.GetSetupTablesDefaultClassification:Option
+commentId: O:Page::System#Privacy#Data Classification Wizard
+summary: Exposes functionality that allows users to classify their data.
+name: '"Data Classification Wizard"'
+uid: O:Page::System#Privacy#Data_Classification_Wizard

@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG LCType"'
+alId: ID 70301
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Export
+  uid: E:Enum::CGI_TFM_LCBG_LCType.Export
+- name: Import
+  uid: E:Enum::CGI_TFM_LCBG_LCType.Import
+commentId: O:Enum::CGI TFM LCBG LCType
+summary: Contains CGI TFM LCBG LCType options (Export/Import)
+name: '"CGI TFM LCBG LCType"'
+uid: O:Enum::CGI_TFM_LCBG_LCType

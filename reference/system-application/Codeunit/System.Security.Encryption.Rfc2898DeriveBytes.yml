@@ -1,0 +1,57 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.Rfc2898DeriveBytes
+alId: ID 1378
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure HashRfc2898DeriveBytes(InputString: Text, Salt: Text, NoOfBytes: Integer, HashAlgorithmType: Option): Text'
+    parameters:
+    - id: InputString
+      description: Represents the input to be hashed
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Salt
+      description: The salt used to derive the key
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: NoOfBytes
+      description: The number of pseudo-random key bytes to generate
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: HashAlgorithmType
+      description: Represents the HashAlgorithmType, which returns the encrypted hash in the desired algorithm type
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: Hash of input
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Generates a base64 encoded hash from a string based on the provided hash algorithm.
+  name: HashRfc2898DeriveBytes
+  uid: M:Codeunit::System#Security#Encryption#Rfc2898DeriveBytes.HashRfc2898DeriveBytes(Text,Text,Integer,Option):Text
+commentId: O:Codeunit::System#Security#Encryption#Rfc2898DeriveBytes
+summary: Provides helper functions for the Advanced Encryption Standard.
+name: Rfc2898DeriveBytes
+uid: O:Codeunit::System#Security#Encryption#Rfc2898DeriveBytes

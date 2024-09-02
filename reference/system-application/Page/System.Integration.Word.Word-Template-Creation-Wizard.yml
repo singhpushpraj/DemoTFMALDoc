@@ -1,0 +1,118 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Template Creation Wizard"
+alId: ID 9995
+namespace: System.Integration.Word
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+sourceTableType:
+  name: System.Integration.Word."Word Templates Table"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: SourceTable
+  value: "9987"
+  promoted: true
+- name: Caption
+  value: Create a Word Template
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Word Template" = rm,
+                      tabledata "Word Template Field" = i,
+                      tabledata "Word Templates Table" = rm,
+                      tabledata "Word Templates Related Table" = i,
+                      tabledata AllObjWithCaption = r
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+methods:
+- syntax:
+    content: 'procedure SetMultipleTableNo(TableIds: List of [Integer], SelectedTable: Integer)'
+    parameters:
+    - id: TableIds
+      parameterType:
+        name: List of [Integer]
+        isExternal: true
+    - id: SelectedTable
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: SetMultipleTableNo
+  uid: M:Page::System#Integration#Word#Word_Template_Creation_Wizard.SetMultipleTableNo(List_of_[Integer],Integer)
+- syntax:
+    content: 'procedure SetTableNo(Value: Integer)'
+    parameters:
+    - id: Value
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: SetTableNo
+  uid: M:Page::System#Integration#Word#Word_Template_Creation_Wizard.SetTableNo(Integer)
+- syntax:
+    content: 'procedure SetRelatedTable(RelatedTableId: Integer, FieldNo: Integer, RelatedCode: Code[5])'
+    parameters:
+    - id: RelatedTableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RelatedCode
+      parameterType:
+        name: Code[5]
+        isExternal: true
+  name: SetRelatedTable
+  uid: M:Page::System#Integration#Word#Word_Template_Creation_Wizard.SetRelatedTable(Integer,Integer,Code[5])
+- syntax:
+    content: 'procedure SetUnrelatedTable(UnrelatedTableID: Integer, RecordSystemId: Guid, RelatedCode: Code[5])'
+    parameters:
+    - id: UnrelatedTableID
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RecordSystemId
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: RelatedCode
+      parameterType:
+        name: Code[5]
+        isExternal: true
+  name: SetUnrelatedTable
+  uid: M:Page::System#Integration#Word#Word_Template_Creation_Wizard.SetUnrelatedTable(Integer,Guid,Code[5])
+- syntax:
+    content: 'procedure SetFieldsToBeIncluded(TableId: Integer, IncludeFields: List of [Text[30]])'
+    parameters:
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: IncludeFields
+      parameterType:
+        name: List of [Text[30]]
+        isExternal: true
+  name: SetFieldsToBeIncluded
+  uid: M:Page::System#Integration#Word#Word_Template_Creation_Wizard.SetFieldsToBeIncluded(Integer,List_of_[Text])
+commentId: O:Page::System#Integration#Word#Word Template Creation Wizard
+summary: Wizard to create a Word template.
+name: '"Word Template Creation Wizard"'
+uid: O:Page::System#Integration#Word#Word_Template_Creation_Wizard

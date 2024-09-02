@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Expanded Permissions"
+alId: ID 9862
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: Caption
+  value: Expanded Permissions
+  promoted: false
+commentId: O:Page::System#Security#AccessControl#Expanded Permissions
+summary: Page for viewing the expanded permissions of a permission set.
+name: '"Expanded Permissions"'
+uid: O:Page::System#Security#AccessControl#Expanded_Permissions

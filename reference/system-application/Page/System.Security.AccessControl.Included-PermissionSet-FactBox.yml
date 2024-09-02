@@ -1,0 +1,59 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Included PermissionSet FactBox"
+alId: ID 9849
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+sourceTableType:
+  name: System.Security.AccessControl."PermissionSet Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "9862"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure UpdateIncludedPermissionSets(PermissionSetRoleId: Text)'
+    parameters:
+    - id: PermissionSetRoleId
+      parameterType:
+        name: Text
+        isExternal: true
+  name: UpdateIncludedPermissionSets
+  uid: M:Page::System#Security#AccessControl#Included_PermissionSet_FactBox.UpdateIncludedPermissionSets(Text)
+commentId: O:Page::System#Security#AccessControl#Included PermissionSet FactBox
+summary: Factbox for viewing the first level related permission sets.
+name: '"Included PermissionSet FactBox"'
+uid: O:Page::System#Security#AccessControl#Included_PermissionSet_FactBox

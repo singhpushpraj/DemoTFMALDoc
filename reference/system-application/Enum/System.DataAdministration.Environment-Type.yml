@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Environment Type"
+alId: ID 1888
+namespace: System.DataAdministration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Sandbox
+  uid: E:Enum::System#DataAdministration#Environment_Type.Sandbox
+- name: Production
+  uid: E:Enum::System#DataAdministration#Environment_Type.Production
+commentId: O:Enum::System#DataAdministration#Environment Type
+summary: Environment type
+name: '"Environment Type"'
+uid: O:Enum::System#DataAdministration#Environment_Type

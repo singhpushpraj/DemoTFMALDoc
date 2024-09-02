@@ -1,0 +1,33 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities.UriKind
+alId: ID 3060
+namespace: System.Utilities
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The URI kind is indeterminate.
+  name: RelativeOrAbsolute
+  uid: E:Enum::System#Utilities#UriKind.RelativeOrAbsolute
+- summary: The URI is absolute.
+  name: Absolute
+  uid: E:Enum::System#Utilities#UriKind.Absolute
+- summary: The URI is relative.
+  name: Relative
+  uid: E:Enum::System#Utilities#UriKind.Relative
+commentId: O:Enum::System#Utilities#UriKind
+summary: Defines the different kinds of URIs.
+remarks: Visit https://learn.microsoft.com/en-us/dotnet/api/system.urikind for more information.
+name: UriKind
+uid: O:Enum::System#Utilities#UriKind

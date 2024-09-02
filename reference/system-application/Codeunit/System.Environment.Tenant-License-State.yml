@@ -1,0 +1,154 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment."Tenant License State"
+alId: ID 2300
+namespace: System.Environment
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetPeriod(TenantLicenseState: Enum "Tenant License State"): Integer'
+    parameters:
+    - id: TenantLicenseState
+      description: The tenant license state.
+      parameterType:
+        internalReference: O:Enum::System#Environment#Tenant_License_State
+        name: System.Environment."Tenant License State"
+        isExternal: false
+    return:
+      description: The default number of days that the tenant license can be in the current state, passed as a parameter or -1 if a default period is not defined for the state.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Returns the default number of days that the tenant license can be in the current state, passed as a parameter.
+  name: GetPeriod
+  uid: M:Codeunit::System#Environment#Tenant_License_State.GetPeriod(Enum::System#Environment#Tenant_License_State):Integer
+- syntax:
+    content: 'procedure GetStartDate(): DateTime'
+    return:
+      description: The start date for the current license state or a blank date if no license state is found.
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Gets the start date for the current license state.
+  name: GetStartDate
+  uid: M:Codeunit::System#Environment#Tenant_License_State.GetStartDate:DateTime
+- syntax:
+    content: 'procedure GetEndDate(): DateTime'
+    return:
+      description: The end date for the current license state or a blank date if no license state is found.
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Gets the end date for the current license state.
+  name: GetEndDate
+  uid: M:Codeunit::System#Environment#Tenant_License_State.GetEndDate:DateTime
+- syntax:
+    content: 'procedure IsEvaluationMode(): Boolean'
+    return:
+      description: True if the current license state is evaluation, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the current license state is evaluation.
+  name: IsEvaluationMode
+  uid: M:Codeunit::System#Environment#Tenant_License_State.IsEvaluationMode:Boolean
+- syntax:
+    content: 'procedure IsTrialMode(): Boolean'
+    return:
+      description: True if the current license state is trial, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the current license state is trial.
+  name: IsTrialMode
+  uid: M:Codeunit::System#Environment#Tenant_License_State.IsTrialMode:Boolean
+- syntax:
+    content: 'procedure IsTrialSuspendedMode(): Boolean'
+    return:
+      description: True if the current license state is suspended and the previous license state is trial, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the trial license is suspended.
+  name: IsTrialSuspendedMode
+  uid: M:Codeunit::System#Environment#Tenant_License_State.IsTrialSuspendedMode:Boolean
+- syntax:
+    content: 'procedure IsTrialExtendedMode(): Boolean'
+    return:
+      description: True if the current license state is trial and the tenant has had at least one trial license state before, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the trial license has been extended.
+  name: IsTrialExtendedMode
+  uid: M:Codeunit::System#Environment#Tenant_License_State.IsTrialExtendedMode:Boolean
+- syntax:
+    content: 'procedure IsTrialExtendedSuspendedMode(): Boolean'
+    return:
+      description: True if the current license state is suspended and the tenant has had at least two trial license states before, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the trial license has been extended and is currently suspended.
+  name: IsTrialExtendedSuspendedMode
+  uid: M:Codeunit::System#Environment#Tenant_License_State.IsTrialExtendedSuspendedMode:Boolean
+- syntax:
+    content: 'procedure IsPaidMode(): Boolean'
+    return:
+      description: True if the current license state is paid, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the current license state is paid.
+  name: IsPaidMode
+  uid: M:Codeunit::System#Environment#Tenant_License_State.IsPaidMode:Boolean
+- syntax:
+    content: 'procedure IsPaidWarningMode(): Boolean'
+    return:
+      description: True if the current license state is warning and the previous license state is paid, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the paid license is in warning mode.
+  name: IsPaidWarningMode
+  uid: M:Codeunit::System#Environment#Tenant_License_State.IsPaidWarningMode:Boolean
+- syntax:
+    content: 'procedure IsPaidSuspendedMode(): Boolean'
+    return:
+      description: True if the current license state is suspended and the previous license state is paid, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the paid license is suspended.
+  name: IsPaidSuspendedMode
+  uid: M:Codeunit::System#Environment#Tenant_License_State.IsPaidSuspendedMode:Boolean
+- syntax:
+    content: 'procedure GetLicenseState(): Enum "Tenant License State"'
+    return:
+      description: The the current license state.
+      returnType:
+        internalReference: O:Enum::System#Environment#Tenant_License_State
+        name: System.Environment."Tenant License State"
+        isExternal: false
+  summary: Gets the the current license state.
+  name: GetLicenseState
+  uid: M:Codeunit::System#Environment#Tenant_License_State.GetLicenseState:Enum::System#Environment#Tenant_License_State
+commentId: O:Codeunit::System#Environment#Tenant License State
+summary: Exposes functionality to retrieve the current state of the tenant license.
+name: '"Tenant License State"'
+uid: O:Codeunit::System#Environment#Tenant_License_State

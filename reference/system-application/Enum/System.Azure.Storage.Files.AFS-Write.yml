@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS Write"
+alId: ID 8951
+namespace: System.Azure.Storage.Files
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Indicates that the data should be updated.
+  name: Update
+  uid: E:Enum::System#Azure#Storage#Files#AFS_Write.Update
+- summary: Indicates that the data should be cleared.
+  name: Clear
+  uid: E:Enum::System#Azure#Storage#Files#AFS_Write.Clear
+commentId: O:Enum::System#Azure#Storage#Files#AFS Write
+summary: Describes possible values for the Write header.
+name: '"AFS Write"'
+uid: O:Enum::System#Azure#Storage#Files#AFS_Write

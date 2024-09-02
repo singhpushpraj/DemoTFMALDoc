@@ -1,0 +1,97 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Web Service Aggregate"
+alId: ID 9900
+namespace: System.Integration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Web Service Aggregate
+  promoted: false
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Access
+  value: Public
+  promoted: false
+fields:
+- type:
+    name: Option
+    isExternal: true
+  name: '"Object Type"'
+  uid: F:Table::System#Integration#Web_Service_Aggregate.Object_Type
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Object ID"'
+  uid: F:Table::System#Integration#Web_Service_Aggregate.Object_ID
+- type:
+    name: Text[240]
+    isExternal: true
+  name: '"Service Name"'
+  uid: F:Table::System#Integration#Web_Service_Aggregate.Service_Name[240]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Published
+  uid: F:Table::System#Integration#Web_Service_Aggregate.Published
+- type:
+    name: Boolean
+    isExternal: true
+  name: ExcludeFieldsOutsideRepeater
+  uid: F:Table::System#Integration#Web_Service_Aggregate.ExcludeFieldsOutsideRepeater
+- type:
+    name: Boolean
+    isExternal: true
+  name: ExcludeNonEditableFlowFields
+  uid: F:Table::System#Integration#Web_Service_Aggregate.ExcludeNonEditableFlowFields
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"All Tenants"'
+  uid: F:Table::System#Integration#Web_Service_Aggregate.All_Tenants
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Web_Service_Aggregate.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Web_Service_Aggregate.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Web_Service_Aggregate.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Web_Service_Aggregate.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Web_Service_Aggregate.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Web_Service_Aggregate.SystemRowVersion
+commentId: O:Table::System#Integration#Web Service Aggregate
+summary: Contains web services aggregated from Web Services and Tenant Web Services.
+name: '"Web Service Aggregate"'
+uid: O:Table::System#Integration#Web_Service_Aggregate

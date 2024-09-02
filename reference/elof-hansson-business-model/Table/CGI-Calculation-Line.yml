@@ -1,0 +1,682 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Line"'
+alId: ID 60301
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Calculation Item Lines
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: DrillDownPageId
+  value: CGI Calculation Lines Lookup
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Calculation_Lines_Lookup
+    name: '"CGI Calculation Lines Lookup"'
+    isExternal: false
+- name: LookupPageId
+  value: CGI Calculation Lines Lookup
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Calculation_Lines_Lookup
+    name: '"CGI Calculation Lines Lookup"'
+    isExternal: false
+- name: Permissions
+  value: >-
+    tabledata "Item Ledger Entry" = r,
+                      tabledata "Value Entry" = r
+  promoted: false
+methods:
+- syntax:
+    content: procedure CalcLineAmount()
+  summary: CalcLineAmount.
+  name: CalcLineAmount
+  uid: M:Table::CGI_Calculation_Line.CalcLineAmount
+- syntax:
+    content: 'procedure GetName(): Text[100]'
+    return:
+      returnType:
+        name: Text[100]
+        isExternal: true
+  name: GetName
+  uid: M:Table::CGI_Calculation_Line.GetName:Text[100]
+- syntax:
+    content: procedure GetExchangeRate()
+  name: GetExchangeRate
+  uid: M:Table::CGI_Calculation_Line.GetExchangeRate
+- syntax:
+    content: procedure CalcPercentAmount()
+  name: CalcPercentAmount
+  uid: M:Table::CGI_Calculation_Line.CalcPercentAmount
+- syntax:
+    content: procedure CalcUnitPriceAmount()
+  name: CalcUnitPriceAmount
+  uid: M:Table::CGI_Calculation_Line.CalcUnitPriceAmount
+- syntax:
+    content: 'procedure SetNextLineNo(BelowxRec: Boolean, xRecLineNo: Integer)'
+    parameters:
+    - id: BelowxRec
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: xRecLineNo
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: SetNextLineNo
+  uid: M:Table::CGI_Calculation_Line.SetNextLineNo(Boolean,Integer)
+- syntax:
+    content: 'procedure SetNextLineNo_BasedOnCalculationNo(xRecLineNo: Integer)'
+    parameters:
+    - id: xRecLineNo
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: SetNextLineNo_BasedOnCalculationNo
+  uid: M:Table::CGI_Calculation_Line.SetNextLineNo_BasedOnCalculationNo(Integer)
+- syntax:
+    content: 'procedure SetNextLineNo_BasedOnLineNo(xRecLineNo: Integer)'
+    parameters:
+    - id: xRecLineNo
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: SetNextLineNo_BasedOnLineNo
+  uid: M:Table::CGI_Calculation_Line.SetNextLineNo_BasedOnLineNo(Integer)
+- syntax:
+    content: 'procedure CalcPurchFXDates(var StartDate: Date, var EndDate: Date)'
+    parameters:
+    - id: StartDate
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      parameterType:
+        name: Date
+        isExternal: true
+  name: CalcPurchFXDates
+  uid: M:Table::CGI_Calculation_Line.CalcPurchFXDates(Date@,Date@)
+- syntax:
+    content: 'procedure CheckVendorAgent(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      description: Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: CheckVendorAgent.
+  name: CheckVendorAgent
+  uid: M:Table::CGI_Calculation_Line.CheckVendorAgent(Code[20])
+- syntax:
+    content: procedure CheckItemLedgQty()
+  name: CheckItemLedgQty
+  uid: M:Table::CGI_Calculation_Line.CheckItemLedgQty
+- syntax:
+    content: procedure UpdateUnitPrice()
+  summary: UpdateUnitPrice.
+  name: UpdateUnitPrice
+  uid: M:Table::CGI_Calculation_Line.UpdateUnitPrice
+- syntax:
+    content: procedure AutoReserve()
+  summary: AutoReserve.
+  name: AutoReserve
+  uid: M:Table::CGI_Calculation_Line.AutoReserve
+- syntax:
+    content: 'procedure CloseReservation(CGICalculationLineP: Record "CGI Calculation Line")'
+    parameters:
+    - id: CGICalculationLineP
+      description: Record "CGI Calculation Line".
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  summary: CloseReservation.
+  name: CloseReservation
+  uid: M:Table::CGI_Calculation_Line.CloseReservation(CGI_Calculation_Line)
+- syntax:
+    content: procedure ShowReservation()
+  name: ShowReservation
+  uid: M:Table::CGI_Calculation_Line.ShowReservation
+- syntax:
+    content: 'procedure GetLotNo(): Code[50]'
+    return:
+      description: Return value of type Code[20].
+      returnType:
+        name: Code[50]
+        isExternal: true
+  summary: GetLotNo.
+  name: GetLotNo
+  uid: M:Table::CGI_Calculation_Line.GetLotNo:Code[50]
+- syntax:
+    content: procedure LookupItem()
+  summary: LookupItem.
+  name: LookupItem
+  uid: M:Table::CGI_Calculation_Line.LookupItem
+- syntax:
+    content: procedure LookupItemLedgEntry()
+  summary: LookupItemLedgEntry.
+  name: LookupItemLedgEntry
+  uid: M:Table::CGI_Calculation_Line.LookupItemLedgEntry
+- syntax:
+    content: 'procedure InsertSelectedItemLedgEntries(ItemLedgerEntryP: __MissingTypeSymbol__)'
+    parameters:
+    - id: ItemLedgerEntryP
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: InsertSelectedItemLedgEntries
+  uid: M:Table::CGI_Calculation_Line.InsertSelectedItemLedgEntries(__MissingSymbol__)
+- syntax:
+    content: 'procedure InsertCalcItemLineSales(CustomerNo: Code[20])'
+    parameters:
+    - id: CustomerNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: InsertCalcItemLineSales
+  uid: M:Table::CGI_Calculation_Line.InsertCalcItemLineSales(Code[20])
+- syntax:
+    content: procedure ModifyCalcItemLineSales()
+  name: ModifyCalcItemLineSales
+  uid: M:Table::CGI_Calculation_Line.ModifyCalcItemLineSales
+- syntax:
+    content: procedure DeleteCalcItemLineSales()
+  name: DeleteCalcItemLineSales
+  uid: M:Table::CGI_Calculation_Line.DeleteCalcItemLineSales
+- syntax:
+    content: 'procedure IsSalesCalculation(): Boolean'
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsSalesCalculation
+  uid: M:Table::CGI_Calculation_Line.IsSalesCalculation:Boolean
+- syntax:
+    content: 'procedure InitFields(ItemChange: Boolean)'
+    parameters:
+    - id: ItemChange
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: InitFields
+  uid: M:Table::CGI_Calculation_Line.InitFields(Boolean)
+- syntax:
+    content: 'procedure GetDefaultSubAccount(): Code[10]'
+    return:
+      returnType:
+        name: Code[10]
+        isExternal: true
+  name: GetDefaultSubAccount
+  uid: M:Table::CGI_Calculation_Line.GetDefaultSubAccount:Code[10]
+- syntax:
+    content: 'procedure PickItems(var CGICalculationLinep: Record "CGI Calculation Line")'
+    parameters:
+    - id: CGICalculationLinep
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: PickItems
+  uid: M:Table::CGI_Calculation_Line.PickItems(CGI_Calculation_Line@)
+- syntax:
+    content: 'procedure CopyCustomerLine(CGICalculationLineCust: Record "CGI Calculation Line")'
+    parameters:
+    - id: CGICalculationLineCust
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: CopyCustomerLine
+  uid: M:Table::CGI_Calculation_Line.CopyCustomerLine(CGI_Calculation_Line)
+- syntax:
+    content: 'procedure CopyVendorLine(CGICalculationLineVend: Record "CGI Calculation Line", CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationLineVend
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CopyVendorLine
+  uid: M:Table::CGI_Calculation_Line.CopyVendorLine(CGI_Calculation_Line,CGI_Calculation_Header)
+- syntax:
+    content: 'procedure GetVendorName(var CGICalculationLineP: Record "CGI Calculation Line"): Text[50]'
+    parameters:
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    return:
+      returnType:
+        name: Text[50]
+        isExternal: true
+  name: GetVendorName
+  uid: M:Table::CGI_Calculation_Line.GetVendorName(CGI_Calculation_Line@):Text[50]
+- syntax:
+    content: 'procedure ModifyCalcForVendName(var TempCGICalculationLine: Record "CGI Calculation Line")'
+    parameters:
+    - id: TempCGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: ModifyCalcForVendName
+  uid: M:Table::CGI_Calculation_Line.ModifyCalcForVendName(CGI_Calculation_Line@)
+- syntax:
+    content: 'procedure InsertOldValuesInTemp(var TempCgiCalculationLineP: Record "CGI Calculation Line")'
+    parameters:
+    - id: TempCgiCalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: InsertOldValuesInTemp
+  uid: M:Table::CGI_Calculation_Line.InsertOldValuesInTemp(CGI_Calculation_Line@)
+- syntax:
+    content: 'procedure InsertValuesInTemp(var TempCGICalculationLine: Record "CGI Calculation Line")'
+    parameters:
+    - id: TempCGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: InsertValuesInTemp
+  uid: M:Table::CGI_Calculation_Line.InsertValuesInTemp(CGI_Calculation_Line@)
+- syntax:
+    content: 'procedure DeleteCurrentFmTemp(var TempCGICalculationLine: Record "CGI Calculation Line")'
+    parameters:
+    - id: TempCGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: DeleteCurrentFmTemp
+  uid: M:Table::CGI_Calculation_Line.DeleteCurrentFmTemp(CGI_Calculation_Line@)
+- syntax:
+    content: 'procedure GetUnitOfMeasure(): Code[10]'
+    return:
+      returnType:
+        name: Code[10]
+        isExternal: true
+  name: GetUnitOfMeasure
+  uid: M:Table::CGI_Calculation_Line.GetUnitOfMeasure:Code[10]
+- syntax:
+    content: procedure ShowReservationCalcLines()
+  name: ShowReservationCalcLines
+  uid: M:Table::CGI_Calculation_Line.ShowReservationCalcLines
+- syntax:
+    content: 'procedure PickILE(var CGICalculationLinep: Record "CGI Calculation Line")'
+    parameters:
+    - id: CGICalculationLinep
+      description: VAR Record "CGI Calculation Line".
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  summary: PickILE.
+  name: PickILE
+  uid: M:Table::CGI_Calculation_Line.PickILE(CGI_Calculation_Line@)
+- syntax:
+    content: procedure SelectMultipleItems()
+  summary: SelectMultipleItems.
+  name: SelectMultipleItems
+  uid: M:Table::CGI_Calculation_Line.SelectMultipleItems
+- syntax:
+    content: 'procedure AddItem(var CGICalculationLineP: Record "CGI Calculation Line", ItemNo: Code[20])'
+    parameters:
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    - id: ItemNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: AddItem
+  uid: M:Table::CGI_Calculation_Line.AddItem(CGI_Calculation_Line@,Code[20])
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Calculation No."'
+  uid: F:Table::CGI_Calculation_Line.Calculation_No#[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Line No."'
+  uid: F:Table::CGI_Calculation_Line.Line_No#
+- type:
+    internalReference: O:Enum::CGI_CA_CalculationLineType
+    name: '"CGI CA CalculationLineType"'
+    isExternal: false
+  name: Type
+  uid: F:Table::CGI_Calculation_Line.Type
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"No."'
+  uid: F:Table::CGI_Calculation_Line.No#[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Item No."'
+  uid: F:Table::CGI_Calculation_Line.Item_No#[20]
+- type:
+    name: Decimal
+    isExternal: true
+  name: Quantity
+  uid: F:Table::CGI_Calculation_Line.Quantity
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Unit of Measure Code"'
+  uid: F:Table::CGI_Calculation_Line.Unit_of_Measure_Code[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Unit Price"'
+  uid: F:Table::CGI_Calculation_Line.Unit_Price
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Currency Code"'
+  uid: F:Table::CGI_Calculation_Line.Currency_Code[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: Amount
+  uid: F:Table::CGI_Calculation_Line.Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Amount (LCY)"'
+  uid: F:Table::CGI_Calculation_Line.Amount_(LCY)
+- type:
+    name: Decimal
+    isExternal: true
+  name: ExchangeRate
+  uid: F:Table::CGI_Calculation_Line.ExchangeRate
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Quote No."'
+  uid: F:Table::CGI_Calculation_Line.Quote_No#[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Quote Line"'
+  uid: F:Table::CGI_Calculation_Line.Quote_Line
+- type:
+    internalReference: O:Enum::CGI_CA_DefaultPercentBasedOn
+    name: '"CGI CA DefaultPercentBasedOn"'
+    isExternal: false
+  name: PercentBasedOn
+  uid: F:Table::CGI_Calculation_Line.PercentBasedOn
+- type:
+    name: Decimal
+    isExternal: true
+  name: Percent
+  uid: F:Table::CGI_Calculation_Line.Percent
+- type:
+    name: Text[50]
+    isExternal: true
+  name: Name
+  uid: F:Table::CGI_Calculation_Line.Name[50]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Item Description"'
+  uid: F:Table::CGI_Calculation_Line.Item_Description[100]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Business Term Code"'
+  uid: F:Table::CGI_Calculation_Line.Business_Term_Code[10]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Payment Term Code"'
+  uid: F:Table::CGI_Calculation_Line.Payment_Term_Code[10]
+- type:
+    name: Code[50]
+    isExternal: true
+  name: PercentBaseLineFilter
+  uid: F:Table::CGI_Calculation_Line.PercentBaseLineFilter[50]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Purchase Quote No."'
+  uid: F:Table::CGI_Calculation_Line.Purchase_Quote_No#[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Purchase Quote Line No."'
+  uid: F:Table::CGI_Calculation_Line.Purchase_Quote_Line_No#
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Prel. Commission Posted"'
+  uid: F:Table::CGI_Calculation_Line.Prel#_Commission_Posted
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Prel. Commission Reversed"'
+  uid: F:Table::CGI_Calculation_Line.Prel#_Commission_Reversed
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Commission Payment Created"'
+  uid: F:Table::CGI_Calculation_Line.Commission_Payment_Created
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Posted Prel. Comm. Entry No."'
+  uid: F:Table::CGI_Calculation_Line.Posted_Prel#_Comm#_Entry_No#
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"PercentBaseLineSumAmount(LCY)"'
+  uid: F:Table::CGI_Calculation_Line.PercentBaseLineSumAmount(LCY)
+- type:
+    name: Integer
+    isExternal: true
+  name: PercentBaseLine
+  uid: F:Table::CGI_Calculation_Line.PercentBaseLine
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Purchase Order No."'
+  uid: F:Table::CGI_Calculation_Line.Purchase_Order_No#[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Purchase Order Line No."'
+  uid: F:Table::CGI_Calculation_Line.Purchase_Order_Line_No#
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Cost/Rev No."'
+  uid: F:Table::CGI_Calculation_Line.Cost/Rev_No#[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Agent Memo Note"'
+  uid: F:Table::CGI_Calculation_Line.Agent_Memo_Note[20]
+- type:
+    name: Decimal
+    isExternal: true
+  name: PercentBaseLineSumAmount
+  uid: F:Table::CGI_Calculation_Line.PercentBaseLineSumAmount
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Item Ledger Entry"'
+  uid: F:Table::CGI_Calculation_Line.Item_Ledger_Entry
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Calculated Cost per Unit"'
+  uid: F:Table::CGI_Calculation_Line.Calculated_Cost_per_Unit
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Stock-keeping Cost"'
+  uid: F:Table::CGI_Calculation_Line.Stock-keeping_Cost
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Apply-To CalcSalesLine"'
+  uid: F:Table::CGI_Calculation_Line.Apply-To_CalcSalesLine
+- type:
+    internalReference: O:Enum::CGI_CA_CostRevenueType
+    name: '"CGI CA CostRevenueType"'
+    isExternal: false
+  name: '"Cost/Revenue Type"'
+  uid: F:Table::CGI_Calculation_Line.Cost/Revenue_Type
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Sub Account"'
+  uid: F:Table::CGI_Calculation_Line.Sub_Account[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Profit Percentage %"'
+  uid: F:Table::CGI_Calculation_Line.Profit_Percentage_%
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Profit Share Processed"'
+  uid: F:Table::CGI_Calculation_Line.Profit_Share_Processed
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Location Code"'
+  uid: F:Table::CGI_Calculation_Line.Location_Code[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Reserved Quantity"'
+  uid: F:Table::CGI_Calculation_Line.Reserved_Quantity
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Reserved Qty. (Base)"'
+  uid: F:Table::CGI_Calculation_Line.Reserved_Qty#_(Base)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Outstanding Qty. (Base)"'
+  uid: F:Table::CGI_Calculation_Line.Outstanding_Qty#_(Base)
+- type:
+    name: Date
+    isExternal: true
+  name: '"Shipment Date"'
+  uid: F:Table::CGI_Calculation_Line.Shipment_Date
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Line Discount %"'
+  uid: F:Table::CGI_Calculation_Line.Line_Discount_%
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Line Discount Amount"'
+  uid: F:Table::CGI_Calculation_Line.Line_Discount_Amount
+- type:
+    internalReference: O:Enum::CGI_CA_CalculationLineItemType
+    name: '"CGI CA CalculationLineItemType"'
+    isExternal: false
+  name: '"Item Type"'
+  uid: F:Table::CGI_Calculation_Line.Item_Type
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Variant Code"'
+  uid: F:Table::CGI_Calculation_Line.Variant_Code[10]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Vat Posting Group"'
+  uid: F:Table::CGI_Calculation_Line.Vat_Posting_Group[10]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"VAT Bus. Posting Group"'
+  uid: F:Table::CGI_Calculation_Line.VAT_Bus#_Posting_Group[20]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Outstanding Qty"'
+  uid: F:Table::CGI_Calculation_Line.Outstanding_Qty
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Qty. per Unit of Measure"'
+  uid: F:Table::CGI_Calculation_Line.Qty#_per_Unit_of_Measure
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Quantity (Base)"'
+  uid: F:Table::CGI_Calculation_Line.Quantity_(Base)
+- type:
+    name: Decimal
+    isExternal: true
+  name: GSM
+  uid: F:Table::CGI_Calculation_Line.GSM
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Reel Width"'
+  uid: F:Table::CGI_Calculation_Line.Reel_Width
+- type:
+    name: Decimal
+    isExternal: true
+  name: Diameter
+  uid: F:Table::CGI_Calculation_Line.Diameter
+- type:
+    name: Decimal
+    isExternal: true
+  name: Core
+  uid: F:Table::CGI_Calculation_Line.Core
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Sheet Size"'
+  uid: F:Table::CGI_Calculation_Line.Sheet_Size[20]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Calculation_Line.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Calculation_Line.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Calculation_Line.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Calculation_Line.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Calculation_Line.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Calculation_Line.SystemRowVersion
+commentId: O:Table::CGI Calculation Line
+summary: Table CGI Calculation Line (ID 60301).
+name: '"CGI Calculation Line"'
+uid: O:Table::CGI_Calculation_Line

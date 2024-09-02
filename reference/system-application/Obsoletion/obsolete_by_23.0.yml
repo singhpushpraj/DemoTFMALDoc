@@ -1,0 +1,59 @@
+﻿### YamlMime:BusinessCentralObsoletionList
+tag: "23.0"
+groups:
+- groupName: "23.0"
+  symbols:
+  - kind: Method
+    internalReference: M:Codeunit::System#Azure#Identity#Plan_Ids.GetInternalAdminPlanId:Guid
+    name: 'GetInternalAdminPlanId(): Guid'
+    reason: Replaced by GetGlobalAdminPlanId()
+  - kind: Page
+    internalReference: O:Page::System#Environment#Configuration#Upcoming_Changes_Factbox
+    name: Page 2611 "Upcoming Changes Factbox"
+    reason: Replaced by teaching tips
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Integration#Sharepoint#SharePoint_Auth#_-_Objects
+    name: PermissionSet 9150 "SharePoint Auth. - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Media#Video_-_Read
+    name: PermissionSet 1470 "Video - Read"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: Method
+    internalReference: M:Codeunit::System#IO#Data_Compression.ExtractEntry(Text,OutStream,Integer@)
+    name: 'ExtractEntry(EntryName: Text, OutputOutStream: OutStream, var EntryLength: Integer)'
+    reason: 'This function has been replaced by the function ExtractEntry(EntryName: Text; OutputOutStream: OutStream) which instead returns the entry length.'
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#DateTime#Date-Time_Dialog_-_Objects
+    name: PermissionSet 684 "Date-Time Dialog - Objects"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#DateTime#Time_Zone_Selection_-_Read
+    name: PermissionSet 9216 "Time Zone Selection - Read"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Globalization#Language_-_Read
+    name: PermissionSet 54 "Language - Read"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: Table
+    internalReference: O:Table::System#Tooling#Query_Navigation_Validation
+    name: Table 2889 "Query Navigation Validation"
+    reason: The SmartList Designer is not supported in Business Central.
+  - kind: Table
+    internalReference: O:Table::System#Tooling#SmartList_Designer_Handler
+    name: Table 2888 "SmartList Designer Handler"
+    reason: The SmartList Designer is not supported in Business Central.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Telemetry#Telemetry_-_Exec
+    name: PermissionSet 8703 "Telemetry - Exec"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Upgrade#Upgrade_Tags_-_Read
+    name: PermissionSet 9992 "Upgrade Tags - Read"
+    reason: This permission set is replaced with inherent permissions and is no longer needed
+  - kind: PermissionSet
+    internalReference: O:PermissionSet::System#Upgrade#Upgrade_Tags_-_View
+    name: PermissionSet 9993 "Upgrade Tags - View"
+    reason: This permission set is replaced with inherent permissions and is no longer needed.
+  uid: N:Module::System_Application_obsolete_by_23.0#23.0
+uid: N:Module::System_Application_obsolete_by_23.0

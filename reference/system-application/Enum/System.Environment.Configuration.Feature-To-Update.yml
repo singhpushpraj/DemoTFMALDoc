@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Feature To Update"
+alId: ID 2611
+namespace: System.Environment.Configuration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+implements:
+- internalReference: O:Interface::System#Environment#Configuration#Feature_Data_Update
+  name: System.Environment.Configuration."Feature Data Update"
+  isExternal: false
+commentId: O:Enum::System#Environment#Configuration#Feature To Update
+summary: >-
+  The enum lists the features that require some data update.
+
+  Text value must match the key value in the "Feature Key" table, Int value is the implementation codeunit id.
+name: '"Feature To Update"'
+uid: O:Enum::System#Environment#Configuration#Feature_To_Update

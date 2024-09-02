@@ -1,0 +1,61 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Int. Interest Calculation"'
+alId: ID 60303
+baseKind: Report
+kind: Report
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Report](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-report-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Internal Interest Calculation
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: ReportsAndAnalysis
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Internal Interest Calculation
+  promoted: false
+- name: ProcessingOnly
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: ReportsAndAnalysis
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure CheckLastExecDate(): Boolean'
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: CheckLastExecDate
+  uid: M:Report::CGI_Int#_Interest_Calculation.CheckLastExecDate:Boolean
+- syntax:
+    content: 'procedure CalculateAmount(AccountFilter: Text[250]): Decimal'
+    parameters:
+    - id: AccountFilter
+      parameterType:
+        name: Text[250]
+        isExternal: true
+    return:
+      returnType:
+        name: Decimal
+        isExternal: true
+  name: CalculateAmount
+  uid: M:Report::CGI_Int#_Interest_Calculation.CalculateAmount(Text[250]):Decimal
+commentId: O:Report::CGI Int# Interest Calculation
+summary: Report CGI Int. Interest Calculation (ID 60303).
+name: '"CGI Int. Interest Calculation"'
+uid: O:Report::CGI_Int#_Interest_Calculation

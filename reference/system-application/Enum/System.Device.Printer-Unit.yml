@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Printer Unit"
+alId: ID 2618
+namespace: System.Device
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The default unit (0.01 in.)
+  name: Display
+  uid: E:Enum::System#Device#Printer_Unit.Display
+- summary: One-hundredth of a millimeter (0.01 mm).
+  name: HundredthsOfAMillimeter
+  uid: E:Enum::System#Device#Printer_Unit.HundredthsOfAMillimeter
+- summary: One-tenth of a millimeter (0.1 mm).
+  name: TenthsOfAMillimeter
+  uid: E:Enum::System#Device#Printer_Unit.TenthsOfAMillimeter
+- summary: One-thousandth of an inch (0.001 in.).
+  name: ThousandthsOfAnInch
+  uid: E:Enum::System#Device#Printer_Unit.ThousandthsOfAnInch
+commentId: O:Enum::System#Device#Printer Unit
+summary: Specifies several of the units of measure used for printing.
+name: '"Printer Unit"'
+uid: O:Enum::System#Device#Printer_Unit

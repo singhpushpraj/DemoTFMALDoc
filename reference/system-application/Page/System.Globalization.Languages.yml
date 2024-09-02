@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Globalization.Languages
+alId: ID 9
+namespace: System.Globalization
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Globalization
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Globalization#Language
+  name: System.Globalization.Language
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Languages
+  promoted: false
+- name: AdditionalSearchTerms
+  value: multilanguage
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "8"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Globalization#Language
+    name: System.Globalization.Language
+    isExternal: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: ui-change-basic-settings#language
+  promoted: false
+commentId: O:Page::System#Globalization#Languages
+summary: Page for displaying application languages.
+name: Languages
+uid: O:Page::System#Globalization#Languages

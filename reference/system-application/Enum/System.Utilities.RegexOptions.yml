@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities.RegexOptions
+alId: ID 3962
+namespace: System.Utilities
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: None
+  uid: E:Enum::System#Utilities#RegexOptions.None
+- name: IgnoreCase
+  uid: E:Enum::System#Utilities#RegexOptions.IgnoreCase
+- name: Multiline
+  uid: E:Enum::System#Utilities#RegexOptions.Multiline
+- name: ExplicitCapture
+  uid: E:Enum::System#Utilities#RegexOptions.ExplicitCapture
+- name: Compiled
+  uid: E:Enum::System#Utilities#RegexOptions.Compiled
+- name: Singleline
+  uid: E:Enum::System#Utilities#RegexOptions.Singleline
+- name: IgnorePatternWhitespace
+  uid: E:Enum::System#Utilities#RegexOptions.IgnorePatternWhitespace
+- name: RightToLeft
+  uid: E:Enum::System#Utilities#RegexOptions.RightToLeft
+- name: ECMAScript
+  uid: E:Enum::System#Utilities#RegexOptions.ECMAScript
+- name: CultureInvariant
+  uid: E:Enum::System#Utilities#RegexOptions.CultureInvariant
+commentId: O:Enum::System#Utilities#RegexOptions
+name: RegexOptions
+uid: O:Enum::System#Utilities#RegexOptions

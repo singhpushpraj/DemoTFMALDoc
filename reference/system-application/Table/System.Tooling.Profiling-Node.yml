@@ -1,0 +1,124 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Profiling Node"
+alId: ID 1921
+namespace: System.Tooling
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Session ID"'
+  uid: F:Table::System#Tooling#Profiling_Node.Session_ID
+- type:
+    name: Integer
+    isExternal: true
+  name: '"No."'
+  uid: F:Table::System#Tooling#Profiling_Node.No#
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Hit Count"'
+  uid: F:Table::System#Tooling#Profiling_Node.Hit_Count
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Object Type"'
+  uid: F:Table::System#Tooling#Profiling_Node.Object_Type[250]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Object ID"'
+  uid: F:Table::System#Tooling#Profiling_Node.Object_ID
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Object Name"'
+  uid: F:Table::System#Tooling#Profiling_Node.Object_Name[250]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"App Name"'
+  uid: F:Table::System#Tooling#Profiling_Node.App_Name[250]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"App Publisher"'
+  uid: F:Table::System#Tooling#Profiling_Node.App_Publisher[250]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Line No"'
+  uid: F:Table::System#Tooling#Profiling_Node.Line_No
+- type:
+    name: Text[1024]
+    isExternal: true
+  name: '"Method Name"'
+  uid: F:Table::System#Tooling#Profiling_Node.Method_Name[1024]
+- type:
+    name: Duration
+    isExternal: true
+  name: '"Self Time"'
+  uid: F:Table::System#Tooling#Profiling_Node.Self_Time
+- type:
+    name: Duration
+    isExternal: true
+  name: '"Full Time"'
+  uid: F:Table::System#Tooling#Profiling_Node.Full_Time
+- type:
+    name: Integer
+    isExternal: true
+  name: Indentation
+  uid: F:Table::System#Tooling#Profiling_Node.Indentation
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Tooling#Profiling_Node.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Tooling#Profiling_Node.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Tooling#Profiling_Node.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Tooling#Profiling_Node.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Tooling#Profiling_Node.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Tooling#Profiling_Node.SystemRowVersion
+commentId: O:Table::System#Tooling#Profiling Node
+summary: A buffer table containing the information recorded by a performance profiler.
+name: '"Profiling Node"'
+uid: O:Table::System#Tooling#Profiling_Node

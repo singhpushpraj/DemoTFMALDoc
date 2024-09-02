@@ -1,0 +1,85 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities.Captures
+alId: ID 3963
+namespace: System.Utilities
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure ReadValue(): Text'
+    return:
+      description: The value of the capture.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Reads the value of the capture
+  name: ReadValue
+  uid: M:Table::System#Utilities#Captures.ReadValue:Text
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: CaptureIndex
+  uid: F:Table::System#Utilities#Captures.CaptureIndex
+- type:
+    name: Integer
+    isExternal: true
+  name: Index
+  uid: F:Table::System#Utilities#Captures.Index
+- type:
+    name: Integer
+    isExternal: true
+  name: Length
+  uid: F:Table::System#Utilities#Captures.Length
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Utilities#Captures.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Utilities#Captures.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Utilities#Captures.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Utilities#Captures.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Utilities#Captures.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Utilities#Captures.SystemRowVersion
+commentId: O:Table::System#Utilities#Captures
+summary: Provides a representation of Regex Captures that models Capture objects in .Net
+name: Captures
+uid: O:Table::System#Utilities#Captures

@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Guided Experience Item Cleanup"
+alId: ID 1994
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Description
+  value: The Codeunit is only public because we need the OnRun trigger for Job Queue (BaseApp), all procedures are internal or local
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Published Application" = r,
+            tabledata "Guided Experience Item" = rd
+  promoted: false
+commentId: O:Codeunit::System#Environment#Configuration#Guided Experience Item Cleanup
+name: '"Guided Experience Item Cleanup"'
+uid: O:Codeunit::System#Environment#Configuration#Guided_Experience_Item_Cleanup

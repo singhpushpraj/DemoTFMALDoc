@@ -1,0 +1,43 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment."Tenant License State"
+alId: ID 2301
+namespace: System.Environment
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+enumValues:
+- summary: Specifies that the tenant license is in the evaluation state.
+  name: Evaluation
+  uid: E:Enum::System#Environment#Tenant_License_State.Evaluation
+- summary: Specifies that the tenant license is in the trial state.
+  name: Trial
+  uid: E:Enum::System#Environment#Tenant_License_State.Trial
+- summary: Specifies that the tenant license is in the paid state.
+  name: Paid
+  uid: E:Enum::System#Environment#Tenant_License_State.Paid
+- summary: >-
+    Specifies that the tenant license is in the warning state.
+
+    This period starts after the trial period or when the tenant's subscription expires.
+  name: Warning
+  uid: E:Enum::System#Environment#Tenant_License_State.Warning
+- summary: Specifies that the tenant license is in the suspended state.
+  name: Suspended
+  uid: E:Enum::System#Environment#Tenant_License_State.Suspended
+- summary: Specifies that the tenant license is in the deleted state.
+  name: Deleted
+  uid: E:Enum::System#Environment#Tenant_License_State.Deleted
+- summary: >-
+    Specifies that the tenant license is in the locked state.
+
+    The tenant is locked, and no one can access it.
+  name: LockedOut
+  uid: E:Enum::System#Environment#Tenant_License_State.LockedOut
+commentId: O:Enum::System#Environment#Tenant License State
+summary: This enum has the tenant license state types.
+name: '"Tenant License State"'
+uid: O:Enum::System#Environment#Tenant_License_State

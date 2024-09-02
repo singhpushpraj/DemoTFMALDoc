@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Division"'
+alId: ID 70304
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  internalReference: O:Table::CGI_Division
+  name: '"CGI Division"'
+  isExternal: false
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Send To Email"'
+  uid: F:TableExtension::CGI_TFM_Division.Send_To_Email[250]
+commentId: O:TableExtension::CGI TFM Division
+summary: >-
+  tableextension 70304 "CGI TFM Division" extends "CGI Division"
+
+  contains TFM related fields
+name: '"CGI TFM Division"'
+uid: O:TableExtension::CGI_TFM_Division

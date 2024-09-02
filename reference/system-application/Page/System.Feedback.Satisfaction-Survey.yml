@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Feedback."Satisfaction Survey"
+alId: ID 1433
+namespace: System.Feedback
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Feedback
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Caption
+  value: " "
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Feedback#Satisfaction Survey
+summary: Displays the satisfaction survey dialog box.
+name: '"Satisfaction Survey"'
+uid: O:Page::System#Feedback#Satisfaction_Survey

@@ -1,0 +1,15 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection."Table Key"
+alId: ID 9557
+namespace: System.Reflection
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+commentId: O:Codeunit::System#Reflection#Table Key
+summary: Provides functionality for disabling and re-enabling table indexes.
+name: '"Table Key"'
+uid: O:Codeunit::System#Reflection#Table_Key

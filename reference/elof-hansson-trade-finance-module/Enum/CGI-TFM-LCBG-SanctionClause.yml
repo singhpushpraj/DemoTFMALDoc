@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG SanctionClause"'
+alId: ID 70303
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '" "'
+  uid: E:Enum::CGI_TFM_LCBG_SanctionClause._
+- name: "No"
+  uid: E:Enum::CGI_TFM_LCBG_SanctionClause.No
+- name: "Yes"
+  uid: E:Enum::CGI_TFM_LCBG_SanctionClause.Yes
+commentId: O:Enum::CGI TFM LCBG SanctionClause
+summary: Contains CGI TFM LCBG SanctionClause options (',No,Yes)
+name: '"CGI TFM LCBG SanctionClause"'
+uid: O:Enum::CGI_TFM_LCBG_SanctionClause

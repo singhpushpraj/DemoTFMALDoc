@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Auto Format"
+alId: ID 59
+namespace: System.Text
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Ignore the value that AutoFormatExpr passes and use the standard format for decimals instead.
+  name: DefaultFormat
+  uid: E:Enum::System#Text#Auto_Format.DefaultFormat
+- summary: Apply a specific format in AutoFormatExpr without additional transformation.
+  name: CustomFormatExpr
+  uid: E:Enum::System#Text#Auto_Format.CustomFormatExpr
+commentId: O:Enum::System#Text#Auto Format
+summary: Formats the appearance of decimal data types.
+name: '"Auto Format"'
+uid: O:Enum::System#Text#Auto_Format

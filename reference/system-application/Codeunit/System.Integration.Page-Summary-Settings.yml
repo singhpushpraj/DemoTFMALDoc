@@ -1,0 +1,42 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Page Summary Settings"
+alId: ID 2719
+namespace: System.Integration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure GetPageSummaryProviderSettings(var PageSummarySettings: Record "Page Summary Settings"): Boolean'
+    parameters:
+    - id: PageSummarySettings
+      description: The record to get the page summary settings.
+      parameterType:
+        name: Record "Page Summary Settings"
+        isExternal: true
+    return:
+      description: ""
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the page summary settings.
+  name: GetPageSummaryProviderSettings
+  uid: M:Codeunit::System#Integration#Page_Summary_Settings.GetPageSummaryProviderSettings(Page_Summary_Settings@):Boolean
+- syntax:
+    content: 'procedure IsShowRecordSummaryEnabled(): Boolean'
+    return:
+      description: ""
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines if Show Record Summary settings is enabled.
+  name: IsShowRecordSummaryEnabled
+  uid: M:Codeunit::System#Integration#Page_Summary_Settings.IsShowRecordSummaryEnabled:Boolean
+commentId: O:Codeunit::System#Integration#Page Summary Settings
+summary: Exposes functionality that manages page summary settings.
+name: '"Page Summary Settings"'
+uid: O:Codeunit::System#Integration#Page_Summary_Settings

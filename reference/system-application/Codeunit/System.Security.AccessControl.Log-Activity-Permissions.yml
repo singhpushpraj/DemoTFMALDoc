@@ -1,0 +1,36 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Log Activity Permissions"
+alId: ID 9802
+namespace: System.Security.AccessControl
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+methods:
+- syntax:
+    content: procedure Start()
+  name: Start
+  uid: M:Codeunit::System#Security#AccessControl#Log_Activity_Permissions.Start
+- syntax:
+    content: 'procedure Stop(TempTablePermissionBufferVar: __MissingTypeSymbol__)'
+    parameters:
+    - id: TempTablePermissionBufferVar
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: Stop
+  uid: M:Codeunit::System#Security#AccessControl#Log_Activity_Permissions.Stop(__MissingSymbol__@)
+commentId: O:Codeunit::System#Security#AccessControl#Log Activity Permissions
+summary: Codeunit used to log needed permission for a given activity.
+name: '"Log Activity Permissions"'
+uid: O:Codeunit::System#Security#AccessControl#Log_Activity_Permissions

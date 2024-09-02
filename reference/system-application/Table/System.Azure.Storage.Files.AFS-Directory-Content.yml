@@ -1,0 +1,158 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage.Files."AFS Directory Content"
+alId: ID 8950
+namespace: System.Azure.Storage.Files
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Azure.Storage.Files
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Entry No."'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Entry_No#
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Parent Directory"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Parent_Directory[2048]
+- type:
+    name: Integer
+    isExternal: true
+  name: Level
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Level
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Full Name"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Full_Name[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Name[2048]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Creation Time"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Creation_Time
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Last Modified"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Last_Modified
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Content Length"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Content_Length
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Last Access Time"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Last_Access_Time
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Change Time"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Change_Time
+- type:
+    internalReference: O:Enum::System#Azure#Storage#Files#AFS_File_Resource_Type
+    name: System.Azure.Storage.Files."AFS File Resource Type"
+    isExternal: false
+  name: '"Resource Type"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Resource_Type
+- type:
+    name: Text[200]
+    isExternal: true
+  name: Etag
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Etag[200]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Archive
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Archive
+- type:
+    name: Boolean
+    isExternal: true
+  name: Hidden
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Hidden
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Last Write Time"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Last_Write_Time
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Read Only"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Read_Only
+- type:
+    name: Text[200]
+    isExternal: true
+  name: '"Permission Key"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.Permission_Key[200]
+- type:
+    name: Blob
+    isExternal: true
+  name: '"XML Value"'
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.XML_Value
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: URI
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.URI[2048]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Azure#Storage#Files#AFS_Directory_Content.SystemRowVersion
+commentId: O:Table::System#Azure#Storage#Files#AFS Directory Content
+summary: Holds information about directory content in a storage account.
+name: '"AFS Directory Content"'
+uid: O:Table::System#Azure#Storage#Files#AFS_Directory_Content

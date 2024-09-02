@@ -1,0 +1,53 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Finished Calculations List"'
+alId: ID 60369
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Post_Calc#_Header_Archive
+  name: '"CGI Post Calc. Header Archive"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: EH Finished Calculations List
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "60362"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Post_Calc#_Header_Archive
+    name: '"CGI Post Calc. Header Archive"'
+    isExternal: false
+- name: CardPageId
+  value: CGI Finished Calculation Card
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Finished_Calculation_Card
+    name: '"CGI Finished Calculation Card"'
+    isExternal: false
+- name: ApplicationArea
+  value: '#all'
+  promoted: false
+- name: UsageCategory
+  value: Lists
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+commentId: O:Page::CGI Finished Calculations List
+name: '"CGI Finished Calculations List"'
+uid: O:Page::CGI_Finished_Calculations_List

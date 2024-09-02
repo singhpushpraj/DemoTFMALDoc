@@ -1,0 +1,269 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Base64 Convert"
+alId: ID 4110
+namespace: System.Text
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure ToBase64(String: Text): Text'
+    parameters:
+    - id: String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The string representation, in base-64, of the input string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the value of the input string to its equivalent string representation that is encoded with base-64 digits.
+  name: ToBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.ToBase64(Text):Text
+- syntax:
+    content: 'procedure ToBase64(String: Text, TextEncoding: TextEncoding): Text'
+    parameters:
+    - id: String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TextEncoding
+      description: The TextEncoding for the input string.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+    return:
+      description: The string representation, in base-64, of the input string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the value of the input string to its equivalent string representation that is encoded with base-64 digits.
+  name: ToBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.ToBase64(Text,TextEncoding):Text
+- syntax:
+    content: 'procedure ToBase64(String: Text, TextEncoding: TextEncoding, Codepage: Integer): Text'
+    parameters:
+    - id: String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TextEncoding
+      description: The TextEncoding for the input string.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+    - id: Codepage
+      description: The Codepage if TextEncoding is MsDos or Windows.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The string representation, in base-64, of the input string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the value of the input string to its equivalent string representation that is encoded with base-64 digits.
+  name: ToBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.ToBase64(Text,TextEncoding,Integer):Text
+- syntax:
+    content: 'procedure ToBase64(String: Text, InsertLineBreaks: Boolean): Text'
+    parameters:
+    - id: String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InsertLineBreaks
+      description: >-
+        Specifies whether line breaks are inserted in the output.
+
+        If true, inserts line breaks after every 76 characters.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: The string representation, in base-64, of the input string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the value of the input string to its equivalent string representation that is encoded with base-64 digits.
+  name: ToBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.ToBase64(Text,Boolean):Text
+- syntax:
+    content: 'procedure ToBase64(String: Text, InsertLineBreaks: Boolean, TextEncoding: TextEncoding, Codepage: Integer): Text'
+    parameters:
+    - id: String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InsertLineBreaks
+      description: >-
+        Specifies whether line breaks are inserted in the output.
+
+        If true, inserts line breaks after every 76 characters.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: TextEncoding
+      description: The TextEncoding for the input string.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+    - id: Codepage
+      description: The Codepage if TextEncoding is MsDos or Windows.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The string representation, in base-64, of the input string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the value of the input string to its equivalent string representation that is encoded with base-64 digits.
+  name: ToBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.ToBase64(Text,Boolean,TextEncoding,Integer):Text
+- syntax:
+    content: 'procedure ToBase64(InStream: InStream): Text'
+    parameters:
+    - id: InStream
+      description: The stream to read the input from.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: The string representation, in base-64, of the input string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the value of the input stream to its equivalent string representation that is encoded with base-64 digits.
+  name: ToBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.ToBase64(InStream):Text
+- syntax:
+    content: 'procedure ToBase64(InStream: InStream, InsertLineBreaks: Boolean): Text'
+    parameters:
+    - id: InStream
+      description: The stream to read the input from.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: InsertLineBreaks
+      description: >-
+        Specifies whether line breaks are inserted in the output.
+
+        If true, inserts line breaks after every 76 characters.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: The string representation, in base-64, of the input string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the value of the input stream to its equivalent string representation that is encoded with base-64 digits.
+  name: ToBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.ToBase64(InStream,Boolean):Text
+- syntax:
+    content: 'procedure FromBase64(Base64String: Text): Text'
+    parameters:
+    - id: Base64String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Regular string that is equivalent to the input base-64 string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the specified string, which encodes binary data as base-64 digits, to an equivalent regular string.
+  name: FromBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.FromBase64(Text):Text
+- syntax:
+    content: 'procedure FromBase64(Base64String: Text, TextEncoding: TextEncoding): Text'
+    parameters:
+    - id: Base64String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TextEncoding
+      description: The TextEncoding for the input string.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+    return:
+      description: Regular string that is equivalent to the input base-64 string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the specified string, which encodes binary data as base-64 digits, to an equivalent regular string.
+  name: FromBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.FromBase64(Text,TextEncoding):Text
+- syntax:
+    content: 'procedure FromBase64(Base64String: Text, TextEncoding: TextEncoding, Codepage: Integer): Text'
+    parameters:
+    - id: Base64String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TextEncoding
+      description: The TextEncoding for the inout string.
+      parameterType:
+        name: TextEncoding
+        isExternal: true
+    - id: Codepage
+      description: The Codepage if TextEncoding is MsDos or Windows.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: Regular string that is equivalent to the input base-64 string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts the specified string, which encodes binary data as base-64 digits, to an equivalent regular string.
+  name: FromBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.FromBase64(Text,TextEncoding,Integer):Text
+- syntax:
+    content: 'procedure FromBase64(Base64String: Text, OutStream: OutStream)'
+    parameters:
+    - id: Base64String
+      description: The string to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: OutStream
+      description: The stream to write the output to.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Converts the specified string, which encodes binary data as base-64 digits, to an equivalent regular string.
+  name: FromBase64
+  uid: M:Codeunit::System#Text#Base64_Convert.FromBase64(Text,OutStream)
+commentId: O:Codeunit::System#Text#Base64 Convert
+summary: Converts text to and from its base-64 representation.
+name: '"Base64 Convert"'
+uid: O:Codeunit::System#Text#Base64_Convert

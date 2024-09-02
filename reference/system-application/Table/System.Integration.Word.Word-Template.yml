@@ -1,0 +1,88 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Template"
+alId: ID 9988
+namespace: System.Integration.Word
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+fields:
+- type:
+    name: Code[30]
+    isExternal: true
+  name: Code
+  uid: F:Table::System#Integration#Word#Word_Template.Code[30]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Integration#Word#Word_Template.Name[250]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Table ID"'
+  uid: F:Table::System#Integration#Word#Word_Template.Table_ID
+- type:
+    name: Media
+    isExternal: true
+  name: Template
+  uid: F:Table::System#Integration#Word#Word_Template.Template
+- type:
+    name: Text[80]
+    isExternal: true
+  name: '"Table Caption"'
+  uid: F:Table::System#Integration#Word#Word_Template.Table_Caption[80]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Language Code"'
+  uid: F:Table::System#Integration#Word#Word_Template.Language_Code[10]
+- type:
+    name: Text[80]
+    isExternal: true
+  name: '"Language Name"'
+  uid: F:Table::System#Integration#Word#Word_Template.Language_Name[80]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Word#Word_Template.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Word#Word_Template.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Word#Word_Template.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Word#Word_Template.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Word#Word_Template.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Word#Word_Template.SystemRowVersion
+commentId: O:Table::System#Integration#Word#Word Template
+summary: Holds information about a Word template.
+name: '"Word Template"'
+uid: O:Table::System#Integration#Word#Word_Template

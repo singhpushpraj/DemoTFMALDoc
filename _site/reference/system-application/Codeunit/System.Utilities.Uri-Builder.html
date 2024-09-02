@@ -1,0 +1,984 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Utilities#Uri_Builder">
+  <h1>Codeunit &quot;Uri Builder&quot;</h1>
+
+
+<div class="font-style-italic">ID 3061</div>
+<div class="font-style-italic">Namespace: System.Utilities</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Provides a custom constructor for uniform resource identifiers (URIs) and modifies URIs for the Uri codeunit.</p>
+
+  		</div>
+  	</div>
+
+
+  	<h2 id="remarks">Remarks</h2>
+  	<div><p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder">https://learn.microsoft.com/dotnet/api/system.uribuilder</a> for more information.</p>
+</div>
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">Init</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Initializes a new instance of the UriBuilder class with the specified URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure Init(Uri: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Uri
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A URI string.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.-ctor#System_UriBuilder__ctor_System_String">https://learn.microsoft.com/dotnet/api/system.uribuilder.-ctor#System_UriBuilder__ctor_System_String</a>_ for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetScheme</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the scheme name of the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetScheme(Scheme: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Scheme
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A string that represents the scheme name to set.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.scheme">https://learn.microsoft.com/dotnet/api/system.uribuilder.scheme</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetScheme</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the scheme name of the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetScheme(): Text</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>The scheme name of the URI.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.scheme">https://learn.microsoft.com/dotnet/api/system.uribuilder.scheme</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetHost</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the host name of the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetHost(Host: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Host
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A string that represents the host name to set.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.host">https://learn.microsoft.com/dotnet/api/system.uribuilder.host</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetHost</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the host name of the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetHost(): Text</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>The host name of the URI.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.host">https://learn.microsoft.com/dotnet/api/system.uribuilder.host</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetPort</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the port number of the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetPort(Port: Integer)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Port
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>An integer that represents the port number to set.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.port">https://learn.microsoft.com/dotnet/api/system.uribuilder.port</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetPort</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the port number of the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetPort(): Integer</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Integer               </td>
+   						<td>
+							<p>The port number of the URI.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.port">https://learn.microsoft.com/dotnet/api/system.uribuilder.port</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetPath</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the path to the resource referenced by the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetPath(Path: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Path
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A string that represents the path to set.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.path">https://learn.microsoft.com/dotnet/api/system.uribuilder.path</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetPath</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the path to the resource referenced by the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetPath(): Text</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>The path to the resource referenced by the URI.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.path">https://learn.microsoft.com/dotnet/api/system.uribuilder.path</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetQuery</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets any query information included in the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetQuery(Query: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Query
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A string that represents the query information to set.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.query">https://learn.microsoft.com/dotnet/api/system.uribuilder.query</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetQuery</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the query information included in the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetQuery(): Text</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>The query information included in the URI.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.query">https://learn.microsoft.com/dotnet/api/system.uribuilder.query</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">SetFragment</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the fragment portion of the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetFragment(Fragment: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Fragment
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A string that represents the fragment portion to set.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.fragment">https://learn.microsoft.com/dotnet/api/system.uribuilder.fragment</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetFragment</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the fragment portion of the URI.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetFragment(): Text</code></pre>
+
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>The fragment portion of the URI.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.fragment">https://learn.microsoft.com/dotnet/api/system.uribuilder.fragment</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">GetUri</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets the Uri instance constructed by the specified &quot;Uri Builder&quot; instance.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetUri(var Uri: Codeunit Uri)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Uri
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="System.Utilities.Uri.html">System.Utilities.Uri</a>                 </td>
+   							<td>
+								<p>A Uri that contains the URI constructed by the Uri Builder.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>Visit <a href="https://learn.microsoft.com/dotnet/api/system.uribuilder.uri">https://learn.microsoft.com/dotnet/api/system.uribuilder.uri</a> for more information.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddQueryFlag</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a flag to the query string of this UriBuilder. In case the same query flag exists already, the action in <code>DuplicateAction</code> is taken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddQueryFlag(Flag: Text, DuplicateAction: Enum &quot;Uri Query Duplicate Behaviour&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Flag
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A flag to add to the query string of this UriBuilder. This value will be encoded before being added to the URI query string. Cannot be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DuplicateAction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Utilities.Uri-Query-Duplicate-Behaviour.html">System.Utilities.&quot;Uri Query Duplicate Behaviour&quot;</a>                 </td>
+   							<td>
+								<p>Specifies which action to take if the flag already exist.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>This function could alter the order of the existing query string parts. For example, if the previous URL was &quot;https://microsoft.com?foo=bar&amp;john=doe&quot; and the new flag is &quot;contoso&quot;, the result could be &quot;https://microsoft.com?john=doe&amp;foo=bar&amp;contoso&quot;.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddQueryFlag</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a flag to the query string of this UriBuilder. In case the same query flag exists already, only one occurrence is kept.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddQueryFlag(Flag: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								Flag
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>A flag to add to the query string of this UriBuilder. This value will be encoded before being added to the URI query string. Cannot be empty.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>This function could alter the order of the existing query string parts. For example, if the previous URL was &quot;https://microsoft.com?foo=bar&amp;john=doe&quot; and the new flag is &quot;contoso&quot;, the result could be &quot;https://microsoft.com?john=doe&amp;foo=bar&amp;contoso&quot;.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddQueryParameter</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a parameter key-value pair to the query string of this UriBuilder (in the form <code>ParameterKey=ParameterValue</code>). In case the same query key exists already, the action in <code>DuplicateAction</code> is taken.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddQueryParameter(ParameterKey: Text, ParameterValue: Text, DuplicateAction: Enum &quot;Uri Query Duplicate Behaviour&quot;)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ParameterKey
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The key for the new query parameter. This value will be encoded before being added to the URI query string. Cannot be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ParameterValue
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The value for the new query parameter. This value will be encoded before being added to the URI query string. Can be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DuplicateAction
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Utilities.Uri-Query-Duplicate-Behaviour.html">System.Utilities.&quot;Uri Query Duplicate Behaviour&quot;</a>                 </td>
+   							<td>
+								<p>Specifies which action to take if the ParameterKey specified already exist.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>This function could alter the order of the existing query string parts. For example, if the previous URL was &quot;https://microsoft.com?foo=bar&amp;john=doe&quot; and the new flag is &quot;contoso=42&quot;, the result could be &quot;https://microsoft.com?john=doe&amp;foo=bar&amp;contoso=42&quot;.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddQueryParameter</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds a parameter key-value pair to the query string of this UriBuilder (in the form <code>ParameterKey=ParameterValue</code>). In case the same query key exists already, its value is overwritten.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddQueryParameter(ParameterKey: Text, ParameterValue: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ParameterKey
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The key for the new query parameter. This value will be encoded before being added to the URI query string. Cannot be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ParameterValue
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The value for the new query parameter. This value will be encoded before being added to the URI query string. Can be empty.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>This function could alter the order of the existing query string parts. For example, if the previous URL was &quot;https://microsoft.com?foo=bar&amp;john=doe&quot; and the new flag is &quot;contoso=42&quot;, the result could be &quot;https://microsoft.com?john=doe&amp;foo=bar&amp;contoso=42&quot;.</p>
+
+   </div>
+   <h3 class="memberNameHolder">AddODataQueryParameter</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Adds an OData parameter key-value pair to the query string of this UriBuilder (in the form <code>ParameterKey=ParameterValue</code>), preserving the &quot;$&quot; sign in unencoded form. In case the same query key exists already, its value is overwritten.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure AddODataQueryParameter(ParameterKey: Text, ParameterValue: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								ParameterKey
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The key for the new query parameter. This value will be encoded before being added to the URI query string, except for any &quot;$&quot; sign. Cannot be empty.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								ParameterValue
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>The value for the new query parameter. This value will be encoded before being added to the URI query string. Can be empty.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   		<h4>Remarks</h4>
+		<p>This function could alter the order of the existing query string parts. For example, if the previous URL was &quot;https://microsoft.com?foo=bar&amp;john=doe&quot; and the new flag is &quot;contoso=42&quot;, the result could be &quot;https://microsoft.com?john=doe&amp;foo=bar&amp;contoso=42&quot;.</p>
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."Copilot AI Capabilities"
+alId: ID 7775
+namespace: System.AI
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: Document
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Caption
+  value: Copilot & AI capabilities
+  promoted: false
+- name: DataCaptionExpression
+  value: "''"
+  promoted: false
+- name: AboutTitle
+  value: About Copilot
+  promoted: false
+- name: AboutText
+  value: Copilot is the AI-powered assistant that helps people across your organization unlock their creativity and automate tedious tasks.
+  promoted: false
+- name: AdditionalSearchTerms
+  value: OpenAI,AI,Copilot,Co-pilot,Artificial Intelligence,GPT,GTP,Dynamics 365 Copilot,ChatGPT,Copilot settings,Copilot setup,enable Copilot,Copilot admin,Copilot and
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#AI#Copilot AI Capabilities
+summary: This page is used to set the Copilot settings in the Environment.
+name: '"Copilot AI Capabilities"'
+uid: O:Page::System#AI#Copilot_AI_Capabilities

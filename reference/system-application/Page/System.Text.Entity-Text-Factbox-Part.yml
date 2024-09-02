@@ -1,0 +1,71 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Entity Text Factbox Part"
+alId: ID 2011
+namespace: System.Text
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Entity Text
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: CardPart
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetContext(SourceTableId: Integer, SourceSystemId: Guid, SourceScenario: __MissingTypeSymbol__, PlaceholderText: Text)'
+    parameters:
+    - id: SourceTableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SourceSystemId
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: SourceScenario
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: PlaceholderText
+      parameterType:
+        name: Text
+        isExternal: true
+  name: SetContext
+  uid: M:Page::System#Text#Entity_Text_Factbox_Part.SetContext(Integer,Guid,__MissingSymbol__,Text)
+commentId: O:Page::System#Text#Entity Text Factbox Part
+summary: >-
+  A card part to use on a factbox to display the entity text.
+
+  Ensure the SetContext procedure is called OnAfterGetCurrentRecord on the parent page.
+name: '"Entity Text Factbox Part"'
+uid: O:Page::System#Text#Entity_Text_Factbox_Part

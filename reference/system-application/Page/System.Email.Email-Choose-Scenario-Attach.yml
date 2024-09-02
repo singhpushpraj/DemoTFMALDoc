@@ -1,0 +1,74 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Choose Scenario Attach"
+alId: ID 8896
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Email#Email_Scenario_Attachments
+  name: System.Email."Email Scenario Attachments"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Additional Attachments from Scenarios
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "8911"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Email#Email_Scenario_Attachments
+    name: System.Email."Email Scenario Attachments"
+    isExternal: false
+- name: SourceTableView
+  value: >-
+    sorting(Scenario, "Attachment Name")
+                          order(ascending)
+  promoted: false
+- name: InstructionalText
+  value: Add the attachments from the scenario to the email.
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Email Attachments" = rimd,
+                        tabledata "Email Scenario Attachments" = rimd
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetSelectedAttachments(var EmailAttachments: Record "Email Attachments" temporary)'
+    parameters:
+    - id: EmailAttachments
+      parameterType:
+        name: Record "Email Attachments" temporary
+        isExternal: true
+  name: GetSelectedAttachments
+  uid: M:Page::System#Email#Email_Choose_Scenario_Attach.GetSelectedAttachments(Email_Attachments@)
+commentId: O:Page::System#Email#Email Choose Scenario Attach
+summary: Page is used to upload the attachments from the scenario.
+name: '"Email Choose Scenario Attach"'
+uid: O:Page::System#Email#Email_Choose_Scenario_Attach

@@ -1,0 +1,17 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Approve Buffer Posting"'
+alId: ID 70301
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+commentId: O:Codeunit::CGI TFM Approve Buffer Posting
+summary: >-
+  Codeunit to delete the buffer if already available in the LC Calculation line
+
+  it has to be schedule in Job Queue
+name: '"CGI TFM Approve Buffer Posting"'
+uid: O:Codeunit::CGI_TFM_Approve_Buffer_Posting

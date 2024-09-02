@@ -1,0 +1,44 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Microsoft 365 License"
+alId: ID 9085
+namespace: System.Azure.Identity
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure AssignMicrosoft365ReadPermission(ShowNotification: Boolean)'
+    parameters:
+    - id: ShowNotification
+      description: Show notification about license information regarding users in BC.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Assign D365 Read Permission.
+  name: AssignMicrosoft365ReadPermission
+  uid: M:Codeunit::System#Azure#Identity#Microsoft_365_License.AssignMicrosoft365ReadPermission(Boolean)
+- syntax:
+    content: procedure OpenBCAdminCenter()
+  summary: Opens the Business Central admin center.
+  name: OpenBCAdminCenter
+  uid: M:Codeunit::System#Azure#Identity#Microsoft_365_License.OpenBCAdminCenter
+- syntax:
+    content: procedure OpenM365AdminCenter()
+  summary: Opens the M365 admin center.
+  name: OpenM365AdminCenter
+  uid: M:Codeunit::System#Azure#Identity#Microsoft_365_License.OpenM365AdminCenter
+commentId: O:Codeunit::System#Azure#Identity#Microsoft 365 License
+summary: Provides functionality to operate the Microsoft 365 License.
+name: '"Microsoft 365 License"'
+uid: O:Codeunit::System#Azure#Identity#Microsoft_365_License

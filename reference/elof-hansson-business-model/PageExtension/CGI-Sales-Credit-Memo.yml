@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Sales Credit Memo"'
+alId: ID 60302
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Sales Credit Memo
+summary: Page Extenion CGI Sales Credit Memo (ID 60302) extends page sales credit memo
+name: '"CGI Sales Credit Memo"'
+uid: O:PageExtension::CGI_Sales_Credit_Memo

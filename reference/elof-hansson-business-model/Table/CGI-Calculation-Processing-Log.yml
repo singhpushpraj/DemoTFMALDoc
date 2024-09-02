@@ -1,0 +1,77 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Processing Log"'
+alId: ID 60302
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Calculation Proessing Log
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Entry No."'
+  uid: F:Table::CGI_Calculation_Processing_Log.Entry_No#
+- type:
+    name: Date
+    isExternal: true
+  name: Date
+  uid: F:Table::CGI_Calculation_Processing_Log.Date
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Source Code"'
+  uid: F:Table::CGI_Calculation_Processing_Log.Source_Code[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"User ID"'
+  uid: F:Table::CGI_Calculation_Processing_Log.User_ID[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"G/L Register No."'
+  uid: F:Table::CGI_Calculation_Processing_Log.G/L_Register_No#
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Calculation_Processing_Log.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Calculation_Processing_Log.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Calculation_Processing_Log.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Calculation_Processing_Log.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Calculation_Processing_Log.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Calculation_Processing_Log.SystemRowVersion
+commentId: O:Table::CGI Calculation Processing Log
+summary: TableExtension CGI Calculation Processing Log (ID 60334) extends record standard text
+name: '"CGI Calculation Processing Log"'
+uid: O:Table::CGI_Calculation_Processing_Log

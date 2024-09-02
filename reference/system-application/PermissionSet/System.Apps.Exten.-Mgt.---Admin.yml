@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Exten. Mgt. - Admin"
+alId: ID 2502
+namespace: System.Apps
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Extension Management - Admin
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Extension Management - View","Guided Experience - View"'
+  promoted: false
+commentId: O:PermissionSet::System#Apps#Exten# Mgt# - Admin
+name: '"Exten. Mgt. - Admin"'
+uid: O:PermissionSet::System#Apps#Exten#_Mgt#_-_Admin

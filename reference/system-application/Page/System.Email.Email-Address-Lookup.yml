@@ -1,0 +1,78 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Address Lookup"
+alId: ID 8944
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Email#Email_Address_Lookup
+  name: System.Email."Email Address Lookup"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "8944"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Email#Email_Address_Lookup
+    name: System.Email."Email Address Lookup"
+    isExternal: false
+- name: Caption
+  value: Suggested Email Addresses
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: PromotedActionCategories
+  value: New,Process,Report,Full Address Lists
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure WasFullAddressLookup(): Boolean'
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: WasFullAddressLookup
+  uid: M:Page::System#Email#Email_Address_Lookup.WasFullAddressLookup:Boolean
+- syntax:
+    content: 'procedure GetSelectedSuggestions(var EmailAddressLookup: Record "Email Address Lookup" temporary)'
+    parameters:
+    - id: EmailAddressLookup
+      parameterType:
+        name: Record "Email Address Lookup" temporary
+        isExternal: true
+  name: GetSelectedSuggestions
+  uid: M:Page::System#Email#Email_Address_Lookup.GetSelectedSuggestions(Email_Address_Lookup@)
+- syntax:
+    content: 'procedure AddSuggestions(var EmailAddressLookup: Record "Email Address Lookup" temporary)'
+    parameters:
+    - id: EmailAddressLookup
+      parameterType:
+        name: Record "Email Address Lookup" temporary
+        isExternal: true
+  name: AddSuggestions
+  uid: M:Page::System#Email#Email_Address_Lookup.AddSuggestions(Email_Address_Lookup@)
+commentId: O:Page::System#Email#Email Address Lookup
+summary: Page to view suggested addresses.
+name: '"Email Address Lookup"'
+uid: O:Page::System#Email#Email_Address_Lookup

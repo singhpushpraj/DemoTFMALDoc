@@ -1,0 +1,243 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities.Image
+alId: ID 3971
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Clear(Alpha: Integer, Red: Integer, Green: Integer, Blue: Integer)'
+    parameters:
+    - id: Alpha
+      description: The alpha component. Valid values are 0 through 255.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Red
+      description: The red component. Valid values are 0 through 255.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Green
+      description: The green component. Valid values are 0 through 255.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Blue
+      description: The blue component. Valid values are 0 through 255.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Clears the entire drawing surface and fills it with the specified background color.
+  name: Clear
+  uid: M:Codeunit::System#Utilities#Image.Clear(Integer,Integer,Integer,Integer)
+- syntax:
+    content: 'procedure Clear(Red: Integer, Green: Integer, Blue: Integer)'
+    parameters:
+    - id: Red
+      description: The red component. Valid values are 0 through 255.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Green
+      description: The green component. Valid values are 0 through 255.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Blue
+      description: The blue component. Valid values are 0 through 255.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Clears the entire drawing surface and fills it with the specified background color.
+  name: Clear
+  uid: M:Codeunit::System#Utilities#Image.Clear(Integer,Integer,Integer)
+- syntax:
+    content: 'procedure Crop(X: Integer, Y: Integer, Width: Integer, Height: Integer)'
+    parameters:
+    - id: X
+      description: X coordinate of the rectangle.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: "Y"
+      description: Y coordinate of the rectangle.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Width
+      description: Width of rectangle.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Height
+      description: Height of the rectangle./
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: >-
+    Crops the image based on a rectangle specified by the user.
+
+    The resulting crop will be a hole-cut in the image made by the rectangle.
+  remarks: >-
+    The Rectangles top left corner has to be within the image dimensions,
+
+    but specifying a width or height that makes the rectangle go outside the image dimensions is allowed.
+
+    Anything outside the image dimensions will be filled with the image background color.
+  name: Crop
+  uid: M:Codeunit::System#Utilities#Image.Crop(Integer,Integer,Integer,Integer)
+- syntax:
+    content: 'procedure GetFormatAsText(): Text'
+    return:
+      description: A text containing the format value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the image format as a text.
+  name: GetFormatAsText
+  uid: M:Codeunit::System#Utilities#Image.GetFormatAsText:Text
+- syntax:
+    content: 'procedure GetFormat(): Enum "Image Format"'
+    return:
+      description: The enum value.
+      returnType:
+        internalReference: O:Enum::System#Utilities#Image_Format
+        name: System.Utilities."Image Format"
+        isExternal: false
+  summary: Gets the image format as an Enum "Image Format".
+  name: GetFormat
+  uid: M:Codeunit::System#Utilities#Image.GetFormat:Enum::System#Utilities#Image_Format
+- syntax:
+    content: 'procedure SetFormat(ImageFormat: Enum "Image Format")'
+    parameters:
+    - id: ImageFormat
+      parameterType:
+        internalReference: O:Enum::System#Utilities#Image_Format
+        name: System.Utilities."Image Format"
+        isExternal: false
+  summary: Sets the image format from an Enum "Image Format".
+  remarks: Depending on the format selected, calling this method may result in loss of image quality.
+  name: SetFormat
+  uid: M:Codeunit::System#Utilities#Image.SetFormat(Enum::System#Utilities#Image_Format)
+- syntax:
+    content: 'procedure FromBase64(Base64Text: Text)'
+    parameters:
+    - id: Base64Text
+      description: A base64 encoded string the contains the image.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Creates an Image from base64 encoding.
+  name: FromBase64
+  uid: M:Codeunit::System#Utilities#Image.FromBase64(Text)
+- syntax:
+    content: 'procedure FromStream(InStream: InStream)'
+    parameters:
+    - id: InStream
+      description: A Stream that contains the image data.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Creates an image from the specified data stream.
+  name: FromStream
+  uid: M:Codeunit::System#Utilities#Image.FromStream(InStream)
+- syntax:
+    content: 'procedure GetWidth(): Integer'
+    return:
+      description: The width in pixels.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the width in pixels.
+  name: GetWidth
+  uid: M:Codeunit::System#Utilities#Image.GetWidth:Integer
+- syntax:
+    content: 'procedure GetHeight(): Integer'
+    return:
+      description: The height in pixels.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the height in pixels.
+  name: GetHeight
+  uid: M:Codeunit::System#Utilities#Image.GetHeight:Integer
+- syntax:
+    content: 'procedure Resize(Width: Integer, Height: Integer)'
+    parameters:
+    - id: Width
+      description: The resize width.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Height
+      description: The resize height.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Resizes the Image to the specified size.
+  name: Resize
+  uid: M:Codeunit::System#Utilities#Image.Resize(Integer,Integer)
+- syntax:
+    content: 'procedure RotateFlip(RotateFlipType: Enum "Rotate Flip Type")'
+    parameters:
+    - id: RotateFlipType
+      description: The type of rotation and flip.
+      parameterType:
+        internalReference: O:Enum::System#Utilities#Rotate_Flip_Type
+        name: System.Utilities."Rotate Flip Type"
+        isExternal: false
+  summary: Rotates, flips, or rotates and flips the image.
+  name: RotateFlip
+  uid: M:Codeunit::System#Utilities#Image.RotateFlip(Enum::System#Utilities#Rotate_Flip_Type)
+- syntax:
+    content: 'procedure Save(OutStream: OutStream)'
+    parameters:
+    - id: OutStream
+      description: A Stream that will store the image data.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Saves the image to the specified stream in the specified format.
+  name: Save
+  uid: M:Codeunit::System#Utilities#Image.Save(OutStream)
+- syntax:
+    content: 'procedure ToBase64(): Text'
+    return:
+      description: A string containing the image data encoded with base64.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Convert the image to a base64 encoded string.
+  name: ToBase64
+  uid: M:Codeunit::System#Utilities#Image.ToBase64:Text
+- syntax:
+    content: 'procedure GetRotateFlipType(): Enum "Rotate Flip Type"'
+    return:
+      description: The type of rotation and flip of the image.
+      returnType:
+        internalReference: O:Enum::System#Utilities#Rotate_Flip_Type
+        name: System.Utilities."Rotate Flip Type"
+        isExternal: false
+  summary: Gets the image rotation flip type.
+  name: GetRotateFlipType
+  uid: M:Codeunit::System#Utilities#Image.GetRotateFlipType:Enum::System#Utilities#Rotate_Flip_Type
+commentId: O:Codeunit::System#Utilities#Image
+summary: Provides functionality for working with images.
+name: Image
+uid: O:Codeunit::System#Utilities#Image

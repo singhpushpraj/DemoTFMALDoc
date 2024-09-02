@@ -1,0 +1,81 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.RestClient."Http Authentication Basic"
+alId: ID 2359
+namespace: System.RestClient
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.RestClient
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Initialize(Username: Text, Password: SecretText)'
+    parameters:
+    - id: Username
+      description: The username to use for authentication
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: The password to use for authentication
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Initializes the authentication object with the given username and password
+  name: Initialize
+  uid: M:Codeunit::System#RestClient#Http_Authentication_Basic.Initialize(Text,SecretText)
+- syntax:
+    content: 'procedure Initialize(Username: Text, Domain: Text, Password: SecretText)'
+    parameters:
+    - id: Username
+      description: The username to use for authentication
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Domain
+      description: The domain to use for authentication
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: The password to use for authentication
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Initializes the authentication object with the given username, domain and password
+  name: Initialize
+  uid: M:Codeunit::System#RestClient#Http_Authentication_Basic.Initialize(Text,Text,SecretText)
+- syntax:
+    content: 'procedure IsAuthenticationRequired(): Boolean'
+    return:
+      description: Returns true because authentication is required
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if authentication is required for the request
+  name: IsAuthenticationRequired
+  uid: M:Codeunit::System#RestClient#Http_Authentication_Basic.IsAuthenticationRequired:Boolean
+- syntax:
+    content: 'procedure GetAuthorizationHeaders(): Dictionary of [Text, SecretText]'
+    return:
+      returnType:
+        name: Dictionary of [Text, SecretText]
+        isExternal: true
+  name: GetAuthorizationHeaders
+  uid: M:Codeunit::System#RestClient#Http_Authentication_Basic.GetAuthorizationHeaders:Dictionary_of_[Text,SecretText]
+implements:
+- internalReference: O:Interface::System#RestClient#Http_Authentication
+  name: System.RestClient."Http Authentication"
+  isExternal: false
+commentId: O:Codeunit::System#RestClient#Http Authentication Basic
+name: '"Http Authentication Basic"'
+uid: O:Codeunit::System#RestClient#Http_Authentication_Basic

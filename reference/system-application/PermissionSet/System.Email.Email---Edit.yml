@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email - Edit"
+alId: ID 8901
+namespace: System.Email
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: Caption
+  value: Email - Edit
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Email - Read"'
+  promoted: false
+commentId: O:PermissionSet::System#Email#Email - Edit
+name: '"Email - Edit"'
+uid: O:PermissionSet::System#Email#Email_-_Edit

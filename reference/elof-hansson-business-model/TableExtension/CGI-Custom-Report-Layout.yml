@@ -1,0 +1,19 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Custom Report Layout"'
+alId: ID 60340
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Show"'
+  uid: F:TableExtension::CGI_Custom_Report_Layout.CGI_Show
+commentId: O:TableExtension::CGI Custom Report Layout
+name: '"CGI Custom Report Layout"'
+uid: O:TableExtension::CGI_Custom_Report_Layout

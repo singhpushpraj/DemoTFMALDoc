@@ -1,0 +1,68 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Visualization."Business Chart Type"
+alId: ID 484
+namespace: System.Visualization
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Visualization
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: AssignmentCompatibility
+  value: "True"
+  promoted: false
+enumValues:
+- summary: Uses points to represent data points.
+  name: Point
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Point
+- summary: A variation of the Point chart type, where the data points are replaced by bubbles of different sizes.
+  name: Bubble
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Bubble
+- summary: Illustrates trends in data with the passing of time.
+  name: Line
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Line
+- summary: Similar to the Line chart type, but uses vertical and horizontal lines to connect the data points in a series forming a step-like progression.
+  name: StepLine
+  uid: E:Enum::System#Visualization#Business_Chart_Type.StepLine
+- summary: Uses a sequence of columns to compare values across categories.
+  name: Column
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Column
+- summary: Used to compare the contribution of each value to a total across categories.
+  name: StackedColumn
+  uid: E:Enum::System#Visualization#Business_Chart_Type.StackedColumn
+- summary: Displays multiple series of data as stacked columns. The cumulative proportion of each stacked element is always 100% of the Y axis.
+  name: StackedColumn100
+  uid: E:Enum::System#Visualization#Business_Chart_Type.StackedColumn100
+- summary: Emphasizes the degree of change over time and shows the relationship of the parts to a whole.
+  name: '"Area"'
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Area
+- summary: An Area chart that stacks two or more data series on top of one another.
+  name: StackedArea
+  uid: E:Enum::System#Visualization#Business_Chart_Type.StackedArea
+- summary: Displays multiple series of data as stacked areas. The cumulative proportion of each stacked element is always 100% of the Y axis.
+  name: StackedArea100
+  uid: E:Enum::System#Visualization#Business_Chart_Type.StackedArea100
+- summary: Shows how proportions of data, shown as pie-shaped pieces, contribute to the data as a whole.
+  name: Pie
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Pie
+- summary: Similar to the Pie chart type, except that it has a hole in the center.
+  name: Doughnut
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Doughnut
+- summary: Displays a range of data by plotting two Y values per data point, with each Y value being drawn as a line chart.
+  name: Range
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Range
+- summary: A circular chart that is used primarily as a data comparison tool.
+  name: Radar
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Radar
+- summary: Displays in a funnel shape data that equals 100% when totaled.
+  name: Funnel
+  uid: E:Enum::System#Visualization#Business_Chart_Type.Funnel
+commentId: O:Enum::System#Visualization#Business Chart Type
+summary: Represents all the available types of business charts
+name: '"Business Chart Type"'
+uid: O:Enum::System#Visualization#Business_Chart_Type

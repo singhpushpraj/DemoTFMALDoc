@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Model Type"
+alId: ID 7773
+namespace: System.AI
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: >-
+    Embedding model type.
+
+    Details: https://aka.ms/AOAIUnderstandEmbeddings
+  name: Embeddings
+  uid: E:Enum::System#AI#AOAI_Model_Type.Embeddings
+- summary: Completions model type.
+  name: '"Text Completions"'
+  uid: E:Enum::System#AI#AOAI_Model_Type.Text_Completions
+- summary: Chat completions model type.
+  name: '"Chat Completions"'
+  uid: E:Enum::System#AI#AOAI_Model_Type.Chat_Completions
+commentId: O:Enum::System#AI#AOAI Model Type
+summary: The supported model types for Azure OpenAI.
+name: '"AOAI Model Type"'
+uid: O:Enum::System#AI#AOAI_Model_Type

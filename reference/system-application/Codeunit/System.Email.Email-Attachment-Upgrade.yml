@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Attachment Upgrade"
+alId: ID 8910
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Subtype
+  value: Upgrade
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Email#Email Attachment Upgrade
+summary: Upgrade email attachments to be of type Media instead of BLOB.
+name: '"Email Attachment Upgrade"'
+uid: O:Codeunit::System#Email#Email_Attachment_Upgrade

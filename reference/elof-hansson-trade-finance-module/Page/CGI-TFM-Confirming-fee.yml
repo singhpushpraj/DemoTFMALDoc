@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Confirming fee"'
+alId: ID 70303
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_TFM_LCBG_Header
+  name: '"CGI TFM LCBG Header"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Confirming fee
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: SourceTable
+  value: "70300"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_TFM_LCBG_Header
+    name: '"CGI TFM LCBG Header"'
+    isExternal: false
+methods:
+- syntax:
+    content: procedure FetchSwiftFields()
+  name: FetchSwiftFields
+  uid: M:Page::CGI_TFM_Confirming_fee.FetchSwiftFields
+commentId: O:Page::CGI TFM Confirming fee
+summary: >-
+  page 70303 CGI TFM Confirming fee
+
+  Provides information about confirming fees
+name: '"CGI TFM Confirming fee"'
+uid: O:Page::CGI_TFM_Confirming_fee

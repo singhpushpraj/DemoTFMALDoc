@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Purchase Order Archive"'
+alId: ID 60332
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Purchase Order Archive
+summary: Pageextension CGI Purchase Order Archive (ID 60332) extends page Purchase Order Archive
+name: '"CGI Purchase Order Archive"'
+uid: O:PageExtension::CGI_Purchase_Order_Archive

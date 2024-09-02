@@ -1,0 +1,159 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device.Geolocation
+alId: ID 7568
+namespace: System.Device
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure RequestGeolocation(): Boolean'
+    return:
+      description: True if the geographical location data was retrieved and is available, and the user agreed to share it, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Requests a geographical location from the client device and returns whether the request was succesful.
+  name: RequestGeolocation
+  uid: M:Codeunit::System#Device#Geolocation.RequestGeolocation:Boolean
+- syntax:
+    content: 'procedure GetGeolocation(var Latitude: Decimal, var Longitude: Decimal)'
+    parameters:
+    - id: Latitude
+      description: The latitude value of the geographical location.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: Longitude
+      description: The longitude value of the geographical location.
+      parameterType:
+        name: Decimal
+        isExternal: true
+  summary: Gets a geographical location from the client device and returns it in the the longitude and latitude parameters.
+  name: GetGeolocation
+  uid: M:Codeunit::System#Device#Geolocation.GetGeolocation(Decimal@,Decimal@)
+- syntax:
+    content: 'procedure IsAvailable(): Boolean'
+    return:
+      description: True if the location is available; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether geographical location data is available on the client device.
+  name: IsAvailable
+  uid: M:Codeunit::System#Device#Geolocation.IsAvailable:Boolean
+- syntax:
+    content: 'procedure HasGeolocation(): Boolean'
+    return:
+      description: True if geographical location data is retrieved and is available, otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether geographical location data has been retrieved from the client device and is available.
+  name: HasGeolocation
+  uid: M:Codeunit::System#Device#Geolocation.HasGeolocation:Boolean
+- syntax:
+    content: 'procedure GetGeolocationStatus(): Enum "Geolocation Status"'
+    return:
+      description: The status of the geographical location data.
+      returnType:
+        internalReference: O:Enum::System#Device#Geolocation_Status
+        name: System.Device."Geolocation Status"
+        isExternal: false
+  summary: Gets the status of the geographical location data of the client device.
+  name: GetGeolocationStatus
+  uid: M:Codeunit::System#Device#Geolocation.GetGeolocationStatus:Enum::System#Device#Geolocation_Status
+- syntax:
+    content: 'procedure SetHighAccuracy(Enable: Boolean)'
+    parameters:
+    - id: Enable
+      description: Instructs the device that the geographical location data for this request must have the highest level of accuracy.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets whether the geographical location data for the device should have the highest level of accuracy.
+  name: SetHighAccuracy
+  uid: M:Codeunit::System#Device#Geolocation.SetHighAccuracy(Boolean)
+- syntax:
+    content: 'procedure SetTimeout(Timeout: Integer)'
+    parameters:
+    - id: Timeout
+      description: The maximum length of time (milliseconds) that is allowed to pass to a location request.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets a timeout for the geographical location data request.
+  name: SetTimeout
+  uid: M:Codeunit::System#Device#Geolocation.SetTimeout(Integer)
+- syntax:
+    content: 'procedure SetMaximumAge(Age: Integer)'
+    parameters:
+    - id: Age
+      description: The maximum length of time (milliseconds) of cached geographical location data.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets a maximum age for the geographical location data request.
+  name: SetMaximumAge
+  uid: M:Codeunit::System#Device#Geolocation.SetMaximumAge(Integer)
+- syntax:
+    content: 'procedure GetHighAccuracy(): Boolean'
+    return:
+      description: Whether high accuracy is set. A value to provide a hint to the device that this request must have the best possible location accuracy.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets whether the device should have the highest level of accuracy for geographical location data.
+  name: GetHighAccuracy
+  uid: M:Codeunit::System#Device#Geolocation.GetHighAccuracy:Boolean
+- syntax:
+    content: 'procedure GetTimeout(): Integer'
+    return:
+      description: The maximum length of time (milliseconds) that is allowed to pass to a location request.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the timeout for the geographical location data request.
+  name: GetTimeout
+  uid: M:Codeunit::System#Device#Geolocation.GetTimeout:Integer
+- syntax:
+    content: 'procedure GetMaximumAge(): Integer'
+    return:
+      description: The maximum length of time (milliseconds) of geographical location data.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the maximum age for the geographical location data request.
+  name: GetMaximumAge
+  uid: M:Codeunit::System#Device#Geolocation.GetMaximumAge:Integer
+commentId: O:Codeunit::System#Device#Geolocation
+summary: >-
+  Provides functionality for getting geographical location information from the client device.
+
+  <example>
+
+  ``` AL
+
+  Geolocation.SetHighAccuracy(true);
+
+  if Geolocation.RequestGeolocation() then
+     Geolocation.GetGeolocation(Latitude, Longitude);
+  ```
+
+  </example>
+name: Geolocation
+uid: O:Codeunit::System#Device#Geolocation

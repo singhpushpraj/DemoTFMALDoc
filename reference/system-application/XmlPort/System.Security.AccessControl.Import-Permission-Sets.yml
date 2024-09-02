@@ -1,0 +1,50 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Import Permission Sets"
+alId: ID 9864
+namespace: System.Security.AccessControl
+baseKind: XmlPort
+kind: XmlPort
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Import Permission Sets
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: Encoding
+  value: UTF8
+  promoted: false
+- name: PreserveWhiteSpace
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Import Permission Sets
+  promoted: false
+- name: Direction
+  value: Import
+  promoted: false
+- name: Encoding
+  value: UTF8
+  promoted: false
+- name: PreserveWhiteSpace
+  value: "True"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetUpdatePermissions(NewUpdatePermissions: Boolean)'
+    parameters:
+    - id: NewUpdatePermissions
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetUpdatePermissions
+  uid: M:XmlPort::System#Security#AccessControl#Import_Permission_Sets.SetUpdatePermissions(Boolean)
+commentId: O:XmlPort::System#Security#AccessControl#Import Permission Sets
+summary: Xmlport for importing permission sets.
+name: '"Import Permission Sets"'
+uid: O:XmlPort::System#Security#AccessControl#Import_Permission_Sets

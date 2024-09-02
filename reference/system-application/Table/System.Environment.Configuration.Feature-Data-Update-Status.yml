@@ -1,0 +1,101 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Feature Data Update Status"
+alId: ID 2610
+namespace: System.Environment.Configuration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+fields:
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Feature Key"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Feature_Key[50]
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"Company Name"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Company_Name[30]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Data Update Required"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Data_Update_Required
+- type:
+    internalReference: O:Enum::System#Environment#Configuration#Feature_Status
+    name: System.Environment.Configuration."Feature Status"
+    isExternal: false
+  name: '"Feature Status"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Feature_Status
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Start Date/Time"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Start_Date/Time
+- type:
+    name: Boolean
+    isExternal: true
+  name: Confirmed
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Confirmed
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Task Id"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Task_Id
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Session Id"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Session_Id
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Server Instance Id"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Server_Instance_Id
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Background Task"'
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.Background_Task
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Environment#Configuration#Feature_Data_Update_Status.SystemRowVersion
+commentId: O:Table::System#Environment#Configuration#Feature Data Update Status
+summary: Table stores feature data update status per company.
+name: '"Feature Data Update Status"'
+uid: O:Table::System#Environment#Configuration#Feature_Data_Update_Status

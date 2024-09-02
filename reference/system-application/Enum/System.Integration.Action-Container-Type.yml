@@ -1,0 +1,43 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Action Container Type"
+alId: ID 2915
+namespace: System.Integration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+enumValues:
+- summary: Action container contains new document actions.
+  name: NewDocumentItems
+  uid: E:Enum::System#Integration#Action_Container_Type.NewDocumentItems
+- summary: Action container contains action items.
+  name: ActionItems
+  uid: E:Enum::System#Integration#Action_Container_Type.ActionItems
+- summary: Action container contains related information acrions.
+  name: RelatedInformation
+  uid: E:Enum::System#Integration#Action_Container_Type.RelatedInformation
+- summary: Action container contains report actions.
+  name: Reports
+  uid: E:Enum::System#Integration#Action_Container_Type.Reports
+- summary: Action container contains home items actions.
+  name: HomeItems
+  uid: E:Enum::System#Integration#Action_Container_Type.HomeItems
+- summary: Action container contains activity actions.
+  name: ActivityButtons
+  uid: E:Enum::System#Integration#Action_Container_Type.ActivityButtons
+- summary: Action container contains department actions.
+  name: Departments
+  uid: E:Enum::System#Integration#Action_Container_Type.Departments
+- summary: Action container contains auto query actions.
+  name: AutoQueryActions
+  uid: E:Enum::System#Integration#Action_Container_Type.AutoQueryActions
+- summary: Action container contains view actions.
+  name: ViewActions
+  uid: E:Enum::System#Integration#Action_Container_Type.ViewActions
+commentId: O:Enum::System#Integration#Action Container Type
+summary: Enumeration used for determining the type of contained actions of a group control.
+name: '"Action Container Type"'
+uid: O:Enum::System#Integration#Action_Container_Type

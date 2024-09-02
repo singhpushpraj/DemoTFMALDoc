@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA PayableBy"'
+alId: ID 60306
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '" "'
+  uid: E:Enum::CGI_CA_PayableBy._
+- name: SI
+  uid: E:Enum::CGI_CA_PayableBy.SI
+- name: PI
+  uid: E:Enum::CGI_CA_PayableBy.PI
+- name: Direct
+  uid: E:Enum::CGI_CA_PayableBy.Direct
+- name: Manual
+  uid: E:Enum::CGI_CA_PayableBy.Manual
+- name: Sales
+  uid: E:Enum::CGI_CA_PayableBy.Sales
+- name: Purchase
+  uid: E:Enum::CGI_CA_PayableBy.Purchase
+commentId: O:Enum::CGI CA PayableBy
+name: '"CGI CA PayableBy"'
+uid: O:Enum::CGI_CA_PayableBy

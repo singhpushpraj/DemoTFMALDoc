@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device.Geolocation
+alId: ID 7568
+namespace: System.Device
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Geolocation request
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Device#Geolocation
+summary: This page shows instructional text for the user and is opened when the geographical location of the client device is requested.
+name: Geolocation
+uid: O:Page::System#Device#Geolocation

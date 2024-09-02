@@ -1,0 +1,1101 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#DateTime#Recurrence_Schedule">
+  <h1>Codeunit &quot;Recurrence Schedule&quot;</h1>
+
+
+<div class="font-style-italic">ID 4690</div>
+<div class="font-style-italic">Namespace: System.DateTime</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Calculates when the next event will occur. Events can recur daily, weekly, monthly or yearly.</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">SetMinDateTime</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Sets the earliest date to be returned from CalculateNextOccurrence.
+The default MinDateTime is today at the start time set in recurrence.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure SetMinDateTime(DateTime: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								DateTime
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The minimum datetime.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+   		<h4>Examples</h4>
+		<p>To start calculating recurrence from January 1st, 2000,
+call SetMinDateTime(CREATEDATETIME(DMY2DATE(1, 1, 2000), 0T)).</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">CalculateNextOccurrence</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Calculates the time and date for the next occurrence.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CalculateNextOccurrence(RecurrenceID: Guid, LastOccurrence: DateTime): DateTime</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RecurrenceID
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The recurrence ID.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								LastOccurrence
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>The time of the last scheduled occurrence.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+DateTime               </td>
+   						<td>
+							<p>Returns the DateTime value for the next occurrence. If there is no next occurrence, it returns the default value 0DT.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>To calculate the first occurrence (this is using the datatime provided in SetMinDateTime as a minimum datetime to return),
+call CalculateNextOccurrence(RecurrenceID, 0DT)), the RecurrenceID is the ID returned from one of the create functions.</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateDaily</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a daily recurrence.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateDaily(StartTime: Time, StartDate: Date, EndDate: Date, DaysBetween: Integer): Guid</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								StartTime
+   							</td>
+   							<td class="font-style-italic">
+Time                 </td>
+   							<td>
+								<p>The start time of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								StartDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The start date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EndDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The end date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DaysBetween
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The number of days between each occurrence, starting with 1.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Guid               </td>
+   						<td>
+							<p>The ID used to reference this recurrence.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>To create a recurrence that starts today, repeats every third day, and does not have an end date,
+call RecurrenceID := CreateDaily(now, today, 0D , 3).</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateWeekly</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a weekly recurrence.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateWeekly(StartTime: Time, StartDate: Date, EndDate: Date, WeeksBetween: Integer, Monday: Boolean, Tuesday: Boolean, Wednesday: Boolean, Thursday: Boolean, Friday: Boolean, Saturday: Boolean, Sunday: Boolean): Guid</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								StartTime
+   							</td>
+   							<td class="font-style-italic">
+Time                 </td>
+   							<td>
+								<p>The start time of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								StartDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The start date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EndDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The end date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								WeeksBetween
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The number of weeks between each occurrence, starting with 1.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Monday
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Occur on Mondays.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Tuesday
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Occur on Tuesdays.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Wednesday
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Occur on Wednesdays.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Thursday
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Occur on Thursdays.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Friday
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Occur on Fridays.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Saturday
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Occur on Saturdays.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Sunday
+   							</td>
+   							<td class="font-style-italic">
+Boolean                 </td>
+   							<td>
+								<p>Occur on Sundays.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Guid               </td>
+   						<td>
+							<p>The ID used to reference this recurrence.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>To create a weekly recurrence that starts today, repeats every Monday and Wednesday, and does not have an end date,
+call RecurrenceID := CreateWeekly(now, today, 0D , 1, true, false, true, false, false, false, false).</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateMonthlyByDay</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a monthly recurrence by day.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateMonthlyByDay(StartTime: Time, StartDate: Date, EndDate: Date, MonthsBetween: Integer, DayOfMonth: Integer): Guid</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								StartTime
+   							</td>
+   							<td class="font-style-italic">
+Time                 </td>
+   							<td>
+								<p>The start time of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								StartDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The start date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EndDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The end date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								MonthsBetween
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The number of months between each occurrence, starting with 1.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DayOfMonth
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The day of the month.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Guid               </td>
+   						<td>
+							<p>The ID used to reference this recurrence.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>To create a monthly recurrence that repeats on the fourth day of every month,
+call RecurrenceID := CreateMonthlyByDay(now, today, 0D , 1, 4).</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateMonthlyByDayOfWeek</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a monthly recurrence by the day of the week.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateMonthlyByDayOfWeek(StartTime: Time, StartDate: Date, EndDate: Date, MonthsBetween: Integer, InWeek: Enum &quot;Recurrence - Ordinal No.&quot;, DayOfWeek: Enum &quot;Recurrence - Day of Week&quot;): Guid</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								StartTime
+   							</td>
+   							<td class="font-style-italic">
+Time                 </td>
+   							<td>
+								<p>The start time of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								StartDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The start date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EndDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The end date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								MonthsBetween
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The number of months between each occurrence, starting with 1.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								InWeek
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.DateTime.Recurrence---Ordinal-No..html">System.DateTime.&quot;Recurrence - Ordinal No.&quot;</a>                 </td>
+   							<td>
+								<p>The week of the month.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DayOfWeek
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.DateTime.Recurrence---Day-of-Week.html">System.DateTime.&quot;Recurrence - Day of Week&quot;</a>                 </td>
+   							<td>
+								<p>The day of the week.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Guid               </td>
+   						<td>
+							<p>The ID used to reference this recurrence.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>To create a monthly recurrence that calculates every last Friday of every month,
+call RecurrenceID := CreateMonthlyByDayOfWeek(now, today, 0D , 1, RecurrenceOrdinalNo::Last, RecurrenceDayofWeek::Friday).</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateYearlyByDay</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a yearly recurrence by day.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateYearlyByDay(StartTime: Time, StartDate: Date, EndDate: Date, YearsBetween: Integer, DayOfMonth: Integer, Month: Enum &quot;Recurrence - Month&quot;): Guid</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								StartTime
+   							</td>
+   							<td class="font-style-italic">
+Time                 </td>
+   							<td>
+								<p>The start time of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								StartDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The start date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EndDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The end date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								YearsBetween
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The number of years between each occurrence, starting with 1.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DayOfMonth
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The day of the month.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Month
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.DateTime.Recurrence---Month.html">System.DateTime.&quot;Recurrence - Month&quot;</a>                 </td>
+   							<td>
+								<p>The month of the year.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Guid               </td>
+   						<td>
+							<p>The ID used to reference this recurrence.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>To create a yearly recurrence that repeats on the first day of December,
+call RecurrenceID := CreateYearlyByDay(now, today, 0D , 1, 1, RecurrenceMonth::December).</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">CreateYearlyByDayOfWeek</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Creates a yearly recurrence by day of week of a given month.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure CreateYearlyByDayOfWeek(StartTime: Time, StartDate: Date, EndDate: Date, YearsBetween: Integer, InWeek: Enum &quot;Recurrence - Ordinal No.&quot;, DayOfWeek: Enum &quot;Recurrence - Day of Week&quot;, Month: Enum &quot;Recurrence - Month&quot;): Guid</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								StartTime
+   							</td>
+   							<td class="font-style-italic">
+Time                 </td>
+   							<td>
+								<p>The start time of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								StartDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The start date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								EndDate
+   							</td>
+   							<td class="font-style-italic">
+Date                 </td>
+   							<td>
+								<p>The end date of the recurrence.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								YearsBetween
+   							</td>
+   							<td class="font-style-italic">
+Integer                 </td>
+   							<td>
+								<p>The number of years between each occurrence, starting with 1.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								InWeek
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.DateTime.Recurrence---Ordinal-No..html">System.DateTime.&quot;Recurrence - Ordinal No.&quot;</a>                 </td>
+   							<td>
+								<p>The week of the month.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								DayOfWeek
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.DateTime.Recurrence---Day-of-Week.html">System.DateTime.&quot;Recurrence - Day of Week&quot;</a>                 </td>
+   							<td>
+								<p>The day of the week.</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Month
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.DateTime.Recurrence---Month.html">System.DateTime.&quot;Recurrence - Month&quot;</a>                 </td>
+   							<td>
+								<p>The month of the year.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Guid               </td>
+   						<td>
+							<p>The ID used to reference this recurrence.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+   		<h4>Examples</h4>
+		<p>To create a yearly recurrence that repeats on the last Friday of every month,
+call RecurrenceID := CreateYearlyByDayOfWeek(now, today, 0D , 1, RecurrenceOrdinalNo::Last, RecurrenceDayofWeek::Weekday, RecurrenceMonth::December).</p>
+
+
+   </div>
+   <h3 class="memberNameHolder">OpenRecurrenceSchedule</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Opens the card for the recurrence.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure OpenRecurrenceSchedule(var RecurrenceID: Guid)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RecurrenceID
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The recurrence ID.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">RecurrenceDisplayText</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Returns a short text description of the recurrence.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure RecurrenceDisplayText(RecurrenceID: Guid): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								RecurrenceID
+   							</td>
+   							<td class="font-style-italic">
+Guid                 </td>
+   							<td>
+								<p>The recurrence ID.</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							<p>The short text to display.</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

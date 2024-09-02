@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email View Policy"
+alId: ID 8930
+namespace: System.Email
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Policy allowing users to view their own emails.
+  name: OwnEmails
+  uid: E:Enum::System#Email#Email_View_Policy.OwnEmails
+- summary: Policy allowing users to view all emails.
+  name: AllEmails
+  uid: E:Enum::System#Email#Email_View_Policy.AllEmails
+- summary: >-
+    Policy allowing users to view emails if they have direct permissions to all its related records.
+
+    Authors can always see their own emails.
+  name: AllRelatedRecordsEmails
+  uid: E:Enum::System#Email#Email_View_Policy.AllRelatedRecordsEmails
+- summary: >-
+    Policy allowing users to view emails if they have direct permissions to one or more of its related records.
+
+    Authors can always see their own emails.
+  name: AnyRelatedRecordEmails
+  uid: E:Enum::System#Email#Email_View_Policy.AnyRelatedRecordEmails
+implements:
+- internalReference: O:Interface::System#Email#Email_View_Policy
+  name: System.Email."Email View Policy"
+  isExternal: false
+commentId: O:Enum::System#Email#Email View Policy
+summary: Available policies that can be assigned to a user.
+name: '"Email View Policy"'
+uid: O:Enum::System#Email#Email_View_Policy

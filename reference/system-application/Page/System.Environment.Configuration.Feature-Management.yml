@@ -1,0 +1,60 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Feature Management"
+alId: ID 2610
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: Caption
+  value: Feature Management
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: AboutTitle
+  value: Managing change
+  promoted: false
+- name: AboutText
+  value: Some new features are turned off when Business Central is updated to a newer version. These features are optional for a period of time until they are automatically enabled for all users in a later software update according to the [Release Plan](https://go.microsoft.com/fwlink/?linkid=2227906). You can prepare in advance by enabling these features for all users on the right environment at the right time that suits your schedule.
+  promoted: false
+- name: AdditionalSearchTerms
+  value: new features,feature key,opt in,turn off features,enable features,early access,preview
+  promoted: false
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: PromotedActionCategories
+  value: New,Process,Report,Data Update
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Permissions
+  value: >-
+    tabledata "Feature Data Update Status" = r,
+                      tabledata "Feature Key" = rm
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Feature Management
+summary: Page that enables a user to pick which new features to use
+name: '"Feature Management"'
+uid: O:Page::System#Environment#Configuration#Feature_Management

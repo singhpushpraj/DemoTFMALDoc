@@ -1,0 +1,574 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Template"
+alId: ID 9987
+namespace: System.Integration.Word
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: procedure DownloadTemplate()
+  summary: Downloads the set template.
+  name: DownloadTemplate
+  uid: M:Codeunit::System#Integration#Word#Word_Template.DownloadTemplate
+- syntax:
+    content: procedure DownloadDocument()
+  summary: Downloads the resulting document.
+  name: DownloadDocument
+  uid: M:Codeunit::System#Integration#Word#Word_Template.DownloadDocument
+- syntax:
+    content: 'procedure GetTemplate(var InStream: InStream)'
+    parameters:
+    - id: InStream
+      description: Out parameter, the InStream to set.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Gets an InStream for the template.
+  name: GetTemplate
+  uid: M:Codeunit::System#Integration#Word#Word_Template.GetTemplate(InStream@)
+- syntax:
+    content: 'procedure GetDocument(var DocumentInStream: InStream)'
+    parameters:
+    - id: DocumentInStream
+      description: Out parameter, the InStream to set.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Gets an InStream for the resulting document.
+  name: GetDocument
+  uid: M:Codeunit::System#Integration#Word#Word_Template.GetDocument(InStream@)
+- syntax:
+    content: 'procedure GetDocumentSize(): Integer'
+    return:
+      description: The size for the resulting document in bytes.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets size for the resulting document.
+  name: GetDocumentSize
+  uid: M:Codeunit::System#Integration#Word#Word_Template.GetDocumentSize:Integer
+- syntax:
+    content: procedure Create()
+  summary: Creates a template with the fields of a table. The table is selected by the user via a popup window.
+  name: Create
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Create
+- syntax:
+    content: 'procedure Create(TableId: Integer)'
+    parameters:
+    - id: TableId
+      description: Specifies the ID of the table whose fields will be used to populate the template.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Creates a template with the fields of the given table.
+  name: Create
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Create(Integer)
+- syntax:
+    content: 'procedure Create(TableId: Integer, RelatedTableIds: List of [Integer], RelatedTableCodes: List of [Code[5]])'
+    parameters:
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RelatedTableIds
+      parameterType:
+        name: List of [Integer]
+        isExternal: true
+    - id: RelatedTableCodes
+      parameterType:
+        name: List of [Code[5]]
+        isExternal: true
+  name: Create
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Create(Integer,List_of_[Integer],List_of_[Code])
+- syntax:
+    content: 'procedure Create(MergeFields: List of [Text])'
+    parameters:
+    - id: MergeFields
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Create
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Create(List_of_[Text])
+- syntax:
+    content: 'procedure Load(WordTemplateCode: Code[30])'
+    parameters:
+    - id: WordTemplateCode
+      description: The code of the Word template to use.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+  summary: Loads the template to be used for merging.
+  name: Load
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Load(Code[30])
+- syntax:
+    content: 'procedure Load(WordTemplateStream: InStream)'
+    parameters:
+    - id: WordTemplateStream
+      description: InStream of the Word template to use.
+      parameterType:
+        name: InStream
+        isExternal: true
+  summary: Loads the template to be used for merging.
+  name: Load
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Load(InStream)
+- syntax:
+    content: 'procedure Load(WordTemplateStream: InStream, WordTemplateCode: Code[30])'
+    parameters:
+    - id: WordTemplateStream
+      description: InStream of the Word template to use.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: WordTemplateCode
+      description: The Word template which contains the related tables and fields.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+  summary: Loads the template to be used for merging from the stream and additional related fields from the WordTemplateCode which is used as the base.
+  name: Load
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Load(InStream,Code[30])
+- syntax:
+    content: 'procedure Merge(Data: Dictionary of [Text, Text])'
+    parameters:
+    - id: Data
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Dictionary_of_[Text,Text])
+- syntax:
+    content: 'procedure Merge(Data: Dictionary of [Text, Text], SaveFormat: Enum "Word Templates Save Format")'
+    parameters:
+    - id: Data
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: SaveFormat
+      parameterType:
+        internalReference: O:Enum::System#Integration#Word#Word_Templates_Save_Format
+        name: System.Integration.Word."Word Templates Save Format"
+        isExternal: false
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Dictionary_of_[Text,Text],Enum::System#Integration#Word#Word_Templates_Save_Format)
+- syntax:
+    content: 'procedure Merge(Data: Dictionary of [Text, Text], SaveFormat: Enum "Word Templates Save Format", EditDoc: Boolean)'
+    parameters:
+    - id: Data
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: SaveFormat
+      parameterType:
+        internalReference: O:Enum::System#Integration#Word#Word_Templates_Save_Format
+        name: System.Integration.Word."Word Templates Save Format"
+        isExternal: false
+    - id: EditDoc
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Dictionary_of_[Text,Text],Enum::System#Integration#Word#Word_Templates_Save_Format,Boolean)
+- syntax:
+    content: 'procedure Merge(Data: Dictionary of [Text, Text], SaveFormat: Enum "Word Templates Save Format", EditDoc: Boolean, DocSharingConflictBehavior: Enum "Doc. Sharing Conflict Behavior")'
+    parameters:
+    - id: Data
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: SaveFormat
+      parameterType:
+        internalReference: O:Enum::System#Integration#Word#Word_Templates_Save_Format
+        name: System.Integration.Word."Word Templates Save Format"
+        isExternal: false
+    - id: EditDoc
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: DocSharingConflictBehavior
+      parameterType:
+        internalReference: O:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior
+        name: System.Integration."Doc. Sharing Conflict Behavior"
+        isExternal: false
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Dictionary_of_[Text,Text],Enum::System#Integration#Word#Word_Templates_Save_Format,Boolean,Enum::System#Integration#Doc#_Sharing_Conflict_Behavior)
+- syntax:
+    content: 'procedure Merge(SplitDocument: Boolean)'
+    parameters:
+    - id: SplitDocument
+      description: Specifies whether a separate document per record should be created.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Performs mail merge on set template and data taken from the Record associated with the Document. Output document is of type .docx.
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Boolean)
+- syntax:
+    content: 'procedure Merge(SplitDocument: Boolean, SaveFormat: Enum "Word Templates Save Format")'
+    parameters:
+    - id: SplitDocument
+      description: Specifies whether a separate document per record should be created.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: SaveFormat
+      description: Format of the document to generate.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Word#Word_Templates_Save_Format
+        name: System.Integration.Word."Word Templates Save Format"
+        isExternal: false
+  summary: Performs mail merge on set template and data taken from the Record associated with the Document. Output document type is of specified save format.
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Boolean,Enum::System#Integration#Word#Word_Templates_Save_Format)
+- syntax:
+    content: 'procedure Merge(RecordVariant: Variant, SplitDocument: Boolean)'
+    parameters:
+    - id: RecordVariant
+      description: The Record to take data from, any filters on the Record will be respected.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: SplitDocument
+      description: Specifies whether a separate document per record should be created.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Performs mail merge on set template and data taken from the given Record. Output document is of type .docx.
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Variant,Boolean)
+- syntax:
+    content: 'procedure Merge(RecordVariant: Variant, SplitDocument: Boolean, SaveFormat: Enum "Word Templates Save Format")'
+    parameters:
+    - id: RecordVariant
+      description: The Record to take data from, any filters on the Record will be respected.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: SplitDocument
+      description: Specifies whether a separate document per record should be created.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: SaveFormat
+      description: Format of the document to generate.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Word#Word_Templates_Save_Format
+        name: System.Integration.Word."Word Templates Save Format"
+        isExternal: false
+  summary: Performs mail merge on set template and data taken from the given Record. Output document type is of specified save format.
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Variant,Boolean,Enum::System#Integration#Word#Word_Templates_Save_Format)
+- syntax:
+    content: 'procedure Merge(RecordVariant: Variant, SplitDocument: Boolean, SaveFormat: Enum "Word Templates Save Format", EditDoc: Boolean)'
+    parameters:
+    - id: RecordVariant
+      description: The Record to take data from, any filters on the Record will be respected.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: SplitDocument
+      description: Specifies whether a separate document per record should be created.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: SaveFormat
+      description: Format of the document to generate.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Word#Word_Templates_Save_Format
+        name: System.Integration.Word."Word Templates Save Format"
+        isExternal: false
+    - id: EditDoc
+      description: Edit document in Word after merging. Only available if OneDrive has been enabled.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Performs mail merge on set template and data taken from the given Record. Output document type is of specified save format.
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Variant,Boolean,Enum::System#Integration#Word#Word_Templates_Save_Format,Boolean)
+- syntax:
+    content: 'procedure Merge(RecordVariant: Variant, SplitDocument: Boolean, SaveFormat: Enum "Word Templates Save Format", EditDoc: Boolean, DocSharingConflictBehavior: Enum "Doc. Sharing Conflict Behavior")'
+    parameters:
+    - id: RecordVariant
+      description: The Record to take data from, any filters on the Record will be respected.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: SplitDocument
+      description: Specifies whether a separate document per record should be created.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: SaveFormat
+      description: Format of the document to generate.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Word#Word_Templates_Save_Format
+        name: System.Integration.Word."Word Templates Save Format"
+        isExternal: false
+    - id: EditDoc
+      description: Edit document in Word after merging. Only available if OneDrive has been enabled.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: DocSharingConflictBehavior
+      description: The behavior when the file being uploaded has a conflict. Only used if EditDoc is true.
+      parameterType:
+        internalReference: O:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior
+        name: System.Integration."Doc. Sharing Conflict Behavior"
+        isExternal: false
+  summary: Performs mail merge on set template and data taken from the given Record. Output document type is of specified save format.
+  name: Merge
+  uid: M:Codeunit::System#Integration#Word#Word_Template.Merge(Variant,Boolean,Enum::System#Integration#Word#Word_Templates_Save_Format,Boolean,Enum::System#Integration#Doc#_Sharing_Conflict_Behavior)
+- syntax:
+    content: 'procedure AddTable(TableID: Integer)'
+    parameters:
+    - id: TableID
+      description: The ID of the table to add.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Add a table to the list of available tables for Word templates.
+  name: AddTable
+  uid: M:Codeunit::System#Integration#Word#Word_Template.AddTable(Integer)
+- syntax:
+    content: 'procedure GetTableId(): Integer'
+    return:
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Get the table ID for this Template.
+  remarks: The function Load needs to be called before this function.
+  name: GetTableId
+  uid: M:Codeunit::System#Integration#Word#Word_Template.GetTableId:Integer
+- syntax:
+    content: 'procedure AddRelatedTable(WordTemplateCode: Code[30], RelatedCode: Code[5], TableId: Integer, RelatedTableId: Integer, FieldNo: Integer): Boolean'
+    parameters:
+    - id: WordTemplateCode
+      description: The code of an existing parent Word template.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: RelatedCode
+      description: The code of the related table to add.
+      parameterType:
+        name: Code[5]
+        isExternal: true
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RelatedTableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldNo
+      description: The field no. of the parent table that references the related table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the related table was added, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Add related table.
+  remarks: The function shows a message if the related code or table ID is already used for the parent table
+  name: AddRelatedTable
+  uid: M:Codeunit::System#Integration#Word#Word_Template.AddRelatedTable(Code[30],Code[5],Integer,Integer,Integer):Boolean
+- syntax:
+    content: 'procedure SetDefaultFields(WordTemplateCode: Code[30], TableId: Integer)'
+    parameters:
+    - id: WordTemplateCode
+      description: The code of an existing parent Word template.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Set the default fields for the table.
+  name: SetDefaultFields
+  uid: M:Codeunit::System#Integration#Word#Word_Template.SetDefaultFields(Code[30],Integer)
+- syntax:
+    content: 'procedure AddUnrelatedTable(WordTemplateCode: Code[30], PrefixCode: Code[5], UnrelatedTableId: Integer, RecordSystemId: Guid): Boolean'
+    parameters:
+    - id: WordTemplateCode
+      description: The code of an existing parent Word template.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: PrefixCode
+      description: The code of the unrelated table to add.
+      parameterType:
+        name: Code[5]
+        isExternal: true
+    - id: UnrelatedTableId
+      description: The ID of the unrelated table to add.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RecordSystemId
+      description: The system id of the record to add.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the unrelated table was added, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Add unrelated table.
+  name: AddUnrelatedTable
+  uid: M:Codeunit::System#Integration#Word#Word_Template.AddUnrelatedTable(Code[30],Code[5],Integer,Guid):Boolean
+- syntax:
+    content: 'procedure SetExcludedFields(WordTemplateCode: Code[30], TableId: Integer, ExcludeFieldNames: List of [Text[30]])'
+    parameters:
+    - id: WordTemplateCode
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ExcludeFieldNames
+      parameterType:
+        name: List of [Text[30]]
+        isExternal: true
+  name: SetExcludedFields
+  uid: M:Codeunit::System#Integration#Word#Word_Template.SetExcludedFields(Code[30],Integer,List_of_[Text])
+- syntax:
+    content: 'procedure GetExcludedFields(WordTemplateCode: Code[30], TableId: Integer): List of [Text[30]]'
+    parameters:
+    - id: WordTemplateCode
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      returnType:
+        name: List of [Text[30]]
+        isExternal: true
+  name: GetExcludedFields
+  uid: M:Codeunit::System#Integration#Word#Word_Template.GetExcludedFields(Code[30],Integer):List_of_[Text]
+- syntax:
+    content: 'procedure GetCustomTableFields(TableId: Integer): List of [Text[30]]'
+    parameters:
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      returnType:
+        name: List of [Text[30]]
+        isExternal: true
+  name: GetCustomTableFields
+  uid: M:Codeunit::System#Integration#Word#Word_Template.GetCustomTableFields(Integer):List_of_[Text]
+- syntax:
+    content: 'procedure GetSupportedTableFields(TableId: Integer): List of [Text[30]]'
+    parameters:
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      returnType:
+        name: List of [Text[30]]
+        isExternal: true
+  name: GetSupportedTableFields
+  uid: M:Codeunit::System#Integration#Word#Word_Template.GetSupportedTableFields(Integer):List_of_[Text]
+- syntax:
+    content: 'procedure IsFieldSupported(Field: __MissingTypeSymbol__): Boolean'
+    parameters:
+    - id: Field
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: IsFieldSupported
+  uid: M:Codeunit::System#Integration#Word#Word_Template.IsFieldSupported(__MissingSymbol__):Boolean
+- syntax:
+    signatures:
+    - '[Obsolete(Replaced by RemoveTable below,22.0)]'
+    content: 'procedure RemoveRelatedTable(WordTemplateCode: Code[30], TableId: Integer): Boolean'
+    parameters:
+    - id: WordTemplateCode
+      description: The code of the parent Word template.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the table was removed, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Remove a related or unrelated table.
+  name: RemoveRelatedTable
+  obsoletion:
+    state: pending
+    reason: Replaced by RemoveTable below
+    version: "22.0"
+  uid: M:Codeunit::System#Integration#Word#Word_Template.RemoveRelatedTable(Code[30],Integer):Boolean
+- syntax:
+    content: 'procedure RemoveTable(WordTemplateCode: Code[30], TableId: Integer): Boolean'
+    parameters:
+    - id: WordTemplateCode
+      description: The code of the parent Word template.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: TableId
+      description: The ID of the table to remove. This table must not have tables depending on it, otherwise an error will be thrown.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the table was removed, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Remove a related or unrelated table.
+
+    An error is thrown if the table has any children, these must be removed first.
+  name: RemoveTable
+  uid: M:Codeunit::System#Integration#Word#Word_Template.RemoveTable(Code[30],Integer):Boolean
+- syntax:
+    content: 'procedure GetChildren(WordTemplateCode: Code[30], TableId: Integer): List of [Integer]'
+    parameters:
+    - id: WordTemplateCode
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: TableId
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      returnType:
+        name: List of [Integer]
+        isExternal: true
+  name: GetChildren
+  uid: M:Codeunit::System#Integration#Word#Word_Template.GetChildren(Code[30],Integer):List_of_[Integer]
+commentId: O:Codeunit::System#Integration#Word#Word Template
+summary: Exposes functionality to create and consume Word templates.
+name: '"Word Template"'
+uid: O:Codeunit::System#Integration#Word#Word_Template

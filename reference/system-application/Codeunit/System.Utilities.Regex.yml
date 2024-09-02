@@ -1,0 +1,1062 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities.Regex
+alId: ID 3960
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Regex(Pattern: Text)'
+    parameters:
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the Regex class for the specified regular expression.
+  name: Regex
+  uid: M:Codeunit::System#Utilities#Regex.Regex(Text)
+- syntax:
+    content: 'procedure Regex(Pattern: Text, var RegexOptions: Record "Regex Options" temporary)'
+    parameters:
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that modify the regular expression.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+  summary: Initializes a new instance of the Regex class for the specified regular expression, with options that modify the pattern.
+  name: Regex
+  uid: M:Codeunit::System#Utilities#Regex.Regex(Text,Regex_Options@)
+- syntax:
+    content: 'procedure GetCacheSize(): Integer'
+    return:
+      description: The maximum number of entries in the static cache.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the maximum number of entries in the current static cache of compiled regular expressions.
+  name: GetCacheSize
+  uid: M:Codeunit::System#Utilities#Regex.GetCacheSize:Integer
+- syntax:
+    content: 'procedure SetCacheSize(CacheSize: Integer)'
+    parameters:
+    - id: CacheSize
+      description: The maximum number of entries in the static cache.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the maximum number of entries in the current static cache of compiled regular expressions.
+  name: SetCacheSize
+  uid: M:Codeunit::System#Utilities#Regex.SetCacheSize(Integer)
+- syntax:
+    content: 'procedure GetGroupNames(var GroupNames: List of [Text])'
+    parameters:
+    - id: GroupNames
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: GetGroupNames
+  uid: M:Codeunit::System#Utilities#Regex.GetGroupNames(List_of_[Text]@)
+- syntax:
+    content: 'procedure GetGroupNumbers(var GroupNumbers: List of [Integer])'
+    parameters:
+    - id: GroupNumbers
+      parameterType:
+        name: List of [Integer]
+        isExternal: true
+  name: GetGroupNumbers
+  uid: M:Codeunit::System#Utilities#Regex.GetGroupNumbers(List_of_[Integer]@)
+- syntax:
+    content: 'procedure GroupNameFromNumber(Number: Integer): Text'
+    parameters:
+    - id: Number
+      description: The group number to convert to the corresponding group name.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: A string that contains the group name associated with the specified group number. If there is no group name that corresponds to i, the method returns Empty.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the group name that corresponds to the specified group number.
+  name: GroupNameFromNumber
+  uid: M:Codeunit::System#Utilities#Regex.GroupNameFromNumber(Integer):Text
+- syntax:
+    content: 'procedure GroupNumberFromName(Name: Text): Integer'
+    parameters:
+    - id: Name
+      description: The group name to convert to the corresponding group number.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The group number that corresponds to the specified group name, or -1 if name is not a valid group name.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the group number that corresponds to the specified group name.
+  name: GroupNumberFromName
+  uid: M:Codeunit::System#Utilities#Regex.GroupNumberFromName(Text):Integer
+- syntax:
+    content: 'procedure IsMatch(Input: Text, Pattern: Text, StartAt: Integer): Boolean'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The character position at which to start the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the regular expression finds a match; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether the regular expression finds a match in the input string, beginning at the specified starting position in the string.
+  name: IsMatch
+  uid: M:Codeunit::System#Utilities#Regex.IsMatch(Text,Text,Integer):Boolean
+- syntax:
+    content: 'procedure IsMatch(Input: Text, StartAt: Integer): Boolean'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The character position at which to start the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the regular expression finds a match; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether the regular expression specified in the Regex constructor finds a match in the input string, beginning at the specified starting position in the string.
+  name: IsMatch
+  uid: M:Codeunit::System#Utilities#Regex.IsMatch(Text,Integer):Boolean
+- syntax:
+    content: 'procedure IsMatch(Input: Text, Pattern: Text, StartAt: Integer, var RegexOptions: Record "Regex Options" temporary): Boolean'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The character position at which to start the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that modify the regular expression.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    return:
+      description: True if the regular expression finds a match; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether the regular expression finds a match in the input string, beginning at the specified starting position in the string.
+  name: IsMatch
+  uid: M:Codeunit::System#Utilities#Regex.IsMatch(Text,Text,Integer,Regex_Options@):Boolean
+- syntax:
+    content: 'procedure IsMatch(Input: Text, Pattern: Text): Boolean'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the regular expression finds a match; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether the regular expression finds a match in the input string.
+  name: IsMatch
+  uid: M:Codeunit::System#Utilities#Regex.IsMatch(Text,Text):Boolean
+- syntax:
+    content: 'procedure IsMatch(Input: Text): Boolean'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the regular expression finds a match; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether the regular expression specified in the Regex constructor finds a match in the input string.
+  name: IsMatch
+  uid: M:Codeunit::System#Utilities#Regex.IsMatch(Text):Boolean
+- syntax:
+    content: 'procedure IsMatch(Input: Text, Pattern: Text, var RegexOptions: Record "Regex Options" temporary): Boolean'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that modify the regular expression.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    return:
+      description: True if the regular expression finds a match; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether the specified regular expression finds a match in the specified input string, using the specified matching options.
+  name: IsMatch
+  uid: M:Codeunit::System#Utilities#Regex.IsMatch(Text,Text,Regex_Options@):Boolean
+- syntax:
+    content: 'procedure Match(Input: Text, Pattern: Text, StartAt: Integer, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The zero-based character position at which to start the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of a regular expression, beginning at the specified starting position in the string.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Text,Integer,Matches@)
+- syntax:
+    content: 'procedure Match(Input: Text, StartAt: Integer, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The zero-based character position at which to start the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of a regular expression specified in the Regex constructor, beginning at the specified starting position in the string.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Integer,Matches@)
+- syntax:
+    content: 'procedure Match(Input: Text, Pattern: Text, StartAt: Integer, var RegexOptions: Record "Regex Options" temporary, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The zero-based character position at which to start the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that provide options for matching.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of a regular expression, beginning at the specified starting position in the string.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Text,Integer,Regex_Options@,Matches@)
+- syntax:
+    content: 'procedure Match(Input: Text, Pattern: Text, StartAt: Integer, Length: Integer, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The zero-based character position in the input string that defines the leftmost position to be searched.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Length
+      description: The number of characters in the substring to include in the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of a regular expression, beginning at the specified starting position and searching only the specified number of characters.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Text,Integer,Integer,Matches@)
+- syntax:
+    content: 'procedure Match(Input: Text, StartAt: Integer, Length: Integer, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The zero-based character position in the input string that defines the leftmost position to be searched.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Length
+      description: The number of characters in the substring to include in the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of a regular expression specified in the Regex constructor, beginning at the specified starting position and searching only the specified number of characters.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Integer,Integer,Matches@)
+- syntax:
+    content: 'procedure Match(Input: Text, Pattern: Text, StartAt: Integer, Length: Integer, var RegexOptions: Record "Regex Options" temporary, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: StartAt
+      description: The zero-based character position in the input string that defines the leftmost position to be searched.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Length
+      description: The number of characters in the substring to include in the search.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that provide options for matching.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of a regular expression, beginning at the specified starting position and searching only the specified number of characters.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Text,Integer,Integer,Regex_Options@,Matches@)
+- syntax:
+    content: 'procedure Match(Input: Text, Pattern: Text, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of the specified regular expression, using the specified matching options.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Text,Matches@)
+- syntax:
+    content: 'procedure Match(Input: Text, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of the specified regular expression specified in the Regex constructor, using the specified matching options.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Matches@)
+- syntax:
+    content: 'procedure Match(Input: Text, Pattern: Text, var RegexOptions: Record "Regex Options" temporary, var Matches: Record Matches temporary)'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that provide options for matching.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    - id: Matches
+      description: The Match object to write information about the match to.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+  summary: Searches the input string for the first occurrence of the specified regular expression, using the specified matching options.
+  name: Match
+  uid: M:Codeunit::System#Utilities#Regex.Match(Text,Text,Regex_Options@,Matches@)
+- syntax:
+    content: 'procedure Replace(Input: Text, Pattern: Text, Replacement: Text, Count: Integer): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      description: The maximum number of times the replacement can occur.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Replaces strings that match a regular expression pattern with a specified replacement string.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text,Text,Integer):Text
+- syntax:
+    content: 'procedure Replace(Input: Text, Replacement: Text, Count: Integer): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      description: The maximum number of times the replacement can occur.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Replaces strings that match a regular expression pattern specified in the Regex constructor with a specified replacement string.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text,Integer):Text
+- syntax:
+    content: 'procedure Replace(Input: Text, Pattern: Text, Replacement: Text, Count: Integer, var RegexOptions: Record "Regex Options" temporary): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      description: The maximum number of times the replacement can occur.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that provide options for matching.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Replaces strings that match a regular expression pattern with a specified replacement string.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text,Text,Integer,Regex_Options@):Text
+- syntax:
+    content: 'procedure Replace(Input: Text, Pattern: Text, Replacement: Text, Count: Integer, StartAt: Integer): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      description: The maximum number of times the replacement can occur.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: StartAt
+      description: The character position in the input string where the search begins.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: In a specified input substring, replaces a specified maximum number of strings that match a regular expression pattern with a specified replacement string.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text,Text,Integer,Integer):Text
+- syntax:
+    content: 'procedure Replace(Input: Text, Replacement: Text, Count: Integer, StartAt: Integer): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      description: The maximum number of times the replacement can occur.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: StartAt
+      description: The character position in the input string where the search begins.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: In a specified input substring, replaces a specified maximum number of strings that match a regular expression pattern specified in the Regex constructor with a specified replacement string.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text,Integer,Integer):Text
+- syntax:
+    content: 'procedure Replace(Input: Text, Pattern: Text, Replacement: Text, Count: Integer, StartAt: Integer, var RegexOptions: Record "Regex Options" temporary): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      description: The maximum number of times the replacement can occur.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: StartAt
+      description: The character position in the input string where the search begins.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that provide options for matching.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: In a specified input substring, replaces a specified maximum number of strings that match a regular expression pattern with a specified replacement string.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text,Text,Integer,Integer,Regex_Options@):Text
+- syntax:
+    content: 'procedure Replace(Input: Text, Pattern: Text, Replacement: Text): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Replaces all strings that match a specified regular expression with a specified replacement string.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text,Text):Text
+- syntax:
+    content: 'procedure Replace(Input: Text, Replacement: Text): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Replaces all strings that match a specified regular expression specified in the Regex constructor with a specified replacement string.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text):Text
+- syntax:
+    content: 'procedure Replace(Input: Text, Pattern: Text, Replacement: Text, var RegexOptions: Record "Regex Options" temporary): Text'
+    parameters:
+    - id: Input
+      description: The string to search for a match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      description: A regular expression pattern to match.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Replacement
+      description: The replacement string.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RegexOptions
+      description: A combination of the enumeration values that provide options for matching.
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    return:
+      description: A new string that is identical to the input string, except that the replacement string takes the place of each matched string. If the pattern is not matched the method returns the current instance unchanged
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Replaces all strings that match a specified regular expression with a specified replacement string. Specified options modify the matching operation.
+  name: Replace
+  uid: M:Codeunit::System#Utilities#Regex.Replace(Text,Text,Text,Regex_Options@):Text
+- syntax:
+    content: 'procedure Split(Input: Text, Pattern: Text, Count: Integer, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,Text,Integer,List_of_[Text]@)
+- syntax:
+    content: 'procedure Split(Input: Text, Count: Integer, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,Integer,List_of_[Text]@)
+- syntax:
+    content: 'procedure Split(Input: Text, Pattern: Text, Count: Integer, var RegexOptions: Record "Regex Options" temporary, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RegexOptions
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,Text,Integer,Regex_Options@,List_of_[Text]@)
+- syntax:
+    content: 'procedure Split(Input: Text, Pattern: Text, Count: Integer, StartAt: Integer, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: StartAt
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,Text,Integer,Integer,List_of_[Text]@)
+- syntax:
+    content: 'procedure Split(Input: Text, Count: Integer, StartAt: Integer, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: StartAt
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,Integer,Integer,List_of_[Text]@)
+- syntax:
+    content: 'procedure Split(Input: Text, Pattern: Text, Count: Integer, StartAt: Integer, var RegexOptions: Record "Regex Options" temporary, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Count
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: StartAt
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RegexOptions
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,Text,Integer,Integer,Regex_Options@,List_of_[Text]@)
+- syntax:
+    content: 'procedure Split(Input: Text, Pattern: Text, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,Text,List_of_[Text]@)
+- syntax:
+    content: 'procedure Split(Input: Text, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,List_of_[Text]@)
+- syntax:
+    content: 'procedure Split(Input: Text, Pattern: Text, var RegexOptions: Record "Regex Options" temporary, var Array: List of [Text])'
+    parameters:
+    - id: Input
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Pattern
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RegexOptions
+      parameterType:
+        name: Record "Regex Options" temporary
+        isExternal: true
+    - id: Array
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: Split
+  uid: M:Codeunit::System#Utilities#Regex.Split(Text,Text,Regex_Options@,List_of_[Text]@)
+- syntax:
+    content: 'procedure GetHashCode(): Integer'
+    return:
+      description: A hash code for the current object.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Serves as the default hash function.
+  name: GetHashCode
+  uid: M:Codeunit::System#Utilities#Regex.GetHashCode:Integer
+- syntax:
+    content: 'procedure Escape(String: Text): Text'
+    parameters:
+    - id: String
+      description: The input string that contains the text to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A string of characters with metacharacters converted to their escaped form.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: 'Escapes a minimal set of characters (\, *, +, ?, |, {, [, (,), ^, $, ., #, and white space) by replacing them with their escape codes.'
+  name: Escape
+  uid: M:Codeunit::System#Utilities#Regex.Escape(Text):Text
+- syntax:
+    content: 'procedure Unescape(String: Text): Text'
+    parameters:
+    - id: String
+      description: The input string containing the text to convert.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A string of characters with any escaped characters converted to their unescaped form.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts any escaped characters in the input string.
+  name: Unescape
+  uid: M:Codeunit::System#Utilities#Regex.Unescape(Text):Text
+- syntax:
+    content: 'procedure Groups(var MatchesRec: Record Matches temporary, var GroupsRec: Record Groups temporary)'
+    parameters:
+    - id: MatchesRec
+      description: The Match record to get Groups for.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+    - id: GroupsRec
+      description: Groups Record to write the resulting Groups to.
+      parameterType:
+        name: Record Groups temporary
+        isExternal: true
+  summary: Get the Groups for one particular Match.
+  name: Groups
+  uid: M:Codeunit::System#Utilities#Regex.Groups(Matches@,Groups@)
+- syntax:
+    content: 'procedure Captures(var GroupsRec: Record Groups temporary, var CapturesRec: Record Captures temporary)'
+    parameters:
+    - id: GroupsRec
+      description: The Group record to get Captures for.
+      parameterType:
+        name: Record Groups temporary
+        isExternal: true
+    - id: CapturesRec
+      description: Captures Record to write the resulting Captures to.
+      parameterType:
+        name: Record Captures temporary
+        isExternal: true
+  summary: Get the Captures for one particular Group.
+  name: Captures
+  uid: M:Codeunit::System#Utilities#Regex.Captures(Groups@,Captures@)
+- syntax:
+    content: 'procedure MatchResult(var Matches: Record Matches temporary, Replacement: Text): Text'
+    parameters:
+    - id: Matches
+      description: The Match Record to perform replacement on.
+      parameterType:
+        name: Record Matches temporary
+        isExternal: true
+    - id: Replacement
+      description: The replacement pattern to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The expanded version of the replacement parameter.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the expansion of the specified replacement pattern.
+  name: MatchResult
+  uid: M:Codeunit::System#Utilities#Regex.MatchResult(Matches@,Text):Text
+commentId: O:Codeunit::System#Utilities#Regex
+summary: Provides functionality to use regular expressions to match text, split text, replace text etc.
+name: Regex
+uid: O:Codeunit::System#Utilities#Regex

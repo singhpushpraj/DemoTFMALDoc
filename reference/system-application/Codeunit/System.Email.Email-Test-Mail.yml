@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Test Mail"
+alId: ID 8887
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: TableNo
+  value: Email Account
+  promoted: false
+  xrefType:
+    internalReference: O:Table::System#Email#Email_Account
+    name: System.Email."Email Account"
+    isExternal: false
+commentId: O:Codeunit::System#Email#Email Test Mail
+summary: Sends a test email to a specified account.
+name: '"Email Test Mail"'
+uid: O:Codeunit::System#Email#Email_Test_Mail

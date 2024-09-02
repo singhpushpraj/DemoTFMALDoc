@@ -1,0 +1,102 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Tenant Web Service Columns"
+alId: ID 6711
+namespace: System.Integration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Tenant Web Service Columns
+  promoted: false
+- name: DataPerCompany
+  value: "False"
+  promoted: false
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Access
+  value: Public
+  promoted: false
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Entry ID"'
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.Entry_ID
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Data Item"'
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.Data_Item
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Field Number"'
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.Field_Number
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Field Name"'
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.Field_Name[250]
+- type:
+    name: RecordId
+    isExternal: true
+  name: TenantWebServiceID
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.TenantWebServiceID
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Data Item Caption"'
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.Data_Item_Caption[250]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Include
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.Include
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Field Caption"'
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.Field_Caption[250]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Tenant_Web_Service_Columns.SystemRowVersion
+commentId: O:Table::System#Integration#Tenant Web Service Columns
+summary: Contains tenant web service column entities.
+name: '"Tenant Web Service Columns"'
+uid: O:Table::System#Integration#Tenant_Web_Service_Columns

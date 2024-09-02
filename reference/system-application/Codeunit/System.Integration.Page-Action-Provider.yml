@@ -1,0 +1,97 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Page Action Provider"
+alId: ID 2915
+namespace: System.Integration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetCurrentRoleCenterHomeItems(IncludeViews: Boolean): Text'
+    parameters:
+    - id: IncludeViews
+      description: Specifies whether views for home items should be included.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: Text value for the home items in JSON format.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets home items for user's current role center.
+  examples:
+  - >2+
+
+    "version": "1.0",
+
+    "roleCenterId": 9022,
+
+    "items": [
+        {
+          "caption": "Customers",
+          "views": [
+            {
+              "caption": "balance",
+              "url": "https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&page=22&view=aa49406f-6f68-4565-b857-496faa0e77aa_balance48453&page=22&filter=Customer.%27Balance%20(LCY)%27%20IS%20%27>200%27"
+            }
+          ],
+          "url": "https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&page=22"
+        },
+        {
+          "caption": "Vendors",
+          "url": "https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&page=27"
+        },
+        {
+          "caption": "Items",
+          "url": "https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&page=31"
+        },
+        {
+          "caption": "Account Schedules",
+          "url": "https://businesscentral.dynamics.com/?company=CRONUS%20International%20Ltd.&page=103"
+        }
+     ]
+
+    In case of an error:
+
+    {
+      "version":"1.0",
+      "roleCenterId": 9022,
+      "error":[
+        "code":"UnableToGetRoleCenter"
+        "message":"Cannot get current role center for the user."
+      ]
+    }
+  name: GetCurrentRoleCenterHomeItems
+  uid: M:Codeunit::System#Integration#Page_Action_Provider.GetCurrentRoleCenterHomeItems(Boolean):Text
+- syntax:
+    content: 'procedure GetVersion(): Text[30]'
+    return:
+      description: Text value for the current version of Page Action Provider.
+      returnType:
+        name: Text[30]
+        isExternal: true
+  summary: Gets the current version of the Page Action Provider.
+  name: GetVersion
+  uid: M:Codeunit::System#Integration#Page_Action_Provider.GetVersion:Text[30]
+commentId: O:Codeunit::System#Integration#Page Action Provider
+summary: >-
+  Exposes functionality that gets relevant page actions for a selected page.
+
+  This codeunit is exposed as a webservice and hence all functions are available through OData calls.
+name: '"Page Action Provider"'
+uid: O:Codeunit::System#Integration#Page_Action_Provider

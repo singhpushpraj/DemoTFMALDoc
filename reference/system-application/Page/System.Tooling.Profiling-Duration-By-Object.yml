@@ -1,0 +1,51 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Profiling Duration By Object"
+alId: ID 1923
+namespace: System.Tooling
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Tooling#Profiling_Node
+  name: System.Tooling."Profiling Node"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Time Spent by Application Object
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "1921"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Tooling#Profiling_Node
+    name: System.Tooling."Profiling Node"
+    isExternal: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Page::System#Tooling#Profiling Duration By Object
+summary: The list showing the breakdown of time spent by application object on the performance profiler page.
+name: '"Profiling Duration By Object"'
+uid: O:Page::System#Tooling#Profiling_Duration_By_Object

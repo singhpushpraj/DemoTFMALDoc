@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Post Calculation Card"'
+alId: ID 60365
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Post_Calculation_Header
+  name: '"CGI Post Calculation Header"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Post Calculation Card
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: SourceTable
+  value: "60363"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Post_Calculation_Header
+    name: '"CGI Post Calculation Header"'
+    isExternal: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+commentId: O:Page::CGI Post Calculation Card
+name: '"CGI Post Calculation Card"'
+uid: O:Page::CGI_Post_Calculation_Card

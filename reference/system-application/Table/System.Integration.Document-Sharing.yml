@@ -1,0 +1,155 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Document Sharing"
+alId: ID 9560
+namespace: System.Integration
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+fields:
+- description: Specifies the unique id of this record.
+  type:
+    name: Integer
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Integration#Document_Sharing.Id
+- description: Specifies the blob data to be shared (e.g. a report pdf).
+  type:
+    name: Blob
+    isExternal: true
+  name: Data
+  uid: F:Table::System#Integration#Document_Sharing.Data
+- description: >-
+    Specifies the filename of the document (with file extension).
+
+    This will be used for uploading and also displayed in the share experience.
+  type:
+    name: Text[2048]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Integration#Document_Sharing.Name[2048]
+- description: >-
+    Specifies the filename extension (e.g. '.pdf').
+
+    This is required to display the share experience.
+  type:
+    name: Text[2048]
+    isExternal: true
+  name: Extension
+  uid: F:Table::System#Integration#Document_Sharing.Extension[2048]
+- description: >-
+    Specifies the Document Service token.
+
+    This is required to display the share experience.
+  type:
+    name: Blob
+    isExternal: true
+  name: Token
+  uid: F:Table::System#Integration#Document_Sharing.Token
+- description: >-
+    Specifies the root location of the document.
+
+    This is typically the store used by the Document Service.
+  type:
+    name: Text[2048]
+    isExternal: true
+  name: DocumentRootUri
+  uid: F:Table::System#Integration#Document_Sharing.DocumentRootUri[2048]
+- description: >-
+    Specifies the location of where the document has been uploaded.
+
+    Navigating here will allow the user to download the file.
+  type:
+    name: Text[2048]
+    isExternal: true
+  name: DocumentUri
+  uid: F:Table::System#Integration#Document_Sharing.DocumentUri[2048]
+- description: >-
+    Specifies the preview location.
+
+    Navigating here will allow the user to preview the document in a browser.
+  type:
+    name: Text[2048]
+    isExternal: true
+  name: DocumentPreviewUri
+  uid: F:Table::System#Integration#Document_Sharing.DocumentPreviewUri[2048]
+- description: Specifies the sharing intent of the document.
+  type:
+    internalReference: O:Enum::System#Integration#Document_Sharing_Intent
+    name: System.Integration."Document Sharing Intent"
+    isExternal: false
+  name: '"Document Sharing Intent"'
+  uid: F:Table::System#Integration#Document_Sharing.Document_Sharing_Intent
+- description: Specifies the sharing source of the document.
+  type:
+    internalReference: O:Enum::System#Integration#Document_Sharing_Source
+    name: System.Integration."Document Sharing Source"
+    isExternal: false
+  name: Source
+  uid: F:Table::System#Integration#Document_Sharing.Source
+- description: Specifies the Id of the data in the Document Service
+  type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Item Id"'
+  uid: F:Table::System#Integration#Document_Sharing.Item_Id[2048]
+- description: Specifies the behavior when there is a conflict with an existing document.
+  type:
+    internalReference: O:Enum::System#Integration#Doc#_Sharing_Conflict_Behavior
+    name: System.Integration."Doc. Sharing Conflict Behavior"
+    isExternal: false
+  name: '"Conflict Behavior"'
+  uid: F:Table::System#Integration#Document_Sharing.Conflict_Behavior
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Document_Sharing.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Document_Sharing.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Document_Sharing.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Document_Sharing.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Document_Sharing.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Document_Sharing.SystemRowVersion
+commentId: O:Table::System#Integration#Document Sharing
+summary: Table containing the required state for document sharing.
+name: '"Document Sharing"'
+uid: O:Table::System#Integration#Document_Sharing

@@ -1,0 +1,106 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Functions."Azure Functions Response"
+alId: ID 7805
+namespace: System.Azure.Functions
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Functions
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure IsSuccessful(): Boolean'
+    return:
+      description: True if the request was successful; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the request was successful.
+  name: IsSuccessful
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Response.IsSuccessful:Boolean
+- syntax:
+    content: 'procedure GetError(): Text'
+    return:
+      description: Text representation of the error that occurred during the request.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the error (if any) of the response.
+  name: GetError
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Response.GetError:Text
+- syntax:
+    content: 'procedure GetError(var ErrorContent: Text)'
+    parameters:
+    - id: ErrorContent
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Gets the error content
+  name: GetError
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Response.GetError(Text@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    content: 'procedure GetResultAsText(var Result: Text): Boolean'
+    parameters:
+    - id: Result
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The content of the response.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the result of Azure function request as text.
+  name: GetResultAsText
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Response.GetResultAsText(Text@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[TryFunction]'
+    content: 'procedure GetResultAsStream(var ResultInStream: InStream): Boolean'
+    parameters:
+    - id: ResultInStream
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: The content of the response.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets the result of Azure function request as stream.
+  name: GetResultAsStream
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Response.GetResultAsStream(InStream@):Boolean
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetHttpResponse(var ResultResponseMessage: HttpResponseMessage)'
+    parameters:
+    - id: ResultResponseMessage
+      parameterType:
+        name: HttpResponseMessage
+        isExternal: true
+  summary: Gets the result of Azure function request as HTTPResponseMessage.
+  name: GetHttpResponse
+  uid: M:Codeunit::System#Azure#Functions#Azure_Functions_Response.GetHttpResponse(HttpResponseMessage@)
+commentId: O:Codeunit::System#Azure#Functions#Azure Functions Response
+summary: Holder object for holding for Azure Function request result.
+name: '"Azure Functions Response"'
+uid: O:Codeunit::System#Azure#Functions#Azure_Functions_Response

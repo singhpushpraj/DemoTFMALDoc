@@ -1,0 +1,33 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Email Type"'
+alId: ID 70308
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: '" "'
+  uid: E:Enum::CGI_TFM_Email_Type._
+- name: '"Exp LC avis."'
+  uid: E:Enum::CGI_TFM_Email_Type.Exp_LC_avis#
+- name: '"Imp LC öppn."'
+  uid: E:Enum::CGI_TFM_Email_Type.Imp_LC_öppn#
+- name: '"Exp LC Avis Sanktionsklausul"'
+  uid: E:Enum::CGI_TFM_Email_Type.Exp_LC_Avis_Sanktionsklausul
+- name: '"Exp LC avis för Åtg."'
+  uid: E:Enum::CGI_TFM_Email_Type.Exp_LC_avis_för_Åtg#
+- name: '"Exp LC Ändr."'
+  uid: E:Enum::CGI_TFM_Email_Type.Exp_LC_Ändr#
+- name: '"Imp LC Ändr."'
+  uid: E:Enum::CGI_TFM_Email_Type.Imp_LC_Ändr#
+commentId: O:Enum::CGI TFM Email Type
+summary: Contains CGI TFM Email Type options for selecting the email layout body
+name: '"CGI TFM Email Type"'
+uid: O:Enum::CGI_TFM_Email_Type

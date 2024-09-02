@@ -1,0 +1,53 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Azure OpenAi Settings"
+alId: ID 2010
+namespace: System.Text
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+sourceTableType:
+  name: System.Text."Azure OpenAi Settings"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: Copilot capabilities settings has been moved to page 7775 "Copilot AI Capabilities"
+  promoted: false
+- name: ObsoleteTag
+  value: "24.0"
+  promoted: false
+- name: Caption
+  value: Azure OpenAI Settings
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: SourceTable
+  value: "2010"
+  promoted: true
+commentId: O:Page::System#Text#Azure OpenAi Settings
+summary: Page for viewing settings for Azure OpenAI.
+name: '"Azure OpenAi Settings"'
+obsoletion:
+  state: pending
+  reason: Copilot capabilities settings has been moved to page 7775 "Copilot AI Capabilities"
+  version: "24.0"
+uid: O:Page::System#Text#Azure_OpenAi_Settings

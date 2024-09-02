@@ -1,0 +1,66 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Security Groups"
+alId: ID 9871
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Security#AccessControl#Security_Group_Buffer
+  name: System.Security.AccessControl."Security Group Buffer"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: AdditionalSearchTerms
+  value: users,permissions,access right
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Security Groups
+  promoted: false
+- name: DataCaptionFields
+  value: "1"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "9022"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Security#AccessControl#Security_Group_Buffer
+    name: System.Security.AccessControl."Security Group Buffer"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: Lists
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: ui-security-groups
+  promoted: false
+- name: AboutTitle
+  value: About security groups
+  promoted: false
+- name: AboutText
+  value: Security groups help you manage permissions for groups of users.
+  promoted: false
+commentId: O:Page::System#Security#AccessControl#Security Groups
+summary: The main page for interacting with security groups.
+name: '"Security Groups"'
+uid: O:Page::System#Security#AccessControl#Security_Groups

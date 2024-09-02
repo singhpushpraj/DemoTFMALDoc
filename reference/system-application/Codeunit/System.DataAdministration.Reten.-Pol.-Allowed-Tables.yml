@@ -1,0 +1,393 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Reten. Pol. Allowed Tables"
+alId: ID 3905
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata Field = r,
+                      tabledata "Retention Policy Allowed Table" = r
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure AddAllowedTable(TableId: Integer): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table to add.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the table is in the list of allowed tables. False if the table is not in the list of allowed tables.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a table to the list of allowed tables.
+  name: AddAllowedTable
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.AddAllowedTable(Integer):Boolean
+- syntax:
+    content: 'procedure AddAllowedTable(TableId: Integer, DefaultDateFieldNo: Integer): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table to add.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DefaultDateFieldNo
+      description: The number of the date or datetime field used as default to determine the age of records in the table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the table is in the list of allowed tables. False if the table is not in the list of allowed tables.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a table to the list of allowed tables.
+  name: AddAllowedTable
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.AddAllowedTable(Integer,Integer):Boolean
+- syntax:
+    content: 'procedure AddAllowedTable(TableId: Integer, DefaultDateFieldNo: Integer, MandatoryMinRetenDays: Integer): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table to add.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DefaultDateFieldNo
+      description: The number of the date or datetime field used as default to determine the age of records in the table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: MandatoryMinRetenDays
+      description: The minimum number of days records must be kept in the table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the table is in the list of allowed tables. False if the table is not in the list of allowed tables.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a table to the list of allowed tables.
+  name: AddAllowedTable
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.AddAllowedTable(Integer,Integer,Integer):Boolean
+- syntax:
+    content: 'procedure AddAllowedTable(TableId: Integer, DefaultDateFieldNo: Integer, TableFilters: JsonArray): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table to add.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DefaultDateFieldNo
+      description: The number of the date or datetime field used as default to determine the age of records in the table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TableFilters
+      description: A JsonArray which contains the default table filters for the retention policy
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    return:
+      description: True if the table is in the list of allowed tables. False if the table is not in the list of allowed tables.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a table to the list of allowed tables.
+  name: AddAllowedTable
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.AddAllowedTable(Integer,Integer,JsonArray):Boolean
+- syntax:
+    content: 'procedure AddAllowedTable(TableId: Integer, TableFilters: JsonArray): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table to add.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: TableFilters
+      description: A JsonArray which contains the default table filters for the retention policy
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    return:
+      description: True if the table is in the list of allowed tables. False if the table is not in the list of allowed tables.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a table to the list of allowed tables.
+  name: AddAllowedTable
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.AddAllowedTable(Integer,JsonArray):Boolean
+- syntax:
+    content: 'procedure AddAllowedTable(TableId: Integer, DefaultDateFieldNo: Integer, MandatoryMinRetenDays: Integer, RetenPolFiltering: Enum "Reten. Pol. Filtering", RetenPolDeleting: Enum "Reten. Pol. Deleting", TableFilters: JsonArray): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table to add.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DefaultDateFieldNo
+      description: The number of the date or datetime field used as default to determine the age of records in the table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: MandatoryMinRetenDays
+      description: The minimum number of days records must be kept in the table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RetenPolFiltering
+      description: Determines the implementation used to filter records when applying retention polices.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Reten#_Pol#_Filtering
+        name: System.DataAdministration."Reten. Pol. Filtering"
+        isExternal: false
+    - id: RetenPolDeleting
+      description: Determines the implementation used to delete records when applying retention polices.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Reten#_Pol#_Deleting
+        name: System.DataAdministration."Reten. Pol. Deleting"
+        isExternal: false
+    - id: TableFilters
+      description: A JsonArray which contains the default table filters for the retention policy
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    return:
+      description: True if the table is in the list of allowed tables. False if the table is not in the list of allowed tables.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a table to the list of allowed tables.
+  name: AddAllowedTable
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.AddAllowedTable(Integer,Integer,Integer,Enum::System#DataAdministration#Reten#_Pol#_Filtering,Enum::System#DataAdministration#Reten#_Pol#_Deleting,JsonArray):Boolean
+- syntax:
+    content: 'procedure AddTableFilterToJsonArray(var TableFilters: JsonArray, RetentionPeriodEnum: Enum "Retention Period Enum", DateFieldNo: Integer, Enabled: Boolean, Locked: Boolean, RecordRef: RecordRef)'
+    parameters:
+    - id: TableFilters
+      description: The JsonArray to which the table filter information will be added.
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    - id: RetentionPeriodEnum
+      description: Identifies the retention period for the retention policy table filter.
+      parameterType:
+        internalReference: O:Enum::System#DataAdministration#Retention_Period_Enum
+        name: System.DataAdministration."Retention Period Enum"
+        isExternal: false
+    - id: DateFieldNo
+      description: The number of the date or datetime field used as to determine the age of records in the table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Enabled
+      description: Indicates whether the retention policy line will be enabled.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Locked
+      description: Indicates whether the retention policy line will be locked. If this parameter is true, the line will also be enabled.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: RecordRef
+      description: A record reference containing the filters to be added to the retention policy setup line.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: >-
+    This helper method is used to build an array of table filters which will be inserted automatically when creating a retention policy for the allowed table.
+
+    You must first build up the array by calling this helper function and adding all relevant table filter information before passing the JsonArray to the AddAllowedTable method.
+  name: AddTableFilterToJsonArray
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.AddTableFilterToJsonArray(JsonArray@,Enum::System#DataAdministration#Retention_Period_Enum,Integer,Boolean,Boolean,RecordRef)
+- syntax:
+    content: 'procedure AddTableFilterToJsonArray(var TableFilters: JsonArray, RetPeriodCalc: DateFormula, DateFieldNo: Integer, Enabled: Boolean, Locked: Boolean, RecordRef: RecordRef)'
+    parameters:
+    - id: TableFilters
+      description: The JsonArray to which the table filter information will be added.
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    - id: RetPeriodCalc
+      description: Identifies the retention period dateformula for the retention policy table filter.
+      parameterType:
+        name: DateFormula
+        isExternal: true
+    - id: DateFieldNo
+      description: The number of the date or datetime field used as to determine the age of records in the table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Enabled
+      description: Indicates whether the retention policy line will be enabled.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Locked
+      description: Indicates whether the retention policy line will be locked. If this parameter is true, the line will also be enabled.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: RecordRef
+      description: A record reference containing the filters to be added to the retention policy setup line.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: >-
+    This helper method is used to build an array of table filters which will be inserted automatically when creating a retention policy for the allowed table.
+
+    You must first build up the array by calling this helper function and adding all relevant table filter information before passing the JsonArray to the AddAllowedTable method.
+  name: AddTableFilterToJsonArray
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.AddTableFilterToJsonArray(JsonArray@,DateFormula,Integer,Boolean,Boolean,RecordRef)
+- syntax:
+    content: 'procedure RemoveAllowedTable(TableId: Integer): Boolean'
+    parameters:
+    - id: TableId
+      description: The ID of the table to remove.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the table is not in the list of allowed tables. False if the table is in the list of allowed tables.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Removes a table from the list of allowed tables.
+  name: RemoveAllowedTable
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.RemoveAllowedTable(Integer):Boolean
+- syntax:
+    content: 'procedure IsAllowedTable(TableId: Integer): Boolean'
+    parameters:
+    - id: TableId
+      description: The table ID to check.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: True if the table is in the list of allowed tables. False if the table is not in the list of allowed tables.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether a table exists in the list of allowed tables.
+  name: IsAllowedTable
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.IsAllowedTable(Integer):Boolean
+- syntax:
+    content: 'procedure GetAllowedTables(var AllowedTables: List of [Integer])'
+    parameters:
+    - id: AllowedTables
+      parameterType:
+        name: List of [Integer]
+        isExternal: true
+  name: GetAllowedTables
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.GetAllowedTables(List_of_[Integer]@)
+- syntax:
+    content: 'procedure GetAllowedTables(): Text'
+    return:
+      description: The allowed tables as a filter string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the allowed tables as a filter string.
+  name: GetAllowedTables
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.GetAllowedTables:Text
+- syntax:
+    content: 'procedure GetRetenPolFiltering(TableId: Integer): Enum "Reten. Pol. Filtering"'
+    parameters:
+    - id: TableId
+      description: The table ID of the allowed table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The retention policy filtering enum value.
+      returnType:
+        internalReference: O:Enum::System#DataAdministration#Reten#_Pol#_Filtering
+        name: System.DataAdministration."Reten. Pol. Filtering"
+        isExternal: false
+  summary: Returns the enum value set for retention policy filtering. This determines which code will handle the filtering of records when the retention policy for the allowed table is applied.
+  name: GetRetenPolFiltering
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.GetRetenPolFiltering(Integer):Enum::System#DataAdministration#Reten#_Pol#_Filtering
+- syntax:
+    content: 'procedure GetRetenPolDeleting(TableId: Integer): Enum "Reten. Pol. Deleting"'
+    parameters:
+    - id: TableId
+      description: The table ID of the allowed table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The retention policy deleting enum value.
+      returnType:
+        internalReference: O:Enum::System#DataAdministration#Reten#_Pol#_Deleting
+        name: System.DataAdministration."Reten. Pol. Deleting"
+        isExternal: false
+  summary: Returns the enum value set for retention policy deleting. This determines which code will handle the deleting of records when the retention policy for the allowed table is applied.
+  name: GetRetenPolDeleting
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.GetRetenPolDeleting(Integer):Enum::System#DataAdministration#Reten#_Pol#_Deleting
+- syntax:
+    content: 'procedure GetDefaultDateFieldNo(TableId: Integer): Integer'
+    parameters:
+    - id: TableId
+      description: The table ID of the allowed table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The field number of the date or datetime field in the allowed table.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Returns the number of the date or datetime field in the list of allowed tables for the given table.
+  name: GetDefaultDateFieldNo
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.GetDefaultDateFieldNo(Integer):Integer
+- syntax:
+    content: 'procedure GetMandatoryMinimumRetentionDays(TableId: Integer): Integer'
+    parameters:
+    - id: TableId
+      description: The table ID of the allowed table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The mandatory minimum number of retention days for the allowed table.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Returns the mandatory minimum number of retention days for the given table.
+  name: GetMandatoryMinimumRetentionDays
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.GetMandatoryMinimumRetentionDays(Integer):Integer
+- syntax:
+    content: 'procedure CalcMinimumExpirationDate(TableId: Integer): Date'
+    parameters:
+    - id: TableId
+      description: The table ID of the allowed table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The minimum expiration date.
+      returnType:
+        name: Date
+        isExternal: true
+  summary: Calculates the minimum expiration date for a given allowed table based on the minimum number of retention days and today's date.
+  name: CalcMinimumExpirationDate
+  uid: M:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables.CalcMinimumExpirationDate(Integer):Date
+commentId: O:Codeunit::System#DataAdministration#Reten# Pol# Allowed Tables
+summary: >-
+  This codeunit is used to manage the list of allowed tables for which retention policies can be set up.
+
+  Extensions can only approve the tables they create. Extensions cannot approve tables from other extensions.
+name: '"Reten. Pol. Allowed Tables"'
+uid: O:Codeunit::System#DataAdministration#Reten#_Pol#_Allowed_Tables

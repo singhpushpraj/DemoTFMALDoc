@@ -1,0 +1,55 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Printer Management"
+alId: ID 2616
+namespace: System.Device
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Printer Management
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: PromotedActionCategories
+  value: New,Process,Report,Manage
+  promoted: false
+- name: Permissions
+  value: tabledata Printer = r
+  promoted: false
+commentId: O:Page::System#Device#Printer Management
+summary: Exposes the list of available printers.
+name: '"Printer Management"'
+uid: O:Page::System#Device#Printer_Management

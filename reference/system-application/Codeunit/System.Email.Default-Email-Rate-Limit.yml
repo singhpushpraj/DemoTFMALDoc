@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Default Email Rate Limit"
+alId: ID 8896
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetDefaultEmailRateLimit(): Integer'
+    return:
+      returnType:
+        name: Integer
+        isExternal: true
+  name: GetDefaultEmailRateLimit
+  uid: M:Codeunit::System#Email#Default_Email_Rate_Limit.GetDefaultEmailRateLimit:Integer
+implements:
+- internalReference: O:Interface::System#Email#Default_Email_Rate_Limit
+  name: System.Email."Default Email Rate Limit"
+  isExternal: false
+commentId: O:Codeunit::System#Email#Default Email Rate Limit
+name: '"Default Email Rate Limit"'
+uid: O:Codeunit::System#Email#Default_Email_Rate_Limit

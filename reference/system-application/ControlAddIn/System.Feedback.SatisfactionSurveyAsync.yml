@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Feedback.SatisfactionSurveyAsync
+namespace: System.Feedback
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Feedback
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure SendRequest(Url: Text, Timeout: Integer)'
+    parameters:
+    - id: Url
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Timeout
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: SendRequest
+  uid: M:ControlAddIn::System#Feedback#SatisfactionSurveyAsync.SendRequest(Text,Integer)
+commentId: O:ControlAddIn::System#Feedback#SatisfactionSurveyAsync
+name: SatisfactionSurveyAsync
+uid: O:ControlAddIn::System#Feedback#SatisfactionSurveyAsync

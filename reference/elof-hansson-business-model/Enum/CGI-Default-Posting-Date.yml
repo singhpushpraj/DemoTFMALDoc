@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Default Posting Date"'
+alId: ID 60313
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: AssignmentCompatibility
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '"Work Date"'
+  uid: E:Enum::CGI_Default_Posting_Date.Work_Date
+- name: '"No Date"'
+  uid: E:Enum::CGI_Default_Posting_Date.No_Date
+- name: '"Excepted Shipping Date"'
+  uid: E:Enum::CGI_Default_Posting_Date.Excepted_Shipping_Date
+commentId: O:Enum::CGI Default Posting Date
+name: '"CGI Default Posting Date"'
+uid: O:Enum::CGI_Default_Posting_Date

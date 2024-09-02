@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Recurrence - Month"
+alId: ID 4691
+namespace: System.DateTime
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies that the recurrence will occur in Janurary.
+  name: January
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.January
+- summary: Specifies that the recurrence will occur in February.
+  name: February
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.February
+- summary: Specifies that the recurrence will occur in March.
+  name: March
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.March
+- summary: Specifies that the recurrence will occur in April.
+  name: April
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.April
+- summary: Specifies that the recurrence will occur in May.
+  name: May
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.May
+- summary: Specifies that the recurrence will occur in June.
+  name: June
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.June
+- summary: Specifies that the recurrence will occur in July.
+  name: July
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.July
+- summary: Specifies that the recurrence will occur in August.
+  name: August
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.August
+- summary: Specifies that the recurrence will occur in September.
+  name: September
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.September
+- summary: Specifies that the recurrence will occur in October.
+  name: October
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.October
+- summary: Specifies that the recurrence will occur in Novemeber.
+  name: November
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.November
+- summary: Specifies that the recurrence will occur in December.
+  name: December
+  uid: E:Enum::System#DateTime#Recurrence_-_Month.December
+commentId: O:Enum::System#DateTime#Recurrence - Month
+summary: This enum has the months during which the recurrence will occur.
+name: '"Recurrence - Month"'
+uid: O:Enum::System#DateTime#Recurrence_-_Month

@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI G/L Entry"'
+alId: ID 60315
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Processed in Post-Calc."'
+  uid: F:TableExtension::CGI_G/L_Entry.CGI_Processed_in_Post-Calc#
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Already Moved"'
+  uid: F:TableExtension::CGI_G/L_Entry.CGI_Already_Moved
+commentId: O:TableExtension::CGI G/L Entry
+summary: TableExtenion CGI G/L Entry (ID 60315).
+name: '"CGI G/L Entry"'
+uid: O:TableExtension::CGI_G/L_Entry

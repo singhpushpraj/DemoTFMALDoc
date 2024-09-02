@@ -1,0 +1,1898 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" ">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      
+      
+      
+      
+  </head>
+
+  <script type="module">
+    import options from './../../../public/main.js'
+    import { init } from './../../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../public/aldoc_logo.svg" alt="Documentation">
+            Documentation
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="O:Codeunit::System#Security#Encryption#X509Certificate2">
+  <h1>Codeunit X509Certificate2</h1>
+
+
+<div class="font-style-italic">ID 1286</div>
+<div class="font-style-italic">Namespace: System.Security.Encryption</div>
+
+
+
+
+  	<div class="summaryHolder">
+  		<div class="summary">
+			<p>Provides helper functions to work with the X509Certificate2 class.</p>
+
+  		</div>
+  	</div>
+
+
+
+  	<h2 id="properties">Properties</h2>
+
+  	<table class="table">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Value</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  					<td>Access</td>
+  					<td class="font-style-italic">
+							Public
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentEntitlements</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  			<tr>
+  					<td>InherentPermissions</td>
+  					<td class="font-style-italic">
+							X
+  					</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  	<h2 id="methods">Methods</h2>
+   <h3 class="memberNameHolder">VerifyCertificate</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use VerifyCertificate with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Verifes that a certificate is initialized and can be exported.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use VerifyCertificate with SecretText data type for Password.,24.0)]
+procedure VerifyCertificate(var CertBase64Value: Text, Password: Text, X509ContentType: Enum &quot;X509 Content Type&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								X509ContentType
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Encryption.X509-Content-Type.html">System.Security.Encryption.&quot;X509 Content Type&quot;</a>                 </td>
+   							<td>
+								<p>Specifies the format of an X.509 certificate</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if certificate is verified</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateFriendlyName</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificateFriendlyName with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the friendly name of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificateFriendlyName with SecretText data type for Password.,24.0)]
+procedure GetCertificateFriendlyName(CertBase64Value: Text, Password: Text, var FriendlyName: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FriendlyName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents certificate Friendly Name</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateSubject</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificateSubject with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the subject of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificateSubject with SecretText data type for Password.,24.0)]
+procedure GetCertificateSubject(CertBase64Value: Text, Password: Text, var Subject: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Subject
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate subject distinguished name</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateThumbprint</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificateThumbprint with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the thumbprint of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificateThumbprint with SecretText data type for Password.,24.0)]
+procedure GetCertificateThumbprint(CertBase64Value: Text, Password: Text, var Thumbprint: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Thumbprint
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Thumbprint</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateIssuer</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificateIssuer with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the issuer of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificateIssuer with SecretText data type for Password.,24.0)]
+procedure GetCertificateIssuer(CertBase64Value: Text, Password: Text, var Issuer: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Issuer
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Issuer</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateExpiration</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificateExpiration with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the expiration date of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificateExpiration with SecretText data type for Password.,24.0)]
+procedure GetCertificateExpiration(CertBase64Value: Text, Password: Text, var Expiration: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Expiration
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>Certificate Expiration Date</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateNotBefore</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificateNotBefore with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the NotBefore date of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificateNotBefore with SecretText data type for Password.,24.0)]
+procedure GetCertificateNotBefore(CertBase64Value: Text, Password: Text, var NotBefore: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NotBefore
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>Certificate NotBefore Date</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">HasPrivateKey</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use HasPrivateKey with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Checks whether the certificate has a private key based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use HasPrivateKey with SecretText data type for Password.,24.0)]
+procedure HasPrivateKey(CertBase64Value: Text, Password: Text): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the certificate has private key</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificatePropertiesAsJson</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificatePropertiesAsJson with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the certificate details in Json object</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificatePropertiesAsJson with SecretText data type for Password.,24.0)]
+procedure GetCertificatePropertiesAsJson(CertBase64Value: Text, Password: Text, var CertPropertyJson: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertPropertyJson
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate details in json</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificatePublicKey</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificatePublicKey with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets Certificate public key</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificatePublicKey with SecretText data type for Password.,24.0)]
+procedure GetCertificatePublicKey(CertBase64Value: Text, Password: Text): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificatePrivateKey</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificatePrivateKey with SecretText data type for Password and return value.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets Certificate private key</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificatePrivateKey with SecretText data type for Password and return value.,24.0)]
+procedure GetCertificatePrivateKey(CertBase64Value: Text, Password: Text): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateSerialNumber</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificateSerialNumber with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets Certificate serial number</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificateSerialNumber with SecretText data type for Password.,24.0)]
+procedure GetCertificateSerialNumber(CertBase64Value: Text, Password: Text, var SerialNumber: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SerialNumber
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate serial number</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateSerialNumberAsASCII</h3>
+   <div class="memberInfo">
+    	<div class="CAUTION alert alert-danger alert-is-danger">
+    		<h5 class="alert-title">Obsolete</h5>
+    			<p>This element will become obsolete from version 24.0. Use GetCertificateSerialNumberAsASCII with SecretText data type for Password.</p>
+    	</div>
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets Certificate serial number as ASCII</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">[NonDebuggable]
+[Obsolete(Use GetCertificateSerialNumberAsASCII with SecretText data type for Password.,24.0)]
+procedure GetCertificateSerialNumberAsASCII(CertBase64Value: Text, Password: Text, var SerialNumberASCII: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SerialNumberASCII
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate serial number as ascii</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">VerifyCertificate</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Verifes that a certificate is initialized and can be exported.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure VerifyCertificate(var CertBase64Value: Text, Password: SecretText, X509ContentType: Enum &quot;X509 Content Type&quot;): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								X509ContentType
+   							</td>
+   							<td class="font-style-italic">
+<a class="xref" href="../Enum/System.Security.Encryption.X509-Content-Type.html">System.Security.Encryption.&quot;X509 Content Type&quot;</a>                 </td>
+   							<td>
+								<p>Specifies the format of an X.509 certificate</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if certificate is verified</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateFriendlyName</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the friendly name of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificateFriendlyName(CertBase64Value: Text, Password: SecretText, var FriendlyName: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								FriendlyName
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents certificate Friendly Name</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateSubject</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the subject of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificateSubject(CertBase64Value: Text, Password: SecretText, var Subject: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Subject
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate subject distinguished name</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateThumbprint</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the thumbprint of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificateThumbprint(CertBase64Value: Text, Password: SecretText, var Thumbprint: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Thumbprint
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Thumbprint</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateIssuer</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the issuer of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificateIssuer(CertBase64Value: Text, Password: SecretText, var Issuer: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Issuer
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate Issuer</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateExpiration</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the expiration date of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificateExpiration(CertBase64Value: Text, Password: SecretText, var Expiration: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Expiration
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>Certificate Expiration Date</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateNotBefore</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the NotBefore date of the certificate based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificateNotBefore(CertBase64Value: Text, Password: SecretText, var NotBefore: DateTime)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								NotBefore
+   							</td>
+   							<td class="font-style-italic">
+DateTime                 </td>
+   							<td>
+								<p>Certificate NotBefore Date</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">HasPrivateKey</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Checks whether the certificate has a private key based on it's Base64 value.</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure HasPrivateKey(CertBase64Value: Text, Password: SecretText): Boolean</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Boolean               </td>
+   						<td>
+							<p>True if the certificate has private key</p>
+
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificatePropertiesAsJson</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Specifies the certificate details in Json object</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificatePropertiesAsJson(CertBase64Value: Text, Password: SecretText, var CertPropertyJson: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								CertPropertyJson
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate details in json</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificatePublicKey</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets Certificate public key</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificatePublicKey(CertBase64Value: Text, Password: SecretText): Text</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+Text               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificatePrivateKey</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets Certificate private key</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificatePrivateKey(CertBase64Value: Text, Password: SecretText): SecretText</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+   			<h4>Returns</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   					<tr>
+   						<td>
+SecretText               </td>
+   						<td>
+							
+   						</td>
+   					</tr>
+   				</tbody>
+   			</table>
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateSerialNumber</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets Certificate serial number</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificateSerialNumber(CertBase64Value: Text, Password: SecretText, var SerialNumber: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SerialNumber
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate serial number</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+   <h3 class="memberNameHolder">GetCertificateSerialNumberAsASCII</h3>
+   <div class="memberInfo">
+
+   		<div class="summaryHolder">
+   			<div class="summary">
+				<p>Gets Certificate serial number as ASCII</p>
+
+   			</div>
+   		</div>
+
+   		<pre><code dir="ltr" class="hljs lang-al">procedure GetCertificateSerialNumberAsASCII(CertBase64Value: Text, Password: SecretText, var SerialNumberASCII: Text)</code></pre>
+
+   			<h4>Parameters</h4>
+   			<table class="table">
+   				<thead>
+   					<tr>
+   						<th>Name</th>
+   						<th>Type</th>
+   						<th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+   						<tr>
+   							<td>
+								CertBase64Value
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Represents the certificate value encoded using the Base64 algorithm</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								Password
+   							</td>
+   							<td class="font-style-italic">
+SecretText                 </td>
+   							<td>
+								<p>Certificate Password</p>
+
+   							</td>
+   						</tr>
+   						<tr>
+   							<td>
+								SerialNumberASCII
+   							</td>
+   							<td class="font-style-italic">
+Text                 </td>
+   							<td>
+								<p>Certificate serial number as ascii</p>
+
+   							</td>
+   						</tr>
+   				</tbody>
+   			</table>
+
+
+
+   </div>
+
+  	<h2 id="see-also">See also</h2>
+  	<ul>
+  			<li><p><a href="https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object">Codeunit</a></p>
+</li>
+  	</ul>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Made with <a href="https://go.microsoft.com/fwlink/?linkid=2247728">ALDoc</a> and <a href="https://dotnet.github.io/docfx">DocFx</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

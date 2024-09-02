@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."Azure AD Permission Change Action"
+alId: ID 9017
+namespace: System.Azure.Identity
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Represents the case when either no action is needed or no action has been provided by the user.
+  name: Select
+  uid: E:Enum::System#Azure#Identity#Azure_AD_Permission_Change_Action.Select
+- summary: Represents the case when the user wants to keep the current configuration.
+  name: '"Keep Current"'
+  uid: E:Enum::System#Azure#Identity#Azure_AD_Permission_Change_Action.Keep_Current
+- summary: Represents the case when the user wants to append a new configuration to one that already exists.
+  name: Append
+  uid: E:Enum::System#Azure#Identity#Azure_AD_Permission_Change_Action.Append
+commentId: O:Enum::System#Azure#Identity#Azure AD Permission Change Action
+summary: The types of the action to take in response to permission conflicts arising out of changes to plans in Office users.
+name: '"Azure AD Permission Change Action"'
+uid: O:Enum::System#Azure#Identity#Azure_AD_Permission_Change_Action

@@ -1,0 +1,178 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."User Settings"
+alId: ID 9176
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure GetPageId(): Integer'
+    return:
+      description: The page ID for the User Settings page.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the page id for the User Settings page.
+  name: GetPageId
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.GetPageId:Integer
+- syntax:
+    content: 'procedure GetUserSettings(UserSecurityID: Guid, var UserSettings: Record "User Settings" temporary)'
+    parameters:
+    - id: UserSecurityID
+      description: The user security id of the user.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: UserSettings
+      description: The return Record with the settings od the User.
+      parameterType:
+        name: Record "User Settings" temporary
+        isExternal: true
+  summary: Gets the settings for the given user.
+  name: GetUserSettings
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.GetUserSettings(Guid,User_Settings@)
+- syntax:
+    content: 'procedure DisableTeachingTips(UserSecurityId: Guid)'
+    parameters:
+    - id: UserSecurityId
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Disables the teaching tips for a given user.
+  name: DisableTeachingTips
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.DisableTeachingTips(Guid)
+- syntax:
+    content: 'procedure EnableTeachingTips(UserSecurityId: Guid)'
+    parameters:
+    - id: UserSecurityId
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Enables the teaching tips for a given user.
+  name: EnableTeachingTips
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.EnableTeachingTips(Guid)
+- syntax:
+    content: 'procedure DisableLegacyActionBar(UserSecurityId: Guid)'
+    parameters:
+    - id: UserSecurityId
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Disables the legacy action bar for a given user.
+  name: DisableLegacyActionBar
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.DisableLegacyActionBar(Guid)
+- syntax:
+    content: 'procedure EnableLegacyActionBar(UserSecurityId: Guid)'
+    parameters:
+    - id: UserSecurityId
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Enables the legacy action bar for a given user.
+  name: EnableLegacyActionBar
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.EnableLegacyActionBar(Guid)
+- syntax:
+    content: 'procedure GetAllowedCompaniesForCurrentUser(TempCompany: __MissingTypeSymbol__)'
+    parameters:
+    - id: TempCompany
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: GetAllowedCompaniesForCurrentUser
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.GetAllowedCompaniesForCurrentUser(__MissingSymbol__@)
+events:
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnGetDefaultProfile(AllProfile: __MissingTypeSymbol__)'
+    parameters:
+    - id: AllProfile
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnGetDefaultProfile
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.OnGetDefaultProfile(__MissingSymbol__@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnGetSettingsPageID(var SettingsPageID: Integer)'
+    parameters:
+    - id: SettingsPageID
+      description: The new page ID for the user settings page.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Integration event that allows changing the settings page ID.
+  name: OnGetSettingsPageID
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.OnGetSettingsPageID(Integer@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnBeforeOpenSettings(var Handled: Boolean)'
+    parameters:
+    - id: Handled
+      description: Set to true to skip the default behavior.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Integration event that allows changing the behavior of opening the settings page.
+  name: OnBeforeOpenSettings
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.OnBeforeOpenSettings(Boolean@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnAfterGetUserSettings(var UserSettings: Record "User Settings" temporary)'
+    parameters:
+    - id: UserSettings
+      description: The User settings record to update.
+      parameterType:
+        name: Record "User Settings" temporary
+        isExternal: true
+  summary: Integration event that allows updating the User Settings record with extra values.
+  name: OnAfterGetUserSettings
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.OnAfterGetUserSettings(User_Settings@)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnUpdateUserSettings(OldSettings: Record "User Settings" temporary, NewSettings: Record "User Settings" temporary)'
+    parameters:
+    - id: OldSettings
+      description: The value of the settings before any user interaction.
+      parameterType:
+        name: Record "User Settings" temporary
+        isExternal: true
+    - id: NewSettings
+      description: The value of the settings after user interaction.
+      parameterType:
+        name: Record "User Settings" temporary
+        isExternal: true
+  summary: Integration event that allows updating the settings on related records.
+  name: OnUpdateUserSettings
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.OnUpdateUserSettings(User_Settings,User_Settings)
+- syntax:
+    signatures:
+    - '[IntegrationEvent(False,False)]'
+    content: 'procedure OnCompanyChange(NewCompanyName: Text, var IsSetupInProgress: Boolean)'
+    parameters:
+    - id: NewCompanyName
+      description: The name of the new company.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: IsSetupInProgress
+      description: Set to true if the given company is still setting up.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Integration event that fires every time the company is changed.
+  name: OnCompanyChange
+  uid: M:Codeunit::System#Environment#Configuration#User_Settings.OnCompanyChange(Text,Boolean@)
+commentId: O:Codeunit::System#Environment#Configuration#User Settings
+summary: Provides basic functionality for user settings.
+name: '"User Settings"'
+uid: O:Codeunit::System#Environment#Configuration#User_Settings

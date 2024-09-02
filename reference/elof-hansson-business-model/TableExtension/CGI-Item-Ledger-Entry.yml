@@ -1,0 +1,51 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Item Ledger Entry"'
+alId: ID 60311
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    internalReference: O:Enum::CGI_CA_CalculationLineItemType
+    name: '"CGI CA CalculationLineItemType"'
+    isExternal: false
+  name: '"CGI Division"'
+  uid: F:TableExtension::CGI_Item_Ledger_Entry.CGI_Division
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Calculated Cost per Unit"'
+  uid: F:TableExtension::CGI_Item_Ledger_Entry.CGI_Calculated_Cost_per_Unit
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI GSM"'
+  uid: F:TableExtension::CGI_Item_Ledger_Entry.CGI_GSM
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Reel Width"'
+  uid: F:TableExtension::CGI_Item_Ledger_Entry.CGI_Reel_Width
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Diameter"'
+  uid: F:TableExtension::CGI_Item_Ledger_Entry.CGI_Diameter
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Core"'
+  uid: F:TableExtension::CGI_Item_Ledger_Entry.CGI_Core
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Sheet Size"'
+  uid: F:TableExtension::CGI_Item_Ledger_Entry.CGI_Sheet_Size[20]
+commentId: O:TableExtension::CGI Item Ledger Entry
+summary: TableExtension CGI Item Ledger Entry (ID 60311) extends Record Item Ledger Entry.
+name: '"CGI Item Ledger Entry"'
+uid: O:TableExtension::CGI_Item_Ledger_Entry

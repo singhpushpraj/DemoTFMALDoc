@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Log Category"
+alId: ID 3901
+namespace: System.DataAdministration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Category used for creating log entries concerning allowed tables.
+  name: '"Retention Policy - Allowed Tables"'
+  uid: E:Enum::System#DataAdministration#Retention_Policy_Log_Category.Retention_Policy_-_Allowed_Tables
+- summary: Category used for creating log entries concerning retention period.
+  name: '"Retention Policy - Period"'
+  uid: E:Enum::System#DataAdministration#Retention_Policy_Log_Category.Retention_Policy_-_Period
+- summary: Category used for creating log entries concerning retention policy setup.
+  name: '"Retention Policy - Setup"'
+  uid: E:Enum::System#DataAdministration#Retention_Policy_Log_Category.Retention_Policy_-_Setup
+- summary: Category used for creating log entries concerning applying retention policies.
+  name: '"Retention Policy - Apply"'
+  uid: E:Enum::System#DataAdministration#Retention_Policy_Log_Category.Retention_Policy_-_Apply
+commentId: O:Enum::System#DataAdministration#Retention Policy Log Category
+summary: The Retention Policy Log Category is used to categorize log entries by area.
+name: '"Retention Policy Log Category"'
+uid: O:Enum::System#DataAdministration#Retention_Policy_Log_Category

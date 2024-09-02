@@ -1,0 +1,65 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Details"
+alId: ID 774
+namespace: System.Security.User
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Caption
+  value: User Details
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Security#User#User_Details.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Security#User#User_Details.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Security#User#User_Details.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Security#User#User_Details.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Security#User#User_Details.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Security#User#User_Details.SystemRowVersion
+commentId: O:Table::System#Security#User#User Details
+summary: Fetches user details information stored across multiple other tables.
+name: '"User Details"'
+uid: O:Table::System#Security#User#User_Details

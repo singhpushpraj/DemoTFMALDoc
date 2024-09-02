@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM LCBG Status"'
+alId: ID 70302
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '"Waiting for answer"'
+  uid: E:Enum::CGI_TFM_LCBG_Status.Waiting_for_answer
+- name: Pending
+  uid: E:Enum::CGI_TFM_LCBG_Status.Pending
+- name: Delivered
+  uid: E:Enum::CGI_TFM_LCBG_Status.Delivered
+- name: Cancelled
+  uid: E:Enum::CGI_TFM_LCBG_Status.Cancelled
+- name: Draft
+  uid: E:Enum::CGI_TFM_LCBG_Status.Draft
+commentId: O:Enum::CGI TFM LCBG Status
+summary: Contins CGI TFM LCBG Status options used in Letter of Credit Export/Import
+name: '"CGI TFM LCBG Status"'
+uid: O:Enum::CGI_TFM_LCBG_Status

@@ -1,0 +1,73 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Related Attachment"
+alId: ID 8910
+namespace: System.Email
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: BigInteger
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Email#Email_Related_Attachment.Id
+- type:
+    name: Text[1024]
+    isExternal: true
+  name: '"Attachment Name"'
+  uid: F:Table::System#Email#Email_Related_Attachment.Attachment_Name[1024]
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Attachment System ID"'
+  uid: F:Table::System#Email#Email_Related_Attachment.Attachment_System_ID
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Attachment Table ID"'
+  uid: F:Table::System#Email#Email_Related_Attachment.Attachment_Table_ID
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Email#Email_Related_Attachment.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Email#Email_Related_Attachment.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Email#Email_Related_Attachment.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Email#Email_Related_Attachment.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Email#Email_Related_Attachment.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Email#Email_Related_Attachment.SystemRowVersion
+commentId: O:Table::System#Email#Email Related Attachment
+summary: Temporary table that holds information about attachments related to an email.
+name: '"Email Related Attachment"'
+uid: O:Table::System#Email#Email_Related_Attachment

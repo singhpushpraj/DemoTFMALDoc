@@ -1,0 +1,144 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Feature Management Facade"
+alId: ID 2611
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsEnabled(FeatureId: Text[50]): Boolean'
+    parameters:
+    - id: FeatureId
+      description: the feature id in the system table "Feature Key"
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    return:
+      description: if the feature is fully enabled
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if the feature is enabled and data update, if required, is complete.
+  name: IsEnabled
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.IsEnabled(Text[50]):Boolean
+- syntax:
+    content: 'procedure AfterValidateEnabled(FeatureKey: __MissingTypeSymbol__)'
+    parameters:
+    - id: FeatureKey
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: AfterValidateEnabled
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.AfterValidateEnabled(__MissingSymbol__)
+- syntax:
+    content: 'procedure GetFeatureKeyUrlForWeb(FeatureKey: Text[50]): Text'
+    parameters:
+    - id: FeatureKey
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Gets the URL to let users try out a feature.
+
+    <param name="FeatureKey">The feature key for the feature to try.</param>
+  name: GetFeatureKeyUrlForWeb
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.GetFeatureKeyUrlForWeb(Text[50]):Text
+- syntax:
+    content: 'procedure GetImplementation(FeatureDataUpdateStatus: Record "Feature Data Update Status"): Boolean'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if the feature has an interface implementation.
+  name: GetImplementation
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.GetImplementation(Feature_Data_Update_Status):Boolean
+- syntax:
+    content: 'procedure GetTaskDescription(FeatureDataUpdateStatus: Record "Feature Data Update Status"): Text'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Retrurns the result of the interface's GetTaskDescription method.
+  name: GetTaskDescription
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.GetTaskDescription(Feature_Data_Update_Status):Text
+- syntax:
+    content: 'procedure ReviewData(FeatureDataUpdateStatus: Record "Feature Data Update Status"): Boolean'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Runs the interface's review data method.
+  name: ReviewData
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.ReviewData(Feature_Data_Update_Status):Boolean
+- syntax:
+    content: 'procedure Update(var FeatureDataUpdateStatus: Record "Feature Data Update Status"): Boolean'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      description: The current status record
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    return:
+      description: true if user picked Update or Schedule and the task is scheduled or executed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Schedules or starts update depending on the options picked on the wizard page.
+  name: Update
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.Update(Feature_Data_Update_Status@):Boolean
+- syntax:
+    content: 'procedure CancelTask(var FeatureDataUpdateStatus: Record "Feature Data Update Status", ClearStartDateTime: Boolean)'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+    - id: ClearStartDateTime
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Cancels the scheduled task before it is started.
+  name: CancelTask
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.CancelTask(Feature_Data_Update_Status@,Boolean)
+- syntax:
+    content: 'procedure UpdateData(var FeatureDataUpdateStatus: Record "Feature Data Update Status")'
+    parameters:
+    - id: FeatureDataUpdateStatus
+      parameterType:
+        name: Record "Feature Data Update Status"
+        isExternal: true
+  summary: Runs the interface's data updata method and updates the feature status.
+  name: UpdateData
+  uid: M:Codeunit::System#Environment#Configuration#Feature_Management_Facade.UpdateData(Feature_Data_Update_Status@)
+commentId: O:Codeunit::System#Environment#Configuration#Feature Management Facade
+summary: This codeunit provides public functions for feature management.
+name: '"Feature Management Facade"'
+uid: O:Codeunit::System#Environment#Configuration#Feature_Management_Facade

@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Blob Access Tier"
+alId: ID 9042
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Optimized for storing data that is accessed frequently.
+  name: Hot
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Access_Tier.Hot
+- summary: Optimized for storing data that is infrequently accessed and stored for at least 30 days.
+  name: Cool
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Access_Tier.Cool
+- summary: Optimized for storing data that is rarely accessed and stored for at least 180 days with flexible latency requirements, on the order of hours.
+  name: Archive
+  uid: E:Enum::System#Azure#Storage#ABS_Blob_Access_Tier.Archive
+commentId: O:Enum::System#Azure#Storage#ABS Blob Access Tier
+summary: >-
+  Azure storage offers different access tiers.
+
+  Azure Blog storage offers access tiers that let you manage the cost of storing large amounts of unstructured data, such as text or binary data.allowing you to store blob object data in the most cost-effective manner.
+
+  See: https://go.microsoft.com/fwlink/?linkid=2210394
+name: '"ABS Blob Access Tier"'
+uid: O:Enum::System#Azure#Storage#ABS_Blob_Access_Tier

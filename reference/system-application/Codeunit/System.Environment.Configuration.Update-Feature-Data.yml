@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Update Feature Data"
+alId: ID 2612
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: TableNo
+  value: Feature Data Update Status
+  promoted: false
+  xrefType:
+    internalReference: O:Table::System#Environment#Configuration#Feature_Data_Update_Status
+    name: System.Environment.Configuration."Feature Data Update Status"
+    isExternal: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Environment#Configuration#Update Feature Data
+summary: Codeunit that is executed by the task scheduler during the feature data update.
+name: '"Update Feature Data"'
+uid: O:Codeunit::System#Environment#Configuration#Update_Feature_Data

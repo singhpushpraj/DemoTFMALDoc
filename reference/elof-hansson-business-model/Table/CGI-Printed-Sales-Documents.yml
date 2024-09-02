@@ -1,0 +1,195 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Printed Sales Documents"'
+alId: ID 60350
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: Caption
+  value: Printed Sales Documents
+  promoted: false
+- name: LookupPageId
+  value: CGI Printed Sales Doc. List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Printed_Sales_Doc#_List
+    name: '"CGI Printed Sales Doc. List"'
+    isExternal: false
+- name: DrillDownPageId
+  value: CGI Printed Sales Doc. List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Printed_Sales_Doc#_List
+    name: '"CGI Printed Sales Doc. List"'
+    isExternal: false
+methods:
+- syntax:
+    content: 'procedure Export(DefaultFileName: Text, ShowFileDialog: Boolean): Text'
+    parameters:
+    - id: DefaultFileName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ShowFileDialog
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: Export
+  uid: M:Table::CGI_Printed_Sales_Documents.Export(Text,Boolean):Text
+- syntax:
+    content: 'procedure Import(Ref1: Code[20], Ref2: Code[20], Ref3: Code[20])'
+    parameters:
+    - id: Ref1
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: Ref2
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: Ref3
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: Import
+  uid: M:Table::CGI_Printed_Sales_Documents.Import(Code[20],Code[20],Code[20])
+- syntax:
+    content: 'procedure SaveAs(DefaultFileName: Text, ShowFileDialog: Boolean): Text'
+    parameters:
+    - id: DefaultFileName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ShowFileDialog
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: SaveAs
+  uid: M:Table::CGI_Printed_Sales_Documents.SaveAs(Text,Boolean):Text
+- syntax:
+    content: procedure FileExtToType()
+  name: FileExtToType
+  uid: M:Table::CGI_Printed_Sales_Documents.FileExtToType
+- syntax:
+    content: procedure CheckIfImage()
+  name: CheckIfImage
+  uid: M:Table::CGI_Printed_Sales_Documents.CheckIfImage
+fields:
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Entry No."'
+  uid: F:Table::CGI_Printed_Sales_Documents.Entry_No#
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Created Date-Time"'
+  uid: F:Table::CGI_Printed_Sales_Documents.Created_Date-Time
+- type:
+    name: Code[50]
+    isExternal: true
+  name: '"Created By User Name"'
+  uid: F:Table::CGI_Printed_Sales_Documents.Created_By_User_Name[50]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Description
+  uid: F:Table::CGI_Printed_Sales_Documents.Description[250]
+- type:
+    name: Option
+    isExternal: true
+  name: Type
+  uid: F:Table::CGI_Printed_Sales_Documents.Type
+- type:
+    name: Text[30]
+    isExternal: true
+  name: '"File Extension"'
+  uid: F:Table::CGI_Printed_Sales_Documents.File_Extension[30]
+- type:
+    name: Media
+    isExternal: true
+  name: Content
+  uid: F:Table::CGI_Printed_Sales_Documents.Content
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Report ID"'
+  uid: F:Table::CGI_Printed_Sales_Documents.Report_ID
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Report Caption"'
+  uid: F:Table::CGI_Printed_Sales_Documents.Report_Caption[250]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Name
+  uid: F:Table::CGI_Printed_Sales_Documents.Name[250]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Reference No. 1"'
+  uid: F:Table::CGI_Printed_Sales_Documents.Reference_No#_1[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Reference No. 2"'
+  uid: F:Table::CGI_Printed_Sales_Documents.Reference_No#_2[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Reference No. 3"'
+  uid: F:Table::CGI_Printed_Sales_Documents.Reference_No#_3[20]
+- type:
+    name: Text[250]
+    isExternal: true
+  name: '"Custom Report Description"'
+  uid: F:Table::CGI_Printed_Sales_Documents.Custom_Report_Description[250]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Printed_Sales_Documents.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Printed_Sales_Documents.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Printed_Sales_Documents.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Printed_Sales_Documents.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Printed_Sales_Documents.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Printed_Sales_Documents.SystemRowVersion
+commentId: O:Table::CGI Printed Sales Documents
+name: '"CGI Printed Sales Documents"'
+uid: O:Table::CGI_Printed_Sales_Documents

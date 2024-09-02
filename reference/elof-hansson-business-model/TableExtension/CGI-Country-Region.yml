@@ -1,0 +1,20 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Country Region"'
+alId: ID 60341
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Credit Limit (LCY)"'
+  uid: F:TableExtension::CGI_Country_Region.CGI_Credit_Limit_(LCY)
+commentId: O:TableExtension::CGI Country Region
+summary: Table Extenion CGI Country Region" (ID 60341) extends "Country/Region"
+name: '"CGI Country Region"'
+uid: O:TableExtension::CGI_Country_Region

@@ -1,0 +1,140 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Telemetry.Telemetry
+alId: ID 8711
+namespace: System.Telemetry
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Telemetry
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure LogMessage(EventId: Text, Message: Text, Verbosity: Verbosity, DataClassification: DataClassification, TelemetryScope: TelemetryScope, CustomDimensions: Dictionary of [Text, Text])'
+    parameters:
+    - id: EventId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Message
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Verbosity
+      parameterType:
+        name: Verbosity
+        isExternal: true
+    - id: DataClassification
+      parameterType:
+        name: DataClassification
+        isExternal: true
+    - id: TelemetryScope
+      parameterType:
+        name: TelemetryScope
+        isExternal: true
+    - id: CustomDimensions
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+  name: LogMessage
+  uid: M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope,Dictionary_of_[Text,Text])
+- syntax:
+    content: 'procedure LogMessage(EventId: Text, Message: Text, Verbosity: Verbosity, DataClassification: DataClassification, TelemetryScope: TelemetryScope)'
+    parameters:
+    - id: EventId
+      description: A unique identifier of the telemetry message.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Message
+      description: The main content of the telemetry message (typically contains text that can be easily read by a person).
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Verbosity
+      description: The verbosity of the telemetry message.
+      parameterType:
+        name: Verbosity
+        isExternal: true
+    - id: DataClassification
+      description: The data classification of the telemetry message.
+      parameterType:
+        name: DataClassification
+        isExternal: true
+    - id: TelemetryScope
+      description: The telemetry scope of the message.
+      parameterType:
+        name: TelemetryScope
+        isExternal: true
+  summary: Logs a telemetry message.
+  name: LogMessage
+  uid: M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification,TelemetryScope)
+- syntax:
+    content: 'procedure LogMessage(EventId: Text, Message: Text, Verbosity: Verbosity, DataClassification: DataClassification)'
+    parameters:
+    - id: EventId
+      description: A unique identifier of the telemetry message.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Message
+      description: The main content of the telemetry message (typically contains text that can be easily read by a person).
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Verbosity
+      description: The verbosity of the telemetry message.
+      parameterType:
+        name: Verbosity
+        isExternal: true
+    - id: DataClassification
+      description: The data classification of the telemetry message.
+      parameterType:
+        name: DataClassification
+        isExternal: true
+  summary: Logs a telemetry message.
+  name: LogMessage
+  uid: M:Codeunit::System#Telemetry#Telemetry.LogMessage(Text,Text,Verbosity,DataClassification)
+commentId: O:Codeunit::System#Telemetry#Telemetry
+summary: A wrapper on top of Session.LogMessage that allows for having additional common custom dimensions emitted with every message.
+remarks: >-
+  Every publisher needs to have an implementation of the "Telemetry Logger" interface and a subscriber
+
+  to "Telemetry Loggers".OnRegisterTelemetryLogger event in one of their apps in order for this codeunit
+
+  to work as expected (see "System Telemetry Logger" codeunit or example below).
+examples:
+- >2+
+
+  codeunit 50000 "PTE Telemetry Logger" implements "Telemetry Logger"
+
+  {
+     Access = Internal;
+
+     procedure LogMessage(EventId: Text; Message: Text; Verbosity: Verbosity; DataClassification: DataClassification; TelemetryScope: TelemetryScope; CustomDimensions: Dictionary of [Text, Text])
+     begin
+         Session.LogMessage(EventId, Message, Verbosity, DataClassification, TelemetryScope, CustomDimensions);
+     end;
+
+     // For the functionality to behave as expected, there should be exactly one implementation of the "Telemetry Logger" interface registered per app publisher
+     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Telemetry Loggers", 'OnRegisterTelemetryLogger', '', true, true)]
+     local procedure OnRegisterTelemetryLogger(var Sender: Codeunit "Telemetry Loggers")
+     var
+         TelemetryLogger: Codeunit "PTE Telemetry Logger";
+     begin
+         Sender.Register(TelemetryLogger);
+     end;
+  }
+name: Telemetry
+uid: O:Codeunit::System#Telemetry#Telemetry

@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection."Field Selection"
+alId: ID 9806
+namespace: System.Reflection
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Open(SelectedField: __MissingTypeSymbol__): Boolean'
+    parameters:
+    - id: SelectedField
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: Open
+  uid: M:Codeunit::System#Reflection#Field_Selection.Open(__MissingSymbol__@):Boolean
+commentId: O:Codeunit::System#Reflection#Field Selection
+summary: Exposes functionality to look up fields.
+name: '"Field Selection"'
+uid: O:Codeunit::System#Reflection#Field_Selection

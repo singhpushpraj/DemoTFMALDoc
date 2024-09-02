@@ -1,0 +1,152 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email View Policy"
+namespace: System.Email
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure GetSentEmails(var SentEmails: Record "Sent Email" temporary)'
+    parameters:
+    - id: SentEmails
+      description: The record to contain the sent emails.
+      parameterType:
+        name: Record "Sent Email" temporary
+        isExternal: true
+  summary: Get sent emails that policy allow.
+  name: GetSentEmails
+  uid: M:Interface::System#Email#Email_View_Policy.GetSentEmails(Sent_Email@)
+- syntax:
+    content: 'procedure GetOutboxEmails(var OutboxEmails: Record "Email Outbox" temporary)'
+    parameters:
+    - id: OutboxEmails
+      description: The record to contain the outbox emails.
+      parameterType:
+        name: Record "Email Outbox" temporary
+        isExternal: true
+  summary: Get outbox email that policy allow.
+  name: GetOutboxEmails
+  uid: M:Interface::System#Email#Email_View_Policy.GetOutboxEmails(Email_Outbox@)
+- syntax:
+    content: 'procedure GetSentEmails(SourceTableId: Integer, var SentEmails: Record "Sent Email" temporary)'
+    parameters:
+    - id: SourceTableId
+      description: Table id for the entity.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SentEmails
+      description: The record to contain the sent emails.
+      parameterType:
+        name: Record "Sent Email" temporary
+        isExternal: true
+  summary: Get sent emails that policy allow for a given entity.
+  name: GetSentEmails
+  uid: M:Interface::System#Email#Email_View_Policy.GetSentEmails(Integer,Sent_Email@)
+- syntax:
+    content: 'procedure GetOutboxEmails(SourceTableId: Integer, var OutboxEmails: Record "Email Outbox" temporary)'
+    parameters:
+    - id: SourceTableId
+      description: Table id for the entity.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: OutboxEmails
+      description: The record to contain the outbox emails.
+      parameterType:
+        name: Record "Email Outbox" temporary
+        isExternal: true
+  summary: Get outbox emails that policy allow for a given entity.
+  name: GetOutboxEmails
+  uid: M:Interface::System#Email#Email_View_Policy.GetOutboxEmails(Integer,Email_Outbox@)
+- syntax:
+    content: 'procedure GetSentEmails(SourceTableId: Integer, SourceSystemId: Guid, var SentEmails: Record "Sent Email" temporary)'
+    parameters:
+    - id: SourceTableId
+      description: Table id for the entity.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SourceSystemId
+      description: System id for the record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: SentEmails
+      description: The record to contain the sent emails.
+      parameterType:
+        name: Record "Sent Email" temporary
+        isExternal: true
+  summary: Get sent emails that policy allow for a given record.
+  name: GetSentEmails
+  uid: M:Interface::System#Email#Email_View_Policy.GetSentEmails(Integer,Guid,Sent_Email@)
+- syntax:
+    content: 'procedure GetOutboxEmails(SourceTableId: Integer, SourceSystemId: Guid, var OutboxEmails: Record "Email Outbox" temporary)'
+    parameters:
+    - id: SourceTableId
+      description: Table id for the entity.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SourceSystemId
+      description: System id for the record.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: OutboxEmails
+      description: The record to contain the outbox emails.
+      parameterType:
+        name: Record "Email Outbox" temporary
+        isExternal: true
+  summary: Get outbox emails that policy allow for a given record.
+  name: GetOutboxEmails
+  uid: M:Interface::System#Email#Email_View_Policy.GetOutboxEmails(Integer,Guid,Email_Outbox@)
+- syntax:
+    content: 'procedure HasAccess(SentEmail: Record "Sent Email"): Boolean'
+    parameters:
+    - id: SentEmail
+      description: Record in Sent Email
+      parameterType:
+        name: Record "Sent Email"
+        isExternal: true
+    return:
+      description: >-
+        Returns true if User has access to view sent email.
+
+        Otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Establish if User has access to sent email.
+  name: HasAccess
+  uid: M:Interface::System#Email#Email_View_Policy.HasAccess(Sent_Email):Boolean
+- syntax:
+    content: 'procedure HasAccess(OutboxEmail: Record "Email Outbox"): Boolean'
+    parameters:
+    - id: OutboxEmail
+      description: Record in Email Outbox
+      parameterType:
+        name: Record "Email Outbox"
+        isExternal: true
+    return:
+      description: >-
+        Returns true if User has access to view sent email.
+
+        Otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Establish if User has access to email in outbox.
+  name: HasAccess
+  uid: M:Interface::System#Email#Email_View_Policy.HasAccess(Email_Outbox):Boolean
+commentId: O:Interface::System#Email#Email View Policy
+summary: >-
+  The interface for a email view policy.
+
+  Email view policies decide the emails that a given User can view.
+name: '"Email View Policy"'
+uid: O:Interface::System#Email#Email_View_Policy

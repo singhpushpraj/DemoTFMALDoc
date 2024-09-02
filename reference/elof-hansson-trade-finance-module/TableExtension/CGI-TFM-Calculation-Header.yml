@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Calculation Header"'
+alId: ID 70301
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+extends:
+  internalReference: O:Table::CGI_Calculation_Header
+  name: '"CGI Calculation Header"'
+  isExternal: false
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Bank Guarantee"'
+  uid: F:TableExtension::CGI_TFM_Calculation_Header.Bank_Guarantee[100]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: '"Letter of Credit No."'
+  uid: F:TableExtension::CGI_TFM_Calculation_Header.Letter_of_Credit_No#[50]
+commentId: O:TableExtension::CGI TFM Calculation Header
+summary: >-
+  tableextension 70301 CGI TFM Calculation Header extends table CGI Calculation Header
+
+  contains TFM related fields
+name: '"CGI TFM Calculation Header"'
+uid: O:TableExtension::CGI_TFM_Calculation_Header

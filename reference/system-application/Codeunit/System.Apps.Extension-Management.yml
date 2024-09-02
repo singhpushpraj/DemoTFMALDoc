@@ -1,0 +1,504 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Management"
+alId: ID 2504
+namespace: System.Apps
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure InstallExtension(PackageId: Guid, lcid: Integer, IsUIEnabled: Boolean): Boolean'
+    parameters:
+    - id: PackageId
+      description: The ID of the extension package.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: lcid
+      description: The Locale Identifier.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: IsUIEnabled
+      description: Indicates whether the install operation is invoked through the UI.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the extention is installed successfully; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Installs an extension, based on its PackageId and Locale Identifier.
+  name: InstallExtension
+  uid: M:Codeunit::System#Apps#Extension_Management.InstallExtension(Guid,Integer,Boolean):Boolean
+- syntax:
+    content: 'procedure UninstallExtension(PackageId: Guid, IsUIEnabled: Boolean): Boolean'
+    parameters:
+    - id: PackageId
+      description: The ID of the extension package.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: IsUIEnabled
+      description: Indicates if the uninstall operation is invoked through the UI.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the extention is uninstalled successfully; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Uninstalls an extension, based on its PackageId.
+  name: UninstallExtension
+  uid: M:Codeunit::System#Apps#Extension_Management.UninstallExtension(Guid,Boolean):Boolean
+- syntax:
+    content: 'procedure UninstallExtensionAndDeleteExtensionData(PackageId: Guid, IsUIEnabled: Boolean): Boolean'
+    parameters:
+    - id: PackageId
+      description: The ID of the extension package.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: IsUIEnabled
+      description: Indicates if the uninstall operation is invoked through the UI.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the extention is uninstalled successfully; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Uninstalls an extension, based on its PackageId and permanently deletes the tables that contain data for the extension.
+  name: UninstallExtensionAndDeleteExtensionData
+  uid: M:Codeunit::System#Apps#Extension_Management.UninstallExtensionAndDeleteExtensionData(Guid,Boolean):Boolean
+- syntax:
+    content: 'procedure UploadExtension(FileStream: InStream, lcid: Integer)'
+    parameters:
+    - id: FileStream
+      description: The File Stream containing the extension to be uploaded.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: lcid
+      description: The Locale Identifier.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: >-
+    Uploads an extension, using a File Stream and based on the Locale Identifier.
+
+    This method is only applicable in SaaS environment.
+  name: UploadExtension
+  uid: M:Codeunit::System#Apps#Extension_Management.UploadExtension(InStream,Integer)
+- syntax:
+    content: 'procedure DeployExtension(AppId: Guid, lcid: Integer, IsUIEnabled: Boolean)'
+    parameters:
+    - id: AppId
+      description: The AppId of the extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: lcid
+      description: The Locale Identifier.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: IsUIEnabled
+      description: Indicates whether the install operation is invoked through the UI.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Deploys an extension, based on its ID and Locale Identifier.
+
+    This method is only applicable in SaaS environment.
+  name: DeployExtension
+  uid: M:Codeunit::System#Apps#Extension_Management.DeployExtension(Guid,Integer,Boolean)
+- syntax:
+    content: 'procedure UnpublishExtension(PackageId: Guid): Boolean'
+    parameters:
+    - id: PackageId
+      description: The PackageId of the extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the extention is unpublished successfully; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    Unpublishes an extension, based on its PackageId.
+
+    An extension can only be unpublished, if it is a per-tenant one and it has been uninstalled first.
+  name: UnpublishExtension
+  uid: M:Codeunit::System#Apps#Extension_Management.UnpublishExtension(Guid):Boolean
+- syntax:
+    content: 'procedure DownloadExtensionSource(PackageId: Guid): Boolean'
+    parameters:
+    - id: PackageId
+      description: The PackageId of the extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the operation was successful; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Downloads the source of an extension, based on its PackageId.
+  name: DownloadExtensionSource
+  uid: M:Codeunit::System#Apps#Extension_Management.DownloadExtensionSource(Guid):Boolean
+- syntax:
+    content: 'procedure GetExtensionSource(PackageId: Guid, var ExtensionSourceTempBlob: Codeunit "Temp Blob"): Boolean'
+    parameters:
+    - id: PackageId
+      description: The PackageId of the extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ExtensionSourceTempBlob
+      description: TempBlob where the zip is stored.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+    return:
+      description: True if the operation was successful; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Retrives the source of an extension, based on its PackageId.
+  name: GetExtensionSource
+  uid: M:Codeunit::System#Apps#Extension_Management.GetExtensionSource(Guid,Codeunit::System#Utilities#Temp_Blob@):Boolean
+- syntax:
+    content: 'procedure IsInstalledByPackageId(PackageId: Guid): Boolean'
+    parameters:
+    - id: PackageId
+      description: The ID of the extension package.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The result of checking whether an extension is installed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether an extension is installed, based on its PackageId.
+  name: IsInstalledByPackageId
+  uid: M:Codeunit::System#Apps#Extension_Management.IsInstalledByPackageId(Guid):Boolean
+- syntax:
+    content: 'procedure IsInstalledByAppId(AppId: Guid): Boolean'
+    parameters:
+    - id: AppId
+      description: The AppId of the extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The result of checking whether an extension is installed.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether an extension is installed, based on its AppId.
+  name: IsInstalledByAppId
+  uid: M:Codeunit::System#Apps#Extension_Management.IsInstalledByAppId(Guid):Boolean
+- syntax:
+    content: 'procedure GetAllExtensionDeploymentStatusEntries(var TempExtensionDeploymentStatus: Record "Extension Deployment Status" temporary)'
+    parameters:
+    - id: TempExtensionDeploymentStatus
+      description: Gets the list of all the Deployment Status Entries in a temporary record.
+      parameterType:
+        name: Record "Extension Deployment Status" temporary
+        isExternal: true
+  summary: Retrieves a list of all the Deployment Status Entries
+  name: GetAllExtensionDeploymentStatusEntries
+  uid: M:Codeunit::System#Apps#Extension_Management.GetAllExtensionDeploymentStatusEntries(Extension_Deployment_Status@)
+- syntax:
+    content: 'procedure GetDeployOperationInfo(OperationId: Guid, var Version: Text, var Schedule: Text, var Publisher: Text, var AppName: Text, Description: Text)'
+    parameters:
+    - id: OperationId
+      description: The OperationId of the NAVApp Tenant.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Version
+      description: Gets the Version of the NavApp.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Schedule
+      description: Gets the Schedule of the NavApp.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Publisher
+      description: Gets the Publisher of the NavApp.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AppName
+      description: Gets the AppName of the NavApp.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Description
+      description: The Description of the NavApp; in case no name is provided, the description will replace the AppName.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Retrieves the AppName,Version,Schedule,Publisher by the NAVApp Tenant OperationId.
+  name: GetDeployOperationInfo
+  uid: M:Codeunit::System#Apps#Extension_Management.GetDeployOperationInfo(Guid,Text@,Text@,Text@,Text@,Text)
+- syntax:
+    content: 'procedure RefreshStatus(OperationId: Guid)'
+    parameters:
+    - id: OperationId
+      description: The Id of the operation to be refreshed.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Refreshes the status of the Operation.
+  name: RefreshStatus
+  uid: M:Codeunit::System#Apps#Extension_Management.RefreshStatus(Guid)
+- syntax:
+    content: 'procedure ConfigureExtensionHttpClientRequestsAllowance(PackageId: Text, AreHttpClientRqstsAllowed: Boolean): Boolean'
+    parameters:
+    - id: PackageId
+      description: The Id of the extension to configure.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AreHttpClientRqstsAllowed
+      description: The value to set for "Allow HttpClient Requests".
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True configuration was successful; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Allows or disallows Http Client requests against the specified extension.
+  name: ConfigureExtensionHttpClientRequestsAllowance
+  uid: M:Codeunit::System#Apps#Extension_Management.ConfigureExtensionHttpClientRequestsAllowance(Text,Boolean):Boolean
+- syntax:
+    content: 'procedure GetLatestVersionPackageIdByAppId(AppId: Guid): Guid'
+    parameters:
+    - id: AppId
+      description: The AppId of the extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The package ID by app ID. Empty GUID, if package with the provided app ID does not exist.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Gets the PackageId of the latest Extension Version by the Extension AppId.
+  name: GetLatestVersionPackageIdByAppId
+  uid: M:Codeunit::System#Apps#Extension_Management.GetLatestVersionPackageIdByAppId(Guid):Guid
+- syntax:
+    content: 'procedure GetCurrentlyInstalledVersionPackageIdByAppId(AppId: Guid): Guid'
+    parameters:
+    - id: AppId
+      description: The AppId of the installed extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The package ID of the installed version of an extenstion. Empty GUID, if package with the provided app ID does not exist.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Gets the PackageId of the latest version of the extension by the extension's AppId.
+  name: GetCurrentlyInstalledVersionPackageIdByAppId
+  uid: M:Codeunit::System#Apps#Extension_Management.GetCurrentlyInstalledVersionPackageIdByAppId(Guid):Guid
+- syntax:
+    content: 'procedure GetSpecificVersionPackageIdByAppId(AppId: Guid, Name: Text, VersionMajor: Integer, VersionMinor: Integer, VersionBuild: Integer, VersionRevision: Integer): Guid'
+    parameters:
+    - id: AppId
+      description: The AppId of the extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Name
+      description: The input/output Name parameter of the extension. If there is no need to filter by this parameter, the default value is ''.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: VersionMajor
+      description: The input/output Version Major parameter of the extension. If there is no need to filter by this parameter, the default value is "0".
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: VersionMinor
+      description: The input/output Version Minor parameter  of the extension. If there is no need to filter by this parameter, the default value is "0"..
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: VersionBuild
+      description: The input/output Version Build parameter  of the extension. If there is no need to filter by this parameter, the default value is "0".
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: VersionRevision
+      description: The input/output Version Revision parameter  of the extension. If there is no need to filter by this parameter, the default value is "0".
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The package ID of the extension with the specified paramters.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Gets the package ID of the version of the extension by the extension's AppId, Name, Version Major, Version Minor, Version Build, Version Revision.
+  name: GetSpecificVersionPackageIdByAppId
+  uid: M:Codeunit::System#Apps#Extension_Management.GetSpecificVersionPackageIdByAppId(Guid,Text,Integer,Integer,Integer,Integer):Guid
+- syntax:
+    content: 'procedure GetExtensionLogo(AppId: Guid, var LogoTempBlob: Codeunit "Temp Blob")'
+    parameters:
+    - id: AppId
+      description: The App ID of the extension.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: LogoTempBlob
+      description: Out parameter holding the logo of the extension.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Temp_Blob
+        name: System.Utilities."Temp Blob"
+        isExternal: false
+  summary: Gets the logo of an extension.
+  name: GetExtensionLogo
+  uid: M:Codeunit::System#Apps#Extension_Management.GetExtensionLogo(Guid,Codeunit::System#Utilities#Temp_Blob@)
+- syntax:
+    content: 'procedure UploadExtensionToVersion(FileInStream: InStream, lcid: Integer, DeployTo: Enum "Extension Deploy To")'
+    parameters:
+    - id: FileInStream
+      description: The File Stream containing the extension to be uploaded.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: lcid
+      description: The Locale Identifier.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DeployTo
+      description: The version that the extension will be deployed to.
+      parameterType:
+        internalReference: O:Enum::System#Apps#Extension_Deploy_To
+        name: System.Apps."Extension Deploy To"
+        isExternal: false
+  summary: >-
+    Uploads an extension to current version, next minor or next major, using a File Stream and based on the Locale Identifier.
+
+    This method is only applicable in SaaS environment.
+  name: UploadExtensionToVersion
+  uid: M:Codeunit::System#Apps#Extension_Management.UploadExtensionToVersion(InStream,Integer,Enum::System#Apps#Extension_Deploy_To)
+- syntax:
+    content: 'procedure UploadExtensionToVersion(FileInStream: InStream, lcid: Integer, DeployTo: Enum "Extension Deploy To", SyncMode: Enum "Extension Sync Mode")'
+    parameters:
+    - id: FileInStream
+      description: The File Stream containing the extension to be uploaded.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: lcid
+      description: The Locale Identifier.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: DeployTo
+      description: The version that the extension will be deployed to.
+      parameterType:
+        internalReference: O:Enum::System#Apps#Extension_Deploy_To
+        name: System.Apps."Extension Deploy To"
+        isExternal: false
+    - id: SyncMode
+      description: The desired sync mode.
+      parameterType:
+        internalReference: O:Enum::System#Apps#Extension_Sync_Mode
+        name: System.Apps."Extension Sync Mode"
+        isExternal: false
+  summary: >-
+    Uploads an extension to current version, next minor or next major, using a File Stream and based on the Locale Identifier.
+
+    This method is only applicable in SaaS environment.
+  name: UploadExtensionToVersion
+  uid: M:Codeunit::System#Apps#Extension_Management.UploadExtensionToVersion(InStream,Integer,Enum::System#Apps#Extension_Deploy_To,Enum::System#Apps#Extension_Sync_Mode)
+- syntax:
+    content: 'procedure InstallMarketplaceExtension(AppId: Guid)'
+    parameters:
+    - id: AppId
+      description: The ID of the extension package.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Installs an extension, based on its extension id.
+  name: InstallMarketplaceExtension
+  uid: M:Codeunit::System#Apps#Extension_Management.InstallMarketplaceExtension(Guid)
+- syntax:
+    content: 'procedure GetAppName(AppId: Guid): Text'
+    parameters:
+    - id: AppId
+      description: The unique identifier of the app.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The name of the app.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the Name of the app given the App Id.
+  name: GetAppName
+  uid: M:Codeunit::System#Apps#Extension_Management.GetAppName(Guid):Text
+- syntax:
+    content: 'procedure GetDeploymentDetailedStatusMessage(OperationId: Guid): Text'
+    parameters:
+    - id: OperationId
+      description: The Id of the operation to get the detailed message from.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The detailed message as text.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the detailed message from a deployment operation.
+  name: GetDeploymentDetailedStatusMessage
+  uid: M:Codeunit::System#Apps#Extension_Management.GetDeploymentDetailedStatusMessage(Guid):Text
+- syntax:
+    content: 'procedure GetDeploymentDetailedStatusMessageAsStream(OperationId: Guid, OutStream: OutStream)'
+    parameters:
+    - id: OperationId
+      description: The Id of the operation to get the detailed message from.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: OutStream
+      description: An OutStream to write the message to.
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Writes the detailed message from a deployment operation to a stream.
+  name: GetDeploymentDetailedStatusMessageAsStream
+  uid: M:Codeunit::System#Apps#Extension_Management.GetDeploymentDetailedStatusMessageAsStream(Guid,OutStream)
+commentId: O:Codeunit::System#Apps#Extension Management
+summary: Provides features for installing and uninstalling, downloading and uploading, configuring and publishing extensions and their dependencies.
+name: '"Extension Management"'
+uid: O:Codeunit::System#Apps#Extension_Management

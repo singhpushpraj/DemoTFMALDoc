@@ -1,0 +1,675 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.RestClient."Rest Client"
+alId: ID 2350
+namespace: System.RestClient
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.RestClient
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: procedure Initialize()
+  summary: Initializes the Rest Client with the default Http Client Handler and anonymous Http authentication.
+  name: Initialize
+  uid: M:Codeunit::System#RestClient#Rest_Client.Initialize
+- syntax:
+    content: 'procedure Initialize(HttpClientHandler: Interface "Http Client Handler")'
+    parameters:
+    - id: HttpClientHandler
+      description: The Http Client Handler to use.
+      parameterType:
+        internalReference: O:Interface::System#RestClient#Http_Client_Handler
+        name: System.RestClient."Http Client Handler"
+        isExternal: false
+  summary: Initializes the Reest Client with the given Http Client Handler
+  remarks: The anynomous Http Authentication will be used.
+  name: Initialize
+  uid: M:Codeunit::System#RestClient#Rest_Client.Initialize(Interface::System#RestClient#Http_Client_Handler)
+- syntax:
+    content: 'procedure Initialize(HttpAuthentication: Interface "Http Authentication")'
+    parameters:
+    - id: HttpAuthentication
+      description: The authentication to use.
+      parameterType:
+        internalReference: O:Interface::System#RestClient#Http_Authentication
+        name: System.RestClient."Http Authentication"
+        isExternal: false
+  summary: Initializes the Rest Client with the given Http Authentication.
+  remarks: The default Http Client Handler will be used.
+  name: Initialize
+  uid: M:Codeunit::System#RestClient#Rest_Client.Initialize(Interface::System#RestClient#Http_Authentication)
+- syntax:
+    content: 'procedure Initialize(HttpClientHandler: Interface "Http Client Handler", HttpAuthentication: Interface "Http Authentication")'
+    parameters:
+    - id: HttpClientHandler
+      description: The Http Client Handler to use.
+      parameterType:
+        internalReference: O:Interface::System#RestClient#Http_Client_Handler
+        name: System.RestClient."Http Client Handler"
+        isExternal: false
+    - id: HttpAuthentication
+      description: The authentication to use.
+      parameterType:
+        internalReference: O:Interface::System#RestClient#Http_Authentication
+        name: System.RestClient."Http Authentication"
+        isExternal: false
+  summary: Initializes the Rest Client with the given Http Client Handler and Http Authentication.
+  name: Initialize
+  uid: M:Codeunit::System#RestClient#Rest_Client.Initialize(Interface::System#RestClient#Http_Client_Handler,Interface::System#RestClient#Http_Authentication)
+- syntax:
+    content: 'procedure SetDefaultRequestHeader(Name: Text, Value: Text)'
+    parameters:
+    - id: Name
+      description: The name of the request header.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The header of request header.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets a new value for an existing default header of the Http Client object, or addds the header if it does not already exist.
+  remarks: >-
+    Default request headers will be added to every request that is sent with this Rest Client instance
+
+    The Rest Client will be initialized if it was not initialized before.
+  name: SetDefaultRequestHeader
+  uid: M:Codeunit::System#RestClient#Rest_Client.SetDefaultRequestHeader(Text,Text)
+- syntax:
+    content: 'procedure SetDefaultRequestHeader(Name: Text, Value: SecretText)'
+    parameters:
+    - id: Name
+      description: The name of the request header.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Value
+      description: The header of request header.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Sets a new value for an existing default header of the Http Client object, or addds the header if it does not already exist.
+  remarks: >-
+    Default request headers will be added to every request that is sent with this Rest Client instance
+
+    The Rest Client will be initialized if it was not initialized before.
+  name: SetDefaultRequestHeader
+  uid: M:Codeunit::System#RestClient#Rest_Client.SetDefaultRequestHeader(Text,SecretText)
+- syntax:
+    content: 'procedure SetBaseAddress(Url: Text)'
+    parameters:
+    - id: Url
+      description: The base address to use.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the base address of the Rest Client.
+  remarks: >-
+    The base address will be used for every request that is sent with this Rest Client instance.
+
+    Calls to the Get, Post, Patch, Put and Delete methods must  use a relative path which will be appended to the base address.
+
+    The Rest Client will be initialized if it was not initialized before.
+  name: SetBaseAddress
+  uid: M:Codeunit::System#RestClient#Rest_Client.SetBaseAddress(Text)
+- syntax:
+    content: 'procedure GetBaseAddress(): Text'
+    return:
+      description: The base address of the Rest Client.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the base address of the Rest Client.
+  name: GetBaseAddress
+  uid: M:Codeunit::System#RestClient#Rest_Client.GetBaseAddress:Text
+- syntax:
+    content: 'procedure SetTimeOut(Timeout: Duration)'
+    parameters:
+    - id: Timeout
+      description: The timeout to use.
+      parameterType:
+        name: Duration
+        isExternal: true
+  summary: Sets the timeout of the Rest Client.
+  remarks: >-
+    The timeout will be used for every request that is sent with this Rest Client instance.
+
+    The Rest Client will be initialized if it was not initialized before.
+  name: SetTimeOut
+  uid: M:Codeunit::System#RestClient#Rest_Client.SetTimeOut(Duration)
+- syntax:
+    content: 'procedure GetTimeOut(): Duration'
+    return:
+      description: The timeout of the Rest Client.
+      returnType:
+        name: Duration
+        isExternal: true
+  summary: Gets the timeout of the Rest Client.
+  name: GetTimeOut
+  uid: M:Codeunit::System#RestClient#Rest_Client.GetTimeOut:Duration
+- syntax:
+    content: 'procedure AddCertificate(Certificate: Text)'
+    parameters:
+    - id: Certificate
+      description: The Base64 encoded certificate
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a certificate to the Rest Client.
+  remarks: >-
+    The certificate will be used for every request that is sent with this Rest Client instance.
+
+    The Rest Client will be initialized if it was not initialized before.
+  name: AddCertificate
+  uid: M:Codeunit::System#RestClient#Rest_Client.AddCertificate(Text)
+- syntax:
+    content: 'procedure AddCertificate(Certificate: Text, Password: SecretText)'
+    parameters:
+    - id: Certificate
+      description: The Base64 encoded certificate
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: The password of the certificate
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Adds a certificate to the Rest Client.
+  remarks: >-
+    The certificate will be used for every request that is sent with this Rest Client instance.
+
+    The Rest Client will be initialized if it was not initialized before.
+  name: AddCertificate
+  uid: M:Codeunit::System#RestClient#Rest_Client.AddCertificate(Text,SecretText)
+- syntax:
+    content: 'procedure SetUserAgentHeader(Value: Text)'
+    parameters:
+    - id: Value
+      description: The user agent header to use.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the user agent header of the Rest Client.
+  remarks: >-
+    Use this function to overwrite the default User-Agent header.
+
+    The default user agent header is "Dynamics 365 Business Central - |[Publisher]| [App Name]/[App Version]".
+
+    The Rest Client will be initialized if it was not initialized before.
+  name: SetUserAgentHeader
+  uid: M:Codeunit::System#RestClient#Rest_Client.SetUserAgentHeader(Text)
+- syntax:
+    content: 'procedure SetAuthorizationHeader(Value: SecretText)'
+    parameters:
+    - id: Value
+      description: The authorization header to use.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Sets the authorization header of the Rest Client.
+  remarks: >-
+    Use this function to set the authorization header.
+
+    The Rest Client will be initialized if it was not initialized before.
+  name: SetAuthorizationHeader
+  uid: M:Codeunit::System#RestClient#Rest_Client.SetAuthorizationHeader(SecretText)
+- syntax:
+    content: 'procedure Get(RequestUri: Text): Codeunit "Http Response Message"'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The response message object
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+  summary: Sends a GET request to the specified Uri and returns the response message.
+  remarks: The function fails with an error message if the request could not be sent or a response was not received.
+  name: Get
+  uid: M:Codeunit::System#RestClient#Rest_Client.Get(Text):Codeunit::System#RestClient#Http_Response_Message
+- syntax:
+    content: 'procedure Post(RequestUri: Text, Content: Codeunit "Http Content"): Codeunit "Http Response Message"'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+    return:
+      description: The response message object
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+  summary: Sends a POST request to the specified Uri and returns the response message.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    If a response was received, then the response message object contains information about the status.
+  name: Post
+  uid: M:Codeunit::System#RestClient#Rest_Client.Post(Text,Codeunit::System#RestClient#Http_Content):Codeunit::System#RestClient#Http_Response_Message
+- syntax:
+    content: 'procedure Patch(RequestUri: Text, Content: Codeunit "Http Content"): Codeunit "Http Response Message"'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+    return:
+      description: The response message object
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+  summary: Sends a PATCH request to the specified Uri and returns the response message.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    If a response was received, then the response message object contains information about the status.
+  name: Patch
+  uid: M:Codeunit::System#RestClient#Rest_Client.Patch(Text,Codeunit::System#RestClient#Http_Content):Codeunit::System#RestClient#Http_Response_Message
+- syntax:
+    content: 'procedure Put(RequestUri: Text, Content: Codeunit "Http Content"): Codeunit "Http Response Message"'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+    return:
+      description: The response message object
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+  summary: Sends a PUT request to the specified Uri and returns the response message.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    If a response was received, then the response message object contains information about the status.
+  name: Put
+  uid: M:Codeunit::System#RestClient#Rest_Client.Put(Text,Codeunit::System#RestClient#Http_Content):Codeunit::System#RestClient#Http_Response_Message
+- syntax:
+    content: 'procedure Delete(RequestUri: Text): Codeunit "Http Response Message"'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The response message object
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+  summary: Sends a DELETE request to the specified Uri and returns the response message.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    If a response was received, then the response message object contains information about the status.
+  name: Delete
+  uid: M:Codeunit::System#RestClient#Rest_Client.Delete(Text):Codeunit::System#RestClient#Http_Response_Message
+- syntax:
+    content: 'procedure GetAsJson(RequestUri: Text): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a GET request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: GetAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.GetAsJson(Text):JsonToken
+- syntax:
+    content: 'procedure PostAsJson(RequestUri: Text, Content: JsonObject): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonObject.
+      parameterType:
+        name: JsonObject
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a POST request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PostAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PostAsJson(Text,JsonObject):JsonToken
+- syntax:
+    content: 'procedure PostAsJson(RequestUri: Text, Content: JsonArray): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonArray.
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a POST request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PostAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PostAsJson(Text,JsonArray):JsonToken
+- syntax:
+    content: 'procedure PostAsJson(RequestUri: Text, Content: JsonToken): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonToken.
+      parameterType:
+        name: JsonToken
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a POST request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PostAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PostAsJson(Text,JsonToken):JsonToken
+- syntax:
+    content: 'procedure PatchAsJson(RequestUri: Text, Content: JsonObject): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonObject.
+      parameterType:
+        name: JsonObject
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a PATCH request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PatchAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PatchAsJson(Text,JsonObject):JsonToken
+- syntax:
+    content: 'procedure PatchAsJson(RequestUri: Text, Content: JsonArray): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonArray.
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a PATCH request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PatchAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PatchAsJson(Text,JsonArray):JsonToken
+- syntax:
+    content: 'procedure PatchAsJson(RequestUri: Text, Content: JsonToken): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonToken.
+      parameterType:
+        name: JsonToken
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a PATCH request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PatchAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PatchAsJson(Text,JsonToken):JsonToken
+- syntax:
+    content: 'procedure PutAsJson(RequestUri: Text, Content: JsonObject): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonObject.
+      parameterType:
+        name: JsonObject
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a PUT request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PutAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PutAsJson(Text,JsonObject):JsonToken
+- syntax:
+    content: 'procedure PutAsJson(RequestUri: Text, Content: JsonArray): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonArray.
+      parameterType:
+        name: JsonArray
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a PUT request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PutAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PutAsJson(Text,JsonArray):JsonToken
+- syntax:
+    content: 'procedure PutAsJson(RequestUri: Text, Content: JsonToken): JsonToken'
+    parameters:
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send as a JsonToken.
+      parameterType:
+        name: JsonToken
+        isExternal: true
+    return:
+      description: The response content as JsonToken
+      returnType:
+        name: JsonToken
+        isExternal: true
+  summary: Sends a PUT request to the specified Uri and returns the response content as JsonToken.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    The function also fails in case the response does not contain a success status code or a valid JSON content.
+  name: PutAsJson
+  uid: M:Codeunit::System#RestClient#Rest_Client.PutAsJson(Text,JsonToken):JsonToken
+- syntax:
+    content: 'procedure Send(Method: Enum "Http Method", RequestUri: Text): Codeunit "Http Response Message"'
+    parameters:
+    - id: Method
+      description: The HTTP method to use.
+      parameterType:
+        internalReference: O:Enum::System#RestClient#Http_Method
+        name: System.RestClient."Http Method"
+        isExternal: false
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: The response message object
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+  summary: Sends a request with the specific Http method and an empty content to the specified Uri and returns the response message.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    If a response was received, then the response message object contains information about the status.
+  name: Send
+  uid: M:Codeunit::System#RestClient#Rest_Client.Send(Enum::System#RestClient#Http_Method,Text):Codeunit::System#RestClient#Http_Response_Message
+- syntax:
+    content: 'procedure Send(Method: Enum "Http Method", RequestUri: Text, Content: Codeunit "Http Content"): Codeunit "Http Response Message"'
+    parameters:
+    - id: Method
+      description: The HTTP method to use.
+      parameterType:
+        internalReference: O:Enum::System#RestClient#Http_Method
+        name: System.RestClient."Http Method"
+        isExternal: false
+    - id: RequestUri
+      description: The Uri the request is sent to.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Content
+      description: The content to send.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Content
+        name: System.RestClient."Http Content"
+        isExternal: false
+    return:
+      description: The response message object
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+  summary: Sends a request with the specific Http method and the given content to the specified Uri and returns the response message.
+  remarks: >-
+    The function fails with an error message if the request could not be sent or a response was not received.
+
+    If a response was received, then the response message object contains information about the status.
+  name: Send
+  uid: M:Codeunit::System#RestClient#Rest_Client.Send(Enum::System#RestClient#Http_Method,Text,Codeunit::System#RestClient#Http_Content):Codeunit::System#RestClient#Http_Response_Message
+- syntax:
+    content: 'procedure Send(var HttpRequestMessage: Codeunit "Http Request Message"): Codeunit "Http Response Message"'
+    parameters:
+    - id: HttpRequestMessage
+      description: The request message to send.
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Request_Message
+        name: System.RestClient."Http Request Message"
+        isExternal: false
+    return:
+      description: The response message object
+      returnType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+  summary: Sends the given request message and returns the response message.
+  remarks: The function fails with an error message if the request could not be sent or a response was not received.
+  name: Send
+  uid: M:Codeunit::System#RestClient#Rest_Client.Send(Codeunit::System#RestClient#Http_Request_Message@):Codeunit::System#RestClient#Http_Response_Message
+commentId: O:Codeunit::System#RestClient#Rest Client
+summary: Provides functionality to easily work with the HttpClient object.
+name: '"Rest Client"'
+uid: O:Codeunit::System#RestClient#Rest_Client

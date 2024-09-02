@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Media."Video - Read"
+alId: ID 1470
+namespace: System.Media
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Media
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: This permission set is replaced with inherent permissions and is no longer needed.
+  promoted: false
+- name: ObsoleteTag
+  value: "23.0"
+  promoted: false
+commentId: O:PermissionSet::System#Media#Video - Read
+name: '"Video - Read"'
+obsoletion:
+  state: pending
+  reason: This permission set is replaced with inherent permissions and is no longer needed.
+  version: "23.0"
+uid: O:PermissionSet::System#Media#Video_-_Read

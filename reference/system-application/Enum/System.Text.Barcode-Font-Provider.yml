@@ -1,0 +1,30 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Font Provider"
+alId: ID 9203
+namespace: System.Text
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: IDAutomation 1D-barcode provider.
+  name: IDAutomation1D
+  uid: E:Enum::System#Text#Barcode_Font_Provider.IDAutomation1D
+implements:
+- internalReference: O:Interface::System#Text#Barcode_Font_Provider
+  name: System.Text."Barcode Font Provider"
+  isExternal: false
+commentId: O:Enum::System#Text#Barcode Font Provider
+summary: The available barcode font providers.
+name: '"Barcode Font Provider"'
+uid: O:Enum::System#Text#Barcode_Font_Provider

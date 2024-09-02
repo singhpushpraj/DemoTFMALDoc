@@ -1,0 +1,43 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."User Plan Members"
+alId: ID 9822
+namespace: System.Azure.Identity
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+sourceTableType:
+  name: System.Azure.Identity."User Plan"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: User Plan Members
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "9005"
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-how-users-permissions
+  promoted: false
+- name: Permissions
+  value: tabledata "User Plan" = r
+  promoted: false
+commentId: O:Page::System#Azure#Identity#User Plan Members
+summary: List page that contains all users and the plans that they are assigned to.
+name: '"User Plan Members"'
+uid: O:Page::System#Azure#Identity#User_Plan_Members

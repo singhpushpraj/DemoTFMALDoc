@@ -1,0 +1,44 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Telemetry."Telemetry Custom Dimensions"
+alId: ID 8706
+namespace: System.Telemetry
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Telemetry
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure AddCommonCustomDimension(CustomDimensionName: Text, CustomDimensionValue: Text)'
+    parameters:
+    - id: CustomDimensionName
+      description: The name of the custom dimension.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CustomDimensionValue
+      description: The value of the custom dimension.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Add a custom dimension for every telemetry message. Is used in conjunction with <see cref="OnAddCommonCustomDimensions"></see>
+  remarks: Only system metadata classified information should be added here as these custom dimensions will be used for all telemetry messages.
+  name: AddCommonCustomDimension
+  uid: M:Codeunit::System#Telemetry#Telemetry_Custom_Dimensions.AddCommonCustomDimension(Text,Text)
+commentId: O:Codeunit::System#Telemetry#Telemetry Custom Dimensions
+summary: Provides functionality for adding common custom dimensions to telemetry.
+remarks: This codeunit is only intended to be used from subscribers of <see cref="OnAddCommonCustomDimensions"></see> event.
+name: '"Telemetry Custom Dimensions"'
+uid: O:Codeunit::System#Telemetry#Telemetry_Custom_Dimensions

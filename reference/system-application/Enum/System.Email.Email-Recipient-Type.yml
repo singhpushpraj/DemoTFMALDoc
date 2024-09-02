@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Recipient Type"
+alId: ID 8901
+namespace: System.Email
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Recipient type 'To'.
+  name: To
+  uid: E:Enum::System#Email#Email_Recipient_Type.To
+- summary: Recipient type 'Cc'.
+  name: Cc
+  uid: E:Enum::System#Email#Email_Recipient_Type.Cc
+- summary: Recipient type 'Bcc'.
+  name: Bcc
+  uid: E:Enum::System#Email#Email_Recipient_Type.Bcc
+commentId: O:Enum::System#Email#Email Recipient Type
+summary: Specifies the type of an email recipient.
+name: '"Email Recipient Type"'
+uid: O:Enum::System#Email#Email_Recipient_Type

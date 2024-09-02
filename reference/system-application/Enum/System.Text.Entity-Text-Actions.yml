@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Entity Text Actions"
+alId: ID 2014
+namespace: System.Text
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Create
+  uid: E:Enum::System#Text#Entity_Text_Actions.Create
+- name: Edit
+  uid: E:Enum::System#Text#Entity_Text_Actions.Edit
+commentId: O:Enum::System#Text#Entity Text Actions
+name: '"Entity Text Actions"'
+uid: O:Enum::System#Text#Entity_Text_Actions

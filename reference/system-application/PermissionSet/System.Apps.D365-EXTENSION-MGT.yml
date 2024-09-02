@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."D365 EXTENSION MGT"
+alId: ID 2503
+namespace: System.Apps
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: (Obsolete) D365 Extension Mgt.
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: This permission set is replaced by permission set Exten. Mgt. - Admin
+  promoted: false
+- name: ObsoleteTag
+  value: "18.0"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"Exten. Mgt. - Admin"'
+  promoted: false
+commentId: O:PermissionSet::System#Apps#D365 EXTENSION MGT
+name: '"D365 EXTENSION MGT"'
+obsoletion:
+  state: pending
+  reason: This permission set is replaced by permission set Exten. Mgt. - Admin
+  version: "18.0"
+uid: O:PermissionSet::System#Apps#D365_EXTENSION_MGT

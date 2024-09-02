@@ -1,0 +1,935 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation Header"'
+alId: ID 60300
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Precalculation
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: DrillDownPageId
+  value: CGI Calculation List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Calculation_List
+    name: '"CGI Calculation List"'
+    isExternal: false
+- name: LookupPageId
+  value: CGI Calculation List
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Calculation_List
+    name: '"CGI Calculation List"'
+    isExternal: false
+methods:
+- syntax:
+    content: procedure CalcTotals()
+  summary: CalcTotals.
+  name: CalcTotals
+  uid: M:Table::CGI_Calculation_Header.CalcTotals
+- syntax:
+    content: procedure CalcNetBeforeAgentComNet()
+  summary: CalcNetBeforeAgentComNet.
+  name: CalcNetBeforeAgentComNet
+  uid: M:Table::CGI_Calculation_Header.CalcNetBeforeAgentComNet
+- syntax:
+    content: procedure CalcPercentLines()
+  summary: CalcPercentLines.
+  name: CalcPercentLines
+  uid: M:Table::CGI_Calculation_Header.CalcPercentLines
+- syntax:
+    content: procedure CalcUnitPriceLines()
+  summary: CalcUnitPriceLines.
+  name: CalcUnitPriceLines
+  uid: M:Table::CGI_Calculation_Header.CalcUnitPriceLines
+- syntax:
+    content: procedure CalcAgentComNetLines()
+  summary: CalcAgentComNetLines.
+  name: CalcAgentComNetLines
+  uid: M:Table::CGI_Calculation_Header.CalcAgentComNetLines
+- syntax:
+    content: 'procedure AssistEdit(CGICalculationHeaderP: Record "CGI Calculation Header"): Boolean'
+    parameters:
+    - id: CGICalculationHeaderP
+      description: Record "CGI Calculation Header".
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      description: Boolean if "No. Series" is set
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: To set the "No. Series"
+  name: AssistEdit
+  uid: M:Table::CGI_Calculation_Header.AssistEdit(CGI_Calculation_Header):Boolean
+- syntax:
+    content: 'procedure SetFullyPaid(): Boolean'
+    return:
+      description: Return value of type Boolean.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    To Set Value To "Invoice Fully Paid" on Calculation Card"
+
+    from Customer Ledger Entry that the Entry is fully paid or not
+  name: SetFullyPaid
+  uid: M:Table::CGI_Calculation_Header.SetFullyPaid:Boolean
+- syntax:
+    content: 'procedure ValidateShortcutDimCode(FieldNumber: Integer, var ShortcutDimCode: Code[20])'
+    parameters:
+    - id: FieldNumber
+      description: Integer.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ShortcutDimCode
+      description: VAR Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: To Copy Dimensions to Document Dimension
+  name: ValidateShortcutDimCode
+  uid: M:Table::CGI_Calculation_Header.ValidateShortcutDimCode(Integer,Code[20]@)
+- syntax:
+    content: 'procedure LookupShortcutDimCode(FieldNumber: Integer, var ShortcutDimCode: Code[20])'
+    parameters:
+    - id: FieldNumber
+      description: Integer.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ShortcutDimCode
+      description: VAR Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: To Lookup Dimensions to Document Dimension
+  name: LookupShortcutDimCode
+  uid: M:Table::CGI_Calculation_Header.LookupShortcutDimCode(Integer,Code[20]@)
+- syntax:
+    content: 'procedure ShowShortcutDimCode(var ShortcutDimCode: array[8] of Code[20])'
+    parameters:
+    - id: ShortcutDimCode
+      description: VAR array[8] of Code[20].
+      parameterType:
+        name: array[8] of Code[20]
+        isExternal: true
+  summary: To Show Dimensions from Document Dimension
+  name: ShowShortcutDimCode
+  uid: M:Table::CGI_Calculation_Header.ShowShortcutDimCode(Code[20][]@)
+- syntax:
+    content: procedure ShowDocDim()
+  summary: This will open "Document Dimensions" from "Calculation Card"
+  name: ShowDocDim
+  uid: M:Table::CGI_Calculation_Header.ShowDocDim
+- syntax:
+    content: 'procedure CreateNewDimValue(var GlobalDim1Code: Code[20], var GlobalDim2Code: Code[20])'
+    parameters:
+    - id: GlobalDim1Code
+      description: VAR Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: GlobalDim2Code
+      description: VAR Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: This will insert new "Dimension Value" same to "Calculation No." and also copy it to "Document Dimension"
+  name: CreateNewDimValue
+  uid: M:Table::CGI_Calculation_Header.CreateNewDimValue(Code[20]@,Code[20]@)
+- syntax:
+    content: 'procedure CalcSalesFXDates(var StartDate: Date, var EndDate: Date)'
+    parameters:
+    - id: StartDate
+      description: VAR Date.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      description: VAR Date.
+      parameterType:
+        name: Date
+        isExternal: true
+  summary: CalcSalesFXDates.
+  name: CalcSalesFXDates
+  uid: M:Table::CGI_Calculation_Header.CalcSalesFXDates(Date@,Date@)
+- syntax:
+    content: 'procedure CalcFreightFXDates(var StartDate: Date, var EndDate: Date, "LineNo.": Integer)'
+    parameters:
+    - id: StartDate
+      description: VAR Date.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: EndDate
+      description: VAR Date.
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: LineNo.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: CalcFreightFXDates.
+  name: CalcFreightFXDates
+  uid: M:Table::CGI_Calculation_Header.CalcFreightFXDates(Date@,Date@,Integer)
+- syntax:
+    content: procedure GetCustomer()
+  summary: GetCustomer.
+  name: GetCustomer
+  uid: M:Table::CGI_Calculation_Header.GetCustomer
+- syntax:
+    content: 'procedure GetCustName1(): Text[100]'
+    return:
+      description: Return variable Name1 of type Text[50].
+      returnType:
+        name: Text[100]
+        isExternal: true
+  summary: GetCustName1.
+  name: GetCustName1
+  uid: M:Table::CGI_Calculation_Header.GetCustName1:Text[100]
+- syntax:
+    content: 'procedure GetCustAddr1(): Text[100]'
+    return:
+      description: Return variable Addr1 of type Text[50].
+      returnType:
+        name: Text[100]
+        isExternal: true
+  summary: GetCustAddr1.
+  name: GetCustAddr1
+  uid: M:Table::CGI_Calculation_Header.GetCustAddr1:Text[100]
+- syntax:
+    content: 'procedure GetCustAddr2(): Text[50]'
+    return:
+      description: Return variable Addr2 of type Text[50].
+      returnType:
+        name: Text[50]
+        isExternal: true
+  summary: GetCustAddr2.
+  name: GetCustAddr2
+  uid: M:Table::CGI_Calculation_Header.GetCustAddr2:Text[50]
+- syntax:
+    content: 'procedure GetCustCountry(): Code[10]'
+    return:
+      description: Return variable Country of type Code[10].
+      returnType:
+        name: Code[10]
+        isExternal: true
+  summary: GetCustCountry.
+  name: GetCustCountry
+  uid: M:Table::CGI_Calculation_Header.GetCustCountry:Code[10]
+- syntax:
+    content: 'procedure GetCustCity(): Text[30]'
+    return:
+      description: Return variable City of type Text[30].
+      returnType:
+        name: Text[30]
+        isExternal: true
+  summary: GetCustCity.
+  name: GetCustCity
+  uid: M:Table::CGI_Calculation_Header.GetCustCity:Text[30]
+- syntax:
+    content: 'procedure GetCustPostCode(): Code[20]'
+    return:
+      description: Return variable PostCode of type Code[20].
+      returnType:
+        name: Code[20]
+        isExternal: true
+  summary: GetCustPostCode.
+  name: GetCustPostCode
+  uid: M:Table::CGI_Calculation_Header.GetCustPostCode:Code[20]
+- syntax:
+    content: 'procedure GetCustPhoneNo(): Text[30]'
+    return:
+      description: Return variable PhoneNo of type Text[30].
+      returnType:
+        name: Text[30]
+        isExternal: true
+  summary: GetCustPhoneNo.
+  name: GetCustPhoneNo
+  uid: M:Table::CGI_Calculation_Header.GetCustPhoneNo:Text[30]
+- syntax:
+    content: 'procedure SetAllowModify(val: Boolean)'
+    parameters:
+    - id: val
+      description: Boolean.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: SetAllowModify.
+  name: SetAllowModify
+  uid: M:Table::CGI_Calculation_Header.SetAllowModify(Boolean)
+- syntax:
+    content: procedure CreateDim()
+  summary: CreateDim.
+  name: CreateDim
+  uid: M:Table::CGI_Calculation_Header.CreateDim
+- syntax:
+    content: 'procedure FilterSalesPersonDim(DefaultDimensionP: __MissingTypeSymbol__, DimCode: Code[20], SalesPersonCode: Code[20])'
+    parameters:
+    - id: DefaultDimensionP
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: DimCode
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: SalesPersonCode
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  name: FilterSalesPersonDim
+  uid: M:Table::CGI_Calculation_Header.FilterSalesPersonDim(__MissingSymbol__@,Code[20],Code[20])
+- syntax:
+    content: procedure InitSeries()
+  summary: >-
+    This function init the series as per the Trading Document
+
+    It is a replacement to code on OnInsert Trigger
+  name: InitSeries
+  uid: M:Table::CGI_Calculation_Header.InitSeries
+- syntax:
+    content: 'procedure SelectSeries(var CGICalculationHeaderOld: Record "CGI Calculation Header", var CGICalculationHeaderNew: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderOld
+      description: VAR Record "CGI Calculation Header".
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    - id: CGICalculationHeaderNew
+      description: VAR Record "CGI Calculation Header".
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: SelectSeries.
+  name: SelectSeries
+  uid: M:Table::CGI_Calculation_Header.SelectSeries(CGI_Calculation_Header@,CGI_Calculation_Header@)
+- syntax:
+    content: procedure SeriesManualTest()
+  summary: SeriesManualTest.
+  name: SeriesManualTest
+  uid: M:Table::CGI_Calculation_Header.SeriesManualTest
+- syntax:
+    content: 'procedure SetTradeFlags(Purch: Boolean, Sale: Boolean)'
+    parameters:
+    - id: Purch
+      description: Boolean.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: Sale
+      description: Boolean.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: SetTradeFlags.
+  name: SetTradeFlags
+  uid: M:Table::CGI_Calculation_Header.SetTradeFlags(Boolean,Boolean)
+- syntax:
+    content: 'procedure IsPurchCalculation(CalculationNo: Code[20]): Boolean'
+    parameters:
+    - id: CalculationNo
+      description: Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      description: Return value of type Boolean.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: IsPurchCalculation.
+  name: IsPurchCalculation
+  uid: M:Table::CGI_Calculation_Header.IsPurchCalculation(Code[20]):Boolean
+- syntax:
+    content: procedure GetTotalSalesQty()
+  summary: GetTotalSalesQty.
+  name: GetTotalSalesQty
+  uid: M:Table::CGI_Calculation_Header.GetTotalSalesQty
+- syntax:
+    content: procedure ShowRelatedOrders()
+  summary: ShowRelatedOrders.
+  name: ShowRelatedOrders
+  uid: M:Table::CGI_Calculation_Header.ShowRelatedOrders
+- syntax:
+    content: procedure ReleaseAllOrders()
+  summary: ReleaseAllOrders.
+  name: ReleaseAllOrders
+  uid: M:Table::CGI_Calculation_Header.ReleaseAllOrders
+- syntax:
+    content: 'procedure LookupUser(UserIDValue: Code[20])'
+    parameters:
+    - id: UserIDValue
+      description: Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: LookupUser.
+  name: LookupUser
+  uid: M:Table::CGI_Calculation_Header.LookupUser(Code[20])
+- syntax:
+    content: procedure ShowPO()
+  summary: ShowPO.
+  name: ShowPO
+  uid: M:Table::CGI_Calculation_Header.ShowPO
+- syntax:
+    content: procedure ShowSO()
+  summary: ShowSO.
+  name: ShowSO
+  uid: M:Table::CGI_Calculation_Header.ShowSO
+- syntax:
+    content: procedure CopyCustomerDim()
+  summary: CopyCustomerDim.
+  name: CopyCustomerDim
+  uid: M:Table::CGI_Calculation_Header.CopyCustomerDim
+- syntax:
+    content: procedure UpdateSplitProfit()
+  summary: UpdateSplitProfit.
+  name: UpdateSplitProfit
+  uid: M:Table::CGI_Calculation_Header.UpdateSplitProfit
+- syntax:
+    content: 'procedure CalcTimeFactor(PmtTermsCode: Code[20]): Integer'
+    parameters:
+    - id: PmtTermsCode
+      description: Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      description: Return value of type Integer.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: CalcTimeFactor.
+  name: CalcTimeFactor
+  uid: M:Table::CGI_Calculation_Header.CalcTimeFactor(Code[20]):Integer
+- syntax:
+    content: 'procedure GetPmtTerms(CalcLineType: Enum "CGI CA CalculationLineType", CostRevenueNo: Code[20]): Code[10]'
+    parameters:
+    - id: CalcLineType
+      description: Option Sales,Purchase,Freight,"Other Costs","Other Revenues",Agent,"Item Ledger Entry".
+      parameterType:
+        internalReference: O:Enum::CGI_CA_CalculationLineType
+        name: '"CGI CA CalculationLineType"'
+        isExternal: false
+    - id: CostRevenueNo
+      description: Code[20].
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      description: Return value of type Code[10].
+      returnType:
+        name: Code[10]
+        isExternal: true
+  summary: GetPmtTerms.
+  name: GetPmtTerms
+  uid: M:Table::CGI_Calculation_Header.GetPmtTerms(Enum::CGI_CA_CalculationLineType,Code[20]):Code[10]
+- syntax:
+    content: procedure CopyDim5FmSalesPerson()
+  summary: CopyDim5FmSalesPerson.
+  name: CopyDim5FmSalesPerson
+  uid: M:Table::CGI_Calculation_Header.CopyDim5FmSalesPerson
+- syntax:
+    content: 'procedure GetSalesPersonName(): Text[50]'
+    return:
+      description: Return value of type Text[50].
+      returnType:
+        name: Text[50]
+        isExternal: true
+  summary: GetSalesPersonName.
+  name: GetSalesPersonName
+  uid: M:Table::CGI_Calculation_Header.GetSalesPersonName:Text[50]
+- syntax:
+    content: 'procedure CalcPostedSalesAmountLCY(): Decimal'
+    return:
+      description: Return variable SalesAmount of type Decimal.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: CalcPostedSalesAmountLCY.
+  name: CalcPostedSalesAmountLCY
+  uid: M:Table::CGI_Calculation_Header.CalcPostedSalesAmountLCY:Decimal
+- syntax:
+    content: 'procedure CalcPostedPurchAmountLCY(): Decimal'
+    return:
+      description: Return variable PurchAmount of type Decimal.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: CalcPostedPurchAmountLCY.
+  name: CalcPostedPurchAmountLCY
+  uid: M:Table::CGI_Calculation_Header.CalcPostedPurchAmountLCY:Decimal
+- syntax:
+    content: 'procedure CalcAveragePurchExchangeRate(CurrencyCode: Code[10]): Decimal'
+    parameters:
+    - id: CurrencyCode
+      description: Code[10].
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    return:
+      description: Return variable AverageExcRate of type Decimal.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: CalcAveragePurchExchangeRate.
+  name: CalcAveragePurchExchangeRate
+  uid: M:Table::CGI_Calculation_Header.CalcAveragePurchExchangeRate(Code[10]):Decimal
+- syntax:
+    content: 'procedure PurchLineWithCurrencyExists(CurrencyCode: Code[10]): Boolean'
+    parameters:
+    - id: CurrencyCode
+      description: Code[10].
+      parameterType:
+        name: Code[10]
+        isExternal: true
+    return:
+      description: Return variable Exists of type Boolean.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: PurchLineWithCurrencyExists.
+  name: PurchLineWithCurrencyExists
+  uid: M:Table::CGI_Calculation_Header.PurchLineWithCurrencyExists(Code[10]):Boolean
+- syntax:
+    content: 'procedure GetCustIntInterestRate(InterestRate: Decimal): Decimal'
+    parameters:
+    - id: InterestRate
+      description: Decimal.
+      parameterType:
+        name: Decimal
+        isExternal: true
+    return:
+      description: Return value of type Decimal.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: GetCustIntInterestRate.
+  name: GetCustIntInterestRate
+  uid: M:Table::CGI_Calculation_Header.GetCustIntInterestRate(Decimal):Decimal
+- syntax:
+    content: 'procedure ShowIntInterest(): Decimal'
+    return:
+      description: Return value of type Decimal.
+      returnType:
+        name: Decimal
+        isExternal: true
+  summary: ShowIntInterest.
+  name: ShowIntInterest
+  uid: M:Table::CGI_Calculation_Header.ShowIntInterest:Decimal
+- syntax:
+    content: procedure CreateChangeLogForStatus()
+  summary: CreateChangeLogForStatus.
+  name: CreateChangeLogForStatus
+  uid: M:Table::CGI_Calculation_Header.CreateChangeLogForStatus
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"No."'
+  uid: F:Table::CGI_Calculation_Header.No#[20]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Total Sales Quantity"'
+  uid: F:Table::CGI_Calculation_Header.Total_Sales_Quantity
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Sales Amount"'
+  uid: F:Table::CGI_Calculation_Header.Sales_Amount
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Sales Currency Code"'
+  uid: F:Table::CGI_Calculation_Header.Sales_Currency_Code[10]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Sales Payment Term Code"'
+  uid: F:Table::CGI_Calculation_Header.Sales_Payment_Term_Code[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Sales Exchange Rate"'
+  uid: F:Table::CGI_Calculation_Header.Sales_Exchange_Rate
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Sales Amount (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Sales_Amount_(LCY)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Purchase Amount (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Purchase_Amount_(LCY)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Purchase Amount"'
+  uid: F:Table::CGI_Calculation_Header.Purchase_Amount
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Agent Com of Net Percent (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Agent_Com_of_Net_Percent_(LCY)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Other Cost Amount (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Other_Cost_Amount_(LCY)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Other Revenue (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Other_Revenue_(LCY)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Internal Interest (%)"'
+  uid: F:Table::CGI_Calculation_Header.Internal_Interest_(%)
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Customer No."'
+  uid: F:Table::CGI_Calculation_Header.Customer_No#[20]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Sales Business Terms"'
+  uid: F:Table::CGI_Calculation_Header.Sales_Business_Terms[10]
+- type:
+    name: Date
+    isExternal: true
+  name: '"Created Date"'
+  uid: F:Table::CGI_Calculation_Header.Created_Date
+- type:
+    name: Date
+    isExternal: true
+  name: '"Modified Date"'
+  uid: F:Table::CGI_Calculation_Header.Modified_Date
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Exchangerate Timestamp"'
+  uid: F:Table::CGI_Calculation_Header.Exchangerate_Timestamp
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Total Costs Before Interest"'
+  uid: F:Table::CGI_Calculation_Header.Total_Costs_Before_Interest
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Total Revenue"'
+  uid: F:Table::CGI_Calculation_Header.Total_Revenue
+- type:
+    name: Decimal
+    isExternal: true
+  name: Earnings
+  uid: F:Table::CGI_Calculation_Header.Earnings
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Margin (%)"'
+  uid: F:Table::CGI_Calculation_Header.Margin_(%)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Total cost after int. and risk"'
+  uid: F:Table::CGI_Calculation_Header.Total_cost_after_int#_and_risk
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Internal Interest Amount (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Internal_Interest_Amount_(LCY)
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Customer Name"'
+  uid: F:Table::CGI_Calculation_Header.Customer_Name[100]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"No. Series"'
+  uid: F:Table::CGI_Calculation_Header.No#_Series[20]
+- type:
+    name: Date
+    isExternal: true
+  name: '"Expected Shipping Date"'
+  uid: F:Table::CGI_Calculation_Header.Expected_Shipping_Date
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Written Off"'
+  uid: F:Table::CGI_Calculation_Header.Written_Off
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Shortcut Dimension 1 Code"'
+  uid: F:Table::CGI_Calculation_Header.Shortcut_Dimension_1_Code[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Shortcut Dimension 2 Code"'
+  uid: F:Table::CGI_Calculation_Header.Shortcut_Dimension_2_Code[20]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Comment
+  uid: F:Table::CGI_Calculation_Header.Comment
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Division Code"'
+  uid: F:Table::CGI_Calculation_Header.Division_Code[10]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Ship-to Code"'
+  uid: F:Table::CGI_Calculation_Header.Ship-to_Code[10]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Net Before Agent Com Net (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Net_Before_Agent_Com_Net_(LCY)
+- type:
+    internalReference: O:Enum::CGI_CA_Calculation_Status
+    name: '"CGI CA Calculation Status"'
+    isExternal: false
+  name: Status
+  uid: F:Table::CGI_Calculation_Header.Status
+- type:
+    name: Date
+    isExternal: true
+  name: '"Status Date"'
+  uid: F:Table::CGI_Calculation_Header.Status_Date
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Salesperson Code"'
+  uid: F:Table::CGI_Calculation_Header.Salesperson_Code[10]
+- type:
+    name: Boolean
+    isExternal: true
+  name: Purchase
+  uid: F:Table::CGI_Calculation_Header.Purchase
+- type:
+    name: Boolean
+    isExternal: true
+  name: Sales
+  uid: F:Table::CGI_Calculation_Header.Sales
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Stock-keeping Costs"'
+  uid: F:Table::CGI_Calculation_Header.Stock-keeping_Costs
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Earnings after SKC"'
+  uid: F:Table::CGI_Calculation_Header.Earnings_after_SKC
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Margins after SKC"'
+  uid: F:Table::CGI_Calculation_Header.Margins_after_SKC
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"First Purchase Order No."'
+  uid: F:Table::CGI_Calculation_Header.First_Purchase_Order_No#[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"First Item No."'
+  uid: F:Table::CGI_Calculation_Header.First_Item_No#[20]
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Only Other Cost Amount (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Only_Other_Cost_Amount_(LCY)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Bank Cost Amount (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Bank_Cost_Amount_(LCY)
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Insurance Cost Amount (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Insurance_Cost_Amount_(LCY)
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Country/Region Code"'
+  uid: F:Table::CGI_Calculation_Header.Country/Region_Code[10]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Posted Invoices"'
+  uid: F:Table::CGI_Calculation_Header.Posted_Invoices
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Profit Share"'
+  uid: F:Table::CGI_Calculation_Header.Profit_Share
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Profit Share (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Profit_Share_(LCY)
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Finished By"'
+  uid: F:Table::CGI_Calculation_Header.Finished_By[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: '"Vendor name"'
+  uid: F:Table::CGI_Calculation_Header.Vendor_name[100]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"External doc no."'
+  uid: F:Table::CGI_Calculation_Header.External_doc_no#[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Dimension Set ID"'
+  uid: F:Table::CGI_Calculation_Header.Dimension_Set_ID
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"Cust. Balance (LCY)"'
+  uid: F:Table::CGI_Calculation_Header.Cust#_Balance_(LCY)
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Shortcut Dimension 3 Code"'
+  uid: F:Table::CGI_Calculation_Header.Shortcut_Dimension_3_Code[20]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Approval Requested (Earnings)"'
+  uid: F:Table::CGI_Calculation_Header.Approval_Requested_(Earnings)
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Approval Confirmed (Earnings)"'
+  uid: F:Table::CGI_Calculation_Header.Approval_Confirmed_(Earnings)
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Approval Requested (Goods)"'
+  uid: F:Table::CGI_Calculation_Header.Approval_Requested_(Goods)
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Approval Confirmed (Goods)"'
+  uid: F:Table::CGI_Calculation_Header.Approval_Confirmed_(Goods)
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Credit Approved"'
+  uid: F:Table::CGI_Calculation_Header.Credit_Approved
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Credit Approval Requested"'
+  uid: F:Table::CGI_Calculation_Header.Credit_Approval_Requested
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Vat Posting Group"'
+  uid: F:Table::CGI_Calculation_Header.Vat_Posting_Group[10]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"VAT Bus. Posting Group"'
+  uid: F:Table::CGI_Calculation_Header.VAT_Bus#_Posting_Group[20]
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"Location Code"'
+  uid: F:Table::CGI_Calculation_Header.Location_Code[10]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"LC Doc No."'
+  uid: F:Table::CGI_Calculation_Header.LC_Doc_No#[20]
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"BG Doc No."'
+  uid: F:Table::CGI_Calculation_Header.BG_Doc_No#[20]
+- type:
+    name: Date
+    isExternal: true
+  name: '"Status Update"'
+  uid: F:Table::CGI_Calculation_Header.Status_Update
+- type:
+    internalReference: O:Enum::CGI_Calc#_Approval_Status
+    name: '"CGI Calc. Approval Status"'
+    isExternal: false
+  name: '"Earnings Approval Status"'
+  uid: F:Table::CGI_Calculation_Header.Earnings_Approval_Status
+- type:
+    internalReference: O:Enum::CGI_Calc#_Approval_Status
+    name: '"CGI Calc. Approval Status"'
+    isExternal: false
+  name: '"Credit Approval Status"'
+  uid: F:Table::CGI_Calculation_Header.Credit_Approval_Status
+- type:
+    name: Code[50]
+    isExternal: true
+  name: '"Quote Status By"'
+  uid: F:Table::CGI_Calculation_Header.Quote_Status_By[50]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Calculation_Header.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Calculation_Header.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Calculation_Header.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Calculation_Header.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Calculation_Header.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Calculation_Header.SystemRowVersion
+commentId: O:Table::CGI Calculation Header
+summary: Table CGI Calculation Header (ID 60300).
+name: '"CGI Calculation Header"'
+uid: O:Table::CGI_Calculation_Header

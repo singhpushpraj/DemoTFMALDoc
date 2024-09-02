@@ -1,0 +1,110 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."SharePoint Folder"
+alId: ID 9106
+namespace: System.Integration.Sharepoint
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: Caption
+  value: SharePoint Folder
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: '"Unique Id"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.Unique_Id
+- type:
+    name: Text[250]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.Name[250]
+- type:
+    name: DateTime
+    isExternal: true
+  name: Created
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.Created
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Item Count"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.Item_Count
+- type:
+    name: Boolean
+    isExternal: true
+  name: Exists
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.Exists
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Server Relative Url"'
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.Server_Relative_Url[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataId
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.OdataId[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataType
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.OdataType[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: OdataEditLink
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.OdataEditLink[2048]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Integration#Sharepoint#SharePoint_Folder.SystemRowVersion
+commentId: O:Table::System#Integration#Sharepoint#SharePoint Folder
+summary: Holds information about folder entity.
+name: '"SharePoint Folder"'
+uid: O:Table::System#Integration#Sharepoint#SharePoint_Folder

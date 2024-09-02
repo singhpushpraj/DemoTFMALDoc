@@ -1,0 +1,27 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CAW Avail Purchase Lines"'
+alId: ID 60320
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+methods:
+- syntax:
+    content: 'procedure SetCalculationLine(var CurrentCGICalculationLine: Record "CGI Calculation Line", CurrentReservationEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: CurrentCGICalculationLine
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    - id: CurrentReservationEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: SetCalculationLine
+  uid: M:PageExtension::CGI_CAW_Avail_Purchase_Lines.SetCalculationLine(CGI_Calculation_Line@,__MissingSymbol__)
+commentId: O:PageExtension::CGI CAW Avail Purchase Lines
+name: '"CGI CAW Avail Purchase Lines"'
+uid: O:PageExtension::CGI_CAW_Avail_Purchase_Lines

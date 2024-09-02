@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Visualization."Cues And KPIs Style"
+alId: ID 9701
+namespace: System.Visualization
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Visualization
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Specifies that no style will be used when rendering the cue.
+  name: None
+  uid: E:Enum::System#Visualization#Cues_And_KPIs_Style.None
+- summary: Specifies that the Favorable style will be used when rendering the cue.
+  name: Favorable
+  uid: E:Enum::System#Visualization#Cues_And_KPIs_Style.Favorable
+- summary: Specifies that the Unfavorable style will be used when rendering the cue.
+  name: Unfavorable
+  uid: E:Enum::System#Visualization#Cues_And_KPIs_Style.Unfavorable
+- summary: Specifies that the Ambiguous style will be used when rendering the cue.
+  name: Ambiguous
+  uid: E:Enum::System#Visualization#Cues_And_KPIs_Style.Ambiguous
+- summary: Specifies that the Subordinate style will be used when rendering the cue.
+  name: Subordinate
+  uid: E:Enum::System#Visualization#Cues_And_KPIs_Style.Subordinate
+commentId: O:Enum::System#Visualization#Cues And KPIs Style
+summary: >-
+  This enum has the styles for the cues and KPIs on RoleCenter pages.
+
+  <remarks>The values match the original option field on the Cue Setup table, values 1 to 6 are blank options to be extended.</remarks>
+name: '"Cues And KPIs Style"'
+uid: O:Enum::System#Visualization#Cues_And_KPIs_Style

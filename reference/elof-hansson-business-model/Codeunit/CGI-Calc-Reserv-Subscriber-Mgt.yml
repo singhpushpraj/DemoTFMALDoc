@@ -1,0 +1,86 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calc Reserv Subscriber Mgt"'
+alId: ID 60306
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure CreateReservationSetFrom(TrackingSpecificationFrom: __MissingTypeSymbol__)'
+    parameters:
+    - id: TrackingSpecificationFrom
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: CreateReservationSetFrom
+  uid: M:Codeunit::CGI_Calc_Reserv_Subscriber_Mgt.CreateReservationSetFrom(__MissingSymbol__)
+- syntax:
+    signatures:
+    - '[Scope(Cloud)]'
+    content: 'procedure CreateReservation(var CGICalculationLineP: Record "CGI Calculation Line", Description: Text[50], ExpectedReceiptDate: Date, Quantity: Decimal, QuantityBase: Decimal, ForSerialNo: Code[50], ForLotNo: Code[50])'
+    parameters:
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    - id: Description
+      parameterType:
+        name: Text[50]
+        isExternal: true
+    - id: ExpectedReceiptDate
+      parameterType:
+        name: Date
+        isExternal: true
+    - id: Quantity
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: QuantityBase
+      parameterType:
+        name: Decimal
+        isExternal: true
+    - id: ForSerialNo
+      parameterType:
+        name: Code[50]
+        isExternal: true
+    - id: ForLotNo
+      parameterType:
+        name: Code[50]
+        isExternal: true
+  name: CreateReservation
+  uid: M:Codeunit::CGI_Calc_Reserv_Subscriber_Mgt.CreateReservation(CGI_Calculation_Line@,Text[50],Date,Decimal,Decimal,Code[50],Code[50])
+- syntax:
+    content: 'procedure SetReservationFilters(ReservEntry: __MissingTypeSymbol__, CGICalculationLineP: Record "CGI Calculation Line")'
+    parameters:
+    - id: ReservEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+  name: SetReservationFilters
+  uid: M:Codeunit::CGI_Calc_Reserv_Subscriber_Mgt.SetReservationFilters(__MissingSymbol__@,CGI_Calculation_Line)
+- syntax:
+    content: 'procedure GetSourceCaption(CGICalculationLineP: Record "CGI Calculation Line"): Text'
+    parameters:
+    - id: CGICalculationLineP
+      parameterType:
+        name: Record "CGI Calculation Line"
+        isExternal: true
+    return:
+      returnType:
+        name: Text
+        isExternal: true
+  name: GetSourceCaption
+  uid: M:Codeunit::CGI_Calc_Reserv_Subscriber_Mgt.GetSourceCaption(CGI_Calculation_Line):Text
+commentId: O:Codeunit::CGI Calc Reserv Subscriber Mgt
+name: '"CGI Calc Reserv Subscriber Mgt"'
+uid: O:Codeunit::CGI_Calc_Reserv_Subscriber_Mgt

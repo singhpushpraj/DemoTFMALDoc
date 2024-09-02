@@ -1,0 +1,46 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Policy Log Entries"
+alId: ID 3904
+namespace: System.DataAdministration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+sourceTableType:
+  name: System.DataAdministration."Retention Policy Log Entry"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Retention Policy Log Entries
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Lists
+  promoted: false
+- name: SourceTable
+  value: "3905"
+  promoted: true
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Editable
+  value: "False"
+  promoted: false
+- name: SourceTableView
+  value: order(descending)
+  promoted: false
+- name: Permissions
+  value: tabledata "Retention Policy Log Entry" = r
+  promoted: false
+commentId: O:Page::System#DataAdministration#Retention Policy Log Entries
+summary: Lists the entries in the Retention Policy Log.
+name: '"Retention Policy Log Entries"'
+uid: O:Page::System#DataAdministration#Retention_Policy_Log_Entries

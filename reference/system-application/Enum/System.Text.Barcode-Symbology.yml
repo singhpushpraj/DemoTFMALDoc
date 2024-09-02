@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Symbology"
+alId: ID 9204
+namespace: System.Text
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: Code 39 - An alpha-numeric barcode that encodes uppercase letters, numbers and some symbols; it is also referred to as Barcode/39, the 3 of 9 Code and LOGMARS Code.
+  name: Code39
+  uid: E:Enum::System#Text#Barcode_Symbology.Code39
+- summary: Codabar - A numeric barcode encoding numbers with a slightly higher density than Code 39.
+  name: Codabar
+  uid: E:Enum::System#Text#Barcode_Symbology.Codabar
+- summary: Code 128 - Alpha-numeric barcode with three character sets. Supports Code-128, GS1-128 (Formerly known as UCC/EAN-128) and ISBT-128.
+  name: Code128
+  uid: E:Enum::System#Text#Barcode_Symbology.Code128
+- summary: Code 93 - Similar to Code 39, but requires two checksum characters.
+  name: Code93
+  uid: E:Enum::System#Text#Barcode_Symbology.Code93
+- summary: Interleaved 2 of 5 - The Interleaved 2 of 5 barcode symbology encodes numbers in pairs, similar to Code 128 set C.
+  name: Interleaved2of5
+  uid: E:Enum::System#Text#Barcode_Symbology.Interleaved2of5
+- summary: Postenet - The Intelligent Mail customer barcode combines the information of both the POSTNET and PLANET symbologies, and additional information, into a single barcode that is about the same size as the traditional POSTNET symbol.
+  name: Postnet
+  uid: E:Enum::System#Text#Barcode_Symbology.Postnet
+- summary: MIS - The MSI Plessey barcode symbology was designed in the 1970s by the Plessey Company in England and has practiced primarily in libraries and retail applications.
+  name: MSI
+  uid: E:Enum::System#Text#Barcode_Symbology.MSI
+- summary: EAN-8 - The MSI Plessey barcode symbology was designed in the 1970s by the Plessey Company in England and has practiced primarily in libraries and retail applications.
+  name: '"EAN-8"'
+  uid: E:Enum::System#Text#Barcode_Symbology.EAN-8
+- summary: EAN-13 - The EAN-13 was developed as a superset of UPC-A, adding an extra digit to the beginning of every UPC-A number.
+  name: '"EAN-13"'
+  uid: E:Enum::System#Text#Barcode_Symbology.EAN-13
+- summary: 'UPC-A - The Universal Product Code (UPC; redundantly: UPC code) is a barcode symbology that is widely used in the United States, Canada, Europe, Australia, New Zealand, and other countries/regions for tracking trade items in stores.'
+  name: '"UPC-A"'
+  uid: E:Enum::System#Text#Barcode_Symbology.UPC-A
+- summary: UPC-E -  To allow the use of UPC barcodes on smaller packages, where a full 12-digit barcode may not fit, a 'zero-suppressed version of UPC was developed, called UPC-E.
+  name: '"UPC-E"'
+  uid: E:Enum::System#Text#Barcode_Symbology.UPC-E
+commentId: O:Enum::System#Text#Barcode Symbology
+summary: The available barcode symbologies.
+name: '"Barcode Symbology"'
+uid: O:Enum::System#Text#Barcode_Symbology

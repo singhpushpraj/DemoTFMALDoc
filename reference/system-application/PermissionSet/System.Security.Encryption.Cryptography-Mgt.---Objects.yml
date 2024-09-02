@@ -1,0 +1,18 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."Cryptography Mgt. - Objects"
+alId: ID 1258
+namespace: System.Security.Encryption
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+commentId: O:PermissionSet::System#Security#Encryption#Cryptography Mgt# - Objects
+name: '"Cryptography Mgt. - Objects"'
+uid: O:PermissionSet::System#Security#Encryption#Cryptography_Mgt#_-_Objects

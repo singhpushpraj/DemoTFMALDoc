@@ -1,0 +1,85 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."Signature Algorithm v2"
+namespace: System.Security.Encryption
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure GetInstance(DotNetAsymmetricAlgorithm: DotNet "System.Security.Cryptography.AsymmetricAlgorithm")'
+    parameters:
+    - id: DotNetAsymmetricAlgorithm
+      parameterType:
+        name: DotNet "System.Security.Cryptography.AsymmetricAlgorithm"
+        isExternal: true
+  name: GetInstance
+  uid: M:Interface::System#Security#Encryption#Signature_Algorithm_v2.GetInstance(__MissingSymbol__@)
+- syntax:
+    content: 'procedure FromSecretXmlString(XmlString: SecretText)'
+    parameters:
+    - id: XmlString
+      parameterType:
+        name: SecretText
+        isExternal: true
+  name: FromSecretXmlString
+  uid: M:Interface::System#Security#Encryption#Signature_Algorithm_v2.FromSecretXmlString(SecretText)
+- syntax:
+    content: 'procedure SignData(DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureOutStream: OutStream)'
+    parameters:
+    - id: DataInStream
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureOutStream
+      parameterType:
+        name: OutStream
+        isExternal: true
+  name: SignData
+  uid: M:Interface::System#Security#Encryption#Signature_Algorithm_v2.SignData(InStream,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+- syntax:
+    content: 'procedure ToSecretXmlString(IncludePrivateParameters: Boolean): SecretText'
+    parameters:
+    - id: IncludePrivateParameters
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      returnType:
+        name: SecretText
+        isExternal: true
+  name: ToSecretXmlString
+  uid: M:Interface::System#Security#Encryption#Signature_Algorithm_v2.ToSecretXmlString(Boolean):SecretText
+- syntax:
+    content: 'procedure VerifyData(DataInStream: InStream, HashAlgorithm: Enum "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    parameters:
+    - id: DataInStream
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: HashAlgorithm
+      parameterType:
+        internalReference: O:Enum::System#Security#Encryption#Hash_Algorithm
+        name: System.Security.Encryption."Hash Algorithm"
+        isExternal: false
+    - id: SignatureInStream
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: VerifyData
+  uid: M:Interface::System#Security#Encryption#Signature_Algorithm_v2.VerifyData(InStream,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+commentId: O:Interface::System#Security#Encryption#Signature Algorithm v2
+name: '"Signature Algorithm v2"'
+uid: O:Interface::System#Security#Encryption#Signature_Algorithm_v2

@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Template Custom Field"
+alId: ID 9981
+namespace: System.Integration.Word
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetTableID(): Integer'
+    return:
+      description: The current table id.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Get the current table id. This is the table that you want to add fields for.
+  name: GetTableID
+  uid: M:Codeunit::System#Integration#Word#Word_Template_Custom_Field.GetTableID:Integer
+- syntax:
+    content: 'procedure AddField(CustomFieldName: Text[20])'
+    parameters:
+    - id: CustomFieldName
+      description: Name of the custom field.
+      parameterType:
+        name: Text[20]
+        isExternal: true
+  summary: Add this custom field to word templates using the given table id.
+  name: AddField
+  uid: M:Codeunit::System#Integration#Word#Word_Template_Custom_Field.AddField(Text[20])
+commentId: O:Codeunit::System#Integration#Word#Word Template Custom Field
+summary: Provides an interface to define custom fields for Word Templates
+name: '"Word Template Custom Field"'
+uid: O:Codeunit::System#Integration#Word#Word_Template_Custom_Field

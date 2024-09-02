@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Sales Order"'
+alId: ID 60315
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Sales Order
+summary: Pageextension CGI Sales Order (ID 60315) extends page sales order
+name: '"CGI Sales Order"'
+uid: O:PageExtension::CGI_Sales_Order

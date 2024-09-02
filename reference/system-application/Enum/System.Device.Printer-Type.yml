@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Printer Type"
+alId: ID 2619
+namespace: System.Device
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies a local printer.
+  name: '"Local Printer"'
+  uid: E:Enum::System#Device#Printer_Type.Local_Printer
+- summary: Specifies a cloud printer.
+  name: '"Network Printer"'
+  uid: E:Enum::System#Device#Printer_Type.Network_Printer
+commentId: O:Enum::System#Device#Printer Type
+summary: Specifies the type of a printer.
+name: '"Printer Type"'
+uid: O:Enum::System#Device#Printer_Type

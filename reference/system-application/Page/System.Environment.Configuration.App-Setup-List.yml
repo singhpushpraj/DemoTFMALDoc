@@ -1,0 +1,73 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."App Setup List"
+alId: ID 1991
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  name: System.Environment.Configuration."Guided Experience Item"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: App Setups
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "1990"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-get-ready-business
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata "Guided Experience Item" = r,
+                      tabledata "Primary Guided Experience Item" = r
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetExtensionId(AppID: Guid)'
+    parameters:
+    - id: AppID
+      parameterType:
+        name: Guid
+        isExternal: true
+  name: SetExtensionId
+  uid: M:Page::System#Environment#Configuration#App_Setup_List.SetExtensionId(Guid)
+commentId: O:Page::System#Environment#Configuration#App Setup List
+summary: This page shows all registered setups.
+name: '"App Setup List"'
+uid: O:Page::System#Environment#Configuration#App_Setup_List

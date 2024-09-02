@@ -1,0 +1,52 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration.Roles
+alId: ID 9212
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Available Roles
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: tabledata "All Profile" = r
+  promoted: false
+methods:
+- syntax:
+    content: procedure Initialize()
+  summary: Initializes the page by populating the source record.
+  name: Initialize
+  uid: M:Page::System#Environment#Configuration#Roles.Initialize
+commentId: O:Page::System#Environment#Configuration#Roles
+summary: List page that contains all available roles.
+name: Roles
+uid: O:Page::System#Environment#Configuration#Roles

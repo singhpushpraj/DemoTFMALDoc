@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment."Client Type Management"
+alId: ID 4030
+namespace: System.Environment
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: SingleInstance
+  value: "True"
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetCurrentClientType(): ClientType'
+    return:
+      description: The client type of the current session.
+      returnType:
+        name: ClientType
+        isExternal: true
+  summary: Gets the current type of the client being used by the caller, e.g. Phone, Web, Tablet etc.
+  remarks: Use the GetCurrentClientType wrapper method when you want to test a flow on a different type of client.
+  examples:
+  - >+
+    Example
+
+    ``` AL
+
+    IF ClientTypeManagement.GetCurrentClientType IN [CLIENTTYPE::xxx, CLIENTTYPE::yyy] THEN
+
+    ```
+  name: GetCurrentClientType
+  uid: M:Codeunit::System#Environment#Client_Type_Management.GetCurrentClientType:ClientType
+commentId: O:Codeunit::System#Environment#Client Type Management
+summary: Exposes functionality to fetch the client type that the user is currently using.
+name: '"Client Type Management"'
+uid: O:Codeunit::System#Environment#Client_Type_Management

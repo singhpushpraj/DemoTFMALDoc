@@ -1,0 +1,72 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Sharepoint."HTTP Diagnostics"
+namespace: System.Integration.Sharepoint
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Integration.Sharepoint
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsSuccessStatusCode(): Boolean'
+    return:
+      description: HttpResponseMessage.IsSuccessStatusCode
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets reponse details.
+  name: IsSuccessStatusCode
+  uid: M:Interface::System#Integration#Sharepoint#HTTP_Diagnostics.IsSuccessStatusCode:Boolean
+- syntax:
+    content: 'procedure GetHttpStatusCode(): Integer'
+    return:
+      description: HttpResponseMessage.StatusCode
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets response details.
+  name: GetHttpStatusCode
+  uid: M:Interface::System#Integration#Sharepoint#HTTP_Diagnostics.GetHttpStatusCode:Integer
+- syntax:
+    content: 'procedure GetHttpRetryAfter(): Integer'
+    return:
+      description: Retry-after header value
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets response details.
+  name: GetHttpRetryAfter
+  uid: M:Interface::System#Integration#Sharepoint#HTTP_Diagnostics.GetHttpRetryAfter:Integer
+- syntax:
+    content: 'procedure GetErrorMessage(): Text'
+    return:
+      description: Error message
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets reponse details
+  name: GetErrorMessage
+  uid: M:Interface::System#Integration#Sharepoint#HTTP_Diagnostics.GetErrorMessage:Text
+- syntax:
+    content: 'procedure GetResponseReasonPhrase(): Text'
+    return:
+      description: HttpResponseMessage.ResponseReasonPhrase
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets response details.
+  name: GetResponseReasonPhrase
+  uid: M:Interface::System#Integration#Sharepoint#HTTP_Diagnostics.GetResponseReasonPhrase:Text
+commentId: O:Interface::System#Integration#Sharepoint#HTTP Diagnostics
+summary: Interface to get diagnostics from an HTTP call.
+name: '"HTTP Diagnostics"'
+uid: O:Interface::System#Integration#Sharepoint#HTTP_Diagnostics

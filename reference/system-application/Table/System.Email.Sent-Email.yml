@@ -1,0 +1,72 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Sent Email"
+alId: ID 8889
+namespace: System.Email
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: Description
+  value: The table is public so that it can also be extensible. The table is one of the modules's extensibility endpoints.
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetMessageId(): Guid'
+    return:
+      description: Message id.
+      returnType:
+        name: Guid
+        isExternal: true
+  summary: Get the message id of the sent email.
+  name: GetMessageId
+  uid: M:Table::System#Email#Sent_Email.GetMessageId:Guid
+fields:
+- type:
+    name: BigInteger
+    isExternal: true
+  name: Id
+  uid: F:Table::System#Email#Sent_Email.Id
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Email#Sent_Email.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Email#Sent_Email.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Email#Sent_Email.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Email#Sent_Email.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Email#Sent_Email.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Email#Sent_Email.SystemRowVersion
+commentId: O:Table::System#Email#Sent Email
+summary: Holds information about the sent emails.
+name: '"Sent Email"'
+uid: O:Table::System#Email#Sent_Email

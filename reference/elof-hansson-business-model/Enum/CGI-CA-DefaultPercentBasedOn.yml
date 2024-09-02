@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA DefaultPercentBasedOn"'
+alId: ID 60303
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: '" "'
+  uid: E:Enum::CGI_CA_DefaultPercentBasedOn._
+- name: Sales
+  uid: E:Enum::CGI_CA_DefaultPercentBasedOn.Sales
+- name: Purchases
+  uid: E:Enum::CGI_CA_DefaultPercentBasedOn.Purchases
+- name: '"Net result"'
+  uid: E:Enum::CGI_CA_DefaultPercentBasedOn.Net_result
+- name: '"Calculation Line"'
+  uid: E:Enum::CGI_CA_DefaultPercentBasedOn.Calculation_Line
+- name: '"Sales/Qty"'
+  uid: E:Enum::CGI_CA_DefaultPercentBasedOn.Sales/Qty
+- name: '"Purchase/Qty"'
+  uid: E:Enum::CGI_CA_DefaultPercentBasedOn.Purchase/Qty
+commentId: O:Enum::CGI CA DefaultPercentBasedOn
+name: '"CGI CA DefaultPercentBasedOn"'
+uid: O:Enum::CGI_CA_DefaultPercentBasedOn

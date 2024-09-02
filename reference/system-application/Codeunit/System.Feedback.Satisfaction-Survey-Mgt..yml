@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Feedback."Satisfaction Survey Mgt."
+alId: ID 1433
+namespace: System.Feedback
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Feedback
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Feedback#Satisfaction Survey Mgt#
+summary: Management codeunit that exposes various functions to work with Satisfaction Survey.
+name: '"Satisfaction Survey Mgt."'
+uid: O:Codeunit::System#Feedback#Satisfaction_Survey_Mgt#

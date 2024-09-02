@@ -1,0 +1,95 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Sent Emails List Part"
+alId: ID 8888
+namespace: System.Email
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Email#Sent_Email
+  name: System.Email."Sent Email"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: Caption
+  value: Sent Emails
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+- name: SourceTable
+  value: "8889"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Email#Sent_Email
+    name: System.Email."Sent Email"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: tabledata "Sent Email" = rd
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+methods:
+- syntax:
+    content: procedure Load()
+  summary: Loads the relevant sent emails.
+  name: Load
+  uid: M:Page::System#Email#Sent_Emails_List_Part.Load
+- syntax:
+    content: 'procedure SetNewerThan(NewDate: DateTime)'
+    parameters:
+    - id: NewDate
+      description: Earliest date to include sent emails from.
+      parameterType:
+        name: DateTime
+        isExternal: true
+  summary: Set date filter for sent emails.
+  name: SetNewerThan
+  uid: M:Page::System#Email#Sent_Emails_List_Part.SetNewerThan(DateTime)
+- syntax:
+    content: 'procedure SetRelatedRecord(TableID: Integer, SystemID: Guid)'
+    parameters:
+    - id: TableID
+      description: The entity table.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: SystemID
+      description: A record to filter on.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Set filter for related record on sent emails.
+  name: SetRelatedRecord
+  uid: M:Page::System#Email#Sent_Emails_List_Part.SetRelatedRecord(Integer,Guid)
+- syntax:
+    content: 'procedure SetRelatedRecord(RecordVariant: Variant)'
+    parameters:
+    - id: RecordVariant
+      description: Source record.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Set filter for related record on sent emails.
+  name: SetRelatedRecord
+  uid: M:Page::System#Email#Sent_Emails_List_Part.SetRelatedRecord(Variant)
+commentId: O:Page::System#Email#Sent Emails List Part
+summary: Provides an overview of all e-mail that were sent out in a ListPart.
+name: '"Sent Emails List Part"'
+uid: O:Page::System#Email#Sent_Emails_List_Part

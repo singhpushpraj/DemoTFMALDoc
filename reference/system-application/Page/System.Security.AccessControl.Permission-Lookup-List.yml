@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Permission Lookup List"
+alId: ID 9865
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+sourceTableType:
+  name: System.Security.AccessControl."Permission Lookup Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Permission Lookup List
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "9865"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+commentId: O:Page::System#Security#AccessControl#Permission Lookup List
+summary: Buffer table for permission options
+name: '"Permission Lookup List"'
+uid: O:Page::System#Security#AccessControl#Permission_Lookup_List

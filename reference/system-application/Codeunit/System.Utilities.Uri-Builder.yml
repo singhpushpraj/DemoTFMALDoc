@@ -1,0 +1,277 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Uri Builder"
+alId: ID 3061
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Init(Uri: Text)'
+    parameters:
+    - id: Uri
+      description: A URI string.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the UriBuilder class with the specified URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.-ctor#System_UriBuilder__ctor_System_String_ for more information.
+  name: Init
+  uid: M:Codeunit::System#Utilities#Uri_Builder.Init(Text)
+- syntax:
+    content: 'procedure SetScheme(Scheme: Text)'
+    parameters:
+    - id: Scheme
+      description: A string that represents the scheme name to set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the scheme name of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.scheme for more information.
+  name: SetScheme
+  uid: M:Codeunit::System#Utilities#Uri_Builder.SetScheme(Text)
+- syntax:
+    content: 'procedure GetScheme(): Text'
+    return:
+      description: The scheme name of the URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the scheme name of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.scheme for more information.
+  name: GetScheme
+  uid: M:Codeunit::System#Utilities#Uri_Builder.GetScheme:Text
+- syntax:
+    content: 'procedure SetHost(Host: Text)'
+    parameters:
+    - id: Host
+      description: A string that represents the host name to set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the host name of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.host for more information.
+  name: SetHost
+  uid: M:Codeunit::System#Utilities#Uri_Builder.SetHost(Text)
+- syntax:
+    content: 'procedure GetHost(): Text'
+    return:
+      description: The host name of the URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the host name of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.host for more information.
+  name: GetHost
+  uid: M:Codeunit::System#Utilities#Uri_Builder.GetHost:Text
+- syntax:
+    content: 'procedure SetPort(Port: Integer)'
+    parameters:
+    - id: Port
+      description: An integer that represents the port number to set.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Sets the port number of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.port for more information.
+  name: SetPort
+  uid: M:Codeunit::System#Utilities#Uri_Builder.SetPort(Integer)
+- syntax:
+    content: 'procedure GetPort(): Integer'
+    return:
+      description: The port number of the URI.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the port number of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.port for more information.
+  name: GetPort
+  uid: M:Codeunit::System#Utilities#Uri_Builder.GetPort:Integer
+- syntax:
+    content: 'procedure SetPath(Path: Text)'
+    parameters:
+    - id: Path
+      description: A string that represents the path to set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the path to the resource referenced by the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.path for more information.
+  name: SetPath
+  uid: M:Codeunit::System#Utilities#Uri_Builder.SetPath(Text)
+- syntax:
+    content: 'procedure GetPath(): Text'
+    return:
+      description: The path to the resource referenced by the URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the path to the resource referenced by the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.path for more information.
+  name: GetPath
+  uid: M:Codeunit::System#Utilities#Uri_Builder.GetPath:Text
+- syntax:
+    content: 'procedure SetQuery(Query: Text)'
+    parameters:
+    - id: Query
+      description: A string that represents the query information to set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets any query information included in the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.query for more information.
+  name: SetQuery
+  uid: M:Codeunit::System#Utilities#Uri_Builder.SetQuery(Text)
+- syntax:
+    content: 'procedure GetQuery(): Text'
+    return:
+      description: The query information included in the URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the query information included in the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.query for more information.
+  name: GetQuery
+  uid: M:Codeunit::System#Utilities#Uri_Builder.GetQuery:Text
+- syntax:
+    content: 'procedure SetFragment(Fragment: Text)'
+    parameters:
+    - id: Fragment
+      description: A string that represents the fragment portion to set.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the fragment portion of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.fragment for more information.
+  name: SetFragment
+  uid: M:Codeunit::System#Utilities#Uri_Builder.SetFragment(Text)
+- syntax:
+    content: 'procedure GetFragment(): Text'
+    return:
+      description: The fragment portion of the URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the fragment portion of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.fragment for more information.
+  name: GetFragment
+  uid: M:Codeunit::System#Utilities#Uri_Builder.GetFragment:Text
+- syntax:
+    content: 'procedure GetUri(var Uri: Codeunit Uri)'
+    parameters:
+    - id: Uri
+      description: A Uri that contains the URI constructed by the Uri Builder.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Uri
+        name: System.Utilities.Uri
+        isExternal: false
+  summary: Gets the Uri instance constructed by the specified "Uri Builder" instance.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder.uri for more information.
+  name: GetUri
+  uid: M:Codeunit::System#Utilities#Uri_Builder.GetUri(Codeunit::System#Utilities#Uri@)
+- syntax:
+    content: 'procedure AddQueryFlag(Flag: Text, DuplicateAction: Enum "Uri Query Duplicate Behaviour")'
+    parameters:
+    - id: Flag
+      description: A flag to add to the query string of this UriBuilder. This value will be encoded before being added to the URI query string. Cannot be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DuplicateAction
+      description: Specifies which action to take if the flag already exist.
+      parameterType:
+        internalReference: O:Enum::System#Utilities#Uri_Query_Duplicate_Behaviour
+        name: System.Utilities."Uri Query Duplicate Behaviour"
+        isExternal: false
+  summary: Adds a flag to the query string of this UriBuilder. In case the same query flag exists already, the action in `DuplicateAction` is taken.
+  remarks: This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&john=doe" and the new flag is "contoso", the result could be "https://microsoft.com?john=doe&foo=bar&contoso".
+  name: AddQueryFlag
+  uid: M:Codeunit::System#Utilities#Uri_Builder.AddQueryFlag(Text,Enum::System#Utilities#Uri_Query_Duplicate_Behaviour)
+- syntax:
+    content: 'procedure AddQueryFlag(Flag: Text)'
+    parameters:
+    - id: Flag
+      description: A flag to add to the query string of this UriBuilder. This value will be encoded before being added to the URI query string. Cannot be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a flag to the query string of this UriBuilder. In case the same query flag exists already, only one occurrence is kept.
+  remarks: This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&john=doe" and the new flag is "contoso", the result could be "https://microsoft.com?john=doe&foo=bar&contoso".
+  name: AddQueryFlag
+  uid: M:Codeunit::System#Utilities#Uri_Builder.AddQueryFlag(Text)
+- syntax:
+    content: 'procedure AddQueryParameter(ParameterKey: Text, ParameterValue: Text, DuplicateAction: Enum "Uri Query Duplicate Behaviour")'
+    parameters:
+    - id: ParameterKey
+      description: The key for the new query parameter. This value will be encoded before being added to the URI query string. Cannot be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ParameterValue
+      description: The value for the new query parameter. This value will be encoded before being added to the URI query string. Can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DuplicateAction
+      description: Specifies which action to take if the ParameterKey specified already exist.
+      parameterType:
+        internalReference: O:Enum::System#Utilities#Uri_Query_Duplicate_Behaviour
+        name: System.Utilities."Uri Query Duplicate Behaviour"
+        isExternal: false
+  summary: Adds a parameter key-value pair to the query string of this UriBuilder (in the form `ParameterKey=ParameterValue`). In case the same query key exists already, the action in `DuplicateAction` is taken.
+  remarks: This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&john=doe" and the new flag is "contoso=42", the result could be "https://microsoft.com?john=doe&foo=bar&contoso=42".
+  name: AddQueryParameter
+  uid: M:Codeunit::System#Utilities#Uri_Builder.AddQueryParameter(Text,Text,Enum::System#Utilities#Uri_Query_Duplicate_Behaviour)
+- syntax:
+    content: 'procedure AddQueryParameter(ParameterKey: Text, ParameterValue: Text)'
+    parameters:
+    - id: ParameterKey
+      description: The key for the new query parameter. This value will be encoded before being added to the URI query string. Cannot be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ParameterValue
+      description: The value for the new query parameter. This value will be encoded before being added to the URI query string. Can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a parameter key-value pair to the query string of this UriBuilder (in the form `ParameterKey=ParameterValue`). In case the same query key exists already, its value is overwritten.
+  remarks: This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&john=doe" and the new flag is "contoso=42", the result could be "https://microsoft.com?john=doe&foo=bar&contoso=42".
+  name: AddQueryParameter
+  uid: M:Codeunit::System#Utilities#Uri_Builder.AddQueryParameter(Text,Text)
+- syntax:
+    content: 'procedure AddODataQueryParameter(ParameterKey: Text, ParameterValue: Text)'
+    parameters:
+    - id: ParameterKey
+      description: The key for the new query parameter. This value will be encoded before being added to the URI query string, except for any "$" sign. Cannot be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ParameterValue
+      description: The value for the new query parameter. This value will be encoded before being added to the URI query string. Can be empty.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds an OData parameter key-value pair to the query string of this UriBuilder (in the form `ParameterKey=ParameterValue`), preserving the "$" sign in unencoded form. In case the same query key exists already, its value is overwritten.
+  remarks: This function could alter the order of the existing query string parts. For example, if the previous URL was "https://microsoft.com?foo=bar&john=doe" and the new flag is "contoso=42", the result could be "https://microsoft.com?john=doe&foo=bar&contoso=42".
+  name: AddODataQueryParameter
+  uid: M:Codeunit::System#Utilities#Uri_Builder.AddODataQueryParameter(Text,Text)
+commentId: O:Codeunit::System#Utilities#Uri Builder
+summary: Provides a custom constructor for uniform resource identifiers (URIs) and modifies URIs for the Uri codeunit.
+remarks: Visit https://learn.microsoft.com/dotnet/api/system.uribuilder for more information.
+name: '"Uri Builder"'
+uid: O:Codeunit::System#Utilities#Uri_Builder

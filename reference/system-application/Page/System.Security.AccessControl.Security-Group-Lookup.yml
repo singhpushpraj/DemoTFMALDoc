@@ -1,0 +1,35 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Security Group Lookup"
+alId: ID 9877
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Security#AccessControl#Security_Group_Buffer
+  name: System.Security.AccessControl."Security Group Buffer"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Available Security Groups
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "9022"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Security#AccessControl#Security_Group_Buffer
+    name: System.Security.AccessControl."Security Group Buffer"
+    isExternal: false
+commentId: O:Page::System#Security#AccessControl#Security Group Lookup
+name: '"Security Group Lookup"'
+uid: O:Page::System#Security#AccessControl#Security_Group_Lookup

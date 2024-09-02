@@ -1,0 +1,126 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Container Content"
+alId: ID 9043
+namespace: System.Azure.Storage
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+- name: TableType
+  value: Temporary
+  promoted: false
+fields:
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Parent Directory"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Parent_Directory[2048]
+- type:
+    name: Integer
+    isExternal: true
+  name: Level
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Level
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Full Name"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Full_Name[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Name[2048]
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Creation Time"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Creation_Time
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Last Modified"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Last_Modified
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Content Length"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Content_Length
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Content Type"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Content_Type[2048]
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: '"Blob Type"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Blob_Type[2048]
+- type:
+    internalReference: O:Enum::System#Azure#Storage#ABS_Blob_Resource_Type
+    name: System.Azure.Storage."ABS Blob Resource Type"
+    isExternal: false
+  name: '"Resource Type"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.Resource_Type
+- type:
+    name: Blob
+    isExternal: true
+  name: '"XML Value"'
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.XML_Value
+- type:
+    name: Text[2048]
+    isExternal: true
+  name: URI
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.URI[2048]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Azure#Storage#ABS_Container_Content.SystemRowVersion
+commentId: O:Table::System#Azure#Storage#ABS Container Content
+summary: Holds information about container content in a storage account.
+name: '"ABS Container Content"'
+uid: O:Table::System#Azure#Storage#ABS_Container_Content

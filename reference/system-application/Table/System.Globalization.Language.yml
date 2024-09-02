@@ -1,0 +1,83 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Globalization.Language
+alId: ID 8
+namespace: System.Globalization
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Globalization
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: LookupPageId
+  value: Languages
+  promoted: false
+  xrefType:
+    internalReference: O:Page::System#Globalization#Languages
+    name: System.Globalization.Languages
+    isExternal: false
+- name: InherentEntitlements
+  value: RX
+  promoted: false
+- name: InherentPermissions
+  value: RX
+  promoted: false
+fields:
+- type:
+    name: Code[10]
+    isExternal: true
+  name: Code
+  uid: F:Table::System#Globalization#Language.Code[10]
+- type:
+    name: Text[50]
+    isExternal: true
+  name: Name
+  uid: F:Table::System#Globalization#Language.Name[50]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"Windows Language ID"'
+  uid: F:Table::System#Globalization#Language.Windows_Language_ID
+- type:
+    name: Text[80]
+    isExternal: true
+  name: '"Windows Language Name"'
+  uid: F:Table::System#Globalization#Language.Windows_Language_Name[80]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Globalization#Language.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Globalization#Language.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Globalization#Language.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Globalization#Language.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Globalization#Language.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Globalization#Language.SystemRowVersion
+commentId: O:Table::System#Globalization#Language
+summary: Table that contains the available application languages.
+name: Language
+uid: O:Table::System#Globalization#Language

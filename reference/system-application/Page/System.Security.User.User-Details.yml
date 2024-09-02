@@ -1,0 +1,57 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Details"
+alId: ID 774
+namespace: System.Security.User
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Security#User#User_Details
+  name: System.Security.User."User Details"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: AboutText
+  value: View the additional information about users in a list view, which allows for easy searching and filtering.
+  promoted: false
+- name: AboutTitle
+  value: About the users detailed view
+  promoted: false
+- name: ApplicationArea
+  value: '#Basic,#Suite'
+  promoted: false
+- name: Caption
+  value: Users
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "774"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Security#User#User_Details
+    name: System.Security.User."User Details"
+    isExternal: false
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+commentId: O:Page::System#Security#User#User Details
+summary: Shows detailed user information, such as unique identifiers, information about permission sets etc.
+name: '"User Details"'
+uid: O:Page::System#Security#User#User_Details

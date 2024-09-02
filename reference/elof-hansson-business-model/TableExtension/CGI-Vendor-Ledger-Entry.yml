@@ -1,0 +1,30 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Vendor Ledger Entry"'
+alId: ID 60317
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Calculation No."'
+  uid: F:TableExtension::CGI_Vendor_Ledger_Entry.CGI_Calculation_No#[20]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"CGI Depreciation"'
+  uid: F:TableExtension::CGI_Vendor_Ledger_Entry.CGI_Depreciation
+- type:
+    name: Code[10]
+    isExternal: true
+  name: '"CGI Sub Account"'
+  uid: F:TableExtension::CGI_Vendor_Ledger_Entry.CGI_Sub_Account[10]
+commentId: O:TableExtension::CGI Vendor Ledger Entry
+summary: TableExtenion CGI Vendor Ledger Entry (ID 60317) extends record Vendor Ledger Entry
+name: '"CGI Vendor Ledger Entry"'
+uid: O:TableExtension::CGI_Vendor_Ledger_Entry

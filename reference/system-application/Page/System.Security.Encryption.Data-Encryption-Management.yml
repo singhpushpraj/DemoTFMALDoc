@@ -1,0 +1,43 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption."Data Encryption Management"
+alId: ID 9905
+namespace: System.Security.Encryption
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Data Encryption Management
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: AccessByPermission
+  value: system "Tools, Restore" = X
+  promoted: false
+- name: AdditionalSearchTerms
+  value: data security management
+  promoted: false
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: UsageCategory
+  value: Tasks
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: dev-itpro/developer/devenv-encrypting-data
+  promoted: false
+commentId: O:Page::System#Security#Encryption#Data Encryption Management
+summary: Exposes functionality that allows super users for on-premises versions to enable or disable encryption, import, export or change the encryption key.
+name: '"Data Encryption Management"'
+uid: O:Page::System#Security#Encryption#Data_Encryption_Management

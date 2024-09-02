@@ -1,0 +1,179 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Email."Email Account"
+alId: ID 8894
+namespace: System.Email
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Email
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetAllAccounts(LoadLogos: Boolean, var TempEmailAccount: Record "Email Account" temporary)'
+    parameters:
+    - id: LoadLogos
+      description: Flag, used to determine whether to load the logos for the accounts.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: TempEmailAccount
+      description: Out parameter holding the email accounts.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Gets all of the email accounts registered in Business Central.
+  name: GetAllAccounts
+  uid: M:Codeunit::System#Email#Email_Account.GetAllAccounts(Boolean,Email_Account@)
+- syntax:
+    content: 'procedure GetAllAccounts(var TempEmailAccount: Record "Email Account" temporary)'
+    parameters:
+    - id: TempEmailAccount
+      description: Out parameter holding the email accounts.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+  summary: Gets all of the email accounts registered in Business Central.
+  name: GetAllAccounts
+  uid: M:Codeunit::System#Email#Email_Account.GetAllAccounts(Email_Account@)
+- syntax:
+    content: 'procedure IsAnyAccountRegistered(): Boolean'
+    return:
+      description: True if there is any account registered in the system, otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if there is at least one email account registered in Business Central.
+  name: IsAnyAccountRegistered
+  uid: M:Codeunit::System#Email#Email_Account.IsAnyAccountRegistered:Boolean
+- syntax:
+    content: 'procedure IsAccountRegistered(EmailAccountId: Guid, EmailConnector: Enum "Email Connector"): Boolean'
+    parameters:
+    - id: EmailAccountId
+      description: The email account ID
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: EmailConnector
+      description: The email connector
+      parameterType:
+        internalReference: O:Enum::System#Email#Email_Connector
+        name: System.Email."Email Connector"
+        isExternal: false
+    return:
+      description: ""
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if a specific email account is registered in Business Central.
+  name: IsAccountRegistered
+  uid: M:Codeunit::System#Email#Email_Account.IsAccountRegistered(Guid,Enum::System#Email#Email_Connector):Boolean
+- syntax:
+    content: 'procedure DeleteAccounts(var TempEmailAccountsToDelete: Record "Email Account" temporary, HideDialog: Boolean)'
+    parameters:
+    - id: TempEmailAccountsToDelete
+      description: Holding the selected email accounts to delete.
+      parameterType:
+        name: Record "Email Account" temporary
+        isExternal: true
+    - id: HideDialog
+      description: Hides any confirmation or interaction that involves a UI.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes all selected email accounts.
+  name: DeleteAccounts
+  uid: M:Codeunit::System#Email#Email_Account.DeleteAccounts(Email_Account@,Boolean)
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure ValidateEmailAddress(EmailAddress: Text): Boolean'
+    parameters:
+    - id: EmailAddress
+      description: The email address to validate.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the email address is valid; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Validates an email address and throws an error if it is invalid.
+  remarks: If the provided email address is an empty string, the function will do nothing.
+  name: ValidateEmailAddress
+  uid: M:Codeunit::System#Email#Email_Account.ValidateEmailAddress(Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure ValidateEmailAddress(EmailAddress: Text, AllowEmptyValue: Boolean): Boolean'
+    parameters:
+    - id: EmailAddress
+      description: The email address to validate.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AllowEmptyValue
+      description: Indicates whether to skip the validation if the provided email address is empty.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if the email address is valid; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Validates an email address and throws an error if it is invalid.
+  name: ValidateEmailAddress
+  uid: M:Codeunit::System#Email#Email_Account.ValidateEmailAddress(Text,Boolean):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure ValidateEmailAddresses(EmailAddresses: Text): Boolean'
+    parameters:
+    - id: EmailAddresses
+      description: The email addresses to validate, separated by semicolons.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if all email addresses are valid; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Validates email addresses and displays an error if any are invalid.
+  remarks: If the provided email address is an empty string, the function will do nothing.
+  name: ValidateEmailAddresses
+  uid: M:Codeunit::System#Email#Email_Account.ValidateEmailAddresses(Text):Boolean
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure ValidateEmailAddresses(EmailAddresses: Text, AllowEmptyValue: Boolean): Boolean'
+    parameters:
+    - id: EmailAddresses
+      description: The email addresses to validate, separated by semicolons.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: AllowEmptyValue
+      description: Indicates whether to skip the validation if no email address is provided.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: True if all email addresses are valid; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Validates email addresses and displays an error if any are invalid.
+  name: ValidateEmailAddresses
+  uid: M:Codeunit::System#Email#Email_Account.ValidateEmailAddresses(Text,Boolean):Boolean
+commentId: O:Codeunit::System#Email#Email Account
+summary: Provides functionality to work with email accounts.
+name: '"Email Account"'
+uid: O:Codeunit::System#Email#Email_Account

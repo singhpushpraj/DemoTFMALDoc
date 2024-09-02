@@ -1,0 +1,2107 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Blob Client"
+alId: ID 9053
+namespace: System.Azure.Storage
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure Initialize(StorageAccount: Text, Container: Text, Authorization: Interface "Storage Service Authorization")'
+    parameters:
+    - id: StorageAccount
+      description: The name of Storage Account to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Container
+      description: The name of the container to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Authorization
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+  summary: Initializes the Azure Blob storage client.
+  name: Initialize
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.Initialize(Text,Text,Interface::System#Azure#Storage#Storage_Service_Authorization)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure Initialize(StorageAccount: Text, Container: Text, Authorization: Interface "Storage Service Authorization", APIVersion: Enum "Storage Service API Version")'
+    parameters:
+    - id: StorageAccount
+      description: The name of Storage Account to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Container
+      description: The name of the container to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Authorization
+      description: The authorization to use.
+      parameterType:
+        internalReference: O:Interface::System#Azure#Storage#Storage_Service_Authorization
+        name: System.Azure.Storage."Storage Service Authorization"
+        isExternal: false
+    - id: APIVersion
+      description: The used API version to use.
+      parameterType:
+        internalReference: O:Enum::System#Azure#Storage#Storage_Service_API_Version
+        name: System.Azure.Storage."Storage Service API Version"
+        isExternal: false
+  summary: Initializes the Azure BLOB Storage BLOB client.
+  name: Initialize
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.Initialize(Text,Text,Interface::System#Azure#Storage#Storage_Service_Authorization,Enum::System#Azure#Storage#Storage_Service_API_Version)
+- syntax:
+    content: 'procedure SetBaseUrl(BaseUrl: Text)'
+    parameters:
+    - id: BaseUrl
+      description: A valid URL string
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    The base URL to use when constructing the final URI.
+
+    If not set, the base URL is https://%1.blob.core.windows.net where %1 is the storage account name.
+  remarks: Use %1 as a placeholder for the storage account name.
+  name: SetBaseUrl
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.SetBaseUrl(Text)
+- syntax:
+    content: 'procedure ListBlobs(var ABSContainerContent: Record "ABS Container Content" temporary): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: ABSContainerContent
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "ABS Container Content" temporary
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Lists the blobs in a specific container.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210588
+  name: ListBlobs
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.ListBlobs(ABS_Container_Content@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure ListBlobs(var ABSContainerContent: Record "ABS Container Content" temporary, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: ABSContainerContent
+      description: Collection of the result (temporary record).
+      parameterType:
+        name: Record "ABS Container Content" temporary
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Lists the blobs in a specific container.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210588
+  name: ListBlobs
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.ListBlobs(ABS_Container_Content@,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure ListBlobs(var BlobList: Dictionary of [Text, XmlNode]): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobList
+      parameterType:
+        name: Dictionary of [Text, XmlNode]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  name: ListBlobs
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.ListBlobs(Dictionary_of_[Text,XmlNode]@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure ListBlobs(var BlobList: Dictionary of [Text, XmlNode], ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobList
+      parameterType:
+        name: Dictionary of [Text, XmlNode]
+        isExternal: true
+    - id: ABSOptionalParameters
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  name: ListBlobs
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.ListBlobs(Dictionary_of_[Text,XmlNode]@,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobUI(): Codeunit "ABS Operation Response"'
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads a file as a BlockBlob (with File Selection Dialog).
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobUI
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobUI:Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobUI(ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads a file as a BlockBlob (with File Selection Dialog).
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobUI
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobUI(Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobStream(BlobName: Text, var SourceInStream: InStream): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceInStream
+      description: The Content of the Blob as InStream.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads the content of an InStream as a BlockBlob
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobStream(Text,InStream@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobStream(BlobName: Text, var SourceInStream: InStream, ContentType: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceInStream
+      description: The Content of the Blob as InStream.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads the content of an InStream as a BlockBlob
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobStream(Text,InStream@,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobStream(BlobName: Text, var SourceInStream: InStream, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceInStream
+      description: The Content of the Blob as InStream.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads the content of an InStream as a BlockBlob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobStream(Text,InStream@,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobStream(BlobName: Text, var SourceInStream: InStream, ContentType: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceInStream
+      description: The Content of the Blob as InStream.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads the content of an InStream as a BlockBlob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobStream(Text,InStream@,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobText(BlobName: Text, SourceText: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceText
+      description: The Content of the Blob as Text.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads text as a BlockBlob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobText(Text,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobText(BlobName: Text, SourceText: Text, ContentType: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceText
+      description: The Content of the Blob as Text.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads text as a BlockBlob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobText(Text,Text,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobText(BlobName: Text, SourceText: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceText
+      description: The Content of the Blob as Text.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads text as a BlockBlob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobText(Text,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobBlockBlobText(BlobName: Text, SourceText: Text, ContentType: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceText
+      description: The Content of the Blob as Text.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Uploads text as a BlockBlob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobBlockBlobText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobBlockBlobText(Text,Text,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobPageBlob(BlobName: Text, ContentType: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Creates a PageBlob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobPageBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobPageBlob(Text,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobPageBlob(BlobName: Text, ContentType: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Creates a PageBlob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobPageBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobPageBlob(Text,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobAppendBlobStream(BlobName: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Put Blob operation creates a new append blob
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+
+    Uses 'application/octet-stream' as Content-Type
+  name: PutBlobAppendBlobStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobAppendBlobStream(Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobAppendBlobStream(BlobName: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Put Blob operation creates a new append blob
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+
+    Uses 'application/octet-stream' as Content-Type
+  name: PutBlobAppendBlobStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobAppendBlobStream(Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobAppendBlobText(BlobName: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Put Blob operation creates a new append blob
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+
+    Uses 'text/plain; charset=UTF-8' as Content-Type
+  name: PutBlobAppendBlobText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobAppendBlobText(Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlobAppendBlob(BlobName: Text, ContentType: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Put Blob operation creates a new append blob
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210387
+  name: PutBlobAppendBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlobAppendBlob(Text,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AppendBlockText(BlobName: Text, ContentAsText: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentAsText
+      description: Text-variable containing the content that should be added to the Blob
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Append Block operation commits a new block of data to the end of an existing append blob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211404
+
+    Uses 'text/plain; charset=UTF-8' as Content-Type
+  name: AppendBlockText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AppendBlockText(Text,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AppendBlockText(BlobName: Text, ContentAsText: Text, ContentType: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentAsText
+      description: Text-variable containing the content that should be added to the Blob
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Append Block operation commits a new block of data to the end of an existing append blob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211404
+  name: AppendBlockText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AppendBlockText(Text,Text,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AppendBlockText(BlobName: Text, ContentAsText: Text, ContentType: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentAsText
+      description: Text-variable containing the content that should be added to the Blob
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Append Block operation commits a new block of data to the end of an existing append blob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211404
+  name: AppendBlockText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AppendBlockText(Text,Text,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AppendBlockStream(BlobName: Text, ContentAsInStream: InStream): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentAsInStream
+      description: InStream containing the content that should be added to the Blob
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Append Block operation commits a new block of data to the end of an existing append blob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211404
+
+    Uses 'application/octet-stream' as Content-Type
+  name: AppendBlockStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AppendBlockStream(Text,InStream):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AppendBlockStream(BlobName: Text, ContentAsInStream: InStream, ContentType: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentAsInStream
+      description: InStream containing the content that should be added to the Blob
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Append Block operation commits a new block of data to the end of an existing append blob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211404
+  name: AppendBlockStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AppendBlockStream(Text,InStream,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AppendBlock(BlobName: Text, ContentType: Text, SourceContentVariant: Variant, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ContentType
+      description: Value for Content-Type HttpHeader (e.g. 'text/plain; charset=UTF-8')
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceContentVariant
+      description: Variant containing the content that should be added to the Blob
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Append Block operation commits a new block of data to the end of an existing append blob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211404
+  name: AppendBlock
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AppendBlock(Text,Text,Variant,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AppendBlockFromURL(BlobName: Text, SourceUri: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceUri
+      description: Specifies the name of the source blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Append Block From URL operation commits a new block of data to the end of an existing append blob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211405
+  name: AppendBlockFromURL
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AppendBlockFromURL(Text,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AppendBlockFromURL(BlobName: Text, SourceUri: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceUri
+      description: Specifies the name of the source blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Append Block From URL operation commits a new block of data to the end of an existing append blob.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211405
+  name: AppendBlockFromURL
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AppendBlockFromURL(Text,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobAsFile(BlobName: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Receives a Blob as a File from a Container.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210388
+  name: GetBlobAsFile
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobAsFile(Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobAsFile(BlobName: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Receives a Blob as a File from a Container.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210388
+  name: GetBlobAsFile
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobAsFile(Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobAsStream(BlobName: Text, var TargetInStream: InStream): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetInStream
+      description: The result InStream containg the content of the Blob.
+      parameterType:
+        name: InStream
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Receives a Blob as a InStream from a Container.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210388
+  name: GetBlobAsStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobAsStream(Text,InStream@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobAsStream(BlobName: Text, var TargetInStream: InStream, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetInStream
+      description: The result InStream containg the content of the Blob.
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Receives a Blob as a InStream from a Container.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210388
+  name: GetBlobAsStream
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobAsStream(Text,InStream@,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobAsText(BlobName: Text, var TargetText: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetText
+      description: The result Text containg the content of the Blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Receives a Blob as Text from a Container.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210388
+  name: GetBlobAsText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobAsText(Text,Text@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobAsText(BlobName: Text, var TargetText: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetText
+      description: The result Text containg the content of the Blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Receives a Blob as Text from a Container.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210388
+  name: GetBlobAsText
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobAsText(Text,Text@,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure SetBlobExpiryRelativeToCreation(BlobName: Text, ExpiryTime: Integer): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ExpiryTime
+      description: Number if miliseconds (Integer) until the expiration.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Set Blob Expiry operation sets an expiry time on an existing blob. This operation is only allowed on Hierarchical Namespace enabled accounts
+
+    Sets the expiry time relative to the file creation time, x-ms-expiry-time must be specified as the number of milliseconds to elapse from creation time.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210389
+  name: SetBlobExpiryRelativeToCreation
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.SetBlobExpiryRelativeToCreation(Text,Integer):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure SetBlobExpiryRelativeToNow(BlobName: Text, ExpiryTime: Integer): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ExpiryTime
+      description: Number if miliseconds (Integer) until the expiration.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Set Blob Expiry operation sets an expiry time on an existing blob. This operation is only allowed on Hierarchical Namespace enabled accounts
+
+    Sets the expiry relative to the current time, x-ms-expiry-time must be specified as the number of milliseconds to elapse from now.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210389
+  name: SetBlobExpiryRelativeToNow
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.SetBlobExpiryRelativeToNow(Text,Integer):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure SetBlobExpiryAbsolute(BlobName: Text, ExpiryTime: DateTime): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ExpiryTime
+      description: Absolute DateTime for the expiration.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Set Blob Expiry operation sets an expiry time on an existing blob. This operation is only allowed on Hierarchical Namespace enabled accounts
+
+    Sets the expiry to an absolute DateTime
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210389
+  name: SetBlobExpiryAbsolute
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.SetBlobExpiryAbsolute(Text,DateTime):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure SetBlobExpiryNever(BlobName: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Set Blob Expiry operation sets an expiry time on an existing blob. This operation is only allowed on Hierarchical Namespace enabled accounts
+
+    Sets the file to never expire or removes the current expiry time, x-ms-expiry-time must not to be specified.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210389
+  name: SetBlobExpiryNever
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.SetBlobExpiryNever(Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure SetBlobTags(BlobName: Text, Tags: Dictionary of [Text, Text]): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Tags
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  name: SetBlobTags
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.SetBlobTags(Text,Dictionary_of_[Text,Text]):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure FindBlobsByTags(SearchTags: Dictionary of [Text, Text], var FoundBlobs: XmlDocument): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: SearchTags
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: FoundBlobs
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  name: FindBlobsByTags
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.FindBlobsByTags(Dictionary_of_[Text,Text],XmlDocument@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobTags(BlobName: Text, var Tags: XmlDocument): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Tags
+      description: The result XmlDocument with blob tags.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Get Blob Tags operation gets user-defined tags for the specified blob as XmlDocument.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211502
+  name: GetBlobTags
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobTags(Text,XmlDocument@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobTags(BlobName: Text, var Tags: XmlDocument, OptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Tags
+      description: The result XmlDocument with blob tags.
+      parameterType:
+        name: XmlDocument
+        isExternal: true
+    - id: OptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Get Blob Tags operation gets user-defined tags for the specified blob as XmlDocument.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211502
+  name: GetBlobTags
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobTags(Text,XmlDocument@,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobTags(BlobName: Text, var Tags: Dictionary of [Text, Text]): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Tags
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  name: GetBlobTags
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobTags(Text,Dictionary_of_[Text,Text]@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobTags(BlobName: Text, var Tags: Dictionary of [Text, Text], OptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Tags
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+    - id: OptionalParameters
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  name: GetBlobTags
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobTags(Text,Dictionary_of_[Text,Text]@,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobProperties(BlobName: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object. The Blob properties are in the response headers.
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Get Blob Properties operation returns all user-defined metadata, standard HTTP properties, and system properties for the blob. It doesn't return the content of the blob.
+
+    see: https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob-properties?tabs=azure-ad
+  name: GetBlobProperties
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobProperties(Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure GetBlobProperties(BlobName: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object. The Blob properties are in the response headers.
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Get Blob Properties operation returns all user-defined metadata, standard HTTP properties, and system properties for the blob. It doesn't return the content of the blob.
+
+    see: https://learn.microsoft.com/en-us/rest/api/storageservices/get-blob-properties?tabs=azure-ad
+  name: GetBlobProperties
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.GetBlobProperties(Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure BlobExists(BlobName: Text): Boolean'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the blob exists, false if not.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: The Blob Exists operation returns true if a blob exists, or false if the blob does not exist.
+  name: BlobExists
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.BlobExists(Text):Boolean
+- syntax:
+    content: 'procedure BlobExists(BlobName: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Boolean'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: True if the blob exists, false if not.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: The Blob Exists operation returns true if a blob exists, or false if the blob does not exist.
+  name: BlobExists
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.BlobExists(Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Boolean
+- syntax:
+    content: 'procedure DeleteBlob(BlobName: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Delete Blob operation marks the specified blob or snapshot for deletion. The blob is later deleted during garbage collection.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211408
+  name: DeleteBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.DeleteBlob(Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure DeleteBlob(BlobName: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Delete Blob operation marks the specified blob or snapshot for deletion. The blob is later deleted during garbage collection.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211408
+  name: DeleteBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.DeleteBlob(Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure UndeleteBlob(BlobName: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Undelete Blob operation restores the contents and metadata of a soft deleted blob and any associated soft deleted snapshots (version 2017-07-29 or later)
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210390
+  name: UndeleteBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.UndeleteBlob(Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure UndeleteBlob(BlobName: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Undelete Blob operation restores the contents and metadata of a soft deleted blob and any associated soft deleted snapshots (version 2017-07-29 or later)
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210390
+  name: UndeleteBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.UndeleteBlob(Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure CopyBlob(BlobName: Text, SourceName: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceName
+      description: Specifies the name of the source blob or file.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Copy Blob operation copies a blob to a destination within the storage account.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210589
+  name: CopyBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.CopyBlob(Text,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure CopyBlob(BlobName: Text, SourceName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceName
+      description: Specifies the name of the source blob or file.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: Required if the destination blob has an active lease. The lease ID specified must match the lease ID of the destination blob.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Copy Blob operation copies a blob to a destination within the storage account.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210589
+  name: CopyBlob
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.CopyBlob(Text,Text,Guid,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlockList(CommitedBlocks: Dictionary of [Text, Integer], UncommitedBlocks: Dictionary of [Text, Integer]): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: CommitedBlocks
+      parameterType:
+        name: Dictionary of [Text, Integer]
+        isExternal: true
+    - id: UncommitedBlocks
+      parameterType:
+        name: Dictionary of [Text, Integer]
+        isExternal: true
+    return:
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  name: PutBlockList
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlockList(Dictionary_of_[Text,Integer],Dictionary_of_[Text,Integer]):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlockFromURL(BlobName: Text, SourceUri: Text, BlockId: Text): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceUri
+      description: Specifies the name of the source block blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BlockId
+      description: Specifies the BlockId that should be put.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Put Block From URL operation creates a new block to be committed as part of a blob where the contents are read from a URL.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211409
+  name: PutBlockFromURL
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlockFromURL(Text,Text,Text):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure PutBlockFromURL(BlobName: Text, SourceUri: Text, BlockId: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: SourceUri
+      description: Specifies the name of the source block blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BlockId
+      description: Specifies the BlockId that should be put.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    The Put Block From URL operation creates a new block to be committed as part of a blob where the contents are read from a URL.
+
+    see: https://go.microsoft.com/fwlink/?linkid=2211409
+  name: PutBlockFromURL
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.PutBlockFromURL(Text,Text,Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(BlobName: Text, var LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AcquireLease(Text,Guid@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(BlobName: Text, ABSOptionalParameters: Codeunit "ABS Optional Parameters", var LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AcquireLease(Text,Codeunit::System#Azure#Storage#ABS_Optional_Parameters,Guid@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(BlobName: Text, DurationSeconds: Integer, var LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DurationSeconds
+      description: Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AcquireLease(Text,Integer,Guid@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(BlobName: Text, DurationSeconds: Integer, ABSOptionalParameters: Codeunit "ABS Optional Parameters", var LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DurationSeconds
+      description: Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AcquireLease(Text,Integer,Codeunit::System#Azure#Storage#ABS_Optional_Parameters,Guid@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(BlobName: Text, ProposedLeaseId: Guid, var LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ProposedLeaseId
+      description: Proposed lease ID, in a GUID string format
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AcquireLease(Text,Guid,Guid@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(BlobName: Text, ProposedLeaseId: Guid, ABSOptionalParameters: Codeunit "ABS Optional Parameters", var LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ProposedLeaseId
+      description: Proposed lease ID, in a GUID string format
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AcquireLease(Text,Guid,Codeunit::System#Azure#Storage#ABS_Optional_Parameters,Guid@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure AcquireLease(BlobName: Text, DurationSeconds: Integer, ProposedLeaseId: Guid, ABSOptionalParameters: Codeunit "ABS Optional Parameters", var LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DurationSeconds
+      description: Specifies the duration of the lease, in seconds, or negative one (-1) for a lease that never expires
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ProposedLeaseId
+      description: Proposed lease ID, in a GUID string format
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    - id: LeaseId
+      description: Guid containing the response value from x-ms-lease-id HttpHeader
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Requests a new lease. If the blob does not have an active lease, the Blob service creates a lease on the blob. The lease duration can be 15 to 60 seconds or can be infinite
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: AcquireLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.AcquireLease(Text,Integer,Guid,Codeunit::System#Azure#Storage#ABS_Optional_Parameters,Guid@):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure ReleaseLease(BlobName: Text, LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be released
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Releases a lease on a Blob if it is no longer needed so that another client may immediately acquire a lease against the blob
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: ReleaseLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.ReleaseLease(Text,Guid):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure ReleaseLease(BlobName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be released
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Releases a lease on a Blob if it is no longer needed so that another client may immediately acquire a lease against the blob
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: ReleaseLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.ReleaseLease(Text,Guid,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure RenewLease(BlobName: Text, LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be renewed
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Renews a lease on a Blob to keep it locked again for the same amount of time as before
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: RenewLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.RenewLease(Text,Guid):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure RenewLease(BlobName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be renewed
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Renews a lease on a Blob to keep it locked again for the same amount of time as before
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: RenewLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.RenewLease(Text,Guid,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure BreakLease(BlobName: Text, LeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be broken
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Breaks a lease on a blob but ensures that another client cannot acquire a new lease until the current lease period has expired
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: BreakLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.BreakLease(Text,Guid):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure BreakLease(BlobName: Text, LeaseId: Guid, LeaseBreakPeriod: Integer): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be broken
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: LeaseBreakPeriod
+      description: The proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Breaks a lease on a blob but ensures that another client cannot acquire a new lease until the current lease period has expired
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: BreakLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.BreakLease(Text,Guid,Integer):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure BreakLease(BlobName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be broken
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Breaks a lease on a blob but ensures that another client cannot acquire a new lease until the current lease period has expired
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: BreakLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.BreakLease(Text,Guid,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure BreakLease(BlobName: Text, LeaseId: Guid, ABSOptionalParameters: Codeunit "ABS Optional Parameters", LeaseBreakPeriod: Integer): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be broken
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    - id: LeaseBreakPeriod
+      description: The proposed duration the lease should continue before it is broken, in seconds, between 0 and 60.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Breaks a lease on a blob but ensures that another client cannot acquire a new lease until the current lease period has expired
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: BreakLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.BreakLease(Text,Guid,Codeunit::System#Azure#Storage#ABS_Optional_Parameters,Integer):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure ChangeLease(BlobName: Text, var LeaseId: Guid, ProposedLeaseId: Guid): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be changed. Will contain the updated Guid after successful operation.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ProposedLeaseId
+      description: The Guid that should be used in future
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Changes the lease ID of an active lease
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: ChangeLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.ChangeLease(Text,Guid@,Guid):Codeunit::System#Azure#Storage#ABS_Operation_Response
+- syntax:
+    content: 'procedure ChangeLease(BlobName: Text, LeaseId: Guid, ProposedLeaseId: Guid, ABSOptionalParameters: Codeunit "ABS Optional Parameters"): Codeunit "ABS Operation Response"'
+    parameters:
+    - id: BlobName
+      description: The name of the blob.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LeaseId
+      description: The Guid for the lease that should be changed
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ProposedLeaseId
+      description: The Guid that should be used in future
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: ABSOptionalParameters
+      description: Optional parameters to pass.
+      parameterType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Optional_Parameters
+        name: System.Azure.Storage."ABS Optional Parameters"
+        isExternal: false
+    return:
+      description: An operation response object
+      returnType:
+        internalReference: O:Codeunit::System#Azure#Storage#ABS_Operation_Response
+        name: System.Azure.Storage."ABS Operation Response"
+        isExternal: false
+  summary: >-
+    Changes the lease ID of an active lease
+
+    see: https://go.microsoft.com/fwlink/?linkid=2210391
+  name: ChangeLease
+  uid: M:Codeunit::System#Azure#Storage#ABS_Blob_Client.ChangeLease(Text,Guid,Guid,Codeunit::System#Azure#Storage#ABS_Optional_Parameters):Codeunit::System#Azure#Storage#ABS_Operation_Response
+commentId: O:Codeunit::System#Azure#Storage#ABS Blob Client
+summary: Provides functionality for using operations on blobs in Azure Blob storage.
+name: '"ABS Blob Client"'
+uid: O:Codeunit::System#Azure#Storage#ABS_Blob_Client

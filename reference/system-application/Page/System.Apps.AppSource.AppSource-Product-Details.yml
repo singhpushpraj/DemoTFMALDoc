@@ -1,0 +1,77 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps.AppSource."AppSource Product Details"
+alId: ID 2516
+namespace: System.Apps.AppSource
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Apps.AppSource
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: Card
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: Caption
+  value: App Overview
+  promoted: false
+- name: DataCaptionExpression
+  value: AppSourceJsonUtilities.GetStringValue(ProductObject, 'displayName')
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetProduct(var ToProductObject: JsonObject)'
+    parameters:
+    - id: ToProductObject
+      parameterType:
+        name: JsonObject
+        isExternal: true
+  name: SetProduct
+  uid: M:Page::System#Apps#AppSource#AppSource_Product_Details.SetProduct(JsonObject@)
+- syntax:
+    content: 'procedure RenderPlans(PlansObject: JsonToken)'
+    parameters:
+    - id: PlansObject
+      parameterType:
+        name: JsonToken
+        isExternal: true
+  name: RenderPlans
+  uid: M:Page::System#Apps#AppSource#AppSource_Product_Details.RenderPlans(JsonToken)
+- syntax:
+    content: 'procedure GetJsonValue(JsonObject: JsonObject, PropertyName: Text, var ReturnValue: JsonValue): Boolean'
+    parameters:
+    - id: JsonObject
+      parameterType:
+        name: JsonObject
+        isExternal: true
+    - id: PropertyName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ReturnValue
+      parameterType:
+        name: JsonValue
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: GetJsonValue
+  uid: M:Page::System#Apps#AppSource#AppSource_Product_Details.GetJsonValue(JsonObject,Text,JsonValue@):Boolean
+commentId: O:Page::System#Apps#AppSource#AppSource Product Details
+summary: Single AppSource Product Details Page
+name: '"AppSource Product Details"'
+uid: O:Page::System#Apps#AppSource#AppSource_Product_Details

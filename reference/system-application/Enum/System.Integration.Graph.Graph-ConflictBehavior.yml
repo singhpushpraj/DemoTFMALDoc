@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Graph."Graph ConflictBehavior"
+alId: ID 9351
+namespace: System.Integration.Graph
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration.Graph
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Replace
+  uid: E:Enum::System#Integration#Graph#Graph_ConflictBehavior.Replace
+- name: Fail
+  uid: E:Enum::System#Integration#Graph#Graph_ConflictBehavior.Fail
+- name: Rename
+  uid: E:Enum::System#Integration#Graph#Graph_ConflictBehavior.Rename
+commentId: O:Enum::System#Integration#Graph#Graph ConflictBehavior
+summary: >-
+  The conflict resolution behavior for actions that create a new item.
+
+  You can use the values fail, replace, or rename. 
+
+  The default for PUT is replace. 
+
+  An item will never be returned with this annotation. Write-only.
+
+  See: https://learn.microsoft.com/en-us/graph/api/resources/driveitem?view=graph-rest-1.0#instance-attributes
+name: '"Graph ConflictBehavior"'
+uid: O:Enum::System#Integration#Graph#Graph_ConflictBehavior

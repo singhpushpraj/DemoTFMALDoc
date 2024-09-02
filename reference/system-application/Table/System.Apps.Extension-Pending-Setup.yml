@@ -1,0 +1,77 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Apps."Extension Pending Setup"
+alId: ID 2509
+namespace: System.Apps
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Apps
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Extension Pending Setup
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: ReplicateData
+  value: "False"
+  promoted: false
+- name: InherentEntitlements
+  value: rX
+  promoted: false
+- name: InherentPermissions
+  value: rX
+  promoted: false
+fields:
+- type:
+    name: Guid
+    isExternal: true
+  name: '"User Id"'
+  uid: F:Table::System#Apps#Extension_Pending_Setup.User_Id
+- type:
+    name: Guid
+    isExternal: true
+  name: '"App Id"'
+  uid: F:Table::System#Apps#Extension_Pending_Setup.App_Id
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Created On"'
+  uid: F:Table::System#Apps#Extension_Pending_Setup.Created_On
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Apps#Extension_Pending_Setup.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Apps#Extension_Pending_Setup.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Apps#Extension_Pending_Setup.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Apps#Extension_Pending_Setup.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Apps#Extension_Pending_Setup.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Apps#Extension_Pending_Setup.SystemRowVersion
+commentId: O:Table::System#Apps#Extension Pending Setup
+summary: This table is used to store information about extensions that was installed but did not run the setup.
+name: '"Extension Pending Setup"'
+uid: O:Table::System#Apps#Extension_Pending_Setup

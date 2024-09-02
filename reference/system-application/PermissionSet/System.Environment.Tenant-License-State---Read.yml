@@ -1,0 +1,18 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment."Tenant License State - Read"
+alId: ID 2300
+namespace: System.Environment
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Environment
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+commentId: O:PermissionSet::System#Environment#Tenant License State - Read
+name: '"Tenant License State - Read"'
+uid: O:PermissionSet::System#Environment#Tenant_License_State_-_Read

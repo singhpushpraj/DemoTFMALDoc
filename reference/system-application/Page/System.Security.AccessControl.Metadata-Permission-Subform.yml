@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Metadata Permission Subform"
+alId: ID 9856
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: Caption
+  value: Permissions
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+commentId: O:Page::System#Security#AccessControl#Metadata Permission Subform
+summary: ListPart for viewing the permissions of a metadata permission set.
+name: '"Metadata Permission Subform"'
+uid: O:Page::System#Security#AccessControl#Metadata_Permission_Subform

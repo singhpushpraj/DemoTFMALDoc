@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Accessible Companies"
+alId: ID 9210
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Allowed Companies
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: tabledata Company = r
+  promoted: false
+methods:
+- syntax:
+    content: procedure Initialize()
+  name: Initialize
+  uid: M:Page::System#Environment#Configuration#Accessible_Companies.Initialize
+commentId: O:Page::System#Environment#Configuration#Accessible Companies
+summary: List page that contains the allowed companies for the current user.
+name: '"Accessible Companies"'
+uid: O:Page::System#Environment#Configuration#Accessible_Companies

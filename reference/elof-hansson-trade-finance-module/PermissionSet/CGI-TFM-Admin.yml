@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Admin"'
+alId: ID 70301
+baseKind: PermissionSet
+kind: PermissionSet
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: CGI TFM Admin
+  promoted: false
+commentId: O:PermissionSet::CGI TFM Admin
+summary: Contains permissions CGI TFM Admin (RMI) to TFM objects
+name: '"CGI TFM Admin"'
+uid: O:PermissionSet::CGI_TFM_Admin

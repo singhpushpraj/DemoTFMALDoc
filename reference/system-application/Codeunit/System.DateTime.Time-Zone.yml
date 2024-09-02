@@ -1,0 +1,123 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DateTime."Time Zone"
+alId: ID 8720
+namespace: System.DateTime
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DateTime
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetTimezoneOffset(SourceDateTime: DateTime, TimeZoneId: Text): Duration'
+    parameters:
+    - id: SourceDateTime
+      description: The datetime that will be used as the basis for the difference calculation.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    - id: TimeZoneId
+      description: The ID of the time zone that you want to calculate the offset for.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A duration that indicates the offset between UTC and the requested time zone for the provided datetime.
+      returnType:
+        name: Duration
+        isExternal: true
+  summary: Retrieves the offset from the requested time zone at the time of the requested datetime. This takes into account any daylight saving time conditions that may apply.
+  name: GetTimezoneOffset
+  uid: M:Codeunit::System#DateTime#Time_Zone.GetTimezoneOffset(DateTime,Text):Duration
+- syntax:
+    content: 'procedure GetTimezoneOffset(SourceDateTime: DateTime): Duration'
+    parameters:
+    - id: SourceDateTime
+      description: The datetime that will be used as the basis for the difference calculation.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    return:
+      description: A duration that indicates the offset between UTC and the user time zone for the provided datetime.
+      returnType:
+        name: Duration
+        isExternal: true
+  summary: Retrieves the offset from the user time zone at the time of the requested datetime. This takes into account any daylight saving time conditions that may apply.
+  name: GetTimezoneOffset
+  uid: M:Codeunit::System#DateTime#Time_Zone.GetTimezoneOffset(DateTime):Duration
+- syntax:
+    content: 'procedure GetTimezoneOffset(SourceDateTime: DateTime, SourceTimeZoneId: Text, DestinationTimeZoneId: Text): Duration'
+    parameters:
+    - id: SourceDateTime
+      description: The datetime that will be used as the basis for the difference calculation.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    - id: SourceTimeZoneId
+      description: The time zone from which you want to calculate the difference.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: DestinationTimeZoneId
+      description: The time zone against which you want to calculate the difference.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A duration that indicates the offset between the two time zones at the indicated datetime.
+      returnType:
+        name: Duration
+        isExternal: true
+  summary: Retrieves the offset of the destination time zone from the source time zone for the indicated datetime. This takes into account any daylight saving time conditions that may apply.
+  name: GetTimezoneOffset
+  uid: M:Codeunit::System#DateTime#Time_Zone.GetTimezoneOffset(DateTime,Text,Text):Duration
+- syntax:
+    content: 'procedure TimeZoneSupportsDaylightSavingTime(TimeZoneId: Text): Boolean'
+    parameters:
+    - id: TimeZoneId
+      description: The ID of the time zone that you want to check the daylight saving time settings for.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A boolean indicating whether the requested time zone observes daylight saving time.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the indicated time zone supports daylight saving time.
+  name: TimeZoneSupportsDaylightSavingTime
+  uid: M:Codeunit::System#DateTime#Time_Zone.TimeZoneSupportsDaylightSavingTime(Text):Boolean
+- syntax:
+    content: 'procedure IsDaylightSavingTime(DateTimeToCheck: DateTime, TimeZoneId: Text): Boolean'
+    parameters:
+    - id: DateTimeToCheck
+      description: The datetime for which you want to check whether it falls within the time zone's daylight saving time period.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    - id: TimeZoneId
+      description: The ID of the time zone against which you want to check the datetime.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A boolean indicating whether the requested datetime falls within the daylight saving time period for the indicated time zone. If the time zone does not observe daylight saving time, this will always return false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the requested datetime falls within the indicated time zone's daylight saving time period.
+  name: IsDaylightSavingTime
+  uid: M:Codeunit::System#DateTime#Time_Zone.IsDaylightSavingTime(DateTime,Text):Boolean
+commentId: O:Codeunit::System#DateTime#Time Zone
+summary: Codeunit that provides data on offsets and daylight saving time for a time zone.
+name: '"Time Zone"'
+uid: O:Codeunit::System#DateTime#Time_Zone

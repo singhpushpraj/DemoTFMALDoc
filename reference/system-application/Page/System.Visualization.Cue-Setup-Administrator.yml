@@ -1,0 +1,43 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Visualization."Cue Setup Administrator"
+alId: ID 9701
+namespace: System.Visualization
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Visualization
+langs:
+- al
+sourceTableType:
+  name: System.Visualization."Cue Setup"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Cue Setup
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: Permissions
+  value: tabledata "Cue Setup" = rimd
+  promoted: false
+- name: SourceTable
+  value: "9701"
+  promoted: true
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: ContextSensitiveHelpPage
+  value: admin-how-set-up-colored-indicator-on-cues
+  promoted: false
+commentId: O:Page::System#Visualization#Cue Setup Administrator
+summary: >-
+  List page that contains settings that define the appearance of cues on all pages.
+
+  Administrators can use this page to define a general style, which users can customize from the Cue Setup End User page.
+name: '"Cue Setup Administrator"'
+uid: O:Page::System#Visualization#Cue_Setup_Administrator

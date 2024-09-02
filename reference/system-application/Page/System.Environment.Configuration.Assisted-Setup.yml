@@ -1,0 +1,67 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Assisted Setup"
+alId: ID 1801
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  name: System.Environment.Configuration."Guided Experience Item"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: Assisted Setup
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: LinksAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "1990"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: ContextSensitiveHelpPage
+  value: ui-get-ready-business
+  promoted: false
+- name: Permissions
+  value: tabledata "Guided Experience Item" = r
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Assisted Setup
+summary: This page shows all registered assisted setup guides.
+name: '"Assisted Setup"'
+uid: O:Page::System#Environment#Configuration#Assisted_Setup

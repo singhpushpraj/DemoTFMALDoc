@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA CalculationLineItemType"'
+alId: ID 60309
+baseKind: Enum
+kind: Enum
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- name: Paper
+  uid: E:Enum::CGI_CA_CalculationLineItemType.Paper
+- name: Weav
+  uid: E:Enum::CGI_CA_CalculationLineItemType.Weav
+- name: Yarn
+  uid: E:Enum::CGI_CA_CalculationLineItemType.Yarn
+- name: Timber
+  uid: E:Enum::CGI_CA_CalculationLineItemType.Timber
+- name: Pulp
+  uid: E:Enum::CGI_CA_CalculationLineItemType.Pulp
+- name: MED
+  uid: E:Enum::CGI_CA_CalculationLineItemType.MED
+- name: Biofuel
+  uid: E:Enum::CGI_CA_CalculationLineItemType.Biofuel
+- name: Troedsson
+  uid: E:Enum::CGI_CA_CalculationLineItemType.Troedsson
+commentId: O:Enum::CGI CA CalculationLineItemType
+name: '"CGI CA CalculationLineItemType"'
+uid: O:Enum::CGI_CA_CalculationLineItemType

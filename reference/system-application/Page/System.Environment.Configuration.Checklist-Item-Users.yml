@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Checklist Item Users"
+alId: ID 1995
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  name: System.Environment.Configuration."Checklist Item User"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Checklist Users
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "1993"
+  promoted: true
+- name: Editable
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: tabledata "Checklist Item User" = rimd
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Checklist Item Users
+summary: Lists the users that a checklist item should be displayed to.
+name: '"Checklist Item Users"'
+uid: O:Page::System#Environment#Configuration#Checklist_Item_Users

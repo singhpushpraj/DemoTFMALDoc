@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity."User Plan Experience"
+alId: ID 9005
+namespace: System.Azure.Identity
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Essentials plan.
+  name: Essentials
+  uid: E:Enum::System#Azure#Identity#User_Plan_Experience.Essentials
+- summary: Premium plan.
+  name: Premium
+  uid: E:Enum::System#Azure#Identity#User_Plan_Experience.Premium
+- summary: Basic plan.
+  name: Basic
+  uid: E:Enum::System#Azure#Identity#User_Plan_Experience.Basic
+- summary: Other license type.
+  name: Other
+  uid: E:Enum::System#Azure#Identity#User_Plan_Experience.Other
+commentId: O:Enum::System#Azure#Identity#User Plan Experience
+summary: User plan experience.
+name: '"User Plan Experience"'
+uid: O:Enum::System#Azure#Identity#User_Plan_Experience

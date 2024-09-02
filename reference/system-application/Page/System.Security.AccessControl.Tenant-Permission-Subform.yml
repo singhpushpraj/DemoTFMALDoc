@@ -1,0 +1,44 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Tenant Permission Subform"
+alId: ID 9859
+namespace: System.Security.AccessControl
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: Caption
+  value: Permissions
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[Obsolete(No longer used.,22.0)]'
+    content: 'procedure SetPageVariables(AppId: Guid)'
+    parameters:
+    - id: AppId
+      parameterType:
+        name: Guid
+        isExternal: true
+  name: SetPageVariables
+  obsoletion:
+    state: pending
+    reason: No longer used.
+    version: "22.0"
+  uid: M:Page::System#Security#AccessControl#Tenant_Permission_Subform.SetPageVariables(Guid)
+commentId: O:Page::System#Security#AccessControl#Tenant Permission Subform
+summary: ListPart for viewing and editing the permissions of a tenant permission set.
+name: '"Tenant Permission Subform"'
+uid: O:Page::System#Security#AccessControl#Tenant_Permission_Subform

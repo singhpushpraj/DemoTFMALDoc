@@ -1,0 +1,239 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Upgrade."Upgrade Tag"
+alId: ID 9999
+namespace: System.Upgrade
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Upgrade
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: tabledata "Upgrade Tags" = rimd
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure HasUpgradeTag(Tag: Code[250]): Boolean'
+    parameters:
+    - id: Tag
+      description: Tag code to check
+      parameterType:
+        name: Code[250]
+        isExternal: true
+    return:
+      description: True if the Tag with given code exist.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies if the upgrade tag exists.
+  name: HasUpgradeTag
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.HasUpgradeTag(Code[250]):Boolean
+- syntax:
+    content: 'procedure HasUpgradeTag(Tag: Code[250], TagCompanyName: Code[30]): Boolean'
+    parameters:
+    - id: Tag
+      description: Tag code to check
+      parameterType:
+        name: Code[250]
+        isExternal: true
+    - id: TagCompanyName
+      description: Name of the company to check existance of tag
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    return:
+      description: True if the Tag with given code exist.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Verifies if the upgrade tag exists.
+  name: HasUpgradeTag
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.HasUpgradeTag(Code[250],Code[30]):Boolean
+- syntax:
+    content: 'procedure SetDatabaseUpgradeTag(NewTag: Code[250])'
+    parameters:
+    - id: NewTag
+      description: Tag code to save
+      parameterType:
+        name: Code[250]
+        isExternal: true
+  summary: Sets the upgrade tag for database upgrades.
+  name: SetDatabaseUpgradeTag
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.SetDatabaseUpgradeTag(Code[250])
+- syntax:
+    content: 'procedure SetUpgradeTag(NewTag: Code[250])'
+    parameters:
+    - id: NewTag
+      description: Tag code to save
+      parameterType:
+        name: Code[250]
+        isExternal: true
+  summary: Sets the upgrade tag.
+  name: SetUpgradeTag
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.SetUpgradeTag(Code[250])
+- syntax:
+    content: 'procedure SetSkippedUpgrade(ExistingTag: Code[250], SkipUpgrade: Boolean)'
+    parameters:
+    - id: ExistingTag
+      description: Tag code to set the Skipped Upgrade field
+      parameterType:
+        name: Code[250]
+        isExternal: true
+    - id: SkipUpgrade
+      description: Sets the Skipped Upgrade field
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the upgrade tag to skipped.
+  name: SetSkippedUpgrade
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.SetSkippedUpgrade(Code[250],Boolean)
+- syntax:
+    content: 'procedure SetSkippedUpgrade(ExistingTag: Code[250], TagCompanyName: Code[30], SkipUpgrade: Boolean)'
+    parameters:
+    - id: ExistingTag
+      description: Tag code to set the Skipped Upgrade field
+      parameterType:
+        name: Code[250]
+        isExternal: true
+    - id: TagCompanyName
+      description: Name of the company to check existance of tag
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: SkipUpgrade
+      description: Sets the Skipped Upgrade field
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the upgrade tag to skipped.
+  name: SetSkippedUpgrade
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.SetSkippedUpgrade(Code[250],Code[30],Boolean)
+- syntax:
+    content: 'procedure HasUpgradeTagSkipped(ExistingTag: Code[250], TagCompanyName: Code[30]): Boolean'
+    parameters:
+    - id: ExistingTag
+      description: Tag code to set the Skipped Upgrade field
+      parameterType:
+        name: Code[250]
+        isExternal: true
+    - id: TagCompanyName
+      description: Name of the company to check existance of tag
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Check if the upgrade tag is skipped.
+  name: HasUpgradeTagSkipped
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.HasUpgradeTagSkipped(Code[250],Code[30]):Boolean
+- syntax:
+    content: procedure SetAllUpgradeTags()
+  summary: >-
+    This method should be used to set all upgrade tags in a new company.
+
+    The method is called from codeunit 2 - Company Initialize.
+  name: SetAllUpgradeTags
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.SetAllUpgradeTags
+- syntax:
+    content: 'procedure SetAllUpgradeTags(NewCompanyName: Code[30])'
+    parameters:
+    - id: NewCompanyName
+      description: Name of the company set the upgrade tags
+      parameterType:
+        name: Code[30]
+        isExternal: true
+  summary: This method should be used to set all upgrade tags in a new company.
+  name: SetAllUpgradeTags
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.SetAllUpgradeTags(Code[30])
+- syntax:
+    content: 'procedure CopyUpgradeTags(FromCompanyName: Code[30], ToCompanyName: Code[30])'
+    parameters:
+    - id: FromCompanyName
+      description: Name of the company from which to take the upgrade tags.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: ToCompanyName
+      description: Name of the company to which to copy the upgrade tags.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+  summary: This method should be used to copy all upgrade tags from a company to another company.
+  name: CopyUpgradeTags
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.CopyUpgradeTags(Code[30],Code[30])
+- syntax:
+    content: 'procedure GetPerCompanyUpgradeTags(var PerCompanyUpgradeTags: List of [Code[250]])'
+    parameters:
+    - id: PerCompanyUpgradeTags
+      parameterType:
+        name: List of [Code[250]]
+        isExternal: true
+  name: GetPerCompanyUpgradeTags
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.GetPerCompanyUpgradeTags(List_of_[Code]@)
+- syntax:
+    content: 'procedure GetPerDatabaseUpgradeTags(var PerDatabaseUpgradeTags: List of [Code[250]])'
+    parameters:
+    - id: PerDatabaseUpgradeTags
+      parameterType:
+        name: List of [Code[250]]
+        isExternal: true
+  name: GetPerDatabaseUpgradeTags
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.GetPerDatabaseUpgradeTags(List_of_[Code]@)
+- syntax:
+    content: 'procedure BackupUpgradeTags(): Integer'
+    return:
+      description: ID of the backup, used in <see cref="RestoreUpgradeTagsFromBackup"></see> method.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: >-
+    This function is used for cloud migration to backup upgrade tags before cloud migration is triggered.
+
+    Using the function if cloud migration is not enabled will throw an error.
+  name: BackupUpgradeTags
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.BackupUpgradeTags:Integer
+- syntax:
+    content: 'procedure RestoreUpgradeTagsFromBackup(BackupId: Integer, RestoreMissingTagsOnly: Boolean)'
+    parameters:
+    - id: BackupId
+      description: ID of the backup, created by <see cref="BackupUpgradeTags"></see> method.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: RestoreMissingTagsOnly
+      description: This parameter indicates if the function should restore the entire table or only insert back the missing upgrade tags.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: >-
+    This function is used to restore Upgrade tags after cloud migration.
+
+    Using the function if cloud migration is not enabled will throw an error.
+  name: RestoreUpgradeTagsFromBackup
+  uid: M:Codeunit::System#Upgrade#Upgrade_Tag.RestoreUpgradeTagsFromBackup(Integer,Boolean)
+commentId: O:Codeunit::System#Upgrade#Upgrade Tag
+summary: >-
+  The interface for registering upgrade tags.
+
+  Format of the upgrade tag is:
+
+  [CompanyPrefix]-[TFSID]-[Description]-[YYYYMMDD]
+
+  Example:
+
+  MS-29901-UpdateGLEntriesIntegrationRecordIDs-20161206
+name: '"Upgrade Tag"'
+uid: O:Codeunit::System#Upgrade#Upgrade_Tag

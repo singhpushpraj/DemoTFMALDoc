@@ -1,0 +1,26 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration."Summary Type"
+alId: ID 2716
+namespace: System.Integration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies the default type that represents caption of a object
+  name: Caption
+  uid: E:Enum::System#Integration#Summary_Type.Caption
+- summary: Specifies the type that represents fields defined in a brick fieldgroup
+  name: Brick
+  uid: E:Enum::System#Integration#Summary_Type.Brick
+commentId: O:Enum::System#Integration#Summary Type
+summary: Specifies the type of a summary.
+name: '"Summary Type"'
+uid: O:Enum::System#Integration#Summary_Type

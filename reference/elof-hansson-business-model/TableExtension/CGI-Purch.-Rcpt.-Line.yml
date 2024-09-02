@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Purch. Rcpt. Line"'
+alId: ID 60325
+baseKind: Table
+kind: TableExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-ext-object)'
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Calculation No."'
+  uid: F:TableExtension::CGI_Purch#_Rcpt#_Line.CGI_Calculation_No#[20]
+- type:
+    name: Integer
+    isExternal: true
+  name: '"CGI Calculation Item Line No."'
+  uid: F:TableExtension::CGI_Purch#_Rcpt#_Line.CGI_Calculation_Item_Line_No#
+- type:
+    internalReference: O:Enum::CGI_CA_CalculationLineItemType
+    name: '"CGI CA CalculationLineItemType"'
+    isExternal: false
+  name: '"CGI Division"'
+  uid: F:TableExtension::CGI_Purch#_Rcpt#_Line.CGI_Division
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI GSM"'
+  uid: F:TableExtension::CGI_Purch#_Rcpt#_Line.CGI_GSM
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Reel Width"'
+  uid: F:TableExtension::CGI_Purch#_Rcpt#_Line.CGI_Reel_Width
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Diameter"'
+  uid: F:TableExtension::CGI_Purch#_Rcpt#_Line.CGI_Diameter
+- type:
+    name: Decimal
+    isExternal: true
+  name: '"CGI Core"'
+  uid: F:TableExtension::CGI_Purch#_Rcpt#_Line.CGI_Core
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"CGI Sheet Size"'
+  uid: F:TableExtension::CGI_Purch#_Rcpt#_Line.CGI_Sheet_Size[20]
+commentId: O:TableExtension::CGI Purch# Rcpt# Line
+summary: TableExtenion CGI Purch. Rcpt. Line (ID 60325).
+name: '"CGI Purch. Rcpt. Line"'
+uid: O:TableExtension::CGI_Purch#_Rcpt#_Line

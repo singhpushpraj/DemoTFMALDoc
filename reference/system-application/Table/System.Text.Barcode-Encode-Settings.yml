@@ -1,0 +1,92 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Text."Barcode Encode Settings"
+alId: ID 9203
+namespace: System.Text
+baseKind: Table
+kind: Table
+parent: N:Module::System_Application::Namespace::System.Text
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "True"
+  promoted: true
+- name: TableType
+  value: Temporary
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: DataClassification
+  value: SystemMetadata
+  promoted: false
+fields:
+- description: Code set option used by Code128 symbology
+  type:
+    name: Option
+    isExternal: true
+  name: '"Code Set"'
+  uid: F:Table::System#Text#Barcode_Encode_Settings.Code_Set
+- description: Setting used in Code39 and Code93 symbologies.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Allow Extended Charset"'
+  uid: F:Table::System#Text#Barcode_Encode_Settings.Allow_Extended_Charset
+- description: >-
+    Flag to indicate whether to enable checksum when encoding the barcode.
+
+    Used by barcode symbology Code39.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Enable Checksum"'
+  uid: F:Table::System#Text#Barcode_Encode_Settings.Enable_Checksum
+- description: Barcode symbology Interleaved 2 of 5 setting.
+  type:
+    name: Boolean
+    isExternal: true
+  name: '"Use mod 10"'
+  uid: F:Table::System#Text#Barcode_Encode_Settings.Use_mod_10
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::System#Text#Barcode_Encode_Settings.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::System#Text#Barcode_Encode_Settings.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::System#Text#Barcode_Encode_Settings.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::System#Text#Barcode_Encode_Settings.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::System#Text#Barcode_Encode_Settings.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::System#Text#Barcode_Encode_Settings.SystemRowVersion
+commentId: O:Table::System#Text#Barcode Encode Settings
+summary: Common setting used when encoding barcodes.
+name: '"Barcode Encode Settings"'
+uid: O:Table::System#Text#Barcode_Encode_Settings

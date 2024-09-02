@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Storage."ABS Block List Type"
+alId: ID 9044
+namespace: System.Azure.Storage
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Azure.Storage
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: Committed
+  uid: E:Enum::System#Azure#Storage#ABS_Block_List_Type.Committed
+- name: Uncommitted
+  uid: E:Enum::System#Azure#Storage#ABS_Block_List_Type.Uncommitted
+- name: All
+  uid: E:Enum::System#Azure#Storage#ABS_Block_List_Type.All
+commentId: O:Enum::System#Azure#Storage#ABS Block List Type
+summary: Specifies whether to return the list of committed blocks, the list of uncommitted blocks, or both lists together
+name: '"ABS Block List Type"'
+uid: O:Enum::System#Azure#Storage#ABS_Block_List_Type

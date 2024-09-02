@@ -1,0 +1,281 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Telemetry."Feature Telemetry"
+alId: ID 8703
+namespace: System.Telemetry
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Telemetry
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure LogUsage(EventId: Text, FeatureName: Text, EventName: Text)'
+    parameters:
+    - id: EventId
+      description: A unique ID of the event.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      description: The name of the feature.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EventName
+      description: The name of the event.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sends telemetry about feature usage.
+  examples:
+  - FeatureTelemetry.LogUsage('0000XYZ', 'Emailing', 'Email sent');
+  name: LogUsage
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogUsage(Text,Text,Text)
+- syntax:
+    content: 'procedure LogUsage(EventId: Text, FeatureName: Text, EventName: Text, CustomDimensions: Dictionary of [Text, Text])'
+    parameters:
+    - id: EventId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EventName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CustomDimensions
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+  name: LogUsage
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogUsage(Text,Text,Text,Dictionary_of_[Text,Text])
+- syntax:
+    content: 'procedure LogError(EventId: Text, FeatureName: Text, EventName: Text, ErrorText: Text)'
+    parameters:
+    - id: EventId
+      description: A unique ID of the error.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      description: The name of the feature.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EventName
+      description: The name of the event.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ErrorText
+      description: The text of the error.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sends telemetry about errors happening during feature usage.
+  examples:
+  - >2+
+
+    if not Success then
+        FeatureTelemetry.LogError('0000XYZ', 'Retention policies', 'Applying a policy', GetLastErrorText(true));
+  name: LogError
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogError(Text,Text,Text,Text)
+- syntax:
+    content: 'procedure LogError(EventId: Text, FeatureName: Text, EventName: Text, ErrorText: Text, ErrorCallStack: Text)'
+    parameters:
+    - id: EventId
+      description: A unique ID of the error.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      description: The name of the feature.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EventName
+      description: The name of the event.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ErrorText
+      description: The text of the error.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ErrorCallStack
+      description: The error call stack.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sends telemetry about errors happening during feature usage.
+  examples:
+  - >2+
+
+    if not Success then
+        FeatureTelemetry.LogError('0000XYZ', 'Configuration packages', 'Importing a package', GetLastErrorText(true), GetLastErrorCallStack());
+  name: LogError
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogError(Text,Text,Text,Text,Text)
+- syntax:
+    content: 'procedure LogError(EventId: Text, FeatureName: Text, EventName: Text, ErrorText: Text, ErrorCallStack: Text, CustomDimensions: Dictionary of [Text, Text])'
+    parameters:
+    - id: EventId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: EventName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ErrorText
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ErrorCallStack
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CustomDimensions
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+  name: LogError
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogError(Text,Text,Text,Text,Text,Dictionary_of_[Text,Text])
+- syntax:
+    content: 'procedure LogUptake(EventId: Text, FeatureName: Text, FeatureUptakeStatus: Enum "Feature Uptake Status")'
+    parameters:
+    - id: EventId
+      description: A unique ID of the event.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      description: The name of the feature.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureUptakeStatus
+      description: The new status of the feature uptake.
+      parameterType:
+        internalReference: O:Enum::System#Telemetry#Feature_Uptake_Status
+        name: System.Telemetry."Feature Uptake Status"
+        isExternal: false
+  summary: Sends telemetry about feature uptake.
+  remarks: >-
+    Expected feature uptake transitions:
+
+    "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
+
+    *Any state* -> "Undiscovered" (to reset the feature uptake status)
+  name: LogUptake
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature_Uptake_Status)
+- syntax:
+    content: 'procedure LogUptake(EventId: Text, FeatureName: Text, FeatureUptakeStatus: Enum "Feature Uptake Status", CustomDimensions: Dictionary of [Text, Text])'
+    parameters:
+    - id: EventId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureUptakeStatus
+      parameterType:
+        internalReference: O:Enum::System#Telemetry#Feature_Uptake_Status
+        name: System.Telemetry."Feature Uptake Status"
+        isExternal: false
+    - id: CustomDimensions
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+  name: LogUptake
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature_Uptake_Status,Dictionary_of_[Text,Text])
+- syntax:
+    content: 'procedure LogUptake(EventId: Text, FeatureName: Text, FeatureUptakeStatus: Enum "Feature Uptake Status", IsPerUser: Boolean)'
+    parameters:
+    - id: EventId
+      description: A unique ID of the event.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      description: The name of the feature.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureUptakeStatus
+      description: The new status of the feature uptake.
+      parameterType:
+        internalReference: O:Enum::System#Telemetry#Feature_Uptake_Status
+        name: System.Telemetry."Feature Uptake Status"
+        isExternal: false
+    - id: IsPerUser
+      description: Specifies if the feature is targeted to be uptaken once for the tenant or uptaken individually by different users.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sends telemetry about feature uptake.
+  remarks: >-
+    Expected feature uptake transitions:
+
+    "Discovered" -> "Set up" -> "Used" (and only in this order; for example, if for a given feature the first status was logged as "Set up", no telemetry will be emitted)
+
+    *Any state* -> "Undiscovered" (to reset the feature uptake status)
+  name: LogUptake
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature_Uptake_Status,Boolean)
+- syntax:
+    content: 'procedure LogUptake(EventId: Text, FeatureName: Text, FeatureUptakeStatus: Enum "Feature Uptake Status", IsPerUser: Boolean, CustomDimensions: Dictionary of [Text, Text])'
+    parameters:
+    - id: EventId
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: FeatureUptakeStatus
+      parameterType:
+        internalReference: O:Enum::System#Telemetry#Feature_Uptake_Status
+        name: System.Telemetry."Feature Uptake Status"
+        isExternal: false
+    - id: IsPerUser
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: CustomDimensions
+      parameterType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+  name: LogUptake
+  uid: M:Codeunit::System#Telemetry#Feature_Telemetry.LogUptake(Text,Text,Enum::System#Telemetry#Feature_Uptake_Status,Boolean,Dictionary_of_[Text,Text])
+commentId: O:Codeunit::System#Telemetry#Feature Telemetry
+summary: Provides functionality for emitting telemetry in a universal format. Only system metadata is to be emitted through this codeunit.
+remarks: >-
+  Every publisher needs to have an implementation of the "Telemetry Logger" interface and a subscriber
+
+  to "Telemetry Loggers".OnRegisterTelemetryLogger event in one of their apps in order for this codeunit
+
+  to work as expected (see "System Telemetry Logger" codeunit).
+name: '"Feature Telemetry"'
+uid: O:Codeunit::System#Telemetry#Feature_Telemetry

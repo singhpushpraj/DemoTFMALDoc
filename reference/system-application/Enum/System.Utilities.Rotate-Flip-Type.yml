@@ -1,0 +1,47 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Rotate Flip Type"
+alId: ID 3972
+namespace: System.Utilities
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Specifies no clockwise rotation and no flipping.
+  name: RotateNoneFlipNone
+  uid: E:Enum::System#Utilities#Rotate_Flip_Type.RotateNoneFlipNone
+- summary: Specifies a 90-degree clockwise rotation without flipping.
+  name: Rotate90FlipNone
+  uid: E:Enum::System#Utilities#Rotate_Flip_Type.Rotate90FlipNone
+- summary: Specifies a 180-degree clockwise rotation without flipping.
+  name: Rotate180FlipNone
+  uid: E:Enum::System#Utilities#Rotate_Flip_Type.Rotate180FlipNone
+- summary: Specifies a 270-degree clockwise rotation without flipping.
+  name: Rotate270FlipNone
+  uid: E:Enum::System#Utilities#Rotate_Flip_Type.Rotate270FlipNone
+- summary: Specifies no clockwise rotation followed by a horizontal flip.
+  name: RotateNoneFlipX
+  uid: E:Enum::System#Utilities#Rotate_Flip_Type.RotateNoneFlipX
+- summary: Specifies a 90-degree clockwise rotation followed by a horizontal flip.
+  name: Rotate90FlipX
+  uid: E:Enum::System#Utilities#Rotate_Flip_Type.Rotate90FlipX
+- summary: Specifies a 180-degree clockwise rotation followed by a horizontal flip.
+  name: Rotate180FlipX
+  uid: E:Enum::System#Utilities#Rotate_Flip_Type.Rotate180FlipX
+- summary: Specifies a 270-degree clockwise rotation followed by a horizontal flip.
+  name: Rotate270FlipX
+  uid: E:Enum::System#Utilities#Rotate_Flip_Type.Rotate270FlipX
+commentId: O:Enum::System#Utilities#Rotate Flip Type
+summary: Specifies how much an image is rotated and the axis used to flip the image.
+name: '"Rotate Flip Type"'
+uid: O:Enum::System#Utilities#Rotate_Flip_Type

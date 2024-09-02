@@ -1,0 +1,56 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Export Permission Sets System"
+alId: ID 9862
+namespace: System.Security.AccessControl
+baseKind: XmlPort
+kind: XmlPort
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[XmlPort](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-xmlport-object)'
+objectProperties:
+- name: Caption
+  value: Export Permission Sets
+  promoted: false
+- name: Direction
+  value: Export
+  promoted: false
+- name: Encoding
+  value: UTF8
+  promoted: false
+- name: PreserveWhiteSpace
+  value: "True"
+  promoted: false
+- name: UseRequestPage
+  value: "False"
+  promoted: false
+- name: Caption
+  value: Export Permission Sets
+  promoted: false
+- name: Direction
+  value: Export
+  promoted: false
+- name: Encoding
+  value: UTF8
+  promoted: false
+- name: PreserveWhiteSpace
+  value: "True"
+  promoted: false
+- name: UseRequestPage
+  value: "False"
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure SetExportToExtensionSchema(ExtensionSchema: Boolean)'
+    parameters:
+    - id: ExtensionSchema
+      parameterType:
+        name: Boolean
+        isExternal: true
+  name: SetExportToExtensionSchema
+  uid: M:XmlPort::System#Security#AccessControl#Export_Permission_Sets_System.SetExportToExtensionSchema(Boolean)
+commentId: O:XmlPort::System#Security#AccessControl#Export Permission Sets System
+summary: Xmlport for exporting system permission sets.
+name: '"Export Permission Sets System"'
+uid: O:XmlPort::System#Security#AccessControl#Export_Permission_Sets_System

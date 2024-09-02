@@ -1,0 +1,407 @@
+﻿### YamlMime:BusinessCentralObsoletionList
+tag: "24.0"
+groups:
+- groupName: "24.0"
+  symbols:
+  - kind: Method
+    internalReference: M:Codeunit::System#Azure#Functions#Azure_Functions_Authentication.CreateOAuth2(Text,Text,Text,Text,Text,Text,Text):Interface::System#Azure#Functions#Azure_Functions_Authentication
+    name: 'CreateOAuth2(Endpoint: Text, AuthenticationCode: Text, ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text): Interface "Azure Functions Authentication"'
+    reason: Use CreateOAuth2 with SecretText data type for ClientSecret.
+  - kind: Method
+    internalReference: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateSharedKey(Text):Interface::System#Azure#Storage#Storage_Service_Authorization
+    name: 'CreateSharedKey(SharedKey: Text): Interface "Storage Service Authorization"'
+    reason: Use CreateSharedKey with SecretText data type for SharedKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Azure#Storage#Storage_Service_Authorization.CreateSharedKey(Text,Enum::System#Azure#Storage#Storage_Service_API_Version):Interface::System#Azure#Storage#Storage_Service_Authorization
+    name: 'CreateSharedKey(SharedKey: Text, ApiVersion: Enum 9060 "Storage Service API Version"): Interface "Storage Service Authorization"'
+    reason: Use CreateSharedKey with SecretText data type for SharedKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#AccessControl#Password_Dialog_Management.OpenPasswordDialog(Boolean,Boolean):Text
+    name: 'OpenPasswordDialog(DisablePasswordValidation: Boolean, DisablePasswordConfirmation: Boolean): Text'
+    reason: Replaced by OpenSecretPasswordDialog with SecretText return data type.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#AccessControl#Password_Dialog_Management.OpenPasswordDialog(Boolean):Text
+    name: 'OpenPasswordDialog(DisablePasswordValidation: Boolean): Text'
+    reason: Replaced by OpenSecretPasswordDialog with SecretText return data type.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#AccessControl#Password_Dialog_Management.OpenPasswordDialog:Text
+    name: 'OpenPasswordDialog(): Text'
+    reason: Replaced by OpenSecretPasswordDialog with SecretText return data type.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#AccessControl#Password_Dialog_Management.OpenChangePasswordDialog(Text@,Text@)
+    name: 'OpenChangePasswordDialog(var OldPassword: Text, var Password: Text)'
+    reason: Replaced by OpenChangePassworDialog with SecretText parameter data type.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#AccessControl#Password_Handler.GeneratePassword:Text
+    name: 'GeneratePassword(): Text'
+    reason: Replaced by GenerateSecretPassword with SecretText data type.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#AccessControl#Password_Handler.GeneratePassword(Integer):Text
+    name: 'GeneratePassword(Length: Integer): Text'
+    reason: Replaced by GenerateSecretPassword with SecretText data type.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#AccessControl#Password_Handler.IsPasswordStrong(Text):Boolean
+    name: 'IsPasswordStrong(Password: Text): Boolean'
+    reason: Replaced by IsPasswordStrong with SecretText data type.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,Text,Text,Text,Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@):Boolean
+    name: 'AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCode(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@):Boolean
+    name: 'AcquireTokenByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokenByAuthorizationCode with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@):Boolean
+    name: 'AcquireTokenByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokenByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCode(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@):Boolean
+    name: 'AcquireTokensByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokensByAuthorizationCode with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@):Boolean
+    name: 'AcquireTokensByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var IdToken: Text, var AuthCodeErr: Text): Boolean'
+    reason: Use AcquireTokensByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCode(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@):Boolean
+    name: 'AcquireTokenAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    reason: Use AcquireTokenAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@):Boolean
+    name: 'AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    reason: Use AcquireTokenAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCode(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@,Text@):Boolean
+    name: 'AcquireTokensAndTokenCacheByAuthorizationCode(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    reason: Use AcquireTokensAndTokenCacheByAuthorizationCode with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(Text,Text,Text,Text,List_of_[Text],Enum::System#Security#Authentication#Prompt_Interaction,Text@,Text@,Text@,Text@):Boolean
+    name: 'AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate(ClientId: Text, Certificate: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], PromptInteraction: Enum 501 "Prompt Interaction", var AccessToken: Text, var IdToken: Text, var TokenCache: Text, var Error: Text): Boolean'
+    reason: Use AcquireTokensAndTokenCacheByAuthorizationCodeWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenWithClientCredentials(Text,Text,Text,Text,Text,Text@):Boolean
+    name: 'AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, ResourceURL: Text, var AccessToken: Text): Boolean'
+    reason: Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokenWithClientCredentials(Text,Text,Text,Text,List_of_[Text],Text@):Boolean
+    name: 'AcquireTokenWithClientCredentials(ClientId: Text, ClientSecret: Text, OAuthAuthorityUrl: Text, RedirectURL: Text, Scopes: List of [Text], var AccessToken: Text): Boolean'
+    reason: Use AcquireTokenWithClientCredentials with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,Text,Text,Text,Text@):Boolean
+    name: 'AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, ResourceURL: Text, var AccessToken: Text): Boolean'
+    reason: Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCache(Text,Text,Text,Text,List_of_[Text],Text@):Boolean
+    name: 'AcquireAuthorizationCodeTokenFromCache(ClientId: Text, ClientSecret: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text): Boolean'
+    reason: Use AcquireAuthorizationCodeTokenFromCache with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCache(Text,Text,Text,Text,List_of_[Text],Text@,Text@):Boolean
+    name: 'AcquireTokensFromCache(ClientId: Text, ClientSecret: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean'
+    reason: Use AcquireTokensFromCache with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireAuthorizationCodeTokenFromCacheWithCertificate(Text,Text,Text,Text,List_of_[Text],Text@):Boolean
+    name: 'AcquireAuthorizationCodeTokenFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text): Boolean'
+    reason: Use AcquireAuthorizationCodeTokenFromCacheWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensFromCacheWithCertificate(Text,Text,Text,Text,List_of_[Text],Text@,Text@):Boolean
+    name: 'AcquireTokensFromCacheWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean'
+    reason: Use AcquireTokensFromCacheWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireTokensWithCertificate(Text,Text,Text,Text,List_of_[Text],Text@,Text@):Boolean
+    name: 'AcquireTokensWithCertificate(ClientId: Text, Certificate: Text, RedirectURL: Text, OAuthAuthorityUrl: Text, Scopes: List of [Text], var AccessToken: Text, var IdToken: Text): Boolean'
+    reason: Use AcquireTokensWithCertificate with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireOnBehalfOfTokenByTokenCache(Text,Text,Text,Text,List_of_[Text],Text,Text@,Text@):Boolean
+    name: 'AcquireOnBehalfOfTokenByTokenCache(ClientId: Text, ClientSecret: Text, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: Text, var NewTokenCache: Text): Boolean'
+    reason: Use AcquireOnBehalfOfTokenByTokenCache with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth2.AcquireOnBehalfOfTokensByTokenCache(Text,Text,Text,Text,List_of_[Text],Text,Text@,Text@,Text@):Boolean
+    name: 'AcquireOnBehalfOfTokensByTokenCache(ClientId: Text, ClientSecret: Text, LoginHint: Text, RedirectURL: Text, Scopes: List of [Text], TokenCache: Text, var AccessToken: Text, var IdToken: Text, var NewTokenCache: Text): Boolean'
+    reason: Use AcquireOnBehalfOfTokensByTokenCache with SecretText data type for AccessToken.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth.GetOAuthAccessToken(Text,Text,Text,Text,Text@,Text@):Boolean
+    name: 'GetOAuthAccessToken(ConsumerKey: Text, ConsumerSecret: Text, RequestTokenUrl: Text, CallbackUrl: Text, var AccessTokenKey: Text, var AccessTokenSecret: Text): Boolean'
+    reason: Use GetOAuthAccessToken with SecretText data type for AccessTokenKey and AccessTokenSecret.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth.GetOAuthAccessToken(Text,Text,Text,Text,Text,Text,Text@,Text@):Boolean
+    name: 'GetOAuthAccessToken(ConsumerKey: Text, ConsumerSecret: Text, RequestTokenUrl: Text, Verifier: Text, RequestTokenKey: Text, RequestTokenSecret: Text, var AccessTokenKey: Text, var AccessTokenSecret: Text): Boolean'
+    reason: Use GetOAuthAccessToken with SecretText data type for AccessTokenKey and AccessTokenSecret.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Authentication#OAuth.GetAuthorizationHeader(Text,Text,Text,Text,Text,Enum::System#Security#Authentication#Http_Request_Type,Text@):Boolean
+    name: 'GetAuthorizationHeader(ConsumerKey: Text, ConsumerSecret: Text, RequestTokenKey: Text, RequestTokenSecret: Text, RequestUrl: Text, RequestMethod: Enum 1289 "Http Request Type", var AuthorizationHeader: Text): Boolean'
+    reason: Use GetAuthorizationHeader with SecretText data type for AuthorizationHeader.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHash(Text,Text,Option):Text
+    name: 'GenerateHash(InputString: Text, "Key": Text, HashAlgorithmType: Option): Text'
+    reason: Use GenerateHash with SecretText data type for Key.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateHashAsBase64String(Text,Text,Option):Text
+    name: 'GenerateHashAsBase64String(InputString: Text, "Key": Text, HashAlgorithmType: Option): Text'
+    reason: Use GenerateHashAsBase64String with SecretText data type for Key.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateBase64KeyedHashAsBase64String(Text,Text,Option):Text
+    name: 'GenerateBase64KeyedHashAsBase64String(InputString: Text, "Key": Text, HashAlgorithmType: Option): Text'
+    reason: Use GenerateBase64KeyedHashAsBase64String with SecretText data type for Key.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Cryptography_Management.GenerateBase64KeyedHash(Text,Text,Option):Text
+    name: 'GenerateBase64KeyedHash(InputString: Text, "Key": Text, HashAlgorithmType: Option): Text'
+    reason: Use GenerateBase64KeyedHash with SecretText data type for Key.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Cryptography_Management.SignData(Text,Text,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+    name: 'SignData(InputString: Text, XmlString: Text, HashAlgorithm: Enum 1445 "Hash Algorithm", SignatureOutStream: OutStream)'
+    reason: Use SignData with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Cryptography_Management.SignData(InStream,Text,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+    name: 'SignData(DataInStream: InStream, XmlString: Text, HashAlgorithm: Enum 1445 "Hash Algorithm", SignatureOutStream: OutStream)'
+    reason: Use SignData with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.EncryptText(Text,Text,Text):Text
+    name: 'EncryptText(DecryptedText: Text, Password: Text, Salt: Text): Text'
+    reason: Use EncryptText with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.DecryptText(Text,Text,Text):Text
+    name: 'DecryptText(EncryptedText: Text, Password: Text, Salt: Text): Text'
+    reason: Use DecryptText with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.EncryptStream(Text,Text,InStream,OutStream@)
+    name: 'EncryptStream(Password: Text, Salt: Text, InputInstream: InStream, var OutputOutstream: OutStream)'
+    reason: Use EncryptStream with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.DecryptStream(Text,Text,InStream,OutStream@)
+    name: 'DecryptStream(Password: Text, Salt: Text, InputInstream: InStream, var OutputOutstream: OutStream)'
+    reason: Use DecryptStream with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#DSACryptoServiceProvider.SignData(Text,InStream,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+    name: 'SignData(XmlString: Text, DataInStream: InStream, HashAlgorithm: Enum 1445 "Hash Algorithm", SignatureOutStream: OutStream)'
+    reason: Use SignData with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#DSACryptoServiceProvider.VerifyData(Text,InStream,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+    name: 'VerifyData(XmlString: Text, DataInStream: InStream, HashAlgorithm: Enum 1445 "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    reason: Use VerifyData with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(Text)
+    name: 'InitRijndaelProvider(EncryptionKey: Text)'
+    reason: Use InitRijndaelProvider with SecretText data type for EncryptionKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(Text,Integer)
+    name: 'InitRijndaelProvider(EncryptionKey: Text, BlockSize: Integer)'
+    reason: Use InitRijndaelProvider with SecretText data type for EncryptionKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(Text,Integer,Text)
+    name: 'InitRijndaelProvider(EncryptionKey: Text, BlockSize: Integer, CipherMode: Text)'
+    reason: Use InitRijndaelProvider with SecretText data type for EncryptionKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.InitRijndaelProvider(Text,Integer,Text,Text)
+    name: 'InitRijndaelProvider(EncryptionKey: Text, BlockSize: Integer, CipherMode: Text, PaddingMode: Text)'
+    reason: Use InitRijndaelProvider with SecretText data type for EncryptionKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.SetEncryptionData(Text,Text)
+    name: 'SetEncryptionData(KeyAsBase64: Text, VectorAsBase64: Text)'
+    reason: Use SetEncryptionData with SecretText data type for KeyAsBase64.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Rijndael_Cryptography.GetEncryptionData(Text@,Text@)
+    name: 'GetEncryptionData(var KeyAsBase64: Text, var VectorAsBase64: Text)'
+    reason: Use GetEncryptionData with SecretText data type for KeyAsBase64.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.ToXmlString(Boolean):Text
+    name: 'ToXmlString(IncludePrivateParameters: Boolean): Text'
+    reason: Use ToSecretXmlString with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.SignData(Text,InStream,Enum::System#Security#Encryption#Hash_Algorithm,OutStream)
+    name: 'SignData(XmlString: Text, DataInStream: InStream, HashAlgorithm: Enum 1445 "Hash Algorithm", SignatureOutStream: OutStream)'
+    reason: Use SignData with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.VerifyData(Text,InStream,Enum::System#Security#Encryption#Hash_Algorithm,InStream):Boolean
+    name: 'VerifyData(XmlString: Text, DataInStream: InStream, HashAlgorithm: Enum 1445 "Hash Algorithm", SignatureInStream: InStream): Boolean'
+    reason: Use VerifyData with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.Encrypt(Text,InStream,Boolean,OutStream)
+    name: 'Encrypt(XmlString: Text, PlainTextInStream: InStream, OaepPadding: Boolean, EncryptedTextOutStream: OutStream)'
+    reason: Use Encrypt with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#RSACryptoServiceProvider.Decrypt(Text,InStream,Boolean,OutStream)
+    name: 'Decrypt(XmlString: Text, EncryptedTextInStream: InStream, OaepPadding: Boolean, DecryptedTextOutStream: OutStream)'
+    reason: Use Decrypt with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Signature_Key.FromXmlString(Text)
+    name: 'FromXmlString(XmlString: Text)'
+    reason: Use FromXmlString with SecretText data type for XmlString.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#Signature_Key.FromBase64String(Text,Text,Boolean)
+    name: 'FromBase64String(CertBase64Value: Text, Password: Text, IncludePrivateParameters: Boolean)'
+    reason: Use FromBase64String with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.VerifyCertificate(Text@,Text,Enum::System#Security#Encryption#X509_Content_Type):Boolean
+    name: 'VerifyCertificate(var CertBase64Value: Text, Password: Text, X509ContentType: Enum 1286 "X509 Content Type"): Boolean'
+    reason: Use VerifyCertificate with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateFriendlyName(Text,Text,Text@)
+    name: 'GetCertificateFriendlyName(CertBase64Value: Text, Password: Text, var FriendlyName: Text)'
+    reason: Use GetCertificateFriendlyName with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSubject(Text,Text,Text@)
+    name: 'GetCertificateSubject(CertBase64Value: Text, Password: Text, var Subject: Text)'
+    reason: Use GetCertificateSubject with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateThumbprint(Text,Text,Text@)
+    name: 'GetCertificateThumbprint(CertBase64Value: Text, Password: Text, var Thumbprint: Text)'
+    reason: Use GetCertificateThumbprint with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateIssuer(Text,Text,Text@)
+    name: 'GetCertificateIssuer(CertBase64Value: Text, Password: Text, var Issuer: Text)'
+    reason: Use GetCertificateIssuer with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateExpiration(Text,Text,DateTime@)
+    name: 'GetCertificateExpiration(CertBase64Value: Text, Password: Text, var Expiration: DateTime)'
+    reason: Use GetCertificateExpiration with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateNotBefore(Text,Text,DateTime@)
+    name: 'GetCertificateNotBefore(CertBase64Value: Text, Password: Text, var NotBefore: DateTime)'
+    reason: Use GetCertificateNotBefore with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.HasPrivateKey(Text,Text):Boolean
+    name: 'HasPrivateKey(CertBase64Value: Text, Password: Text): Boolean'
+    reason: Use HasPrivateKey with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePropertiesAsJson(Text,Text,Text@)
+    name: 'GetCertificatePropertiesAsJson(CertBase64Value: Text, Password: Text, var CertPropertyJson: Text)'
+    reason: Use GetCertificatePropertiesAsJson with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePublicKey(Text,Text):Text
+    name: 'GetCertificatePublicKey(CertBase64Value: Text, Password: Text): Text'
+    reason: Use GetCertificatePublicKey with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificatePrivateKey(Text,Text):Text
+    name: 'GetCertificatePrivateKey(CertBase64Value: Text, Password: Text): Text'
+    reason: Use GetCertificatePrivateKey with SecretText data type for Password and return value.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSerialNumber(Text,Text,Text@)
+    name: 'GetCertificateSerialNumber(CertBase64Value: Text, Password: Text, var SerialNumber: Text)'
+    reason: Use GetCertificateSerialNumber with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#X509Certificate2.GetCertificateSerialNumberAsASCII(Text,Text,Text@)
+    name: 'GetCertificateSerialNumberAsASCII(CertBase64Value: Text, Password: Text, var SerialNumberASCII: Text)'
+    reason: Use GetCertificateSerialNumberAsASCII with SecretText data type for Password.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#EncryptedXml.Encrypt(XmlDocument@,Text,Text,Text)
+    name: 'Encrypt(var XmlDocument: XmlDocument, ElementToEncrypt: Text, X509CertBase64Value: Text, X509CertPassword: Text)'
+    reason: Use Encrypt with SecretText data type for X509CertPassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#EncryptedXml.Encrypt(XmlDocument@,Text,Text,Text,Enum::System#Security#Encryption#SymmetricAlgorithm)
+    name: 'Encrypt(var XmlDocument: XmlDocument, ElementToEncrypt: Text, X509CertBase64Value: Text, X509CertPassword: Text, SymmetricAlgorithm: Enum 1465 SymmetricAlgorithm)'
+    reason: Use Encrypt with SecretText data type for X509CertPassword.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#EncryptedXml.DecryptDocument(XmlDocument@,Text,Enum::System#Security#Encryption#SignatureAlgorithm):Boolean
+    name: 'DecryptDocument(var EncryptedDocument: XmlDocument, EncryptionKey: Text, SignatureAlgorithm: Enum 1446 SignatureAlgorithm): Boolean'
+    reason: Use DecryptDocument with SecretText data type for EncryptionKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#EncryptedXml.DecryptKey(XmlElement,Text,Boolean,Text@,Enum::System#Security#Encryption#SignatureAlgorithm):Boolean
+    name: 'DecryptKey(EncryptedKey: XmlElement, EncryptionKey: Text, UseOAEP: Boolean, var KeyBase64Value: Text, SignatureAlgorithm: Enum 1446 SignatureAlgorithm): Boolean'
+    reason: Use DecryptKey with SecretText data type for EncryptionKey.
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#SignedXml.CheckSignature(Text):Boolean
+    name: 'CheckSignature(XmlString: Text): Boolean'
+    reason: Replaced with CheckSignature which takes in a SecretText
+  - kind: Method
+    internalReference: M:Codeunit::System#Security#Encryption#SignedXml.CheckSignature(Text,Text,Boolean):Boolean
+    name: 'CheckSignature(X509CertBase64Value: Text, X509CertPassword: Text, VerifySignatureOnly: Boolean): Boolean'
+    reason: Replaced with CheckSignature which takes in a SecretText
+  - kind: Interface
+    internalReference: O:Interface::System#Security#Encryption#SignatureAlgorithm
+    name: Interface SignatureAlgorithm
+    reason: Replaced by Signature Algorithm v2 with SecretText support for XmlString.
+  - kind: Interface
+    internalReference: O:Interface::System#Security#Secret_Provider
+    name: Interface "Secret Provider"
+    reason: Replaced by Secret Provider v2 with support for SecretValue as SecretText data type.
+  - kind: Page
+    internalReference: O:Page::System#Apps#Extension_Marketplace
+    name: Page 2502 "Extension Marketplace"
+    reason: This page will be obsoleted. Microsoft AppSource apps feature will replace the Extension Marketplace.
+  - kind: Page
+    internalReference: O:Page::System#Text#Azure_OpenAi_Settings
+    name: Page 2010 "Azure OpenAi Settings"
+    reason: Copilot capabilities settings has been moved to page 7775 "Copilot AI Capabilities"
+  - kind: Page
+    internalReference: O:Page::System#Text#Copilot_Information
+    name: Page 2014 "Copilot Information"
+    reason: Information about Copilot capabilities has been moved to page 7775 "Copilot AI Capabilities"
+  - kind: Page
+    internalReference: O:Page::System#Text#Entity_Text
+    name: Page 2013 "Entity Text"
+    reason: Copilot pages are using the prompt dialog page, to edit entity text with a rich text editor, use a rich text control instead.
+  - kind: Page
+    internalReference: O:Page::System#Text#Entity_Text_Part
+    name: Page 2012 "Entity Text Part"
+    reason: This page part contains only a rich text editor, use the rich text editor control separately on your page instead.
+  - kind: Method
+    internalReference: M:Page::System#Text#Entity_Text_Part.SetHasAdvancedOptions(Boolean)
+    name: 'SetHasAdvancedOptions(NewHasAdvancedOptions: Boolean)'
+    reason: Moving to Prompt Dialog page for Copilot that does not support this functionality.
+  - kind: Method
+    internalReference: M:Page::System#Text#Entity_Text_Part.ShowAdvancedOptions:Boolean
+    name: 'ShowAdvancedOptions(): Boolean'
+    reason: Moving to Prompt Dialog page for Copilot that does not support this functionality.
+  - kind: Method
+    internalReference: M:Codeunit::System#Visualization#Business_Chart.Update(DotNet)
+    name: 'Update(DotNetBusinessChartAddIn: DotNet)'
+    reason: Replaced with BusinessChart Add-In
+  - kind: Method
+    internalReference: M:ControlAddIn::System#Integration#PowerBI#PowerBIManagement.InitializeReport(Text,Text,Text,Text)
+    name: 'InitializeReport(ReportLink: Text, ReportId: Text, AuthToken: Text, PowerBIApi: Text)'
+    reason: This method is deprecated. Please use EmbedReport instead.
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Sharepoint#SharePoint_Auth#.CreateAuthorizationCode(Text,Text,Text,Text):Interface::System#Integration#Sharepoint#SharePoint_Authorization
+    name: 'CreateAuthorizationCode(EntraTenantId: Text, ClientId: Text, ClientSecret: Text, Scope: Text): Interface "SharePoint Authorization"'
+    reason: Use CreateAuthorizationCode with SecretText data type for ClientSecret.
+  - kind: Method
+    internalReference: M:Codeunit::System#Integration#Sharepoint#SharePoint_Auth#.CreateAuthorizationCode(Text,Text,Text,List_of_[Text]):Interface::System#Integration#Sharepoint#SharePoint_Authorization
+    name: 'CreateAuthorizationCode(EntraTenantId: Text, ClientId: Text, ClientSecret: Text, Scopes: List of [Text]): Interface "SharePoint Authorization"'
+    reason: Use CreateAuthorizationCode with SecretText data type for ClientSecret.
+  - kind: Method
+    internalReference: M:Codeunit::System#AI#Azure_OpenAI.ApproximateTokenCount(Text):Integer
+    name: 'ApproximateTokenCount(Input: Text): Integer'
+    reason: Use the AOAI Token codeunit.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#BusinessChart
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.BusinessChart"
+    reason: Replaced with BusinessChart addin.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#FlowIntegration
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.FlowIntegration"
+    reason: Replaced with FlowIntegration addin.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#OAuthIntegration
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.OAuthIntegration"
+    reason: Replaced with OAuthIntegration addin.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#PageReady
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.PageReady"
+    reason: Replaced with PageReady addin.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#PowerBIManagement
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.PowerBIManagement"
+    reason: Replaced with PowerBIManagement addin.
+  - kind: Method
+    internalReference: M:ControlAddIn::Microsoft#Dynamics#Nav#Client#PowerBIManagement.InitializeReport(Text,Text,Text,Text)
+    name: 'InitializeReport(ReportLink: Text, ReportId: Text, AuthToken: Text, PowerBIApi: Text)'
+    reason: This method is deprecated. Please use EmbedReport instead.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#RoleCenterSelector
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.RoleCenterSelector"
+    reason: Replaced with RoleCenterSelector addin.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#VideoPlayer
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.VideoPlayer"
+    reason: Replaced with VideoPlayer addin.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#WebPageViewer
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.WebPageViewer"
+    reason: Replaced with WebPageViewer addin.
+  - kind: ControlAddIn
+    internalReference: O:ControlAddIn::Microsoft#Dynamics#Nav#Client#WelcomeWizard
+    name: ControlAddIn "Microsoft.Dynamics.Nav.Client.WelcomeWizard"
+    reason: Replaced with PowerBIManagement addin.
+  uid: N:Module::System_Application_obsolete_by_24.0#24.0
+uid: N:Module::System_Application_obsolete_by_24.0

@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.RestClient."Http Client Handler"
+alId: ID 2360
+namespace: System.RestClient
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.RestClient
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Send(HttpClient: HttpClient, HttpRequestMessage: Codeunit "Http Request Message", var HttpResponseMessage: Codeunit "Http Response Message"): Boolean'
+    parameters:
+    - id: HttpClient
+      parameterType:
+        name: HttpClient
+        isExternal: true
+    - id: HttpRequestMessage
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Request_Message
+        name: System.RestClient."Http Request Message"
+        isExternal: false
+    - id: HttpResponseMessage
+      parameterType:
+        internalReference: O:Codeunit::System#RestClient#Http_Response_Message
+        name: System.RestClient."Http Response Message"
+        isExternal: false
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: Send
+  uid: M:Codeunit::System#RestClient#Http_Client_Handler.Send(HttpClient,Codeunit::System#RestClient#Http_Request_Message,Codeunit::System#RestClient#Http_Response_Message@):Boolean
+implements:
+- internalReference: O:Interface::System#RestClient#Http_Client_Handler
+  name: System.RestClient."Http Client Handler"
+  isExternal: false
+commentId: O:Codeunit::System#RestClient#Http Client Handler
+name: '"Http Client Handler"'
+uid: O:Codeunit::System#RestClient#Http_Client_Handler

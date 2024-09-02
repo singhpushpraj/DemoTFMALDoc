@@ -1,0 +1,79 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Division Details"'
+alId: ID 60316
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: EH Division Details
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+- name: DrillDownPageId
+  value: CGI Division Details
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Division_Details
+    name: '"CGI Division Details"'
+    isExternal: false
+- name: LookupPageId
+  value: CGI Division Details
+  promoted: false
+  xrefType:
+    internalReference: O:Page::CGI_Division_Details
+    name: '"CGI Division Details"'
+    isExternal: false
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: Code
+  uid: F:Table::CGI_Division_Details.Code[20]
+- type:
+    name: Text[100]
+    isExternal: true
+  name: Description
+  uid: F:Table::CGI_Division_Details.Description[100]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Division_Details.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Division_Details.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Division_Details.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Division_Details.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Division_Details.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Division_Details.SystemRowVersion
+commentId: O:Table::CGI Division Details
+summary: >-
+  Table CGI Division Details (ID 60316).
+
+  Abstract: This is required to mark all agentlines with new information sub-account.
+name: '"CGI Division Details"'
+uid: O:Table::CGI_Division_Details

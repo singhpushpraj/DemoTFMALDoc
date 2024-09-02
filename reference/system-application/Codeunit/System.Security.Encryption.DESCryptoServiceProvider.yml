@@ -1,0 +1,262 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.DESCryptoServiceProvider
+alId: ID 1379
+namespace: System.Security.Encryption
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use EncryptText with SecretText data type for Password.,24.0)]'
+    content: 'procedure EncryptText(DecryptedText: Text, Password: Text, Salt: Text): Text'
+    parameters:
+    - id: DecryptedText
+      description: Represents the text to encrypt
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Represents the password to be used to initialize a new instance of DotNet System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Salt
+      description: Represents the salt to be used to initialize a new instance of System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Returns the encrypted text
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Encrypts text with DotNet Cryptography.DESCryptoServiceProvider
+  name: EncryptText
+  obsoletion:
+    state: pending
+    reason: Use EncryptText with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.EncryptText(Text,Text,Text):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use DecryptText with SecretText data type for Password.,24.0)]'
+    content: 'procedure DecryptText(EncryptedText: Text, Password: Text, Salt: Text): Text'
+    parameters:
+    - id: EncryptedText
+      description: Represents the text to decrypt
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Represents the password to be used to initialize a new instance of DotNet System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Salt
+      description: Represents the salt to be used to initialize a new instance of System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Returns the decrypted text
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Decrypts text with DotNet Cryptography.DESCryptoServiceProvider
+  name: DecryptText
+  obsoletion:
+    state: pending
+    reason: Use DecryptText with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.DecryptText(Text,Text,Text):Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use EncryptStream with SecretText data type for Password.,24.0)]'
+    content: 'procedure EncryptStream(Password: Text, Salt: Text, InputInstream: InStream, var OutputOutstream: OutStream)'
+    parameters:
+    - id: Password
+      description: Represents the password to be used to initialize a new instance of Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Salt
+      description: Represents the salt to be used to initialize a new instance of System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InputInstream
+      description: Represents the input instream data to encrypt
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OutputOutstream
+      description: Represents the output instream encrypted data
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Encrypts data in stream with DotNet Cryptography.DESCryptoServiceProvider
+  name: EncryptStream
+  obsoletion:
+    state: pending
+    reason: Use EncryptStream with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.EncryptStream(Text,Text,InStream,OutStream@)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    - '[Obsolete(Use DecryptStream with SecretText data type for Password.,24.0)]'
+    content: 'procedure DecryptStream(Password: Text, Salt: Text, InputInstream: InStream, var OutputOutstream: OutStream)'
+    parameters:
+    - id: Password
+      description: Represents the password to be used to initialize a new instance of Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Salt
+      description: Represents the salt to be used to initialize a new instance of System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InputInstream
+      description: Represents the input instream data to decrypt
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OutputOutstream
+      description: Represents the output instream decrypted data
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Decrypts data in stream with DotNet Cryptography.DESCryptoServiceProvider
+  name: DecryptStream
+  obsoletion:
+    state: pending
+    reason: Use DecryptStream with SecretText data type for Password.
+    version: "24.0"
+  uid: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.DecryptStream(Text,Text,InStream,OutStream@)
+- syntax:
+    content: 'procedure EncryptText(DecryptedText: Text, Password: SecretText, Salt: Text): Text'
+    parameters:
+    - id: DecryptedText
+      description: Represents the text to encrypt
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Represents the password to be used to initialize a new instance of DotNet System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Salt
+      description: Represents the salt to be used to initialize a new instance of System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Returns the encrypted text
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Encrypts text with DotNet Cryptography.DESCryptoServiceProvider
+  name: EncryptText
+  uid: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.EncryptText(Text,SecretText,Text):Text
+- syntax:
+    content: 'procedure DecryptText(EncryptedText: Text, Password: SecretText, Salt: Text): Text'
+    parameters:
+    - id: EncryptedText
+      description: Represents the text to decrypt
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Password
+      description: Represents the password to be used to initialize a new instance of DotNet System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Salt
+      description: Represents the salt to be used to initialize a new instance of System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: Returns the decrypted text
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Decrypts text with DotNet Cryptography.DESCryptoServiceProvider
+  name: DecryptText
+  uid: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.DecryptText(Text,SecretText,Text):Text
+- syntax:
+    content: 'procedure EncryptStream(Password: SecretText, Salt: Text, InputInstream: InStream, var OutputOutstream: OutStream)'
+    parameters:
+    - id: Password
+      description: Represents the password to be used to initialize a new instance of Rfc2898DeriveBytes
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Salt
+      description: Represents the salt to be used to initialize a new instance of System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InputInstream
+      description: Represents the input instream data to encrypt
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OutputOutstream
+      description: Represents the output instream encrypted data
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Encrypts data in stream with DotNet Cryptography.DESCryptoServiceProvider
+  name: EncryptStream
+  uid: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.EncryptStream(SecretText,Text,InStream,OutStream@)
+- syntax:
+    content: 'procedure DecryptStream(Password: SecretText, Salt: Text, InputInstream: InStream, var OutputOutstream: OutStream)'
+    parameters:
+    - id: Password
+      description: Represents the password to be used to initialize a new instance of Rfc2898DeriveBytes
+      parameterType:
+        name: SecretText
+        isExternal: true
+    - id: Salt
+      description: Represents the salt to be used to initialize a new instance of System.Security.Cryptography.Rfc2898DeriveBytes
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: InputInstream
+      description: Represents the input instream data to decrypt
+      parameterType:
+        name: InStream
+        isExternal: true
+    - id: OutputOutstream
+      description: Represents the output instream decrypted data
+      parameterType:
+        name: OutStream
+        isExternal: true
+  summary: Decrypts data in stream with DotNet Cryptography.DESCryptoServiceProvider
+  name: DecryptStream
+  uid: M:Codeunit::System#Security#Encryption#DESCryptoServiceProvider.DecryptStream(SecretText,Text,InStream,OutStream@)
+commentId: O:Codeunit::System#Security#Encryption#DESCryptoServiceProvider
+summary: Provides helper functions for the Data Encryption Standard (DES)
+name: DESCryptoServiceProvider
+uid: O:Codeunit::System#Security#Encryption#DESCryptoServiceProvider

@@ -1,0 +1,32 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Chat Roles"
+alId: ID 7772
+namespace: System.AI
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: User chat role messages are the messages that the user sends to the model.
+  name: User
+  uid: E:Enum::System#AI#AOAI_Chat_Roles.User
+- summary: System chat role messages provides the initial instructions to the model.
+  name: System
+  uid: E:Enum::System#AI#AOAI_Chat_Roles.System
+- summary: Assistant chat role messages are the messages that the model sends to the user.
+  name: Assistant
+  uid: E:Enum::System#AI#AOAI_Chat_Roles.Assistant
+commentId: O:Enum::System#AI#AOAI Chat Roles
+summary: The chat roles that are available for Chat Completion.
+name: '"AOAI Chat Roles"'
+uid: O:Enum::System#AI#AOAI_Chat_Roles

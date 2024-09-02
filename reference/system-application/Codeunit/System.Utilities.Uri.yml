@@ -1,0 +1,228 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities.Uri
+alId: ID 3060
+namespace: System.Utilities
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Init(UriString: Text)'
+    parameters:
+    - id: UriString
+      description: A string that identifies the resource to be represented by the Uri instance. Note that an IPv6 address in string form must be enclosed within brackets. For example, "http://[2607:f8b0:400d:c06::69]".
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Initializes a new instance of the Uri class with the specified URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.-ctor#System_Uri__ctor_System_String_ for more information.
+  name: Init
+  uid: M:Codeunit::System#Utilities#Uri.Init(Text)
+- syntax:
+    content: 'procedure GetAbsoluteUri(): Text'
+    return:
+      description: A string containing the entire URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the absolute URI.
+  name: GetAbsoluteUri
+  uid: M:Codeunit::System#Utilities#Uri.GetAbsoluteUri:Text
+- syntax:
+    content: 'procedure GetScheme(): Text'
+    return:
+      description: A text that contains the scheme for this URI, converted to lowercase.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the scheme name for the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.scheme for more information.
+  name: GetScheme
+  uid: M:Codeunit::System#Utilities#Uri.GetScheme:Text
+- syntax:
+    content: 'procedure GetHost(): Text'
+    return:
+      description: A text that contains the host name for this URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the host name of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.host for more information.
+  name: GetHost
+  uid: M:Codeunit::System#Utilities#Uri.GetHost:Text
+- syntax:
+    content: 'procedure GetAuthority(): Text'
+    return:
+      description: A text that contains the authority for this URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the authority of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.authority for more information.
+  name: GetAuthority
+  uid: M:Codeunit::System#Utilities#Uri.GetAuthority:Text
+- syntax:
+    content: 'procedure GetPort(): Integer'
+    return:
+      description: An integer that contains the port number for this URI.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the port number of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.port for more information.
+  name: GetPort
+  uid: M:Codeunit::System#Utilities#Uri.GetPort:Integer
+- syntax:
+    content: 'procedure GetAbsolutePath(): Text'
+    return:
+      description: A text that contains the absolute path for this URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the absolute path of the URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.absolutepath for more information.
+  name: GetAbsolutePath
+  uid: M:Codeunit::System#Utilities#Uri.GetAbsolutePath:Text
+- syntax:
+    content: 'procedure GetQuery(): Text'
+    return:
+      description: A text that contains the query information for this URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets any query information included in the specified URI.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.query for more information.
+  name: GetQuery
+  uid: M:Codeunit::System#Utilities#Uri.GetQuery:Text
+- syntax:
+    content: 'procedure GetFragment(): Text'
+    return:
+      description: A text that contains the fragment portion for this URI.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the escaped URI fragment.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.fragment for more information.
+  name: GetFragment
+  uid: M:Codeunit::System#Utilities#Uri.GetFragment:Text
+- syntax:
+    content: 'procedure GetSegments(var Segments: List of [Text])'
+    parameters:
+    - id: Segments
+      parameterType:
+        name: List of [Text]
+        isExternal: true
+  name: GetSegments
+  uid: M:Codeunit::System#Utilities#Uri.GetSegments(List_of_[Text]@)
+- syntax:
+    content: 'procedure EscapeDataString(TextToEscape: Text): Text'
+    parameters:
+    - id: TextToEscape
+      description: ""
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A string that contains the escaped representation of `TextToEscape::`.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts a string to its escaped representation.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.escapedatastring for more information.
+  name: EscapeDataString
+  uid: M:Codeunit::System#Utilities#Uri.EscapeDataString(Text):Text
+- syntax:
+    content: 'procedure UnescapeDataString(TextToUnescape: Text): Text'
+    parameters:
+    - id: TextToUnescape
+      description: ""
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: A string that contains the unescaped representation of `TextToUnescape::`.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Converts a string to its unescaped representation.
+  remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri.unescapedatastring for more information.
+  name: UnescapeDataString
+  uid: M:Codeunit::System#Utilities#Uri.UnescapeDataString(Text):Text
+- syntax:
+    signatures:
+    - '[TryFunction]'
+    content: 'procedure IsValidUri(UriString: Text): Boolean'
+    parameters:
+    - id: UriString
+      description: The string to check.
+      parameterType:
+        name: Text
+        isExternal: true
+    return:
+      description: True if the provided string is a valid URI; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if the provded string is a valid URI.
+  name: IsValidUri
+  uid: M:Codeunit::System#Utilities#Uri.IsValidUri(Text):Boolean
+- syntax:
+    content: 'procedure IsWellFormedUriString(UriString: Text, UriKind: Enum UriKind): Boolean'
+    parameters:
+    - id: UriString
+      description: The string used to attempt to construct a Uri.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: UriKind
+      description: The type of the Uri in uriString.
+      parameterType:
+        internalReference: O:Enum::System#Utilities#UriKind
+        name: System.Utilities.UriKind
+        isExternal: false
+    return:
+      description: True if the string was well-formed; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Indicates whether the string is well-formed by attempting to construct a URI with the string and ensures that the string does not require further escaping.
+  remarks: Visit https://learn.microsoft.com/en-us/dotnet/api/system.uri.iswellformeduristring for more information.
+  name: IsWellFormedUriString
+  uid: M:Codeunit::System#Utilities#Uri.IsWellFormedUriString(Text,Enum::System#Utilities#UriKind):Boolean
+- syntax:
+    content: 'procedure IsBaseOf(var UriToTest: Codeunit Uri): Boolean'
+    parameters:
+    - id: UriToTest
+      description: The specified URI to test.
+      parameterType:
+        internalReference: O:Codeunit::System#Utilities#Uri
+        name: System.Utilities.Uri
+        isExternal: false
+    return:
+      description: True if the current Uri instance is a base of uri; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether the current Uri instance is a base of the specified Uri instance.
+  remarks: Visit https://learn.microsoft.com/en-us/dotnet/api/system.uri.isbaseof for more information.
+  name: IsBaseOf
+  uid: M:Codeunit::System#Utilities#Uri.IsBaseOf(Codeunit::System#Utilities#Uri@):Boolean
+commentId: O:Codeunit::System#Utilities#Uri
+summary: Provides an object representation of a uniform resource identifier (URI) and easy access to the parts of the URI.
+remarks: Visit https://learn.microsoft.com/dotnet/api/system.uri for more information.
+name: Uri
+uid: O:Codeunit::System#Utilities#Uri

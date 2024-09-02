@@ -1,0 +1,181 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Xml.XmlWriter
+alId: ID 1483
+namespace: System.Xml
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Xml
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: procedure WriteStartDocument()
+  summary: Initializes the XmlWriter and creates the XmlWriter Document
+  name: WriteStartDocument
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteStartDocument
+- syntax:
+    content: 'procedure WriteProcessingInstruction(Name: Text, Text: Text)'
+    parameters:
+    - id: Name
+      description: The name of the processing instruction.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Text
+      description: The text to include in the processing instruction.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Writes the Processing Instruction.
+  remarks: This function reinitializes the XML Writer.
+  name: WriteProcessingInstruction
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteProcessingInstruction(Text,Text)
+- syntax:
+    content: 'procedure WriteStartElement(LocalName: Text)'
+    parameters:
+    - id: LocalName
+      description: The local name of the element.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Writes the specified start tag.
+  name: WriteStartElement
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteStartElement(Text)
+- syntax:
+    content: 'procedure WriteStartElement(Prefix: Text, LocalName: Text, NameSpace: Text)'
+    parameters:
+    - id: Prefix
+      description: The namespace prefix of the element.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LocalName
+      description: The local name of the element.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: NameSpace
+      description: The namespace URI to associate with the element. If this namespace is already in scope and has an associated prefix, the writer automatically writes that prefix also.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Writes the specified start tag and associates it with the given namespace and prefix.
+  name: WriteStartElement
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteStartElement(Text,Text,Text)
+- syntax:
+    content: 'procedure WriteElementString(LocalName: Text, ElementValue: Text)'
+    parameters:
+    - id: LocalName
+      description: The local name of the element.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ElementValue
+      description: The value of the element.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Writes an element with the specified local name and value.
+  name: WriteElementString
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteElementString(Text,Text)
+- syntax:
+    content: 'procedure WriteString(ElementText: Text)'
+    parameters:
+    - id: ElementText
+      description: Text to write.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Writes the given text content.
+  name: WriteString
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteString(Text)
+- syntax:
+    content: procedure WriteEndElement()
+  summary: Closes one element and pops the corresponding namespace scope.
+  name: WriteEndElement
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteEndElement
+- syntax:
+    content: 'procedure WriteAttributeString(Prefix: Text, LocalName: Text, Namespace: Text, ElementValue: Text)'
+    parameters:
+    - id: Prefix
+      description: The namespace prefix of the attribute.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: LocalName
+      description: The local name of the attribute.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Namespace
+      description: The namespace URI of the attribute.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ElementValue
+      description: The value of the attribute.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Writes an attribute with the specified local name, namespace URI, and value.
+  name: WriteAttributeString
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteAttributeString(Text,Text,Text,Text)
+- syntax:
+    content: 'procedure WriteAttributeString(LocalName: Text, ElementValue: Text)'
+    parameters:
+    - id: LocalName
+      description: The local name of the attribute.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ElementValue
+      description: The value of the attribute.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Writes out the attribute with the specified local name and value.
+  name: WriteAttributeString
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteAttributeString(Text,Text)
+- syntax:
+    content: 'procedure WriteComment(Comment: Text)'
+    parameters:
+    - id: Comment
+      description: Text to place inside the comment.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Writes out a comment <!--...--> containing the specified text.
+  name: WriteComment
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteComment(Text)
+- syntax:
+    content: procedure WriteEndDocument()
+  summary: Closes any open elements or attributes and puts the writer back in the Start state.
+  name: WriteEndDocument
+  uid: M:Codeunit::System#Xml#XmlWriter.WriteEndDocument
+- syntax:
+    content: 'procedure ToBigText(var XmlBigText: BigText)'
+    parameters:
+    - id: XmlBigText
+      description: The BigText the Xml Writer has to be write to.
+      parameterType:
+        name: BigText
+        isExternal: true
+  summary: Writes the text within Xml Writer to the BigText variable.
+  name: ToBigText
+  uid: M:Codeunit::System#Xml#XmlWriter.ToBigText(BigText@)
+commentId: O:Codeunit::System#Xml#XmlWriter
+summary: Provides helper functions for System.Xml.XmlWriter
+name: XmlWriter
+uid: O:Codeunit::System#Xml#XmlWriter

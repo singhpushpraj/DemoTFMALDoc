@@ -1,0 +1,290 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Globalization.Translation
+alId: ID 3711
+namespace: System.Globalization
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Globalization
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Any(): Boolean'
+    return:
+      description: True if there is at least one translation; false, otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if there any translations present at all.
+  name: Any
+  uid: M:Codeunit::System#Globalization#Translation.Any:Boolean
+- syntax:
+    content: 'procedure Get(RecVariant: Variant, FieldId: Integer): Text'
+    parameters:
+    - id: RecVariant
+      description: The record to get the translated value for.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldId
+      description: The ID of the field for which the translation is stored.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The translated value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the value of a field in the global language for the record.
+  remarks: >-
+    If a translated record for the global language cannot be found it finds the Windows language translation.
+
+    If a Windows language translation cannot be found, return an empty string.
+  examples:
+  - >2+
+
+    To get the value of the description field for an item record, call GetValue(Item, Item.FIELDNO(Description)).
+  name: Get
+  uid: M:Codeunit::System#Globalization#Translation.Get(Variant,Integer):Text
+- syntax:
+    content: 'procedure Get(RecVariant: Variant, FieldId: Integer, LanguageId: Integer): Text'
+    parameters:
+    - id: RecVariant
+      description: The record to get the translated value for.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldId
+      description: The ID of the field to store the translation for.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: LanguageId
+      description: The ID of the language in which to get the field value.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: The translated value.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the value of a field in the language that is specified for the record.
+  examples:
+  - >2+
+
+    To get the value of the Description field for an item record in Danish, call GetValue(Item, Item.FIELDNO(Description), 1030).
+  name: Get
+  uid: M:Codeunit::System#Globalization#Translation.Get(Variant,Integer,Integer):Text
+- syntax:
+    content: 'procedure Set(RecVariant: Variant, FieldId: Integer, Value: Text[2048])'
+    parameters:
+    - id: RecVariant
+      description: The record to store the translated value for.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldId
+      description: The ID of the field to store the translation for.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Value
+      description: The translated value to set.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: Sets the value of a field to the global language for the record.
+  name: Set
+  uid: M:Codeunit::System#Globalization#Translation.Set(Variant,Integer,Text[2048])
+- syntax:
+    content: 'procedure Set(RecVariant: Variant, FieldId: Integer, LanguageId: Integer, Value: Text[2048])'
+    parameters:
+    - id: RecVariant
+      description: The record to store the translated value for.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldId
+      description: The ID of the field to store the translation for.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: LanguageId
+      description: The language id to set the value for.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: Value
+      description: The translated value to set.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: Sets the value of a field to the language specified for the record.
+  name: Set
+  uid: M:Codeunit::System#Globalization#Translation.Set(Variant,Integer,Integer,Text[2048])
+- syntax:
+    content: 'procedure Delete(RecVariant: Variant)'
+    parameters:
+    - id: RecVariant
+      description: The record for which the translations will be deleted.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Deletes all translations for a persisted (non temporary) record.
+  name: Delete
+  uid: M:Codeunit::System#Globalization#Translation.Delete(Variant)
+- syntax:
+    content: 'procedure Delete(RecVariant: Variant, FieldId: Integer)'
+    parameters:
+    - id: RecVariant
+      description: The record with a field for which the translation will be deleted.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldId
+      description: Id of the field for which the translation will be deleted.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Deletes the translation for a field on a persisted (non temporary) record.
+  name: Delete
+  uid: M:Codeunit::System#Globalization#Translation.Delete(Variant,Integer)
+- syntax:
+    content: 'procedure Delete(TableID: Integer)'
+    parameters:
+    - id: TableID
+      description: The table that the translations will be deleted for.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Deletes all the translation for a table ID.
+  name: Delete
+  uid: M:Codeunit::System#Globalization#Translation.Delete(Integer)
+- syntax:
+    content: 'procedure Copy(FromRecVariant: Variant, ToRecVariant: Variant)'
+    parameters:
+    - id: FromRecVariant
+      description: The record from which the translations are copied.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ToRecVariant
+      description: The record to which the translations are copied.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Copies the translation for a field from one record to another record on a persisted (non-temporary) record.
+  name: Copy
+  uid: M:Codeunit::System#Globalization#Translation.Copy(Variant,Variant)
+- syntax:
+    content: 'procedure Copy(FromRecVariant: Variant, ToRecVariant: Variant, FieldId: Integer)'
+    parameters:
+    - id: FromRecVariant
+      description: The record from which the translations are copied.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ToRecVariant
+      description: The record to which the translations are copied.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldId
+      description: Id of the field for which the translation will be copied.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Copies the translation for a field from one record to another record on a persisted (non-temporary) record.
+  name: Copy
+  uid: M:Codeunit::System#Globalization#Translation.Copy(Variant,Variant,Integer)
+- syntax:
+    content: 'procedure Copy(FromRecVariant: Variant, FromFieldId: Integer, ToRecVariant: Variant, ToFieldId: Integer)'
+    parameters:
+    - id: FromRecVariant
+      description: The record from which the translations are copied.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FromFieldId
+      description: The id of the field from which the translations are copied.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: ToRecVariant
+      description: The record to which the translations are copied.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: ToFieldId
+      description: The id of the field to which the translations are copied.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Copies the translation from one record's field to another record's field on a persisted (non-temporary) record.
+  name: Copy
+  uid: M:Codeunit::System#Globalization#Translation.Copy(Variant,Integer,Variant,Integer)
+- syntax:
+    content: 'procedure Show(RecVariant: Variant, FieldId: Integer)'
+    parameters:
+    - id: RecVariant
+      description: The record to get the translated value for.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldId
+      description: The ID of the field to get translations for.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Shows all language translations that are available for a field in a new page.
+  name: Show
+  uid: M:Codeunit::System#Globalization#Translation.Show(Variant,Integer)
+- syntax:
+    content: 'procedure Show(RecVariant: Variant, FieldId: Integer, CheckFieldLength: Boolean)'
+    parameters:
+    - id: RecVariant
+      description: The record to get the translated value for.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: FieldId
+      description: The ID of the field to get translations for.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: CheckFieldLength
+      description: If this value is true, then it's checked that the translation isn't longer than the field length.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Shows all language translations that are available for a field in a new page.
+  name: Show
+  uid: M:Codeunit::System#Globalization#Translation.Show(Variant,Integer,Boolean)
+- syntax:
+    content: 'procedure ShowForAllRecords(TableId: Integer, FieldId: Integer)'
+    parameters:
+    - id: TableId
+      description: The table ID to get translations for.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: FieldId
+      description: The ID of the field to get translations for.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Shows all language translations available for a given field for all the records in that table in a new page.
+  name: ShowForAllRecords
+  uid: M:Codeunit::System#Globalization#Translation.ShowForAllRecords(Integer,Integer)
+commentId: O:Codeunit::System#Globalization#Translation
+summary: Exposes function\alitys to add and retrieve translated texts for table fields.
+name: Translation
+uid: O:Codeunit::System#Globalization#Translation

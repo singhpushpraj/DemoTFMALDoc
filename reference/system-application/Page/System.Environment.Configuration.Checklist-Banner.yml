@@ -1,0 +1,37 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Checklist Banner"
+alId: ID 1990
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  name: System.Environment.Configuration."Checklist Item Buffer"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: CardPart
+  promoted: true
+- name: SourceTable
+  value: "1995"
+  promoted: true
+- name: SourceTableTemporary
+  value: "True"
+  promoted: false
+- name: RefreshOnActivate
+  value: "True"
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Permissions
+  value: tabledata Company = r
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Checklist Banner
+summary: Lists the checklist items that a user should go through to finalize their onboarding experience.
+name: '"Checklist Banner"'
+uid: O:Page::System#Environment#Configuration#Checklist_Banner

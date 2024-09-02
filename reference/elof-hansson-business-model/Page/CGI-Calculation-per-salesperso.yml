@@ -1,0 +1,94 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Calculation per salesperso"'
+alId: ID 60328
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Calculation per Salesperson
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: SaveValues
+  value: "True"
+  promoted: false
+- name: UsageCategory
+  value: Tasks
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure GetFromDate(): Date'
+    return:
+      returnType:
+        name: Date
+        isExternal: true
+  name: GetFromDate
+  uid: M:Page::CGI_Calculation_per_salesperso.GetFromDate:Date
+- syntax:
+    content: 'procedure GetToDate(): Date'
+    return:
+      returnType:
+        name: Date
+        isExternal: true
+  name: GetToDate
+  uid: M:Page::CGI_Calculation_per_salesperso.GetToDate:Date
+- syntax:
+    content: 'procedure GetStatus(): Integer'
+    return:
+      returnType:
+        name: Integer
+        isExternal: true
+  name: GetStatus
+  uid: M:Page::CGI_Calculation_per_salesperso.GetStatus:Integer
+- syntax:
+    content: 'procedure GetCalcNo(): Code[20]'
+    return:
+      returnType:
+        name: Code[20]
+        isExternal: true
+  name: GetCalcNo
+  uid: M:Page::CGI_Calculation_per_salesperso.GetCalcNo:Code[20]
+- syntax:
+    content: 'procedure GetCalcType(): Integer'
+    return:
+      returnType:
+        name: Integer
+        isExternal: true
+  name: GetCalcType
+  uid: M:Page::CGI_Calculation_per_salesperso.GetCalcType:Integer
+- syntax:
+    content: 'procedure GetSalesPersonCode(): Code[10]'
+    return:
+      returnType:
+        name: Code[10]
+        isExternal: true
+  name: GetSalesPersonCode
+  uid: M:Page::CGI_Calculation_per_salesperso.GetSalesPersonCode:Code[10]
+- syntax:
+    content: 'procedure GetStatusDateStart(): Date'
+    return:
+      returnType:
+        name: Date
+        isExternal: true
+  name: GetStatusDateStart
+  uid: M:Page::CGI_Calculation_per_salesperso.GetStatusDateStart:Date
+- syntax:
+    content: 'procedure GetStatusDateEnd(): Date'
+    return:
+      returnType:
+        name: Date
+        isExternal: true
+  name: GetStatusDateEnd
+  uid: M:Page::CGI_Calculation_per_salesperso.GetStatusDateEnd:Date
+commentId: O:Page::CGI Calculation per salesperso
+name: '"CGI Calculation per salesperso"'
+uid: O:Page::CGI_Calculation_per_salesperso

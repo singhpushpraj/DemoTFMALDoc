@@ -1,0 +1,116 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Login Time Tracker"
+alId: ID 9026
+namespace: System.Security.User
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsFirstLogin(UserSecurityID: Guid): Boolean'
+    parameters:
+    - id: UserSecurityID
+      description: The User Security ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if this is the first time the user logs in and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if this is the first time the user logs in to the current company.
+  name: IsFirstLogin
+  uid: M:Codeunit::System#Security#User#User_Login_Time_Tracker.IsFirstLogin(Guid):Boolean
+- syntax:
+    content: 'procedure AnyUserLoggedInSinceDate(FromDate: Date): Boolean'
+    parameters:
+    - id: FromDate
+      description: The date to start searching from.
+      parameterType:
+        name: Date
+        isExternal: true
+    return:
+      description: True if any user logged in on or after the specified date and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if any user logged in to the current company on or after the specified date.
+  name: AnyUserLoggedInSinceDate
+  uid: M:Codeunit::System#Security#User#User_Login_Time_Tracker.AnyUserLoggedInSinceDate(Date):Boolean
+- syntax:
+    content: 'procedure UserLoggedInSinceDateTime(FromDateTime: DateTime): Boolean'
+    parameters:
+    - id: FromDateTime
+      description: The DateTime to start searching from.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    return:
+      description: True if the current user logged in at or after the specified DateTime and false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Returns true if the current user logged in to the current company at or after the specified DateTime.
+  name: UserLoggedInSinceDateTime
+  uid: M:Codeunit::System#Security#User#User_Login_Time_Tracker.UserLoggedInSinceDateTime(DateTime):Boolean
+- syntax:
+    content: 'procedure UserLoggedInEnvironment(UserSecurityID: Guid): Boolean'
+    parameters:
+    - id: UserSecurityID
+      description: The User Security ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the user has logged in to any of the companies; otherwise - false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether a user has logged in to the current environment (to any of the companies) in the past.
+  name: UserLoggedInEnvironment
+  uid: M:Codeunit::System#Security#User#User_Login_Time_Tracker.UserLoggedInEnvironment(Guid):Boolean
+- syntax:
+    content: 'procedure GetPenultimateLoginDateTime(): DateTime'
+    return:
+      description: The penultimate login DateTime of the current user, or 0DT if the user login cannot be found.
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Returns the penultimate login DateTime of the current user for the current company.
+  name: GetPenultimateLoginDateTime
+  uid: M:Codeunit::System#Security#User#User_Login_Time_Tracker.GetPenultimateLoginDateTime:DateTime
+- syntax:
+    content: 'procedure GetPenultimateLoginDateTime(UserSecurityID: Guid): DateTime'
+    parameters:
+    - id: UserSecurityID
+      description: The security ID of the user.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: The penultimate login DateTime of a user, or 0DT if the user login cannot be found.
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Returns the penultimate login DateTime of a user for the current company.
+  name: GetPenultimateLoginDateTime
+  uid: M:Codeunit::System#Security#User#User_Login_Time_Tracker.GetPenultimateLoginDateTime(Guid):DateTime
+commentId: O:Codeunit::System#Security#User#User Login Time Tracker
+summary: Exposes functionality to retrieve information about the user's first, penultimate and last login times.
+name: '"User Login Time Tracker"'
+uid: O:Codeunit::System#Security#User#User_Login_Time_Tracker

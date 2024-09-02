@@ -1,0 +1,39 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Word."Word Template To Text Wizard"
+alId: ID 9999
+namespace: System.Integration.Word
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Integration.Word
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#Integration#Word#Word_Template
+  name: System.Integration.Word."Word Template"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: Caption
+  value: Apply Word Template
+  promoted: false
+- name: SourceTable
+  value: "9988"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#Integration#Word#Word_Template
+    name: System.Integration.Word."Word Template"
+    isExternal: false
+- name: Permissions
+  value: tabledata "Word Template" = rm
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+commentId: O:Page::System#Integration#Word#Word Template To Text Wizard
+summary: A wizard to select a Word template that can then be output as text
+name: '"Word Template To Text Wizard"'
+uid: O:Page::System#Integration#Word#Word_Template_To_Text_Wizard

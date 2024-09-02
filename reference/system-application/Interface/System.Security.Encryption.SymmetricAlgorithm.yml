@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.Encryption.SymmetricAlgorithm
+namespace: System.Security.Encryption
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Security.Encryption
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure GetInstance(DotNetSymmetricAlgorithm: DotNet "System.Security.Cryptography.SymmetricAlgorithm")'
+    parameters:
+    - id: DotNetSymmetricAlgorithm
+      parameterType:
+        name: DotNet "System.Security.Cryptography.SymmetricAlgorithm"
+        isExternal: true
+  name: GetInstance
+  uid: M:Interface::System#Security#Encryption#SymmetricAlgorithm.GetInstance(__MissingSymbol__@)
+- syntax:
+    content: 'procedure XmlEncrypmentMethodUrl(): Text'
+    return:
+      description: An string containing the encrypment method Url.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns Url of the encrypment method used
+  name: XmlEncrypmentMethodUrl
+  uid: M:Interface::System#Security#Encryption#SymmetricAlgorithm.XmlEncrypmentMethodUrl:Text
+commentId: O:Interface::System#Security#Encryption#SymmetricAlgorithm
+summary: Interface defines methods which all implementations of symmetric algorithms must inherit.
+name: SymmetricAlgorithm
+uid: O:Interface::System#Security#Encryption#SymmetricAlgorithm

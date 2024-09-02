@@ -1,0 +1,110 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Period"
+namespace: System.DataAdministration
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+methods:
+- syntax:
+    content: 'procedure RetentionPeriodDateFormula(RetentionPeriod: Record "Retention Period"): Text'
+    parameters:
+    - id: RetentionPeriod
+      description: The record that has the retention period for which you want the date formula.
+      parameterType:
+        name: Record "Retention Period"
+        isExternal: true
+    return:
+      description: The date formula as a string in a language-independent format.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the date formula for a given retention period.
+  name: RetentionPeriodDateFormula
+  uid: M:Interface::System#DataAdministration#Retention_Period.RetentionPeriodDateFormula(Retention_Period):Text
+- syntax:
+    content: 'procedure RetentionPeriodDateFormula(RetentionPeriod: Record "Retention Period", Translated: Boolean): Text'
+    parameters:
+    - id: RetentionPeriod
+      description: The record that has the retention period for which you want the date formula.
+      parameterType:
+        name: Record "Retention Period"
+        isExternal: true
+    - id: Translated
+      description: Indicates whether to return the date formula in a language-independent format or in the current language format.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: The date formula as a string.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Returns the date formula for a given retention period.
+  name: RetentionPeriodDateFormula
+  uid: M:Interface::System#DataAdministration#Retention_Period.RetentionPeriodDateFormula(Retention_Period,Boolean):Text
+- syntax:
+    content: 'procedure CalculateExpirationDate(RetentionPeriod: Record "Retention Period"): Date'
+    parameters:
+    - id: RetentionPeriod
+      description: The record that has the retention period for which you want the expiration date. By default, the current date is used.
+      parameterType:
+        name: Record "Retention Period"
+        isExternal: true
+    return:
+      description: The expiration date.
+      returnType:
+        name: Date
+        isExternal: true
+  summary: Returns the expiration date for a given retention period.
+  name: CalculateExpirationDate
+  uid: M:Interface::System#DataAdministration#Retention_Period.CalculateExpirationDate(Retention_Period):Date
+- syntax:
+    content: 'procedure CalculateExpirationDate(RetentionPeriod: Record "Retention Period", UseDate: Date): Date'
+    parameters:
+    - id: RetentionPeriod
+      description: The record that has the retention period for which you want the expiration date.
+      parameterType:
+        name: Record "Retention Period"
+        isExternal: true
+    - id: UseDate
+      description: The expiration date is calculated based on this date.
+      parameterType:
+        name: Date
+        isExternal: true
+    return:
+      description: The expiration date.
+      returnType:
+        name: Date
+        isExternal: true
+  summary: Returns the expiration date for a given retention period.
+  name: CalculateExpirationDate
+  uid: M:Interface::System#DataAdministration#Retention_Period.CalculateExpirationDate(Retention_Period,Date):Date
+- syntax:
+    content: 'procedure CalculateExpirationDate(RetentionPeriod: Record "Retention Period", UseDateTime: DateTime): DateTime'
+    parameters:
+    - id: RetentionPeriod
+      description: The record that has the retention period for which you want the expiration date and time.
+      parameterType:
+        name: Record "Retention Period"
+        isExternal: true
+    - id: UseDateTime
+      description: The expiration date and time are calculated based on this date and time.
+      parameterType:
+        name: DateTime
+        isExternal: true
+    return:
+      description: The expiration date and time.
+      returnType:
+        name: DateTime
+        isExternal: true
+  summary: Returns the expiration date and time for a given retention period.
+  name: CalculateExpirationDate
+  uid: M:Interface::System#DataAdministration#Retention_Period.CalculateExpirationDate(Retention_Period,DateTime):DateTime
+commentId: O:Interface::System#DataAdministration#Retention Period
+summary: The retention period interface provides functions to retrieve the date formula and calculate the expiration date based on a retention period record.
+name: '"Retention Period"'
+uid: O:Interface::System#DataAdministration#Retention_Period

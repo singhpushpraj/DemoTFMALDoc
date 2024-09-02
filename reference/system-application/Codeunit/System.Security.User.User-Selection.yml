@@ -1,0 +1,71 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Selection"
+alId: ID 9843
+namespace: System.Security.User
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure Open(SelectedUser: __MissingTypeSymbol__): Boolean'
+    parameters:
+    - id: SelectedUser
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: Open
+  uid: M:Codeunit::System#Security#User#User_Selection.Open(__MissingSymbol__@):Boolean
+- syntax:
+    content: 'procedure ValidateUserName(UserName: Code[50])'
+    parameters:
+    - id: UserName
+      description: The username to validate.
+      parameterType:
+        name: Code[50]
+        isExternal: true
+  summary: Displays an error if there is no user with the given username and the user table is not empty.
+  name: ValidateUserName
+  uid: M:Codeunit::System#Security#User#User_Selection.ValidateUserName(Code[50])
+- syntax:
+    content: 'procedure HideExternalUsers(User: __MissingTypeSymbol__)'
+    parameters:
+    - id: User
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: HideExternalUsers
+  uid: M:Codeunit::System#Security#User#User_Selection.HideExternalUsers(__MissingSymbol__@)
+- syntax:
+    content: 'procedure FilterSystemUserAndAADGroupUsers(User: __MissingTypeSymbol__)'
+    parameters:
+    - id: User
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: FilterSystemUserAndAADGroupUsers
+  uid: M:Codeunit::System#Security#User#User_Selection.FilterSystemUserAndAADGroupUsers(__MissingSymbol__@)
+- syntax:
+    content: 'procedure FilterSystemUserAndGroupUsers(User: __MissingTypeSymbol__)'
+    parameters:
+    - id: User
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: FilterSystemUserAndGroupUsers
+  uid: M:Codeunit::System#Security#User#User_Selection.FilterSystemUserAndGroupUsers(__MissingSymbol__@)
+commentId: O:Codeunit::System#Security#User#User Selection
+summary: Provides basic functionality to open a search page and validate user information.
+name: '"User Selection"'
+uid: O:Codeunit::System#Security#User#User_Selection

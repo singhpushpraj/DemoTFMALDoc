@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Upcoming Changes Factbox"
+alId: ID 2611
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: CardPart
+  promoted: true
+- name: Caption
+  value: Managing change
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: ObsoleteReason
+  value: Replaced by teaching tips
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteTag
+  value: "23.0"
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Upcoming Changes Factbox
+summary: Factbox part page that enables a user to learn more about upcoming changes
+name: '"Upcoming Changes Factbox"'
+obsoletion:
+  state: pending
+  reason: Replaced by teaching tips
+  version: "23.0"
+uid: O:Page::System#Environment#Configuration#Upcoming_Changes_Factbox

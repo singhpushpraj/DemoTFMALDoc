@@ -1,0 +1,79 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Post Calculation List"'
+alId: ID 60368
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_Post_Calculation_Header
+  name: '"CGI Post Calculation Header"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: Caption
+  value: EH Calculation Ready for Closing
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "60363"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_Post_Calculation_Header
+    name: '"CGI Post Calculation Header"'
+    isExternal: false
+- name: SourceTableView
+  value: where(Status = filter("Ready for closing"))
+  promoted: false
+- name: UsageCategory
+  value: Lists
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "True"
+  promoted: false
+- name: Editable
+  value: "True"
+  promoted: false
+methods:
+- syntax:
+    content: procedure FinishCalculation()
+  name: FinishCalculation
+  uid: M:Page::CGI_Post_Calculation_List.FinishCalculation
+- syntax:
+    content: 'procedure ArchiveFinishedCalculation(CGIPostCalculationHeader: Record "CGI Post Calculation Header")'
+    parameters:
+    - id: CGIPostCalculationHeader
+      parameterType:
+        name: Record "CGI Post Calculation Header"
+        isExternal: true
+  name: ArchiveFinishedCalculation
+  uid: M:Page::CGI_Post_Calculation_List.ArchiveFinishedCalculation(CGI_Post_Calculation_Header)
+- syntax:
+    content: 'procedure GetCalcGLEntryNo(CalculationNo: Code[20]): Integer'
+    parameters:
+    - id: CalculationNo
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    return:
+      returnType:
+        name: Integer
+        isExternal: true
+  name: GetCalcGLEntryNo
+  uid: M:Page::CGI_Post_Calculation_List.GetCalcGLEntryNo(Code[20]):Integer
+commentId: O:Page::CGI Post Calculation List
+name: '"CGI Post Calculation List"'
+uid: O:Page::CGI_Post_Calculation_List

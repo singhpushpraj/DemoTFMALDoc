@@ -1,0 +1,72 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Extended Precalculations"'
+alId: ID 60303
+baseKind: Table
+kind: Table
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Table](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-table-object)'
+objectProperties:
+- name: Caption
+  value: Extended Precalculations
+  promoted: false
+- name: DataClassification
+  value: CustomerContent
+  promoted: false
+fields:
+- type:
+    name: Code[20]
+    isExternal: true
+  name: '"Calculation No."'
+  uid: F:Table::CGI_Extended_Precalculations.Calculation_No#[20]
+- type:
+    name: Boolean
+    isExternal: true
+  name: '"Ready for closing"'
+  uid: F:Table::CGI_Extended_Precalculations.Ready_for_closing
+- type:
+    name: DateTime
+    isExternal: true
+  name: '"Inserted DateTime"'
+  uid: F:Table::CGI_Extended_Precalculations.Inserted_DateTime
+- type:
+    name: Code[50]
+    isExternal: true
+  name: '"Inserted by"'
+  uid: F:Table::CGI_Extended_Precalculations.Inserted_by[50]
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemId
+  uid: F:Table::CGI_Extended_Precalculations.SystemId
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemCreatedAt
+  uid: F:Table::CGI_Extended_Precalculations.SystemCreatedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemCreatedBy
+  uid: F:Table::CGI_Extended_Precalculations.SystemCreatedBy
+- type:
+    name: DateTime
+    isExternal: true
+  name: SystemModifiedAt
+  uid: F:Table::CGI_Extended_Precalculations.SystemModifiedAt
+- type:
+    name: Guid
+    isExternal: true
+  name: SystemModifiedBy
+  uid: F:Table::CGI_Extended_Precalculations.SystemModifiedBy
+- type:
+    name: BigInteger
+    isExternal: true
+  name: SystemRowVersion
+  uid: F:Table::CGI_Extended_Precalculations.SystemRowVersion
+commentId: O:Table::CGI Extended Precalculations
+summary: Table CGI Extended Precalculations (ID 60303).
+name: '"CGI Extended Precalculations"'
+uid: O:Table::CGI_Extended_Precalculations

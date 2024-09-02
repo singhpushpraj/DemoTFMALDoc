@@ -1,0 +1,31 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."URI - Objects"
+alId: ID 3060
+namespace: System.Utilities
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: ObsoleteState
+  value: Pending
+  promoted: false
+- name: ObsoleteReason
+  value: This permission set is replaced with inherent permissions and is no longer needed.
+  promoted: false
+- name: ObsoleteTag
+  value: "22.0"
+  promoted: false
+commentId: O:PermissionSet::System#Utilities#URI - Objects
+name: '"URI - Objects"'
+obsoletion:
+  state: pending
+  reason: This permission set is replaced with inherent permissions and is no longer needed.
+  version: "22.0"
+uid: O:PermissionSet::System#Utilities#URI_-_Objects

@@ -1,0 +1,53 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI TFM Approve Calc. Buffer"'
+alId: ID 70321
+baseKind: Page
+kind: Page
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::CGI_TFM_Approve_Buffer
+  name: '"CGI TFM Approve Buffer"'
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: TFM Approve Calc. Buffer
+  promoted: false
+- name: DeleteAllowed
+  value: "False"
+  promoted: false
+- name: Editable
+  value: "False"
+  promoted: false
+- name: InsertAllowed
+  value: "False"
+  promoted: false
+- name: ModifyAllowed
+  value: "False"
+  promoted: false
+- name: PageType
+  value: List
+  promoted: true
+- name: ShowFilter
+  value: "False"
+  promoted: false
+- name: SourceTable
+  value: "70305"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::CGI_TFM_Approve_Buffer
+    name: '"CGI TFM Approve Buffer"'
+    isExternal: false
+- name: UsageCategory
+  value: None
+  promoted: false
+commentId: O:Page::CGI TFM Approve Calc# Buffer
+summary: >-
+  page 70320 CGI TFM Approve Calc. Buffer
+
+  Show the TFM Approve Calculation records
+name: '"CGI TFM Approve Calc. Buffer"'
+uid: O:Page::CGI_TFM_Approve_Calc#_Buffer

@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Checklist Item Roles"
+alId: ID 1994
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+sourceTableType:
+  name: System.Environment.Configuration."Checklist Item Role"
+  isExternal: true
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: Checklist Item Roles
+  promoted: false
+- name: PageType
+  value: ListPart
+  promoted: true
+- name: SourceTable
+  value: "1992"
+  promoted: true
+- name: Editable
+  value: "True"
+  promoted: false
+- name: Permissions
+  value: tabledata "Checklist Item Role" = rimd
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Checklist Item Roles
+summary: Lists the roles that a checklist item should be displayed to.
+name: '"Checklist Item Roles"'
+uid: O:Page::System#Environment#Configuration#Checklist_Item_Roles

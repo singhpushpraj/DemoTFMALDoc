@@ -1,0 +1,170 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.WebPageViewer
+namespace: System.Integration
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Integration
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: 'procedure InitializeIFrame(Ratio: Text)'
+    parameters:
+    - id: Ratio
+      description: The ratio of width to height of iframe. For example "16:9".
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Function that initializes iframe
+
+    Call this before SetContent or Navigate.
+  name: InitializeIFrame
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.InitializeIFrame(Text)
+- syntax:
+    content: procedure InitializeFullIFrame()
+  summary: >-
+    Function that initializes iframe, ignoring ratio values
+
+    Call this before SetContent or Navigate.
+  name: InitializeFullIFrame
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.InitializeFullIFrame
+- syntax:
+    content: 'procedure SetContent(Html: Text)'
+    parameters:
+    - id: Html
+      description: The html content to display.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Function that sets the content html
+  name: SetContent
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.SetContent(Text)
+- syntax:
+    content: 'procedure SetContent(Html: Text, JavaScript: Text)'
+    parameters:
+    - id: Html
+      description: The html content to display.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: JavaScript
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Function that sets the content html and executes some JavaScript
+  name: SetContent
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.SetContent(Text,Text)
+- syntax:
+    content: 'procedure Navigate(Url: Text)'
+    parameters:
+    - id: Url
+      description: Url to display.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Function that sets the content url
+  name: Navigate
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.Navigate(Text)
+- syntax:
+    content: 'procedure Navigate(Url: Text, Method: Text, Data: Text)'
+    parameters:
+    - id: Url
+      description: Url to display.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Method
+      description: HTTP method to use.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Data
+      description: Data to send (JSON encoded string).
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Function that sets the content url with parameter data
+  name: Navigate
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.Navigate(Text,Text,Text)
+- syntax:
+    content: 'procedure PostMessage(Message: Text, TargetOrigin: Text, ConvertToJson: Boolean)'
+    parameters:
+    - id: Message
+      description: Data to be sent to the other window
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: TargetOrigin
+      description: Specifies what the origin of otherWindow must be for the event to be dispatched, either as the literal string "*" (indicating no preference) or as a URI.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ConvertToJson
+      description: Flag indicating whether we must convert message to Json or not.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Function to post a message to parent window.
+  name: PostMessage
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.PostMessage(Text,Text,Boolean)
+- syntax:
+    content: procedure LinksOpenInNewWindow()
+  summary: Function to force hyperlinks to open in a new page
+  name: LinksOpenInNewWindow
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.LinksOpenInNewWindow
+- syntax:
+    content: 'procedure InvokeEvent(Data: Text)'
+    parameters:
+    - id: Data
+      description: The data to pass in the event.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Function to trigger a WebPageViewerEvent with custom data
+  name: InvokeEvent
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.InvokeEvent(Text)
+- syntax:
+    content: 'procedure SubscribeToEvent(EventName: Text, Origin: Text)'
+    parameters:
+    - id: EventName
+      description: The name of window event
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: Origin
+      description: Filters event by origin of the publisher
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Function to subscribe to window events and trigger a WebPageViewerEvent with
+
+    the data provided by the event
+  name: SubscribeToEvent
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.SubscribeToEvent(Text,Text)
+- syntax:
+    content: 'procedure SetCallbacksFromSubscribedEventToIgnore(EventName: Text, CallbackResults: JsonArray)'
+    parameters:
+    - id: EventName
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: CallbackResults
+      parameterType:
+        name: JsonArray
+        isExternal: true
+  summary: >-
+    Function to ignore callbacks occuring due to subscribed events.
+
+    This will improve performance by telling client not to send messages back
+
+    to server if not required.
+  remarks: Send empty callbackResults to undo previous entry.
+  name: SetCallbacksFromSubscribedEventToIgnore
+  uid: M:ControlAddIn::System#Integration#WebPageViewer.SetCallbacksFromSubscribedEventToIgnore(Text,JsonArray)
+commentId: O:ControlAddIn::System#Integration#WebPageViewer
+name: WebPageViewer
+uid: O:ControlAddIn::System#Integration#WebPageViewer

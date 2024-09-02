@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Sales Cr. Memo Subform"'
+alId: ID 60335
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Sales Cr# Memo Subform
+summary: Pageextension CGI Sales Cr. Memo Subform (ID 60335) extends page Sales Cr. Memo Subform
+name: '"CGI Sales Cr. Memo Subform"'
+uid: O:PageExtension::CGI_Sales_Cr#_Memo_Subform

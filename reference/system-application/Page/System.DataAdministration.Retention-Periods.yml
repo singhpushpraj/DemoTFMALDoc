@@ -1,0 +1,33 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Retention Periods"
+alId: ID 3900
+namespace: System.DataAdministration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+sourceTableType:
+  internalReference: O:Table::System#DataAdministration#Retention_Period
+  name: System.DataAdministration."Retention Period"
+  isExternal: false
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: List
+  promoted: true
+- name: SourceTable
+  value: "3900"
+  promoted: true
+  xrefType:
+    internalReference: O:Table::System#DataAdministration#Retention_Period
+    name: System.DataAdministration."Retention Period"
+    isExternal: false
+- name: Extensible
+  value: "False"
+  promoted: true
+commentId: O:Page::System#DataAdministration#Retention Periods
+summary: List page that contains all of the retention periods that have been defined.
+name: '"Retention Periods"'
+uid: O:Page::System#DataAdministration#Retention_Periods

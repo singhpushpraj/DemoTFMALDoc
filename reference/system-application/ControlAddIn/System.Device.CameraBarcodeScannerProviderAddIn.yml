@@ -1,0 +1,41 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device.CameraBarcodeScannerProviderAddIn
+namespace: System.Device
+baseKind: ControlAddIn
+kind: ControlAddIn
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[ControlAddIn](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-control-addin-object)'
+methods:
+- syntax:
+    content: procedure RequestBarcodeAsync()
+  summary: This method is used to request the camera barcode scanner.
+  name: RequestBarcodeAsync
+  uid: M:ControlAddIn::System#Device#CameraBarcodeScannerProviderAddIn.RequestBarcodeAsync
+- syntax:
+    content: 'procedure RequestBarcodeAsync(ShowFlipCameraButton: Boolean, ShowTorchButton: Boolean, ResultDisplayDuration: Integer)'
+    parameters:
+    - id: ShowFlipCameraButton
+      description: Indicates whether the flip camera button should be shown.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: ShowTorchButton
+      description: Indicates whether the torch button should be shown.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: ResultDisplayDuration
+      description: The duration in milliseconds for which the barcode result should be displayed.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: This method is used to request the camera barcode scanner.
+  name: RequestBarcodeAsync
+  uid: M:ControlAddIn::System#Device#CameraBarcodeScannerProviderAddIn.RequestBarcodeAsync(Boolean,Boolean,Integer)
+commentId: O:ControlAddIn::System#Device#CameraBarcodeScannerProviderAddIn
+summary: The control add-in for the camera barcode scanner provider.
+name: CameraBarcodeScannerProviderAddIn
+uid: O:ControlAddIn::System#Device#CameraBarcodeScannerProviderAddIn

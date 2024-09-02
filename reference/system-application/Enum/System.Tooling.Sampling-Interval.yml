@@ -1,0 +1,34 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Tooling."Sampling Interval"
+alId: ID 1925
+namespace: System.Tooling
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Tooling
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+- name: Access
+  value: Public
+  promoted: false
+enumValues:
+- summary: The sampling interval is not specified.
+  name: None
+  uid: E:Enum::System#Tooling#Sampling_Interval.None
+- summary: Sample every 50 milliseconds
+  name: SampleEvery50ms
+  uid: E:Enum::System#Tooling#Sampling_Interval.SampleEvery50ms
+- summary: Sample every 100 milliseconds
+  name: SampleEvery100ms
+  uid: E:Enum::System#Tooling#Sampling_Interval.SampleEvery100ms
+- summary: Sample every 150 milliseconds
+  name: SampleEvery150ms
+  uid: E:Enum::System#Tooling#Sampling_Interval.SampleEvery150ms
+commentId: O:Enum::System#Tooling#Sampling Interval
+name: '"Sampling Interval"'
+uid: O:Enum::System#Tooling#Sampling_Interval

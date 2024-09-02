@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Device."Media Type"
+alId: ID 1909
+namespace: System.Device
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Device
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Choose from either pictures or videos.
+  name: '"All Media"'
+  uid: E:Enum::System#Device#Media_Type.All_Media
+- summary: Choose from pictures.
+  name: Picture
+  uid: E:Enum::System#Device#Media_Type.Picture
+- summary: Choose from videos.
+  name: Video
+  uid: E:Enum::System#Device#Media_Type.Video
+commentId: O:Enum::System#Device#Media Type
+summary: Specifies media type for the Media Interaction page.
+name: '"Media Type"'
+uid: O:Enum::System#Device#Media_Type

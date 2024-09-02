@@ -1,0 +1,565 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Reflection."Record Reference"
+namespace: System.Reflection
+baseKind: Interface
+kind: Interface
+parent: N:Module::System_Application::Namespace::System.Reflection
+langs:
+- al
+seeAlso:
+- '[Interface](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-interfaces-in-al)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure ReadPermission(RecordRef: RecordRef): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    return:
+      description: true if you can read from some or all of the table; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines if you can read from a table.
+  name: ReadPermission
+  uid: M:Interface::System#Reflection#Record_Reference.ReadPermission(RecordRef):Boolean
+- syntax:
+    content: 'procedure WritePermission(RecordRef: RecordRef): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    return:
+      description: Specifies if you have permission to write to the table
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines if you can write to a table.
+  name: WritePermission
+  uid: M:Interface::System#Reflection#Record_Reference.WritePermission(RecordRef):Boolean
+- syntax:
+    content: 'procedure Count(RecordRef: RecordRef): Integer'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    return:
+      description: The number of records in the table.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Counts the number of records that are in the filters that are currently applied to the table referred to by the RecordRef.
+  name: Count
+  uid: M:Interface::System#Reflection#Record_Reference.Count(RecordRef):Integer
+- syntax:
+    content: 'procedure CountApprox(RecordRef: RecordRef): Integer'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    return:
+      description: Approximate number of records in the table.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets an approximate count of the number of records in the table
+  name: CountApprox
+  uid: M:Interface::System#Reflection#Record_Reference.CountApprox(RecordRef):Integer
+- syntax:
+    content: 'procedure IsEmpty(RecordRef: RecordRef): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    return:
+      description: true if the record or table is empty; otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Determines whether any records exist in a filtered set of records in a table.
+  name: IsEmpty
+  uid: M:Interface::System#Reflection#Record_Reference.IsEmpty(RecordRef):Boolean
+- syntax:
+    content: 'procedure Find(RecordRef: RecordRef, Which: Text)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: Which
+      description: Specifies how to perform the search.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Finds a record in a table based on the values stored in the key fields.
+  name: Find
+  uid: M:Interface::System#Reflection#Record_Reference.Find(RecordRef,Text)
+- syntax:
+    content: 'procedure Find(RecordRef: RecordRef, Which: Text, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: Which
+      description: Specifies how to perform the search.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Finds a record in a table based on the values stored in the key fields.
+  name: Find
+  uid: M:Interface::System#Reflection#Record_Reference.Find(RecordRef,Text,Boolean):Boolean
+- syntax:
+    content: 'procedure FindLast(RecordRef: RecordRef)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: Finds the last record in a table based on the current key and filter.
+  name: FindLast
+  uid: M:Interface::System#Reflection#Record_Reference.FindLast(RecordRef)
+- syntax:
+    content: 'procedure FindLast(RecordRef: RecordRef, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Finds the last record in a table based on the current key and filter.
+  name: FindLast
+  uid: M:Interface::System#Reflection#Record_Reference.FindLast(RecordRef,Boolean):Boolean
+- syntax:
+    content: 'procedure FindFirst(RecordRef: RecordRef)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: Finds the first record in a table based on the current key and filter.
+  name: FindFirst
+  uid: M:Interface::System#Reflection#Record_Reference.FindFirst(RecordRef)
+- syntax:
+    content: 'procedure FindFirst(RecordRef: RecordRef, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Finds the first record in a table based on the current key and filter.
+  name: FindFirst
+  uid: M:Interface::System#Reflection#Record_Reference.FindFirst(RecordRef,Boolean):Boolean
+- syntax:
+    content: 'procedure FindSet(RecordRef: RecordRef)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+  summary: Finds a set of records in a table based on the current key and filter. FINDSET can only retrieve records in ascending order.
+  name: FindSet
+  uid: M:Interface::System#Reflection#Record_Reference.FindSet(RecordRef)
+- syntax:
+    content: 'procedure FindSet(RecordRef: RecordRef, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Finds a set of records in a table based on the current key and filter. FINDSET can only retrieve records in ascending order.
+  name: FindSet
+  uid: M:Interface::System#Reflection#Record_Reference.FindSet(RecordRef,Boolean):Boolean
+- syntax:
+    content: 'procedure FindSet(RecordRef: RecordRef, ForUpdate: Boolean, UpdateKey: Boolean, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: ForUpdate
+      description: Set this parameter to false if you do not want to modify any records in the set.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: UpdateKey
+      description: This parameter only applies if ForUpdate is true. If you are going to modify any field value within the current key, set this parameter to true.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Finds a set of records in a table based on the current key and filter. FINDSET can only retrieve records in ascending order.
+  name: FindSet
+  uid: M:Interface::System#Reflection#Record_Reference.FindSet(RecordRef,Boolean,Boolean,Boolean):Boolean
+- syntax:
+    content: 'procedure Next(RecordRef: RecordRef, Steps: Integer): Integer'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: Steps
+      description: Defines the direction of the search and how many records to step include.
+      parameterType:
+        name: Integer
+        isExternal: true
+    return:
+      description: the direction of the search and how many steps taken.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Steps through a specified number of records and retrieves a record.
+  name: Next
+  uid: M:Interface::System#Reflection#Record_Reference.Next(RecordRef,Integer):Integer
+- syntax:
+    content: 'procedure Next(RecordRef: RecordRef): Integer'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    return:
+      description: the direction of the search and how many steps taken.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Steps through a specified number of records and retrieves a record.
+  name: Next
+  uid: M:Interface::System#Reflection#Record_Reference.Next(RecordRef):Integer
+- syntax:
+    content: 'procedure Get(RecordRef: RecordRef, RecordId: RecordId)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RecordId
+      description: The RecordID that contains the table number and the primary key of the table and is used to identify the record that you want to get.
+      parameterType:
+        name: RecordId
+        isExternal: true
+  summary: Gets a record based on the ID of the record.
+  name: Get
+  uid: M:Interface::System#Reflection#Record_Reference.Get(RecordRef,RecordId)
+- syntax:
+    content: 'procedure Get(RecordRef: RecordRef, RecordId: RecordId, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RecordId
+      description: The RecordID that contains the table number and the primary key of the table and is used to identify the record that you want to get.
+      parameterType:
+        name: RecordId
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets a record based on the ID of the record.
+  name: Get
+  uid: M:Interface::System#Reflection#Record_Reference.Get(RecordRef,RecordId,Boolean):Boolean
+- syntax:
+    content: 'procedure GetBySystemId(RecordRef: RecordRef, SystemId: Guid)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: SystemId
+      description: The systemid which uniquely identifies the record that you want to get.
+      parameterType:
+        name: Guid
+        isExternal: true
+  summary: Gets a record based on the ID of the record. The RecordRef must already be opened.
+  name: GetBySystemId
+  uid: M:Interface::System#Reflection#Record_Reference.GetBySystemId(RecordRef,Guid)
+- syntax:
+    content: 'procedure GetBySystemId(RecordRef: RecordRef, SystemId: Guid, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: SystemId
+      description: The systemid which uniquely identifies the record that you want to get.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Gets a record based on the ID of the record. The RecordRef must already be opened.
+  name: GetBySystemId
+  uid: M:Interface::System#Reflection#Record_Reference.GetBySystemId(RecordRef,Guid,Boolean):Boolean
+- syntax:
+    content: 'procedure Insert(RecordRef: RecordRef, RunTrigger: Boolean)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RunTrigger
+      description: If this parameter is true, the code in the OnInsert Trigger is executed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Inserts a record into a table.
+  name: Insert
+  uid: M:Interface::System#Reflection#Record_Reference.Insert(RecordRef,Boolean)
+- syntax:
+    content: 'procedure Insert(RecordRef: RecordRef, RunTrigger: Boolean, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RunTrigger
+      description: If this parameter is true, the code in the OnInsert Trigger is executed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Inserts a record into a table.
+  name: Insert
+  uid: M:Interface::System#Reflection#Record_Reference.Insert(RecordRef,Boolean,Boolean):Boolean
+- syntax:
+    content: 'procedure Insert(RecordRef: RecordRef, RunTrigger: Boolean, InsertWithSystemId: Boolean, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RunTrigger
+      description: If this parameter is true, the code in the OnInsert Trigger is executed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: InsertWithSystemId
+      description: If this parameter is true, the SystemId field of the record is given a value that you explicitly assign.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Inserts a record into a table.
+  name: Insert
+  uid: M:Interface::System#Reflection#Record_Reference.Insert(RecordRef,Boolean,Boolean,Boolean):Boolean
+- syntax:
+    content: 'procedure Modify(RecordRef: RecordRef, RunTrigger: Boolean)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RunTrigger
+      description: Specifies whether to run the AL code in the OnModify Trigger.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Modifies a record in a table.
+  name: Modify
+  uid: M:Interface::System#Reflection#Record_Reference.Modify(RecordRef,Boolean)
+- syntax:
+    content: 'procedure Modify(RecordRef: RecordRef, RunTrigger: Boolean, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RunTrigger
+      description: Specifies whether to run the AL code in the OnModify Trigger.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Modifies a record in a table.
+  name: Modify
+  uid: M:Interface::System#Reflection#Record_Reference.Modify(RecordRef,Boolean,Boolean):Boolean
+- syntax:
+    content: 'procedure Delete(RecordRef: RecordRef, RunTrigger: Boolean)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RunTrigger
+      description: Specifies whether the code in the OnDelete trigger will be executed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes a record in a table.
+  name: Delete
+  uid: M:Interface::System#Reflection#Record_Reference.Delete(RecordRef,Boolean)
+- syntax:
+    content: 'procedure Delete(RecordRef: RecordRef, RunTrigger: Boolean, UseReturnValue: Boolean): Boolean'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RunTrigger
+      description: Specifies whether the code in the OnDelete trigger will be executed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: UseReturnValue
+      description: If you set UseReturnValue to false and the operation does not execute successfully, a runtime error will occur.
+      parameterType:
+        name: Boolean
+        isExternal: true
+    return:
+      description: true if the operation was successful; otherwise false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes a record in a table.
+  name: Delete
+  uid: M:Interface::System#Reflection#Record_Reference.Delete(RecordRef,Boolean,Boolean):Boolean
+- syntax:
+    content: 'procedure DeleteAll(RecordRef: RecordRef, RunTrigger: Boolean)'
+    parameters:
+    - id: RecordRef
+      description: An instance of the RecordRef data type.
+      parameterType:
+        name: RecordRef
+        isExternal: true
+    - id: RunTrigger
+      description: Specifies whether the code in the OnDelete trigger will be executed.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Deletes all records in a table that fall within a specified range.
+  name: DeleteAll
+  uid: M:Interface::System#Reflection#Record_Reference.DeleteAll(RecordRef,Boolean)
+commentId: O:Interface::System#Reflection#Record Reference
+summary: The Record Reference interface provides a method for delegating read/write operations for tables that require indirect permissions.
+name: '"Record Reference"'
+uid: O:Interface::System#Reflection#Record_Reference

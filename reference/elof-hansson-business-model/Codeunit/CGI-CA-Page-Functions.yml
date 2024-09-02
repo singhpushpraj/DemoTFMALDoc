@@ -1,0 +1,161 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI CA Page Functions"'
+alId: ID 60304
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+methods:
+- syntax:
+    content: 'procedure OnSalesOrderOnActionShowRelatedPOCA(SalesHeader: __MissingTypeSymbol__)'
+    parameters:
+    - id: SalesHeader
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnSalesOrderOnActionShowRelatedPOCA
+  uid: M:Codeunit::CGI_CA_Page_Functions.OnSalesOrderOnActionShowRelatedPOCA(__MissingSymbol__@)
+- syntax:
+    content: 'procedure OnSalesOrderActionOnCopyStandardTextToPO(SalesHeader: __MissingTypeSymbol__)'
+    parameters:
+    - id: SalesHeader
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnSalesOrderActionOnCopyStandardTextToPO
+  uid: M:Codeunit::CGI_CA_Page_Functions.OnSalesOrderActionOnCopyStandardTextToPO(__MissingSymbol__@)
+- syntax:
+    content: 'procedure OnPurchOrderInvoiceOnActionShowRelatedCA(PurchaseHeader: __MissingTypeSymbol__)'
+    parameters:
+    - id: PurchaseHeader
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnPurchOrderInvoiceOnActionShowRelatedCA
+  uid: M:Codeunit::CGI_CA_Page_Functions.OnPurchOrderInvoiceOnActionShowRelatedCA(__MissingSymbol__@)
+- syntax:
+    content: 'procedure OnPurchOrderOnActionShowRelatedSOCA(PurchaseHeader: __MissingTypeSymbol__)'
+    parameters:
+    - id: PurchaseHeader
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnPurchOrderOnActionShowRelatedSOCA
+  uid: M:Codeunit::CGI_CA_Page_Functions.OnPurchOrderOnActionShowRelatedSOCA(__MissingSymbol__@)
+- syntax:
+    content: 'procedure OnPurchOrderOnActionShowRelatedSO(PurchaseHeader: __MissingTypeSymbol__)'
+    parameters:
+    - id: PurchaseHeader
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: OnPurchOrderOnActionShowRelatedSO
+  uid: M:Codeunit::CGI_CA_Page_Functions.OnPurchOrderOnActionShowRelatedSO(__MissingSymbol__@)
+- syntax:
+    content: 'procedure ShowCalculationCard_CAWList(CGICalculatitonHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculatitonHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: ShowCalculationCard_CAWList
+  uid: M:Codeunit::CGI_CA_Page_Functions.ShowCalculationCard_CAWList(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure ShowPurchaseOrders(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      description: Code[20]
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: >-
+    ShowPurchaseOrders
+
+    This functions is called on page "Sales Order", "Sales Order Archive", "CA/CAW"
+  name: ShowPurchaseOrders
+  uid: M:Codeunit::CGI_CA_Page_Functions.ShowPurchaseOrders(Code[20])
+- syntax:
+    content: 'procedure ShowSalesOrders(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      description: Code[20]
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: >-
+    ShowSalesOrders
+
+    This functions is called on page "Purchase Order", "Purchase Order Archive", "CA/CAP"
+  name: ShowSalesOrders
+  uid: M:Codeunit::CGI_CA_Page_Functions.ShowSalesOrders(Code[20])
+- syntax:
+    content: 'procedure ShowCalculation(CalculationNo: Code[20])'
+    parameters:
+    - id: CalculationNo
+      description: Code[20]
+      parameterType:
+        name: Code[20]
+        isExternal: true
+  summary: >-
+    ShowCalculation
+
+    This functions is called on page "Sales Order/Sals Order Archive/Purchase Order/Purchase Order Archive"
+  name: ShowCalculation
+  uid: M:Codeunit::CGI_CA_Page_Functions.ShowCalculation(Code[20])
+- syntax:
+    content: 'procedure CheckCalculationApproval(CGICalculationHeader: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeader
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CheckCalculationApproval
+  uid: M:Codeunit::CGI_CA_Page_Functions.CheckCalculationApproval(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure CheckVatPostingGroup(CGICalculationHeaderP: Record "CGI Calculation Header"): Boolean'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: CheckVatPostingGroup
+  uid: M:Codeunit::CGI_CA_Page_Functions.CheckVatPostingGroup(CGI_Calculation_Header):Boolean
+- syntax:
+    content: 'procedure CheckVATExist(CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  summary: CheckVATExist.
+  name: CheckVATExist
+  uid: M:Codeunit::CGI_CA_Page_Functions.CheckVATExist(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure CreateOrdersFromCACalculation(CGICalculationHeaderP: Record "CGI Calculation Header")'
+    parameters:
+    - id: CGICalculationHeaderP
+      parameterType:
+        name: Record "CGI Calculation Header"
+        isExternal: true
+  name: CreateOrdersFromCACalculation
+  uid: M:Codeunit::CGI_CA_Page_Functions.CreateOrdersFromCACalculation(CGI_Calculation_Header)
+- syntax:
+    content: 'procedure UpdateCLESalesBusinessTerms(pCustLedgerEntry: __MissingTypeSymbol__)'
+    parameters:
+    - id: pCustLedgerEntry
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+  name: UpdateCLESalesBusinessTerms
+  uid: M:Codeunit::CGI_CA_Page_Functions.UpdateCLESalesBusinessTerms(__MissingSymbol__)
+commentId: O:Codeunit::CGI CA Page Functions
+summary: Codeunit CGI Custimized Functions (ID 60304)
+name: '"CGI CA Page Functions"'
+uid: O:Codeunit::CGI_CA_Page_Functions

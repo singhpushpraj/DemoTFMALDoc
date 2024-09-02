@@ -1,0 +1,317 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."AOAI Chat Messages"
+alId: ID 7763
+namespace: System.AI
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SetPrimarySystemMessage(Message: SecretText)'
+    parameters:
+    - id: Message
+      description: The primary system message.
+      parameterType:
+        name: SecretText
+        isExternal: true
+  summary: Sets the system message which is always at the top of the chat messages history provided to the model.
+  name: SetPrimarySystemMessage
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.SetPrimarySystemMessage(SecretText)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure AddSystemMessage(NewMessage: Text)'
+    parameters:
+    - id: NewMessage
+      description: The message to add.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a system message to the chat messages history.
+  name: AddSystemMessage
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.AddSystemMessage(Text)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure AddUserMessage(NewMessage: Text)'
+    parameters:
+    - id: NewMessage
+      description: The message to add.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a user message to the chat messages history.
+  name: AddUserMessage
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.AddUserMessage(Text)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure AddUserMessage(NewMessage: Text, NewName: Text[2048])'
+    parameters:
+    - id: NewMessage
+      description: The message to add.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: NewName
+      description: The name of the user.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: Adds a user message to the chat messages history.
+  name: AddUserMessage
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.AddUserMessage(Text,Text[2048])
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure AddAssistantMessage(NewMessage: Text)'
+    parameters:
+    - id: NewMessage
+      description: The message to add.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a assistant message to the chat messages history.
+  name: AddAssistantMessage
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.AddAssistantMessage(Text)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure ModifyMessage(Id: Integer, NewMessage: Text, NewRole: Enum "AOAI Chat Roles", NewName: Text[2048])'
+    parameters:
+    - id: Id
+      description: Id of the message.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: NewMessage
+      description: The new message.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: NewRole
+      description: The new role.
+      parameterType:
+        internalReference: O:Enum::System#AI#AOAI_Chat_Roles
+        name: System.AI."AOAI Chat Roles"
+        isExternal: false
+    - id: NewName
+      description: The new name.
+      parameterType:
+        name: Text[2048]
+        isExternal: true
+  summary: Modifies a message in the chat messages history.
+  name: ModifyMessage
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.ModifyMessage(Integer,Text,Enum::System#AI#AOAI_Chat_Roles,Text[2048])
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure DeleteMessage(Id: Integer)'
+    parameters:
+    - id: Id
+      description: Id of the message.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Deletes a message from the chat messages history.
+  name: DeleteMessage
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.DeleteMessage(Integer)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetHistory(): List of [Text]'
+    return:
+      returnType:
+        name: List of [Text]
+        isExternal: true
+  name: GetHistory
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.GetHistory:List_of_[Text]
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetHistoryNames(): List of [Text[2048]]'
+    return:
+      returnType:
+        name: List of [Text[2048]]
+        isExternal: true
+  name: GetHistoryNames
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.GetHistoryNames:List_of_[Text]
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetHistoryRoles(): List of [Enum "AOAI Chat Roles"]'
+    return:
+      returnType:
+        name: List of [Enum System.AI."AOAI Chat Roles"]
+        isExternal: true
+  name: GetHistoryRoles
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.GetHistoryRoles:List_of_[AOAI_Chat_Roles]
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetLastMessage(): Text'
+    return:
+      description: The last chat message.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the last chat message.
+  name: GetLastMessage
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.GetLastMessage:Text
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetLastRole(): Enum "AOAI Chat Roles"'
+    return:
+      description: The last chat message role.
+      returnType:
+        internalReference: O:Enum::System#AI#AOAI_Chat_Roles
+        name: System.AI."AOAI Chat Roles"
+        isExternal: false
+  summary: Gets the last chat message role.
+  name: GetLastRole
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.GetLastRole:Enum::System#AI#AOAI_Chat_Roles
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetLastName(): Text[2048]'
+    return:
+      description: The last chat message name.
+      returnType:
+        name: Text[2048]
+        isExternal: true
+  summary: Gets the last chat message name.
+  name: GetLastName
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.GetLastName:Text[2048]
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SetHistoryLength(NewLength: Integer)'
+    parameters:
+    - id: NewLength
+      description: The new length.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Set the length of history that is used by the model.
+  name: SetHistoryLength
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.SetHistoryLength(Integer)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure AddTool(NewTool: JsonObject)'
+    parameters:
+    - id: NewTool
+      description: The Tool to be added to the payload.
+      parameterType:
+        name: JsonObject
+        isExternal: true
+  summary: Appends a Tool to the payload.
+  remarks: 'See more details here: https://go.microsoft.com/fwlink/?linkid=2254538'
+  name: AddTool
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.AddTool(JsonObject)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure ModifyTool(Id: Integer, NewTool: JsonObject)'
+    parameters:
+    - id: Id
+      description: Id of the message.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: NewTool
+      description: The new Tool.
+      parameterType:
+        name: JsonObject
+        isExternal: true
+  summary: Modifies a Tool in the list of Tool.
+  name: ModifyTool
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.ModifyTool(Integer,JsonObject)
+- syntax:
+    content: 'procedure DeleteTool(Id: Integer)'
+    parameters:
+    - id: Id
+      description: Id of the Tool.
+      parameterType:
+        name: Integer
+        isExternal: true
+  summary: Deletes a Tool from the list of Tool.
+  name: DeleteTool
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.DeleteTool(Integer)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetTools(): List of [JsonObject]'
+    return:
+      returnType:
+        name: List of [JsonObject]
+        isExternal: true
+  name: GetTools
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.GetTools:List_of_[JsonObject]
+- syntax:
+    content: 'procedure ToolsExists(): Boolean'
+    return:
+      description: True if Tools exists, false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks if at least one Tools exists in the list.
+  name: ToolsExists
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.ToolsExists:Boolean
+- syntax:
+    content: 'procedure SetAddToolsToPayload(AddToolsToPayload: Boolean)'
+    parameters:
+    - id: AddToolsToPayload
+      description: True if Tools is to be added to the payload, false otherwise.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets the Tools to be added to the payload.
+  name: SetAddToolsToPayload
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.SetAddToolsToPayload(Boolean)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure SetToolChoice(ToolChoice: Text)'
+    parameters:
+    - id: ToolChoice
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Sets the Tool choice, which allow model to determine how Tools should be called.
+  remarks: 'See more details here: https://go.microsoft.com/fwlink/?linkid=2254538'
+  name: SetToolChoice
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.SetToolChoice(Text)
+- syntax:
+    signatures:
+    - '[NonDebuggable]'
+    content: 'procedure GetToolChoice(): Text'
+    return:
+      description: The Tool choice parameter.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the Tool choice parameter.
+  name: GetToolChoice
+  uid: M:Codeunit::System#AI#AOAI_Chat_Messages.GetToolChoice:Text
+commentId: O:Codeunit::System#AI#AOAI Chat Messages
+summary: Helper functions for the AOAI Chat Message table.
+name: '"AOAI Chat Messages"'
+uid: O:Codeunit::System#AI#AOAI_Chat_Messages

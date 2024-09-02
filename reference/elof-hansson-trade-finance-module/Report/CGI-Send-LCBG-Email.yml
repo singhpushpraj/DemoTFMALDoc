@@ -1,0 +1,45 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Send LCBG Email"'
+alId: ID 70300
+baseKind: Report
+kind: Report
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Report](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-report-object)'
+objectProperties:
+- name: Caption
+  value: Send Email
+  promoted: false
+- name: DefaultLayout
+  value: Word
+  promoted: false
+- name: ShowPrintStatus
+  value: "False"
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+- name: WordLayout
+  value: ./src/Layouts/Exp LC.docx
+  promoted: false
+- name: Caption
+  value: Send Email
+  promoted: false
+- name: DefaultLayout
+  value: Word
+  promoted: false
+- name: ShowPrintStatus
+  value: "False"
+  promoted: false
+- name: UsageCategory
+  value: None
+  promoted: false
+- name: WordLayout
+  value: ./src/Layouts/Exp LC.docx
+  promoted: false
+commentId: O:Report::CGI Send LCBG Email
+summary: report contains functionilty to CGI Send LCBG Email
+name: '"CGI Send LCBG Email"'
+uid: O:Report::CGI_Send_LCBG_Email

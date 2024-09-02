@@ -1,0 +1,40 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Utilities."Uri Query Duplicate Behaviour"
+alId: ID 3062
+namespace: System.Utilities
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Utilities
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: Skips adding the value if the same flag or parameter already exists.
+  examples:
+  - Adding "foo=bar" to "https://microsoft.com?foo=goofy" and using this option results in "https://microsoft.com?foo=goofy".
+  name: Skip
+  uid: E:Enum::System#Utilities#Uri_Query_Duplicate_Behaviour.Skip
+- summary: Keeps the new value (overwrites all existing matching flags or parameters).
+  examples:
+  - Adding "foo=bar" to "https://microsoft.com?foo=goofy" and using this option results in "https://microsoft.com?foo=bar".
+  name: '"Overwrite All Matching"'
+  uid: E:Enum::System#Utilities#Uri_Query_Duplicate_Behaviour.Overwrite_All_Matching
+- summary: Keeps both the existing values and the new value.
+  examples:
+  - Adding "foo=bar" to "https://microsoft.com?foo=goofy" and using this option results in "https://microsoft.com?foo=goofy&foo=bar".
+  name: '"Keep All"'
+  uid: E:Enum::System#Utilities#Uri_Query_Duplicate_Behaviour.Keep_All
+- summary: Throws an error if the flag or parameter already exists.
+  examples:
+  - Adding "foo=bar" to "https://microsoft.com?foo=goofy" and using this option results in an error.
+  name: '"Throw Error"'
+  uid: E:Enum::System#Utilities#Uri_Query_Duplicate_Behaviour.Throw_Error
+commentId: O:Enum::System#Utilities#Uri Query Duplicate Behaviour
+summary: Specifies the behaviour when adding a new query parameter or flag to a URI.
+name: '"Uri Query Duplicate Behaviour"'
+uid: O:Enum::System#Utilities#Uri_Query_Duplicate_Behaviour

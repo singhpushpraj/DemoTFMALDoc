@@ -1,0 +1,43 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."User Personalization"
+alId: ID 9214
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: Caption
+  value: User Settings Card
+  promoted: false
+- name: AdditionalSearchTerms
+  value: User Personalization Card,User Preferences Card
+  promoted: false
+- name: DataCaptionExpression
+  value: Rec."User ID"
+  promoted: false
+- name: DelayedInsert
+  value: "True"
+  promoted: false
+- name: PageType
+  value: Card
+  promoted: true
+- name: SourceTable
+  value: ""
+  promoted: true
+- name: HelpLink
+  value: https://go.microsoft.com/fwlink/?linkid=2149387
+  promoted: false
+- name: AboutTitle
+  value: About user setting details
+  promoted: false
+- name: AboutText
+  value: Here, you manage an individual user's settings. If a setting is left blank, a default value is provided when the user signs in.
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#User Personalization
+summary: Page that shows the settings of a given user.
+name: '"User Personalization"'
+uid: O:Page::System#Environment#Configuration#User_Personalization

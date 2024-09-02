@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Advanced Settings"
+alId: ID 9202
+namespace: System.Environment.Configuration
+baseKind: Page
+kind: Page
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Page](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-object)'
+objectProperties:
+- name: PageType
+  value: NavigatePage
+  promoted: true
+- name: ApplicationArea
+  value: '#All'
+  promoted: false
+- name: UsageCategory
+  value: Administration
+  promoted: false
+- name: Caption
+  value: Advanced Settings
+  promoted: false
+commentId: O:Page::System#Environment#Configuration#Advanced Settings
+summary: This page shows all the registered entries in the advanced settings page.
+name: '"Advanced Settings"'
+uid: O:Page::System#Environment#Configuration#Advanced_Settings

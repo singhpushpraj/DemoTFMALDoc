@@ -1,0 +1,38 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Integration.Excel."Edit in Excel Edm Type"
+alId: ID 1490
+namespace: System.Integration.Excel
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Integration.Excel
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- name: '"Edm.String"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type.Edm#String
+- name: '"Edm.Int32"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type.Edm#Int32
+- name: '"Edm.Int64"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type.Edm#Int64
+- name: '"Edm.Decimal"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type.Edm#Decimal
+- name: '"Edm.DateTimeOffset"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type.Edm#DateTimeOffset
+- name: '"Edm.Boolean"'
+  uid: E:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type.Edm#Boolean
+commentId: O:Enum::System#Integration#Excel#Edit in Excel Edm Type
+summary: >-
+  This enum specifies the OData Edm type of the fields added to excel.
+
+  These should generally reflect those in the $metadata document.
+name: '"Edit in Excel Edm Type"'
+uid: O:Enum::System#Integration#Excel#Edit_in_Excel_Edm_Type

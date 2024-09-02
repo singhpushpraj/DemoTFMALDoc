@@ -1,0 +1,49 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Azure.Identity.Plan
+alId: ID 775
+namespace: System.Azure.Identity
+baseKind: Query
+kind: Query
+parent: N:Module::System_Application::Namespace::System.Azure.Identity
+langs:
+- al
+seeAlso:
+- '[Query](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-query-object)'
+objectProperties:
+- name: Caption
+  value: Plan
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+- name: Permissions
+  value: >-
+    tabledata Plan = r,
+                      tabledata User = r
+  promoted: false
+queryColumns:
+- dataItem: Plan
+  columnType:
+    name: Guid
+    isExternal: true
+  name: Plan_ID
+  uid: C:Query::System#Azure#Identity#Plan.Plan.Plan_ID
+- dataItem: Plan
+  columnType:
+    name: Text[50]
+    isExternal: true
+  name: Plan_Name
+  uid: C:Query::System#Azure#Identity#Plan.Plan.Plan_Name
+- dataItem: Plan
+  columnType:
+    name: Integer
+    isExternal: true
+  name: Role_Center_ID
+  uid: C:Query::System#Azure#Identity#Plan.Plan.Role_Center_ID
+commentId: O:Query::System#Azure#Identity#Plan
+summary: Displays a list of plans.
+name: Plan
+uid: O:Query::System#Azure#Identity#Plan

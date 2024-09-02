@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Feature Data Error Handler"
+alId: ID 2613
+namespace: System.Environment.Configuration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: TableNo
+  value: Feature Data Update Status
+  promoted: false
+  xrefType:
+    internalReference: O:Table::System#Environment#Configuration#Feature_Data_Update_Status
+    name: System.Environment.Configuration."Feature Data Update Status"
+    isExternal: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#Environment#Configuration#Feature Data Error Handler
+summary: Error handler codeunit used by the task scheduler during feature data update.
+name: '"Feature Data Error Handler"'
+uid: O:Codeunit::System#Environment#Configuration#Feature_Data_Error_Handler

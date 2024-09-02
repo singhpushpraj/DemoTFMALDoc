@@ -1,0 +1,21 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."User Settings - View"
+alId: ID 9176
+namespace: System.Environment.Configuration
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "False"
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"User Settings - Objects","Language - View","Tenant License State - Read","User Selection - Read","User Permissions - Read","AAD User Management - Exec","Azure AD User - View"'
+  promoted: false
+commentId: O:PermissionSet::System#Environment#Configuration#User Settings - View
+name: '"User Settings - View"'
+uid: O:PermissionSet::System#Environment#Configuration#User_Settings_-_View

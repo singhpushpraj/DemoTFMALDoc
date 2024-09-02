@@ -1,0 +1,28 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"Update LCBG Sales Invoice Info"'
+alId: ID 70302
+baseKind: Codeunit
+kind: Codeunit
+parent: 'N:Module::Elof_Hansson_Trade_Finance_Module::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: TableNo
+  value: '#437dbf0e84ff417a965ded2bb9650972#Job Queue Entry'
+  promoted: false
+  xrefType:
+    name: System.Threading."Job Queue Entry"
+    isExternal: true
+commentId: O:Codeunit::Update LCBG Sales Invoice Info
+summary: >-
+  It Updates the LCBG Sales Invoice Info in letter of credit export based on calculation no,
+
+  it calculation line exists in letter of credit export, then it will create the sales line
+
+  in table CGI TFM LGBG Line
+
+  it has to be schedule in Job Queue
+name: '"Update LCBG Sales Invoice Info"'
+uid: O:Codeunit::Update_LCBG_Sales_Invoice_Info

@@ -1,0 +1,123 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl."Permission Set Relation"
+alId: ID 9855
+namespace: System.Security.AccessControl
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure AddNewPermissionSetRelation(AppId: Guid, RoleId: Code[30], Scope: Option, RelatedAppId: Guid, RelatedRoleId: Code[30], RelatedScope: Option, PermissionType: Option): Boolean'
+    parameters:
+    - id: AppId
+      description: The app ID of the permission set.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: RoleId
+      description: The role ID of the permission set.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: Scope
+      description: The scope of the permission set.
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: RelatedAppId
+      description: The app ID of the related permission set.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: RelatedRoleId
+      description: The role ID of the related permission set.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: RelatedScope
+      description: The scope of the related permission set.
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: PermissionType
+      description: The type of the new permission set relation.
+      parameterType:
+        name: Option
+        isExternal: true
+    return:
+      description: true if creating the permission set relation was successful
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Adds a new permission set relation.
+  name: AddNewPermissionSetRelation
+  uid: M:Codeunit::System#Security#AccessControl#Permission_Set_Relation.AddNewPermissionSetRelation(Guid,Code[30],Option,Guid,Code[30],Option,Option):Boolean
+- syntax:
+    content: 'procedure OpenPermissionSetPage(Name: Text, RoleId: Code[30], AppId: Guid, Scope: Option)'
+    parameters:
+    - id: Name
+      description: The name of the permission set to open.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RoleId
+      description: The role ID of the permission set to open.
+      parameterType:
+        name: Code[30]
+        isExternal: true
+    - id: AppId
+      description: The app ID of the permission set to open.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Scope
+      description: The scope of the permission set to open.
+      parameterType:
+        name: Option
+        isExternal: true
+  summary: Opens the permission set page for the specified role ID.
+  name: OpenPermissionSetPage
+  uid: M:Codeunit::System#Security#AccessControl#Permission_Set_Relation.OpenPermissionSetPage(Text,Code[30],Guid,Option)
+- syntax:
+    content: 'procedure VerifyUserCanEditPermissionSet(AppId: Text)'
+    parameters:
+    - id: AppId
+      description: The app ID of the permission set to verify.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: >-
+    Verify that the user can edit permission sets, with the specified app ID.
+
+    Throws an error if not.
+  name: VerifyUserCanEditPermissionSet
+  uid: M:Codeunit::System#Security#AccessControl#Permission_Set_Relation.VerifyUserCanEditPermissionSet(Text)
+- syntax:
+    content: 'procedure LookupPermissionSet(AllowMultiselect: Boolean, AggregatePermissionSet: __MissingTypeSymbol__): Boolean'
+    parameters:
+    - id: AllowMultiselect
+      parameterType:
+        name: Boolean
+        isExternal: true
+    - id: AggregatePermissionSet
+      parameterType:
+        name: __MissingTypeSymbol__
+        isExternal: true
+    return:
+      returnType:
+        name: Boolean
+        isExternal: true
+  name: LookupPermissionSet
+  uid: M:Codeunit::System#Security#AccessControl#Permission_Set_Relation.LookupPermissionSet(Boolean,__MissingSymbol__@):Boolean
+commentId: O:Codeunit::System#Security#AccessControl#Permission Set Relation
+summary: Codeunit that provides functions for permission set relations, such as including and exlcuding permission sets.
+name: '"Permission Set Relation"'
+uid: O:Codeunit::System#Security#AccessControl#Permission_Set_Relation

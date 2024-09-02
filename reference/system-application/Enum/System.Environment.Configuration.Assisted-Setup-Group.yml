@@ -1,0 +1,23 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Environment.Configuration."Assisted Setup Group"
+alId: ID 1815
+namespace: System.Environment.Configuration
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.Environment.Configuration
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Extensible
+  value: "True"
+  promoted: true
+enumValues:
+- summary: A default group, specifying that the assisted setup is not categorized.
+  name: Uncategorized
+  uid: E:Enum::System#Environment#Configuration#Assisted_Setup_Group.Uncategorized
+commentId: O:Enum::System#Environment#Configuration#Assisted Setup Group
+summary: The group to which the setup belongs. Please extend this enum to add your own group to classify the setups being added by your extension.
+name: '"Assisted Setup Group"'
+uid: O:Enum::System#Environment#Configuration#Assisted_Setup_Group

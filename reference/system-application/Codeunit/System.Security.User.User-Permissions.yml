@@ -1,0 +1,129 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.User."User Permissions"
+alId: ID 152
+namespace: System.Security.User
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Security.User
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: 'procedure IsSuper(UserSecurityId: Guid): Boolean'
+    parameters:
+    - id: UserSecurityId
+      description: The security ID assigned to the user.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the user has the SUPER permissions set. Otherwise, false.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the user has the SUPER permissions set.
+  name: IsSuper
+  uid: M:Codeunit::System#Security#User#User_Permissions.IsSuper(Guid):Boolean
+- syntax:
+    content: 'procedure CanManageUsersOnTenant(UserSecurityId: Guid): Boolean'
+    parameters:
+    - id: UserSecurityId
+      description: The security ID of the user to check for.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the user with the given user security ID can manage users on tenant; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether the user has permission to manage users in the tenant.
+  name: CanManageUsersOnTenant
+  uid: M:Codeunit::System#Security#User#User_Permissions.CanManageUsersOnTenant(Guid):Boolean
+- syntax:
+    content: 'procedure HasUserPermissionSetAssigned(UserSecurityId: Guid, Company: Text, RoleId: Code[20], Scope: Option, AppId: Guid): Boolean'
+    parameters:
+    - id: UserSecurityId
+      description: The user's security ID.
+      parameterType:
+        name: Guid
+        isExternal: true
+    - id: Company
+      description: The company for which to check
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: RoleId
+      description: The ID of the permission set.
+      parameterType:
+        name: Code[20]
+        isExternal: true
+    - id: Scope
+      description: The scope of the permission set. System or tenant.
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: AppId
+      description: The app ID of the permission set.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the user has permission sets assigned.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether a user has a specific permission set assigned.
+  name: HasUserPermissionSetAssigned
+  uid: M:Codeunit::System#Security#User#User_Permissions.HasUserPermissionSetAssigned(Guid,Text,Code[20],Option,Guid):Boolean
+- syntax:
+    signatures:
+    - '[Obsolete(Replaced with the ArePermissionsCustomized procedure in codeunit Azure AD User Management.,22.0)]'
+    content: 'procedure HasUserCustomPermissions(UserSecurityId: Guid): Boolean'
+    parameters:
+    - id: UserSecurityId
+      description: The security ID of the user to check for.
+      parameterType:
+        name: Guid
+        isExternal: true
+    return:
+      description: True if the user with the given user security ID has custom permissions; false otherwise.
+      returnType:
+        name: Boolean
+        isExternal: true
+  summary: Checks whether custom permissions are assigned to the user.
+  name: HasUserCustomPermissions
+  obsoletion:
+    state: pending
+    reason: Replaced with the ArePermissionsCustomized procedure in codeunit Azure AD User Management.
+    version: "22.0"
+  uid: M:Codeunit::System#Security#User#User_Permissions.HasUserCustomPermissions(Guid):Boolean
+- syntax:
+    content: 'procedure GetEffectivePermission(PermissionObjectType: Option, ObjectId: Integer)'
+    parameters:
+    - id: PermissionObjectType
+      parameterType:
+        name: Option
+        isExternal: true
+    - id: ObjectId
+      parameterType:
+        name: Integer
+        isExternal: true
+  name: GetEffectivePermission
+  uid: M:Codeunit::System#Security#User#User_Permissions.GetEffectivePermission(Option,Integer)
+commentId: O:Codeunit::System#Security#User#User Permissions
+summary: Exposes functionality to check if a user has SUPER permissions set assigned as well as removing such permissions set from a user.
+name: '"User Permissions"'
+uid: O:Codeunit::System#Security#User#User_Permissions

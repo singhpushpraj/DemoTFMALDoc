@@ -1,0 +1,29 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.AI."Copilot Status"
+alId: ID 7775
+namespace: System.AI
+baseKind: Enum
+kind: Enum
+parent: N:Module::System_Application::Namespace::System.AI
+langs:
+- al
+seeAlso:
+- '[Enum](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-extensible-enums)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: Extensible
+  value: "False"
+  promoted: true
+enumValues:
+- summary: The Copilot is active.
+  name: Active
+  uid: E:Enum::System#AI#Copilot_Status.Active
+- summary: The Copilot is inactive.
+  name: Inactive
+  uid: E:Enum::System#AI#Copilot_Status.Inactive
+commentId: O:Enum::System#AI#Copilot Status
+summary: The status of the Copilot Capability.
+name: '"Copilot Status"'
+uid: O:Enum::System#AI#Copilot_Status

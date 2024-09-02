@@ -1,0 +1,14 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: '"CGI Sales Invoice Subform"'
+alId: ID 60334
+baseKind: Page
+kind: PageExtension
+parent: 'N:Module::Elof_Hansson_Business_Model::Namespace::'
+langs:
+- al
+seeAlso:
+- '[Page Extension](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-page-ext-object)'
+commentId: O:PageExtension::CGI Sales Invoice Subform
+summary: Pageextension CGI Sales Invoice Subform (ID 60334) extends page Sales Invoice Subform
+name: '"CGI Sales Invoice Subform"'
+uid: O:PageExtension::CGI_Sales_Invoice_Subform

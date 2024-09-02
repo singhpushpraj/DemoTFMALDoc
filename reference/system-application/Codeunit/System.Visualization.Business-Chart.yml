@@ -1,0 +1,244 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Visualization."Business Chart"
+alId: ID 479
+namespace: System.Visualization
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.Visualization
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+methods:
+- syntax:
+    content: procedure Initialize()
+  summary: Initializes all the underlying objects needed for working with business charts.
+  name: Initialize
+  uid: M:Codeunit::System#Visualization#Business_Chart.Initialize
+- syntax:
+    content: 'procedure SetXDimension(Caption: Text, BusinessChartDataType: Enum "Business Chart Data Type")'
+    parameters:
+    - id: Caption
+      description: x dimension caption.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: BusinessChartDataType
+      description: The data type of the column.
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Business_Chart_Data_Type
+        name: System.Visualization."Business Chart Data Type"
+        isExternal: false
+  summary: Sets the x dimension on the business chart.
+  name: SetXDimension
+  uid: M:Codeunit::System#Visualization#Business_Chart.SetXDimension(Text,Enum::System#Visualization#Business_Chart_Data_Type)
+- syntax:
+    content: 'procedure GetXDimension(): Text'
+    return:
+      description: The x dimension caption.
+      returnType:
+        name: Text
+        isExternal: true
+  summary: Gets the x dimension caption.
+  name: GetXDimension
+  uid: M:Codeunit::System#Visualization#Business_Chart.GetXDimension:Text
+- syntax:
+    content: 'procedure GetXDimensionDataType(): Enum "Business Chart Data Type"'
+    return:
+      description: The x dimension data type.
+      returnType:
+        internalReference: O:Enum::System#Visualization#Business_Chart_Data_Type
+        name: System.Visualization."Business Chart Data Type"
+        isExternal: false
+  summary: Gets the x dimension data type.
+  name: GetXDimensionDataType
+  uid: M:Codeunit::System#Visualization#Business_Chart.GetXDimensionDataType:Enum::System#Visualization#Business_Chart_Data_Type
+- syntax:
+    content: 'procedure AddMeasure(Caption: Text, MeasureValueVariant: Variant, DataColumnType: Enum "Business Chart Data Type", BusinessChartType: Enum "Business Chart Type")'
+    parameters:
+    - id: Caption
+      description: Measure caption.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: MeasureValueVariant
+      description: The value of the measure.
+      parameterType:
+        name: Variant
+        isExternal: true
+    - id: DataColumnType
+      description: The data type of the measure.
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Business_Chart_Data_Type
+        name: System.Visualization."Business Chart Data Type"
+        isExternal: false
+    - id: BusinessChartType
+      description: The type of the business chart.
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Business_Chart_Type
+        name: System.Visualization."Business Chart Type"
+        isExternal: false
+  summary: Adds a new measure to the business chart.
+  name: AddMeasure
+  uid: M:Codeunit::System#Visualization#Business_Chart.AddMeasure(Text,Variant,Enum::System#Visualization#Business_Chart_Data_Type,Enum::System#Visualization#Business_Chart_Type)
+- syntax:
+    content: 'procedure AddDataRowWithXDimension(XDimensionColumnValue: Text)'
+    parameters:
+    - id: XDimensionColumnValue
+      description: The value to assign to the x dimension column in the new row.
+      parameterType:
+        name: Text
+        isExternal: true
+  summary: Adds a new data row and sets the value of the x dimension column in this row to the specified value.
+  name: AddDataRowWithXDimension
+  uid: M:Codeunit::System#Visualization#Business_Chart.AddDataRowWithXDimension(Text)
+- syntax:
+    content: 'procedure AddDataColumn(Caption: Text, ValueType: Enum "Business Chart Data Type")'
+    parameters:
+    - id: Caption
+      description: Column caption.
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: ValueType
+      description: The data type of the column.
+      parameterType:
+        internalReference: O:Enum::System#Visualization#Business_Chart_Data_Type
+        name: System.Visualization."Business Chart Data Type"
+        isExternal: false
+  summary: Adds the data column to the data table that the business chart is based on.
+  name: AddDataColumn
+  uid: M:Codeunit::System#Visualization#Business_Chart.AddDataColumn(Text,Enum::System#Visualization#Business_Chart_Data_Type)
+- syntax:
+    content: 'procedure SetValue(MeasureName: Text, XAxisIndex: Integer, MeasureValueVariant: Variant)'
+    parameters:
+    - id: MeasureName
+      description: The name of the measure
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: XAxisIndex
+      description: The X axis index.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: MeasureValueVariant
+      description: The value of the measure to set.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Sets the value of the scpecified measure at the specified index.
+  name: SetValue
+  uid: M:Codeunit::System#Visualization#Business_Chart.SetValue(Text,Integer,Variant)
+- syntax:
+    content: 'procedure SetValue(MeasureIndex: Integer, XAxisIndex: Integer, MeasureValueVariant: Variant)'
+    parameters:
+    - id: MeasureIndex
+      description: The index of the measure
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: XAxisIndex
+      description: The X axis index.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: MeasureValueVariant
+      description: The value of the measure to set.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Sets the value of the scpecified measure index at the specified x axis index.
+  name: SetValue
+  uid: M:Codeunit::System#Visualization#Business_Chart.SetValue(Integer,Integer,Variant)
+- syntax:
+    content: 'procedure GetValue(MeasureName: Text, XAxisIndex: Integer, var MeasureValueVariant: Variant)'
+    parameters:
+    - id: MeasureName
+      description: The name of the measure
+      parameterType:
+        name: Text
+        isExternal: true
+    - id: XAxisIndex
+      description: The X axis index.
+      parameterType:
+        name: Integer
+        isExternal: true
+    - id: MeasureValueVariant
+      description: The returned value of the measure.
+      parameterType:
+        name: Variant
+        isExternal: true
+  summary: Gets the value of the scpecified measure at the specified index.
+  name: GetValue
+  uid: M:Codeunit::System#Visualization#Business_Chart.GetValue(Text,Integer,Variant@)
+- syntax:
+    content: 'procedure GetMaxNumberOfMeasures(): Integer'
+    return:
+      description: The maximum number of measures that the business chart can display.
+      returnType:
+        name: Integer
+        isExternal: true
+  summary: Gets the maximum number of measures that the business chart can display.
+  name: GetMaxNumberOfMeasures
+  uid: M:Codeunit::System#Visualization#Business_Chart.GetMaxNumberOfMeasures:Integer
+- syntax:
+    signatures:
+    - '[Obsolete(Replaced with BusinessChart Add-In,24.0)]'
+    content: 'procedure Update(DotNetBusinessChartAddIn: DotNet)'
+    parameters:
+    - id: DotNetBusinessChartAddIn
+      parameterType:
+        name: DotNet
+        isExternal: true
+  name: Update
+  obsoletion:
+    state: pending
+    reason: Replaced with BusinessChart Add-In
+    version: "24.0"
+  uid: M:Codeunit::System#Visualization#Business_Chart.Update(DotNet)
+- syntax:
+    content: 'procedure Update(BusinessChartAddIn: ControlAddIn BusinessChart)'
+    parameters:
+    - id: BusinessChartAddIn
+      description: The business chart add-in to update.
+      parameterType:
+        internalReference: O:ControlAddIn::System#Integration#BusinessChart
+        name: System.Integration.BusinessChart
+        isExternal: false
+  summary: Updates the provided business chart control add-in.
+  name: Update
+  uid: M:Codeunit::System#Visualization#Business_Chart.Update(ControlAddIn::System#Integration#BusinessChart)
+- syntax:
+    content: 'procedure GetMeasureNameToValueMap(): Dictionary of [Text, Text]'
+    return:
+      returnType:
+        name: Dictionary of [Text, Text]
+        isExternal: true
+  name: GetMeasureNameToValueMap
+  uid: M:Codeunit::System#Visualization#Business_Chart.GetMeasureNameToValueMap:Dictionary_of_[Text,Text]
+- syntax:
+    content: 'procedure SetShowChartCondensed(ShowChartCondensed: Boolean)'
+    parameters:
+    - id: ShowChartCondensed
+      description: Indicates whether the XAxis Margin is visible or not.
+      parameterType:
+        name: Boolean
+        isExternal: true
+  summary: Sets a value indicating whether the XAxis Margin is visible or not.
+  name: SetShowChartCondensed
+  uid: M:Codeunit::System#Visualization#Business_Chart.SetShowChartCondensed(Boolean)
+commentId: O:Codeunit::System#Visualization#Business Chart
+summary: Provides functionality for working with the business chart control add-in.
+name: '"Business Chart"'
+uid: O:Codeunit::System#Visualization#Business_Chart

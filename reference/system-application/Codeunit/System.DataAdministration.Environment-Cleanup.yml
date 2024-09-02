@@ -1,0 +1,25 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.DataAdministration."Environment Cleanup"
+alId: ID 1886
+namespace: System.DataAdministration
+baseKind: Codeunit
+kind: Codeunit
+parent: N:Module::System_Application::Namespace::System.DataAdministration
+langs:
+- al
+seeAlso:
+- '[Codeunit](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-codeunit-object)'
+objectProperties:
+- name: Access
+  value: Public
+  promoted: false
+- name: InherentEntitlements
+  value: X
+  promoted: false
+- name: InherentPermissions
+  value: X
+  promoted: false
+commentId: O:Codeunit::System#DataAdministration#Environment Cleanup
+summary: Codeunit that raises an event that could be used to clean up data when copying a company to new environment.
+name: '"Environment Cleanup"'
+uid: O:Codeunit::System#DataAdministration#Environment_Cleanup

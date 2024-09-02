@@ -1,0 +1,24 @@
+﻿### YamlMime:BusinessCentralApplicationObject
+fqName: System.Security.AccessControl.SECURITY
+alId: ID 160
+namespace: System.Security.AccessControl
+baseKind: PermissionSet
+kind: PermissionSet
+parent: N:Module::System_Application::Namespace::System.Security.AccessControl
+langs:
+- al
+seeAlso:
+- '[Permission Set](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-permissionset-object)'
+objectProperties:
+- name: Assignable
+  value: "True"
+  promoted: false
+- name: Caption
+  value: Assign permissions to users
+  promoted: false
+- name: IncludedPermissionSets
+  value: '"SECURITY (System)","Azure AD Plan - Admin","Security Groups - Admin","System Application - Basic"'
+  promoted: false
+commentId: O:PermissionSet::System#Security#AccessControl#SECURITY
+name: SECURITY
+uid: O:PermissionSet::System#Security#AccessControl#SECURITY
